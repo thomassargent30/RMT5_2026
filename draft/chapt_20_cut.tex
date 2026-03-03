@@ -1,0 +1,133 @@
+
+\subsection{Special case of AMSS model}\label{sec:specialcaseAMSS}%
+That the  Ramsey allocation for the AMSS model differs from the Ramsey allocation of the Lucas-Stokey model is a symptom that the measurability
+constraints \Ep{eqn:AMSSapp6} bind.
+Following Bhandari, Evans, Golosov, and Sargent (2017) (henceforth BEGS), we now consider a special case of the AMSS model in which these constraints don't bind.
+Here  the AMSS Ramsey planner chooses not to issue state-contingent debt, though he is free to do so.  The environment is one in which
+fluctuations in the risk-free interest rate provide all  the insurance that the Ramsey planner wants.
+
+Following BEGS, we set $S=2$ and assume that
+the state $s_t$ is i.i.d., so that the transition matrix $\Pi(s'|s) = \Pi(s')$ for $s=1,2$.
+Following BEGS, it is useful to consider  the following special case of the implementability constraints  \Ep{eqn:AMSSapp6} evaluated at the constant
+value  of the state variable  $x_-= x(s) = \check x$:
+$$ {\frac{u_c(s) \check x}{\beta \sum_{\tilde s} \Pi(\tilde s) u_c(\tilde s) }} = u_c(s) (n(s) - g(s) ) - u_l(s) n(s) + \check x, \ s=1,2. \EQN eqn_AMSS_app_100 $$
+We   guess and verify that the scaled Lagrange multiplier $\mu(s)=\mu$ is a constant independent of $s$. At a fixed $x$,  because $V_x(x, s)$ must be independent of $s_-$, equation \Ep{eqn:AMSSapp9} becomes
+$ V_x(\check x) = \sum_{s} \left( \Pi(s) {\frac{u_c(s)}{\sum_{\tilde s} \Pi(\tilde s) u_c(\tilde s)}} \right) V_x(\check x) = V_x(\check x) ,$%QN eqn:AMSSapp109 $$
+which confirms that equation \Ep{eqn:AMSSapp7} becomes  $\mu = \beta V_x(\check x)$ for a  constant  $\mu$.
+For the continuation Ramsey planner facing implementability constraints \Ep{eqn_AMSS_app_100}, the first-order conditions with respect to $n(s)$ become
+$$ \EQNalign{ & u_c(s) - u_l(s)  \mu \Bigl\{ {\frac{\check x}{\beta \sum_{\tilde s} \Pi(\tilde s) u_c(\tilde s)}} (u_{cc}(s) - u_{cl}(s) ) - u_c(s) \cr
+       &  \ \ - n(s) (u_{cc}(s) - u_{cl}(s)) - u_{lc}(s) n(s) + u_l(s) \Bigr\}  = 0.\EQN eqn:AMSSapp101 }  $$
+Equations  \Ep{eqn_AMSS_app_100} and \Ep{eqn:AMSSapp101}  are four equations in the four  unknowns $n(s), s=1,2$, $\check x$, and $\mu$. Under some regularity conditions
+on  the period utility function  $u(c,l)$, BEGS show that these equations have a unique solution featuring a negative value of $\check x$.
+Consumption $c(s)$ and the flat-rate tax on labor $\tau(s)$ can then be constructed
+as history-independent functions of $s$.
+\auth{Evans, David G.}%
+\auth{Bhandari, Anmol}%
+\auth{Golosov, Mikhail}%
+\auth{Sargent, Thomas J.}%
+In this AMSS economy, $\check x = x(s) = u_c(s) {\frac{b_{t+1}(s)}{R_t(s)}}$.  The risk-free interest rate, the tax rate, and the marginal
+utility of consumption fluctuate with $s$, but $x$ does not and neither does  $\mu(s)$. The labor tax rate and
+the allocation depend only on the current value of $s$.
+
+For this special AMSS economy to be in a steady state from time $0$ onward, it is necessary that  initial debt $b_0$ satisfy the
+time $0$ implementability
+constraint \Ep{eqn:AMMSSapp101} at the value $\check x$ and the realized value of $s_0$.  We can solve for this level of $b_0$ by
+plugging the $n(s_0)$ and $\check x$
+that solve our four equation system  \Ep{eqn_AMSS_app_100}-\Ep{eqn:AMSSapp101}  into
+$ u_{c,0} b_0 = u_{c,0} (n_0-g_0) - u_{l,0} n_0 + \check x $ and solving for $b_0$.
+This  $b_0$ assures that a steady state $\check x$ prevails from time $0$ on.
+
+
+\subsubsection{Relationship to a Lucas-Stokey economy}
+The constant value $\mu$ of the Lagrange multipliers $\mu(s)$ across states $s$  in the Ramsey plan for our special AMSS economy is a tell tale sign that
+the measurability restrictions imposed on the Ramsey allocation by the requirement that government debt must be risk free are slack.
+When they bind, those
+measurability restrictions  cause the AMSS tax policy and allocation to be history dependent -- that's what activates flucations in the risk-adjusted martingale.
+Because  those measurability conditions are  slack in  this special AMSS economy, the same Ramsey allocation is attained in a corresponding complete markets
+ a Lucas-Stokey economy that starts
+from a particular initial  government debt.  The setting of  $b_0$ for the corresponding Lucas-Stokey
+implementability constraint \Ep{Bellman2cons} solves
+$ u_{c,0} b_0 = u_{c,0}(n_0 - g_0) - u_{l,0} + \beta \check x$.
+In this Lucas-Stokey economy, although the Ramsey planner is free to issue state-contingent debt, it chooses not to and instead  issues  only risk-free debt.
+It achieves the
+ risk-sharing with the private sector that it wants by altering the amounts of one-period risk-free debt that it issues at each current state,
+  while taking advantage of  the fluctuations in the  equilibrium interest
+rate that its tax policy induces.
+
+\subsubsection{Convergence to the special case}
+In an  i.i.d., $S=2$  AMSS economy in which  the initial $b_0$ does not equal the special value described in the previous subsection, $x$ fluctuates and is history-dependent.
+%namely, a value at the implied stationary distribution of risk free government debt
+%affiliated with the fixed  $\check x$ determined above,
+The Lagrange multiplier $\mu_s(s^t)$ is a non trivial risk-adjusted martingale and the allocation and distorting tax rate
+are both  history dependent.  However, BEGS describe conditions  under which such an i.i.d., $S=2$ AMSS economy in which
+the representative agent dislikes consumption risk  converges to a
+Lucas-Stokey economy in the sense that $x_t \rightarrow \check x$ as $t \rightarrow \infty$.
+The  following subsection  displays a numerical example that exhibits convergence.
+
+
+
+\subsection{Computed examples}%\label{sec:AMSSexamples}}
+
+Figures \Fg{AMSS1}, \Fg{AMSS2}, and \Fg{AMSS3} report features of a Ramsey plan for an AMSS economy with
+one-period utility function
+$$ u(c,l) = {\frac{c^{1-\sigma}}{1-\sigma}} - {\frac{l^{1+\gamma}}{1+\gamma}} . $$
+We set $\beta = .96, \gamma = 2$, and $\sigma$ equal to either $0$ (this is the
+quasi-linear case of AMSS) or $1.5$ (here the representative consumer is averse to
+consumption fluctuations).  We set
+$S=2$ with $g(s_1) = .05$ and $g(s_2) = .15$ and assume that $s_t$ is an iid process with
+the probability of both states equalling $.5$.  We computed the objects shown in figures \Fg{AMSS1}--\Fg{AMSS3}
+by numerically solving  Bellman equations \Ep{eqn:AMSSapp5} and \Ep{eqn:AMSSapp6}.
+
+
+\midfigure{AMSS1}
+\centerline{\epsfxsize=3true in\epsffile{AMSS1.eps}}
+\caption{Two AMSS economies. Dashed line: $\sigma=0$; solid line: $\sigma = 1.5$. Outcomes converge to those associated with  first-best allocation for the
+quasi-linear ($\sigma =0$) economy, while they converge to an allocation associated with a complete markets economy for the economy with risk-aversion ($\sigma=1.5$).}
+\infiglist{AMSS1}
+\endfigure
+
+
+\midfigure{AMSS2}
+\centerline{\epsfxsize=3true in\epsffile{AMSS2.eps}}
+\caption{Decision rule for $x_{t+1}- x_t$ as a function of $x_t$ and $s_t$ for AMSS $\sigma=0$ economy.
+Dashed line: $g_t$ is high; solid line, $g_t$  is low.}
+\infiglist{AMSS2}
+\endfigure
+
+
+
+\midfigure{AMSS3}
+\centerline{\epsfxsize=3true in\epsffile{AMSS3.eps}}
+\caption{Decision rule for $x_{t+1}- x_t$ as a function of $x_t$ and $s_t$ for AMSS $\sigma=1.5$ economy.
+Dashed line: $g_t$  is high; solid line, $g_t$  is low. }
+\infiglist{AMSS3}
+\endfigure
+
+%
+%
+Figure \Fg{AMSS1} reports outcomes from
+long simulations of the two AMSS economies, the quasi-linear ($\sigma=0)$ economy shown in the dashed line and the
+ $\sigma=1.5$ economy in the solid line.  As expected from the AMSS results summarized in section \use{sec:AMSS} of chapter \use{optax}, outcomes in the  quasi-linear economy
+converge to those
+associated with a first-best allocation. The government accumulates sufficient risk-free claims on the private sector  to finance all subsequent government expenditures
+with interest earned from those claims. After accumulating enough assets,
+the government sets the tax rate to zero and rebates excess earnings
+from assets in the form of  lump sum transfers to the representative agent.
+
+Asymptotic outcomes  for the $\sigma = 1.5$ economy display the striking outcome that they too converge, but not to a first-best allocation.  Instead, they converge to the
+fixed point in $x$  associated with a Lucas-Stokey complete markets allocation.
+
+Figure \Fg{AMSS2} displays the Ramsey plan decision rule for $x_{t+1}$  for the $\sigma=0$ quasi-linear AMSS economy,  while \Fg{AMSS3} displays
+ the decision rule for the $\sigma =1.5$ economy.  The figures display $x_{t+1} - x_t$ as a function of $x_t$ and $g_t$.   Rest points  for $x$ occur where the branch of
+the decision rule affiliated with  high $g$ intersects the branch affiliated with low $g$ at  $x_{t+1} - x_t$ equal to zero.
+For the quasi-linear economy, the branches intersect at a value of  $x$ and an implied
+level of government debt that is sufficient to finance all subsequent government expenditures. Further, when
+$x_t$ exceeds this level,  the decision rules on average point downward, imparting a negative drift to $x_t$ until it reaches the level associated with enough
+government assets capable of sustaining a first-best allocation.  Notice that after $x_t$ reaches this level,  the tax rate equals zero.
+
+
+For the figure \Fg{AMSS3} AMSS economy with $\sigma=1.5$, the branches of the decision rule for $x_{t+1} -x_t$ intersect at coordinate  value  zero at an ordinate value of $x$ that,
+while negative, exceeds the
+level for the quasi-linear  economy.  This $x$ is affiliated with a Lucas-Stokey economy.  After $x_t$ has converged to this level,
+the tax rate is positive and constant. That it does not fluctuate
+with $g$ is partly a consequence of the specification of the one-period utility function.

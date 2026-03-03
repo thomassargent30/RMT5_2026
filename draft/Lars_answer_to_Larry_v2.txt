@@ -1,0 +1,148 @@
+
+Dear Larry, Marty and Mathias,
+
+ 
+
+Hi. Thank you for your queries.
+
+ 
+
+First of all, let us reiterate that we find your Econometrica (online appendix) decomposition of the market tightness 
+elasticity in your AOB model to be informative about which parameters need to be set sufficiently high to generate a 
+high elasticity; while we also think that your latest decomposition is not informative. The selection of your Econometrica 
+decomposition is guided by its proximity to the decomposition in the approximating model, and its usefulness is starkly 
+illustrated in Andrea Papetti’s estimations of your model. More on this below.
+
+ 
+
+Yes, you are correct that there is one matching model in our AER article that does not yield a clean decomposition: 
+the Hall-Milgrom AOB model does not lend itself to our ideal decomposition satisfying the two desiderata that you point out. 
+Nevertheless, we do discover that under equal job destruction probabilities across bargaining and production, there is such a 
+clean decomposition even for that model. We proceed by using the decomposition of that approximating model to identify the 
+critical parameters determining market tightness elasticity, and numerically confirm the veracity of our inference by simulating 
+the Hall-Milgrom AOB model. Specifically, the approximating model correctly isolates the value of leisure and the firm’s cost of 
+delay in bargaining as the critical parameters determining market tightness elasticity. We are sorry if this is not clearly enough
+spelled out in our AER article.
+
+ 
+
+Now we are arguing that that very same strategy works for your version of the AOB model. So let’s clarify the issues that
+ you raise regarding our points 1-7.
+
+ 
+
+1.       It’s good that we agree that the approximating model is indeed your model of labor dynamics under the parameter
+ restriction that job destruction probabilities are equal across times of bargaining and production. In the case of different 
+ job destruction probabilities, it would be helpful if we could also agree that your Econometrica decomposition is the informative
+ one. By evaluating that decomposition at your equilibrium values, you will find that Upsilon=1.65 and that the inverse of the 
+ fundamental surplus fraction is around 15. Besides Upsilon being close to that of the approximating model (1/sigma=1.8), 
+ so are the tau coefficients in the fundamental surplus: your Econometrica decomposition yields coefficients .78 and 1.65 
+ for \bar gamma and kappa, respectively, as compared to 1 and 2 in the approximating model. (Regarding the value of leisure D, 
+ both decompositions attach a coefficient of one.) More on this below.
+
+ 
+
+2.       Could you please refer to any passage in your “Econometrica paper [identifying gamma, D and kappa to be very important 
+for generating very high elasticities] using the wage inertia logic.” Maybe you are thinking about section A.2 “The role of wage 
+inertia in the transition from the restricted Nash to the AOB model” in the online appendix, but in that profit/wage-inertia 
+decomposition neither gamma nor D appears, and kappa even seems to be discounted since it enters the “profit rate component” that 
+you find to be unimportant, and hence, we are left with the “wage inertia component” that is simply backed out from (A.6).
+ By itself this is not informative; it would be if you were instead to adopt and pursue what we above call
+ the “Econometrica decomposition” as defined under your expression (A.6), but which you today have unfortunately abandoned.  
+
+ 
+
+3.       Here is why Andrea Papetti’s estimations are so illuminating. Suppose that we could use neither the decomposition
+ in the approximating model nor your Econometrica decomposition. Then how could we explain the dramatic parameter 
+ interdependencies uncovered by Papetti in his constrained estimations of your AOB model? That is, see Papetti’s figure 4
+ but don’t look at the lines marked with diamonds that show a virtually constant and small fundamental surplus fraction.
+ The latter lines were computed after the estimations by using your Econometrica decomposition. Hence, those lines have
+ nothing to do with how Papetti estimated your AOB model. But from the fundamental surplus perspective, they have everything 
+ to do with understanding the parameter interdependencies in figure 4.
+
+ 
+
+4.       Please note how our reasoning uses your Econometrica decomposition, as emphasized above in point 1. Hence, in your
+ “estimated AOB model, where delta = 0.002, the elasticity of market tightness is equal to 24, upsilon is” 1.65 (not 7), and
+ the inverse of the fundamental surplus is equal to 15 (not 3.4). Regarding your other issue regarding delta equal to .1^(-9), 
+ see point 6 below.
+
+ 
+
+5.       Yes, we agree with you that your “AOB model does a good job accounting for the data without going 
+to an empirically implausible high value of the replacement ratio.” However, as we pointed out in our AER article and in RMT4, 
+it would have been even better if you had also informed your readers that this freedom to choose D requires offsetting changes 
+in a firm’s cost of delay in bargaining (and/or the fixed matching cost), as so amply illustrated in Papetti’s estimation findings.
+
+ 
+
+6.       Figure 6 will indeed be revealing but a little complicated to construct (as compared to our Hall-Milgrom figure 6).
+ For example, if we plug your parameter values D=0.333, gamma=0.009 (i.e., \bar gamma =60*gamma=0.54) and kappa=0.057 into the
+ approximating model, you get a negative fundamental surplus and hence, an equilibrium fails to exist. (See the discussion of
+ parameter restrictions in Hall and Milgrom or footnote 12 in our AER article.) Hence, given your values of D and kappa, we must
+ start with a somewhat lower value of gamma for delta=0. When starting at such permissible values on the gamma axis at delta=0,
+ we conjecture that the variance of unemployment will change smoothly when increasing delta. However, the exciting new part of your
+ figure 6 will be values of gamma above what is permissible for an equilibrium with delta=0. You can already discern from our 
+ Hall-Milgrom figure 6 how the surface gets warped in that corner of the parameter space.
+
+Now, let’s return to your reported computation in point 4: “If we set delta to .1^(-9), we find that the elasticity of market 
+tightness is equal to 198, upsilon is equal to 1.8, and the inverse fundamental surplus is equal to 109.” This is just beautiful! 
+As you approach delta=0, you see how Upsilon is converging to that of the approximating model (1/sigma=1.8), and with respect to
+ the fundamental surplus fraction 109^(-1)= .009, we suspect that you might be skirting the edge of non-existence of an equilibrium.
+
+[REMARK: We had already established analytically that both of your two decompositions define second factors that converge to that
+of the approximating model as delta goes to zero (the inverse of the fundamental surplus fraction). Given that limiting result, you 
+have now numerically shown something that had to be true, namely, that the first factor must then also converge to that of the
+ approximating model (Upsilon). The reason for this is that all of these decompositions are derived from the same steady-state
+ comparative static expression (A.6).]
+
+Our hunch is that under our conjecture figure 6 will be just fine around your estimation of the model and the message will 
+be clear: i) for any further increase in the market tightness elasticity, you should increase gamma 
+(for given values of D and kappa), i.e., start climbing up a slope similar to that of our Hall-Milgrom figure 6; and ii)
+ variations in the job destruction probability do not have much of an effect. In addition, our conjecture is that in spite 
+ of the warped surface in the upper left corner of the figure, the graph will help us appreciate why the approximating model is
+ such a good predictor of the critical parameters (albeit, quantitatively, not providing exact values for what should be deemed to 
+ be ‘sufficiently’ high values of D, gamma and kappa – after all, it is an approximating model). This figure 6 collection of 
+ parameter perturbations promises to be a nice complement to the estimation findings of Papetti. So we hope that we will have
+ convinced you to put your machinery to work to compute this new figure that we think would be so enlightening for your readers.
+
+ 
+
+7.       We remain interested in learning about the relative performances of the Hall-Milgrom AOB model 
+and your version. It could be the case that one outdoes the other; that would clearly interest model builders. 
+But it could also be the case that the models perform virtually equally well. The fundamental surplus predicts the 
+latter outcome except for the caveat that a fixed matching cost is much more potent in your version of the AOB model.
+ Hence, the conjecture that the Hall-Milgrom AOB model can do equally well as your version, hinges on setting sufficiently
+ high values for leisure and a firm’s cost of delay in bargaining (rather than a fixed matching cost). We would also be 
+ eager to learn about results from such a comparative study.
+
+ 
+
+8.       We offer this suggestion for how to execute the comparison recommended in point 7. The idea would be to make a modest
+ modification of your model that will bring your  two frameworks closer to each other and to do so without having much of an effect on
+ your analysis in Econometrica. Specifically, let’s convert your framework to operate on a model period based on your present
+ sub-periods, i.e., on the basis of a workday defined by your present setting of M=60. (You will still of course rely on quarterly 
+ data when estimating your model, but that is just a standard issue of time aggregation.) Given your exogenous quarterly
+ job destruction  probability 1-rho=0.1, the new job destruction probability between periods of production would be 
+ delta_prod = 1-0.9^(1/60)=0.0018,
+ and you would estimate a new delta between periods of bargaining. Your bargaining protocol will stay the same: the firm extends 
+ the first offer and there is a finite (even) maximum number of bargaining rounds, at the end of which the worker extends a 
+ take-it-or-leave-it offer (since the firm-worker match is about to be exogenously destroyed). Our hunch is that this
+ modification of your AOB model will  have at most a small effect on your earlier successful analyses, while at the same time
+ yielding the big benefit
+ that the only difference between your model and the Hall-Milgrom AOB model will then be  the finite number of bargaining rounds. 
+ If you let your maximum number of bargaining rounds approach infinity, you converge to the Hall-Milgrom model. Also, 
+ according to the fundamental surplus perspective in point 7, the abilities of the two models to fit the data will 
+ approach each other  already at relatively low values of your maximum number of bargaining rounds (with the only caveat that a
+ fixed matching cost is so much more potent in your model as compared to the Hall-Milgrom model).
+
+Another benefit of this modification to your AOB model is that our approximating model would correspond 
+to delta = delta_prod = 0.0018. We conjecture that your version of figure 6 will then be almost indistinguishable
+ from our Hall-Milgrom figure 6. In particular, you  won’t have to deal with that annoying limit of delta going to zero
+ but instead can have delta going to 0.0018 (i.e., similar to what we do in our Hall-Milgrom figure 6).
+
+ 
+
+Please keep us posted if you undertake any of these enlightening explorations.
+
+ 

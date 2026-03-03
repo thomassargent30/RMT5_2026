@@ -1,0 +1,11 @@
+
+Okay. For chapter 18, I think there's some new research in the heterogeneous agent incomplete market models that could be added to the chapter that would add value. There has been a number of papers post-2010 and they use a lot of interesting computational methods. For example, the Reiter method. I think some of the papers also use other restrictions, like liquidity constraints, that aren't discussed in the chapter. They also use a lot of methods for establishing a basis of functionals as well, for example, the work by Winberry and others. I'm not sure if there are any, but also some material on consumption heterogeneity/aggregation and/or things like durables or housing may be interesting for that section too.
+
+I think another area that is in the same style as the incomplete markets section (though I think it's actually a complete market's example) is Hulten's theorem and then the new work by Baqaee and Farhi overturning it. I think that would be neat to see somewhere.
+
+For chapter 20, I think it seems a bit terse and can be expanded. You do a lot of the material in chapter 16, but I think expanding some of the derivations might be useful still. You go many several steps at once. I also think it may be useful to have some specific examples with particular utility functions that make the problems analytically tractable, even though, of course, the theoretical results stand on their own. Maybe an LQ problem would work? Also, there are currently no problems and I think it would be useful to have at least some.
+
+The figures in 21 I think can be improved as the labels are not latexed so look a bit awkward in the rest of the chapter. I had more suggestions but will go back through and find them.
+
+Best,
+Brandon

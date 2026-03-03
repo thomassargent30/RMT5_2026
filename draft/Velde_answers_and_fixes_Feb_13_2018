@@ -1,0 +1,9 @@
+Francois fixed the problem with the badly behaved running heads
+at the end of the Ricardian chapter
+
+
+
+
+I think the problem is solved.  I removed everything in RMT4.tex between the two chapters.  
+I added two lines in blacpro_5_2012.tex to create a blank page (note that they are after the chapter declaration).
+  I also added a supereject in section 10.4 of chapter 10 because, for some reason, the wrong header was showing up.

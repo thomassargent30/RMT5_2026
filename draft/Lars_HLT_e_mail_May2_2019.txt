@@ -1,0 +1,47 @@
+Dear Tom,
+
+ 
+
+Our GGLS paper will be great. Thank you for arranging reinforcement. As you said, it will be good for Marcos to get inside an interesting computer code, and the filling-in of Laffer curves would be a great exercise (and somewhat challenging along the slippery slopes towards the end of Laffer curves).
+
+ 
+
+But I hope that Victoria and Seb will have time to pursue the additional inquiries in part (I) in my last email. If you have a chance, please emphasize the value of those computations and how it would strengthen the write-up of our paper.
+
+ 
+
+Now perhaps onto a sequel, what do you think about exploring the attached paper by Holter, Krueger and Stepanchuk (HKS)? I just saw them listing the paper as forthcoming in Quantitative Economics, so they might be happy to share the code with us to build on their framework.
+
+ 
+
+We might not want to tell Dirk exactly what we have in mind, but the plan is to pull off a complete time-averaging version of their framework. Specifically, they have only ‘endowed’ females with an extensive margin, while we will subject both females and males with an extensive margin.
+
+ 
+
+I see two possible strategies:
+
+(i)                  Preferably, we might be able to pull off a counterpart to our GGLS paper, i.e., relying on the social security program to discipline the fixed disutility cost of work in order to endogenize the outcome that all males retire at age 65 (as in the HKS analysis); but then, we will unleash time averaging by males in subsequent tax experiments.
+
+(ii)                Alternatively, we simply adopt the assumption of HKS that agents cannot work beyond age 65, and introduce a ‘dormant’ extensive margin for males. Under this alternative, our outcomes will initially be ‘mechanically’ similar to those of HKS until, once again, when time averaging by males is set off at sufficiently high tax rates.
+
+ 
+
+Our inquiry into HKS will explain their cryptic statement on page 26:
+
+“The $1/\eta$ parameter cannot be interpreted as the macro elasticity of labor supply with respect to tax rates, see Keane and Rogerson (2012) for a detailed discussion.”
+
+and we expect to substantively qualify some of their conclusions such as the one on page 39:
+
+“Most crucially, however the impact of tax progressivity on the peak of the Laffer curve is largely unaffected by the specification of what the government does with the extra revenue that is being generated with higher average tax rates.”
+
+ 
+
+If we can recruit some good research assistant, this project should go smoothly and be much easier than the time-averaging version of HLT. In the case of HKS, they already have an extensive margin for females, so we just have to add one for males. (Though, as always, we will probably learn that the devil is in the details :-)
+
+ 
+
+After completion of the HLT and HKS inquiries, we should be in a good position to complete yet another paper, “The aggregate labor supply elasticity: Heckman versus Prescott” (as referenced in RMT4 :-)
+
+ 
+
+Exciting as usual!

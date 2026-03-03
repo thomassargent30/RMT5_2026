@@ -1,0 +1,76 @@
+% Raw index file ``RMT5.idx''
+% ====================================
+\indexentry {puzzle!definition}{xii}
+\indexentry {dynamic programming!squared}{28}
+\indexentry {Markov chain}{36}
+\indexentry {state}{36}
+\indexentry {stochastic!linear difference equations}{36}
+\indexentry {stochastic!process}{36}
+\indexentry {Markov chain}{37}
+\indexentry {transition matrix}{37}
+\indexentry {stochastic!matrix}{37}
+\indexentry {distribution!stationary}{38}
+\indexentry {distribution!stationary}{40}
+\indexentry {distribution!invariant}{40}
+\indexentry {Markov chain!as difference equation}{41}
+\indexentry {hidden Markov model}{42}
+\indexentry {conditional expectation}{42}
+\indexentry {law of iterated expectations}{42}
+\indexentry {law of iterated expectations}{43}
+\indexentry {resolvent operator}{43}
+\indexentry {Neumann series}{43}
+\indexentry {likelihood function}{44}
+\indexentry {distribution!multinomial}{44}
+\indexentry {maximum likelihood}{44}
+\indexentry {likelihood function!multinomial}{44}
+\indexentry {second-moment restrictions}{45}
+\indexentry {martingale!difference sequence}{47}
+\indexentry {martingale}{47}
+\indexentry {white noise}{47}
+\indexentry {vector autoregression}{48}
+\indexentry {stochastic!process}{49}
+\indexentry {covariance stationary}{50}
+\indexentry {autocovariogram}{51}
+\indexentry {moving average representation}{52}
+\indexentry {impulse response function}{52}
+\indexentry {guess-and-verify method}{53}
+\indexentry {Lyapunov equation!discrete}{54}
+\indexentry {stochastic discount factor}{54}
+\indexentry {value function}{55}
+\indexentry {Howard policy improvement algorithm}{57}
+\indexentry {dynamic programming}{57}
+\indexentry {population regression}{57}
+\indexentry {regression!population}{57}
+\indexentry {least-squares projection}{57}
+\indexentry {likelihood function}{59}
+\indexentry {Bayes law!as conditional probability}{60}
+\indexentry {statistical model!likelihood function}{60}
+\indexentry {prior probability}{60}
+\indexentry {posterior probability}{60}
+\indexentry {conditional expectation!wide sense}{61}
+\indexentry {elliptical!probability distributions}{61}
+\indexentry {linear rational expectations models}{62}
+\indexentry {distribution!Gaussian}{63}
+\indexentry {likelihood function!Gaussian}{63}
+\indexentry {maximum likelihood}{63}
+\indexentry {filter!linear}{63}
+\indexentry {population regression!Kalman filter}{64}
+\indexentry {hidden Markov model!Kalman filter}{64}
+\indexentry {Kalman filter}{67}
+\indexentry {filter!linear}{67}
+\indexentry {Riccati equation!matrix difference}{67}
+\indexentry {Gram-Schmidt process}{68}
+\indexentry {hidden Markov model}{68}
+\indexentry {innovations representation}{68}
+\indexentry {vector autoregression}{71}
+\indexentry {hidden Markov model}{71}
+\indexentry {innovations representation}{71}
+\indexentry {Kalman filter!and vector autoregressions}{71}
+\indexentry {adaptive expectations}{72}
+\indexentry {inverse optimal prediction}{72}
+\indexentry {golden ratio}{74}
+\indexentry {adaptive expectations}{74}
+\indexentry {LQ permanent income model!incomplete markets}{77}
+\indexentry {Jensen's inequality}{78}
+\indexentry {submartingale}{78}
+\indexentry {precautionary savings}{78}

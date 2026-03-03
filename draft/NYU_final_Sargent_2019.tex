@@ -1,0 +1,145 @@
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{PhD Macroeconomics \hfil NYU}
+\line{October 21, 2019 \hfil Thomas Sargent}
+%
+% \noindent Macroeconomics Q1 \hfill NYUAD \\
+% Fall, 2019 \hfill Thomas Sargent
+% \vspace{.3cm}
+
+\centerline{\bf Midterm Examination}
+%\centerline{\bf Homework 3}
+
+
+\medskip
+
+\noindent{\bf Instructions:}  This is a closed book  exam.  100 points are possible. Points attached to each problem are stated
+at the beginning of each problem.
+
+\medskip
+
+\noindent {\bf 1. 15 points  \quad}  Assume that  $F$ is a   right continuous function mapping $[0, B]$ into $[0,1]$, that $\pi \in (0,1)$, and  that $\beta \in (0,1)$.
+For what intertemporal problem is the following a Bellman equation?
+$$ v(w) = \max\left\{ {w\over{1-\beta}},  \beta [  \pi \int v(w') d F(w') + (1-\pi) \int v(w') d F^2(w') ]  \right\} $$
+
+\medskip
+
+
+
+\medskip
+\noindent {\bf 2. 35 points \quad} Consider the following model of a monopolist.  Let  $S_t$ be sales at time $t$, $Q_t$ be the monopolist's production  at time $t$,
+ $I_t$ be inventories at the beginning of time $t$,  $\beta \in (0,1)$ be a discount factor,  $c(Q_t) = c_1 Q_t + c_2 Q_t^2$ be a cost-of-production function, where $c_1>0, c_2>0$;
+  $d(I_t, S_t) = d_1 I_t + d_2 I_t^2  + d_3 (S_t - I_t)^2$ be a cost-of-holding inventories function, where $d_1 >0, d_2 >0 $ and $d_3 >0$;
+$p_t = a_0 - a_1 S_t + \eta_t $ be an inverse demand function for a firm's product, where $a_0>0, a_1 >0$ and $\eta_t$ is a demand shock at time  $t$;
+   $\pi_t = p_t S_t - c(Q_t) - d(I_t, S_t) $ be the firm's profits at time $t$;
+   $\sum_{t=0}^\infty \beta^t \pi_t $ be the present value of the firm's profits at time $0$;  $I_{t+1} = I_t + Q_t - S_t$ be the law of motion of inventories;
+ $z_{t+1} = A_{22} z_t + C_2 \epsilon_{t+1} $ be the law of motion for an exogenous state vector $z_t$ that contains time $t$ information useful for predicting the demand shock $\eta_t$ where
+ $\epsilon_{t+1}$ is an i.i.d.~random vector distributed as ${\cal N}(0,I)$;
+   $\eta_t = G z_t $ links the demand shock to the information set $z_t$;
+   the constant $1$ is the first component of $z_t$.
+
+   The firm wants  a production, sales, inventory-management plan $\{Q_t, S_t, I_{t+1}\}_{t=0}^\infty$ that maximizes $E_0 \sum_{t=0}^\infty \beta^t \pi_t $
+   subject to $z_0,  I_0 $ being given initial conditions.
+
+
+ \noindent{\bf a.}. Please formulate the firm's  problem as a discounted dynamic programming problem.  Feel free to use  the word "let" somewhere in your answer.
+
+ \medskip
+
+
+ \noindent{\bf b.} Please state conditions on the solution of the firm's  problem that are sufficient to imply that  $\bmatrix{z_t \cr I_t} $ converges  to a normally distributed random vector $x_\infty \sim {\cal N}(\mu, \Omega)$ as $t \rightarrow + \infty$.
+
+ \medskip
+\noindent{\bf c.} Please give formulas for $\mu$ and $\Omega $ in terms of the firm's objective and its constraints.
+
+
+   \medskip
+
+
+\noindent{\bf 3. 20 points \quad} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$, suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q) q- \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \hat Q  = H(Q)  $$
+Assume that the following Bellman equations are satisfied: %in terms of problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q,Q)) + \beta v\left(h(q,Q), H(Q)\right) = \max_{\hat q} \{\pi(q, Q, \hat q) + \beta v(\hat q, H(Q) )   \} $$
+\medskip
+
+\medskip
+\noindent{\it (i.)} Please interpret the above Bellman equations in terms of an economic problem cast in a space of sequences.
+
+\noindent{\it (ii.)} Please interpret what it means to impose the condition
+
+$$ h(Q, Q) = H(Q) .$$
+
+
+
+\medskip
+\noindent{\bf 4. 30 points \quad }
+\medskip
+\noindent{\bf a.} For the purposes of this problem, we'll define a {\it model\/} as a probability distribution over a sequence, indexed by some parameters.
+
+\medskip
+
+\noindent Time is discrete and takes values $t =0, 1, \ldots$.  Let $F = \{f_j\}_{j=0}^N$ be  a discrete probability distribution that satisfies $f_j > 0$ for $j=0, \ldots, N$, $\sum_{j=0}^N f_j = 1$,
+where $f_j = {\rm Prob}(W = j)$.  Let $G = \{g_j\}_{j=0}^N$ be  another  discrete probability distribution that satisfies $g_j > 0$ for $j=0, \ldots, N$, $\sum_{j=0}^N g_j = 1$,
+where $g_j = {\rm Prob}(W = j)$.  A state variable $s_t \in \{0,1\}$, meaning that $s_t$ takes value either $0$ or $1$.  The state variable follows the law of motion
+$$ s_{t+1} = s_t \quad \forall t \geq 0 .$$
+The initial state $s_0$ is a random variable with ${\rm Prob} (s_0 = 1) = \pi \in (0,1)$.
+
+\medskip
+\noindent{\bf b.}  Let  $\{w_t\}_{t=0}^\infty$ be a sequence formed as independent draws from the distribution $G$, meaning that
+for any sequence of $i_0, i_1, i_2, \ldots $ of integers $\{i_t\}$ where the $t$th element $i_t  \in \{0, 1, \ldots, N\}$,
+ $${\rm Prob}(w_0 = i_0, w_1 = i_1, w_2 = i_2, \ldots)  = g_{i_0} g_{i_1} g_{i_2}  \cdots $$
+(i.e., successive draws are from the same distribution and don't depend on earlier draws). Please compute the mean of $w_t$ for $t \geq 0$.
+For $t \geq 1$,
+please compute the probability distribution of  $w_t$ conditional on the history $w^{t-1} = w_{t-1}, w_{t-2}, \ldots, w_0$.
+
+\medskip
+\noindent {\bf c.} Now let  the probability distribution of $w_t$  be given by
+$$ h_j \equiv {\rm Prob}(w_t = j | s_t)  = s_t f_j + (1-s_t) g_j ,  \quad \forall j \geq 0. $$
+Assume that you know the three probability distibutions $G, F, \pi$.
+Please answer these questions about the associated   model of  $\{w_t\}_{t=0}^\infty$.
+
+
+\smallskip
+\item{i.}  For $t \geq 1$,
+please compute the probability distribution of  $w_t$ conditional on the history $w^{t-1} = w_{t-1}, w_{t-2}, \ldots, w_0$.
+
+
+\item{ii.} Under the model implied by $G, F, \pi$, is $\{w_t\}_{t=0}^\infty$ an independently and identically distributed sequence of random variables?
+
+
+
+
+\noindent The following questions change conditioning information in an important way; depending on how you define ``model'', perhaps they also change the ``model''.
+
+
+\medskip
+\noindent{\bf d.} For $t \geq 1$,
+please compute the probability distribution of  $w_t$ conditional on  the history $w^{t-1} = w_{t-1}, w_{t-2}, \ldots, w_0$ AND $s_0$.
+
+\medskip
+\noindent{\bf e.} Under the ``model'' implied by $G, F, s_0$  - meaning that you can assume that $G, F,$ and $s_0$ are all known --  is $\{w_t\}_{t=0}^\infty$ an independently and identically distributed sequence of random variables?
+
+
+
+
+
+\bye
+

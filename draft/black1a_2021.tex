@@ -1,0 +1,3380 @@
+%\input texsis
+%\book
+%\singlespace
+%\input epsf.tex
+\input grafinp3
+\input psfig
+%\eqnotracetrue
+%\showchaptIDfalse
+\chapter{Time Series Tools\label{timeseries}}
+\footnum=0
+\def\toone{{t+1}}
+\def\ttwo{{t+2}}
+\def\tthree{{t+3}}
+\def\Tone{{T+1}}
+\def\TTT{{T-1}}
+\def\rtr{{\rm tr}}
+\def\epigraph#1#2{%
+\begingroup
+\smallskip
+%\epigraphskip
+\leftskip=2em
+\rightskip=0pt plus2em
+\it\noindent #1\par
+\noindent --- #2\par
+\endgroup\noindent}
+%
+%\def\frac#1/#2{\leavevmode\kern.1em
+% \raise.5ex\hbox{\the\scriptfont0 #1}\kern-.1em
+% /\kern-.15em\lower.25ex\hbox{\the\scriptfont0 #2}}
+\def\frac#1#2{#1\over #2}
+%
+%\showchaptIDfalse
+%\def\specsec#1{\medskip{\sc\noindent{#1}}}
+
+%\line{\hfil \today}
+\section{Two workhorses}
+  This chapter describes two tractable models
+of time series: finite state \idx{Markov chain}s and   first-order
+stochastic linear difference equations.   These models are
+organizing devices that  put    restrictions on a
+sequence of random vectors.  They are useful because they describe
+a time series  with parsimony. In later chapters, we shall  make
+two uses each of Markov chains and stochastic linear difference
+equations: (1) to represent the exogenous information flows
+impinging on an agent or an economy, and (2) to represent an
+optimum or equilibrium outcome of agents' decision making.
+The Markov chain and the first-order stochastic linear difference
+both use a sharp  notion of a \idx{state} vector.  A state vector
+summarizes the information about the current position of a system that
+is relevant for determining its future.
+The Markov chain and the stochastic linear difference equation
+will   be useful tools   for studying dynamic optimization
+problems.
+%  ^^|wonkers.m|   %  this is how to use the index program for
+                   %  matlab programs
+                   \index{stochastic!linear difference equations}%
+\section{Markov chains}\label{sec:Markovchains}
+A stochastic process is a sequence of random vectors.   The sequence will be ordered by time indices that are integers throughout this book.  So we study discrete time models. \index{stochastic!process}%
+  We study a discrete-state stochastic process with
+the following property:
+\medskip
+\specsec{Markov Property:}  A stochastic process $\{s_t\}$ is
+said to have the {\it Markov property} if for all $k \geq 1$ and
+all $t$,
+$${\rm Prob}(s_{t+1}\vert s_t, s_{t-1}, \ldots, s_{t-k})
+    = {\rm Prob}(s_{t+1}\vert s_t) .$$
+\medskip
+\noindent
+We assume the Markov property and characterize the process by a
+{\it Markov chain}.    \index{Markov chain}%
+ A  time-invariant Markov chain is defined by a triple of objects, namely,
+a state space $S$ that we can index by $n$ positive integers so that $S =\{1, 2, \ldots, n\} $;
+an $n \times n$
+{\it transition matrix} $P$, which    \index{transition matrix}%
+records the probabilities of moving from one value of the state to
+another in one period; and an $n \times 1$ vector $\pi_0$
+whose $i$th element is the probability of being in state $i$ at time 0:
+$ \pi_{0i} = {\rm Prob} (s_0 = i)$.
+The elements of  matrix $P$ are
+$$ P_{ij} = {\rm Prob}(s_{t+1} = j \vert s_t = i).$$
+For these interpretations to be valid, the matrix $P$ and the
+vector $\pi_0$ must satisfy the following assumption:
+
+\specsec{Assumption M:}
+
+\item{a.}  For $i=1, \ldots, n$, the matrix $P$ satisfies
+$$ \sum_{j=1}^n P_{ij} =1. \EQN obA1$$
+
+\medskip
+\item{b.}  The vector $\pi_0$ satisfies
+$$ \sum_{i=1}^n \pi_{0i} =1.$$
+
+    A matrix $P$ that satisfies property \Ep{obA1} is called a
+{\it stochastic matrix}.  A stochastic matrix \index{stochastic!matrix}%
+defines the
+probabilities of moving from one value of the state to another
+in one period.  The probability of moving from one value of the
+state to another in {\it two\/} periods is determined by $P^2$
+because
+$$\eqalign{ &{\rm Prob}(s_{t+2} =j \vert s_t = i) \cr
+   &=\sum_{h=1}^n {\rm Prob}(s_{t+2}=j \vert s_{t+1}=h)
+      {\rm Prob}(s_{t+1}= h \vert s_t = i) \cr
+      &=
+    \sum_{h=1}^n P_{ih} P_{hj} = P^{(2)}_{ij},\cr }$$
+where $P^{(2)}_{ij}$ is the $i,j$ element of $P^2$.  Let $P^{(k)}_{i,j}$
+denote the $i,j$ element of $P^k$.
+By iterating on the preceding equation, we discover that
+$$ {\rm Prob}(s_{t+k} = j \vert s_t = i) =
+     P^{(k)}_{ij}  .$$
+The unconditional probability distributions of $s_t$ at $t \geq 1$ are
+determined by
+$$\eqalign{\pi_1'= {\rm Prob} (s_1)  &= \pi_0' P \cr
+           \pi_2'= {\rm Prob}( s_2) &= \pi_0' P^2 \cr
+             \vdots & \cr
+            \pi_k'={\rm Prob} (s_k) & = \pi_0' P^k ,\cr}$$
+where $\pi_t'={\rm Prob} (s_t)$ is the $1 \times n$ vector whose
+$i$th element is ${\rm Prob}(s_t = i)$.
+
+\index{distribution!stationary}%
+\subsection{Stationary distributions}
+
+Unconditional probability distributions evolve according to
+$$ \pi_{t+1}' = \pi_t ' P. \EQN obA2$$
+An unconditional
+ distribution is called {\it stationary\/}  or {\it invariant\/}
+if it satisfies
+$$ \pi_{t+1} = \pi_t,$$
+that is, if  the unconditional
+distribution remains unaltered with the passage of time.
+From the law of motion \Ep{obA2} for unconditional
+distributions, a stationary distribution must satisfy
+$$ \pi' = \pi' P \EQN steadst1 $$
+or
+$$ \pi' (I - P) =0.$$
+Transposing both sides of this equation gives
+$$ (I-P') \pi =0, \EQN obA3$$
+which determines $\pi$ as an eigenvector (normalized to satisfy
+$\sum_{i=1}^n \pi_i = 1$) associated with a unit eigenvalue of $P'$.
+
+\medskip
+\specsec{Definition:} We say that $(P, \pi)$ is a {\it stationary Markov chain\/} if the initial distribution
+$\pi$ is such that \Ep{steadst1} holds.
+
+\medskip
+
+The fact that $P$ is a stochastic matrix (i.e., it has nonnegative
+elements and satisfies $\sum_j P_{ij} =1$ for all $i$) guarantees that
+$P$ has at least one unit eigenvalue, and
+that there is at least one eigenvector
+ $\pi$ that satisfies equation \Ep{obA3}.
+This stationary distribution may not be
+unique because $P$ can have a repeated unit eigenvalue.
+
+\smallskip
+\noindent{\bf Example 1}.  A Markov chain
+$$ P =\left[\matrix{1 & 0 & 0 \cr
+                   .2 & .5 & .3 \cr
+                    0 & 0 & 1 \cr } \right] $$
+has two unit eigenvalues with associated stationary distributions
+$ \pi' = \left[\matrix{1 & 0 & 0 \cr}\right]$ and
+$ \pi' = \left[\matrix{0 & 0 & 1 \cr}\right]$. Here states $1$ and $3$
+are both {\it absorbing\/} states.\NFootnote{Furthermore, any initial distribution that puts zero probability
+on state $2$   is a stationary distribution. See exercises {\it \the\chapternum.4} and
+{\it \the\chapternum.5}.}
+
+
+\smallskip
+\noindent{\bf Example 2}.  A Markov chain
+$$ P =\left[\matrix{.7 & .3 & 0 \cr
+                   0 & .5 & .5 \cr
+                    0 & .9 & .1 \cr } \right] $$
+has a unique stationary distribution
+$ \pi' = \left[\matrix{0 & .6429 & .3571 \cr}\right]$ associated with its single unit eigenvalue.  
+Here states $2$ and $3$ are said to be {\it persistent} and form an {\it absorbing subset\/} of the state space while
+state $1$ is said to be {\it transient}. 
+We use the following
+
+\medskip
+\definition{absorbing} A collection set of states $\tilde S \subset S = \{1, \ldots, n\}$ is said to be
+an {\it absorbing subset\/} if both of the following conditions hold:
+\item{{\bf i.}} for any nonnegative integer $T$,
+if $i \in \tilde S$ is visited at time $t=T$, then only states $j \in \tilde S$ are visited at time $t \geq T$.%starting from $e_i \in \tilde X$ at time $t=0$, only states $e_j \in \tilde X$ are visited at $t \geq 1$.
+\item{{\bf ii.}} every state $i \in \tilde S $ is visited infinitely often.
+\enddefinition
+
+
+\subsection{Asymptotic stationarity}
+
+   We often ask the following questions
+about a    Markov chain. For an arbitrary initial distribution
+$\pi_0$, do the unconditional distributions
+$\pi_t$ approach a stationary distribution
+$$ \lim_{t \to \infty} \pi_t = \pi_\infty ,$$
+where $\pi_\infty$ solves equation
+ \Ep{obA3}?  If the answer is yes, then does the
+limit distribution $\pi_\infty$ depend on the initial distribution
+$\pi_0$?  If the limit $\pi_\infty$ is independent of the
+initial distribution $\pi_0$, we say that the process is
+{\it asymptotically stationary with a unique invariant distribution}.
+We call a solution $\pi_\infty$ a {\it stationary
+distribution\/} or an {\it invariant distribution\/} of $P$.
+
+\index{distribution!stationary} \index{distribution!invariant}%
+
+  We state these concepts formally in the following definition:
+%\specsec{Definition:}  Let $\pi_\infty$ be a unique vector that
+%satisfies
+%$(I-P') \pi_\infty=0.$  If for all initial distributions
+%$\pi_0$ it is true that $P^t{'} \pi_0$ converges to
+%the same $\pi_\infty$, we say that the Markov chain
+%is asymptotically stationary with a unique invariant distribution.
+
+\medskip%\noindent{\sc Definition:}
+\definition{def1}  Let $\pi_\infty$ %be a unique vector that
+satisfy
+$(I-P') \pi_\infty=0.$  If for all initial distributions
+$\pi_0$ it is true that $P^t{'} \pi_0$ converges to
+the same $\pi_\infty$, we say that the Markov chain
+is asymptotically stationary with a unique invariant distribution.
+\enddefinition
+\medskip
+  The following theorems describe conditions under which  a Markov chain is asymptotically stationary.
+\medskip
+%\medskip\noindent{\sc Theorem 1:}
+\theorem{ch11}  Let $P$ be a stochastic
+matrix with $P_{ij} > 0 \ \forall (i,j)$.  Then $P$ has
+a unique stationary distribution, and the
+Markov chain is asymptotically stationary.
+\endtheorem
+\medskip
+%\noindent{\sc Theorem 2:}
+\theorem{ch12}  Let $P$ be a stochastic matrix
+for which $P^n_{ij} > 0 \ \forall (i,j)$ for some
+value of $n \geq 1$.  Then $P$ has a unique stationary
+distribution, and the Markov chain  is asymptotically stationary.
+\endtheorem
+\medskip
+\noindent The conditions of \Theorem{ch11} (and \Theorem{ch12}) assert that from any
+state there is a positive probability of moving to any other state
+in one (or $n$) steps. 
+%Please note that some of the examples below will violate
+% conditions of \Theorem{ch12} for all $n$.
+
+In macroeconomcs one  often encounters the following concepts.
+
+\definition{ergodicity1}
+A Markov chain $(P, \pi)$ is {\it ergodic} or {\it irreducible} if it is possible eventually to get from every state to
+every other state with positive probability.  
+\enddefinition
+
+\definition{ergodicity2}
+A Markov chain with a finite state space is {\it regular} if some power of $P$ has only positive entries.
+\enddefinition
+
+A chain with the  transition matrix $P = \bmatrix{0 & 1 \cr 1 & 0 }$ is ergodic but not regular.
+
+An ergodic chain $(P, \pi)$ with a finite state space has a unique stationary probability distribution $\pi$ satisfying
+$\pi P = \pi$.  For example,  an ergodic chain with transition matrix $P = \bmatrix{0 & 1 \cr 1 & 0 }$ has a unique stationary distribution 
+$\pi = \bmatrix{.5 & .5}'$. 
+
+A law of large numbers for stationary ergodic Markov chains asserts:
+
+\theorem{ergodic-1} Let $y_t = \bar y' x_t$ be a random variable that is a function of a finite state vector $x_t$ that is governed by a
+stationary and ergodic Markov chain $(P, \pi)$. Let $\{\tilde y_t\}_{t=0}^\infty$ be a sample path of the sequence of 
+random variables $\{y_t\}_{t=0}^\infty$.  Then 
+$$ \lim_{T \rightarrow \infty} {\frac{1}{T}} \sum_{t=0}^T \tilde y_t = E y_0 \  \forall t \geq 0 $$
+where the mathematical expectation is taken with respect to the stationary distribution $\pi$. 
+\endtheorem
+
+Appendix \use{appergodicMC} of this chapter states laws of numbers for stationary Markov chains that are not necessarily ergodic. 
+
+\subsection{Another representation of the state}
+
+It can be useful to represent the state space in terms of a set of $n$ vectors
+$X = \{e_1, e_2, \ldots, e_n\}$ %consisting of vectors
+%$e_i, i=1, \ldots, n$,
+ where $e_i$ is an $n\times 1$ unit vector
+whose  $i$th entry is $1$ and  whose  other entries are zero.  A random vector  $x_t$ with realizations
+$x_t \in X$ is an $n\times 1$ vector of  indicator functions
+$$ x_t = x(s_t) \equiv \bmatrix{ {\bf 1}_1(s_t) \cr {\bf 1}_2(s_t) \cr \vdots \cr {\bf 1}_n(s_t) }, $$
+where the $i$th indicator function is defined as
+$$ {\bf 1}_i(s_t) = \cases{ 1 & if $s_t = i $ ; \cr
+                            0 & if $s_t \neq i$ \cr } $$
+Evidently, $x_t = e_i$ if and only if $s_t = i$.
+
+The mathematical expectation of an indicator function is the probability of an event. So a mathematical expectation
+of the $n \times 1$ vector of indicator functions $x_t$ is a vector of probabilities.  Thus,
+$$ E x_t = \pi_t .$$
+
+
+\subsection{Forecasting the state}
+Given that $x_t = e_i$ this period, the minimum-mean-squared-error  forecast of the state next period is the conditional
+mathematical expectation:
+$$ E [x_{t+1} | x_t = e_i] = \bmatrix{ P_{i1} \cr P_{i2} \cr \vdots \cr P_{in} \cr}
+    = P' e_i .  \EQN Pprep
+    $$
+%where $P_{i,\cdot}'$ denotes
+%the transpose of the $i$th row of the matrix $P$.\NFootnote{This equation is an expression of the idea
+%that a probability equals the mathematical expectation of an indicator function.}
+ In section \use{sec:HMM}
+of this book's appendix \use{lincontrol}, we use  equation \Ep{Pprep} to motivate
+the following first-order  stochastic difference equation for the state vector $x_t$:\index{Markov chain!as difference equation}%
+$$ x_{t+1} = P' x_t + v_{t+1} \EQN Pdiffeqn $$
+where $v_{t+1}$ is a random disturbance that  satisfies
+$E [v_{t+1} | x_t] = 0 $.
+
+
+Let $\overline y$ be an $n\times 1$ vector of real numbers and define
+$y_t =  \overline y_{s_t} = \overline y' x_t$, so that $y_t = \overline y_i$ if $s_t =i $ and therefore  $x_t = e_i$.
+Evidently, we can write
+$$ y_{t+1} = \bar y' P' x_t + \bar y' v_{t+1}.  \EQN observnonlinear $$
+The pair of equations \Ep{Pdiffeqn}, \Ep{observnonlinear} becomes a simple
+example of a \idx{hidden Markov model}
+when the observation $y_t$ is too coarse to reveal the state.  See section
+\use{sec:HMM} of technical  appendix \use{lincontrol} at the end of this book for an introduction to hidden Markov  models.
+
+
+\subsection{Forecasting functions of the state}
+From the conditional and unconditional probability
+distributions that we have listed, it follows that the unconditional
+expectations of $y_t$ for $t \geq 0$ are determined by
+$ E y_t =  (\pi_0' P^t) \overline y$.
+%or
+%$$\eqalign{ E y_0 &= \pi_0' \overline y \cr
+%            E y_1 & = \pi_0 ' P \overline y \cr
+%           & \vdots \cr
+%            E y_t & = \pi_0 ' P^k \overline y. \cr } $$
+Conditional expectations  are determined by
+\index{conditional expectation}%
+$$\EQNalign{& E (y_{t+1}| x_t = e_i)   =
+ \sum_j P_{ij} \overline y_j
+   = (P \overline y)_i \EQN conde1  \cr
+  & E(y_{t+2} | x_t =e_i) = \sum_k P_{ik}^{(2)} \overline y_k
+  = (P^2 \overline y)_i  \EQN conde2 \cr}  $$
+and so on, where as defined above $P_{ik}^{(2)}$ denotes the $(i,k)$ element of $P^2$ and  $(\cdot)_i$ denotes
+the $i$th row of the matrix $(\cdot)$.
+% An equivalent formula
+%from \Ep{Pdiffeqn}, \Ep{observnonlinear} is
+%$E [y_{t+1} | x_t] = \bar y' P' x_t = x_t' P \bar y$ , which
+%equals $(P\bar y)_i$ when $x_t = e_i$.
+  Notice that
+$$ \eqalign{ E [ E (y_{t+2} | x_{t+1} = e_j) | x_t =
+  e_i] & = \sum_j P_{ij} \sum_k P_{jk} \overline y_k \cr
+    = \sum_k (\sum_j P_{ij} P_{jk}) \overline y_k   & = \sum_k P_{ik}^{(2)}
+                 \overline y_k = E(y_{t+2} | x_t = e_i).  \cr}  $$
+Equating the first and last terms
+yields $E [E(y_{t+2}|x_{t+1})| x_t = e_i ] = E [y_{t+2} | x_t = e_i]$.
+This is an example of the
+``law of iterated expectations.'' The \idx{law of iterated expectations}
+states that for any random variable $z$ and two information sets
+$J, I$ with $J \subset I$, $E [E(z | I)|J]=E(z|J)$.
+As another example of the law of
+iterated expectations, notice that
+$$E y_1 =  \sum_j \pi_{1,j} \overline y_j =
+\pi_1' \overline y = (\pi_0' P) \overline y
+   = \pi_0' (P \overline y) $$
+and that
+$$ E[ E(y_1 | x_0 =e_i) ]% = \sum_j P_{ij} \overline x_j
+  = \sum_i \pi_{0,i} \sum_j P_{ij} \overline y_j
+  = \sum_j (\sum_i \pi_{0,i} P_{ij}) \overline y_j = \pi_1' \overline y
+= E y_1 .$$
+
+%$$ E (x_{t+k} \vert x_t= \overline x) = P^k \overline x .   $$
+%
+%Notice that
+%$$\eqalign{ E (x_t) & = \pi_t' \overline x = (\pi_0' P^t) \overline x \cr
+%                            & = \pi_0' (P^t \overline x)  \cr
+%                            & = E [E (x_t \vert x_0 = \overline x )] .\cr}$$
+%The statement that $E (x_t ) = E (E x_t \vert x_0 = \overline x)$
+%is an example of the {\it law of iterated expectations}.
+\index{law of iterated expectations}%
+
+
+
+
+\subsection{Forecasting functions}\label{sec:resolvent}%
+ There are powerful formulas for forecasting functions
+of a Markov state.
+   Again, let $\overline y $ be an $n\times 1$ vector and
+consider the random variable $y_t = \overline y_{s_t} =  \overline y' x(s_t)$.
+Then
+$$ E[y_{t+k} \vert x_t = e_i] =  (P^k)_i \overline y $$
+where $(P^k)_i$ denotes the $i$th row of $P^k$.
+%GGHH  ADD REFERENCE TO RIGHT EIGENVECTOR FORMULAS STATED EARLIER
+%Stacking all $n$ rows together, we express this as
+%$$ E[y_{t+k} | x_t] = P^k \overline y .  \EQN foreformulak $$
+We also have
+$$  \sum_{k=0}^\infty \beta^k E [y_{t+k}  \vert x_t =
+    \overline e_i ]
+       = [ (I -\beta P)^{-1}]_i  \overline y ,$$
+where $\beta \in (0,1)$ validates the Neumann series representation $(I -\beta P)^{-1}
+= (I + \beta P + \beta^2 P^2 + \cdots \, )$.
+The matrix $(I -\beta P)^{-1}$ is called a ``resolvent operator.''
+\index{resolvent operator}%
+\index{Neumann series}%
+
+
+
+\subsection{Enough one-step-ahead forecasts determine $P$}
+Let $P$ be a Markov transition matrix on state space $X = \{ e_1, \ldots, e_n\}$,
+where $e_i$ is the $i$th unit vector.  Let  $n-1$  random variables $h_j' x_t$ be
+generated by $n-1$ linearly independent $n \times 1$ vectors $h_1, \ldots, h_{n-1}$.
+Then given any state $x_t = e_i$, knowledge of one-step-ahead forecasts $E (h_j' x_{t+1} | x_t = e_i)$ for % $h_j' x_{t+1}$ for
+the set $j = 1, \ldots, n-1$ for states $i = 1, \ldots, n$ uniquely determines a transition matrix $P$.  See exercise  \the\chapternum.2.
+%a sufficiently rich set of  random variables characterize a Markov
+%chain. In particular,
+%   one-step-ahead conditional expectations of
+%uniquely determine the transition matrix $P$.  Thus, let
+%$E[h_{k,t+1} \vert x_t = e_i] = (P h_k)_i $. We can collect the
+%conditional expectations of $h_k$  for all initial states $i$ in
+%an $n \times 1$ vector
+%$E [h_{k,t+1} \vert x_t] = P h_k$.
+%We can then collect conditional expectations for the $n$
+%independent vectors $h_1, \ldots, h_n$ as $P h = J$ where
+%$h=\left[\matrix{h_1 & h_2 & \ldots & h_n\cr}\right]$ and
+%$J$ is  the $n \times n$ matrix consisting of all conditional expectations of
+%all $n$ vectors $h_1, \ldots , h_n$.  If we know $h$ and $J$, we\check G
+%can determine $P$ from $P= J h^{-1}$.
+
+\subsection{Simulating a Markov chain}
+ It is easy to simulate a Markov chain using a random number
+generator.  The Matlab program {\tt markov.m}
+%^^|markov.m|
+\mtlb{markov.m}
+ does the job.
+We'll use this program in some later chapters.\NFootnote{An index
+in the back of the book lists Matlab programs.}
+ %available at
+% $<$ftp://zia.stanford.edu/\raise-4pt\hbox{\~{}}sargent/pub/webdocs/matlab$>$.}
+
+
+\subsection{The likelihood function}
+Let $P$ be an $n \times n$ stochastic matrix
+with states $1 ,2, \ldots, n$.
+ Let $\pi_0$ be
+an $n \times 1$  vector with nonnegative elements summing to
+$1$, with $\pi_{0,i}$ being the probability that the state is
+$i$ at time $0$.
+Let $i_t$ index the state at time
+$t$.
+The Markov property implies that the probability of drawing the path
+$(x_0, x_1, \ldots, x_{T-1}, x_T) = (\overline e_{i_0}, \overline e_{i_1},
+\ldots, \overline e_{i_{T-1}}, \overline e_{i_T})$ is
+$$\eqalign{ L & \equiv  {\rm Prob}( \overline  x_{i_T},
+ \overline x_{i_{T-1}}, \ldots, \overline x_{i_1},  \overline x_{i_0}) \cr
+       & =  P_{i_{T-1}, i_T} P_{i_{T-2}, i_{T-1}}
+   \cdots P_{i_0, i_1} \pi_{0,i_0}.   \cr} \EQN likeli1
+     $$
+The probability $L$ is called the {\it likelihood}. It is a
+function of both the sample realization $x_0, \ldots , x_T$ and
+the parameters of the stochastic matrix $P$.   \index{likelihood function}%
+For a sample $x_0, x_1, \ldots, x_T$, let $n_{ij}$ be
+the number of times that there occurs a one-period transition from
+state $i$ to state $j$.  Then the likelihood function can be
+written
+$$ L = \pi_{0,{i_0}} \prod_i\ \prod_j P_{i,j}^{n_{ij}},$$
+a {\it multinomial\/} distribution.
+\index{distribution!multinomial} \index{maximum likelihood}
+\index{likelihood function!multinomial}
+
+ Formula \Ep{likeli1} has two uses.   A first, which we
+shall encounter often, is to describe the
+probability of alternative histories of a Markov
+chain.   In chapter \use{recurge},
+we shall use this formula to study prices and allocations
+in competitive equilibria.
+
+A second use is for estimating the parameters of a model
+whose solution is a Markov chain.
+Maximum likelihood estimation of free parameters $\theta$ of a
+ Markov process
+works as follows.  Let the transition matrix $P$
+and the initial distribution
+$\pi_0$ be functions $P (\theta), \pi_0(\theta)$
+ of a vector of free parameters $\theta$.
+Given a sample $\{x_t\}_{t=0}^T $, regard the likelihood function
+as a function of the parameters $\theta$.  As the
+estimator of $\theta$, choose the value that maximizes the
+likelihood function $L$.
+
+
+
+\section{Continuous-state Markov chain}\label{sec:Markovcontstsp}%
+In chapter \use{recurge}, we shall  use a somewhat different
+notation to express the same ideas. This alternative notation can
+accommodate either discrete- or continuous-state Markov chains.  We
+shall let $S$ denote the state space with typical element $s \in
+S$.     Let state transitions be described by the cumulative distribution function
+$\Pi(s' | s) =  {\rm
+Prob} (s_{t+1} \leq  s' | s_t =s)$ and let the initial state $s_0$ be described by
+ the cumulative distribution function $\Pi_o(s) =  {\rm
+Prob} (s_0 \leq s)$.  The {\it transition density\/} is $\pi(s' | s )  =  {d \over d s'} \Pi(s'|s)$
+and the initial density is % {\rm
+%Prob} (s_{t+1} = s' | s_t =s)$ and the initial density is
+$\pi_0(s) = {d \over d s} \Pi_0(s)$.  For all $s\in S, \pi(s'|s )
+\geq 0$ and $  \int_{s'} \pi(s'|s) d s' =1$; also $\int_s \pi_0(s) d s
+=1$.\NFootnote{Thus, when $S$ is discrete,
+ $\pi(s_j|s_i)$ corresponds
+to $P_{i,j}$ in our earlier notation.}
+Corresponding to \Ep{likeli1}, the  density
+over  history $s^t = [s_t, s_{t-1}, \ldots, s_0]$
+is
+ $$ \pi(s^t) = \pi(s_t | s_{t-1} )\cdots \pi(s_1| s_0) \pi_0 (s_0).
+  \EQN likeli2 $$
+For $t\geq 1$, the time $t$ unconditional distributions
+evolve according to
+$$ \pi_t(s_t) = \int_{s_{t-1}} \pi(s_t|s_{t-1}) \pi_{t-1} (s_{t-1})
+     d \, s_{t-1} .$$
+A stationary or  {\it invariant\/} distribution
+satisfies
+$$ \pi_\infty(s') = \int_s \pi(s'|s) \pi_\infty (s) d \, s, $$
+which is the counterpart to
+\Ep{steadst1}.
+
+\medskip
+\specsec{Definition:} A Markov chain $\bigl(\pi(s'|s), \pi_0(s)\bigr)$ is said
+to be {\it stationary\/} if $\pi_0$ satisfies
+  $$ \pi_0(s') = \int_s \pi(s'|s) \pi_0 (s) d \, s. $$
+
+\index{second-moment restrictions}%
+\section{Linear state space model}\label{sec:stochlinear}%
+   The first-order linear vector stochastic difference equation
+is a  useful example of a continuous-state Markov process.
+Here we  use
+$x_t \in {\bbR}^n$   rather than $s_t$ to denote the time $t$ state
+and
+specify that the initial distribution   $\pi_0(x_0)$ is Gaussian with mean
+$\mu_0$ and covariance matrix $\Sigma_0$, and that
+the transition density $\pi(x'|x) $ is Gaussian with
+mean $A x$ and covariance $C C'$.\NFootnote{An $n \times 1$ vector
+$z$ that is multivariate normal has the density
+function $$ f(z) = (2 \pi)^{-.5 n} |\Sigma|^{-.5} \exp (-.5 (z - \mu)' \Sigma^{-1} (z-\mu)
+) $$
+where $ \mu = E z$ and $\Sigma = E (z-\mu)(z-\mu)'$.}
+This specification pins down the joint distribution of the
+stochastic process $\{x_t\}_{t=0}^\infty$ via formula
+\Ep{likeli2}.
+The joint distribution determines
+all  moments of the process.
+
+This specification can be represented in terms of
+the first-order stochastic linear difference equation
+$$ x_{t+1} = A x_t + C  w_{t+1} \EQN diff1 $$
+for $t = 0, 1 ,\ldots$,
+where $x_t$ is an $n \times 1$ state vector, $x_0$ is a random
+initial condition drawn from a probability distribution with mean $E x_0 = \mu_0$
+and covariance matrix $E (x_0 - \mu_0)(x_0 - \mu_0)' = \Sigma_0$,
+$A$ is an $n \times n$ matrix, $C$ is an $n \times m$
+matrix, and  $w_{t+1}$ is an $m \times 1$   vector satisfying
+ the following:
+\medskip
+\specsec{Assumption A1:}  $w_{t+1}$ is an  i.i.d.~process satisfying
+ $w_{t+1} \sim {\cal N}(0, I)$.
+
+\medskip
+
+We can weaken the Gaussian assumption A1.
+ To focus only on first and second moments of the $x$ process,
+it is sufficient to make the weaker assumption:
+\medskip
+\specsec{Assumption A2:} $w_{t+1}$ is an $m \times 1$ random vector
+satisfying:
+$$ \EQNalign{ E [w_{t+1} \vert J_t] & = 0 \EQN wprop1;a \cr
+              E [w_{t+1} w_{t+1}'\vert J_t] & = I , \EQN wprop1;b \cr}$$
+where %$J_t = \left[\matrix{w_t & \cdots & w_1 & x_0 \cr} \right]$
+$J_t = [w_t, w_{t-1}, \ldots, w_1, x_0]$
+is the information set at $t$, and $E [ \ \cdot \ | J_t]$ denotes
+the conditional expectation.  We impose no distributional
+assumptions beyond \Ep{wprop1}.  A sequence $\{w_{t+1}\}$
+satisfying equation \Ep{wprop1;a} is said to be a martingale
+difference sequence adapted to $J_t$.
+% A sequence
+% $\{z_{t+1}\}$ that satisfies $E [z_{t+1}|J_t ] = z_t$ is said
+% to be a martingale adapted to $J_t$.
+ \index{martingale!difference sequence}%
+\index{martingale}%
+
+\medskip
+An even weaker assumption is
+\specsec{Assumption A3:}  $w_{t+1}$ is a process satisfying
+$$ E w_{t+1} = 0 $$ for all $t$ and
+$$ E w_{t} w_{t-j}' = \cases{ I, & if $ j=0$; \cr
+                              0, & if $j \neq 0 $. \cr}  $$
+A process satisfying assumption A3 is said to be
+a vector ``white noise.''\NFootnote{Note that \Ep{wprop1;a}
+by itself allows the distribution of  $w_{t+1}$   conditional on $J_t$ to be
+heteroskedastic.}
+\index{white noise}%
+
+Assumption A1 or A2 implies assumption A3 but not vice versa.  Assumption
+A1 implies assumption A2 but not vice versa.
+Assumption A3 is sufficient to justify the formulas that we report
+below for second moments.
+  We shall often append an observation equation  $y_t = G x_t$ to
+equation \Ep{diff1}
+and deal with the augmented system
+$$ \EQNalign{x_{t+1} & = A x_t + C w_{t+1} \EQN statesp1;a \cr
+        y_t & = G x_t . \EQN statep1;b \cr}$$
+Here $y_t$ is a vector of variables observed at $t$, which
+may include only some linear combinations of $x_t$.   The
+system \Ep{statesp1} is often called a linear {\it state-space system}.
+
+\medskip
+\noindent{\bf Example 1.}  Scalar second-order autoregression:
+Assume that $z_t$ and $w_t$ are   scalar processes and that
+$$ z_{t+1} = \alpha + \rho_1 z_t+ \rho_2 z_{t-1} + w_{t+1}. $$
+Represent this relationship as
+the system
+$$ \eqalign{ \left[\matrix{z_{t+1} \cr
+                 z_t \cr
+                  1 \cr} \right] &=
+    \left[\matrix{\rho_1 & \rho_2 & \alpha\cr
+                   1 & 0 & 0 \cr
+                   0 &0 & 1 \cr}\right]
+    \left[\matrix{z_t \cr
+                  z_{t-1} \cr
+                   1 \cr} \right]
+    + \left[\matrix{ 1 \cr
+                     0 \cr
+             0 \cr} \right] w_{t+1}  \cr
+     z_t  & = \left[\matrix{1 & 0 & 0\cr} \right]
+    \left[\matrix{z_t \cr
+                  z_{t-1} \cr
+                   1 \cr} \right]  \cr} $$
+which has form \Ep{statesp1}.
+\medskip
+\noindent{\bf Example 2.}  First-order scalar mixed moving
+average and autoregression:  Let
+$$ z_{t+1} = \rho z_t + w_{t+1} + \gamma w_t. $$
+Express this relationship as
+$$ \eqalign{ \left[\matrix{z_{t+1} \cr
+                   w_{t+1} \cr}\right]
+                 & = \left[\matrix{\rho & \gamma \cr
+                                    0 & 0 \cr} \right]
+                 \left[\matrix{ z_t \cr w_t \cr}\right]
+         + \left[ \matrix{1 \cr 1 \cr}\right] w_{t+1} \cr
+     z_t & = \left[\matrix{1 & 0 \cr} \right]
+               \left[\matrix{z_t \cr
+                             w_t \cr} \right]. \cr} $$
+
+
+\noindent{\bf Example 3.}  Vector autoregression:
+  Let $z_t$ be an $n \times 1$ vector of random variables.
+We define a \idx{vector    autoregression} by a stochastic
+difference equation
+$$ z_{t+1} = \sum_{j=1}^4 A_j z_{t+1-j} + C_y w_{t+1}, \EQN vecaug $$
+where $w_{t+1}$ is an $n \times 1$ martingale difference
+sequence satisfying equation
+ \Ep{wprop1} with $x_0' = \left[\matrix{z_0 & z_{-1} &
+z_{-2} & z_{-3}\cr} \right]$ and $A_j$ is an $n \times n$ matrix
+for each $j$.
+We can map equation \Ep{vecaug} into equation
+ \Ep{diff1} as follows:
+$$ \left[\matrix{z_{t+1} \cr z_t \cr z_{t-1} \cr z_{t-2} \cr}\right]=
+  \left[\matrix{A_1 & A_2 & A_3 &  A_4 \cr
+                I & 0 & 0 & 0 \cr
+                0 & I & 0 & 0 \cr
+                0 & 0 & I & 0 \cr}\right]
+\left[\matrix{z_t \cr z_{t-1} \cr z_{t-2} \cr z_{t-3} \cr}\right]
++ \left[\matrix{C_y \cr 0 \cr 0 \cr 0 \cr} \right]  w_{t+1} .
+  \EQN vecaug2 $$
+Define $A$ as the state transition matrix in equation \Ep{vecaug2}.
+Assume
+that $A$ has all of its eigenvalues bounded in modulus
+below unity. Then equation \Ep{vecaug}  can be initialized
+so that $z_t$ is {\it covariance stationary\/}, a term we
+ define soon.
+
+\subsection{First and second unconditional moments}\label{sec:linearsysmoments}%
+We can use equation \Ep{diff1} to deduce
+ first and second moments of the sequence of random vectors
+$\{x_t\}_{t=0}^\infty$.  A sequence of random vectors is called a
+{\it stochastic process\/}.\index{stochastic!process}%
+
+To discover  first and second moments of
+the $x_t$ process,
+we note that    the initial condition states that   $x_0$ is drawn from a distribution with mean vector $ \mu_0 = E x_0$ and
+covariance matrix $\Sigma_0 = E (x- E x_0) (x - E x_0)'$.
+Taking mathematical expectations on both sides of equation
+\Ep{diff1} gives\NFootnote{That the  eigenvalues of $A$ are less than unity
+in modulus implies that starting from any $\mu_0$, $\mu_t
+\rightarrow 0$. To understand this, assume that the
+eigenvalues of $A$ are distinct, and use the representation $A
+= P \Lambda P^{-1}$ where $\Lambda$ is a diagonal matrix of the
+eigenvalues of $A$, arranged in descending order of magnitude,
+and $P$ is a matrix composed of the corresponding eigenvectors.
+Then equation  \Ep{diff2} can be represented as $\mu_{t+1}^* =
+\Lambda \mu_t^*$, where $\mu_t^* \equiv  P^{-1} \mu_t$, which
+implies that $\mu_t^* = \Lambda^t \mu_0^*$.  When all eigenvalues
+ are less than unity,  $\Lambda^t$ converges to a
+matrix of zeros % except for the $(1,1)$ element,
+and $\mu_t^*$
+converges to a vector of zeros.
+% except for the first element, which
+%stays at $\mu_{0,1}^*$, its initial value, which we are free to set equal to
+% $1$, to capture the constant.
+ Then $\mu_t = P \mu_t^*$ also converges to zero.}
+%to $P_1 \mu_{0,1}^* = P_1$, where $P_1$ is the eigenvector corresponding
+%to the unit eigenvalue.}
+$$ \mu_{t+1} = A \mu_t \EQN diff2 $$
+where $\mu_t = E x_t $.
+Notice that
+$$ x_{t+1} - \mu_{t+1} = A ( x_t - \mu_t) + C w_{t+1}. \EQN diff4 $$
+  From equation \Ep{diff4},
+we can compute a  law of motion of the  covariance matrices
+$ \Sigma_t \equiv E(x_t - \mu_t) (x_t - \mu_t)' .$
+Thus,
+$$ E(x_{t+1} - \mu_{t+1}) (x_{t+1} -\mu_{t+1})' = A E(x_t -\mu_t) (x_t-\mu_t)'A'
+  + C C'$$
+or
+$$ \Sigma_{t+1} = A \Sigma_t A' + C C' .  \EQN Sigma_diff $$
+Also,  by virtue of  \Ep{diff1} and \Ep{diff2}, note that for $j \geq 0$
+$$ (x_{t+j} - \mu_{t+j}) = A^j (x_t - \mu_t) + C w_{t+j} + \cdots
+  +   A^{j-1} C w_{t+1}.  $$
+Postmultiplying both sides by $(x_t - \mu_t)'$
+and taking expectations shows that
+autocovariance sequences satisfy
+$$ \Sigma_{t+j,t} \equiv E (x_{t+j} - \mu_{t+j}) (x_t - \mu_t)' =
+       A^j \Sigma_t. \EQN diff6 $$
+Note that $\Sigma_{t+j,t}$ depends on both $j$, the gap between dates, and $t$, the earlier
+date.\NFootnote{Equations  \Ep{diff6} show that %are matrix versions of
+%the so-called \idx{Yule-Walker equations}, according to which
+the autocovariogram for a stochastic   process governed by a stochastic linear
+difference equation  obeys the nonstochastic version of that
+difference equation.}
+%
+%   Once \Ep{diff5},  is solved, the
+% remaining second moments $\Sigma_{t+j,t}$ can be deduced from equation
+%  \Ep{diff6}.\NFootnote{Notice that
+% $C_x(-j) = C_x(j)'$.}
+Suppose that $y_t = G x_t$.  Then
+ $\mu_{yt}= E y_t = G \mu_t$ and
+$$ E (y_{t+j} - \mu_{yt+j}) (y_t - \mu_{yt})'
+                              = G \Sigma_{t+j,t} G',  \EQN ydiff2  $$
+The following formula is also  useful:
+$$ \Sigma_{t,t+j} \equiv E (x_t - \mu_t) (x_{t+j} - \mu_{t+j}) ' =
+       \Sigma_t (A^{j \prime})^{-1 },  \EQN diff6a $$
+       for $j=0, 1,\ldots$.
+
+
+\subsection{Covariance stationarity}
+
+\index{covariance stationary}%
+\medskip
+%\specsec{Definition:}
+\definition{def:covstat}  A stochastic process $\{x_t\}$ is said to
+be {\it covariance stationary\/} if it
+satisfies the following two properties: (a) the mean vector is
+independent of time,
+ $ E x_t = E x_0$ for all $t$,
+ and (b) the sequence of autocovariance matrices
+ $E(x_{t+j} - E x_{t+j})(x_t - E x_t)'$
+depends on the separation between dates
+ $j = 0, \pm 1, \pm 2, \ldots$, but not on $t$.
+\enddefinition
+\smallskip
+
+
+\specsec{Remark}:  Under assumption A1 that $\{w_{t+1}\}_{t=0}^\infty $ is an i.i.d.~sequence
+with $w_{t+1} \sim {\cal N}(0,I)$ and the assumption that $x_0 \sim {\cal N}(\mu_0, \Sigma_0)$,
+the $\{x_t\}_{t=0}^\infty$ process is wide-sense stationary (also known as  just plain stationary).  Stationarity
+requires that moments of all orders, not just means and covariances,  are independent of calendar time $t$.
+
+
+\medskip
+
+
+\noindent To  deduce
+starting values for the mean and covariance
+that make the process covariance
+stationary, we shall use
+\definition{stable}
+A square real valued matrix $A$ is said to be {\it stable\/} if
+all of its eigenvalues   are strictly less than
+unity in modulus (i.e., in absolute value).
+\enddefinition
+\smallskip
+
+\noindent We shall  assume\NFootnote{Appendix \use{appb1} of this chapter describes consequences of
+an alternative assumption that allows there to be a unit eigenvalue associated with
+a constant in the state vector.}
+
+
+\medskip
+\specsec{Condition A:}  All  eigenvalues of $A$ in
+\Ep{statesp1} are strictly less than $1$ in modulus.
+
+\medskip
+
+\noindent To compute stationary $\mu_t = \check \mu$ for all $t$, notice that
+equation \Ep{diff2} implies that $\check \mu$ must satisfy
+$$ (I - A) \check \mu = 0 , $$
+which is satisfied only for $\check \mu =0 $ since we have assumed that
+all eigenvalues of $A$ are strictly less than unity in modulus.
+A fixed point of the matrix difference equation \Ep{Sigma_diff} evidently  satisfies
+$$ \Sigma_\infty = A \Sigma_\infty A' + C C' .  \EQN diff5 $$
+A fixed point $ \Sigma_\infty  $
+ is the covariance matrix $E (x_t -\mu) (x_t - \mu)'$ under  a stationary distribution of $x$.
+%
+% Thus, to compute $C_x(0)$, we  must solve
+% $$ C_x(0)   =
+%    A C_x(0) A^\prime  + C C' ,\EQN diff5 $$
+% where $C_x(0) \equiv E (x_t -\mu) (x_t - \mu)'$.
+Equation \Ep{diff5} is
+a {\it discrete Lyapunov} equation in the $n \times n$ matrix
+$\Sigma_\infty$.  It can be solved with the Matlab program {\tt
+doublej.m}. % ^^|doublej.m|
+\mtlb{doublej.m}%
+In the special case that $\Sigma_t = \Sigma_\infty$, where $\Sigma_\infty$  solves the discrete Lyapunov equation
+\Ep{diff5}, $\Sigma_{t+j,t} = A^j \Sigma_\infty$ and so depends only on the gap $j$ between time
+periods and not on time $t$. In this case, $\{x_t\}_{t=0}^\infty$ is said to be {\it covariance stationary\/} and the  autocovariance  matrix sequence $\{A^j \Sigma_\infty\}_{j=0}^\infty$ is  called an {\it
+autocovariogram}.  \index{autocovariogram}%
+
+
+\subsection{Summary of moment formulas}\label{sec:summarymoments}
+\medskip
+
+%\table{ch1table}
+%\caption{Some formulas for moments}
+
+
+\ruledtable
+Object | Formula \cr
+$E x_t = \mu_t$   |  $ \mu_{t+1} = A \mu_t$ \nr
+$E (x_t - \mu_t)(x_t - \mu_t)' = \Sigma_t$ | $\Sigma_{t+1} = A \Sigma_{t} A' + C C' $ \cr
+ $E [x_t\vert x_0] $ | $A^t x_0$ \nr
+$E(x_t - A^t x_0)(x_t - A^t x_0)'$ | $\sum_{h=0}^{t-1} A^h C C' (A^h)'$ \cr
+stationary mean | $(I - A)\mu =0$ \nr
+stationary covariance | $\Sigma_\infty = A \Sigma_\infty A' + C C' $ \nr
+stationary autocovariance |$ \Sigma_{t+j,t} = A^j \Sigma_\infty$
+\endruledtable
+\medskip
+\noindent The accompanying table summarizes some formulas for various conditional and unconditional means  and covariances of
+the state $x_t$  for the  linear stochastic state space system with matrices  $A, C, G$.
+%In section \use{sec:populationregression}, we select some moments and use them to form  population linear regressions.
+
+
+%
+\subsection{Impulse response function}
+Suppose that  eigenvalues of $A$ not associated with
+a constant are bounded above in modulus  by unity.  
+%Recall the Neumann expansion
+%$ (I - A L)^{-1} =  (I + A L + A^2 L^2 + \cdots \, )$ and apply
+%$(I - A L)^{-1}$ to both sides of equation \Ep{diff2} to get
+%$$ x_{t+1}=  \sum_{j=0}^{\infty} A^j C w_{t+1-j}, \EQN dsoln1 $$
+%which is the solution of equation \Ep{diff1}  assuming that
+%equation \Ep{diff1} has been operating for the infinite past
+%before $t=0$.  Alternatively,
+Iterate equation \Ep{diff1} forward from
+$t=0$ to get
+$$ x_t = A^t x_0 + \sum_{j=0}^{t-1} A^j C w_{t-j}
+  \EQN dsoln2 $$
+Evidently, $$ y_t =G A^t x_0 + G\sum_{j=0}^{t-1} A^j C w_{t-j}
+  \EQN dsoln3 $$
+and $E y_t | x_0 = G A^t x_0$.
+Equations % \Ep{dsoln1},
+ \Ep{dsoln2} and \Ep{dsoln3}
+ are examples of
+ \idx{moving average representation}s.
+Viewed as a function of lag $j$, $h_j = A^j C$  or $\tilde h_j = G
+A^j C$  is called
+an {\it impulse response function\/}.
+\index{impulse response function}%
+  Moving average representations
+and the associated impulse response functions show
+how $x_{t}$ and $y_{t}$ are affected by
+the shock vector $w_{t-j}$ for $j=0, 1, \ldots$.  Thus, the contribution of a shock vector
+$w_{t-j}$ to $x_t$ is $A^jC$.\NFootnote{The Matlab programs {\tt
+dimpulse.m} and {\tt impulse.m} compute impulse response
+functions.}
+
+Equation \Ep{dsoln3} implies that  $t$-step ahead conditional covariance matrices
+are
+$$ E(y_t - E y_t | x_0)(y_t - E y_t | x_0)'
+= G[ \sum_{h=0}^{t-1} A^h C C' A^{h \prime} ] G'. \EQN jstepy $$
+ % ^^|dimpulse.m|  ^^|impulse.m|
+\mtlb{dimpulse.m} \mtlb{impulse.m}
+\subsection{Prediction and discounting}
+  From equation \Ep{diff1} we can compute the useful prediction formulas
+$$ E_t x_{t+j} = A^j x_t \EQN predstoc1  $$
+for $j \geq 1$, where $E_t(\cdot)$ denotes the mathematical
+expectation conditioned on $x^t = (x_t, x_{t-1}, \ldots, x_0)$.
+Let $y_t = G x_t$, and  suppose that we want to compute
+$ E_t \sum_{j=0}^\infty \beta^j y_{t+j} $.
+Evidently,
+$$ E_t \sum_{j=0}^\infty \beta^j y_{t+j} = G(I + \beta A + \beta^2 A^2 + \cdots) x_t =  G(I -\beta A)^{-1} x_t,
+\EQN discount1 $$
+provided that the eigenvalues of $\beta A$ are less than
+unity in modulus.  Equation \Ep{discount1} tells  how to compute
+an expected discounted sum, where the discount factor $\beta$ is
+constant.
+
+\subsection{Geometric sums of quadratic forms}
+In some applications, we want to calculate
+$$
+  \alpha_t = E_t \sum^\infty_{j=0} \beta^j
+x^\prime_{t+j} Y x_{t+j} $$
+where $x_t$ obeys the stochastic difference equation \Ep{diff1},
+$Y$ is an $n \times n$ matrix, and $\beta \in (0,1)$.
+To get a formula for $\alpha_t$, we use a \idx{guess-and-verify method}.
+We guess that $\alpha_t$ takes the form
+$$\alpha_t = x^\prime_t \nu x_t + \sigma, \EQN asset15$$
+where $\nu$ is an $n\times n$ matrix and $\sigma$ is a scalar.  The
+definition of $\alpha_t$ and the guess \Ep{asset15} imply\NFootnote{Here we use
+the fact that for two conformable matrices $A, B,$ ${\rm trace} A B = {\rm trace} B A$
+to deduce $E (w_{t+1}' C' \nu C w_{t+1} ) = E {\rm trace}( \nu C w_{t+1} w_{t+1}' C' )
+= {\rm trace} (\nu C E w_{t+1} w_{t+1}' C') = {\rm trace} (\nu C C')$.}
+$$\eqalign{\alpha_t &= x^\prime_t Y x_t
+        + \beta E_t (x^\prime_{t+1}
+\nu x_{t+1} + \sigma)\cr
+&= x^\prime_t Y x_t
+     +\beta E_t \left[ (Ax_t +
+   Cw_{t+1})^\prime\,\nu\, (A x_t+Cw_{t+1})
+ + \sigma
+\right]\cr
+&= x^\prime_t (Y + \beta A^\prime \nu A)\,x_t
+     +\beta\hbox{ trace} (\nu CC^\prime)+\beta\sigma .\cr}$$
+It follows that $\nu$ and $\sigma$ satisfy
+$$\eqalign{ \nu &= Y + \beta A^\prime \nu A\cr
+\sigma &= \beta \sigma +\beta \hbox{ trace }\nu CC^\prime .\cr}
+\EQN asset16$$   \index{Lyapunov equation!discrete}%
+ The first equation of \Ep{asset16} is a {\it discrete Lyapunov
+equation\/} in the square matrix $\nu$ that  can be solved by using
+one of several algorithms.\NFootnote{The Matlab control toolkit
+has a program called {\tt dlyap.m} that works when all of the eigenvalues of
+$A$ are strictly less than unity; the program called
+{\tt doublej.m} works even when there is a unit eigenvalue associated with the constant.}
+  After $\nu$ has been computed, the second equation can be
+solved for the scalar $\sigma$.
+%^^|dlyap.m|
+%^^|doublej.m|
+\mtlb{dlyap.m} \mtlb{doublej.m} %
+
+
+Next we mention two important applications of formulas \Ep{asset15} and
+\Ep{asset16}.
+\medskip
+\subsubsection{Asset pricing}
+  Let $y_t$  be governed by  the state-space system \Ep{statesp1}.
+Assume that  a scalar random process $z_t$ obeys
+$$  z_t = H x_t. $$
+Regard the process $y_t$ in equation \Ep{statep1;b} as a payout or dividend from an asset,
+and regard  $\beta^t z_t$ as a \idx{stochastic
+discount factor} process.  The price of a claim to
+the stream of current and all future payouts is
+$$ \alpha_t = E_t \sum_{j=0}^\infty (\beta^j z_{t+j}) y_{t+j} .\EQN discount2 $$
+To compute $\alpha_t$, set $Y = H' G$ in \Ep{asset15} and \Ep{asset16}.
+In this application,
+ the constant $\sigma$  is  a
+risk premium that  is zero only when $C=0$ (i.e.,~only when there is no risk).
+
+
+\subsubsection{Evaluation of dynamic criterion}\label{sec:Howard1}%
+Formulas \Ep{asset15} and \Ep{asset16} are key ingredients of an efficient algorithm for solving 
+infinite horizon linear-quadratic optimal control problems of a type that we shall study in detail chapter \use{dplinear}.
+ Let a state $x_t$ be governed by
+$$ x_{t+1} = A x_t + B u_t + C w_{t+1} \EQN lasset1  $$
+where $u_t$ is a control vector that  a decision maker sets according to
+a fixed rule
+$$ u_t = - F_0 x_t \EQN lasset2 $$
+and $\{w_{t+1}\}$ is again an i.i.d.~sequence of shocks with mean vectors $0$ and contemporaneous covariance matrix $I$.
+Substituting \Ep{lasset2} into \Ep{lasset1} gives
+$$ x_{t+1} = A_o x_t + C w_{t+1} $$
+where
+$A_o = A - BF_0$. Under the assumption that the eigenvalues of $A_o$ are bounded in
+modulus by $\beta^{-.5}$, we want to compute the  {\it value function\/}
+\index{value function}%
+$$  v(x_0) = - E_0 \sum_{t=0}^\infty \beta^t [x_t' R x_t + u_t' Q u_t] $$
+for fixed positive definite matrices $R$ and $Q$,  fixed decision rule $F_0$ in \Ep{lasset2},
+%$A_o=A-BF_0$,
+and arbitrary initial condition $x_0$.
+Formulas  \Ep{asset15} and \Ep{asset16} apply with
+$Y = R + F_0' Q F_0$ and $A$ being replaced by $A_o=A-BF_0$.
+Express the solution as
+$$ v(x_0) = - x_0' P_0 x_0 - \sigma  \EQN lasset3 $$
+where by applying formulas \Ep{asset15}
+and \Ep{asset16}, $P_0$ satisfies  the following formula:
+$$ P_0 = R + F_0'QF_0 + \beta (A -BF_0)' P_0 (A-BF_0), \EQN lasset7 $$
+which can be recognized to be a discrete Lyapunov equation of the form
+of the first equation \Ep{asset16}.
+Given $F_0$, formula \Ep{lasset7} determines the matrix $P_0$ in the
+value function $v(x_0)$ that describes the expected discounted value of the sum
+of payoffs from
+sticking forever with this decision rule.
+
+
+Now consider the following one-period problem.  Suppose that
+we  use decision rule $u_t = - F_0 x_t$ from time $1$ onward,  so that
+the value at time $1$ on starting from state $x_1$ is
+$$ v(x_1) = - x_1' P_0 x_1 - \sigma. \EQN lasset4 $$
+Taking $u_t= - F_0 x_t$ as given for $t \geq 1$,
+what is the best choice of $u_0$?  This   leads
+to the optimum problem:
+$$ \max_{u_0} - \{x_0' R x_0 + u_0' Q u_0
+  + \beta E(A x_0 + B u_0 + C w_1)' P_0 (A x_0 + B u_0 + C w_1)
+  + \beta \sigma\}. \EQN lasset5 $$
+First-order conditions for this problem can be rearranged to attain\NFootnote{See appendix \use{appendixLQA} of this chapter for formulas
+for derivatives of linear and quadratic forms.}
+$$ u_0 = - F_1 x_0 \EQN lasset5 $$
+where $$ F_1 = \beta(Q + \beta B' P_0 B)^{-1} B' P_0 A.
+ \EQN lasset6 $$
+ Given $P_0$, formula
+\Ep{lasset6} gives the best decision rule $u_0 = - F_1
+x_0$ if at $t=0$ you are permitted only a one-period deviation from the
+rule $u_t = - F_0 x_t$ that has to be used  for $t \geq 1$.   If $F_1 \neq F_0$,  the decision
+maker would accept an  opportunity to deviate from $F_0$ for one period.
+
+  It is tempting to iterate on  \Ep{lasset7} and \Ep{lasset6}  as follows
+to seek a decision rule from which a decision maker would not want to
+deviate for one period:
+(1) given an $F_0$, from \Ep{lasset7} find  $P_0$; (2) compute
+$F_1$ from equation \Ep{lasset6}, then set  $F_0 = F_1$ in  \Ep{lasset7} and use this new $F_0$ to compute
+a new $P$, call it $P_1$; (3) return to step 1 and iterate to convergence.
+This process leads to  two equations
+$$\eqalign{P_{j} & = R + F_j'QF_j + \beta (A -BF_j)' P_{j} (A-BF_j) \cr
+ F_{j+1} & = \beta(Q + \beta B' P_j B)^{-1} B' P_j A \cr
+ } \EQN howardimprove $$
+that are to be initialized from an arbitrary
+$F_0$ that ensures that $\sqrt{\beta}( A - B F_0)$ is a stable matrix.
+After
+this process has converged, one cannot find a value-increasing
+one-period deviation
+from the limiting decision rule $u_t = - F_\infty x_t$.\NFootnote{It turns out
+that if you don't want to deviate for one period,  you'll  never
+want to deviate, so that the limiting rule is optimal.}
+
+
+As we shall see in chapter \use{practical},   this is
+an excellent algorithm. It is  an example of the \idx{Howard policy improvement algorithm}  for solving  \idx{dynamic programming}
+problems.
+In chapter \use{dplinear}, we describe an alternative algorithm that iterates on the following
+equations
+$$\eqalign{F_{j} & = \beta(Q + \beta B' P_j B)^{-1} B' P_j A, \cr
+     P_{j+1} & = R + F_j'QF_j + \beta (A -BF_j)' P_{j} (A-BF_j) } \EQN bellman_comparison_howard $$
+that is to be initialized from an arbitrary positive semi-definite matrix $P_0$.\NFootnote{$P_0=0$ is
+a popular choice.}  Both algorithms work, but algorithm \Ep{howardimprove} is much faster than
+algorithm \Ep{bellman_comparison_howard}.
+
+
+
+
+\section{Multivariate normal distributions and regressions}\label{sec:populationregression}%
+\index{population regression}%
+This section presents the concept of a  population linear regression.  \index{regression!population}% \index{regression equation}%
+\index{least-squares projection}%
+%We begin by assuming conditions that make the state $z_t$ and output $y_t$ jointly multivariate normal.
+% This will be a property of vectors formed from one of our state
+%space systems under assumptions described above.
+ Although
+ the idea and some of  our key formulas  apply  to a much wider class of probability distributions,  until  subsection \use{sec:nonnormal}
+ we  assume that  $z$ is an $N \times 1$  random vector with multivariate normal probability density
+$$ f(z ; \mu, \Sigma) = (2 \pi)^{-(\frac{N}{2})} \det ( \Sigma)^{-(\frac{1}{2})} \exp \left( -.5 (z -\mu)' \Sigma^{-1} (z- \mu) \right) $$
+\noindent where $\mu = E z \equiv \int z f(z ; \mu, \Sigma) \,  d  z $ is the mean of $z$ and $\Sigma = E (z - \mu) (z-\mu)' \equiv
+\int (z - \mu) (z-\mu)' f(z ; \mu, \Sigma) \,  d  z $ is the covariance matrix of $z$.
+For integer $k \in [2, \ldots, N-1]$, partition $z$ as $z = \bmatrix{z_1 \cr z_2}$, where $z_1$ is an   $(N-k) \times 1 $ vector and $z_2$ is
+a $k \times 1 $ vector.  Let
+$$ \mu = \bmatrix{\mu_1 \cr \mu_2} , \quad \quad \Sigma = \bmatrix{ \Sigma_{11} & \Sigma_{12} \cr
+                                                                     \Sigma_{21} & \Sigma_{22} } $$
+\noindent be  corresponding partitions of $\mu$ and $\Sigma$.
+The marginal densities of the random vectors $z_1$ and $z_2$ are
+$f(z_1 ; \mu_1, \Sigma_{11})$ and $f(z_2 ; \mu_2, \Sigma_{22})$, respectively, where $f( z_i ; \mu_i, \Sigma_{ii})$ denotes a multivariate normal
+density with mean vector $\mu_i$ and covariance matrix $\Sigma_{ii}$. %first and second moments  $\mu_i, \Sigma_i$.
+
+
+The {\it conditional density\/} of $z_1$ given $z_2$, denoted $f(z_1 | z_2; \hat \mu_1, \hat \Sigma_{11})$, is multivariate normal with mean
+%$$ \hat \mu_1 = \mu_1 + \Sigma_{12} \Sigma_{22}^{-1} ( z_2 - \mu) $$
+$$ \hat \mu_1 = \mu_1 + \beta ( z_2 - \mu_2)  \EQN condmeansurprise $$
+and covariance matrix
+$$ \hat \Sigma_{11}  = \Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21} = \Sigma_{11} - \beta \Sigma_{22} \beta' \EQN condcovmatrix $$
+where
+$$\beta = \Sigma_{12} \Sigma_{22}^{-1} \EQN leastsq12 $$ is an $(N- k) \times k$ matrix
+ of population {\it regression coefficients \/} of $z_1 -\mu_1$ on $z_2- \mu_2$.  Here
+ $\hat \mu_1 = E z_1 | z_2$ and $\hat \Sigma_{11} = E [ (z_1 - \hat \mu_1) (z_1 - \hat \mu_1)' ]| z_2 $.
+Thus, the vector of conditional expectations $E z_1 |z_2$ is
+$$ E z_1 | z_2 = (\mu_1 - \beta \mu_2) +  \beta z_2 . \EQN regresslinear $$
+%where $\beta $ is an $(N- k) \times k$ matrix of regression coefficients.
+ The $i$th row of $\beta$ contains regression coefficients of the $i$th component
+of $z_1$ on all $k$ components of $z_2$.
+% $\epsilon = (z_1-\mu_1) - \beta (z_2 - \mu_2) $ in the  regression of
+%$z_1- \mu_1$ on $z_2 - \mu_2$.
+   We can write this collection of  regression equations as
+$$ z_1 - \mu_1 = \beta (z_2 - \mu_2) + \epsilon \EQN eqn:regression_nonsense $$
+and
+$\hat \Sigma_{11}$ is the covariance matrix $E \epsilon \epsilon'$  of the least-squares error vector $\epsilon$.
+ So equation \Ep{regresslinear} asserts that
+when $z$ is jointly normal, the  expectation of $z_1$ conditional on $z_2$ is linear in $z_2$.
+%$
+The random error vector   $\epsilon$ is statistically independent of $z_2- \mu_2$, which  implies (but is not implied by)
+ the (weaker)  linear least squares orthogonality
+condition
+$$ E \epsilon (z_2 - \mu_2)' = 0 ,  \EQN leastsq2  $$
+an equation that we shall refer to in subsection \use{sec:nonnormal} when we consider random vectors $z$ that are not distributed  multivariate normal.
+
+
+
+
+
+To construct a  population regression, we require  a Gaussian random vector $z$ and  its mean vector $\mu$
+and covariance matrix $\Sigma$. As a source, for example,  we can take an instance of a state-space system \Ep{statesp1},  with
+or without initial conditions that make the state covariance matrix $\Sigma_t$ constant over time. We can use
+ formulas summarized in sections \use{sec:linearsysmoments} and \use{sec:summarymoments} to compute means and covariances of  pairs
+of random variables and  can organize  these  to construct $\mu$ and $\Sigma$ for a vector $z$ assembled from components of
+$x_t$ and $y_t$ at various times $t$.  There are as many  regressions \Ep{eqn:regression_nonsense}
+  as there are ways of selecting
+$z_1, z_2$.   Thus, we have shown how a linear state-space model (e.g., a triple $A, C, G$,
+together with an initial distribution for $x_0$) implies a vast number of population
+regressions.    Inferring what a particular
+regression equation tells about a model is often challenging. Many regressions tell little about a model, and what little they
+have to say can be difficult to decode.    As we indicate in sections \use{sec:estimation1} and \use{sec:estimation2}, it is instead  a \idx{likelihood
+function} that completely describes what a  data set says about  model parameters that pin down the matrices $A, C, G$. % in a way that  is straightforward to decode.
+
+%
+
+\subsection{Bayesian interpretation of conditional probability}
+It is useful at this point to offer a brief digression about Bayesian inference, an approach to interpreting  jointly distributed random vectors $z_1, z_2$ and
+the
+associated conditional distributions.
+Leaving the pertinent means and covariances implicit for convenience, a joint density
+$f(z) \equiv f(z_1, z_2)$ %(to emphasize that $f(z)$ is the joint density of the two vectors $z_1 $ and $z_2$)
+satisfies
+$$ f(z_1, z_2 ) = f(z_1 | z_2)   f(z_2)  $$
+which can be arranged to become
+%which can be rearranged to take the form
+%$$ f(z_1 | z_2) = {\frac{f(x)}{f(z_2)}}  $$
+%or
+$$ f(z_1 | z_2) = {\frac{f(z_1, z_2)}{f(z_2)} } . \EQN eqn:Bayes101 $$
+The conditional distribution $f(z_2|z_1)$ satisfies
+$$ f(z_2 | z_1) = {\frac{f(z_1, z_2)}{f(z_1)} } . \EQN eqn:Bayes101a $$
+Equations \Ep{eqn:Bayes101} and \Ep{eqn:Bayes101a} are ``just mathematics'', being  equations that   conditional distributions satisfy according to the
+laws of probability.
+\index{Bayes' Law}%
+
+A Bayesian statistician breathes life into these equations % \Ep{eqn:Bayes101}
+ by noting that equations \Ep{eqn:Bayes101} and \Ep{eqn:Bayes101a}
+% that by the mathematics of conditional probabilities satisfy $f(z_1, z_2 ) = f(z_2 | z_1)   f(z_1)$
+%so that we can also write equation \Ep{eqn:Bayes101} as
+imply that
+$$ f(z_1 | z_2) =  {\frac{f(z_2|z_1) f(z_1)}{f(z_2)} } ,  \EQN eqn:Bayes102 $$
+and adopting  special interpretations of the probability
+densities $f(z_1)$, $f(z_2)$,  and $f(z_2|z_1)$. 
+%This again is ``just mathematics'' until we interpret $f(z_1)$ and $f(z_2|z_1)$.
+A Bayesian statistician would interpret
+the random vector $z_1$ as a  vector of   {\it unknown parameters} or {\it hidden states},
+  the conditional density $f(z_2|z_1)$ as a ``statistical model'' or ``likelihood function'' describing
+the density of a potentially observed  random vector $z_2$ conditional on parameters and hidden states $z_1$,  the density $f(z_1)$ as a ``prior''
+ probability density
+that summarizes his subjective
+beliefs about $z_1$ before observing $z_2$, and  the conditional
+density $f(z_1| z_2)$ as a ``posterior'' that describes his beliefs about  parameter vector or hidden state $z_1$ after observing outcome
+$z_2$.\NFootnote{After adopting  these interpretations, a Bayesian statistician calls equation \Ep{eqn:Bayes102} Bayes' law.}
+\index{Bayes' law!as conditional probability}%
+\index{statistical model!likelihood function}%
+\index{prior probability}%
+\index{posterior probability}%
+
+A Bayesian statistician interprets equation \Ep{condmeansurprise} in an interesting  way. The equation
+ asserts that the conditional mean $E z_1 | z_2 \equiv \hat \mu_1$ equals the unconditional mean $\mu_1$ before observing $z_2$
+plus  $\beta (z_2 - \mu_2)$, the systematic part of the regression  of an unobserved surprise $z_1 - \mu_1$ in $z_1$ on an observed surprise
+$z_2 - \mu_2$ in $z_2$.
+A Bayesian statistician  interprets $\mu_1$ as the mean of her {\it prior\/} distribution for $z_1$ and $\hat \mu_1$ as the mean of her
+{\it posterior\/} distribution of $z_1$ after observing $z_2$, while $\Sigma_{11}$ would be her prior covariance matrix and $\hat \Sigma_{11}$ would be her
+posterior covariance.
+
+\subsection{Non normal distributions}\label{sec:nonnormal}%
+We have noted that for a multivariate normal   random vector $z$, a conditional expectation is linear in  conditioning variables,
+and that it minimizes a mean squared error.  Now let's make the weaker assumption that $z$ is an $N \times 1$ random vector
+with mean $\mu$ and covariance matrix $\Sigma$, but that it is not necessarily normal.  In this case, the {\it linear least squares
+projection\/} of $z_1$ on $z_2$ is
+$$ \hat E z_1 | z_2 = (\mu_1 - \beta \mu_2) +  \beta z_2  \EQN regresslinearo $$
+where $\beta$ is still  given by formula \Ep{leastsq12} and the covariance matrix of linear  least squares errors
+is still given by  formula \Ep{condcovmatrix} for $\hat \Sigma_{11}$. These assertions follow from the least-squares orthogonality conditions
+\Ep{leastsq2} that can be verified to be   first-order conditions for one-equation-at-a-time linear least squares regression.
+In the linear least squares projection formula \Ep{regresslinearo}, the object $\hat E z_1 | z_2$ that is linear in $z_2$ is referred to as the `wide-sense
+conditional expectation'
+\index{conditional expectation!wide sense}%
+ to distinguish it from the conditional expectation  $ E z_1 | z_2$
+that in general is not linear in $z_2$ when $z$ is not distributed according to a multivariate normal distribution.\NFootnote{There exist other  joint probability densities for which linear least squares projections equal conditional expectations. The multivariate Laplace distribution is an example.
+Multivariable normal and multivariate Laplace distributions both belong to  the class of {\it elliptical\/} distributions.}
+\index{elliptical!probability distributions}
+\subsection{Linear least squares projection}\label{sec:lls_compact}%
+The following  representation of linear least squares projections is sometimes convenient. Let $Y$ be a $k \times 1$ vector of random variables and let $X$ be
+an $n \times 1$ vector of random variables, each with finite first and second moments and with finite cross-second moments so that
+the mathematical expectations $E(X), E(Y), E (X X'), E(Y Y'), E (Y X')$ are well defined; covariance matrices are defined
+as ${\rm cov}(X,X) = E (X X') - E(X) (E(X))', {\rm cov} (Y,X) - E(Y) (E(X))'$.  The vector of linear least squares projections of $Y$ on $X$ is $\beta X$ where
+$$ Y = \beta X + \epsilon $$
+and  $\epsilon $ is a $k \times 1$ vector of random variables satisfying $E \epsilon X' = 0$ and
+$$ \beta = (E (Y X')) (E(X X'))^{-1}. $$
+The vector of linear least squares projections of $X$ on $Y$ is $\delta  Y$ where
+$$ X = \delta Y + a $$
+where $a$ is an $n \times 1$ vector of random variables satisfying $E a Y' = 0$ and
+$$ \delta = (E (X Y')) (E(Y Y'))^{-1} .$$
+
+
+
+
+%We will use this formula repeatedly in section \use{sec:Kalman100} to derive
+%the Kalman filter.\index{Kalman filter}%
+
+
+\section{Estimation of model parameters}\label{sec:estimation1}%
+We have shown  how to map the matrices $A, C$ of a linear state-space system \Ep{diff1}
+into first and second moments of the probability
+distribution of the stochastic process $\{x_t\}_{t=0}^\infty$.
+In economic applications, give the free parameters of the matrices $A, C$ are typically  functions
+of a set of deeper parameters $\theta$. Chapters \use{practical} and
+\use{dplinear} offer
+examples.
+Such  models and the formulas
+of this chapter give us a mapping from $\theta$ to the population values of the first and second moments that characterize the $\{x_t\}$ process.  That  mapping
+ is an  important ingredient of econometric methods designed to estimate a
+wide class of \idx{linear rational expectations models} (see
+Hansen and Sargent, 1980, 1981).
+\auth{Hansen, Lars P.}%
+ We shall briefly describe how these methods  match theory to data.   To simplify, we shall assume that at time $t$,
+observations are
+available on the entire state $x_t$. In section \use{sec:estimation2},
+ we describe how things get  more complicated when
+  only a subset of the state vector or a noisy signal of the state is observed,
+though the basic principles remain the same.
+
+Thus, consider once again the model
+$$\eqalign{ x_{t+1} & = A x_t + C  w_{t+1} \cr
+              x_0 & \sim  {\cal N}(\mu_0, \Sigma_0) , }$$
+where $w_{t+1} \sim {\cal N}(0,I)$.
+Given a sample of observations for
+ $\{x_t\}_{t=0}^T$, the likelihood function  is defined as
+the joint probability distribution
+$f(x_T, x_{T-1}, \ldots, x_0)$.
+\index{distribution!Gaussian}%
+ \index{likelihood function!Gaussian}%
+ The likelihood function
+can be {\it factored} using
+$$\eqalign{ f(x_T, \ldots, x_0) &= f(x_T \vert x_{T-1}, \ldots , x_0)
+     f(x_{T-1} \vert x_{T-2}, \ldots, x_0) \cdots \cr
+      & f(x_1 \vert x_0) f(x_0),\cr} \EQN diff9 $$
+where in each case $f$ denotes an appropriate probability distribution.
+For system \Ep{diff1}, $ f(x_{t+1} \vert x_t, \ldots, x_0)
+= f(x_{t+1}\vert x_t)$, which
+follows from the Markov property possessed
+by equation \Ep{diff1}.
+  Then the likelihood function
+has the recursive form
+$$ f(x_T, \ldots, x_0) = f(x_T \vert x_{T-1})
+     f(x_{T-1} \vert x_{T-2}) \cdots
+       f(x_1 \vert x_0) f(x_0). \EQN diff10 $$
+ If we  assume  that
+the $w_t$'s are Gaussian, then the conditional
+distribution $f(x_{t+1}\vert x_t)$ is Gaussian with
+mean $A x_t$ and covariance matrix $C C'$.
+Thus, under the Gaussian distribution,
+the log  of the conditional density
+of the $n$ dimensional vector $x_{t+1}$ becomes
+ $$ \eqalign{ \log f(x_{t+1} \vert x_t) & =  -.5  n \log (2 \pi)
+  -.5 \ \log {\rm det} \ (
+ C  C')  \cr & - .5
+(x_{t+1} - A x_t)' (C  C')^{-1} (x_{t+1} - A x_t) \cr} \EQN Gauss1 $$
+Given the distribution of the initial vector
+$x_0$, equations
+ \Ep{diff10} and \Ep{Gauss1}   can be used to form  the likelihood function
+of a sample of observations on $\{x_t\}_{t=0}^T$. One computes
+\idx{maximum likelihood} estimates by using a hill-climbing
+algorithm  to maximize the likelihood function with respect to
+free parameters that  determine $A, C$.\NFootnote{For example, putting those free parameters into  a vector $\theta$,
+think of $A, C$ as being   matrix functions $A(\theta), C(\theta)$.}
+
+  When the state  $x_t$  is not observed, we need the likelihood of the process that {\it is\/} observed.
+    One approach uses filtering methods
+\index{filter!linear}%
+ to construct the likelihood function of the
+ observed variables.\NFootnote{See Hamilton (1994), Canova (2007), DeJong and Dave (2011), Herbst and Schorfheide (2016) and section \use{sec:estimation2} below.}
+ In section \use{sec:Kalman100}, we apply  population linear least squares regression formulas of section \use{sec:populationregression} to derive the Kalman filter.
+  %\NFootnote{Also see chapter \use{dplinear}
+% and Appendix \use{lincontrol} (see Technical
+% Appendixes).}
+ Then in section \use{sec:estimation2}, we use the innovations representation associated with the Kalman filter to tell us how to
+find state variables that allow us recursively  to form
+a likelihood function for observations of variables that are not themselves Markov.
+\auth{Hamilton, James D.}%
+\auth{Canova, Fabio}%
+\auth{DeJong, David}%
+\auth{Dave, Chetan}%
+\auth{Herbst, Edward P.}%
+\auth{Schorfheide, Frank}%
+
+
+
+\section{The Kalman filter}\label{sec:Kalman100}%
+\index{population regression!Kalman filter}%
+\index{hidden Markov model!Kalman filter}%
+\tag{Kfilterchap1}{\the\pageno}%
+As a fruitful  application of the population regression formula
+\Ep{leastsq12}, we derive the celebrated Kalman filter for the
+state space system for $t \geq 0$:\NFootnote{In exercise  \the\chapternum.21, we ask you to derive
+the Kalman filter for a state space system that uses a different timing convention and that allows
+the state and measurement noises to be correlated.}
+$$\EQNalign{ x_{t+1} & = A x_t + C w_{t+1} \EQN kalf1 \cr
+             y_{t} & = G x_t + v_t \EQN kalf2 \cr} $$
+where $x_t$ is an $n \times 1$ state vector and $y_t$ is an $m
+\times 1$ vector of signals on the hidden state; $w_{t+1}$
+is a $p \times 1$ vector i.i.d.~sequence of normal random variables
+with mean $0$ and identity covariance matrix, and $v_t$ is another i.i.d.~vector sequence of normal random variables with mean zero and
+covariance matrix $R$.  We assume that $w_{t+1}$ and $v_s$
+are orthogonal (i.e., $E w_{t+1} v_s'=0$) for all $t+1$ and $s$ greater than or equal to $0$.
+We assume that
+$$x_0 \sim {\cal N}(\hat x_0, \Sigma_0) . \EQN kalf3 $$
+We assume that we  observe $y_t, \ldots, y_0$ but not $x_t, \ldots , x_0$ at time
+$t$. We know all  first and second moments implied by   the structure \Ep{kalf1}, \Ep{kalf2}, \Ep{kalf3}.
+
+
+
+We work forward in time, starting at time $t=0$ before we observe $y_0$.
+Specification \Ep{kalf2}, \Ep{kalf3} implies that the probability distribution of $y_0$ is
+$$ y_0 \sim {\cal N}(G \hat x_0, G \Sigma_0 G' + R). \EQN kalf4 $$
+For $t \geq 0$, let $y^t = [y_t, y_{t-1}, \ldots, y_0]$.  We want  an expression for the probability  distribution of $y_t$ conditional on
+history
+$y^{t-1}$ that has a convenient recursive representation. The Kalman filter attains this by constructing recursive formulas for objects $\hat x_t, \Sigma_t$
+ that appear in the following formula for the probability distribution of $y_t$ conditional on $y^{t-1}$  that for $t \geq 1$ generalizes
+ formula  \Ep{kalf4}
+$$ y_t \sim {\cal N}(G \hat x_t, G \Sigma_t G' + R) \EQN kalf400 $$
+where the probability distribution of $x_t$ conditional on $y^{t-1}$ is ${\cal N}(\hat x_t, \Sigma_t)$. Thus, 
+the objects $\hat x_t, \Sigma_t$  characterize  the population regression $\hat x_t = E [ x_t | y_{t-1}, \ldots, y_0]$ and
+the conditional covariance matrix
+$\Sigma_t = E [(x_t -\hat x_t)(x_t -\hat x_t)' | y_{t-1}, \ldots, y_0]$.
+
+
+\tag{Kfilterchap2}{\the\pageno}%
+At each date,
+our approach is to regress
+what we don't know on what we know. Let's start at date $t=0$.\NFootnote{Because our assumptions imply that $\{x_t, y_t\}_{t=0}^\infty$ is a jointly normal
+stochastic process, linear least squares regressions equal conditional mathematical expectations.  Thus, the steps in the text amounts to repeated
+calculations of conditional probabilities (i.e., applications of  Bayes' law).  Under the  weaker assumption that  $\{x_t, y_t\}_{t=0}^\infty$ is not necessarily
+ jointly normal but that all means and covariances exist, the calculations in the text
+ go though under the understanding that linear least squares regressions are  ``wide sense expectations'' that equal  corresponding mathematical expectations
+ only when those conditional expectations are linear.} We arrive at date $0$ knowing $\hat x_0, \Sigma_0$. Then we observe $y_0$ and form
+probability distributions of  $x_0$ and $x_1$ conditional on $y_0$.  Among the objects with which  we leave time $t = 0$ will be $\hat x_1, \Sigma_1$.
+ This gives a perspective from which
+ ``we are in the same situation at the start of period $1$ that we were in at the start of period $0$'', an insight that activates a recursion called
+ the Kalman filter.
+
+
+The information about $x_0$ in $y_0$  that is new relative to the   $(\hat x_0, \Sigma_0)$ that we knew before observing $y_0$
+ is $a_0 \equiv  y_0 - G \hat x_0 $.
+Thus, before we observe  $y_0$, we regard $x_0$ as a random
+vector with mean $\hat x_0$ and covariance matrix $\Sigma_0$.  Then we observe the random vector $y_0$ linked to $x_0$
+by the time $0$ version of equation  \Ep{kalf2}.
+%We form  revised beliefs about the mean of $x_0$ after observing
+We  want to compute the  distribution of $x_0$ conditional on $y_0$.  The conditional  mean $E [x_0| y_0] =  \hat x_0 + L_0 (y_0 - G \hat x_0)$
+satisfies
+ an appropriate version of the population  regression  formula \Ep{eqn:regression_nonsense}, namely,
+$$ x_0 - \hat x_0 = L_0 (y_0 - G \hat x_0)  + \eta \EQN kalf5 $$
+where % $L_0$ is a matrix of regression coefficients
+ $\eta $ is a matrix of least squares residuals whose orthogonality to $(y_0 - G \hat x_0)$ characterizes
+$L_0$ as population least squares regression coefficients.  Least
+squares orthogonality conditions are
+$$ E(x_0 -\hat x_0)(y_0 - G \hat x_0)' = L_0 E(y_0 - G \hat x_0)(y_0 - G \hat
+x_0)'. $$ Evaluating  the moment matrices and solving for $L_0$  gives the formula
+$$ L_0 = \Sigma_0 G'(G \Sigma_0 G'+R)^{-1}. \EQN kalf6 $$
+Having constructed $E [x_0 | y_0]$, we can  construct $\hat x_1 = E [x_1 | y_0]$ as follows.
+%\NFootnote{It is understood that we know $\hat x_0$.  Instead of writing
+%$E  [x_1 | y_0, \hat x_0]$, we choose simply to write $E [x_1 | y_0]$, but we intend the meaning to be the same.  More generally,
+%when we write  $E[x_t | y^{t-1}]$, it is understood that the mathematical expectation is also conditioned on $\hat x_0$.}
+%Equation \Ep{kalf1} implies
+%that $E[x_1 | y_0] = A\hat x_0$ and
+Note  that
+$$x_1 = A\hat x_0 + A(x_0 - \hat x_0)+C w_1 . \EQN kalf6a $$  Furthermore, applying
+\Ep{kalf5} shows that
+$E [x_1 | y_0] = A\hat x_0 + AL_0 (y_0 - G \hat x_0)$, which we express
+as
+$$ \hat x_1 = A\hat x_0 + K_0 (y_0 - G \hat x_0) , \EQN kalf7 $$
+where
+$$ K_0 = A \Sigma_0 G'(G \Sigma_0 G'+R)^{-1} .\EQN kalf7a $$
+Subtract \Ep{kalf7} from \Ep{kalf6a} to get
+$$ x_1 -\hat x_1 = A(x_0- \hat x_0) + C w_1 - K_0 (y_0 - G
+\hat x_0).   \EQN kalf8 $$
+Use this equation and $y_0 = G x_0 + v_0$ to compute the following formula for the conditional variance
+$ E[(x_1 -\hat x_1)(x_1 -\hat x_1)'| y_0]= \Sigma_1$:
+$$ \Sigma_1 = (A-K_0 G)\Sigma_0 (A-K_0 G)' + (C C' + K_0 R K_0') . \EQN kalf9 $$
+Thus, we have deduced  the conditional distribution  $f(x_1 | y_0) \sim{\cal N}(\hat x_1, \Sigma_1)$.
+Collecting equations, we can write
+$$ \EQNalign{  a_0 & = y_0 - G \hat x_0 \EQN kalf1000;a  \cr
+              K_0 & = A \Sigma_0 G'(G \Sigma_0 G'+R)^{-1} \EQN kalf1000;b \cr
+                    \hat x_{1} & = A\hat x_0 + K_0 a_0 \EQN kalf1000;c \cr
+                   \Sigma_{1} & =  C C' + K_0 R K_0' + (A-K_0 G)\Sigma_0 (A-K_0 G)' .  \EQN kalf1000;d \cr} $$
+Among the outcomes of system \Ep{kalf1000} is a conditional mean, covariance pair $(\hat x_1, \Sigma_1)$.
+
+System \Ep{kalf1000} maps a mean, covariance pair  $(\hat x_0, \Sigma_0)$ into
+a mean, covariance pair  $(\hat x_1, \Sigma_1)$, with  auxiliary intermediate outputs $(a_0, K_0)$.
+The Kalman filter iterates on this mapping to arrive at the following recursions for $t \geq 0$:
+%  Define $\hat x_t = E [ x_t | y_{t-1}, \ldots, y_0]$ and
+%$\Sigma_t = E (x_t -\hat x_t)(x_t -\hat x_t)'$.
+%Iterating the above argument for $t \geq 2$ gives the recursion:
+$$ \EQNalign{  a_t & = y_t - G \hat x_t \EQN kalf10;a  \cr
+                   K_t & = A \Sigma_t G'(G \Sigma_t G'+R)^{-1} \EQN kalf10;b \cr
+                    \hat x_{t+1} & = A\hat x_t + K_t a_t \EQN kalf10;c \cr
+                   \Sigma_{t+1} & =  C C' + K_t R K_t' + (A-K_t G)\Sigma_t (A-K_t G)' .  \EQN kalf10;d \cr} $$
+System \Ep{kalf10} is the celebrated Kalman filter, and $K_t$ is called the Kalman gain.
+Substituting for $K_t$ from \Ep{kalf10;b}  allows us to rewrite \Ep{kalf10;d} as
+$$ \Sigma_{t+1} = A\Sigma_t A' + CC' - A\Sigma_t G'(G\Sigma_t G' + R)^{-1} G \Sigma_t A'. \EQN kalf10new $$
+%a formula that we shall be reminded of in chapter \use{dplinear} when we study dynamic programming  problems with linear constraints
+%and quadratic return functions.
+Equation \Ep{kalf10new} is a matrix Riccati difference equation that   restricts a sequence of conditional
+covariance matrices $\{\Sigma_t\}_{t=0}^\infty$.\NFootnote{In a  different context, we shall  encounter equations that will remind us
+of \Ep{kalf10;b}, \Ep{kalf10new}. See chapter \use{dplinear}, page \use{KfilterLQ}.}
+\index{Kalman filter}%
+\index{filter!linear}%
+%\index{Gram�Schmidt process}%
+\auth{Kalman, Rudolf E.}%
+
+\subsubsection{Gram-Schmidt process}
+The random vector  $a_t = y_t - E[y_t | y_{t-1}, \ldots, y_0]$ is called the  `innovation' of $y_t$ with respect to the
+information set $y^{t-1}$. It is the part
+of $y_t$ that cannot be predicted from past values of $y$.
+Note that $E a_t a_t' = (G \Sigma_t G' + R)$, the moment matrix whose inverse appears on the right side of the
+least squares regression formula \Ep{kalf10;b}.  A direct calculation that uses  $a_t = G(x_t - \hat x_t) + v_t$
+and $a_{t-1} = G (x_{t-1} - \hat x_{t-1}) + v_{t-1}$ %to compute expected values of products
+shows that
+$E a_t a_{t-1}' = 0$, and more generally that $E [a_t | a_{t-1}, \ldots, a_0]=0$.\NFootnote{An alternative
+argument based on first principles proceeds as follows. Let $H(y^t)$ denote the linear space of all linear combinations
+of $y^t$.   Note that $a_{t+1} = y_{t+1} - E y_{t+1}| y^t$;
+that $a_{t} \in H(y^{t})$; that by virtue of being a least-squares error, $a_{t+1} \perp H(y^t)$; and that therefore $a_{t+1} \perp a_t$, and more
+generally, $a_{t+1} \perp a^t$.  Thus, $\{a_t\}$ is a `white noise' process of innovations to the $\{y_t\}$ process.}
+\index{Riccati equation!matrix difference}%
+
+Sometimes \Ep{kalf10} is called a `whitening filter' that takes a  process $\{y_t\}$ of signals as an input and produces a process $\{a_t\}$ of
+innovations as an output. The linear space $H(a^t)$ is an orthogonal basis for the linear space $H(y^t)$.
+
+The Kalman filter  uses a sequence of least squares projections to  construct an orthogonal
+basis for the information set $y_{t-1}, y_{t-2}, \ldots, y_0$.  Instead of computing $E [x_t | y_{t-1}, y_{t-2}, \ldots, y_0]$ from
+one big linear least squares regression, the procedure  computes a sequence of much smaller regressions on successive components
+$a_s$ of an orthogonal basis $[a_{t-1}, a_{t-2}, \ldots, a_0]$ for the linear space spanned by
+$[y_{t-1}, y_{t-2}, \ldots, y_0]$. This is an instance of a  Gram-Schmidt procedure. Please see appendix \use{appc1}.
+\index{Gram-Schmidt process}%
+
+\subsubsection{Hidden Markov model}
+
+System  \Ep{kalf1}, \Ep{kalf2}, \Ep{kalf3} is an example of a hidden Markov model.  The stochastic process $\{y_t\}_{t=0}^\infty$ of observables is
+{\it not\/} Markov,
+ but the hidden
+process $\{x_t\}_{t=0}^\infty$ {\it is\/} Markov, and so is the   process of means and covariances  $\{\hat x_t, \Sigma_t\}$
+of the  probability distributions of   $x_t$ conditional on $[y_{t-1}, y_{t-2}, \ldots, y_0]$.
+%\NFootnote{We are using the
+%term ``sufficient statistic'' a little  loosely here.  Let $P(X|\theta)$ be a probability
+%distribution for random variable $X$ indexed by parameter vector $\theta$.  A statistic $t = T(X)$ is said to be sufficient for $\theta$ if
+%$P(X | \theta, t) = P(X|t)$ so that all information about $\theta$ is contained in $t$.}
+%\index{sufficient statistic}%
+\index{hidden Markov model}%
+
+
+
+\section{Estimation again}\label{sec:estimation2}%
+The \idx{innovations representation} that emerges from the Kalman filter
+is
+$$ \EQNalign{ \hat x_{t+1} & = A \hat x_t + K_t a_{t} \EQN innovrep1;a \cr
+            y_t & = G \hat x_t + a_t \EQN innovrep1;b \cr} $$
+where for $t\geq 1$, $\hat x_t = E[x_t | y^{t-1}]$ and $E [a_t a_t'|y^{t-1}] = G \Sigma_t G' + R \equiv \Omega_t$.
+Evidently, for $t \geq 1$,  $ E [y_t | y^{t-1}] = G \hat x_{t}$ and
+the  distribution of $y_t$ conditional on $y^{t-1}$ is ${\cal N}(G \hat x_{t}, \Omega_t)$.  The objects
+$G \hat x_{t}, \Omega_t$ emerging from the Kalman filter  thus characterize  the
+distribution of $y_t$ conditioned on $y^{t-1}= [y_{t-1}, \ldots, y_]$ for $ t \geq 1$.  The sufficient statistics $\hat x_t, \Sigma_t$ and also the innovation
+$a_t = y_t - G \hat x_t$ can be calculated recursively from \Ep{kalf10}.  The unconditional distribution of
+$y_0$ is evidently ${\cal N}(G \hat x_0, \Omega_0)$.
+
+As a counterpart to \Ep{diff10}, we can factor the likelihood function for a sample $(y_T, y_{T-1}, \ldots, y_0)$ as
+$$ f(y_T, \ldots, y_0) = f(y_T \vert y^{T-1})
+     f(y_{T-1} \vert y^{T-2}) \cdots
+       f(y_1 \vert y_0) f(y_0). \EQN diff100 $$
+ The log  of the conditional density
+of the $m\times 1$ vector  $y_{t}$ is
+ $$  \log f(y_{t} \vert y^{t-1})  =  -.5 m \log (2 \pi)
+  -.5 \log {\rm det} \ (\Omega_t)   - .5
+a_t' \Omega_t^{-1} a_t .  \EQN Gauss100 $$
+We can use \Ep{Gauss100} and \Ep{kalf10} to evaluate  the likelihood function  \Ep{diff100}
+recursively for a given set of parameter values   $\theta$ that underlie the matrices $A, G, C, R$.
+ Such calculations are at the heart of efficient strategies for computing
+ maximum-likelihood
+estimators of   free parameters.\NFootnote{See
+ Hansen (1982); Eichenbaum (1991);
+Christiano and Eichenbaum (1992); Burnside, Eichenbaum,
+and  Rebelo (1993); and Burnside and Eichenbaum (1996a, 1996b) for alternative
+estimation strategies.}
+
+The likelihood function is also an essential object for a Bayesian statistician.\NFootnote{See  Canova (2007), Christensen and  Kiefer (2009),
+ and DeJong and Dave (2011)
+for extensive descriptions of how Bayesian and maximum likelihood methods can be applied to macroeconomic and other dynamic models.}  It completely summarizes how the data influence
+the Bayesian posterior via the following application
+of Bayes' law.  Where $\theta$ is our parameter vector, $y_0^T$ our data record, and $\tilde p(\theta)$
+ a probability density that summarizes our ``prior view'' or ``information'' about $\theta$ {\it before\/} seeing  $y_0^T$,
+our views about $\theta$ {\it after\/} seeing $y_0^T$ are described by a  {\it posterior probability}  $\tilde p(\theta| y^T_0) $ that is constructed from
+the following conditional probability calculation known as
+Bayes' law:
+$$ \tilde p(\theta| y^T_0) =
+ {f(y^T_0| \theta ) \tilde p(\theta) \over \int f(y^T_0| \theta )  \tilde p(\theta) d\, \theta} . $$
+ The denominator is the marginal joint density $f(y_0^T)$ of $y_0^T$.
+%
+
+%\midinsert{
+%$$\grafone{r2red1c.eps,height=3in}{{\bf Figure 1.3}
+%  Impulse response, spectrum, covariogram, and
+%sample path
+%of process $(1 - .98L) y_t =(1 - .7L) w_t $.}
+%$$
+%}\endinsert
+%\newpage
+
+%$\frac{1}{ 3}$
+\section{Vector autoregressions and the Kalman filter}\label{sec:VAR}%
+\subsection{Conditioning on a semi-infinite past of $y$}
+Under  conditions summarized, for example, by
+Anderson, Hansen, McGrattan, and Sargent (1996), iterations on \Ep{kalf10;b}, \Ep{kalf10;d} converge to time-invariant matrices
+$K, \Sigma$ for any positive semi-definite initial covariance matrix $\Sigma_0$.
+A time-invariant matrix $\Sigma_t=\Sigma$ that solves \Ep{kalf10;d} is the covariance matrix
+of $x_t$ around $E x_t | \{y^{t-1}_{-\infty}\} $, where $\{y^{t-1}_{-\infty}\}$ denotes the semi-infinite
+history of $y_s$ for all dates on or before $t-1$.\NFootnote{The Matlab program {\tt kfilter.m} implements the
+time-invariant Kalman filter, allowing for correlation between  $w_{t+1}$ and $v_t$. Also see exercise \the\chapternum.21.}
+\mtlb{kfilter.m}%
+
+\subsection{A time-invariant VAR}
+Suppose that  the fixed point of \Ep{kalf10;d} just  described exists. If we initiate \Ep{kalf10;d} from this fixed point $\Sigma$, then the  innovations representation
+becomes time invariant:
+$$\EQNalign{ \hat x_{t+1} & = A \hat x_t + K a_t \EQN innovti;a \cr
+             y_t & = G \hat x_t + a_t \EQN innovti;b \cr} $$
+where $E a_t a_t' = G \Sigma G' + R$.  Use \Ep{innovti} to express
+$ \hat x_{t+1} = (A -KG) \hat x_t + K y_t$.  If we assume that
+the eigenvalues of $A-KG$ are bounded in modulus below unity,\NFootnote{Anderson, Hansen, McGrattan, and Sargent (1996) show assumptions that guarantee that the eigenvalue of $A-KG$ are bounded in modulus below unity.} we can
+solve the preceding equation to get
+$$\hat x_{t+1} = \sum_{j=0}^\infty  (A-KG)^j K y_{t-j}. \EQN xhatform $$
+Then solving \Ep{innovti;b} for $y_t$ gives
+the {\it vector autoregression\/}
+$$ y_t = G \sum_{j=0}^\infty (A-KG)^j K y_{t-j-1} + a_t ,\EQN VAR1 $$
+where by construction
+$$ E[a_t y_{t-j-1}' ]= 0 \quad \forall j \geq 0 .\EQN VARorth $$
+The orthogonality conditions \Ep{VARorth} identify \Ep{VAR1} as a \idx{vector autoregression}. 
+Defining the 
+the lag operator $L$ by $L x_{t+1} \equiv x_t$,  
+the following   moving average representation
+can also be deduced from the time-invariant innovations representation 
+\Ep{innovti}:\NFootnote{See appendix \use{appa1} of this chapter for other  applications of the lag operator.}  
+$$ y_t = [I + G (I - A L)^{-1} K L ] a_t $$
+
+or
+
+$$ y_t = [ I + G \sum_{j=0}^\infty A^j K L^{j+1}  ] a_t .$$
+
+\subsection{Interpreting VARs}
+
+Equilibria of economic models (or linear or log-linear approximations to them -- see chapter \use{linappro} and the examples
+in section \use{sec:LQmodel} of this chapter and appendix \use{sec:backus} of chapter \use{assetpricing2})  typically
+take the form of the state space system \Ep{kalf1},\Ep{kalf2}.  This   \idx{hidden Markov model} disturbs the evolution of the  state $x_t$
+by the $p\times 1 $ shock vector $w_{t+1}$  and it perturbs the $ m \times 1$ vector of observed variables $y_t$
+by the $ m \times 1$ vector of measurement errors. Thus,  $p + m$ shocks  impinge on $y_t$.
+An economic theory typically makes  $w_{t+1}, v_t$ be directly interpretable as shocks that impinge on preferences, technologies,
+endowments, information sets, and measurements.
+The state space system  \Ep{kalf1},\Ep{kalf2} is a representation of the stochastic process  $y_t$ in terms of these interpretable shocks.
+But the typical situation is that these shocks can  not be recovered directly from the $y_t$'s, even when we know the matrices $A, G, C, R$.
+
+The \idx{innovations representation} \Ep{innovti;a}, \Ep{innovti;b} represents  the % {\it same\/}
+stochastic process $y_t$
+in terms of an $ m \times 1$ vector of shocks $a_t$ that would  be recovered by running an infinite-order (population) vector autoregression
+for $y_t$.  Its role in constructing the mapping from the original representation \Ep{kalf1},\Ep{kalf2} to the one associated
+with the vector autoregression \Ep{VAR1} makes the    Kalman filter is a very useful tool for interpreting vector autoregressions.
+\index{Kalman filter!and vector autoregressions}%
+
+
+
+
+\section{The spectrum}\label{sec:spectrum}%
+ For a covariance stationary stochastic process,  all second moments
+can be encoded in a complex-valued matrix called a
+{\it spectral density} matrix.  The autocovariance sequence for
+the process  determines the spectral density. Conversely,
+the spectral density can be used to determine the autocovariance sequence.
+
+  Under the assumption that
+$A$ is a stable matrix,\NFootnote{It is sufficient that
+the only eigenvalue
+of $A$ not strictly less than unity in modulus is that associated with
+the constant, which implies that $A$ and $C$ fit together in a way
+that validates \Ep{blackspectrum}.}
+ the state $x_t$ converges
+ to a unique covariance stationary probability distribution as
+$t$ approaches infinity.
+The spectral density matrix of this covariance stationary
+distribution $S_x(\om)$ is  defined to be
+the Fourier transform of the covariogram of $x_t$:
+$$S_x(\om) \equiv \sum_{\tau=-\infty}^{\infty}
+C_x (\tau) e^{-i\om\tau}. \EQN diff7 $$
+  For the system \Ep{diff1}, the
+\idx{spectral density} of the stationary  distribution
+\index{distribution!stationary}%
+ is given by the formula\NFootnote{To verify  formula \Ep{blackspectrum}, note that it is true if and only if 
+ $$
+ [I-A e^{-i\om}] S_x(\om) [I-A'
+ e^{+i\om}] = C  C' . \eqno(*)
+ $$
+ Let's verify  equation (*).  
+ First note that when the $\{x_t\}$ process is covariance stationary,
+ equations \Ep{diff6} and \Ep{diff6a} imply that   for $ j \geq 0$, 
+ $E (x_{t+j} - \mu_{t+j}) (x_t -\mu_t)' =  A^{j } \Sigma_\infty$ and  $E (x_t -\mu_t) (x_{t+j} - \mu_{t+j})' = \Sigma_\infty (A^{ \prime})^j.$ Then note that 
+ $$ \eqalign{S_x(\om) & \equiv  \sum_{j=-\infty}^\infty e^{- i \om j} C_x(j) \cr
+                   & = \sum_{j=0}^\infty   e^{-i \om j} A^j \Sigma_\infty +
+                   \sum_{j=0}^\infty e^{i \om j} \Sigma_\infty A^{j \prime} - \Sigma_\infty \cr
+                   & = (I - A e ^{- i  \om} )^{-1} \Sigma_\infty + \Sigma_\infty (I - A' e^{i \om})^{-1} - \Sigma_\infty  .}  $$
+Formula \Ep{blackspectrum} is valid if and only if premultiplying the expression on the right side of the preceding equation  by
+$(I - Ae^{-i \om})$ and postmultiplying it by $(I - A ' e^{i \om}) $ produces an object that equals $C C'$ and thus verifies equation (*).   This equality follows from
+  the indicated pre and post multiplications,  collecting terms, then  recalling
+that $\Sigma_\infty = A \Sigma_\infty A' + C C'$.}
+$$ S_x(\om) = [I-A e^{-i\om}]^{-1}C  C' [I-A'
+e^{+i\om}]^{-1},  \quad \forall
+   \om \in[-\pi,\pi].  \EQN blackspectrum $$
+The spectral density summarizes all
+covariances.  They can be recovered from $S_x(\om)$ by the
+\idx{Fourier inversion formula}\NFootnote{Spectral
+ densities for continuous-time systems are discussed by
+Kwakernaak and Sivan (1972).  For an elementary discussion of
+discrete-time systems, see Sargent (1987a).  Also see
+Sargent (1987a, chap. 11) for definitions of the
+spectral density function and methods of evaluating this integral.}
+
+$$C_x(\tau) =(1/2\pi)\int_{-\pi}^\pi S_x(\om) e^{+i\om\tau} d\om.$$
+\auth{Kwakernaak, Huibert}%
+\auth{Sivan, Raphael}%
+\auth{Sargent, Thomas J.}%
+ Setting $\tau=0$ in the inversion formula gives
+$$C_x(0) =(1/2\pi)\int_{-\pi}^\pi S_x(\om)  d\om,$$
+which shows that the spectral
+density  decomposes covariance across
+ frequencies.\NFootnote{More interestingly, the spectral density  achieves
+a  decomposition of covariance into components that are
+orthogonal across frequencies.}
+A formula used  in the process
+of generalized method of moments (GMM) estimation
+emerges by  setting $\omega=0$ in equation \Ep{diff7}, which gives
+$$S_x(0) \equiv \sum_{\tau=-\infty}^{\infty}
+C_x (\tau) .  $$ \topfigure{r2red1d} \centerline{\epsfxsize=3true
+in\epsffile{r2red1d_gray.eps}} \caption{Impulse response, spectrum,
+covariogram, and sample path of process $(1 - 1.3L + .7L^2) y_t =
+w_t $.} \infiglist{First order a.r.}
+\endfigure
+
+\vfill\eject
+
+
+%\topinsert{
+%$$\grafone{r2red1d.eps,height=3in}{{\bf Figure 1.4}
+%  Impulse response, spectrum, covariogram, and
+%sample path
+%of process $(1 - 1.3L + .7L^2) y_t = w_t $.}
+%$$
+%}\endinsert
+
+
+
+
+ \topfigure{r2red1a} \centerline{\epsfxsize=3true
+in\epsffile{r2red1a_gray.eps}} \caption{Impulse response, spectrum,
+covariogram, and sample path of process $(1 - .9L) y_t = w_t $.}
+\infiglist{First order a.r.}
+\endfigure
+
+%\topinsert{
+%$$\grafone{r2red1b.eps,height=3in}{{\bf Figure 1.2}
+%  Impulse response, spectrum, covariogram, and
+%sample path
+% of process $(1 - .8L^4) y_t = w_t $.}
+%$$
+%}\endinsert
+
+\topfigure{r2red1b}
+\centerline{\epsfxsize=3true in\epsffile{r2red1b_gray.eps}}
+\caption{Impulse response, spectrum, covariogram, and
+sample path
+ of process $(1 - .8L^4) y_t = w_t $.}
+\infiglist{First order a.r.}
+\endfigure
+
+
+\midfigure{r2red1c} \centerline{\epsfxsize=3true
+in\epsffile{r2red1c_gray.eps}} \caption{Impulse response, spectrum,
+covariogram, and sample path of process $(1 - .98L) y_t =(1 - .7L)
+w_t $.} \infiglist{First order a.r.}
+\endfigure
+
+\subsection{Examples}
+To give some practice in reading spectral densities,
+we used the Matlab program {\tt bigshow3.m}  to generate
+Figures \Fg{r2red1a}, \Fg{r2red1b}, \Fg{r2red1d}, and \Fg{r2red1c}
+%, 1.2, 1.3, and 1.4. %  ^^|bigshow.m|
+\mtlb{bigshow3.m} %
+ The program takes as an input a univariate process of the
+form
+$$ a(L) y_t = b(L) w_t,$$
+where $w_t$ is a univariate martingale difference sequence with
+unit variance, where $a(L) = 1 - a_2 L - a_3 L^2 - \cdots - a_n
+L^{n-1}$ and $b(L) = b_1 +  b_2 L + \cdots + b_n L^{n-1}$, and
+where we require that $a(z)=0 $ imply that $| z | > 1$.   The
+program computes and displays a realization of the process, the
+impulse response function from $w$ to $y$, and the spectrum of
+$y$. By using this program, a reader can teach himself to read
+spectra and impulse response functions. Figure \Fg{r2red1a} is for the pure
+autoregressive process with $a(L) = 1 -.9L, b=1$. The spectrum
+sweeps downward in what C.W.J. Granger (1966) called a ``typical
+spectral shape'' of  an economic time series.
+ \index{typical spectral shape}%
+ Figure \Fg{r2red1b} sets $a=1-.8L^4, b=1$.  This is a process with
+a strong seasonal component.  That the spectrum
+peaks at $\pi$ and $\pi/2$ is a  telltale sign of
+a strong seasonal component. Figure \Fg{r2red1d} sets
+$a=1 -1.3 L + .7L^2, b=1$.  This
+is a process that has a spectral peak in the interior of $(0, \pi)$ and cycles in its
+covariogram.\NFootnote{See Sargent (1987a) for a more extended
+discussion.}
+Figure \Fg{r2red1c} sets a = $1-.98L, b = 1 -.7L$.  This
+is a version of a process studied by Muth (1960).  After the first
+lag, the impulse response declines as $.99^j$, where
+$j$ is the lag length.
+\auth{Granger, C.W.J}%
+\medskip
+
+
+
+\section{Concluding remarks}\label{concl1}%
+In addition to giving us tools for thinking about time series, the
+Markov chain and the stochastic linear difference equation have
+deployed a  notion of the state vector as a
+description of the present position of a system. 
+ Subsequent chapters throughout this book present many applications of
+Markov chains and stochastic linear difference equations, often
+in the context of 
+{\it Markov decision problems} that we'll formulate as {\it dynamic programs}.  Properly defining  a state vector is  part of formulating
+a dynamic program.  In chapters \use{dynamicdp1}, \use{practical}, and \use{dplinear},
+we'll introduce principles of  dynamic programming and  apply them   to some  Markov decision problems encountered 
+in economics. These chapters illustrate a precept that ``finding the state is an art''. With chapters \use{dynamicdp1}, \use{practical}, and \use{dplinear} tools under our belt,
+ chapter
+\use{timeseriesapp}  presents some classic applications of the linear state
+space tools we have learned in this chapter, including versions of a linear-quadratic consumption smoothing model that Robert E. Hall (1978)
+used to formalize Milton Friedman's (1957) permanent income model. Chapter \use{timeseriesapp}  also leverages some of the time-series structures we have learned about in this chapter to open windows to the incomplete and complete  markets models of insurance that we'll study in depth in 
+chapters \use{recurge}, \use{selfinsure},  and \use{incomplete}.
+\auth{Hall, Robert E.}%
+\auth{Friedman, Milton}%
+
+
+\medskip
+
+\appendix{A}{Differentiating matrix forms}\label{appendixLQA}%
+Let $(z,x,a)$ each be $n\times 1$ vectors, $A,C,D$, and $V$
+each be $(n\times n)$ matrices, $B$ an $(m\times n)$ matrix, and $y$
+an $(m\times 1)$ vector.  Then
+$ {\partial a^\prime x\over \partial x} = a,
+{\partial x^\prime A x\over \partial x} = (A + A^\prime) x,
+{\partial^2 (x^\prime Ax)\over \partial x \partial x^\prime}=
+(A+A^\prime),
+{\partial x^\prime Ax\over \partial A} = x x^\prime,
+{\partial y^\prime Bz\over \partial y} = Bz,
+{\partial y^\prime Bz\over \partial z} = B^\prime y,
+{\partial y^\prime Bz\over \partial B} = y z^\prime.$
+
+The equation
+$$A^\prime V A + C = V$$
+to be solved for $V$ is called a {\it discrete Lyapunov equation}, and
+its generalization
+$$A^\prime V D + C = V$$
+is called the discrete {\it Sylvester equation}.
+The discrete Sylvester equation
+\index{Sylvester equation!discrete Lyapunov equation}%
+ has a unique solution
+if and only if the eigenvalues $\{\lambda_i\}$
+of $A$ and $\{\delta_j\}$ of $D$ satisfy the condition
+$\lambda_i \delta_j \not=  1 \ \forall \ i, \ j.$
+
+
+
+\medskip
+\appendix{B}{Linear difference equations}\label{appa1}%
+\subsection{A first-order difference equation}
+This section describes  solutions of 
+first-order scalar linear difference equations.
+First, let $ |\lambda | < 1$, and let $\{u_t\}_{t=-\infty}^\infty$ be a
+bounded sequence  of scalar real numbers. Let $L$ be the
+lag operator defined by $L x_t \equiv x_{t-1}$ and
+let $L^{-1}$ be the forward shift operator defined by $L^{-1} x_t \equiv x_{t+1}$.
+Then $$(1 - \lambda L) y_t = u_t, \forall t \EQN a0 $$
+has the solution
+$$y_t = (1 -\lambda L)^{-1} u_t +k \lambda^t \EQN a1$$ for
+any real number $k$.  You can verify this fact by applying
+$(1-\lambda L)$ to both sides  of equation \Ep{a1} and noting
+that $(1 - \lambda L) \lambda^t =0$.
+To pin down $k$ we need one condition imposed from outside
+(e.g., an initial or terminal condition)
+on the path of $y$.
+\medskip
+Now let $| \lambda | > 1$.   Rewrite equation \Ep{a0} as
+$$ y_{t-1} = \lambda^{-1} y_t - \lambda^{-1} u_t , \forall t \EQN a2 $$
+or
+$$ (1 - \lambda^{-1} L^{-1}) y_t = - \lambda^{-1} u_{t+1}. \EQN a3 $$
+A solution is
+$$ y_t = - \lambda^{-1}\left({ 1 \over  1 - \lambda^{-1} L^{-1}} \right)
+        u_{t+1} + k \lambda^t \EQN a4  $$
+for any $k$.  To verify that  this is a solution,
+check the consequences of operating on both sides of equation \Ep{a4}
+by $(1 -\lambda L)$ and compare to  \Ep{a0}.
+
+\medskip
+Solution \Ep{a1} exists for $|\lambda  | < 1$ because the
+distributed lag in $u$ converges.  Solution   \Ep{a4} exists
+when $|\lambda| > 1$ because the distributed lead in $u$ converges.
+When $|\lambda | > 1$, the distributed lag in $u$ in \Ep{a1} may
+diverge, in which case  a solution of this form does not exist.
+The distributed lead in $u$ in \Ep{a4} need not converge
+when $|\lambda| < 1$.
+
+
+\subsection{A second-order difference equation}
+Now consider the second order difference equation
+$$ (1-\lambda_1 L) (1 - \lambda_2 L) y_{t+1} = u_t  \EQN eqndiff2$$
+where $\{u_t\}$ is  a bounded sequence, $y_0$ is an initial condition,
+$| \lambda_1 | < 1$ and $| \lambda_2| >1$.  We seek a bounded sequence $\{y_t\}_{t=0}^\infty$ that
+satisfies \Ep{eqndiff2}.  Using insights from the previous subsection, operate on both sides
+of \Ep{eqndiff2} by the forward inverse of $(1-\lambda_2 L)$ to rewrite equation \Ep{eqndiff2} as
+$$ (1-\lambda_1 L) y_{t+1} = -{\frac{\lambda_2^{-1}}{1 - \lambda_2^{-1}L^{-1}}} u_{t+1} $$
+or
+$$ y_{t+1} = \lambda_1 y_t - \lambda_2^{-1} \sum_{j=0}^\infty \lambda_2^{-j} u_{t+j+1} . \EQN second_order_solution$$
+Thus, we obtained equation \Ep{second_order_solution} by ``solving stable roots (in this case $\lambda_1$) backward, and unstable
+roots (in this case $\lambda_2$) forward''. Equation \Ep{second_order_solution} has a form that we shall encounter often.
+$\lambda_1 y_t$ is called the ``feedback part'' and $ -{\frac{\lambda_2^{-1}}{1 - \lambda_2^{-1}L^{-1}}} u_{t+1} $ is called
+the ``feed-forward part'' of the solution. We have already encountered solutions of this form.
+Thus, notice that equation \Ep{debt_evolution} from subsection \use{sec:debt_dynamics} is almost of this form,
+`almost' because in equation \Ep{debt_evolution}, $\lambda_1 =1$.
+In section \use{lagrangianformulation} of chapter \use{dplinear} we return to these ideas in a more general setting.
+
+
+
+
+
+\appendix{C}{Constant in the state vector}\label{appb1}%
+It is occasionally useful to assume that \Ep{statesp1} takes the
+special form
+$$ \left[\matrix{1   \cr x_{2,t+1} \cr}\right]
+  = \left[\matrix{1 & 0 \cr A_{21} & A_{22} \cr}\right]
+  \left[ \matrix{1 \cr x_{2t} \cr} \right]
+   + \left[\matrix{0 \cr   C_2\cr}\right] w_{t+1}
+   \EQN statesp10 $$
+where $A_{22}$ is a stable matrix.
+Let the mean of $x_t \equiv \mu = \bmatrix{1 \cr \mu_2}$.  Evidently, $(I - A) \mu = 0$
+implies that $\mu_2 = (I - A_{22})^{-1} A_{21}$.  The covariance matrix of $x_t$
+continues to satisfy the discrete Lyapunov equation \Ep{diff5}.
+
+
+
+
+\appendix{D}{Linear least squares projection}\label{appc1}%
+Let $x$ and $y$ be  $N \times 1$ vectors. The inner product of $x$ with $y$ is $\sum_{i=1}^n x_i y_i$.  The $l_2$ norms of $x$ and $y$
+are $| x| %= \left(\sum_{i=1}^n x_i^2\right)^{\frac{1}{2}}
+ = (x \cdot x)^{\frac{1}{2}}  $ and $|y| %= \left(\sum_{i=1}^n y_i^2\right)^{\frac{1}{2}}
+ = (y \cdot y)^{\frac{1}{2}}$, respectively.
+%The inner product
+%of $x$ with $y$ is $ x \cdot y = \sum_{i=1}^n x_i y_i$.
+ An inner product satisfies
+$$ x \cdot y = |x| |y| \cos (\theta ) \EQN innerproddef $$
+or
+$$ \cos (\theta) = {\frac{x \cdot y}{|x| |y|}} , $$
+where $\theta$ is the angle between vectors $x$ and $y$. We say that $x$ and $y$ are {\it orthogonal\/} if $\cos(\theta) = 0$, which also
+means that $ x \cdot y =0$.\NFootnote{We can deduce the a generalization of Pythagoras' theorem called the {\it law of cosines\/} from the following
+calculation: $(x-y) \cdot (x - y) = x \cdot x + y\cdot y - 2 x \cdot y = x \cdot x + y \cdot y - 2 |x| |y| \cos(\theta)$. When $\cos(\theta) = 0$, we obtain
+Pythagoras's theorem for right triangles.}
+\index{Law of cosines}%
+\index{least-squares projection}%
+
+Squaring both sides of  \Ep{innerproddef} gives
+$$ (x \cdot y)^2  = (x\cdot x) (y \cdot y) (\cos(\theta))^2  $$
+and, since $(\cos(\theta))^2  \leq 1$,
+$$ (x \cdot y)^2 \leq  (x\cdot x) (y \cdot y) .$$
+Taking the positive square root  of both sides of the above inequality
+gives the {\it  Cauchy-Schwarz inequality\/}
+$$ | x \cdot y | \leq |x| | y |, $$
+which attains  equality when the angle $\theta =0$.
+
+\index{Cauchy-Schwarz inequality}%
+
+Where ${\frac{x}{|x|}}$ is the unit vector in the direction of $x$, the {\it projection of $y$ on $x$ in the direction of $x$\/} is
+$$ \eqalign{ \cos(\theta) |y| {\frac{x}{|x|}} & = {\frac{ x \cdot y}{|x| | y|}} |y| {\frac{x}{|x|}} \cr
+                         & = {\frac{x \cdot y}{x\cdot x}} x \cr
+                         & = b x } $$
+where
+$ b =  {\frac{x \cdot y}{x \cdot x} } $
+is the least squares {\it regression coefficient\/} of $y$ on $x$.
+
+Least squares  projection decomposes   vector $y$ into  a sum of a  projection $b x$ of $y$  on $x$ and a vector $v$:
+$$ y = b x + v , $$
+where $v \cdot x =0$  is a first-order condition for the least-squares  problem
+$$ \min_{b \in {\bf R}} | y - b x |^2 $$
+that confirms that the residual vector  $v = y - b x$ is orthogonal to the vector $x$.
+
+The {\it correlation coefficient\/} $ {\frac{x \cdot y}{|x| |y|}}$ between vectors $x$ and $y$
+  equals $\cos(\theta)$.  The orthogonal decomposition $ y = b x + v$ induces the following decomposition
+of $y \cdot y $:
+$$ y \cdot y = {\frac{(x \cdot y)^2}{ x \cdot x}} + v\cdot v .$$
+Dividing both sides of this equation by $y \cdot y$ tells us that
+$$ \eqalign{ {\frac{ y \cdot y} { y \cdot y}} &=  {\frac{(x \cdot y)^2}{ (x \cdot x) (y \cdot y) }} + {\frac{ v\cdot v}{ y \cdot y}} \cr
+    1 & = R^2 + {\frac{ v\cdot v}{ y \cdot y}},   }$$
+  which defines the  $R^2$ between $x$ and $y$.  So  $1 - R^2 = {\frac{ v\cdot v}{ y \cdot y}}$ is the fraction of  $l_2$ variation in vector $y$
+  that is not explained by  $l_2$ variation in  vector $x$.\NFootnote{Evidently, $R^2 = \cos (\theta)^2$.}
+
+  Thus, least squares  projection  takes two  non-orthogonal vectors  $x$ and $y$ and from them
+  constructs two orthogonal vectors $x$ and $v$.  This fact is the starting point for the {\it Gram-Schmidt\/} method
+  for constructing
+  %of taking $m$ non-orthogonal vectors $x_1, x_2, \ldots, x_m$ and from them constructing
+  an orthogonal basis $v_1, v_2, \ldots, v_m$ for the linear
+  space spanned by vectors $x_1, x_2, \ldots, x_m$.
+  A Gram-Schmidt recursion is
+  $$ \eqalign{ v_1 & = x_1 \cr
+               v_2 & = x_2 - {\frac{x_2 \cdot v_1}{v_1 \cdot v_1}} v_1 \cr
+               v_3 & = x_3 -  {\frac{x_3 \cdot v_1}{v_1 \cdot v_1}} v_1 - {\frac{x_3 \cdot v_2}{v_2 \cdot v_2}} v_2 \cr
+               \vdots &  \quad \quad  \vdots  \quad \quad \quad \vdots \quad \quad \quad \quad \vdots \cr } $$
+which we can summarize as $v_1= x_1$ and for $j \geq 2$
+$$ v_j = x_j - \sum_{i=1}^{j-1} {\frac{ x_j \cdot v_i}{v_i \cdot v_i}} v_i  .$$
+The basis vectors $v_1, v_2, \ldots, v_m$ are elements of a sequence of least squares residuals.
+\index{Gram-Schmidt process}%
+
+
+The preceding material applies directly to collections of random variables with finite second moments once we conceive of a random variable itself as being
+a vector that is indexed by some underlying scalar random variable.  Thus,
+let $x(\omega)$ and $y(\omega)$ each be scalar random variables that are each functions of $\omega \in \Omega$  that is endowed
+with probability measure $P$.  Define the inner product and norm
+$$ \eqalign{  x \cdot y & = \int x(\omega) y(\omega) d P(\omega) = E x y \cr
+              |x|^2 & = x \cdot x = E x^2   .} $$
+Our formulas for linear least squares projects apply  to settings  in which inner products are defined in this way.
+As an application, we offer the following useful interpretation of a Cholesky decomposition of a covariance
+matrix of a sequence of scalar random variables $x_t$ indexed by a  time index $t \in T$ where $T$ is a collection of integers.
+
+
+%When the sequence of vectors or random variables  $x_1, x_2, \ldots, x_m$ is  ordered in time,
+It turns out that we can  use a Cholesky decomposition to describe
+a Gram-Schmidt process concisely and quickly. This is especially useful when the random variables are indexed by time $t$.
+Thus, suppose that $E x_t =0$ for $t = 1, \ldots, m$ and that the covariance matrix
+of $ x' = \bmatrix{ x_1 & x_2 & \cdots & x_m }$ is $E x x' = V > 0$, where the inequality sign indicates that $V$ is a positive definite matrix.
+There  exists  a lower triangular matrix $L$ called a Cholesky factor of $V$  that verifies $L V L' = I$ and $V = L^{-1} L'^{-1}$, where $L^{-1}$ is
+ also lower triangular.
+We can use $L$ to define an $m \times 1$  random vector $\epsilon = Lx $ with mean vector $E \epsilon = 0$ and covariance matrix
+$E \epsilon \epsilon' = L E (x x') L'  =  L V L' = I$. Thus,  $\epsilon$ is an orthogonal basis for $x$. This implies
+that for $1 \leq t \leq m$, the linear subspace  $\epsilon^t = [\epsilon_1, \epsilon_{2}, \ldots, \epsilon_t]$ is an orthogonal basis for the linear subspace
+ spanned by
+$x^t = [x_1, x_{2}, \ldots, x_t]$, that $\epsilon_t$ is in the linear space spanned by $x^t$, and that $\epsilon_t$ is orthogonal to the linear space spanned
+by $x^{t-1}$. These attributes mean that $\epsilon = Lx$ and $ x = L^{-1} \epsilon$ are concise representations of finite-horizon autoregressive and moving average
+representations, respectively.  Rows of the representation
+$\epsilon = L x$ take the autoregressive  form
+$$ \sum_{j=0}^{t-1} L_{t,t-j} x_{t-j} = \epsilon_t ,$$
+where $L_{k,l}$ is the $(k,l)$ element of $L$.  Rows of the representation $x = L^{-1} \epsilon$ take the moving average  form
+$$ x_t = \sum_{j=0}^{t-1} L^{-1}_{t, t-j} \epsilon_{t-j}  $$
+where $L_{k,l}^{-1}$ is the $(k,l)$ element of $L^{-1}$.
+\index{autoregression!finite-horizon}%
+\index{moving average!finite-horizon}%
+\index{Cholesky decomposition}%
+\index{least squares projection!Cholesky decomposition}%
+\index{Gram-Schmidt process!Cholesky decomposition}%
+%
+%\medskip
+%\specsec{Condition A2:} The state-space representation takes the special
+%form \Ep{statesp10} and all of the eigenvalues of $\tilde A$ are strictly
+%less than $1$ in modulus.
+%\medskip
+
+%
+%We will assume that all of the eigenvalues
+%of $A$ are strictly  less than unity in modulus, except possibly for one that
+%is affiliated with the constant terms in the various equations.
+%Under our assumptions here,
+%$x_t$  pos%sesses a stationary mean defined to satisfy
+%$\mu_{t+1} = \mu_t$, which from equation \Ep{diff2} evidently satisfies
+%$$ (I - A) \mu = 0 , \EQN diff3  $$
+%which characterizes the mean $\mu$ as an eigenvector
+%associated with the single unit eigenvalue of $A$. T
+
+
+\appendix{E}{Ergodicity}\label{appergodicMC}%
+In the context of finite state Markov chains, this appendix describes the role of the concept  of ergodicity  in 
+justifying  laws of large numbers. To begin, let $(P, \pi)$ be a stationary $n$-state Markov chain with 
+ state space
+$X= \{e_i, i=1, \ldots, n\}$.   An $n \times 1$ vector $\overline y$
+defines a  random variable $y_t = \overline y' x_t$.
+%Thus, a random variable is another term for  ``function of the underlying
+%Markov state.''
+%We'll occasionally use the symbol $E [y_\infty | x_0 = e_i]$ to denote the expectation of $y_s$ for $s$ very large,
+%conditional on an initial state.
+
+\medskip
+\noindent{\bf Example 0:}
+ Consider the Markov chain $P = \bmatrix{ 1 & 0 \cr 0 & 1\cr}, \pi_0 = \bmatrix{p \cr (1-p)\cr}$ for
+$p \in (0,1)$, where the state space $X = \{e_1, e_2\}$. Evidently, for all $t \geq 0$ the unconditional distributions $\pi_t = \pi_0$.  
+Consider the random variable $y_t = \bar y' x_t$, where 
+$\bar y = \bmatrix{10 \cr 0 \cr}$. The unconditional mean of $y_t$
+is $p \bar y_1 + (1-p) \bar y_2 = 10 p $ for all $t \geq 0$.  There are   two possible sample
+paths of $\{y_t\}_{t=0}^\infty$, namely, $y_t = 10 \ \forall t\geq 0$, which occurs with probability $p$  and $y_t = 0 \ \forall t\geq 0$, 
+which occurs
+ with probability $1-p$.
+Thus,  $ {1 \over T} \sum_{t=1}^T y_t \rightarrow 10$ when $x_0 = e_1$, which occurs with probability $p$ and 
+${1 \over T} \sum_{t=1}^T y_t \rightarrow  0$ when $x_0 = e_2$, which occurs with
+probability $(1-p)$.  But  the unconditional mean of $y_t$ is $ 10 p$.  In this  example,  time series  averages 
+fail to reveal the unconditional mean.  
+
+\medskip
+
+
+The preceding example is one in which a law of large numbers  does not
+ hold.\NFootnote{Suppose that $(P, \pi)$ is a stationary Markov chain.
+Imagine repeatedly drawing $x_0$ from $\pi$ and for each such initial condition 
+then generating $x_t, t \geq 1$ by successively drawing from  transition densities given by the matrix $P$. 
+Averages of many time series from a {\it cross section}  indexed by random draws of $x_0$ from $\pi_0$
+would converge to  $E [y_0]$.}
+ To obtain a law of large numbers like the one stated in section \use{sec:Markovchains}, we must strengthen 
+what we assume about $P$.  % by using the following concepts.
+To investigate how to accomplish this, we want to study the  right eigenvectors of transition matrix $P$.
+
+\subsection{Right eigenvectors}
+Let $(P, \pi)$ be a stationary Markov chain and
+ let $y_t = \bar y' x_t$ be a random variable generated as a linear function of the Markov state $x_t \in X = \{e_1, \ldots, e_n\}$.
+ Notice that  the $i$th row of $P \bar y$
+equals
+$$ \sum_j P_{ij} \bar y_j = E [ y_{t+1} | x_t = e_i ]   $$
+Suppose now that $\bar y$ is a right eigenvector of $P$ associated with a unit eigenvalue of $P$:
+$$ P \bar y = \bar y   \EQN invariant22 $$
+The $i$th row of equation \Ep{invariant22} states that
+$$ E [y_{t+1} | x_t = e_i ] = \bar y_i , \EQN invariant23  $$
+so equation \Ep{invariant22} states that \Ep{invariant23} holds for all $i \in \{1, \ldots , n\}$.
+This can be written informally as
+$$ E_t y_{t+1} = y_t , \EQN invariant22 $$
+where $E_t$ denotes a mathematical expectation conditioned on time $t$ information, namely, the Markov state $x_t$.
+
+
+
+\medskip
+\noindent{\bf Observation:}
+ Consider the Markov transition matrix  $P = \bmatrix{ 1 & 0 \cr 0 & 1\cr}$  where the state space $X = \{e_1, e_2\}$.
+ For any real numbers $\bar y_1, \bar y_2$, a right eigenvector of $P$ associated
+ with a unit eigenvalue
+is $\bar y = \bmatrix{ \bar y_1  \cr \bar y_2 \cr} $ .
+
+
+\medskip
+\noindent{\bf Observation:}
+ Consider the Markov transition matrix  $P = \bmatrix{ 1 -\lambda & \lambda  \cr \delta & 1-  \delta \cr}$,   where the state space $X = \{e_1, e_2\}$,
+ $\lambda \in (0,1)$, and $\delta \in (0, 1]$. A right eigenvector of $P$ associated with a unit eigenvalue
+is $\bar y = \bmatrix{ \bar y_1  \cr \bar y_1 \cr} $ for any real number $\bar y_1$ (i.e, $\bar y_2$ must equal $\bar y_1$).
+
+\medskip
+
+%%% Jarda suggestions and machinery imported here
+
+To compute conditional expectations of future Markov states and random variables that are functions of those states we use some 
+formulas from section \use{sec:Markovchains}.  First, recall that
+$$ E [x_{t+1} | x_t = e_i ]= \sum_{j=1}^n e_j P_{ij} = P' e_i .$$
+Further, 
+$$ E [y_{t+1} | x_t = e_i ] = \bar y' E [x_{t+1} | x_t = e_i] = \bar y' P' e_i = e_i' P \bar y $$
+and 
+$$ E [y_{t+k} | x_t = e_i] = e_i' P^k \bar y .$$
+
+To state a law of large numbers, we shall want to compute conditional expectations of random variables conditional on the Markov 
+state $x_t$ being in a given subset of states ${\cal X} = \{ e_{j} | j \in J \}$ where $ J= \{ i_1, \ldots , i_k\} $ is a subset
+of the integers $1, \ldots, n$ that we use to index  Markov states.  Using the definition of conditional probability, we compute 
+the probability that $x_t = e_i$ conditional on $x_t$ being in the set $\cal X$ as
+$$ \pi_{t,i}^{\cal X} = {\frac{\pi_{t,i} {\bf 1}\{e_i \in {\cal X} \}}{\sum_{j: e_j \in {\cal X}} \pi_{t,j}}} . \EQN eq:calX $$
+We have the conditional expectation
+$$ E [ y_{t+k} | {\cal X}] = (\pi_t^{\cal X})'P^k \bar y .  $$
+For example,  
+${\cal X} = \{e_i\}$ implies that $ E [ y_{t+k} | x_t  \in {\cal X}] = E [y_{t+k} | x_t = e_i]$ while
+${\cal X} = \{e_1, \ldots, e_n\}$ implies that $ E [ y_{t+k} | x_t \in  {\cal X}] = E [y_{t+k}] $.
+
+
+\medskip
+
+
+\noindent We use
+\medskip
+\definition{invariant} A random variable $y_t = \overline y' x_t $ is said to
+be  {\it invariant\/} with respect to a stationary Markov chain $(P, \pi)$ if
+$y_t = y_0 \ \forall t \geq 0$,
+ for all realizations of  $x_t, t \geq 0$ that occur with positive probability under $(P, \pi)$.
+%$\bar y_i = \bar y_j$ for all $i,j$ that occur with
+%positive probability according to the stationary probability distribution
+%$\pi$.
+\enddefinition
+\medskip
+\noindent  Thus, a random variable $y_t = \bar y' x_t $ is invariant (or ``an invariant function
+of the state'') with respect to $P, \pi$ if it remains constant
+at $y_0$ while the underlying state $x_t$ moves through the state space $X$.  Notice how
+the definition leaves open the possibility that $y_0 = \bar y' x_0$ itself might differ across sample paths indexed by
+different draws of the initial condition
+$x_0$ from the stationary density $\pi$.
+
+%
+%Evidently, ${\rm Prob}(y_{t+1} = \bar y_j | y_t = \bar y_i) = P_{ij}$.  If  $P_{ij} >0 $ for all $(i,j)$,
+%then the only way that we can have $y_{t+1} = y_t$ for all realizations  is if we have $\bar y_i = \bar y_j$
+%for all $i, j$.  More generally, the only way that we can have $y_{t+1} = y_t = \bar y_i$ for sure is that
+%$\bar y_j = \bar y_i $ whenever $P_{ij} >0$.  Thus, we can say that if $y_t = \bar y  x_t$ is an invariant variable for Markov chain
+%with transition matrix $P$,  then $P\bar y = \bar y$, which is to say, $\bar y$ is a right eigenvector of $P$ associated
+%with a unit eigenvalue.
+%
+%If $P_{ij} > 0$ for all $(i,j)$, then the only eigenvector associated with a unity eigenvector has the form $ \bar y_o {\bf 1} $,
+%where $y_o$ is a real scalar and ${\bf 1}$ is the $n \times 1$ unit vector.  If $P_{ij} = 0$ for some $(i,j)$, there
+%can be eigenvectors that are not of the form $ \bar y_o {\bf 1} $, as illustrated in the following example.
+%
+%\medskip
+%\specsec{Example:}  Consider the stochastic matrix
+%$$ P = \bmatrix{ 1 & 0 & 0 \cr
+%                 0 & 1 & 0 \cr
+%                 .25 & .25 & .5} .$$
+%A right eigenvector of $P$ associated with a unit eigenvalue is $\bmatrix{ 2 & -2 & 0 } $, which evidently is not constant across states.
+%
+%\medskip
+
+
+%
+%
+%The stationary Markov chain $(P, \pi)$ induces a joint density $f(x_{t+1}, x_t)$ over $(x_{t+1}, x_t)$ that
+%is independent of calendar time $t$; $P, \pi$ and the definition $y_t = \overline y' x_t$ also
+%induce a joint density $f_y(y_{t+1}, y_t)$ that is independent of calendar time.  In what follows,
+%we compute mathematical expectations with respect to the joint density $f_y(y_{t+1}, y_t)$.
+%
+%For a finite-state Markov chain, the following theorem gives a convenient
+%way to characterize
+%invariant        functions of the state.
+%
+%\medskip
+
+\theorem{Jarda1} Let $(P, \pi)$ be a stationary Markov chain.  If 
+$E [y_{t+1} | x_t ]= y_t$, which is equivalent with
+$$ x_t' P \bar y = x_t ' \bar y , $$
+then the random variable
+$y_t = \bar y' x_t$ is invariant. 
+\endtheorem
+
+This theorem asserts that for the random variable $y_t = \bar y' x_t$ to be a martingale, $\bar y$ must be a right eigenvector associated 
+with a unit eigenvalue 
+ of $P$.
+
+
+
+\theorem{invariant2200}  Let $(P, \pi)$ be a stationary Markov chain on a state space $X = \{e_1, \ldots, e_n \}$ consisting
+of $n$ unit vectors. Let $\bar y$ be a right eigenvector
+of $P$ associated with a unit eigenvalue. Let $y_t = \bar y' x_t$.
+% be
+%a random variable that is a fixed function of the Markov state.  %and assume that $\pi$ puts positive
+%probability on all $x_t \in X$.
+Suppose that $x_0 = e_i$, where $e_i $ belongs to an absorbing subset of the Markov chain.
+Then by virtue of equation \Ep{invariant22},
+%$$ E [y_{t+1} | x_t] = y_t , \EQN invariant22 $$
+ $y_{t+1} = y_t$ and the random variable   $y_t = \overline y' x_t$
+is invariant with respect to $(P, \pi)$.%
+\NFootnote{As we shall have cause to study in chapters \use{selfinsure} and
+\use{incomplete},
+{\it any\/} (not necessarily stationary) stochastic   process $y_t$ that satisfies
+\Ep{invariant22} is said to be a {\it martingale\/}.
+\Theorem{invariant2200} tells us that a martingale that is a function of a finite-state
+stationary Markov state $x_t$ must be constant over time.  This result is a special case of the
+martingale convergence theorem that underlies some remarkable results about savings to be studied
+in chapter \use{selfinsure}.  A stationary
+ martingale process generated by a finite-state stationary  Markov chain
+has so little freedom to move that it has to be constant forever, not just eventually, as asserted
+by the martingale convergence theorem.}
+
+\endtheorem
+
+\proof See exercise \the\chapternum.9.  
+\endproof
+
+%\proof  By using the law of iterated expectations, notice that
+%$$\eqalign{ E (y_{t+1} - y_t)^2 &= E[E(y_{t+1}^2 - 2 y_{t+1} y_t
+%+ y_t^2)|x_t]  \cr
+% & = E[ E y_{t+1}^2 | x_t - 2 E (y_{t+1}| x_t) y_t + E y_t^2 | x_t]  \cr
+% & = E y_{t+1}^2 - 2 E y_t^2 + E  y_t^2  \cr
+% & =0 , \cr } $$
+%where the middle term on the right side of the second line
+%uses that $E[y_{t}|x_t]= y_t$, the middle term on the right side of the third line
+%uses  hypothesis \Ep{invariant22}, and the third line uses the hypothesis that $\pi$
+%is a stationary distribution.  In a finite Markov chain, if
+%$E (y_{t+1} - y_t)^2=0$,  then $y_{t+1} = y_t$ for all  $y_{t+1}, y_t$ that
+%occur with positive probability under the stationary distribution. \endproof
+
+
+
+
+Equation \Ep{invariant22}
+  states that an invariant function of the state is
+a right eigenvector of $P$ associated with a unit eigenvalue.
+Thus, associated with unit eigenvalues of $P$ are (1) left eigenvectors that are stationary distributions of the chain (recall equation \Ep{obA3}),
+and (2) right eigenvectors that can be used to construct  candidates for  invariant functions of the state. % (from equation \Ep{invariant3}).
+
+
+\definition{Jarda2} The stationary Markov chain $(P, \pi)$ is said to be {\bf ergodic} if the only invariant functions $\bar y$ are 
+constant with probability $1$ under $P, \pi$, i.e., if $\bar y_i = \bar y_j$ for all $i$ with $\pi_i >0, \pi_j >0$.  
+\enddefinition
+
+%\definition{ergodicity}  Let $(P, \pi)$ be a stationary Markov chain on a  state space $X = \{e_1, \ldots, e_n\}$ consisting
+%of $n$ unit vectors, and let $\overline y$ be a right eigenvector of $P$ associated with a unit eigenvalue.
+%The stationary distribution $\pi$ is  said to be {\it ergodic\/} if the  random variable  $y_t = \overline y' x_t$
+% is constant with probability $1$, i.e.,
+%$\overline y_i = \overline y_j$ for all $i, j$ with $\pi_i >0, \pi_j >0$.
+%\enddefinition
+
+%\begin{definition}{Jarda3}
+%    A set ${\cal X}$ of states of a stationary Markov chain $(P, \pi)$ is called {\bf invariant} if it cannot be entered from 
+%    any state $e_i \notin {\cal X}$ with $\pi_i > 0$; thus,
+%    $ {\cal X} = \{e_i : {\rm Prob}( x_{t+1} \in {\cal X})  \pi_i > 0 \}$.
+%\end{definition}
+
+\medskip
+
+
+We can now state a Birkhoff-Khinchin {\bf ergodic theorem} for our stationary Markov setting:
+
+\theorem{Jarda4}
+Let $(P, \pi)$ be a stationary Markov chain and let $y_t = \bar y ' x_t$.  Let ${\cal X}$ be the smallest absorbing subset to which
+$x_0$ belongs and let $\pi^{\cal X}$ be the conditional probability distribution defined in equation \Ep{eq:calX}.  Then
+$$ \lim_{T \rightarrow \infty} {\frac{1}{T}} \sum_{t=1}^T y_t = E [y_t | x_0 \in {\cal X}] =  \left(\pi^{\cal X}\right)' \bar y $$
+with probability $1$.  Furthermore, if the Markov chain is ergodic, then the right side of the above equation equals
+$\pi' \bar y$.  
+\endtheorem
+
+
+\Theorem{Jarda4} allows sample averages along paths to depend on initial conditions.  When the Markov chain is not ergodic,
+as in Example 0, there are two non-trivial invariant sets ${\cal X} = \{e_1\}$ and ${\cal X} = \{e_2\}$.  When $x_0 = e_1$,
+$\pi^{\cal X} = \bmatrix{1 & 0 }'$ and the limit equals $\bar y_1$.  When the Markov chain is ergodic, the smallest invariant 
+set to which $x_0$ belongs is ${\cal X} = \{ e_1, \ldots, e_n\}$ and $\pi^{\cal X} = \pi$.  In this case,
+time series averages along every sample path convege to the unconditional expectation of $y_t$ under $\pi$.  
+
+\medskip
+\noindent A law of large numbers for Markov chains is:
+\medskip
+\theorem{LLNMarkov}
+Let $y_t = \overline y' x_t$ define a random variable on a stationary and ergodic
+Markov chain $(P, \pi)$ with state space $X = \{e_1, \ldots, e_n\}$.  Then
+$$ {1 \over T} \sum_{t=1}^T y_t \rightarrow     E[y_0]
+   \EQN lawlarge1 $$
+with probability $1$ with respect to probability distribution $\pi$.
+\endtheorem
+\medskip
+\noindent The theorem tells us that the time series average
+converges to the population mean of the stationary distribution of the random process $\{y_t\}$.
+
+\medskip
+ Four examples illustrate these concepts.
+\medskip
+\noindent{\bf Example 1.} A chain with transition matrix
+$P=\left[\matrix{0 & 1 \cr 1 & 0\cr}\right]$ has a unique stationary
+distribution $ \pi=\left[\matrix{.5 & .5 \cr}\right]'$  and
+the invariant functions are $\left[\matrix{\alpha & \alpha \cr}\right]'$
+for any scalar $\alpha$.  Therefore, the Markov chain $P, \bmatrix{.5 & .5}'$ is ergodic and
+\Theorem{LLNMarkov} applies.
+
+\medskip
+\noindent{\bf Example 2.}  A chain with transition matrix
+$P=\left[\matrix{1 & 0 \cr 0 & 1\cr}\right]$ has a continuum of
+stationary distributions
+$\gamma \left[\matrix{1 \cr 0 \cr}\right]+
+(1- \gamma )\left[\matrix{0 \cr 1 \cr}\right]$ for any $\gamma \in [0,1]$ and
+invariant functions
+$\left[\matrix{0 \cr \alpha_1 \cr}\right] $ and
+$\left[\matrix{\alpha_2  \cr 0 \cr}\right]$ for any scalars $\alpha_1 , \alpha_2 $ provided that $\alpha_1$ and $\alpha_2$ are not both equal to zero.
+ Therefore,
+the Markov chain $P, \pi$  is not ergodic when $\gamma \in (0,1)$, for note that neither invariant function is
+constant across states that receive positive probability according to a stationary distribution associated with $\gamma \in (0,1)$.
+Therefore, the  conclusion \Ep{lawlarge1} of  \Theorem{LLNMarkov} does not hold for an initial  stationary distribution associated with
+$\gamma \in (0,1)$. When $\gamma \in (0,1)$,  nature chooses state $i=1$ or
+ $i=2$ with probabilities $\gamma, 1-\gamma$, respectively,
+  at time $0$.   Thereafter, the chain remains stuck in the realized time $0$ state. Its failure ever to
+ visit the unrealized state prevents the sample average from converging to the population mean of  an arbitrary  function $\bar y$ of the state.
+Notice that conclusion \Ep{lawlarge1} of \Theorem{LLNMarkov}  does hold for  the stationary distributions associated
+with $\gamma=0$ and $\gamma=1$.
+\medskip
+\noindent{\bf Example 3.}
+  A chain with transition matrix
+$P=\left[\matrix{.8 & .2 & 0  \cr .1  & .9 & 0 \cr
+               0 & 0 & 1\cr}\right]$ has a continuum of
+stationary distributions
+$ \gamma \left[\matrix{ {1\over 3} & {2 \over 3} & 0 \cr}\right]'
++(1- \gamma) \left[\matrix{ 0 & 0 & 1 \cr}\right]' $ for $\gamma \in [0,1]$ and
+invariant functions
+$ \alpha_1\left[\matrix{1  &  1 & 0 \cr}\right]'$ and
+$ \alpha_2\left[\matrix{0 &  0 & 1 \cr}\right]'$
+for any scalars $\alpha_1, \alpha_2$ that are not both equal to zero.
+The conclusion \Ep{lawlarge1} of  \Theorem{LLNMarkov} does not hold for
+the stationary distributions associated with $\gamma \in (0,1)$.
+But again, conclusion \Ep{lawlarge1} does hold for the  stationary distributions associated with $\gamma =0$ and $\gamma=1$.
+
+
+
+\medskip
+
+\noindent{\bf Example 4:}
+Consider the Markov transition matrix $P = \bmatrix{ 1& 0 & 0 \cr .25 & .5 & .25 \cr 0 & 0 & 1 \cr}$.
+A right eigenvector associated with a unit eigenvalue is $\tilde y = \bmatrix{ \bar y_1 \cr \bar y_2 \cr \bar y_3 \cr}$  for  $\bar y_2 = .5 \bar y_1 + .5 \bar y_3$ where
+ $\bar y_1, \bar y_3$ are any
+two real numbers.
+Two stationary densities are  ergodic, namely, $\pi_1 = \bmatrix{ 1 \cr 0 \cr 0 \cr}$ and $\pi_2 =  \bmatrix{ 0 \cr 0 \cr 1 \cr}$.
+Stationary densities are $\alpha \pi_1 + (1-\alpha) \pi_2$ for any $\alpha \in [0, 1]$. There are two absorbing subsets, namely,
+$\{e_1\}$ and $\{e_3\}$.  Evidently, starting from $x_0 = e_i$   for $i = 1, 3$,
+$ E [y | {\cal X} ] = \lim_{T\rightarrow \infty} T^{-1} \sum_{t=0}^T y_t =  \bar y_i $.
+But notice that $E [y  | x_0 = e_2 ] \neq \bar y_2$.  Instead,  $E [y_\infty | x_0 = e_2 ]$ equals $\bar y_1$
+with probability $.5$ and $\bar y_3$ with probability $.5$.  In this example, $y_{t+1} = y_t$ for $t \geq 0$ if $x_0 = e_i$ for
+$i =1$ or $i=3$, but not for $i =2$, i.e., not for an initial state having zero probability under an ergodic stationary  distribution.
+
+
+\subsection{Ergodic decomposition of stationary $(P, \pi)$}
+
+Concepts underlying the laws of large numbers described in this appendix provide foundations for statistical theories
+of learning that are encapsulated in the type of ergodic decomposition that we briefly sketch.
+
+  Let $\tilde \pi^{(1)}, \tilde \pi^{(2)}, \ldots, \tilde \pi^{(m)}$ be
+$m$ distinct ergodic stationary distributions for an $n$ state Markov chain with transition matrix
+$P$ and state space $X= \{e_1, \ldots, e_n\}$.  Each $\tilde \pi^{(k)}$ is an $n \times 1$  left eigenvector of $P$ associated with a distinct
+unit eigenvalue, %. Each $\tilde \pi^{(j)}$ is
+scaled to be a probability vector (i.e., its components are nonnegative and sum to unity).
+The set $S$ of {\it all\/} stationary distributions is convex: an element $\pi_b \in S$   can  be represented
+as
+$$ \pi_b =   b_1 \tilde \pi^{(1)} + b_2 \tilde \pi^{(2)} +  \cdots + b_m \tilde \pi^{(m)} , $$
+where $b_j \geq 0, \sum_j b_j =1$ is a probability vector.
+
+The collection of ergodic 
+stationary distributions  $\tilde \pi^{(1)}, \tilde \pi^{(2)}, \ldots, \tilde \pi^{(m)}$ constitute  basis vectors 
+that can be used to  form a collection of 
+stationary distributions that are not necessarily ergodic.  
+Think of the ergodic distributions as vertices and
+ the set of all stationary distributions
+ as the convex hull of these  vertices. % An ergodic stationary density $\pi_b$
+%is one of the vertices of the convex hull,
+ %$ \pi_b = \tilde \pi^{(j)} $
+%for one of the `basis' stationary densities.
+If
+$\tilde \pi_b$ is an ergodic stationary distibution, i.e., it is a vertex of the convex hull of stationary 
+distributions,  we call a chain $(P, \pi_b)$,  an {\it ergodic Markov chain}.
+
+
+
+\subsection{Continuous state Markov processes}
+
+Consider a continuous state Markov process with transition density $\pi(s'| s)$ as
+described in section \use{sec:Markovcontstsp}.
+
+\specsec{Definition:} Paralleling our discussion of finite-state Markov chains,
+we can say that the function $\phi(s) $ is {\it invariant\/} if
+$$ \int \phi(s') \pi(s'| s) d s' = \phi(s). $$
+A stationary continuous-state Markov process is said to be {\it ergodic\/}
+if the only invariant functions  $\phi(s')$ are constant with probability
+$1$ under the stationary distribution $\pi_\infty$.
+
+\medskip
+
+\noindent A law of large numbers for Markov processes states:
+
+\medskip
+\theorem{LLNMarkovcontinuous}
+Let $y(s)$ be a random variable, a measurable  function of  $s$,
+and let
+$\bigl(\pi(s'|s),\pi_0(s)\bigr)$ be  a stationary  and  ergodic   continuous-state
+Markov process.   Assume that $E |y| < +\infty$. Then
+$$ {1 \over T} \sum_{t=1}^T y_t \rightarrow E y
+   = \int y(s) \pi_0(s) ds $$
+with probability $1$ with respect to the distribution $\pi_0$.
+\endtheorem
+
+
+
+
+
+
+\newpage
+
+%\section{Exercises}
+
+\showchaptIDfalse
+\showsectIDfalse
+\section{Exercises}
+\showchaptIDtrue
+\showsectIDtrue
+\eqnum=0
+\medskip
+
+\noindent{\it Exercise  \the\chapternum.1}   % old number 1
+\quad   Consider the Markov chain {\ninepoint $(P, \pi_0) =
+\Biggl(\left[\matrix{.9  & .1  \cr
+               .3 & . 7 \cr}\right], \left[\matrix{.5 \cr .5\cr}\right]
+\Biggr),$} %endninepoint
+and a random variable $y_t = \overline y x_t$
+where $\overline y = \left[\matrix{1 \cr 5 \cr}\right]$.
+Compute the likelihood of the following three
+histories for $y_t$ for $t = 0, 1, \ldots , 4$:
+\medskip
+\noindent{\bf a.}    $1, 5, 1, 5, 1$.
+\medskip
+\noindent{\bf b.} $1, 1, 1, 1, 1$.
+\medskip
+\noindent{\bf c.} $5,5,5,5,5$.
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.2} \quad  Consider a two-state % old number 2
+Markov chain on a state space $X = \{ e_1, e_2\}$ where $e_i$ is the $i$th unit vector.
+Consider a random variable $y_t = \overline y x_t$,
+where $\overline y=\left[\matrix{1 \cr 5 \cr}\right]$.
+   It is known
+that $E ( y_{t+1}   | x_t ) =  \left[\matrix{1.8 \cr
+                             3.4 \cr}\right]$,
+where $ E ( y_{t+1}   | x_t )$ consists of the $2 \times 1$ vector whose $i$th row
+is $E (y_{t+1} | x_t = e_i)$.  It is also known that
+$E ( y_{t+2}   | x_t ) =  \left[\matrix{2.12 \cr
+                             2.76 \cr}\right]$,
+where $ E ( y_{t+2}   | x_t )$ consists of the $2 \times 1$ vector whose $i$th row
+is $E (y_{t+2} | x_t = e_i)$.
+
+\medskip
+
+\noindent{\bf a.} Find a transition matrix $P$ that is consistent with the  $2 \times 1$ vector
+of conditional expectations  $ E ( y_{t+1}   | x_t )$.
+
+\medskip
+
+\noindent{\bf b.} Suppose  the same $\overline y$.
+Suppose  that one observes that $E (y_{t+1} | x_t = e_1) = 1.8$ and $E (y_{t+2} | x_t = e_1) = 2.12$.
+From these two observations, please find a transition matrix $P$.
+
+\medskip
+\noindent {\bf Note:} Exercise 9.24 applies a very similar analysis to the one used to solve part {\bf b} of  exercise \the\chapternum.2.
+
+\medskip
+
+
+\noindent{\it Exercise \the\chapternum.3} \quad % old number 3
+  Consumption is governed by  an $n$-state Markov chain
+$P, \pi_0$ where $P$ is a stochastic matrix and
+$\pi_0$ is an initial probability distribution.
+Consumption takes one of the values in the $n \times 1$ vector
+$ \overline c$.
+A consumer ranks stochastic processes of consumption
+$t =0 ,1 \ldots$  according to
+$$ E \sum_{t=0}^\infty \beta^t u(c_t) $$
+where $E$ is the mathematical expectation and
+$u(c) = {c^{1-\gamma} \over 1 - \gamma}$ for some
+parameter $\gamma \geq 1$.      Let $u_i = u(\overline c_i)$.
+Let
+$v_i = E[ \sum_{t=0}^\infty \beta^t u(c_t) | x_0 = \overline e_i]$ and
+$V = E v $, where $\beta \in (0,1)$
+is a discount factor.
+
+\medskip
+\noindent
+{\bf a.}  Let $u$ and $v$ be the  $n \times 1$
+vectors
+whose $i$th components are $u_i$ and $v_i$, respectively.
+  Verify the following formulas for  $v$ and $V$:
+$ v = (I - \beta P)^{-1} u,$ and $ V = \sum_i \pi_{0,i} v_i$.
+\medskip
+\noindent {\bf b.}   Consider the following two Markov processes:
+
+\noindent
+Process 1:  $\pi_0 = \left[\matrix{.5 \cr
+                                  .5 \cr}\right]$,
+$P = \left[\matrix{1 & 0 \cr
+                   0 & 1 \cr} \right]$.
+
+\noindent
+Process 2:  $\pi_0 = \left[\matrix{.5 \cr
+                                  .5 \cr}\right]$,
+$P = \left[\matrix{.5 & .5 \cr
+                   .5  & .5 \cr} \right]$.
+
+\noindent For both Markov processes, $\overline c = \left[\matrix { 1 \cr
+                                                     5 \cr} \right]$.
+\medskip
+\noindent Assume that $\gamma=2.5, \beta=.95$.
+Compute the unconditional discounted
+expected utility  $V$ for each of these processes.
+Which of the two processes does
+the consumer  prefer? Redo the calculations for $\gamma=4$.  Now which
+process does the consumer prefer?
+\medskip
+\noindent{\bf c.}   An econometrician observes a sample of 10
+observations of consumption rates for our consumer.  He knows that
+one of the two preceding Markov processes generates the data, but he does
+not know  which one.  He assigns equal ``prior probability'' to the two
+chains.   Suppose that the 10 successive observations on
+consumption are as follows: $1,1,1,1,1,1,1,1,1,1$.   Compute the
+likelihood of this sample under process 1 and under process 2.
+Denote the likelihood function  \hfil\break ${\rm Prob(data}
+\vert {\rm Model}_i), i=1,2$.
+
+\medskip
+\noindent{\bf d.}
+  Suppose that the
+econometrician uses Bayes' law to revise his initial probability
+ estimates for the two models, where in this context Bayes'  law
+states:
+%$$ {\rm Prob(Model}_i) | {\rm data} =$$
+%   {
+%    ( {\rm Prob(data)}  \vert {\rm Model}_i )\cdot {\rm Prob (Model}_i)
+%  \over \sum_j     {\rm Prob(data)}  \vert {\rm Model}_j  \cdot
+%    {\rm Prob (Model})_j) }.$$
+$$ {\rm Prob}(M_i) \vert {\rm data} =
+ { ({\rm Prob(data)} \vert M_i) \cdot {\rm Prob}(M_i)
+   \over \sum_j {\rm Prob(data)}\vert M_j \cdot {\rm Prob}(M_j)}
+   $$
+where $M_i$ denotes model $i$. The denominator of this expression
+is the unconditional probability of the data. After observing the
+data sample,  what probabilities does the econometrician place on
+the two possible models?
+
+
+\medskip
+\noindent{\bf e.}  Repeat the calculation in part d, but now assume
+that the data sample is
+$ 1, 5, 5, 1, 5, 5, 1, 5, 1, 5$.
+
+
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.4} \quad % old number 10
+Let $P$ be a transition matrix for a Markov chain. Suppose that
+$P'$  has two
+distinct eigenvectors $\pi_1, \pi_2$ corresponding to
+unit eigenvalues of $P'$.  Scale $\pi_1$ and $\pi_2$ so that they are vectors of probabilities (i.e., elements are nonnegative and sum to unity).
+ Prove for any
+$\alpha \in  [0,1]$  that $\alpha \pi_1 + (1- \alpha ) \pi_2$
+is an invariant distribution of $P$.
+\medskip
+\noindent{\it Exercise \the\chapternum.5}\quad  % old number 11
+Consider a Markov chain with
+transition matrix
+$$ P = \left[\matrix{ 1 & 0 & 0 \cr
+                .2 & .5 & .3 \cr
+                0 & 0 & 1 \cr} \right]$$
+with initial distribution $  \pi_0 = \left[\matrix{ \pi_{1,0} &
+ \pi_{2,0} & \pi_{3,0} \cr}\right]'$.    Let $\pi_t
+= \left[\matrix{ \pi_{1t} & \pi_{2t} & \pi_{3t} \cr}\right]'$
+ be the distribution
+over states at time $t$.  Prove that for $t >0$
+$$ \eqalign{ \pi_{1t} & = \pi_{1,0} +
+   .2 \left( {1 - .5^t \over 1 -.5} \right) \pi_{2,0} \cr
+     \pi_{2t} & = .5^t \pi_{2,0} \cr
+   \pi_{3t} & = \pi_{3,0} + .3 \left( {1 - .5^t \over 1 - .5} \right)
+  \pi_{2,0} .\cr }$$
+
+\medskip
+\noindent{\it Exercise \the\chapternum.6} \quad % old number 12
+Let $P$ be a transition matrix for
+a Markov chain.  For $t=1, 2, \ldots$, prove that the $j$th column
+of $(P')^t$ is the distribution across states at $t$ when the initial
+distribution is
+$\pi_{j,0}=1, \pi_{i,0}=0 \forall i \neq j$.
+
+\eqnum=0
+
+\medskip
+\noindent{\it Exercise \the\chapternum.7}\quad % old number 14
+Consider a Markov chain with
+transition matrix
+$$P  =\left[\matrix{.5 & .5 & 0 & 0 \cr
+                    .5 & .5 & 0 & 0 \cr
+                    0 & 0 & .5 & .5 \cr
+                    0 & 0 & .5 & .5 \cr} \right] $$
+with state space $X = \{e_i, i=1, \ldots, 4\}$ where $e_i$ is the  $i$th unit
+vector. Where $\bar y_1 \neq \bar y_2$, a  random variable $y_t$ is a function $y_t =
+\left[\matrix{ \bar y_1 & \bar y_1 & \bar y_2 &  \bar y_2\cr} \right] x_t$ of the state $x_t$.
+\medskip
+\noindent{\bf a.}  Find all stationary distributions of the Markov
+chain.
+\medskip
+\noindent{\bf b.}  If possible, please  find a stationary distribution for which the  Markov chain ergodic.
+\medskip
+\noindent{\bf c.}  For the stationary distribution $\pi$ that you found in part {\bf a}, please compute the
+ limiting value of
+the sample mean$ {1 \over T} \sum_{t=0}^{T-1} y_t$
+as $T \rightarrow \infty$.
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.8}\quad % old number 16
+Consider an $n$-state Markov chain with state space
+$X = \{e_i, i = 1, \ldots ,n\}$ where $e_i$ is the $i$th unit vector.
+Consider the indicator variable $I_{it} = e_i x_t$ which equals $1$
+if $x_t = e_i$ and $0$ otherwise.
+ Suppose that the chain has a unique stationary distribution and that
+it is ergodic.
+Let $\pi$ be the stationary distribution.
+
+\medskip
+
+\noindent{\bf a.}  Verify that $E I_{it} = \pi_i$.
+%\answer E y_t = \pi' \overline y$.
+\medskip
+\noindent{\bf b.}  Prove that
+$$ {1\over T} \sum_{t=0}^{T-1} I_{it} = \pi_i $$
+as $T \rightarrow \infty$ with probability one with respect to
+the stationary distribution $\pi$.
+
+
+\medskip
+
+%\vfil\eject
+
+\noindent{\it Exercise \the\chapternum.9}\quad  {\bf Invariant functions} % old number 31
+\medskip
+\noindent
+Prove \Theorem{invariant2200}.
+{\it Hints:} (i) Write out $E (y_{t+1} - y_t)^2$, where $E $ is the mathematical expectation with respect to the stationary
+distribution $\pi$; (ii) appeal to the law of iterated expectations to allow you to replace $y_{t+1} $ with $E [y_{t+1} | x_t]$
+in the cross-product term; (iii) compute; (iv) note that $E ( y_{t+1} - y_t)^2 = 0$.
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.10}\quad  {\bf Random walk} % old number 18
+\medskip
+\noindent
+A Markov chain has state space $X=\{e_i, i=1, \ldots, 4\}$ where
+$e_i$ is the unit vector and transition matrix
+$$P = \left[\matrix{1 & 0 & 0 & 0 \cr
+                    .5 & 0 & .5 & 0 \cr
+                   0 & .5 & 0 & .5 \cr
+                   0 & 0 & 0 & 1 \cr}\right].$$
+A random variable $y_t = \overline y x_t$ is defined by
+$\overline y = \left[\matrix{ 1 & 2 & 3 & 4\cr}\right]$.
+\medskip
+\noindent{\bf a.}  Find all stationary distributions   of this Markov
+chain.
+\medskip
+\noindent{\bf b.}  Under what stationary distributions, if any, is this chain ergodic?   Compute invariant functions
+of $P$.
+\medskip
+\noindent{\bf c.}  Compute $E[y_{t+1}| x_t]$ for $x_t = e_i, i=1, \ldots, 4$.
+
+\medskip\noindent{\bf d.}
+Compare your answer to part (c) with \Ep{invariant22}. Is $y_t =
+\overline y'x_t$ invariant?  If not, what  hypothesis of
+\Theorem{invariant2200} is violated?
+\medskip
+\noindent{\bf e.}  The stochastic process $y_t  = \overline y'x_t$
+is evidently a bounded martingale.  Verify that $y_t$ converges almost
+surely to a constant.  To what constant(s) does it converge?
+
+
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.11}\quad  {\bf Lake model} % old number 17
+\medskip
+\noindent
+A worker can be in one of two states, state 1 (unemployed) or state
+2 (employed).
+At the beginning of each period,
+a previously  unemployed worker has probability $\lambda = \int_{\bar w}^B d F(w)$
+of  becoming employed.  Here $\bar w$ is his reservation wage
+and $F(w)$ is the c.d.f.\ of     a wage offer distribution. We assume
+that $F(0)=0, F(B)=1$. At the
+beginning of each period an unemployed worker draws one and only one wage
+offer from $F$. Successive draws from $F$ are i.i.d.
+The worker's decision rule is to accept the job if $w \geq \bar w$,
+and otherwise to reject it   and remain unemployed one more period.
+Assume that $\overline w$ is such that $\lambda \in (0,1)$.
+At the beginning of each period, a previously employed worker is fired
+with probability $\delta \in (0,1)$. Newly fired workers must remain unemployed
+for one period before drawing a new wage offer.
+
+\medskip
+\noindent{\bf a.}  Let the state space be $X = \{e_i, i=1,2\}$ where
+$e_i$ is the $i$th unit vector. Describe the Markov chain on $X$
+that is induced by the description above.
+Compute all stationary distributions of the chain.
+Under what stationary distributions, if any, is the chain ergodic?
+
+\medskip
+\noindent{\bf b.}   Suppose that $\lambda = .05, \delta  =.25$.  Compute
+a stationary  distribution.  Compute the fraction of his life that
+an infinitely lived worker would spend
+unemployed.
+\medskip
+\noindent{\bf c.}   Drawing the initial state from the
+stationary distribution, compute the joint distribution
+$ g_{ij} = {\rm Prob}(x_t = e_i, x_{t-1} =e_j) $ for $i=1,2, j=1,2$.
+\medskip
+\noindent{\bf d.}  Define an indicator function by  letting
+$I_{ij, t} = 1$ if $x_t = e_i, x_{t-1} = e_j$
+at time $t$, and $0$ otherwise.
+Compute
+$$ \lim_{T \rightarrow \infty} {1 \over T} \sum_{t=1}^T I_{ij,t}$$
+for all four $i,j$ combinations.
+
+\medskip
+\noindent{\bf e.}  Building on your results in  part d, construct
+method of moments estimators of
+$\lambda$  and $\delta$.
+Assuming that you know the wage offer distribution $F,$
+construct a method of moments estimator of  the reservation wage
+$\bar w$.
+\medskip
+\noindent{\bf f.}  Compute maximum likelihood estimators of
+$\lambda$ and $\delta$.
+\medskip
+\noindent {\bf g.}  Compare   the estimators you derived in
+parts e and f.
+
+\medskip
+\noindent{\bf h.} {\it Extra credit.}  Compute the asymptotic covariance
+matrix of the maximum likelihood estimators of $\lambda$ and $\delta$.
+\medskip
+
+
+\noindent{\it Exercise  \the\chapternum.12} \quad   % old number 8
+This exercise
+deals with Cagan's  money demand under rational
+expectations.
+A version of Cagan's (1956) demand function for money
+is
+$$ m_t - p_t = - \alpha (p_{t+1} - p_t),  \alpha > 0, \ t \geq 0, \leqno(1) $$
+where $m_t$ is the log of the nominal money supply and
+$p_t$ is the price level at $t$.  Equation  (1) states
+that the demand for real balances varies inversely with
+the expected rate of inflation, $(p_{t+1} -p_t)$.  There
+is no uncertainty, so the expected   inflation rate equals
+the actual one.   The money supply obeys  the
+difference equation
+$$ (1-L)(1-\rho L) m_t^s = 0  \leqno(2)$$
+subject to initial condition for $m_{-1}^s, m_{-2}^s$.
+In equilibrium, $$m_t \equiv m_t^s  \ \  \forall t \geq 0  \leqno(3) $$
+ (i.e., the
+demand for money equals the supply).  Assume that
+$$ \vert \rho \alpha  /( 1+ \alpha ) \vert< 1. \leqno(4)$$
+An {\it equilibrium} is a $\{p_t\}_{t=0}^\infty$
+that satisfies equations  (1), (2), and  (3)  for all $t$.
+
+\medskip
+\noindent{\bf a.}  Find an expression for an equilibrium $p_t$
+of the form
+$$ (p_t- p_{t-1}) = \sum_{j=0}^\infty w_j (m_{t-j}- m_{t-j-1}) + f_t. \leqno(5)  $$
+Please tell how to get formulas for the $w_j$ for all $j$ and
+the $f_t$ for all $t$.
+
+\medskip
+\noindent{\bf b.}  How many equilibria are there?
+
+\medskip
+\noindent{\bf c.}  Is there an equilibrium with $f_t =0$ for
+all $t$?
+\medskip
+\noindent{\bf d.}  Briefly tell where, if anywhere, condition
+(4) plays a role in your answer to part a.
+
+\medskip
+\noindent{\bf e.}  For the parameter values $\alpha =1,
+\rho=1$, compute and display all the equilibria.
+\medskip
+
+\noindent{\it Exercise \the\chapternum.13} \quad % old number 9
+The $n \times 1$  state vector of an economy
+is governed by the linear stochastic difference equation
+$$ x_{t+1} = A x_t + C_t w_{t+1} \leqno(1) $$
+where $C_t$ is a possibly time-varying matrix (known at $t$)
+and $w_{t+1}$ is an $m \times 1$ martingale difference
+sequence adapted to its own history with $E w_{t+1} w_{t+1} '| J_t = I$,
+where $J_t = \left[\matrix{w_t & \ldots & w_1 & x_0\cr}\right]$.
+A scalar one-period payoff $p_{t+1}$ is given by
+$$ p_{t+1} = P x_{t+1} \leqno(2)  $$
+The stochastic discount factor for this economy is
+a scalar $m_{t+1}$ that obeys
+$$ m_{t+1} = {M x_{t+1}\over M x_t}. \leqno(3) $$
+Finally, the price at time $t$ of the one-period payoff
+is given by $q_t = f_t(x_t)$, where $f_t$ is some possibly time-varying
+function
+of the   state.    That $m_{t+1}$ is  a  stochastic   discount factor means
+that
+ $$E(m_{t+1} p_{t+1} | J_t) = q_t. \leqno(4) $$
+\medskip
+\noindent{\bf a.}   Compute  $f_t(x_t)$, describing in
+detail how it depends on $A$ and $C_t$.
+
+\medskip
+\noindent{\bf b.}   Suppose that an econometrician has a time series
+data set \hfil\break $X_t = \left[\matrix{z_t & m_{t+1} &  p_{t+1} & q_t \cr} \right]$,
+for $t =1, \ldots, T$,
+where $ z_t$ is a strict subset of the variables in the
+state   $x_t$.  Assume that  investors in the economy see $x_t$ even
+though the econometrician  sees only a subset $z_t$ of $x_t$.
+Briefly describe a way to use these data to test implication
+(4).  (Possibly but perhaps not useful hint: recall the law
+of iterated expectations.)
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.14} \quad  % old number 4
+    Consider the univariate stochastic
+process
+$$y_{t+1} = \alpha + \sum_{j=1}^4 \rho_j y_{t+1-j} + c w_{t+1}  $$
+where $w_{t+1}$ is a scalar martingale difference sequence
+adapted to \hfil\break
+ $J_t = [w_t, \ldots, w_1, y_{0}, y_{-1}, y_{-2}, y_{-3}]$,
+$\alpha = \mu (1 - \sum_j \rho_j)$ and
+the $\rho_j$'s are such that the matrix
+$$ \check A = \left[\matrix{\rho_1 &\rho_2 & \rho_3 &\rho_4  \cr
+                      1 & 0 & 0 & 0  \cr
+                      0 & 1 & 0 & 0  \cr
+                      0 & 0 & 1 & 0  \cr} \right] $$
+has all of its eigenvalues in modulus  bounded below unity.
+
+\medskip
+\noindent{\bf a.}  Show how to map this  process  into
+a first-order linear stochastic difference equation.
+\medskip
+\noindent{\bf b.}   For each of the following  examples,
+ if possible, assume that the initial conditions
+are such that $y_t$ is covariance stationary.  For each
+case, state   the appropriate initial conditions.  Then
+compute the covariance stationary mean and
+variance of $y_t$ assuming the following parameter sets of parameter
+values:
+\medskip
+\noindent {\it i.} $\rho= \left[\matrix{ 1.2 & -.3  & 0 & 0 \cr}\right]$,
+$\mu=10, c=1$.
+\medskip
+\noindent{\it ii.} $\rho= \left[\matrix{ 1.2 & -.3  & 0 & 0 \cr}\right]$,
+$\mu=10, c=2$.
+\medskip
+\noindent{\it iii.} $\rho=\left[\matrix{ .9 & 0 & 0 & 0 \cr}\right]$,
+$\mu=5, c=1$.
+\medskip
+\noindent{\it iv.} $\rho=\left[\matrix{ .2 & 0 & 0 & .5 \cr}\right]$,
+$\mu=5, c=1$.
+\medskip
+\noindent{\it v.} $\rho=\left[\matrix{ .8 & .3 & 0 & 0 \cr}\right]$,
+$\mu=5, c=1$.
+\medskip
+\noindent{\it Hint 1:}  The Matlab %program {\tt doublej.m}, in
+%particular, the
+ command %\hfil\break
+ {\tt X=doublej(A,C*C')}
+computes the solution of the matrix equation $AX A' + CC' = X$.
+\NFootnote{Matlab code for this book is at %This program can be downloaded from \hfil\break
+%{\tt ftp://zia.stanford.edu/pub/sargent/webdocs/matlab}.
+%$<$ftp://zia.stanford.edu/pub/\raise-4pt\hbox{\~{}}sargent/webdocs/matlab$>$.
+% $<$http://homepages.nyu.edu/pub/\raise-4pt\hbox{\~{}}ts43/source\hbox{\_{}}code/mitbook.zip$>$.
+% $<$http://homepages.nyu.edu/pub/\raise-4pt\hbox{\~{}}ts43/source\hbox{\_{}}code/mitbook.zip$>$.
+$<$www.tomsargent.com/source\_code/mitbook.zip$>$.}
+%$<$https://files.nyu.edu/ts43/public/books.html$>$.
+\medskip
+\noindent{\it Hint 2:} The mean vector is the eigenvector
+of $A$ associated with a unit eigenvalue, scaled so that
+the mean of   unity in the state vector is unity.
+
+\medskip
+\noindent{\bf c.}  For each case in part b, compute the $h_j$'s in
+$E_t y_{t+5}  = \gamma_0 + \sum_{j=0}^3 h_j y_{t-j}$.
+\medskip
+\noindent{\bf d.}  For each case  in part b, compute the $\tilde h_j$'s
+in $E_t \sum_{k=0}^\infty .95^k  y_{t+k} = \sum_{j=0}^3 \tilde h_j y_{t-j}$.
+
+\medskip
+\noindent{\bf e.}  For each case in  part b, compute
+the autocovariance $E (y_t - \mu_y) (y_{t-k} - \mu_y)$ for the three values
+$k = 1, 5, 10$.
+
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.15} \quad  % old number 5
+ A consumer's rate of
+consumption follows the stochastic process
+$$ \eqalign{ c_{t+1} & = \alpha_c
++ \sum_{j=1}^2 \rho_j c_{t-j+1}  + \sum_{j=1}^2
+ \delta_j  z_{t+1-j}  + \psi_1 w_{1,t+1} \cr
+  z_{t+1} & = \sum_{j=1}^2 \gamma_j c_{t-j+1} + \sum_{j=1}^2 \phi_j z_{t-j+1}
++ \psi_2 w_{2,t+1}
+   \cr} \leqno(1)   $$
+where $w_{t+1}$ is a $2 \times 1$ martingale difference
+sequence,  adapted to \hfil \break $J_t = \left[\matrix{w_t & \ldots w_1 &
+c_{0} & c_{-1} & z_0 & z_{-1}\cr}\right]$, with contemporaneous
+covariance matrix $E w_{t+1}w_{t+1}' | J_t = I$,  and the
+coefficients  $\rho_j, \delta_j, \gamma_j, \phi_j$ are such
+that
+the matrix
+$$ A = \left[\matrix{ \rho_1 & \rho_2 & \delta_1 &\delta_2 & \alpha_c \cr
+                      1 & 0 & 0 & 0 & 0 \cr
+                     \gamma_1 & \gamma_2 & \phi_1 &\phi_2 & 0 \cr
+                     0 & 0 & 1 & 0 & 0 \cr
+                     0 & 0 & 0 & 0 & 1 \cr }\right]$$
+has eigenvalues less than or equal to unity in modulus.
+
+The consumer evaluates consumption streams according to
+$$ V_0=  E_0 \sum_{t=0}^\infty .95^t u(c_t), \leqno(2) $$
+where the  one-period utility function is
+$$u(c_t) =  -.5 ( c_t - 60)^2. \leqno(3)$$
+
+\medskip
+\noindent{\bf a.}  Find a formula for $V_0$ in terms
+of the parameters of the one-period utility function    (3)
+and the stochastic process for consumption.
+
+\medskip
+\noindent{\bf b.}  Compute $V_0$ for the following two sets of
+parameter values:
+\medskip
+\noindent{\it i.}  $\rho=\left[\matrix{.8 & -.3 \cr}\right],
+\alpha_c =1, \delta =\left[\matrix{.2 &0 \cr}\right],
+\gamma=\left[\matrix{0 & 0 \cr}\right],
+\phi = \left[\matrix{.7 & -.2}\right]$, $\psi_1 =\psi_2 =1$.
+
+\medskip
+\noindent{\it ii.}  Same as for part i except now $\psi_1=2, \psi_2 =1$.
+
+\medskip
+\noindent{\it Hint:}  Remember
+{\tt doublej.m}.
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.16} \quad  % old number 6
+  Consider the stochastic process
+$\{c_t, z_t\}$ defined by equations (1) in exercise {\it \the\chapternum.15}.   Assume the parameter
+values described in part b, item  i.   If possible,
+assume the initial conditions are such that  $\{c_t, z_t\}$ is
+covariance stationary.
+
+\medskip
+\noindent{\bf a.}  Compute
+the initial mean and  covariance matrix
+that make the process covariance stationary.
+
+\medskip
+\noindent{\bf b.} For the initial conditions in part a,
+  compute numerical values of
+the following population linear
+regression:
+$$  c_{t+2} = \alpha_0 + \alpha_1 z_{t}  + \alpha_2 z_{t-4} +
+    w_t $$
+where $E w_t \left[\matrix{1 & z_t & z_{t-4}\cr}\right] =
+\left[\matrix{0 & 0 & 0 \cr}\right]$.
+
+
+
+
+
+\noindent{\it Exercise \the\chapternum.17}\quad  {\bf Impulse response for VAR} % old number 21
+\medskip
+\noindent Find the impulse response function for the state space representation \Ep{innovti} associated with a vector autoregression.
+
+
+\medskip
+\noindent {\it Exercise \the\chapternum.18}\quad  {\bf Linear least squares} % old number 37
+
+\medskip
+\noindent Consider the setting of subsection \use{sec:lls_compact} in which a linear least squares regression of random vector $Y$ on random vector $X$
+is $ Y = B' X + \epsilon $, where  $E X X' = P$ and  $\epsilon$ is a random vector satisfying $E \epsilon X' = 0$ and $E \epsilon \epsilon' = Q$.
+
+\medskip
+\noindent {\bf a.} Verify that $E Y Y' = B' P B + Q$.
+\medskip
+
+\noindent{\bf b.} Please compute the vector $\delta$ of regression coefficients  in the  linear least squares projection
+$ X = \delta Y + a $, where $ a$ is a vector of  errors satisfying the least squares orthogonality conditions $E a Y' = 0$.
+
+\medskip
+\noindent {\bf c.} Please compare your formula for $\delta$ with the formula for the optimal  decision rule appearing in equation
+\Ep{bellman_comparison_howard}.
+
+
+\medskip
+\noindent {\it Exercise \the\chapternum.19}\quad  {\bf Regression} % old number 39
+
+\medskip
+\noindent
+Let $\mu_t$ be an $n \times 1$ vector, $\Sigma_t$ be an $n \times n$ positive definite matrix, and $A$ be an $n \times n$ matrix.
+Let $z_1$ and $z_2$ each be $n \times 1$ random vectors. Then let  $z = \bmatrix {z_1 \cr z_2 }$ be the $2n \times 1$  multivariate normal random vector
+parameterized as
+$$ z \sim {\cal N}\left(\bmatrix{ \mu_t \cr A \mu_t }, \bmatrix{ \Sigma_t & \Sigma_t A' \cr
+                                                                              A \Sigma_t & A \Sigma_t A' + C C' } \right) $$
+By writing the distribution in this way we specify that  the mean vector of $z$ is the first argument of ${\cal N}$ and the covariance matrix of $z$ is the second argument of ${\cal N}$.
+\medskip
+\noindent{\bf a.}
+Please find the probability distribution of $z_2$ conditional on $z_1$.
+\medskip
+\noindent{\bf b.} Please compute the linear least squares projection of $z_2$ on $z_1$.
+
+
+ 
+\medskip
+
+\noindent{\it Exercise \the\chapternum.20}\quad  {\bf Random walk} % old number 20
+\medskip
+\noindent A scalar process $x_t$ follows the process
+$$ x_{t+1} = x_t + w_{t+1}  $$
+where $w$ is an i.i.d.~${\cal N}(0,1)$ scalar process and $x_0 \sim {\cal N}(\hat x_0, \Sigma_0)$.
+Each period, an observer receives two signals in the form of a $2 \times 1$ vector $y_t$ that obeys
+$$ y_t = \bmatrix{1 \cr 1\cr} x_t + v_t $$
+where the $2 \times 1$ process $v_t$ is i.i.d.~with distribution $v_t \sim {\cal N}(0, R)$ where
+$R =\bmatrix{ 1 & 0 \cr 0 &1  \cr}$.
+
+\medskip
+\noindent{\bf a.}  Suppose that $\Sigma_0 = 1.36602540378444$.  For $t \geq 0$, find formulas for
+$E [x_t |  y^{t-1}] $, where $y^{t-1}$ is the history of $y_s$ for $s$ from $0$ to $t-1$.
+
+\medskip
+\noindent{\bf b.} Verify numerically that the matrix $A-KG$ in formula \Ep{VAR1} is stable.
+
+\medskip
+\noindent{\bf c.}  Find an infinite-order vector autoregression for $y_t$.
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.21}\quad  {\bf Kalman filter with cross-products} % old number 22
+\medskip
+\noindent Consider the state space system
+$$ \eqalign{ x_{t+1} & = A  x_t + C w_{t+1} \cr
+             y_{t+1} & = G x_t + D w_{t+1} \cr } $$ % \EQN Kfiltercross0$$
+where $x_t $ is an $n \times 1$ state vector $w_{t+1}$ is an $m \times 1$ i.i.d.~process with distribution ${\cal N}(0, I)$, $y_t$
+is an $m \times 1$ vector of observed variables, and $x_0 \sim {\cal N}(\hat x_0, \Sigma_0)$.
+For $t \geq 1$,   $\hat x_t = E[x_t | y^t]$ where $y^t = [y_t, \ldots, y_1]$ and $\Sigma_t = E (x_t - \hat x_t)(x_t - \hat x_t)'$.
+\medskip
+\noindent{\bf a.} Show how to select $w_{t+1},  C$, and $D$ so that $C w_{t+1}$ and $D w_{t+1}$ are mutually uncorrelated processes.
+Also give an example in which $C w_{t+1}$ and $D w_{t+1}$ are correlated.
+\medskip
+\noindent {\bf b.}  Construct a recursive representation for $\hat x_t$ of the form:
+$$ \eqalign{ \hat x_{t+1} & = A \hat x_t + K_t a_{t+1} \cr
+              y_{t+1} & = G \hat x_t + a_{t+1} \cr } $$ %  \EQN Kfiltercross1 $$
+where $a_{t+1} = y_{t+1} - E [y_{t+1}| y^t]$ for $t\geq 0$ and verify that
+$$\eqalign{ K_t  & = (CD' + A \Sigma_t G')(DD' + G \Sigma_t G') ^{-1} \cr
+           \Sigma_{t+1} & = (A-K_t G) \Sigma_t (A-K_t G)' + (C-K_t D) (C-K_t D)' \cr}  $$ % \EQN Kfiltercross2$$
+and  $E a_{t+1} a_{t+1}' = G \Sigma_t G' + D D' $.  {\it Hint:} apply the population regression formula.
+\index{Kalman filter!cross-products between measurement and state noise}%
+
+
+
+
+\medskip
+\noindent {\it Exercise \the\chapternum.22}\quad  {\bf Covariance between state and measurement noises} % old number 38
+
+\medskip
+
+\noindent Consider the state-space system
+
+$$ \eqalign{ x_{t+1} & = A x_t + C \epsilon_{t+1} \cr
+              y_t &  = G x_t + v_t  \cr
+              x_0 & \sim N(\hat x_0, \Sigma_0) }$$
+where $\epsilon_{t+1} \sim N(0,I), v_t \sim N(0, R), E \epsilon_{t+1} v_t' = Z $
+where $\epsilon_{t+1}$ is an $r \times 1$ random vector, $v_t $ is a $p \times 1$ random vector,
+$y_t$ is $p \times 1$ and $x_t $ is $n \times n$.
+
+\medskip
+\noindent{\bf a.} For $t \geq 0$, Let $\hat x_t = E [x_t | y_{t-1}, \ldots, y_0 ]$.  Please verify
+that $\{\hat x_{t+1}\}_{t=0}^\infty$ satisfies the recursion
+$$  \hat x_{t+1}  = A \hat x_t + K_t (y_t - G \hat x_t)  $$
+where $\{K_t, \Sigma_{t+1}\}_{t=0}^\infty $ satisfies the recursions
+$$\eqalign{
+   K_t & = (C Z + A \Sigma_t G' ) (G \Sigma_t G' + R)^{-1} \cr
+   \Sigma_{t+1} & = (A - K_t G) \Sigma_t (A - K_t G') + C C' + K_t R K_t' .}
+$$
+
+\medskip
+\noindent{\bf b.} Please verify the alternative recursion for $\{\Sigma_t\}_{t=1}^\infty$:
+$$ \Sigma_{t+1} = A \Sigma_t A' + C C' - (A \Sigma_t G' + C Z ) (G \Sigma_t G' + R)^{-1}  (A \Sigma_t G' + C Z )' . $$
+
+\medskip
+\noindent{\bf c.} Please interpret $\Sigma_t$.
+
+\medskip
+\noindent{\bf d.} Please interpret $Z (G \Sigma_t G' + R)^{-1} $.
+
+
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.23} \quad   % old number 4
+  Consider the univariate stochastic
+process
+$$y_{t+1} = \alpha + \sum_{j=1}^4 \rho_j y_{t+1-j} + c w_{t+1}  $$
+where $w_{t+1}$ is a scalar martingale difference sequence
+adapted to \hfil\break
+ $J_t = [w_t, \ldots, w_1, y_{0}, y_{-1}, y_{-2}, y_{-3}]$,
+$\alpha = \mu (1 - \sum_j \rho_j)$ and
+the $\rho_j$'s are such that the matrix
+$$ \check A = \left[\matrix{\rho_1 &\rho_2 & \rho_3 &\rho_4  \cr
+                      1 & 0 & 0 & 0  \cr
+                      0 & 1 & 0 & 0  \cr
+                      0 & 0 & 1 & 0  \cr} \right] $$
+has all of its eigenvalues in modulus  bounded below unity.
+
+\medskip
+\noindent{\bf a.}  Show how to map this  process  into
+a first-order linear stochastic difference equation.
+\medskip
+\noindent{\bf b.}   For each of the following  examples,
+ if possible, assume that the initial conditions
+are such that $y_t$ is covariance stationary.  For each
+case, state   the appropriate initial conditions.  Then
+compute the covariance stationary mean and
+variance of $y_t$ assuming the following parameter sets of parameter
+values:
+\medskip
+\noindent {\it i.} $\rho= \left[\matrix{ 1.2 & -.3  & 0 & 0 \cr}\right]$,
+$\mu=10, c=1$.
+\medskip
+\noindent{\it ii.} $\rho= \left[\matrix{ 1.2 & -.3  & 0 & 0 \cr}\right]$,
+$\mu=10, c=2$.
+\medskip
+\noindent{\it iii.} $\rho=\left[\matrix{ .9 & 0 & 0 & 0 \cr}\right]$,
+$\mu=5, c=1$.
+\medskip
+\noindent{\it iv.} $\rho=\left[\matrix{ .2 & 0 & 0 & .5 \cr}\right]$,
+$\mu=5, c=1$.
+\medskip
+\noindent{\it v.} $\rho=\left[\matrix{ .8 & .3 & 0 & 0 \cr}\right]$,
+$\mu=5, c=1$.
+\medskip
+\noindent{\it Hint 1:}  The Matlab %program {\tt doublej.m}, in
+%particular, the
+ command %\hfil\break
+ {\tt X=doublej(A,C*C')}
+computes the solution of the matrix equation $AX A' + CC' = X$.
+\NFootnote{Matlab code for this book is at %This program can be downloaded from \hfil\break
+%{\tt ftp://zia.stanford.edu/pub/sargent/webdocs/matlab}.
+%$<$ftp://zia.stanford.edu/pub/\raise-4pt\hbox{\~{}}sargent/webdocs/matlab$>$.
+% $<$http://homepages.nyu.edu/pub/\raise-4pt\hbox{\~{}}ts43/source\hbox{\_{}}code/mitbook.zip$>$.
+% $<$http://homepages.nyu.edu/pub/\raise-4pt\hbox{\~{}}ts43/source\hbox{\_{}}code/mitbook.zip$>$.
+$<$www.tomsargent.com/source\_code/mitbook.zip$>$.}
+%$<$https://files.nyu.edu/ts43/public/books.html$>$.
+\medskip
+\noindent{\it Hint 2:} The mean vector is the eigenvector
+of $A$ associated with a unit eigenvalue, scaled so that
+the mean of   unity in the state vector is unity.
+
+\medskip
+\noindent{\bf c.}  For each case in part b, compute the $h_j$'s in
+$E_t y_{t+5}  = \gamma_0 + \sum_{j=0}^3 h_j y_{t-j}$.
+\medskip
+\noindent{\bf d.}  For each case  in part b, compute the $\tilde h_j$'s
+in $E_t \sum_{k=0}^\infty .95^k  y_{t+k} = \sum_{j=0}^3 \tilde h_j y_{t-j}$.
+
+\medskip
+\noindent{\bf e.}  For each case in  part b, compute
+the autocovariance $E (y_t - \mu_y) (y_{t-k} - \mu_y)$ for the three values
+$k = 1, 5, 10$.
+
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.24}\quad  {\bf Stationarity} % old number 24
+\medskip
+\noindent A pair of scalar stochastic processes $(z_t, y_t)$ evolves according to the state
+system for $t \geq 0$:
+$$\eqalign{ z_{t+1} & = .9 z_t + w_{t+1} \cr
+             y_t & = z_t + v_t \cr} $$
+where $w_{t+1}$ and $v_t$ are mutually uncorrelated scalar Gaussian random variables with
+means of $0$ and variances of $1$.  Furthermore, $E w_{t+1} v_s = 0$ for all $t, s$ pairs.
+In addition, $z_0 \sim {\cal N}(\hat z_0, \Sigma_0)$.
+
+\medskip
+\noindent{\bf a.}  Is $\{z_t\}$ Markov?  Explain.
+
+\medskip
+\noindent {\bf b.} Is $\{y_t\}$ Markov? Explain.
+\medskip
+\noindent{\bf c.} Define what it would mean for the scalar process $\{z_t\}$ to be
+{\it covariance stationary\/}.
+\medskip
+\noindent {\bf d.} Find values of $(\hat z_0, \Sigma_0)$ that make the process
+for $\{z_t\}$ covariance stationary.
+
+\medskip
+\noindent {\bf e.} Assume that $y_t$ is observable, but that $z_t$ is not.  Define what it would mean for the scalar process $y_t$ to be
+{\it covariance stationary\/}.
+\medskip
+\noindent {\bf f.} Describe in as much detail as you can  how to represent  the distribution of $y_t$ conditional  on the infinite  history $y^{t-1}$  in the form $y_t \sim {\cal N}(E [y_t | y^{t-1}], \Omega_t)$. % Find a value of $\Omega_0$ that makes the scalar $\{y_t\}$ process covariance stationary.
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.25}\quad  {\bf Forecasting a discounted sum} % old number 29
+\medskip
+
+\noindent Consider the forward-looking vector difference equation
+$$ \mu_t = R x_t + H \mu_{t+1}, \leqno(1) $$
+where $ x_{t+1} = A x_t $.  Here $x_t$ is an $n \times 1$ vector, $A$
+is an $n \times n$ stable matrix, $H$ is an $n \times n $ stable matrix, and $R$ is an $n \times n$ positive definite matrix.
+
+\medskip
+
+\noindent{\bf a.} Show that $$\mu_t =  (\sum_{j=0}^\infty  H^j R A^j ) x_t \leqno(2) $$ is a solution of difference
+equation (1).
+
+\medskip
+
+\noindent{\bf b.} Guess that $\mu_t = P x_t$, then verify that
+$$ P = R + H P A . \leqno(3) $$
+(Equation (3) is an example of a discrete Sylvester equation.)
+\index{Sylvester equation}%
+
+
+
+\medskip
+\noindent{\bf c.}  Set $H = A'$  and note that then equation (3) becomes
+$P = R + A' P A $. Please compare  this special version of formula (3)
+ with formula \Ep{diff5} for the unconditional covariance matrix of
+a vector governed by an autoregression. Also please compare it
+with the formula \Ep{lasset7} for $P$ that is a key step in the Howard policy
+improvement algorithm.
+
+\medskip
+\noindent{\bf d.} In the special case that $H = A'$, verify that $\mu_t$ defined in equation (2) satisfies
+$ \mu_t = .5 {\frac{\partial V_t}{\partial x_t } } $
+where
+$$ V_t = \sum_{j=0}^\infty x_{t+j}' R x_{t+j} . \leqno(4) $$
+(If necessary, please consult  formulas for differentiating quadratic forms presented in appendix \use{appendixLQA} of this chapter.)
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.26}\quad  {\bf Phelps and Pollak (1968) meet Howard} % old number 30
+\medskip
+
+\noindent A sequence of decision makers at dates $t= 0, 1, \ldots, $ chooses $\{x_{t+1}, u_t \}_{t=0}^\infty$ subject to
+$$ x_{t+1} = A x_t + B u_t, \quad t \geq 0 $$
+where $A$ is an $n \times n$ matrix, $B$ is an $n \times k$ matrix,  $u_t$ is a $k \times 1$ vector of time $t$
+``controls'', and $x_0$ is a given initial condition.   Let $r(x_t, u_t ) = - ( x_t ' R x_t + u_t' Q u_t)$, where $R$ and $Q$ are positive definite
+matrices.  A time $t$ decision maker chooses $u_t, x_{t+1} $. A time $t$ decision maker's preferences are ordered by
+$$ r(x_t, u_t) + \delta \sum_{j=1}^\infty \beta^j r(x_{t+j}, u_{t+j}), \leqno(0) $$
+where $\beta \in (0,1)$ and $\delta \in (0,1]$.
+
+\medskip
+\noindent{\bf a.} Let $V(x)$ solve the following Bellman equation:
+$$ V(x) = r(x, -Fx) + \beta V((A-BF)x )  .  \leqno(1) $$
+Please interpret $V(x)$; i.e., please complete the sentence ``$V(x)$ is the value of $\ldots$ ''.
+
+% \medskip
+%
+% \noindent{\bf a'. }  Please write a discrete Lyapunov equation whose solution determines $V(x)$.
+
+\medskip \noindent{\bf b.} For a given matrix $F$, please guess a functional form for $V(x)$, then
+describe an algorithm for solving the functional equation (1) for $V(x)$.  Please get as far as you can in computing  $V(x)$.
+
+\medskip
+
+\noindent{\bf c.}  Consider the functional equation
+$$ U(x) = \max_u \left\{ r(x,u) + \delta \beta V(Ax + B u) \right\} , \leqno(2) $$
+where $V(x)$ satisfies the Bellman equation (1). Further, let $U(x)$ be attained by
+$u = - G x$, so that
+$$ U(x) = r(x,-Gx) + \delta \beta V\left((A-BG)x\right) . \leqno(2) $$
+Please complete the following sentence: ``$U(x)$ is the value of $\ldots$ ''.
+
+
+\index{Howard policy improvement algorithm}%
+\medskip
+\noindent {\it Exercise \the\chapternum.27}\quad  {\bf Howard and Kalman} % old number 35
+
+\medskip
+
+\noindent Please invent a counterpart of the Howard policy improvement algorithm  that  computes a time-invariant
+version of the Kalman filter.
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.28}\quad  {\bf Invertibility} % old number 28
+\medskip
+\noindent A univariate stochastic process $y_t$ has a first-order moving
+average representation
+$$ y_t = \epsilon_t - 2 \epsilon_{t-1} \leqno(1) $$
+where $\{\epsilon_t\}$ is an i.i.d.~process distributed
+${\cal N}(0,1)$.
+
+\medskip
+\noindent{\bf a.}  Argue that $\epsilon_t$ cannot be expressed as as linear combination of
+$y_{t-j}, j \geq 0$ where the sum of the squares of the weights is finite.  This means
+that $\epsilon_t$ is not in the space spanned by square summable linear combinations
+of the infinite history $y^t$.
+\medskip
+\noindent{\bf b.}  Write equation (1) as a state space system, indicating the matrices
+$A, C, G$.
+\medskip
+\noindent {\bf c.} Using the matlab program {\tt kfilter.m} \mtlb{kfilter.m}%
+to compute an innovations representation for $\{y_t\}$.  Verify that the innovations
+representation for $y_t$ can be represented as
+$$ y_t = a_t - .5 a_{t-1} \leqno(2) $$
+where $a_t = y_t - E [y_t| y^{t-1} ] $ is a serially uncorrelated process.
+Compute the variance of $a_t$.  Is it larger or smaller than the variance of $\epsilon_t$?
+
+\medskip
+\noindent{ \bf d.}  Find an autoregressive representation for $y_t$ of the form
+$$ y_t = \sum_{j=1}^\infty A_j y_{t-j} + a_t \leqno(3) $$
+where $E a_t y_{t-j} = 0 $ for $j \geq 1$. ({\it Hint:} either use formula (2) or else  remember formula \Ep{VAR1}.)
+
+\medskip
+\noindent{\bf e.}  Is $y_t$ Markov?  Is $\bmatrix{y_t & y_{t-1}}'$ Markov? Is $\bmatrix{y_t & y_{t-1} & \cdots & y_{t-10}}'$ Markov?
+
+\medskip
+\noindent{\bf f.}  Extra credit.  Verify that $\epsilon_t$ {\it can\/} be expressed as a square summable linear combination
+of $y_{t+j}, j\geq 1$.
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.29} \quad % old number 7
+  Get the Matlab
+programs {\tt bigshow3.m} and {\tt freq.m} from
+\hfil\break
+\noindent
+%{\tt ftp://zia.stanford.edu/pub/sargent/webdocs/matlab}.
+%$<$http://homepages.nyu.edu/pub/\raise-4pt\hbox{\~{}}ts43/source\hbox{\_{}}code/mitbook.zip$>$.
+$<$www.tomsargent.com/source\_code/mitbook.zip$>$.
+%$<$https://files.nyu.edu/ts43/public/books.html$>$. %
+\noindent Use {\tt bigshow3} to compute and display a simulation
+of length 80, an impulse response function, and a spectrum for
+each of the following scalar stochastic processes $y_t$.  In each
+of  the following,  $w_t$ is a scalar martingale difference
+sequence adapted to its own history and the initial values
+of lagged $y$'s.
+\medskip
+\noindent{a.} $y_t = w_t$.
+\medskip
+\noindent{b.} $y_t = (1 + .5L) w_t$.
+\medskip
+\noindent{c.} $y_t = (1 + .5L + .4L^2) w_t $.
+\medskip
+\noindent{d.} $(1 - .999L) y_t = (1 - .4 L) w_t $.
+\medskip
+\noindent{e.} $(1- .8L) y_t = (1 + .5L + .4L^2 ) w_t$.
+\medskip
+\noindent{f.}  $ (1+.8L) y_t = w_t $.
+\medskip
+\noindent{g.}  $y_t = (1 - .6L) w_t$.
+
+\medskip
+\noindent  Study   the output and look for patterns.  When you
+are done, you will be well on your way to knowing how
+to read spectral densities.
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.30}\quad % old number 15
+Suppose that a scalar is related to a scalar white noise $w_t$ with variance
+$1$ by
+ $y_t  = h(L) w_t $ where $h(L) = \sum_{j=0}^\infty L^j h_j $
+and $\sum_{j=0}^\infty h_j^2 < + \infty$.   Then a special case
+of formula \Ep{blackspectrum} coupled with the observer equation
+$y_t = G x_t$ implies that the spectrum of $y$ is given by
+$$ S_y(\omega)  = h(\exp(-i \omega) ) h( \exp(i \omega))
+= | h(\exp(-i \omega))|^2 $$
+where $h(\exp(-i \omega)) = \sum_{j=0}^\infty h_j \exp(- i \omega j) $.
+\medskip
+\noindent In a famous paper, Slutsky investigated the
+consequences of applying the following filter to white noise:
+$h(L) = (1 +L)^n(1-L)^m$  (i.e., the convolution of $n$ two-period
+moving averages with $m$ difference operators).
+Compute and plot the spectrum of $y$ for $\omega \in [-\pi, \pi]$ for
+the following choices
+of $m,n$:
+
+\medskip
+\noindent{\bf a.}  $m=10, n=10$.
+\medskip
+\noindent{\bf b.} $m=10, n=40$.
+\medskip
+\noindent{\bf c.}  $m=40, n=10$.
+\medskip
+\noindent{\bf d.} $m=120, n=30$.
+\medskip
+\noindent{\bf e.} Comment on these results.
+\medskip
+\noindent{\it Hint:}  Notice that $h(\exp(-i\omega))
+ = (1+ \exp(-i \omega))^n (1-\exp(-i\omega))^m $.
+\medskip
+
+
+
+
+
+\eqnotracefalse
+%\showchaptIDtrue
+

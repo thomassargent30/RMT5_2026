@@ -1,0 +1,680 @@
+% Raw index file ``RMT5.idx''
+% ====================================
+\indexentry {puzzle!definition}{xxv}
+\indexentry {dynamic programming!squared}{23}
+\indexentry {Markov chain}{29}
+\indexentry {state}{29}
+\indexentry {stochastic!linear difference equations}{29}
+\indexentry {stochastic!process}{29}
+\indexentry {Markov chain}{29}
+\indexentry {transition matrix}{30}
+\indexentry {stochastic!matrix}{30}
+\indexentry {distribution!stationary}{31}
+\indexentry {distribution!stationary}{33}
+\indexentry {distribution!invariant}{33}
+\indexentry {Markov chain!as difference equation}{35}
+\indexentry {hidden Markov model}{35}
+\indexentry {conditional expectation}{36}
+\indexentry {law of iterated expectations}{36}
+\indexentry {law of iterated expectations}{36}
+\indexentry {resolvent operator}{37}
+\indexentry {Neumann series}{37}
+\indexentry {likelihood function}{38}
+\indexentry {distribution!multinomial}{38}
+\indexentry {maximum likelihood}{38}
+\indexentry {likelihood function!multinomial}{38}
+\indexentry {second-moment restrictions}{39}
+\indexentry {martingale!difference sequence}{40}
+\indexentry {martingale}{40}
+\indexentry {white noise}{41}
+\indexentry {vector autoregression}{42}
+\indexentry {stochastic!process}{43}
+\indexentry {covariance stationary}{44}
+\indexentry {autocovariogram}{45}
+\indexentry {moving average representation}{46}
+\indexentry {impulse response function}{46}
+\indexentry {guess-and-verify method}{47}
+\indexentry {Lyapunov equation!discrete}{47}
+\indexentry {stochastic discount factor}{48}
+\indexentry {value function}{48}
+\indexentry {Howard policy improvement algorithm}{50}
+\indexentry {dynamic programming}{50}
+\indexentry {population regression}{51}
+\indexentry {regression!population}{51}
+\indexentry {least-squares projection}{51}
+\indexentry {likelihood function}{52}
+\indexentry {Bayes' Law}{53}
+\indexentry {Bayes' law!as conditional probability}{53}
+\indexentry {statistical model!likelihood function}{53}
+\indexentry {prior probability}{53}
+\indexentry {posterior probability}{53}
+\indexentry {conditional expectation!wide sense}{54}
+\indexentry {elliptical!probability distributions}{54}
+\indexentry {linear rational expectations models}{55}
+\indexentry {distribution!Gaussian}{56}
+\indexentry {likelihood function!Gaussian}{56}
+\indexentry {maximum likelihood}{56}
+\indexentry {filter!linear}{57}
+\indexentry {population regression!Kalman filter}{57}
+\indexentry {hidden Markov model!Kalman filter}{57}
+\indexentry {Kalman filter}{60}
+\indexentry {filter!linear}{60}
+\indexentry {Riccati equation!matrix difference}{60}
+\indexentry {Gram-Schmidt process}{60}
+\indexentry {hidden Markov model}{61}
+\indexentry {innovations representation}{61}
+\indexentry {vector autoregression}{63}
+\indexentry {hidden Markov model}{64}
+\indexentry {innovations representation}{64}
+\indexentry {Kalman filter!and vector autoregressions}{64}
+\indexentry {spectral density}{65}
+\indexentry {distribution!stationary}{65}
+\indexentry {Fourier inversion formula}{65}
+\indexentry {typical spectral shape}{68}
+\indexentry {Sylvester equation!discrete Lyapunov equation}{70}
+\indexentry {Law of cosines}{72}
+\indexentry {least-squares projection}{72}
+\indexentry {Cauchy-Schwarz inequality}{73}
+\indexentry {Gram-Schmidt process}{74}
+\indexentry {autoregression!finite-horizon}{75}
+\indexentry {moving average!finite-horizon}{75}
+\indexentry {Cholesky decomposition}{75}
+\indexentry {least squares projection!Cholesky decomposition}{75}
+\indexentry {Gram-Schmidt process!Cholesky decomposition}{75}
+\indexentry {Kalman filter!cross-products between measurement and state noise}{93}
+\indexentry {Sylvester equation}{96}
+\indexentry {Howard policy improvement algorithm}{98}
+\indexentry {dynamic programming}{101}
+\indexentry {dynamic optimization}{101}
+\indexentry {Bellman equation}{101}
+\indexentry {value function!|see{Bellman equation}}{101}
+\indexentry {sequential!|see{recursive}}{101}
+\indexentry {policy function}{101}
+\indexentry {state}{101}
+\indexentry {value function}{101}
+\indexentry {functional equation}{102}
+\indexentry {Benveniste-Scheinkman formula}{103}
+\indexentry {value function!iteration}{104}
+\indexentry {guess-and-verify method}{104}
+\indexentry {policy improvement algorithm}{104}
+\indexentry {logarithmic preferences}{105}
+\indexentry {optimal growth}{105}
+\indexentry {guess-and-verify method}{106}
+\indexentry {method of undetermined coefficients}{106}
+\indexentry {Bellman equation}{107}
+\indexentry {Benveniste-Scheinkman formula}{107}
+\indexentry {curse of dimensionality}{110}
+\indexentry {discretization!of state space}{111}
+\indexentry {optimal savings problem}{111}
+\indexentry {dynamic programming! discrete state space}{112}
+\indexentry {policy improvement algorithm}{114}
+\indexentry {policy improvement algorithm}{115}
+\indexentry {policy improvement algorithm}{115}
+\indexentry {policy improvement algorithm}{116}
+\indexentry {policy improvement algorithm}{116}
+\indexentry {policy improvement algorithm! modified}{116}
+\indexentry {equity premium}{120}
+\indexentry {Chebyshev polynomial}{122}
+\indexentry {spline!shape preserving}{124}
+\indexentry {optimal linear regulator}{124}
+\indexentry {dynamic programming!linear quadratic}{125}
+\indexentry {linear quadratic!dynamic programming}{125}
+\indexentry {Kalman filter!and optimal linear regulator}{125}
+\indexentry {Riccati equation! algebraic}{126}
+\indexentry {policy improvement algorithm}{128}
+\indexentry {Lyapunov equation}{128}
+\indexentry {Riccati equation}{128}
+\indexentry {doubling algorithms}{128}
+\indexentry {Lyapunov equation}{128}
+\indexentry {optimal linear regulator}{128}
+\indexentry {certainty equivalence!proof}{130}
+\indexentry {certainty equivalence}{131}
+\indexentry {eliminating discounting!transformations}{131}
+\indexentry {shadow price}{132}
+\indexentry {Lagrange multiplier}{132}
+\indexentry {stability properties}{132}
+\indexentry {eigenvalue}{133}
+\indexentry {stable matrix}{133}
+\indexentry {stabilizable}{134}
+\indexentry {Euler equation}{134}
+\indexentry {duality}{134}
+\indexentry {optimal linear regulator}{135}
+\indexentry {costate vector}{135}
+\indexentry {symplectic matrix}{136}
+\indexentry {reciprocal pairs!of eigenvalues}{137}
+\indexentry {Schur decomposition}{137}
+\indexentry {eigenvalue!decomposition}{137}
+\indexentry {Riccati equation}{138}
+\indexentry {Kalman filter}{141}
+\indexentry {filter!linear}{141}
+\indexentry {Kalman filter}{141}
+\indexentry {Kalman gain}{142}
+\indexentry {innovation!in time series representation}{142}
+\indexentry {Kalman filter!dual to linear regulator}{142}
+\indexentry {Howard policy improvement algorithm}{156}
+\indexentry {adaptive expectations}{158}
+\indexentry {inverse optimal prediction}{158}
+\indexentry {reverse engineer!Muth}{158}
+\indexentry {golden ratio}{159}
+\indexentry {adaptive expectations}{160}
+\indexentry {LQ permanent income model!incomplete markets}{162}
+\indexentry {Jensen's inequality}{164}
+\indexentry {submartingale}{164}
+\indexentry {precautionary savings}{164}
+\indexentry {cointegration}{169}
+\indexentry {history dependence}{170}
+\indexentry {consumption smoothing!complete markets}{175}
+\indexentry {complete markets}{175}
+\indexentry {LQ permanent income model!complete markets}{175}
+\indexentry {Lucas Critique}{180}
+\indexentry {rational expectations!econometrics}{183}
+\indexentry {spectral factorization identity}{203}
+\indexentry {hazard rate}{219}
+\indexentry {Bewley models}{220}
+\indexentry {Bayes' law!with search model}{221}
+\indexentry {sufficient statistic}{222}
+\indexentry {martingale!convergence theorem}{222}
+\indexentry {beta distribution}{223}
+\indexentry {equilibrium price distribution!Burdett-Judd model}{227}
+\indexentry {noisy search!Burdett and Judd}{227}
+\indexentry {Bertrand competition}{231}
+\indexentry {unemployment!voluntary}{249}
+\indexentry {single-crossing property}{251}
+\indexentry {mean-preserving spread}{252}
+\indexentry {single-crossing property}{252}
+\indexentry {search model}{253}
+\indexentry {Kronecker product}{255}
+\indexentry {Big $K$, little $k$}{284}
+\indexentry {Benveniste-Scheinkman formula}{285}
+\indexentry {transversality condition}{285}
+\indexentry {recursive!competitive equilibrium}{286}
+\indexentry {recursive!competitive equilibrium}{288}
+\indexentry {equilibrium!rational expectations}{288}
+\indexentry {equilibrium!recursive competitive}{288}
+\indexentry {representative agent}{289}
+\indexentry {expectations!disappearance of}{290}
+\indexentry {Rosen schooling model}{290}
+\indexentry {time to build!Rosen schooling model}{290}
+\indexentry {occupational choice}{292}
+\indexentry {Markov perfect equilibrium!fish and fishers}{297}
+\indexentry {optimal linear regulator!dynamic game}{297}
+\indexentry {Markov perfect equilibrium!linear}{297}
+\indexentry {Bellman equation!stacked}{298}
+\indexentry {Riccati equation!stacked}{298}
+\indexentry {linear quadratic!dynamic games}{298}
+\indexentry {Markov perfect equilibrium}{298}
+\indexentry {optimal linear regulator}{299}
+\indexentry {Markov perfect equilibrium!prices and inventory example}{301}
+\indexentry {self-control!Markov perfect equilibrium}{305}
+\indexentry {Markov perfect equilibrium!self-control}{305}
+\indexentry {Bellman equation!dynamic games}{305}
+\indexentry {Arrow securities}{312}
+\indexentry {complete markets}{312}
+\indexentry {Pareto weights!time invariance}{317}
+\indexentry {history dependence}{319}
+\indexentry {strips}{328}
+\indexentry {stochastic discount factor}{330}
+\indexentry {Arrow securities}{330}
+\indexentry {Arrow securities}{331}
+\indexentry {no-trade result}{333}
+\indexentry {Ponzi schemes!ruling out}{333}
+\indexentry {debt limit!natural}{333}
+\indexentry {natural debt limit}{333}
+\indexentry {competitive equilibrium!sequential trading}{336}
+\indexentry {history dependence!lack of}{341}
+\indexentry {recursive!competitive equilibrium}{350}
+\indexentry {Benveniste-Scheinkman formula}{351}
+\indexentry {arbitrage!no-arbitrage principle}{352}
+\indexentry {arbitrage}{353}
+\indexentry {arbitrage!no-arbitrage principle}{354}
+\indexentry {arbitrage}{354}
+\indexentry {yield!to maturity}{354}
+\indexentry {inverse!generalized}{356}
+\indexentry {least-squares projection}{356}
+\indexentry {rational expectations}{361}
+\indexentry {rational expectations!communism}{361}
+\indexentry {communism!rational expectations}{361}
+\indexentry {rational expectations}{362}
+\indexentry {entropy}{363}
+\indexentry {entropy}{364}
+\indexentry {relative entropy}{364}
+\indexentry {equivalent martingale measure}{388}
+\indexentry {martingale!equivalent measure}{389}
+\indexentry {law of iterated values}{404}
+\indexentry {law of iterated values}{405}
+\indexentry {equilibrium!multiple}{416}
+\indexentry {guess-and-verify method}{416}
+\indexentry {expectations!without promises}{425}
+\indexentry {deficit finance}{430}
+\indexentry {Laffer curve}{430}
+\indexentry {Lucas tree!in overlapping generations model}{433}
+\indexentry {M1}{447}
+\indexentry {open market operation!in private securities}{449}
+\indexentry {real bills doctrine}{449}
+\indexentry {gift-giving game!with overlapping generations}{450}
+\indexentry {borrowing constraint!natural}{468}
+\indexentry {natural debt limit}{469}
+\indexentry {shooting algorithm}{481}
+\indexentry {term structure of interest rates}{483}
+\indexentry {discount factor}{483}
+\indexentry {term structure!of interest rates}{484}
+\indexentry {expectations!theory of the term structure}{484}
+\indexentry {zero coupon bonds}{484}
+\indexentry {holding period yields}{485}
+\indexentry {one-period!returns}{485}
+\indexentry {government deficit!net of interest}{487}
+\indexentry {government deficit!gross of interest}{487}
+\indexentry {government deficit!operational}{487}
+\indexentry {government deficit!primary}{487}
+\indexentry {consol}{488}
+\indexentry {short sales}{490}
+\indexentry {Golden rule!augmented}{495}
+\indexentry {shooting algorithm}{496}
+\indexentry {gradient descent algorithm}{497}
+\indexentry {back-solving}{500}
+\indexentry {nondistorting tax}{501}
+\indexentry {distorting tax}{501}
+\indexentry {Ricardian proposition}{501}
+\indexentry {pulse}{508}
+\indexentry {cross-equation restrictions}{514}
+\indexentry {approximation!higher order}{539}
+\indexentry {Big $K$, little $k$}{561}
+\indexentry {growth!stochastic}{563}
+\indexentry {real business cycle model}{563}
+\indexentry {Inada condition}{564}
+\indexentry {Big $K$, little $k$}{580}
+\indexentry {rational expectations}{581}
+\indexentry {permanent income model!general equilibrium version}{587}
+\indexentry {redundant assets!|see {arbitrage pricing theory}}{594}
+\indexentry {borrowing constraint}{595}
+\indexentry {conditional covariance}{598}
+\indexentry {martingale!equivalent measure}{598}
+\indexentry {distorted transition density}{599}
+\indexentry {twisted transition measure!|see{ martingale}}{600}
+\indexentry {martingale!equivalant measure}{600}
+\indexentry {stochastic discount factor}{600}
+\indexentry {martingale}{601}
+\indexentry {twisted transition measure}{601}
+\indexentry {call option!European}{601}
+\indexentry {Black-Scholes formula}{601}
+\indexentry {Bellman equation}{608}
+\indexentry {term structure!slope}{609}
+\indexentry {term structure!expectations theory}{609}
+\indexentry {lotteries!man-made}{612}
+\indexentry {Jensen's inequality}{614}
+\indexentry {primary surplus}{619}
+\indexentry {transversality condition}{620}
+\indexentry {bubbles!leverage constraints}{630}
+\indexentry {bubbles!short sales constraints}{630}
+\indexentry {bubbles!and volume}{630}
+\indexentry {Lyapunov equation!discrete}{639}
+\indexentry {stochastic discount factor}{645}
+\indexentry {coefficient of relative risk aversion}{646}
+\indexentry {equity premium puzzle}{648}
+\indexentry {distribution!log normal}{649}
+\indexentry {risk-free rate puzzle}{651}
+\indexentry {market price of risk}{651}
+\indexentry {stochastic discount factor}{651}
+\indexentry {Cauchy-Schwarz inequality}{652}
+\indexentry {market price of risk}{652}
+\indexentry {Sharpe ratio}{652}
+\indexentry {stochastic discount factor}{653}
+\indexentry {law of one price}{654}
+\indexentry {Riesz representation theorem}{655}
+\indexentry {stochastic discount factor}{655}
+\indexentry {arbitrage!no-arbitrage principle}{655}
+\indexentry {moment generating function}{659}
+\indexentry {equity premium puzzle}{661}
+\indexentry {risk-free rate puzzle}{661}
+\indexentry {precautionary savings}{661}
+\indexentry {non-expected utility}{662}
+\indexentry {certainty equivalent}{662}
+\indexentry {risk sensitivity}{664}
+\indexentry {stochastic differential utility}{665}
+\indexentry {stochastic discount factor}{666}
+\indexentry {likelihood ratio}{667}
+\indexentry {risk aversion!versus robustness}{671}
+\indexentry {risk sensitivity!versus robustness}{671}
+\indexentry {martingale!likelihood ratio}{672}
+\indexentry {likelihood ratio!martingale}{672}
+\indexentry {relative entropy}{673}
+\indexentry {entropy!rlative}{673}
+\indexentry {entropy}{673}
+\indexentry {risk-sensitivity}{675}
+\indexentry {indirect utility function}{675}
+\indexentry {L'H\^opital's rule}{675}
+\indexentry {risk sensitivity}{675}
+\indexentry {multiplier preferences}{675}
+\indexentry {observational equivalence!risk sensitivity and robustness}{675}
+\indexentry {observational equivalence!risk sensitivity and robustness}{676}
+\indexentry {market price of model uncertainty}{677}
+\indexentry {uncertainty!measuring}{678}
+\indexentry {ambiguity!model uncertainty}{678}
+\indexentry {detection error probability}{678}
+\indexentry {entropy!detection errors}{678}
+\indexentry {deterministic!stochastic process}{681}
+\indexentry {reverse engineer!Constantinides and Duffie}{683}
+\indexentry {back-solving}{684}
+\indexentry {term structure!affine yield model}{688}
+\indexentry {risk prices!affine}{689}
+\indexentry {risk exposure}{689}
+\indexentry {risk prices}{689}
+\indexentry {affine!yields to maturity}{690}
+\indexentry {risk neutral probabilities}{691}
+\indexentry {rational expectations}{691}
+\indexentry {beliefs!distorted}{693}
+\indexentry {least-squares projection}{695}
+\indexentry {expectations!theory of the term structure}{700}
+\indexentry {multiplier preferences!ambiguity}{710}
+\indexentry {stochastic discount factor!exponential affine}{711}
+\indexentry {long run risk}{714}
+\indexentry {multiplier preferences!ambiguity}{714}
+\indexentry {long run risk}{714}
+\indexentry {stochastic volatility}{715}
+\indexentry {Euler's theorem}{729}
+\indexentry {Inada condition}{729}
+\indexentry {balanced growth path}{730}
+\indexentry {intertemporal elasticity of substitution}{731}
+\indexentry {growth!exogenous}{731}
+\indexentry {growth!externality}{732}
+\indexentry {growth!reproducible factors}{734}
+\indexentry {human capital}{737}
+\indexentry {growth!research and monopolistic competition}{739}
+\indexentry {monopolistic competition}{739}
+\indexentry {scale effects}{742}
+\indexentry {growth!nonreproducible factors}{744}
+\indexentry {growth!research and monopolistic competition}{746}
+\indexentry {growth!externality}{746}
+\indexentry {optimal taxation!commitment}{757}
+\indexentry {Ramsey problem}{757}
+\indexentry {Ramsey plan}{757}
+\indexentry {arbitrage}{762}
+\indexentry {Ramsey problem}{764}
+\indexentry {optimal taxation!zero capital tax}{765}
+\indexentry {Ramsey problem!primal approach}{766}
+\indexentry {primal approach}{766}
+\indexentry {optimal taxation!zero capital tax}{770}
+\indexentry {optimal taxation!initial capital}{771}
+\indexentry {optimal taxation!incomplete taxation}{772}
+\indexentry {optimal taxation!indeterminacy of state-contingent debt and capital taxes}{777}
+\indexentry {Ramsey problem!uncertainty}{779}
+\indexentry {optimal taxation!{\it ex ante\/} capital tax varies around zero}{780}
+\indexentry {capital tax}{780}
+\indexentry {optimal taxation!labor tax smoothing}{784}
+\indexentry {resolvent operator}{791}
+\indexentry {time inconsistency!of Ramsey plan}{792}
+\indexentry {incomplete markets}{800}
+\indexentry {quasi-linear utility}{809}
+\indexentry {Friedman rule}{813}
+\indexentry {fiscal theory of price level}{813}
+\indexentry {zero lower bound}{816}
+\indexentry {optimal taxation!human capital}{828}
+\indexentry {human capital}{828}
+\indexentry {redistribution}{836}
+\indexentry {optimal savings problem}{855}
+\indexentry {self-insurance}{856}
+\indexentry {cointegration}{864}
+\indexentry {certainty equivalence}{864}
+\indexentry {Benveniste-Scheinkman formula}{865}
+\indexentry {supermartingale convergence theorem}{866}
+\indexentry {martingale!convergence theorem}{866}
+\indexentry {Benveniste-Scheinkman formula}{866}
+\indexentry {Bewley models}{883}
+\indexentry {equilibrium!incomplete markets}{883}
+\indexentry {self-insurance}{883}
+\indexentry {self-insurance}{883}
+\indexentry {risk-sharing mechanisms}{883}
+\indexentry {Bellman equation}{885}
+\indexentry {wealth-employment distributions}{886}
+\indexentry {distribution!stationary}{886}
+\indexentry {Markov chain}{886}
+\indexentry {Bewley models}{887}
+\indexentry {pure consumption loans economy}{888}
+\indexentry {pure credit model}{888}
+\indexentry {equilibrium!stationary}{888}
+\indexentry {equilibrium!stationary}{891}
+\indexentry {relaxation!parameter}{892}
+\indexentry {relaxation!method}{892}
+\indexentry {supermartingale convergence theorem}{897}
+\indexentry {Benveniste-Scheinkman formula}{898}
+\indexentry {money!outside}{909}
+\indexentry {money!inside}{909}
+\indexentry {Laffer curve}{910}
+\indexentry {exchange rate!indeterminacy}{911}
+\indexentry {back-solving}{915}
+\indexentry {Friedman rule!Bewley's model}{916}
+\indexentry {Friedman rule!and free banking}{916}
+\indexentry {precautionary savings}{918}
+\indexentry {hyperbolic absolute risk aversion}{919}
+\indexentry {constant relative risk aversion}{919}
+\indexentry {constant absolute risk aversion}{919}
+\indexentry {Bellman equation}{921}
+\indexentry {Bellman equation}{922}
+\indexentry {deposit insurance}{927}
+\indexentry {Smirnov transform}{932}
+\indexentry {inverse probability integral transform}{932}
+\indexentry {real bills doctrine}{933}
+\indexentry {time consistency}{937}
+\indexentry {Markov perfect equilibrium}{938}
+\indexentry {lag operator}{940}
+\indexentry {continuation!of a sequence}{951}
+\indexentry {continuation!of a Stackelberg plan}{951}
+\indexentry {optimal taxation!commitment}{963}
+\indexentry {Bellman equation}{966}
+\indexentry {Bellman equation}{967}
+\indexentry {dynamic programming squared}{967}
+\indexentry {measurability constraints!AMSS model}{972}
+\indexentry {Bellman equation}{972}
+\indexentry {martingale!convergence theorem}{974}
+\indexentry {recursive!contracts}{977}
+\indexentry {promised value!as state variable}{977}
+\indexentry {endowment stream}{978}
+\indexentry {commitment!one-sided lack of}{981}
+\indexentry {self-enforcing contract}{981}
+\indexentry {history dependence!of consumption stream}{982}
+\indexentry {autarky value}{982}
+\indexentry {history dependence!of contracts}{982}
+\indexentry {participation constraint}{982}
+\indexentry {sustainable contract}{982}
+\indexentry {promised value!as state variable}{984}
+\indexentry {promise-keeping constraint}{984}
+\indexentry {participation constraint}{984}
+\indexentry {participation constraint}{987}
+\indexentry {amnesia!of risk-sharing contract}{987}
+\indexentry {fanning out!of wealth distribution}{996}
+\indexentry {asymmetric information}{1004}
+\indexentry {commitment!two-sided}{1004}
+\indexentry {incentive-compatibility constraint}{1005}
+\indexentry {coinsurance}{1010}
+\indexentry {martingale!convergence theorem}{1013}
+\indexentry {self-insurance}{1015}
+\indexentry {martingale!convergence theorem}{1015}
+\indexentry {asymmetric information!hidden income and hidden storage}{1015}
+\indexentry {commitment!two-sided}{1015}
+\indexentry {repeated principal-agent problem}{1029}
+\indexentry {incentive-compatibility constraint}{1030}
+\indexentry {Bellman equation}{1030}
+\indexentry {randomization}{1030}
+\indexentry {commitment!two-sided lack of}{1039}
+\indexentry {contract design}{1040}
+\indexentry {contract design!dynamic program}{1042}
+\indexentry {Bellman equation}{1042}
+\indexentry {amnesia!of risk-sharing contract}{1045}
+\indexentry {Bellman equation}{1054}
+\indexentry {amnesia}{1071}
+\indexentry {Arrow securities}{1082}
+\indexentry {borrowing constraint!endogenous}{1082}
+\indexentry {Bellman equation}{1083}
+\indexentry {renegotiation proof}{1085}
+\indexentry {Bellman equation}{1086}
+\indexentry {unemployment!compensation}{1093}
+\indexentry {Bellman equation}{1095}
+\indexentry {Bellman equation}{1096}
+\indexentry {Bellman equation}{1101}
+\indexentry {carrot and stick}{1102}
+\indexentry {Bellman equation}{1106}
+\indexentry {Bellman equation}{1113}
+\indexentry {time consistency}{1117}
+\indexentry {state-contingent policies}{1117}
+\indexentry {time consistency}{1117}
+\indexentry {reputation}{1117}
+\indexentry {commitment!technology}{1117}
+\indexentry {folk theorem}{1117}
+\indexentry {dynamic programming}{1117}
+\indexentry {reputation}{1117}
+\indexentry {public policies!sustainable}{1118}
+\indexentry {public policies!credible}{1118}
+\indexentry {competitive equilibrium}{1120}
+\indexentry {Ramsey plan}{1120}
+\indexentry {Ramsey problem}{1120}
+\indexentry {Ramsey outcome}{1120}
+\indexentry {time consistency}{1121}
+\indexentry {Nash equilibrium}{1121}
+\indexentry {dynamic programming!squared}{1128}
+\indexentry {Bellman equation}{1128}
+\indexentry {Bellman equation}{1129}
+\indexentry {dynamic programming squared!etymology}{1131}
+\indexentry {recursive}{1133}
+\indexentry {subgame perfect equilibrium}{1134}
+\indexentry {Nash equilibrium!infinite repetition}{1137}
+\indexentry {trigger strategy}{1137}
+\indexentry {self-generation}{1143}
+\indexentry {self-generation}{1143}
+\indexentry {policy improvement algorithm}{1145}
+\indexentry {subgame perfect equilibrium}{1146}
+\indexentry {self-enforcing equilibrium}{1146}
+\indexentry {credible government policies}{1148}
+\indexentry {sustainable plans!|see{credible government policies}}{1148}
+\indexentry {history dependence!|see{reputation}}{1148}
+\indexentry {history dependence!of strategies}{1148}
+\indexentry {stick and carrot}{1151}
+\indexentry {stick and carrot}{1152}
+\indexentry {Bellman equation}{1172}
+\indexentry {one-period!deviations}{1179}
+\indexentry {lending with moral hazard}{1191}
+\indexentry {Bellman equation}{1194}
+\indexentry {complete markets}{1194}
+\indexentry {Arrow securities}{1194}
+\indexentry {Bellman equation}{1195}
+\indexentry {Bellman equation}{1197}
+\indexentry {spline!shape preserving}{1225}
+\indexentry {complete markets!no role for money}{1231}
+\indexentry {time consistency}{1232}
+\indexentry {shopping technology}{1232}
+\indexentry {money!demand function}{1235}
+\indexentry {price system}{1236}
+\indexentry {equilibrium}{1236}
+\indexentry {open market operation}{1236}
+\indexentry {quantity theory of money}{1240}
+\indexentry {deficit finance!as cause of inflation}{1240}
+\indexentry {Laffer curve}{1240}
+\indexentry {zero inflation policy}{1241}
+\indexentry {unpleasant monetarist arithmetic}{1241}
+\indexentry {open market operation!one definition}{1242}
+\indexentry {open market operation!another definition}{1242}
+\indexentry {optimal quantity of money}{1242}
+\indexentry {Friedman rule}{1243}
+\indexentry {legal restrictions}{1243}
+\indexentry {legal restrictions!Terror}{1244}
+\indexentry {open market operation!one big one}{1244}
+\indexentry {fiscal theory of inflation}{1246}
+\indexentry {interest rate peg}{1246}
+\indexentry {exchange rate!indeterminacy}{1248}
+\indexentry {exchange rate!determinacy}{1249}
+\indexentry {sunspots}{1251}
+\indexentry {optimal inflation tax}{1255}
+\indexentry {optimal quantity of money!Friedman rule}{1255}
+\indexentry {Friedman rule}{1255}
+\indexentry {Ramsey plan}{1258}
+\indexentry {Ramsey problem}{1259}
+\indexentry {time consistency}{1260}
+\indexentry {monopolistic competition}{1261}
+\indexentry {predetermined wage}{1263}
+\indexentry {cash-in-advance constraint}{1263}
+\indexentry {quantity theory of money}{1265}
+\indexentry {Ramsey plan}{1266}
+\indexentry {Friedman rule}{1267}
+\indexentry {Friedman rule!credibility}{1268}
+\indexentry {subgame perfect equilibrium}{1268}
+\indexentry {Italy and Brazil!inflation and measured deficits}{1272}
+\indexentry {credit and currency}{1279}
+\indexentry {permanent income model}{1279}
+\indexentry {Ricardian proposition}{1279}
+\indexentry {Pareto problem}{1281}
+\indexentry {complete markets}{1281}
+\indexentry {competitive equilibrium}{1282}
+\indexentry {Pareto optimal allocation}{1282}
+\indexentry {Ricardian proposition}{1283}
+\indexentry {turnpike!Townsend's}{1287}
+\indexentry {gift-giving game}{1289}
+\indexentry {Friedman rule}{1289}
+\indexentry {Friedman rule}{1292}
+\indexentry {deficit finance!as cause of inflation}{1292}
+\indexentry {competitive equilibrium}{1294}
+\indexentry {Laffer curve}{1296}
+\indexentry {legal restrictions}{1297}
+\indexentry {exchange rate}{1300}
+\indexentry {equilibrium}{1302}
+\indexentry {exchange rate!indeterminacy}{1303}
+\indexentry {money!commodity}{1303}
+\indexentry {equilibrium}{1304}
+\indexentry {real bills doctrine}{1314}
+\indexentry {island model}{1315}
+\indexentry {matching model}{1315}
+\indexentry {matching model!match surplus}{1315}
+\indexentry {employment lottery}{1316}
+\indexentry {island model}{1316}
+\indexentry {Bellman equation}{1317}
+\indexentry {matching model}{1321}
+\indexentry {vacancy}{1321}
+\indexentry {matching model!matching function}{1322}
+\indexentry {tightness of labor market}{1322}
+\indexentry {matching model!match surplus}{1323}
+\indexentry {Nash bargaining}{1323}
+\indexentry {matching model!match surplus}{1326}
+\indexentry {matching model!heterogeneous jobs}{1328}
+\indexentry {matching model!separate markets}{1332}
+\indexentry {matching model!wage announcements}{1333}
+\indexentry {lotteries!households}{1335}
+\indexentry {employment lottery}{1335}
+\indexentry {layoff taxes}{1337}
+\indexentry {lotteries!firms}{1338}
+\indexentry {family!one big happy}{1338}
+\indexentry {capacity utilization}{1340}
+\indexentry {employment lottery!layoff taxes}{1343}
+\indexentry {layoff taxes!employment lottery}{1343}
+\indexentry {Bellman equation}{1343}
+\indexentry {island model!layoff taxes}{1350}
+\indexentry {layoff taxes!island model}{1350}
+\indexentry {Bellman equation}{1350}
+\indexentry {matching model!layoff taxes}{1352}
+\indexentry {layoff taxes!matching model}{1352}
+\indexentry {search model!money}{1356}
+\indexentry {money!search model}{1356}
+\indexentry {Nash equilibrium}{1357}
+\indexentry {double coincidence of wants}{1357}
+\indexentry {Bellman equation}{1359}
+\indexentry {best response}{1360}
+\indexentry {island model}{1365}
+\indexentry {search model!business cycles}{1366}
+\indexentry {unemployment!European}{1369}
+\indexentry {matching model!skill-biased technological change}{1369}
+\indexentry {matching model!dispersion of match values}{1369}
+\indexentry {search model!shocks to human capital}{1370}
+\indexentry {fundamental surplus}{1379}
+\indexentry {Bellman equation}{1382}
+\indexentry {sticky wage}{1387}
+\indexentry {alternating-offer bargaining}{1388}
+\indexentry {DSGE model}{1400}
+\indexentry {directed search}{1413}
+\indexentry {block recursive equilibrium}{1419}
+\indexentry {unemployment!European}{1423}
+\indexentry {Hamiltonian}{1429}
+\indexentry {Bellman equation}{1459}
+\indexentry {Bellman equation}{1470}
+\indexentry {Bellman equation}{1493}
+\indexentry {Markov chain!hidden}{1498}
+\indexentry {filter!nonlinear}{1498}
+\indexentry {martingale difference}{1499}
+\indexentry {measurement equation}{1499}
+\indexentry {observer equation}{1500}

@@ -1,0 +1,213 @@
+% Plain TeX document
+% Review of APS_repair.pdf against ch24_revisions_claude.pdf
+% Compile with: tex aps_repair_review_plain.tex
+
+\input texsis
+\input paper
+%\magnification=\magstep1
+%\baselineskip=14pt
+%\parskip=6pt
+%\parindent=20pt
+%\hsize=5.5in
+%\vsize=8.5in
+%\hoffset=0.75in
+%
+%\font\titlefont=cmr12 scaled\magstep2
+%\font\sectionfont=cmbx12
+%\font\subsecfont=cmbx10
+%\font\smalrm=cmr9
+%
+%\def\thedate{\number\day\space
+%  \ifcase\month\or January\or February\or March\or April\or May\or June\or
+%  July\or August\or September\or October\or November\or December\fi
+%  \space\number\year}
+%
+%\def\bigtitle#1{\vskip12pt\centerline{{\titlefont #1}}\vskip4pt}
+%\def\section#1{\vskip14pt\noindent{\sectionfont #1}\vskip4pt\noindent}
+%\def\subsec#1{\vskip10pt\noindent{\subsecfont #1}\vskip4pt\noindent}
+%\def\bquote{\vskip4pt\leftskip=20pt\rightskip=10pt}
+%\def\ebquote{\vskip4pt\leftskip=0pt\rightskip=0pt}
+%\def\bitem{\vskip2pt\noindent$\bullet$\enspace}
+%
+%\bigtitle{Review of {\tt APS\_repair.pdf}:}
+%\bigtitle{Remaining Errors and Recommendations}
+%\centerline{Review against {\tt ch24\_revisions\_claude.pdf}}
+%\vskip4pt\centerline{\thedate}\vskip14pt
+%
+\noindent{\bf Abstract.}
+The document {\tt APS\_repair.pdf} successfully incorporates the principal
+logical corrections recommended in {\tt ch24\_revisions\_claude.pdf}:
+Lemma~2, Definitions~7 and~8, the monotonicity proof, Theorem~1, the
+compactness proposition, and the two-value corollary are all correctly
+stated and correctly ordered.  Three expository residues of the old
+four-tuple formulation remain, and one algorithmic passage should either
+be rewritten or given an explicit citation to the corollary that licenses
+it.  This note identifies each issue and states the required correction.
+
+\section{1. Background}
+
+The core repair identified in {\tt ch24\_revisions\_claude.pdf} is the
+replacement of every admissible {\it four-tuple\/} $(x,y,w_1,w_2)$ by an
+admissible {\it triple\/} $(x,y,w(\cdot))$, where $w(\cdot):Y\to W$ is a
+function, throughout the argument that establishes compactness of $V$.
+The two-value characterization---using scalar continuation values
+$(v_1,v_2)\in V\times V$---is then recovered as a {\it corollary\/} once
+compactness is in hand.  The logical chain is:
+$$\hbox{Lemma 2 (triples)}\;\Rightarrow\;
+  \hbox{Defs.\ 7--8 (triples)}\;\Rightarrow\;
+  \hbox{Theorem 1}\;\Rightarrow\;
+  \hbox{Prop.\ 2 (compactness)}\;\Rightarrow\;
+  \hbox{Corollary (two-value).}$$
+
+\section{2. Errors That Remain in {\tt APS\_repair.pdf}}
+
+\subsec{2.1. Four-tuple language in the paragraph following Definition 7
+(p.~1141)}
+
+After stating Definition~7 correctly in triple form, the immediately
+following paragraph reverts to the old language:
+
+\bquote
+``Notice that when $W\subset V$, the admissible {\bf 4-tuple}
+$(x,y,w_1,w_2)$ determines an SPE with strategy profile
+$\sigma_1=(x,y)$, $\sigma|_{(x,y)}=\sigma^1$,
+$\sigma|_{(\nu,\eta)}=\sigma^2$ for $(\nu,\eta)\ne(\tilde x,\tilde y)$,
+where $\sigma^1$ is a continuation strategy that yields value
+$w_1=V_g(\sigma^1)$ and $\sigma^2$ yields continuation value
+$w_2=V_g(\sigma^2)$.  The value of the SPE is
+$V_g(\sigma)=w=(1-\delta)r(x,y)+\delta w_1$.''
+\ebquote
+
+This paragraph introduces scalar continuation values $w_1$ and $w_2$
+under the label ``admissible 4-tuple,'' contradicting the corrected
+Definition~7 that immediately precedes it.
+
+\vskip6pt\noindent{\it Recommendation 1.}\enspace
+Replace the offending paragraph with the following:
+
+\bquote
+``Notice that when $W\subset V$, an admissible triple $(x,y,w(\cdot))$
+determines an SPE with strategy profile
+$$\sigma_1=(x,y),\qquad \sigma|_{(x,\eta)}=\tilde\sigma(\eta)
+  \quad\forall\,\eta\in Y,$$
+where $\tilde\sigma(\eta)$ is any SPE with value $w(\eta)\in V$.
+The value of the SPE is
+$V_g(\sigma)=(1-\delta)\,r(x,y)+\delta\,w(y)$.''
+\ebquote
+
+\subsec{2.2. Two occurrences of ``4-tuples'' in Section 25.8.1
+(p.~1141--1142)}
+
+Section~25.8.1 (``Basic idea of dynamic programming squared'') contains
+two sentences that still use four-tuple language:
+
+\vskip4pt
+\noindent (a) ``APS define a mapping $B(W)$ that, by considering only
+admissible {\bf 4-tuples}, maps a {\it set\/} of values $W$ tomorrow
+into a new {\it set\/} $B(W)$ of values today.''
+
+\vskip2pt
+\noindent (b) ``Thus, APS use admissible {\bf 4-tuples} to map candidate
+continuation values tomorrow into new candidate values today.''
+
+\vskip6pt\noindent{\it Recommendation 2.}\enspace
+Replace both occurrences of ``4-tuples'' with ``triples'':
+
+\vskip4pt
+\noindent (a) ``APS define a mapping $B(W)$ that, by considering only
+admissible {\bf triples}, maps a set of values $W$ tomorrow into a new
+set $B(W)$ of values today.''
+
+\vskip2pt
+\noindent (b) ``Thus, APS use admissible {\bf triples} to map candidate
+continuation values tomorrow into new candidate values today.''
+
+\subsec{2.3. The iteration algorithm in Section 25.9 uses the two-value
+form without citing the corollary (p.~1145--1146)}
+
+The algorithm for computing the boundaries of $B(W_0)$ states the
+problem for the worst value $\underline w_1$ as a minimization over
+$(x,y)\in C$ and $(w_1,w_2)\in[\underline w_0,\overline w_0]^2$:
+$$\underline w_1
+  = \min_{\scriptstyle(x,y)\in C;\;(w_1,w_2)\in[\underline w_0,
+    \overline w_0]^2}
+    (1-\delta)\,r(x,y)+\delta w_1,$$
+subject to
+$$(1-\delta)\,r(x,y)+\delta w_1\;\geq\;
+  (1-\delta)\,r(x,\eta)+\delta w_2\quad\forall\,\eta\in Y.$$
+
+This is the four-tuple formulation.  It is mathematically correct
+{\it given\/} the two-value Corollary, but in the revised chapter the
+Corollary appears {\it before\/} this algorithm (p.~1144--1145).  The
+algorithm must therefore include an explicit reference to the Corollary
+that licenses the reduction from a function $w(\cdot)$ to two scalar
+values $(w_1,w_2)$.  As currently written it does neither.
+
+\vskip6pt\noindent{\it Recommendation 3.}\enspace
+Add a bridging sentence immediately before the two optimization problems:
+
+\bquote
+``By the two-value Corollary above, it suffices to search over pairs
+$(w_1,w_2)\in W\times W$ rather than full functions $w(\cdot):Y\to W$;
+the boundary problems therefore reduce to:''
+\ebquote
+
+\noindent Alternatively, rewrite the objective in triple form
+$$\underline w_1
+  = \min_{\scriptstyle(x,y,w(\cdot))\;\hbox{\smalrm admissible w.r.t.}\;
+    [\underline w_0,\overline w_0]}
+    (1-\delta)\,r(x,y)+\delta\,w(y),$$
+and note that by the Corollary the minimum is attained at a $w(\cdot)$
+taking at most two values.
+
+\section{3. Summary of Remaining Issues}
+
+\vskip6pt
+\noindent
+\halign{%
+  \vrule\quad\strut#\hfil\quad&\vrule\quad#\hfil\quad&
+  \vrule\quad#\hfil\quad\vrule\cr
+\noalign{\hrule}
+{\bf Location}&{\bf Issue}&{\bf Required action}\cr
+\noalign{\hrule}
+p.~1141, after Def.~7&
+  ``4-tuple $(x,y,w_1,w_2)$''&
+  Replace with triple description\cr
+\noalign{\hrule}
+p.~1141--42, Section~25.8.1 ($\times 2$)&
+  ``admissible 4-tuples'' (two places)&
+  Replace both with ``admissible triples''\cr
+\noalign{\hrule}
+p.~1145--46, algorithm in Section~25.9&
+  $(w_1,w_2)\in W^2$ without justification&
+  Add citation to two-value Corollary\cr
+\noalign{\hrule}}
+
+\section{4. Items Correctly Implemented}
+
+The following elements of {\tt ch24\_revisions\_claude.pdf} are correctly
+incorporated in {\tt APS\_repair.pdf}:
+
+\bitem {\bf Lemma~2} (p.~1140): states and proves the necessary and
+sufficient condition using a function $v(\cdot):Y\to V$.
+
+\bitem {\bf Definition~7} (p.~1141): correctly defines admissible
+{\it triples\/} $(x,y,w(\cdot))$.
+
+\bitem {\bf Definition~8} (p.~1142): $B(W)$ defined via admissible triples.
+
+\bitem {\bf Monotonicity proof} (p.~1142--43): uses the triple/function
+formulation throughout.
+
+\bitem {\bf Theorem~1 proof} (p.~1143--44): constructs sequences of
+functions $w_1(\cdot),w_2(\cdot),\ldots$ correctly.
+
+\bitem {\bf Proposition~2} (compactness, p.~1144): present, correctly
+placed, and correctly proved.
+
+\bitem {\bf Corollary} (two-value characterization, p.~1144--45):
+correctly positioned {\it after\/} compactness, with a correct necessity
+proof using $v_2=\inf_{\eta\in Y}v(\eta)\in V$.
+
+\vfill\eject
+\bye

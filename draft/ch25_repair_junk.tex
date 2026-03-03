@@ -1,0 +1,121 @@
+========
+
+From the lemma, for a given competitive equilibrium $(x,y)\in C$,
+there exists an SPE $\sigma$ for which $x=\sigma^h_1,
+y=\sigma^g_1$ if and only if there exist two values $(v_1,v_2)\in V\times V$
+ such that
+$$(1-\delta)\, r(x,y) + \delta v_1\geq (1-\delta)\, r(x,\eta) + \delta
+v_2\quad \forall\ \eta\in Y . \EQN og6$$
+Let $\sigma^1$ and $\sigma^2$ be subgame perfect equilibria for which $v_1 =
+V_g(\sigma^1),\ v_2=V_g(\sigma^2)$.  The SPE $\sigma$
+that supports $(x,y) = (\sigma^h_1,\sigma^g_1)$ is completed by specifying the continuation strategies
+$\sigma\vert_{(x,y)} = \sigma^1$ and $\sigma\vert_{(\nu,\eta)} = \sigma^2$ if
+$(\nu,\eta) \not= (x,y)$.
+
+This construction uses  two continuation values $(v_1,v_2)\in V \times V$ to create an SPE
+$\sigma$ with value $v\in V$ given by
+$$v = (1-\delta)\, r(x,y) + \delta v_1\ .$$
+Thus, the construction maps {\it pairs\/} of continuation values
+ $(v_1,v_2)$ into a strategy profile $\sigma$  with
+first-period competitive equilibrium outcome $(x,y)$
+and a value $v=V_g(\sigma)$.
+
+APS characterize subgame perfect equilibria by studying a mapping
+from pairs of continuation
+ values $(v_1,v_2)\in V \times V$ into values $v\in V$.  They use the following
+definitions:
+%define as {\it
+%admissible\/} (with respect to $V$) a four tuple $(x,y,\, v_1,v_2)$ such that
+%$(x,y)\in C,\ v_1,v_2\in V$, and $(x,y,v_1,v_2)$ satisfies the incentive
+%constraint \Ep{og6}.  More generally they use
+
+
+
+
+=======
+{\sc Lemma:} 
+
+
+=====
+
+
+\endDefinition
+{\sc Definition 7:}  Let $W\subset  \bbR$.  A 4-tuple $(x,y,w_1,w_2)$ is said to be
+{\it admissible with respect to\/} $W$ if $(x,y)\in C,\ (w_1,w_2) \in
+    W\times W$, and
+$$(1-\delta)\, r(x,y)
++\delta w_1 \geq (1-\delta)\, r(x,\eta) + \delta w_2\,,
+\quad\forall\ \eta\in Y . \EQN og7$$
+
+====================
+
+
+\endDefinition
+
+\medskip\noindent
+{\sc Definition 8:}  For each set $W\subset \bbR$, let $B(W)$ be the set of
+possible values $w=(1-\delta)\, r(x,y) + \delta w_1$ associated with
+admissible tuples $(x,y,w_1,w_2)$.
+
+==========
+
+\noindent{\sc Proof:}
+It can be verified directly from the definition of admissible 4-tuples that
+if $w\in B(W)$, then $w \in B(W^\prime)$:  simply use the $(w_1,w_2)$
+pair that supports $w\in B(W)$ to support $w\in B(W^\prime)$.
+\qed
+
+============
+
+
+{\sc Proof:}  Assume $W\subseteq B(W)$.  Choose an element
+$w\in B(W)$ and transform it as follows into a subgame perfect
+equilibrium:
+
+{\it Step 1.}  Because $w\in B(W)$, we know that there exist outcomes
+$(x,y)$ and values $w_1$ and $w_2$ that satisfy
+$$\eqalign{w= (1-\delta)\, &r(x,y) + \delta w_1\geq (1-\delta)\, r(x,\eta)
++ \delta w_2\quad \forall \eta\in Y\cr
+(x,y) &\in C\cr
+w_1,w_2 &\in W\times W .\cr}$$
+Set $\sigma_1 = (x,y)$.
+
+{\it Step 2.}  Since $w_1\in W\subseteq B(W)$, there exist outcomes $(\tilde
+x,\tilde y)$ and values $(\tilde w_1,\tilde w_2) \in W$ that satisfy
+$$\eqalign{w_1 = (1-\delta)&\, r(\tilde x,\tilde y) + \delta
+\tilde w_1\geq (1-\delta)\, r(\tilde x,\eta) + \delta \tilde w_2,\quad
+\forall\ \eta \in Y\cr
+(\tilde x,\tilde y) &\in C .\cr}$$
+Set the first-period outcome in period 2 (the outcome to occur
+{\it given\/}
+that $y$ was chosen in period 1) equal to $(\tilde x,\tilde y)$; that is,
+set $(\sigma\vert_{(x,y)})_1 = (\tilde x, \tilde y)$.
+
+Continuing in this way, for each $w\in B(W)$, we can create a sequence of
+continuation values $w_1,\tilde w_1, \tilde {\tilde w}_1,\ldots$ and a
+corresponding sequence of first-period outcomes
+ $(x,y),\, (\tilde x,\tilde y),\,
+(\tilde {\tilde x}, \tilde{\tilde y})$.
+
+At each stage in this construction, policies are {\it unimprovable}, which
+means that given the continuation values, one-period deviations from the
+prescribed policies are not optimal.  It follows that the strategy profile is
+optimal.  By construction $V_g(\sigma) = w$.
+\qed
+
+==========
+
+
+% Notice that when $W\subset V$,
+%  the admissible 4-tuple $(x,y,w_1,w_2)$
+% determines an SPE with strategy profile
+% $$\sigma_1 = (x,y),\ \sigma\vert_{(x,y)} = \sigma^1,\ \sigma\vert_{(\nu,\eta)}
+% = \sigma^2\ \hbox{ for } (\nu,\eta)\not= (x,y)$$ where $\sigma_1$
+% is a continuation strategy that yields  value $w_1 = V_g
+% (\sigma^1)$ and $\sigma_2$ is a strategy that yields
+% continuation value $w_2 = V_g(\sigma^2)$.   The value of the
+% SPE is $V_g(\sigma) = w = (1-\delta)\, r(x,y)
+%  + \delta w_1$.
+
+
+==========

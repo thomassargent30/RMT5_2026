@@ -1,0 +1,73 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{Advanced Macro \hfil SMU}
+\line{Winter 2019 \hfil Thomas Sargent}
+
+%\centerline{\bf Practice problems}
+\centerline{\bf Homework 2}
+
+
+\medskip
+
+
+
+The probability density of an $N \times 1$  multivariate normal vector $x$ is
+
+$$ f(x | \mu, \Sigma) = (2 \pi)^{-(\frac{N}{2})} \det ( \Sigma)^{-(\frac{1}{2})} \exp \left( -.5 (x -\mu)' \Sigma^{-1} (x - \mu) \right) $$
+
+\noindent where $\mu = E x = \int x f(x | \mu, \Sigma) \,  d  x$ is the mean of $x$ and $\Sigma = E (x - \mu) (x-\mu)'$ is the covariance matrix of $x$ .
+For integer $k \in [2, \ldots, N-1]$, partition $x$ as $x = \bmatrix{x_1 \cr x_2}$ where $x_1$ is an   $(N-k) \times 1 $ vector and $x_2$ is
+a $k \times 1 $ vector.  Let
+$$ \mu = \bmatrix{\mu_1 \cr \mu_2} , \quad \quad \Sigma = \bmatrix{ \Sigma_{11} & \Sigma_{12} \cr 
+                                                                     \Sigma_{21} & \Sigma_{22} } $$
+be  corresponding partitions of $\mu$ and $\Sigma$, respectively.   
+Then the marginal densities of the random vectors $x_1$ and $x_2$ are
+$f(x_1 | \mu_1, \Sigma_1)$ and $f(x_2 | \mu_2, \Sigma_2)$, respectively, where $f( x_i |\mu_i, \Sigma_i)$ denotes a multivariate normal
+density with first and second moments  $\mu_i, \Sigma_i$. 
+
+The {\it conditional density\/} of $x_1$ given $x_2$, denoted $f(x_1 | x_2; \hat x_1, \Sigma_{11})$ is multivariate normal with mean
+$$ \hat \mu_1 = \mu_1 + \Sigma_{12} \Sigma_{22}^{-1} ( x_2 - \mu) $$
+and covariance matrix 
+$$\eqalign{ \hat \Sigma_{11} & = \Sigma_{11} - \Sigma_{12} \Sigma_{22}^{-1} \Sigma_{21} \cr
+                          & = \Sigma_{11} - \beta \Sigma_{22} \beta' }$$
+where $\beta = \Sigma_{12} \Sigma_{22}^{-1}$ is the vector of population {\it regression coefficients \/} of $x_1$ on $x_2$ and 
+$\hat \Sigma_{11}$ is the covariance matrix $E \epsilon \epsilon'$  of the errors $\epsilon = x_1 - \beta x_2 $ in the  regression of
+$x_1$ on $x_2$.   We can write this regression equation as
+$$ x_1 - \mu_1 - \beta (x_2 - \mu_2) + \epsilon $$
+where the least squares error $\epsilon$ is statistically independent of $x_2$, which implies the linear least squares orthogonality
+condition
+$$ E \epsilon (x_2 - \mu_2)' = 0 . $$  
+
+
+Leaving the pertinent mean and variance parameters implicit for convenience, using the above formulas, it can be verified that joint density
+$f(x) \equiv f(x_1, x_2)$ (to emphasize that the numerator on the right side is the joint density of the two vectors $x_1 $ and $x_2$)  satisfies
+$$ f(x_1, x_2 ) = f(x_1 | x_2)   f(x_2)  $$  
+which can be arranged to become 
+%which can be rearranged to take the form
+%$$ f(x_1 | x_2) = {\frac{f(x)}{f(x_2)}}  $$
+%or
+$$ f(x_1 | x_2) = {\frac{f(x_1, x_2)}{f(x_2)} } .$$
+
+
+
+\bye
+
+
+
+
+
+
+\bye

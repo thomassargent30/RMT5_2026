@@ -1,0 +1,175 @@
+\documentclass[12pt, oneside]{article}
+\usepackage{latexsym}
+\setlength{\oddsidemargin}{0in} \setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{0in} \setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.5in} \setlength{\parskip}{1ex}
+\setlength{\parindent}{0in}
+\begin{document}
+\pagestyle{myheadings} \markright{PhD Macroeconomics PHBS  \\ Qualifier answer November 2019}
+\begin{enumerate}
+\item \textbf{(50 points)}
+Consider the following model of a monopolist.  
+
+Let $S_t$ be sales at time $t$, $Q_t$ be the monopolist's production  at time $t$,
+ $I_t$ be inventories at the beginning of time $t$,  $\beta \in (0,1)$ be a discount factor, $c(Q_t) = c_1 Q_t + c_2 Q_t^2$ be a cost-of-production function, where $c_1>0, c_2>0$;
+  $d(I_t, S_t) = d_1 I_t + d_2 I_t^2  + d_3 (S_t - I_t)^2$ be a cost-of-holding inventories function, where $d_1 >0, d_2 >0 $ and $d_3 >0$;
+$p_t = a_0 - a_1 S_t + \eta_t $ be an inverse demand function for a firm's product, where $a_0>0, a_1 >0$ and $\eta_t$ is a demand shock at time  $t$;
+   $\pi_t = p_t S_t - c(Q_t) - d(I_t, S_t) $ be the firm's profits at time $t$;
+   $\sum_{t=0}^\infty \beta^t \pi_t $ be the present value of the firm's profits at time $0$;  $I_{t+1} = I_t + Q_t - S_t$ be the law of motion of inventories;
+ $z_{t+1} = A_{22} z_t + C_2 \epsilon_{t+1} $ be the law of motion for an exogenous state vector $z_t$ that contains time $t$ information useful for predicting the demand shock $\eta_t$ where
+ $\epsilon_{t+1}$ is an i.i.d.~random vector distributed as ${\cal N}(0,I)$;
+   $\eta_t = G z_t $ links the demand shock to the information set $z_t$;
+   the constant $1$ is the first component of $z_t$.
+
+   The firm wants  a production, sales, inventory-management plan $\{Q_t, S_t, I_{t+1}\}_{t=0}^\infty$ that maximizes $E_0 \sum_{t=0}^\infty \beta^t \pi_t $
+   subject to $z_0,  I_0 $ being given initial conditions.
+
+\begin{enumerate}
+\item \textbf{(20 points)} Please formulate the firm's  problem as a discounted dynamic programming problem.  Feel free to use  the word "let" somewhere in your answer.  Please clearly define the ``state'' in your formulation of the problem.
+
+Suppose that vector $z_t$ has $n+1$ elements and the first element is constant 1. Suppose shock $\epsilon_t$ has a dimension of $k$. Let $x_t$ denote the state variables and $u_t$ control variabels. $x_t \equiv \left [ \begin{array}{c} z_t \\ I_t \end{array} \right ]$. $u_t \equiv \left [ \begin{array}{c} S_t \\ Q_t \end{array} \right ]$.
+
+The monopolist's problem is represented as the following:
+\[ v(x_t) = \max_{S_t, Q_t, I_t} \{ \pi(x_t, u_t) + \beta E_t[v(x_{t+1})] \} \]
+\[ \mbox{subject to } \quad x_{t+1} = A x_t + B u_t + C \epsilon_{t+1} \]
+where $\pi(x_t, u_t) = x'_tRx_t + u'_tMu_t + 2 u'_tHx_t$.
+
+Matrix $R, M, H$ and $A, B, C$ are given below.
+\[ R =\left [ \begin{array}{lll} 0&  0_{n \times 1} &  -d_1/2 \\
+                                 0_{1 \times n} & 0_{n \times n} & 0_{1 \times n} \\
+                                 -d_1/2 &  0_{n \times 1} & -d_2-d_3 \end{array} \right ] \]
+
+\[ M =\left [ \begin{array}{ll}  -a_1 -d_3 & 0 \\ 0 & -c_2 \end{array} \right ] \quad
+H = \left [ \begin{array}{lll} (a_0+G(1))/2 & G(2:n+1)/2 &  d_3 \\
+                                 c_1/2 & 0_{n \times 1} & 0 \end{array} \right ] \]
+
+\[ A = \left [ \begin{array}{ll} A_{22} & 0_{n+1 \times 1} \\ 0_{1 \times n+1} & 1 \end{array} \right ] \quad
+B = \left [ \begin{array}{ll} 0_{n+1 \times 1} & 0_{n+1 \times 1} \\ -1 & 1 \end{array} \right ] \quad
+C = \left [ \begin{array}{l} C_2 \\ 0_{1 \times k} \end{array} \right ] \]
+
+\item \textbf{(10 points)} Please describe the form of the firm's optimal {\it decision rule\/}. Is it linear or nonlinear?
+
+Given that the objective is quadratic and law of motion is linear, the value function will be quadratic as well. That is $v(x) = x'Px + constant$. Matrix $P$ solves the Riccati equation 
+\[ P = R + \beta A'PA - (\beta A'PB+H') (M+\beta B'PB)^{-1} (\beta B'PA+H). \]
+
+The firm's decision rule is linear, denoted by $u_t = -F x_t$ and 
+\[ F= -(M+ \beta B'PB)^{-1}(\beta B'PA+H) \]
+
+\item \textbf{(5 points)} Please describe the law of motion of the state, as you have defined it, under the firm's optimal decision rule.
+
+Under the firm's optimal decision, the states follows the following rule
+\[ x_{t+1} = (A-BF) x_t + C \epsilon_{t+1} \]
+
+\item \textbf{(8 points)} Please state conditions on the solution of the firm's  problem that are sufficient to imply that  $x_t \equiv \left [ \begin{array}{c} z_t \\ I_t \end{array} \right ] $ converges  to a normally distributed random vector $x_\infty \sim {\cal N}(\mu, \Omega)$ as $t \rightarrow + \infty$.
+
+Let $\tilde{x} \equiv x(2:n+2)$, i.e. state other than constant 1. Let $\tilde{A}$ denote the matrix $A-BF$ after getting rid of the first row and first column. The sufficient condition for $\tilde{x}_t$ to be stationary is that all of the eigenvalues of matrix $\tilde{A}$ are strictly less than 1 in modulus. (I think to guarantee $x_t$ converges from any initial value of $x_0$, we need to rule out any cyclical feature in $A_{22}$ and $C_2$ matrices. )
+
+\item \textbf{(7 points)} Please give formulas for $\mu$ and $\Omega $ in terms of the firm's objective and its constraints.
+
+From stationarity and distribution of $\epsilon$ we have 
+\[ \mu = (A-BF) \mu \]
+\[ \Omega = (A-BF)\Omega(A-BF)' + CC' \]
+\end{enumerate}
+
+\item \textbf{(50 points)}  An economy consists of two consumers, named $i=1,2$.
+The economy exists in discrete time for periods $t =0, 1, 2, \ldots$.
+There is one good that is not storable and arrives in the form of an endowment stream owned by each consumer.
+The endowments to consumers $i=1,2$ are $ y_t^1 = s_t;  y_t^2  = 1,$
+where $s_t$ is a random variable governed by a two-state Markov
+chain with values $s_t =  0$ or  $s_t  =  1 $.
+The Markov chain  has time invariant transition probabilities
+denoted by $\pi(s_{t+1} = s'| s_t = s) = \pi(s'|s)$, and the
+probability distribution over the initial  state is $\pi_0(s)$.
+The {\it aggregate endowment} at $t$ is $Y(s_t) = y_t^1 + y_t^2$.
+
+Let $c^i$ denote the stochastic process of consumption for agent $i$. Consumer $i$ orders consumption streams according to
+$$ U(c^i)= \sum_{t=0}^\infty \sum_{s^t}  \beta^t \ln [c_t^i(s^t)]
+ \pi_t (s^t),  $$
+where $\pi_t(s^t)$ is the probability of the history $s^t = (s_t, s_{t-1},  \ldots , s_1,  s_0)$.
+
+\begin{enumerate}
+\item \textbf{(5 points)} Give a formula for $\pi_t(s^t)$ in terms of $\pi(s'|s)$ and $\pi_0(s)$.
+
+The likelihood of event history $s^t$ conditioned on observing $s_0$ is
+\[ \pi_t(s^t|s_0) = \pi(s_t|s_{t-1})\pi(s_{t-1}|s_{t-2})\cdots\pi(s_1|s_0) \]
+
+The likelihood of event history without observing $s_0$ is
+\[ \pi_t(s^t) = \pi(s_t|s_{t-1})\pi(s_{t-1}|s_{t-2})\cdots\pi(s_1|s_0)\pi_0(s_0) \]
+
+\item \textbf{(15 points)} Let $\theta \in (0,1)$ be a Pareto weight on consumer $1$.  Consider the planning problem
+$$ \max_{c^1, c^2} \left\{ \theta U(c^1) + (1-\theta) U(c^2)
+  \right\}  $$
+where  maximization is subject to
+$$ c_t^1(s^t) + c_t^2(s^t) \leq Y(s_t), \forall t, \forall s^t . $$
+Solve the Pareto problem, taking $\theta$ as a parameter.
+
+Let $\mu_t(s^t)$ be the Lagrangian multiplier on planner's resource constraint at time $t$ and event history $s^t$. The planner solves the following problem:
+\[ \mathcal{L} = \sum_{t=0}^\infty \sum_{s^t} \beta^t \pi_t(s^t) \{\theta \ln[c_t^1(s^t)] + (1-\theta) \ln[c_t^2(s^t)]\} + \mu_t(s^t) [Y(s_t) - c_t^1(s^t) - c_t^2(s_t)]  \]
+
+The first order necessary conditions are
+\[ \beta^t \pi_t(s^t) \theta \cdot \frac{1}{c_t^1(s^t)} = \mu_t(s^t) \]
+\[ \beta^t \pi_t(s^t) (1-\theta) \cdot \frac{1}{c_t^2(s^t)} = \mu_t(s^t) \]
+
+Take the ratio of the above, we have
+\[ \frac{\theta \cdot \frac{1}{c_t^1(s^t)} }{ (1-\theta) \cdot \frac{1}{c_t^2(s^t)} } = 1 \]
+\[ \frac{c_t^1(s^t)}{c_t^2(s^t)} = \frac{\theta}{1-\theta} \]
+
+Substitute into the resource constraint. The allocation in the social planner's problem is the following:
+\[ c_t^1(s^t) = \theta Y(s_t) \quad c_t^2(s^t) = (1-\theta) Y(s_t) \quad \mbox{for all $t$ and $s^t$} \]
+
+The Lagrangian multiplier in units of time $0$ utility is given below:
+\[ \mu_t(s^t) = \beta^t \pi_t(s^t) \frac{\theta}{\theta Y(s_t)} =\beta^t \pi_t(s^t) \frac{1}{Y(s_t)} \]
+
+\item \textbf{(10 points)} Define a {\it competitive equilibrium} with
+history-dependent Arrow-Debreu  securities traded once and for all
+at time $0$.  Be careful to define all of the objects that compose
+a competitive equilibrium.
+
+A competitive equilibrium with a complete set of Arrow-Debreu securities is defined after observing the initial state $s_0$. It consists of a set of prices $\{q^0_t(s^t|s_0)\}_{t=0}^\infty, q^0_0=1$ and an allocation $\{c^1_t(s^t), c^2_t(s^t)\}_{t=0}^\infty$ such that
+    \begin{itemize}
+    \item given prices $\{q^0_t(s^t|s_0)\}_{t=0}^\infty$, for each $i \in \{1,2\}$, $\{c^i_t(s^t)\}_{t=0}^\infty$ solves the following optimization problem;
+    \[ \max_{c^i_t(s^t)} \sum_{t=0}^\infty \sum_{s^t} \beta^t \ln [c^i_t(s^t)] \pi_t(s^t|s_0) \]
+    \[ \mbox{s.t.} \quad \sum_{t=0}^\infty \sum_{s^t} q^0_t(s^t|s_0) c^i_t(s^t) = \sum_{t=0}^\infty \sum_{s^t} q^0_t(s^t|s_0) y^i(s_t) \]
+
+    \item and prices clear all markets, i.e., for all $s^t$ and $t$
+    \[ c_t^1(s^t) + c_t^2(s^t) = y^1(s_t) + y^2(s_t) = Y(s_t). \]
+    \end{itemize}
+
+\item \textbf{(15 points)} Compute the competitive equilibrium price system (i.e., find the prices of all  Arrow-Debreu
+securities).
+
+Let $\mu^i(s_0)$ be the Lagrangian multiplier on consumer $i$'s budget constraint. The first order conditions of consumer $i$'s problem are the following:
+\[ \beta^t \pi_t(s^t|s_0) \frac{1}{c^i_t(s^t)} = \mu^i(s_0) q^0_t(s^t|s_0)  \quad \mbox{for all $t$ and $s^t$} \]
+
+The ratio of first order conditions for the same consumer between time $t$ history $s^t$ and time 0 is
+\[ \beta^t \pi_t(s^t|s_0) \frac{\frac{1}{c^i_t(s^t)}}{\frac{1}{c^i_0}} = q^0_t(s^t|s_0) \]
+
+The ratio of two consumers' first order conditions delivers the fixed proportionality between their consumption allocations over all history and time.
+\[ \frac{\frac{1}{c^1_t(s^t)}}{\frac{1}{c^2_t(s^t)}} = \frac{\mu^1(s_0)}{\mu^2(s_0)} \]
+\[ \frac{c^1_t(s^t)}{c^2_t(s^t)} = \frac{1/\mu^1(s_0)}{1/\mu^2(s_0)} \quad \mbox{for all $t$ and $s^t$} \]
+
+Substitute the above into the market clearing condition. The allocation of consumption are the following:
+\[ c^1_t(s^t) = \frac{1/\mu^1(s_0)}{1/\mu^1(s_0) + 1/\mu^2(s_0)} Y_t(s_t) \equiv \kappa(s_0) Y_t(s_t)  \]
+\[ c^2_t(s^t) = \frac{1/\mu^2(s_0)}{1/\mu^1(s_0) + 1/\mu^2(s_0)} Y_t(s_t) \equiv (1-\kappa(s_0)) Y_t(s_t) \]
+
+The equilibrium prices are the following:
+\[ q^0_t(s^t|s_0) = \beta^t \pi_t(s^t|s_0) \frac{\frac{1}{\kappa(s_0) Y_t(s_t)}}{\frac{1}{\kappa(s_0) Y_0}} =\beta^t \pi_t(s^t|s_0) \frac{\frac{1}{Y_t(s_t)}}{\frac{1}{Y_0(s_0)}} =  \beta^t \pi_t(s^t|s_0) \frac{Y_0(s_0)}{Y_t(s_t)} \]
+
+If $s_0=0$, $q^0_t(s^t|s_0=0) = \beta^t \pi_t(s^t|s_0=0) \frac{1}{1+s_t}$. 
+
+If $s_0=1$, $q^0_t(s^t|s_0=1) = \beta^t \pi_t(s^t|s_0=1) \frac{2}{1+s_t}$. 
+
+\item \textbf{(5 points)} Tell the relationship between solutions of the Pareto problem  (indexed by $\theta$) and the competitive
+equilibrium allocation.
+
+Substitute the allocation and price into consumer 1's time 0 budget constraint.
+\[  \sum_{t=0}^\infty \sum_{s^t} \beta^t \pi_t(s^t|s_0) \frac{1+s_0}{1+s_t} \kappa(s_0) (1+s_t) =\frac{\kappa(s_0)(1+s_0)}{1-\beta} =\sum_{t=0}^\infty \sum_{s^t} \beta^t \pi_t(s^t|s_0) \frac{1+s_0}{1+s_t} \]
+
+\[ \kappa(s_0) = (1-\beta)\sum_{t=0}^\infty \sum_{s^t} \beta^t \pi_t(s^t|s_0) \frac{1}{1+s_t} \]
+
+In the social planner's problem, planner assigns Pareto weights before observing the initial state. There is insurance across realization of the initial state. The competitive equilibrium is defined after observing the initial state; risk sharing starts afterwards. As a result $\kappa(s_0)$ varies with initial state and not the same as $\theta$, except when $\pi_0$ is degenerate, i.e. signs 100\% probability to one state only. 
+
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

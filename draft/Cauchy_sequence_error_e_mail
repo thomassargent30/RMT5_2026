@@ -1,0 +1,29 @@
+Dear Lars and Thomas,
+
+
+On the p. 1259 of the 3rd edition of "Recursive Macroeconomic Theory" there is an example of a sequence of functions
+ in {C[0,1],d_2}, namely {t^n}, that is Cauchy, but not convergent.
+ You demonstrate that {t^n} is a Cauchy sequence, and show that it converges pointwise to a discontinuous function. 
+ I may be wrong, but the pointwise convergence does not matter much for us because {t^n} converges to 0 if we use the definition of a
+ limit with the metric d_2. This is because d_2(t^n,0)=\sqrt{1/(2n+1)} goes to 0 with n. 
+ Clearly, 0 belongs to {C[0,1],d_2}.
+
+
+
+Sincerely,
+
+Aliaksandr Zaretski
+
+Emory University
+
+
+Suggestion from Balint:
+
+I've looked at the example. I don't think it's an error, but you might want to add a sentence to clarify something.  
+
+The confusion might arise from the enormous equivalence classes that the d2 metric generates in the space of Riemann integrable 
+functions (superset of C[0,1]). 
+If f and g are Riemann integrable on [0, 1] and f=g almost everywhere, then d2(f, g)=0.    
+
+He is right that with the d2 metric the sequence {t^n} converges to f=0 (which is in C[0,1]), but in a d2 sense this
+ limit is equivalent with other functions that are not in C[0,1]. The message still holds: the d2 metric does not make C[0,1] complete.  

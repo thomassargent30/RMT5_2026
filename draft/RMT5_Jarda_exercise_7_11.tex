@@ -1,0 +1,472 @@
+
+\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{makeidx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Monday, September 29, 2008 22:43:53}
+%TCIDATA{LastRevised=Sunday, September 15, 2024 14:54:10}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\newenvironment{question}[1][Question]{}{}
+\newenvironment{answer}[1][Answer]{}{}
+\newenvironment{draftnote}[1][Draft note]{}{}
+\input{tcilatex}
+\begin{document}
+
+
+\begin{draftnote}
+\pprintfilename
+\end{draftnote}
+
+\begin{exercise}
+\cite{ljungqvist_sargent:2020} Exercise 7.11. \textbf{Pissarides' analysis
+of taxation and variable search intensity}. At the beginning of each period,
+an unemployed worker chooses search effort $e$, and receives a wage offer
+with probability $\pi \left( e\right) $ and no offer with probability $1-\pi
+\left( e\right) $. The search effort---a measure of search
+intensity---incurs a period monetary cost $e$. The wage offer $w$ is drawn
+from distribution $F$, and the worker chooses to accept or reject it. If the
+offer is rejected or no offer is received, the worker receives unemployment
+benefit $z>0$, and starts as an searching unemployed worker at the beginning
+of the next period. If the wage is accepted, the worker receives wage $w$
+minus income tax $T\left( w\right) $, and continues as an employed worker
+without searching. At the beginning of each period, a worker who was
+employed in the previous period can be fired with probability $\alpha $, $%
+0<\alpha <1$, in which case the worker receives unemployment benefits $z$ in
+the given period and becomes a searching unemployed worker at the beginning
+of the next period.
+
+The worker chooses a strategy, that is, whether to accept an offer or not
+and how much effort to put into search when unemployed, to maximize%
+\begin{equation*}
+E\sum_{t=0}^{\infty }\beta ^{t}y_{t},\qquad 0<\beta <1
+\end{equation*}%
+where $y_{t}$ is period income (either after-tax wage or unemployment
+benefit) net of search costs. We assume that $w-T\left( w\right) $ is
+increasing in $w$, $\pi \left( 0\right) =0$---that is, the worker gets no
+offers without search effort---and that $\pi ^{\prime }\left( e\right) >0$, $%
+\pi ^{\prime \prime }\left( e\right) >0$.
+
+\begin{enumerate}
+\item[a)] Analyze the worker's problem. Establish that the optimal strategy
+is to choose a reservation wage. Display the condition that describes the
+optimal choice of $e$, and show that the reservation wage is independent of $%
+e$.
+
+\item[b)] Assume that $T\left( w\right) =\tau \left( w-a\right) $ where $%
+0<\tau <1$ and $a>0$, i.e., the tax schedule consists of a flat tax rate $%
+\tau $ and a lump-sum rebate $\tau a$. Show that an increase in $a$
+decreases the reservation wage and increases the level of effort, increasing
+the probability of accepting employment.
+
+\item[c)] Show under what conditions a change in $\tau $ has the opposite
+effect.
+\end{enumerate}
+
+\begin{solution}
+For \textbf{question a)}, the value of a searching worker, before the cost
+of search has been paid and offer revealed, is%
+\begin{equation}
+Q=\max_{e}-e+\pi \left( e\right) \int_{0}^{B}V\left( w^{\prime }\right)
+dF\left( w^{\prime }\right) +\left( 1-\pi \left( e\right) \right) \left(
+z+\beta Q\right)   \label{eq:Pissarides_Q}
+\end{equation}%
+and the value of an unemployed worker with offer $w$ at hand, after the cost
+has been paid, is%
+\begin{equation}
+V\left( w\right) =\max_{\left\{ \text{accept, reject}\right\} }\left\{
+V^{a}\left( w\right) ,z+\beta Q\right\} .  \label{eq:Pissarides_V}
+\end{equation}%
+The value of an accepted offer is%
+\begin{equation*}
+V^{a}\left( w\right) =w-T\left( w\right) +\beta \left[ \alpha \left( z+\beta
+Q\right) +\left( 1-\alpha \right) V^{a}\left( w\right) \right] \text{.}
+\end{equation*}%
+This is identical to the value of an employed worker with wage $w$ who has
+not been fired at the beginning of the period. Hence%
+\begin{equation*}
+V^{a}\left( w\right) =\frac{1}{1-\beta \left( 1-\alpha \right) }\left[
+w-T\left( w\right) +\beta \alpha \left( z+\beta Q\right) \right] 
+\end{equation*}%
+which is strictly increasing in $w$ because $w-T\left( w\right) $ is
+strictly increasing in $w$. Here we assumed that a fired worker stays
+unemployed for one period without searching and then rejoins search in the
+subsequent period. Equation\ (\ref{eq:Pissarides_V}) for $V\left( w\right) $
+implies that the optimal policy is a reservation wage---the value of
+accepting is strictly increasing in $w$, while the value of rejecting is
+independent of $w$.\ Equation (\ref{eq:Pissarides_V}) implies that the
+reservation wage $\bar{w}$ is given implicitly by%
+\begin{equation*}
+\frac{1}{1-\beta \left( 1-\alpha \right) }\left[ \bar{w}-T\left( \bar{w}%
+\right) +\beta \alpha \left( z+\beta Q\right) \right] =1+z+\beta Q,
+\end{equation*}%
+and hence%
+\begin{equation}
+\frac{\bar{w}-T\left( \bar{w}\right) }{1-\beta }=z+\beta Q=V^{a}\left( \bar{w%
+}\right) =V\left( \bar{w}\right) .  \label{eq:Pissarides_wbar}
+\end{equation}%
+Thus $\bar{w}$ is independent of the currrent period choice $e$ (even though
+the choice of future $e$ implicitly shows up in $Q$). Current-period choice
+of $e$ is irrelevant because that effort decision is already sunk when
+making the acceptance choice.
+
+The optimal choice of $e$ is given by the first-order condition to (\ref%
+{eq:Pissarides_Q}):%
+\begin{equation*}
+1=\pi ^{\prime }\left( e^{\ast }\right) \left[ \int_{0}^{B}V\left( w^{\prime
+}\right) dF\left( w^{\prime }\right) -\left( z+\beta Q\right) \right] 
+\end{equation*}%
+Further notice that%
+\begin{eqnarray}
+\int_{0}^{B}V\left( w^{\prime }\right) dF\left( w^{\prime }\right) 
+&=&\int_{0}^{\bar{w}}\frac{\bar{w}-T\left( \bar{w}\right) }{1-\beta }%
+dF\left( w^{\prime }\right) +\int_{\bar{w}}^{B}V^{a}\left( w^{\prime
+}\right) dF\left( w^{\prime }\right)   \label{eq:Pissarides_EV} \\
+&=&\frac{\bar{w}-T\left( \bar{w}\right) }{1-\beta }+\frac{1}{1-\beta \left(
+1-\alpha \right) }\int_{\bar{w}}^{B}\left[ w^{\prime }-T\left( w^{\prime
+}\right) -\left( \bar{w}-T\left( \bar{w}\right) \right) \right] dF\left(
+w^{\prime }\right) ,  \notag
+\end{eqnarray}%
+and hence the optimality condition for the choice of effort reads%
+\begin{equation}
+1=\frac{\pi ^{\prime }\left( e^{\ast }\right) }{1-\beta \left( 1-\alpha
+\right) }\int_{\bar{w}}^{B}\left[ w^{\prime }-T\left( w^{\prime }\right)
+-\left( \bar{w}-T\left( \bar{w}\right) \right) \right] dF\left( w^{\prime
+}\right)   \label{eq:Pissarides_opt1}
+\end{equation}%
+which pins down a relationship between optimal effort and reservation wage.
+In particular, a higher reservation wage decreases the integral, so $\pi
+^{\prime }\left( e^{\ast }\right) $ has to increase, so $e^{\ast }$ has to
+decrease (since $\pi ^{\prime \prime }\left( e\right) <0$). More formally,
+using the implicit function theorem on (\ref{eq:Pissarides_opt1}) we obtain%
+\begin{eqnarray}
+\frac{de^{\ast }}{d\bar{w}} &=&-\frac{\partial f/\partial \bar{w}}{\partial
+f/\partial e^{\ast }}=\frac{\pi ^{\prime }\left( e^{\ast }\right) }{\pi
+^{\prime \prime }\left( e^{\ast }\right) }\frac{\left( 1-T^{\prime }\left( 
+\bar{w}\right) \right) \left( 1-F\left( \bar{w}\right) \right) }{\int_{\bar{w%
+}}^{B}\left[ w^{\prime }-T\left( w^{\prime }\right) -\left( \bar{w}-T\left( 
+\bar{w}\right) \right) \right] dF\left( w^{\prime }\right) }  \notag \\
+&=&\frac{\left( \pi ^{\prime }\left( e^{\ast }\right) \right) ^{2}}{\pi
+^{\prime \prime }\left( e^{\ast }\right) \left( 1-\beta \left( 1-\alpha
+\right) \right) }\left( 1-T^{\prime }\left( \bar{w}\right) \right) \left(
+1-F\left( \bar{w}\right) \right) <0.  \label{eq:Pissarides_dedw}
+\end{eqnarray}
+
+Finally, from (\ref{eq:Pissarides_Q}), given optimal $e^{\ast }$, we can
+express $Q$ as%
+\begin{equation*}
+Q=-e^{\ast }+\pi \left( e^{\ast }\right) \int_{0}^{B}V\left( w^{\prime
+}\right) dF\left( w^{\prime }\right) +\left( 1-\pi \left( e^{\ast }\right)
+\right) \left( z+\beta Q\right) 
+\end{equation*}%
+and hence%
+\begin{equation*}
+Q=\left[ 1-\beta \left( 1-\pi \left( e^{\ast }\right) \right) \right] ^{-1}%
+\left[ -e^{\ast }+\pi \left( e^{\ast }\right) \int_{0}^{B}V\left( w^{\prime
+}\right) dF\left( w^{\prime }\right) +\left( 1-\pi \left( e^{\ast }\right)
+\right) z\right] 
+\end{equation*}%
+where we can substitute out $\int_{0}^{B}V\left( w^{\prime }\right) dF\left(
+w^{\prime }\right) $ using (\ref{eq:Pissarides_EV}). Using this expression
+for $Q$ in the indifference condition (\ref{eq:Pissarides_wbar}) yields%
+\begin{eqnarray*}
+\frac{\bar{w}-T\left( \bar{w}\right) }{1-\beta } &=&z+\beta Q \\
+&=&\frac{z-\beta e^{\ast }}{1-\beta \left( 1-\pi \left( e^{\ast }\right)
+\right) }+\frac{\beta \pi \left( e^{\ast }\right) }{1-\beta \left( 1-\pi
+\left( e^{\ast }\right) \right) }\int_{0}^{B}V\left( w^{\prime }\right)
+dF\left( w^{\prime }\right) 
+\end{eqnarray*}%
+and, substituting out $\int_{0}^{B}V\left( w^{\prime }\right) dF\left(
+w^{\prime }\right) $, we obtain,%
+\begin{equation}
+\bar{w}-T\left( \bar{w}\right) -\left( z-\beta e^{\ast }\right) =\frac{\beta
+\pi \left( e^{\ast }\right) }{1-\beta \left( 1-\alpha \right) }\int_{\bar{w}%
+}^{B}\left[ w^{\prime }-T\left( w^{\prime }\right) -\left( \bar{w}-T\left( 
+\bar{w}\right) \right) \right] dF\left( w^{\prime }\right) 
+\label{eq:Pissarides_opt2}
+\end{equation}%
+To summarize, equations (\ref{eq:Pissarides_opt1}) and (\ref%
+{eq:Pissarides_opt2}) yield two optimality conditions for unknowns $e^{\ast }
+$ and $\bar{w}$.
+
+Equation (\ref{eq:Pissarides_opt1}) compares the marginal cost of extra
+effort on the left-hand side (which is equal to one, see equation (\ref%
+{eq:Pissarides_Q})) with the marginal benefit on the right-hand side, which
+is the present value of wage flows from future offers above reservation
+wage, times marginal increase in probability $\pi ^{\prime }\left( e^{\ast
+}\right) $ that these offers will arrive with extra unit of more effort.
+
+Equation (\ref{eq:Pissarides_opt2}) is the familar optimality condition for
+the choice of reservation wage. The left-hand side is the cost of searching
+one more time when the wage offer at hand is equal to $\bar{w}$, which
+consists of the net wages $\bar{w}-T\left( \bar{w}\right) $ above the flow
+value of unemployment benefits net of the cost of search next period again, $%
+z-\beta e^{\ast }$. The right-hand side is the value of search one more
+time, which again consists of the net value of wage flows from offers above
+the reservation wage. \ Finally notice that we can substitute out the
+integral on the right-hand side of (\ref{eq:Pissarides_opt2}) using (\ref%
+{eq:Pissarides_opt1}) to obtain%
+\begin{equation*}
+\bar{w}-T\left( \bar{w}\right) -\left( z-\beta e^{\ast }\left( \bar{w}%
+\right) \right) =\frac{\beta \pi \left( e^{\ast }\left( \bar{w}\right)
+\right) }{\pi ^{\prime }\left( e^{\ast }\left( \bar{w}\right) \right) }
+\end{equation*}%
+where we now formally write that the optimal choice of $e^{\ast }$ is a
+function of $\bar{w}$, per (\ref{eq:Pissarides_opt1}). To deduce the
+properties of the reservation wage, we can study the intersect(s) of the
+functions%
+\begin{eqnarray*}
+h_{L}\left( w\right)  &=&w-T\left( w\right) -\left( z-\beta e^{\ast }\left(
+w\right) \right)  \\
+h_{R}\left( w\right)  &=&\frac{\beta \pi \left( e^{\ast }\left( w\right)
+\right) }{\pi ^{\prime }\left( e^{\ast }\left( w\right) \right) }.
+\end{eqnarray*}%
+Differentiating both functions with respect to $w$, and using the expression
+(\ref{eq:Pissarides_dedw}), we get%
+\begin{eqnarray*}
+\frac{d}{dw}h_{L}\left( w\right)  &=&\left( 1-T^{\prime }\left( w\right)
+\right) \left[ 1+\beta \frac{\left( \pi ^{\prime }\left( e^{\ast }\left(
+w\right) \right) \right) ^{2}}{\pi ^{\prime \prime }\left( e^{\ast }\left(
+w\right) \right) }\frac{1-F\left( w\right) }{1-\beta \left( 1-\alpha \right) 
+}\right]  \\
+\frac{d}{dw}h_{R}\left( w\right)  &=&\left( 1-T^{\prime }\left( w\right)
+\right) \left[ \beta \frac{\left( \pi ^{\prime }\left( e^{\ast }\left(
+w\right) \right) \right) ^{2}}{\pi ^{\prime \prime }\left( e^{\ast }\left(
+w\right) \right) }\frac{1-F\left( w\right) }{1-\beta \left( 1-\alpha \right) 
+}-\beta \left( e^{\ast }\left( w\right) \right) \frac{1-F\left( w\right) }{%
+1-\beta \left( 1-\alpha \right) }\right] 
+\end{eqnarray*}%
+where \thinspace $T^{\prime }\left( w\right) $ is the derivative of $T\left(
+w\right) $.\ Comparing the two derivatives, we see that $\frac{d}{dw}%
+h_{R}\left( w\right) <0$, and so the right-hand side curve is always
+decreasing. On the other hand $\frac{d}{dw}h_{L}\left( w\right) $ could be
+positive or negative but it is certainly true that%
+\begin{equation*}
+\frac{d}{dw}h_{L}\left( w\right) >\frac{d}{dw}h_{R}\left( w\right) .
+\end{equation*}%
+Therefore, $h_{L}\left( w\right) $ may not be increasing, but certainly
+intersects $h_{R}\left( w\right) $ at a unique point $\bar{w}$ from below.
+
+For \textbf{question b)}, we now have%
+\begin{equation*}
+w-T\left( w\right) =w-\tau \left( w-a\right) =\left( 1-\tau \right) w+\tau
+a,\qquad a>0
+\end{equation*}%
+and hence%
+\begin{equation*}
+1-T^{\prime }\left( w\right) =1-\tau .
+\end{equation*}%
+Observing the curves $h_{L}\left( w\right) $ and $h_{R}\left( w\right) $, an
+increase in $a$ shifts $h_{L}\left( w\right) $ upward and leaves $%
+h_{R}\left( w\right) $ unchanged. Since $h_{R}\left( w\right) $ is
+decreasing and $h_{L}\left( w\right) $ intersects it from below, an upward
+shift in $h_{L}\left( w\right) $ shifts the intersect $\bar{w}$ to the left
+and the reservation wage decreases. Finally notice that the parameter $a$
+does not explicitly appear in equation (\ref{eq:Pissarides_opt1}). This
+optimality condition implies a negative relationship between $\bar{w}$ and $%
+e^{\ast }$ (in case that nothing else in that equation changes), and so
+optimal effort increases.
+
+Given that offers now arrive more frequently ($\pi \left( e^{\ast }\right) $
+increases), and each arrived offer is more likely to be accepted\ ($\bar{w}$
+decreases), the worker is unconditionally more likely to accept employment.
+
+Observe that $a$ represents an untaxed deduction from wage income (in fact,
+an employed worker receives a tax rebate on income $a$), so increasing this
+deduction increases incentives to search for and accept employment.
+
+For \textbf{question c)}, assume for simplicity that $a=0$, and denote $\tau
+=1-t$.\ The two optimality conditions now read%
+\begin{eqnarray*}
+1 &=&\frac{\pi ^{\prime }\left( e^{\ast }\right) \left( 1-t\right) }{1-\beta
+\left( 1-\alpha \right) }\int_{\bar{w}}^{B}\left( w^{\prime }-\bar{w}\right)
+dF\left( w^{\prime }\right)  \\
+\left( 1-t\right) \bar{w}+ta-\left( z-\beta e^{\ast }\right)  &=&\frac{\beta
+\pi \left( e^{\ast }\right) }{\pi ^{\prime }\left( e^{\ast }\right) }.
+\end{eqnarray*}%
+From the second equation, we express%
+\begin{equation*}
+\bar{w}\left( e^{\ast },t\right) =\frac{1}{1-t}\left[ z-\beta e^{\ast }+%
+\frac{\beta \pi \left( e^{\ast }\right) }{\pi ^{\prime }\left( e^{\ast
+}\right) }-ta\right] 
+\end{equation*}%
+and treat the first equation with $\bar{w}$ as an implicit function of $%
+\left( e^{\ast },t\right) $%
+\begin{equation}
+1-\beta \left( 1-\alpha \right) =\pi ^{\prime }\left( e^{\ast }\right)
+\left( 1-t\right) \int_{\bar{w}\left( e^{\ast },\tau \right) }^{B}\left(
+w^{\prime }-\bar{w}\left( e^{\ast },t\right) \right) dF\left( w^{\prime
+}\right) \doteq f\left( e^{\ast },t\right)   \label{eq:Pissarides_IFT}
+\end{equation}%
+We have%
+\begin{eqnarray*}
+\frac{\partial \bar{w}\left( e^{\ast },t\right) }{\partial e^{\ast }} &=&-%
+\frac{\beta }{1-t}\frac{\pi \left( e^{\ast }\right) \pi ^{\prime \prime
+}\left( e^{\ast }\right) }{\left( \pi ^{\prime }\left( e^{\ast }\right)
+\right) ^{2}} \\
+\frac{\partial \bar{w}\left( e^{\ast },t\right) }{\partial t} &=&\frac{1}{%
+\left( 1-t\right) ^{2}}\left[ z-\beta e^{\ast }+\frac{\beta \pi \left(
+e^{\ast }\right) }{\pi ^{\prime }\left( e^{\ast }\right) }-a\right]  \\
+\frac{\partial }{\partial \bar{w}}\int_{\bar{w}}^{B}\left( w^{\prime }-\bar{w%
+}\right) dF\left( w^{\prime }\right)  &=&-\left( 1-F\left( \bar{w}\right)
+\right) 
+\end{eqnarray*}%
+and we can apply the implicit function theorem to (\ref{eq:Pissarides_IFT})
+to obtain%
+\begin{equation*}
+\frac{de^{\ast }}{dt}=-\frac{\partial f/\partial t}{\partial f/\partial
+e^{\ast }}
+\end{equation*}%
+where%
+\begin{eqnarray*}
+\frac{\partial f}{\partial t} &=&-\pi ^{\prime }\left( e^{\ast }\right)
+\int_{\bar{w}\left( e^{\ast },\tau \right) }^{B}\left( w^{\prime }-\bar{w}%
+\left( e^{\ast },t\right) \right) dF\left( w^{\prime }\right)  \\
+&&-\pi ^{\prime }\left( e^{\ast }\right) \left( 1-t\right) \left( 1-F\left( 
+\bar{w}\right) \right) \frac{1}{\left( 1-t\right) ^{2}}\left[ z-\beta
+e^{\ast }+\frac{\beta \pi \left( e^{\ast }\right) }{\pi ^{\prime }\left(
+e^{\ast }\right) }-a\right]  \\
+\frac{\partial f}{\partial e^{\ast }} &=&\pi ^{\prime \prime }\left( e^{\ast
+}\right) \left( 1-t\right) \int_{\bar{w}\left( e^{\ast },\tau \right)
+}^{B}\left( w^{\prime }-\bar{w}\left( e^{\ast },t\right) \right) dF\left(
+w^{\prime }\right)  \\
+&&+\pi ^{\prime }\left( e^{\ast }\right) \left( 1-t\right) \left( 1-F\left( 
+\bar{w}\right) \right) \frac{\beta }{1-t}\frac{\pi \left( e^{\ast }\right)
+\pi ^{\prime \prime }\left( e^{\ast }\right) }{\left( \pi ^{\prime }\left(
+e^{\ast }\right) \right) ^{2}}
+\end{eqnarray*}%
+Clearly, $\partial f/\partial e^{\ast }<0$, and a sufficient condition for $%
+\partial f/\partial t<0$ is%
+\begin{equation*}
+z-\beta e^{\ast }+\frac{\beta \pi \left( e^{\ast }\right) }{\pi ^{\prime
+}\left( e^{\ast }\right) }-a>0
+\end{equation*}%
+which is plausible, especially for small $a$. In that case, we indeed obtain
+that%
+\begin{equation*}
+\frac{de^{\ast }}{dt}<0
+\end{equation*}%
+and an increase in the tax rate reduces effort. Consequently%
+\begin{eqnarray*}
+\frac{dw\left( e^{\ast },t\right) }{dt} &=&\frac{\partial \bar{w}\left(
+e^{\ast },t\right) }{\partial e^{\ast }}\frac{de^{\ast }}{dt}+\frac{\partial 
+\bar{w}\left( e^{\ast },t\right) }{\partial t} \\
+&=&-\frac{\beta }{1-t}\frac{\pi \left( e^{\ast }\right) \pi ^{\prime \prime
+}\left( e^{\ast }\right) }{\left( \pi ^{\prime }\left( e^{\ast }\right)
+\right) ^{2}}\frac{de^{\ast }}{dt}+\frac{1}{\left( 1-t\right) ^{2}}\left[
+z-\beta e^{\ast }+\frac{\beta \pi \left( e^{\ast }\right) }{\pi ^{\prime
+}\left( e^{\ast }\right) }-a\right] .
+\end{eqnarray*}%
+Substituting in $de^{\ast }/dt$ from the above calculations and simplyfing,
+we obtain%
+\begin{equation*}
+\frac{dw\left( e^{\ast },t\right) }{dt}=\frac{1}{1-t}\frac{\left[ z-\beta
+e^{\ast }-a\right] \int_{\bar{w}\left( e^{\ast },\tau \right) }^{B}\left(
+w^{\prime }-\bar{w}\left( e^{\ast },t\right) \right) dF\left( w^{\prime
+}\right) }{\left( 1-t\right) \int_{\bar{w}\left( e^{\ast },\tau \right)
+}^{B}\left( w^{\prime }-\bar{w}\left( e^{\ast },t\right) \right) dF\left(
+w^{\prime }\right) +\left( 1-F\left( \bar{w}\right) \right) \frac{\beta \pi
+\left( e^{\ast }\right) }{\pi ^{\prime }\left( e^{\ast }\right) }}
+\end{equation*}%
+which will be positive if and only if%
+\begin{equation*}
+z-\beta e^{\ast }-a>0\text{.}
+\end{equation*}%
+Notice that if this condition is satisfied, then also the sufficient
+condition for $de^{\ast }/dt<0$ will be satisfied.
+
+Intuitively, an increase in the tax rate will decrease search effort and
+increase reservation wages if $a$ is not too high. When $a$ is high, then an
+increase in the tax rate $\tau $ substantially increases the rebate $\tau a$%
+, and effectively raises post-tax wage income, so that the force operates in
+the opposite direction, making employment more attractive.
+\end{solution}
+\end{exercise}
+
+\begin{draftnote}
+\textbf{Calculations for the above problem}: We need to substitute $de^{\ast
+}/dt$:%
+\begin{eqnarray*}
+\frac{dw\left( e^{\ast },t\right) }{dt} &=&\frac{\beta }{1-t}\frac{\pi
+\left( e^{\ast }\right) \pi ^{\prime \prime }\left( e^{\ast }\right) }{%
+\left( \pi ^{\prime }\left( e^{\ast }\right) \right) ^{2}}\frac{-\pi
+^{\prime }\left( e^{\ast }\right) \int_{\bar{w}\left( e^{\ast },\tau \right)
+}^{B}\left( w^{\prime }-\bar{w}\left( e^{\ast },t\right) \right) dF\left(
+w^{\prime }\right) -\pi ^{\prime }\left( e^{\ast }\right) \left( 1-t\right)
+\left( 1-F\left( \bar{w}\right) \right) \frac{1}{\left( 1-t\right) ^{2}}%
+\left[ z-\beta e^{\ast }+\frac{\beta \pi \left( e^{\ast }\right) }{\pi
+^{\prime }\left( e^{\ast }\right) }-a\right] }{\pi ^{\prime \prime }\left(
+e^{\ast }\right) \left( 1-t\right) \int_{\bar{w}\left( e^{\ast },\tau
+\right) }^{B}\left( w^{\prime }-\bar{w}\left( e^{\ast },t\right) \right)
+dF\left( w^{\prime }\right) +\pi ^{\prime }\left( e^{\ast }\right) \left(
+1-t\right) \left( 1-F\left( \bar{w}\right) \right) \frac{\beta }{1-t}\frac{%
+\pi \left( e^{\ast }\right) \pi ^{\prime \prime }\left( e^{\ast }\right) }{%
+\left( \pi ^{\prime }\left( e^{\ast }\right) \right) ^{2}}} \\
+&&+\frac{1}{\left( 1-t\right) ^{2}}\left[ z-\beta e^{\ast }+\frac{\beta \pi
+\left( e^{\ast }\right) }{\pi ^{\prime }\left( e^{\ast }\right) }-a\right] 
+\end{eqnarray*}%
+and simplifying%
+\begin{eqnarray*}
+\frac{dw\left( e^{\ast },t\right) }{dt} &=&-\frac{1}{\left( 1-t\right) ^{2}}%
+\frac{\beta \pi \left( e^{\ast }\right) }{\pi ^{\prime }\left( e^{\ast
+}\right) }\frac{\left( 1-t\right) \int_{\bar{w}\left( e^{\ast },\tau \right)
+}^{B}\left( w^{\prime }-\bar{w}\left( e^{\ast },t\right) \right) dF\left(
+w^{\prime }\right) +\left( 1-F\left( \bar{w}\right) \right) \left[ z-\beta
+e^{\ast }+\frac{\beta \pi \left( e^{\ast }\right) }{\pi ^{\prime }\left(
+e^{\ast }\right) }-a\right] }{\left( 1-t\right) \int_{\bar{w}\left( e^{\ast
+},\tau \right) }^{B}\left( w^{\prime }-\bar{w}\left( e^{\ast },t\right)
+\right) dF\left( w^{\prime }\right) +\left( 1-F\left( \bar{w}\right) \right) 
+\frac{\beta \pi \left( e^{\ast }\right) }{\pi ^{\prime }\left( e^{\ast
+}\right) }} \\
+&&+\frac{1}{\left( 1-t\right) ^{2}}\left[ z-\beta e^{\ast }+\frac{\beta \pi
+\left( e^{\ast }\right) }{\pi ^{\prime }\left( e^{\ast }\right) }-a\right] 
+\end{eqnarray*}%
+and again%
+\begin{equation*}
+\frac{dw\left( e^{\ast },t\right) }{dt}=\frac{1}{1-t}\frac{\left[ z-\beta
+e^{\ast }-a\right] \int_{\bar{w}\left( e^{\ast },\tau \right) }^{B}\left(
+w^{\prime }-\bar{w}\left( e^{\ast },t\right) \right) dF\left( w^{\prime
+}\right) }{\left( 1-t\right) \int_{\bar{w}\left( e^{\ast },\tau \right)
+}^{B}\left( w^{\prime }-\bar{w}\left( e^{\ast },t\right) \right) dF\left(
+w^{\prime }\right) +\left( 1-F\left( \bar{w}\right) \right) \frac{\beta \pi
+\left( e^{\ast }\right) }{\pi ^{\prime }\left( e^{\ast }\right) }}
+\end{equation*}
+\end{draftnote}
+
+\begin{draftnote}
+why not use $c$ for unemployment compensation?
+\end{draftnote}
+
+\end{document}

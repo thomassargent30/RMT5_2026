@@ -1,0 +1,233 @@
+% Table of Contents for job `RMT5_recovery' -- Created at 2019/4/27 16:27
+% ====================================
+\TOCitem{0}
+{Acknowledgements}
+{viii}% 
+\TOCitem{0}
+{Preface to the fourth edition}
+{x}% 
+\vskip 0pt\penalty -200\hbox {\vrule height10.675pt depth5.325pt width0pt}\penalty \@M 
+\TOCitem{0}
+{{\fam \bffam \twelvebf Part I: Imperialism of Recursive Methods}}
+{}% 
+\TOCitem{0}
+{\TOCcID{1.}Overview}
+{3}% 
+\TOCitem{1}
+{\TOCsID{1.1.}Warning.}
+{3}% 
+\TOCitem{1}
+{\TOCsID{1.2.}A common ancestor.}
+{3}% 
+\TOCitem{1}
+{\TOCsID{1.3.}The savings problem.}
+{4}% 
+\TOCitem{2}
+{\TOCsID{1.3.1.}Linear quadratic permanent income theory.}
+{5}% 
+\TOCitem{2}
+{\TOCsID{1.3.2.}Precautionary saving.}
+{6}% 
+\TOCitem{2}
+{\TOCsID{1.3.3.}Complete markets, insurance, and the distribution of wealth.}
+{7}% 
+\TOCitem{2}
+{\TOCsID{1.3.4.}Bewley models.}
+{9}% 
+\TOCitem{2}
+{\TOCsID{1.3.5.}History dependence in standard consumption models.}
+{12}% 
+\TOCitem{2}
+{\TOCsID{1.3.6.}Growth theory.}
+{13}% 
+\TOCitem{2}
+{\TOCsID{1.3.7.}Limiting results from dynamic optimal taxation.}
+{14}% 
+\TOCitem{2}
+{\TOCsID{1.3.8.}Asset pricing.}
+{15}% 
+\TOCitem{2}
+{\TOCsID{1.3.9.}Multiple assets.}
+{16}% 
+\TOCitem{1}
+{\TOCsID{1.4.}Recursive methods.}
+{19}% 
+\TOCitem{2}
+{\TOCsID{1.4.1.}Dynamic programming and the Lucas Critique.}
+{21}% 
+\TOCitem{2}
+{\TOCsID{1.4.2.}Dynamic programming challenged.}
+{23}% 
+\TOCitem{2}
+{\TOCsID{1.4.3.}Imperialistic response of dynamic programming.}
+{23}% 
+\TOCitem{2}
+{\TOCsID{1.4.4.}History dependence and ``dynamic programming squared''.}
+{26}% 
+\TOCitem{2}
+{\TOCsID{1.4.5.}Dynamic principal-agent problems.}
+{28}% 
+\TOCitem{2}
+{\TOCsID{1.4.6.}More applications.}
+{31}% 
+\vfil \par \penalty -\@M 
+\vskip 0pt\penalty -200\hbox {\vrule height10.675pt depth5.325pt width0pt}\penalty \@M 
+\TOCitem{0}
+{{\fam \bffam \twelvebf Part II: Tools}}
+{}% 
+\TOCitem{0}
+{\TOCcID{2.}Time Series}
+{35}% 
+\TOCitem{1}
+{\TOCsID{2.1.}Two workhorses.}
+{35}% 
+\TOCitem{1}
+{\TOCsID{2.2.}Markov chains.}
+{35}% 
+\TOCitem{2}
+{\TOCsID{2.2.1.}Stationary distributions.}
+{37}% 
+\TOCitem{2}
+{\TOCsID{2.2.2.}Asymptotic stationarity.}
+{39}% 
+\TOCitem{2}
+{\TOCsID{2.2.3.}Forecasting the state.}
+{40}% 
+\TOCitem{2}
+{\TOCsID{2.2.4.}Forecasting functions of the state.}
+{41}% 
+\TOCitem{2}
+{\TOCsID{2.2.5.}Laws of large numbers.}
+{42}% 
+\TOCitem{2}
+{\TOCsID{2.2.6.}Right eigenvectors.}
+{43}% 
+\TOCitem{2}
+{\TOCsID{2.2.7.}Forecasting functions.}
+{47}% 
+\TOCitem{2}
+{\TOCsID{2.2.8.}Enough one-step-ahead forecasts determine $P$.}
+{47}% 
+\TOCitem{2}
+{\TOCsID{2.2.9.}Simulating a Markov chain.}
+{48}% 
+\TOCitem{2}
+{\TOCsID{2.2.10.}The likelihood function.}
+{48}% 
+\TOCitem{1}
+{\TOCsID{2.3.}Continuous-state Markov chain.}
+{49}% 
+\TOCitem{1}
+{\TOCsID{2.4.}Linear state space model.}
+{50}% 
+\TOCitem{2}
+{\TOCsID{2.4.1.}First and second unconditional moments.}
+{53}% 
+\TOCitem{2}
+{\TOCsID{2.4.2.}Covariance stationarity.}
+{54}% 
+\TOCitem{2}
+{\TOCsID{2.4.3.}Summary of moment formulas.}
+{56}% 
+\TOCitem{2}
+{\TOCsID{2.4.4.}Impulse response function.}
+{56}% 
+\TOCitem{2}
+{\TOCsID{2.4.5.}Prediction and discounting.}
+{57}% 
+\TOCitem{2}
+{\TOCsID{2.4.6.}Geometric sums of quadratic forms.}
+{58}% 
+\TOCitem{3}
+{\TOCsID{2.4.6.1.}Asset pricing}
+{59}% 
+\TOCitem{3}
+{\TOCsID{2.4.6.2.}Evaluation of dynamic criterion}
+{59}% 
+\TOCitem{1}
+{\TOCsID{2.5.}Multivariate normal distributions and regressions.}
+{62}% 
+\TOCitem{2}
+{\TOCsID{2.5.1.}Bayesian interpretation of conditional probability.}
+{64}% 
+\TOCitem{2}
+{\TOCsID{2.5.2.}Non normal distributions.}
+{65}% 
+\TOCitem{1}
+{\TOCsID{2.6.}Estimation of model parameters.}
+{66}% 
+\TOCitem{1}
+{\TOCsID{2.7.}The Kalman filter.}
+{67}% 
+\TOCitem{3}
+{\TOCsID{2.7.0.1.}Gram-Schmidt process}
+{71}% 
+\TOCitem{3}
+{\TOCsID{2.7.0.2.}Hidden Markov model}
+{71}% 
+\TOCitem{1}
+{\TOCsID{2.8.}Estimation again.}
+{72}% 
+\TOCitem{1}
+{\TOCsID{2.9.}Vector autoregressions and the Kalman filter.}
+{73}% 
+\TOCitem{2}
+{\TOCsID{2.9.1.}Conditioning on the semi-infinite past of $y$.}
+{73}% 
+\TOCitem{2}
+{\TOCsID{2.9.2.}A time-invariant VAR.}
+{74}% 
+\TOCitem{2}
+{\TOCsID{2.9.3.}Interpreting VARs.}
+{75}% 
+\TOCitem{1}
+{\TOCsID{2.10.}Applications of the Kalman filter.}
+{75}% 
+\TOCitem{2}
+{\TOCsID{2.10.1.}Muth's reverse engineering exercise.}
+{76}% 
+\TOCitem{2}
+{\TOCsID{2.10.2.}Jovanovic's application.}
+{79}% 
+\TOCitem{1}
+{\TOCsID{2.11.}The spectrum.}
+{81}% 
+\TOCitem{2}
+{\TOCsID{2.11.1.}Examples.}
+{83}% 
+\TOCitem{1}
+{\TOCsID{2.12.}Example: the LQ permanent income model.}
+{85}% 
+\TOCitem{2}
+{\TOCsID{2.12.1.}Another representation.}
+{88}% 
+\TOCitem{2}
+{\TOCsID{2.12.2.}Debt dynamics.}
+{91}% 
+\TOCitem{2}
+{\TOCsID{2.12.3.}Two classic examples.}
+{92}% 
+\TOCitem{2}
+{\TOCsID{2.12.4.}Spreading consumption cross section.}
+{94}% 
+\TOCitem{2}
+{\TOCsID{2.12.5.}Invariant subspace approach.}
+{94}% 
+\TOCitem{1}
+{\TOCsID{2.13.}Concluding remarks.}
+{95}% 
+\TOCitem{1}
+{\TOCsID{A.}Linear difference equations.}
+{96}% 
+\TOCitem{2}
+{\TOCsID{2.A.1.}A first-order difference equation.}
+{96}% 
+\TOCitem{2}
+{\TOCsID{2.A.2.}A second-order difference equation.}
+{97}% 
+\TOCitem{1}
+{\TOCsID{B.}Constant in the state.}
+{98}% 
+\TOCitem{1}
+{\TOCsID{2.16.}Exercises.}
+{99}% 

@@ -1,0 +1,68 @@
+
+SUGGESTED REPLY:
+
+ 
+
+Dear Larry, Marty and Mathias,
+
+ 
+
+You are absolutely right that insights gained from the fundamental surplus fractions
+ in various matching frameworks rest on  computations of two-factor multiplicative decompositions
+ in which endogenous variables show up in the first factor (Upsilon) but not in the second factor. 
+Furthermore, and equally  important, all of our decompositions have resulted in upper bounds on the first factor Upsilon that
+  are relatively low under consensus   calibrated ranges of exogenously given elasticities of the matching function.
+ Those low upper bounds on the first factor allow us to infer that market tightness elasticities are mostly determined by 
+ the second factor. Specifically,  primitives entering the fundamental surplus must be such that the inverse of the 
+ fundamental surplus fraction is large.
+
+ 
+
+Now, in one of our decompositions, the one for the Hall-Milgrom AOB model, we recognized that asymmetries in the
+ probabilities of job destruction across times of bargaining and production would break our clean decomposition, but to us this  
+ simply appeared to be an inessential nuisance. Therefore, as described earlier,
+ we proceeded with our approximation strategy and set those probabilities equal to each other, and voilà, 
+ we arrived at a clean decomposition for the AOB model and  identified the values of leisure and a firm’s cost of 
+ delay in bargaining to be the critical primitives  for determining the market tightness elasticity. 
+ This finding based on our approximation strategy was then confirmed in simulations of the Hall-Milgrom model away 
+ from our assumed equality of job destruction rates. (And as shown in our last write-up, the same holds true for the 
+ decomposition for  your version of the AOB model;  we conjecture that simulations of your model will also confirm 
+  the central importance  of the values of leisure and a firm’s cost of delay in bargaining, even when you  move away from 
+  our assumed equality of job destruction rates across times of bargaining and production.)
+
+ 
+
+While we confess that  there is some ‘art’ involved in identifying fundamental surpluses in alternative models, 
+we contend that plausible choices help us to get under the hood of matching frameworks and 
+truly to  understand what   parameters  are important in shaping  market tightness elasticities. 
+Assisting our efforts is that  fundamental surpluses  that we have derived for all the models that we have studied so far
+have the intuitively attractive property of  being “upper bounds on the fraction of a job’s output that the 
+invisible hand can allocate to vacancy creation.” Thus, students of financial accelerator models 
+inspired by Wasmer and Weil’s assumptions with matching in both credit and labor markets will understand why
+ search costs in the former market will also have to be subtracted from output to arrive at the fundamental surplus. 
+ And students of AOB models will appreciate that a firm’s cost of delay in bargaining will be exploited by workers in the 
+ bargaining process, thus prevening the invisible hand from instead allocating those resources into vacancy creation.
+
+ 
+
+This perspective also helps us  understood why your decomposition for your version of the AOB model
+ (even though arriving at a second factor solely in term of primitives) fails to shed light on key forces driving outcomes.
+ You can say that
+ nuisance relationships that emerge from your assumption of unequal job destruction rates across bargaining and production 
+ cause the critical parameter of a firm’s cost of delay in bargaining to ‘bleed over’ from the second factor to the first 
+ factor Upsilon. As a result, the first factor Upsilon is no longer bounded and you have de facto transferred or allocated
+ the power of the fundamental surplus to that first factor Upsilon.
+ This tranfer prevents you from being able to identify the critical parameters for determining the  market tightness elasticity 
+ (i.e., the values of leisure and a firm’s cost of delay in bargaining).
+ But, as our write-up showed, capacity to identify those critical parameters would be restored under our approximation strategy.
+
+ 
+
+We  have tried to answer  your question. If not, please tell us.  And thanks for your patience  and thoughtfulness in pursuing
+ these issues.
+
+ 
+
+Best wishes,
+
+Lars and Tom

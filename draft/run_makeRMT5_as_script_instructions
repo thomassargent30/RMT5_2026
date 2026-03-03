@@ -1,0 +1,15 @@
+Make the script executable with command chmod +x makeRMT5.sh
+Run the script using ./makeRMT5.sh
+
+
+Jan 24 from Zejin:
+
+ * to write a script file you must start with
+
+#!/bin/bash
+
+as the first line; this is why I was having trouble getting
+it to work.
+
+*  DO NOT use a microsoft windows or microsoft product editor
+to create a linux or Mac script file -- the other problem!

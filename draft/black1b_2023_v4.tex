@@ -1,0 +1,2275 @@
+%\input texsis
+%\book
+%\singlespace
+%\input epsf.tex
+\input grafinp3
+\input psfig
+%\eqnotracetrue
+%\showchaptIDfalse
+\chapter{Time Series Applications\label{timeseriesapp}}
+\footnum=0
+\def\toone{{t+1}}
+\def\ttwo{{t+2}}
+\def\tthree{{t+3}}
+\def\Tone{{T+1}}
+\def\TTT{{T-1}}
+\def\rtr{{\rm tr}}
+\def\epigraph#1#2{%
+\begingroup
+\smallskip
+%\epigraphskip
+\leftskip=2em
+\rightskip=0pt plus2em
+\it\noindent #1\par
+\noindent --- #2\par
+\endgroup\noindent}
+%
+%\def\frac#1/#2{\leavevmode\kern.1em
+% \raise.5ex\hbox{\the\scriptfont0 #1}\kern-.1em
+% /\kern-.15em\lower.25ex\hbox{\the\scriptfont0 #2}}
+\def\frac#1#2{#1\over #2}
+%
+%\showchaptIDfalse
+%\def\specsec#1{\medskip{\sc\noindent{#1}}}
+
+%\line{\hfil \today}
+
+\section{Introduction}
+
+In light of our chapter \use{dynamicdp1}, \use{practical}, and \use{dplinear} applications of  dynamic programming, this 
+ chapter circles back and applies time series  tools from chapter \use{timeseries}.
+  Section  \use{sec:Muth_reverse} %\use{Kfilterapplications} 
+  uses the
+Kalman filter to solve a  classic reverse engineering problem that John F. Muth (1960)  posed for the ``adaptive expectations''  model of
+Milton Friedman. While  Muth used   methods other than the Kalman filter  to attack the problem, it turns out that the Kalman
+filter allows a more concise formulation. Section \use{app:Boyan} %\use{Kfilterapplications}
+ describes the  role of the Kalman filter  in
+a classic paper of Jovanovic (1979). Section \use{sec:LQmodel} uses several chapter \use{timeseries}  tools to
+study   a workhorse  model in macroeconomics
+and public finance, the linear-quadratic model of consumption smoothing.  We also use this  model as a vehicle  to introduce the complete and incomplete markets models that we shall
+encounter  later chapters. Thus, section \use{sec:borrowlender} exploits the section \use{sec:LQmodel} mathematics to construct a closed-economy 
+incomplete markets model in the spirit of the Bewley models to be studied in more general settings in chapter \use{incomplete}.  
+Section \use{sec:LQcomplete} then uses closely related mathematics to construct a complete markets general equilibrium model that anticipates 
+the more general analysis of chapter \use{recurge}.
+ Section \use{sec:lucascritique} uses  chapter \use{timeseries} methods to present Robert E. Lucas, Jr.'s (1976)
+criticism of  econometric policy evaluation procedures widely practiced in the 1960s and 1970s, while section \use{sec:lucascritique2} describes   responses
+to  Lucas's criticism by Christoper A. Sims and others.
+\auth{Muth, John F.}%
+\auth{Friedman, Milton}%
+\auth{Jovanovic, Boyan}%
+\auth{Sims, Christopher A.}%
+\auth{Lucas, Robert E., Jr.}%
+
+
+\vfil\eject
+
+%\section{Applications  of the Kalman filter}\label{Kfilterapplications}%
+\section{Muth's reverse engineering exercise}\label{sec:Muth_reverse}%
+  Phillip Cagan  (1956) and Milton Friedman  (1957)
+posited that to form
+expectations of future values of a
+scalar $y_t$, people use the following ``\idx{adaptive expectations}''
+scheme:
+$$ y_{t+1}^* = K \sum_{j=0}^\infty (1-K)^j y_{t-j} \EQN adapt1;a $$
+or
+$$ y_{t+1}^*  = (1-K) y_t^* + K y_t , \EQN adapt1;b$$
+where $K \in (0,1)$ and where $y_{t+1}^*$ is people's expectation of $y$ at some future date, perhaps $t+1$.\NFootnote{See Hamilton (1994) and Kim and Nelson (1999)
+for diverse applications of the Kalman   filter.   Appendix \use{lincontrol}
+ (see Technical Appendixes)
+ briefly describes  a discrete-state
+nonlinear filtering problem.}    Friedman
+used this scheme to describe people's forecasts of future
+income.  Cagan used it to model people's forecasts of inflation
+during hyperinflations. Cagan and Friedman did not assert that
+the scheme is an optimal one, and did not otherwise fully defend it.
+Muth (1960) wanted to understand the circumstances under which
+such a  forecasting  scheme  would be optimal for some horizon.  Therefore,
+he sought a stochastic process for $y_t$ such that equation \Ep{adapt1}
+would be the formula for a conditional expectation of $y_{t+j}$ conditioned on $y_t, y_{t-1}, \ldots$
+for some integer horizon $j \geq 1$.    In effect, he posed and solved an
+``\idx{inverse optimal prediction}'' problem of the form  ``You give me
+a forecasting scheme; I have to find a stochastic process
+that makes the scheme optimal.''
+Muth solved the problem using classical (nonrecursive) methods.
+    The Kalman
+filter, which  first appeared  in print in the same year as Muth's  paper (Kalman, 1960),  lets  us solve Muth's inverse optimal prediction
+problem quickly.
+\auth{Muth, John F.}%
+\auth{Friedman, Milton}%
+\auth{Cagan, Phillip}%
+\auth{Nelson, Charles R.}%
+\auth{Kim, Chang-Jin}%
+\auth{Kalman, Rudolf E.}%
+\index{reverse engineer!Muth}
+
+Muth posited  the model
+$$\EQNalign{x_{t+1} & = x_t + w_{t+1} \EQN muth1;a \cr
+            y_t & = x_t + v_t, \EQN muth1;b \cr}$$
+where  $y_t, x_t$ are scalar random processes,
+and $w_{t+1}, v_t$ are mutually independent
+i.i.d.~Gaussian random processes with means of zero and
+variances $E w_{t+1}^2 = Q, E v_t^2 =R$, and  $Ev_s w_{t+1} = 0$
+for all $t,s$.  The initial condition
+is that $x_0$ is Gaussian with mean $\hat x_0$ and
+variance $\Sigma_0$. Muth sought formulas for
+$\hat x_{t+1} = E [x_{t+1} \vert y^t]$, where
+$y^t = [y_t, \ldots, y_0]$.
+
+
+% Maria: please note how this was done.
+
+\midfigure{muth1f}
+\centerline{\epsfxsize=3true in\epsffile{muth1crop.eps}}
+\caption{Graph of $f(\Sigma) = {
+ {\Sigma(R+Q) + Q R} \over \Sigma + R }$, $Q= R=1$, against the 45-degree
+line. Iterations on the Riccati equation for $\Sigma_t$ converge
+to the fixed point.}
+\infiglist{Muth}
+\endfigure
+
+
+
+
+% $$\grafone{muth1crop.eps,height=2in}{{\bf Figure 4.1}  Graph
+% of $f(\Sigma) = {
+%  {\Sigma(R+Q) + Q R} \over \Sigma + R }$, $ Q= R=1$, against the 45-degree
+% line. Iterations on the Riccati equation for $\Sigma_t$ converge
+%to the fixed point.}$$
+
+  For this problem,  $A=1, CC'=Q, G=1$, making the Kalman filtering
+ equations  become
+$$\EQNalign{K_t &= {\Sigma_t   \over \Sigma_t + R } \EQN muth2;a \cr
+            \Sigma_{t+1} & = \Sigma_t + Q - {\Sigma_t^2 \over
+                            \Sigma_t +R}. \EQN muth2;b \cr }$$
+The second equation can be rewritten
+$$ \Sigma_{t+1} = { \Sigma_t(R+Q) + Q R \over \Sigma_t + R }. \EQN muth3$$
+For $Q=R=1$, the coordinate axis of Figure \Fg{muth1f} plots the function
+$f(\Sigma)
+ = {\Sigma(R+Q) + Q R \over \Sigma + R }$ appearing on the right side
+of equation \Ep{muth3} for values $\Sigma \geq 0$ against the
+45-degree line. Note that $f(0) = Q$.
+This graph identifies the fixed point of iterations on
+$f(\Sigma)$ as the intersection of $f(\cdot)$ and the 45-degree line.
+That the slope of $f(\cdot)$ is less than unity at the intersection
+assures us that the iterations on $f$ will converge as $t \rightarrow
++\infty$ starting from any $\Sigma_0 \geq 0$.\NFootnote{For the values $Q = R = 1$ used in
+Figure \Fg{muth1f}, it can be verified that the positive solution of $\Sigma = 1.6180339$,
+that $K = .6180339 $,  and that the negative solution of
+the algebraic Ricatti equation is $\Sigma = - .6180339$. The golden ratio equals $.6180339$, the unique
+positive real number whose reciprocal equals $1$ plus itself.}
+\index{golden ratio}%
+
+   Muth studied the solution of this problem  as
+$t \rightarrow \infty$.  Evidently, $\Sigma_t \rightarrow \Sigma_\infty
+\equiv \Sigma$
+is the fixed point of a graph like Figure \Fg{muth1f}.
+Then $K_t \rightarrow K$ and the formula for
+$\hat x_{t+1}$
+becomes
+$$ \hat x_{t+1} = (1-K)\hat x_t + K  y_t \EQN cagan$$
+where $K  = {\Sigma \over \Sigma + R} \in (0,1)$.   This
+is a version of Cagan's and Friedman's \idx{adaptive expectations} formula. It can be shown that
+$K \in [0,1]$ is an increasing function of ${\frac{Q}{R}}$.  Thus, $K$ is the fraction
+of  the innovation  $a_t$ that should be regarded as `permanent' and $1-K$ is the fraction that is
+purely transitory.    Iterating
+backward on equation \Ep{cagan} gives
+$ \hat x_{t+1} = K  \sum_{j=0}^t (1-K)^j y_{t-j} +  (1-K)^{t+1} \hat x_0,$
+which is a version of Cagan and Friedman's geometric
+distributed lag formula.   Using equations \Ep{muth1}, we find
+that $E [y_{t+j} \vert y^t]  = E [x_{t+j} \vert y^t] =
+\hat x_{t+1}$ for all $j \geq 1$.  This result in conjunction with
+equation \Ep{cagan}
+establishes that the adaptive expectation formula \Ep{cagan}
+gives the optimal forecast of $y_{t+j}$ for all horizons $j \geq 1$.
+This finding  is remarkable  because for most processes,
+the optimal forecast will depend on the horizon.  That
+there is a single optimal forecast for all horizons  justifies the term {\it permanent income\/} that Milton
+Friedman (1955) chose to describe the forecast.
+
+  The dependence of the forecast on horizon can be studied using
+the formulas
+$$\EQNalign{ E \left[ x_{t+j}  \vert y^{t-1}\right] & = A^j    \hat x_t
+                 \EQN forecast1;a \cr
+             E \left[ y_{t+j} \vert y^{t-1} \right] & = G A^j \hat x_t
+                 \EQN forecast1;b \cr }$$
+In the case of Muth's example,
+$$ E \left[y_{t+j} \vert y^{t-1} \right]  = \hat y_t = \hat x_t  \ \ \forall j
+    \geq 0. $$
+
+For Muth's model, the innovations representation is
+$$\eqalign{ \hat x_{t+1} & = \hat x_t + K a_t \cr
+              y_t & = \hat x_t + a_t , \cr} \EQN eqn:muthinnov$$
+where $a_t = y_t - E [y_t | y_{t-1}, y_{t-2}, \ldots]$.  The innovations
+representation implies that
+$$ y_{t+1} - y_t = a_{t+1} + (K-1) a_t .\EQN mutharma $$
+Equation \Ep{mutharma} represents $\{y_t\}$ as a process whose first difference
+is a first-order moving average process. Notice how  Friedman's adaptive expectations
+coefficient $K$ appears in this representation.
+
+
+
+\auth{Jovanovic, Boyan}%
+\section{Jovanovic's application}\label{app:Boyan}%
+In chapter \use{search1}, we will describe a version of Jovanovic's (1979)
+matching model, at the core of which is a ``signal-extraction''
+problem that simplifies Muth's problem.
+Let $x_t, y_t$ be scalars with $A=1, C= 0, G=1, R > 0$.
+Let $x_0$ be Gaussian with mean $\mu$ and variance $\Sigma_0$.
+Interpret $x_t$ (which is evidently constant with this specification)
+as the hidden value of $\theta$, a ``match parameter''. Let
+$y^t$ denote the history of $y_s$ from $s=0$ to $s=t$.  Define
+$m_t \equiv \hat x_{t+1} \equiv E [\theta \vert y^t]$ and
+$\Sigma_{t+1} = E(\theta - m_t)^2$.
+Then   the Kalman filter equations imply
+$$\EQNalign{ m_t &  = (1-K_t) m_{t-1} + K_t y_t \EQN kalman6;a \cr
+            K_t & = {\Sigma_t \over \Sigma_t + R} \EQN kalman6;b \cr
+\noalign{\smallskip}
+           \Sigma_{t+1} & = {\Sigma_t R \over \Sigma_t + R}.
+ \EQN kalman6;c \cr}
+        $$
+The recursions are  to be initiated from
+$(m_{-1}, \Sigma_0)$, a pair that embodies all ``prior'' knowledge about the
+position of the system.  It is easy to see from Figure \Fg{muth1f} that when
+$C C' \equiv Q=0$, $\Sigma =0$ is the limit point of iterations on equation \Ep{kalman6;c}
+starting from any $\Sigma_0 \geq 0$.  Thus, the value of the match
+parameter is eventually learned.
+
+  It is instructive to write equation \Ep{kalman6;c} as
+$$ {1 \over \Sigma_{t+1}} = {1  \over \Sigma_t} + {1 \over R}. \EQN kalman7 $$
+The reciprocal of the variance is often called the
+{\it precision\/} of the estimate.  According to equation
+\Ep{kalman7} the precision  increases
+without bound as $t$ grows, and $\Sigma_{t+1} \rightarrow 0$.\NFootnote{As
+ a further special case, consider
+ when there is zero precision
+initially ($\Sigma_0 = + \infty$). Then solving the
+difference equation \Ep{kalman7} gives ${1 \over \Sigma_t }
+= t/ R$.    Substituting this into equations  \Ep{kalman6}
+gives $K_t = (t+1)^{-1}$, so that the Kalman filter becomes $m_0 = y_0$ and
+$ m_t  = [1-(t+1)^{-1}] m_{t-1} +  (t+1)^{-1} y_t$, which
+implies that $m_t = (t+1)^{-1} \sum_{s=0}^t y_t$, the sample
+mean, and $\Sigma_t = R /t$.}
+
+   We can represent the Kalman filter in the form % \Ep{kalman4} as
+$$  m_{t+1} = m_t + K_{t+1} a_{t+1} $$
+which implies that
+$$ E(m_{t+1} -m_t)^2 =  K_{t+1}^2 \sigma_{a,t+1}^2 $$
+where $a_{t+1} = y_{t+1} - m_t$ and the variance
+of $a_t$ is equal to
+$\sigma_{a,t+1}^2 = (\Sigma_{t+1} +R)$ from equation
+ \Ep{kalman5}.  This implies
+$$ E(m_{t+1} - m_t)^2 = {\Sigma_{t+1}^2 \over \Sigma_{t+1}+R }. $$
+For the purposes of our discrete-time counterpart of the Jovanovic
+model in chapter \use{search1}, it will be
+convenient to represent the motion
+of $m_{t+1}$ by means of the equation
+$$ m_{t+1} = m_t + g_{t+1} u_{t+1} $$
+where $g_{t+1} \equiv \left({\Sigma_{t+1}^2 \over
+\Sigma_{t+1} + R }\right)^{.5}$ and $u_{t+1}$
+is  i.i.d.~normalized and standardized with
+mean zero  and variance $1$
+constructed to obey  $g_{t+1} u_{t+1} \equiv  K_{t+1} a_{t+1} $.
+
+
+%
+%
+%In appendix \use{appB}, we  describe a simulation algorithm for approximating a  Bayesian posterior.  The algorithm constructs a Markov chain
+%whose invariant distribution {\it is\/} the posterior, then iterates the Markov chain to convergence.
+\auth{Eichenbaum, Martin} \auth{Christiano, Lawrence J.}
+\auth{Burnside, Craig} \auth{Rebelo, Sergio}%
+\auth{Canova, Fabio}%
+\auth{DeJong, David}%
+\auth{Dave, Chetan}%
+\auth{Christensen, Bent Jasper}%
+\auth{Kiefer,  Nicholas M.}%
+
+
+\section{LQ permanent income model}\label{sec:LQmodel}%
+This section describes a linear quadratic savings problem
+whose solution is a rational expectations version of the permanent
+income model of Friedman  (1957) and Hall (1978). We use this
+model as a vehicle for illustrating impulse response functions,
+alternative choices of the state, the idea of cointegration,
+and an invariant subspace method.
+\index{LQ permanent income model!incomplete markets}%
+
+The LQ permanent income model  is a modification
+(and not quite a special case, for reasons that will be apparent later)
+of the following incomplete markets
+``savings problem'' to be studied in chapter \use{selfinsure}.
+  A consumer has preferences over consumption streams
+that are ordered by
+the utility functional
+$$  E_0 \sum_{t=0}^\infty \beta^t u(c_t)  \EQN  sprob1 $$
+where $E_t$ is the mathematical expectation conditioned
+on the consumer's time $t$ information,  $c_t$ is time $t$ consumption,
+$u(c)$ is a strictly concave one-period utility function, and
+$\beta \in (0,1)$ is a discount factor.  The consumer maximizes
+\Ep{sprob1} by choosing a consumption, borrowing plan
+ $\{c_t, b_{t+1}\}_{t=0}^\infty$ subject to the sequence of budget constraints
+$$ c_t + b_t = R^{-1} b_{t+1}  + y_t \EQN sprob2 $$
+where $\{y_t\}$ is an exogenous
+ stationary endowment process, $R$ is a constant gross
+risk-free interest rate, $b_t$ is one-period risk-free  bond   maturing at
+$t$, and $b_0$ is a given initial condition. It is important to note that for $t \geq 1 $, $b_t$ is chosen at time $t-1$ and that $b_0$
+is a given initial condition at time $t=0$.  We shall assume
+that $R^{-1} = \beta$.  We assume that the endowment
+process has the state-space representation
+$$ \EQNalign{ z_{t+1} & = \check A z_t + \check C w_{t+1} \EQN sprob15;a \cr
+               y_t & = \check G  z_t \EQN sprob15;b \cr}$$
+where $w_{t+1}$ is an i.i.d.~process with mean zero and
+identity contemporaneous covariance matrix, $\check A$ is a stable matrix,
+its eigenvalues being strictly below unity in modulus, and
+$\check G$ is a vector. The {\it state\/} vector confronting the household at $t$  is
+$\left[\matrix{b_t & z_t\cr}\right]'$, where $b_t$ is its one-period debt falling
+ due at the beginning of period $t$
+and $z_t$ contains all variables useful for
+forecasting its future endowment.
+%Lars%
+The consumer's choices $c_t$ and $b_{t+1}$  at $t$ are constrained by
+ budget constraint \Ep{sprob2} and by a limit on how fast  and far  borrowing $R^{-1}b_{t+1}$ is permitted 
+ to rise. Without  
+ limits on borrowing,  the consumer could run a Ponzi scheme that would allow him to issue enough debt
+ to consume as much as he wants each period. 
+A consumption plan that satisfies the budget constraint \Ep{sprob2} and the  limits
+on borrowing satisfies the 
+first-order conditions\NFootnote{We shall study how to derive this first-order condition
+in detail as well as alternative specifications of 
+borrowing limits in later chapters.}
+$$ E_t u'(c_{t+1}) = u'(c_t) , \ \ \forall t \geq 0 \EQN sprob4 $$
+at interior solutions for consumption. 
+
+To make the problem fit into the setting of our linear-quadratic permanent income structure,
+ we now  assume
+the quadratic  utility function
+$u(c_t) =  -.5 (c_t - \gamma)^2$,
+where $\gamma >0$ is a bliss level of
+ consumption and we allow $c_t$ to be negative.\NFootnote{We allow the consumer  actually to produce rather than to
+consume by setting  a negative
+value of $c_t$. For a given $c<0$, the produced
+amount of goods is $\tilde y = - c>0$ and
+the marginal disutility of producing additional
+goods is $\partial u(-\tilde y)/\partial \tilde y =
+-(\tilde y + \gamma)<0$. The consumer can use the
+produced good to pay off any debt falling due that
+period or to lend to others and receive their 
+repayments next period. For another 
+example of interconnected consumption and production 
+activities, see Kiyotaki och Wright's (1993)
+search model of money and differentiated goods
+in chapter \use{search2}. Kiyotaki and Wright assume that each 
+consumer can produce a good that other  
+consumers want but the the producer himself or herself does not.  
+That induces each producer to want to exchange his good for one produced by someone else,
+either directly in a bilateral exchange or indirectly by accumulating a good that  function as a medium of exchange
+called money.}%
+\auth{Kiyotaki, Nobuhiro} \auth{Wright, Randall}%
+For our linear quadratic savings problem, 
+we impose the following condition on the
+consumption, borrowing plan:
+$$  % \lim_{T \rightarrow +\infty}
+ E_0 \sum_{t=0}^\infty \beta^t b_t^2 < +\infty. \EQN sprob3 $$
+This condition suffices to rule out Ponzi schemes and serves as the limits on borrowing in our model. 
+Furthermore,
+the quadratic utility function  and allowing consumption to be negative imply that Euler equation 
+\Ep{sprob4} becomes\NFootnote{\label{ftsupermart}A linear marginal utility is essential for deriving
+\Ep{sprob5} from \Ep{sprob4}.  Suppose instead that we had imposed the
+following more standard assumptions on the utility function:
+$u'(c) >0, u''(c)<0, u'''(c) > 0$ and required that $c \geq 0$.  The Euler equation
+remains \Ep{sprob4}. But  $u''' >0$ implies via \idx{Jensen's inequality}
+that $E_t u'(c_{t+1}) >  u'(E_t c_{t+1})$.  This inequality together with \Ep{sprob4}
+implies that $E_t c_{t+1} > c_t$ (consumption is said to be a `\idx{submartingale}'), so that
+consumption stochastically diverges to $+\infty$.  The consumer's savings also diverge to $+\infty$.  Chapter \use{selfinsure} discusses such
+ divergence in a class of `\idx{precautionary savings}' models.}
+\tag{supermart_first}{\the\pageno}%
+$$ E_t c_{t+1} = c_t . \EQN sprob5 $$
+
+
+
+
+
+%We impose the following condition on the
+%consumption, borrowing plan:
+%$$  % \lim_{T \rightarrow +\infty}
+% E_0 \sum_{t=0}^\infty \beta^t b_t^2 < +\infty. \EQN sprob3 $$
+%This condition suffices to rule out Ponzi schemes.
+%  We impose this condition to
+%rule out an always-borrow scheme that would allow the household 
+%to enjoy bliss consumption forever.  The purpose of imposing 
+%this condition is to make the solution resemble the solution of 
+%problems to be studied in chapter
+%\use{selfinsure} that impose nonnegativity  on the consumption 
+%path.
+%   First-order conditions for maximizing \Ep{sprob1} subject to
+%\Ep{sprob2} are\NFootnote{We shall study how to derive this 
+%first-order condition
+%in detail in later chapters.}
+%$$ E_t u'(c_{t+1}) = u'(c_t) , \ \ \forall t \geq 0. \EQN sprob4 
+%$$
+
+%  For the rest of this section we assume
+%the quadratic  utility function
+%$u(c_t) =  -.5 (c_t - \gamma)^2$,
+%where $\gamma >0$ is a bliss level of consumption. 
+
+%Along  with the quadratic utility specification, we allow 
+%consumption
+%$c_t$ to be negative.\NFootnote{That $c_t$ can be negative 
+%explains why
+%we impose condition  \Ep{sprob3} instead of an upper bound on
+%the level of borrowing, such as the natural borrowing limits of
+%chapters \use{recurge}, \use{selfinsure}, and  
+%\use{incomplete}.}
+
+
+ To deduce the optimal decision rule, we want to solve the system
+of difference equations formed by \Ep{sprob2} and  \Ep{sprob5}
+subject to the boundary condition \Ep{sprob3}. 
+%Solve \Ep{sprob2} forward and impose $\lim_{T\rightarrow +
+%\infty} \beta^T b_{T+1} =0$ to get
+%$$ b_t = \sum_{j=0}^\infty \beta^j (y_{t+j} - c_{t+j}) .  \EQN 
+%sprob6 $$
+%Imposing $\lim_{T\rightarrow +\infty} \beta^T b_{T+1} =0$ 
+%suffices to impose \Ep{sprob3} on the debt path.
+%Take conditional expectations on both sides of \Ep{sprob6} and 
+%To assist us 
+%will exploiting the fact that the solution to 
+This linear quadratic
+optimization problem satisfies a {\it certainty equivalence\/} property described in 
+section \use{sec:certequiv} of  chapter \use{dplinear}. That principle allows us to solve the consumer's
+problem in the following way.\NFootnote{Section I of the introduction to  Lucas and Sargent (1981) describes  how the certainty equivalence property applies in a class of linear-quadratic problems that includes ours here. See especially pages xiv-xv.}
+\auth{Sargent, Thomas J.}%
+\auth{Lucas, Robert E., Jr.}%% GGHH
+ Temporarily  pretend that non-financial income $\{y_t\}_{t=0}^\infty$ is known for sure 
+and compute an optimal consumption plan under that perfect-foresight assumption that expresses time $t$ consumption $c_t$ as a function of 
+$b_t$ and $\{y_{t+j}\}_{j=0}^\infty$. The certainty equivalence property allows us then to  compute an optimal plan under uncertainty about the non-financial
+income process by simply replacing  $\{y_{t+j}\}_{j=0}^\infty$ %in the step 1 solution
+ with  $\{E_t y_{t+j}\}_{j=0}^\infty$, where $E_t(\cdot)$ denotes a mathematical 
+expectation conditional on the consumer's time $t$ information about the tail $\{y_{t+j}\}_{j=0}^\infty$
+of the non-financial income process.
+% solution at time $t$ is the same as if there were no 
+% uncertainty in the economy and the stochastic realizations of
+% future endowments can be replaced by conditional
+% expectations. Based on that fact, we are
+% inspired to proceed as follows. 
+
+To implement this certainty equivalence logic, at time $t$ consider one possible continuation path 
+$\{y_{t+j}\}_{j=0}^\infty$ of non-financial income and the  implied 
+optimal choices of $\{c_{t+j}, b_{t+1+j}\}_{j=0}^\infty$.
+For that particular future path, 
+solve \Ep{sprob2} forward and impose $\lim_{T\rightarrow +\infty} \beta^T b_{T+1} =0$ to get
+$$ b_t = \sum_{j=0}^\infty \beta^j (y_{t+j} - c_{t+j}) .  \EQN sprob6 $$
+Imposing $\lim_{T\rightarrow +\infty} \beta^T b_{T+1} =0$ suffices to impose \Ep{sprob3} on the debt path. Consider repeating this calculation 
+ for {\it all\/} possible realizations of continuation paths $\{y_{t+j}\}_{j=0}^\infty$ of non-financial income that appear on the right side of \Ep{sprob6}.
+ Take a weighted  sum 
+over all those paths, using conditional probabilities as weights to deduce
+$$ b_t = \sum_{j=0}^\infty \beta^j (E_t y_{t+j} - E_t c_{t+j}).   \EQN sprob6_subst $$
+Since  conditional probabilities sum to one,   the left sides of  expressions
+\Ep{sprob6} and \Ep{sprob6_subst} are equal.\NFootnote{Although equation 
+\Ep{sprob6_subst} also holds for a more general optimal consumption, savings
+problem in which $u(c)$ is not quadratic, a solution strategy  based on certainty-equivalence will
+not work for those problems.}
+% , i.e., the consumer will always satisfy his 
+% budget constraint along every realized path of future
+% endowments and hence, any linear combination of such 
+% ex-post realized present-value budget constraints will also 
+% be satisfied. But in general equation \Ep{sprob6_subst} 
+% will not be useful for the derivation of optimal choices 
+% along those possible paths because the fundamental 
+% restriction remains that the consumer must separately 
+% satisfy his ex-post present-value budget constraint for 
+% each and every possible path underlying that linear 
+% combination of constraints in equation \Ep{sprob6_subst}.
+% However, in our particular case of a quadratic utility
+% function and negative consumption being permissible, 
+% equation \Ep{sprob6_subst}  will turn out to be useful for 
+% deriving optimal choices, as we show next.}
+Next, use \Ep{sprob5}
+and the law of iterated expectations to deduce
+$$ b_t = \sum_{j=0}^\infty \beta^j E_t y_{t+j} - {1 \over 1-\beta} c_t
+\EQN sprob7 $$
+ or
+$$ c_t = (1-\beta)
+\left[ \sum_{j=0}^\infty \beta^j E_t y_{t+j} - b_t\right].
+ \EQN sprob8  $$
+If we define the net rate of interest $r$ by $\beta ={1 \over 1+r}$, we can
+also express this
+equation as
+$$ c_t = {r \over 1+r}
+\left[ \sum_{j=0}^\infty \beta^j E_t y_{t+j} - b_t\right]. \EQN sprob9 $$
+Equation \Ep{sprob8} or \Ep{sprob9} asserts that consumption  equals
+ ${r \over 1+r}$ times
+the sum of nonfinancial wealth $
+\sum_{j=0}^\infty \beta^j E_t y_{t+j}$ and financial
+wealth $-b_t$.   We can use a version of  our formula \Ep{discount1} in  \Ep{sprob8} or \Ep{sprob9} to obtain
+$$  c_t  = (1-\beta) [ \check G(I-\beta \check A)^{-1} z_t - b_t ]  .  \EQN eqn:lucascritiquecons $$
+This is a ``consumption function'' that   represents
+$c_t$  as a function of the {\it state\/} $[b_t, z_t]$ that
+ confronts the household, where  from \Ep{sprob15} $z_t$ contains present
+information that is useful for forecasting the endowment process.
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%
+%   
+%Solve \Ep{sprob2} forward and impose $\lim_{T\rightarrow +
+%\infty} \beta^T b_{T+1} =0$ to get
+%$$ b_t = \sum_{j=0}^\infty \beta^j (y_{t+j} - c_{t+j}) .  \EQN 
+%sprob6 $$
+%Imposing $\lim_{T\rightarrow +\infty} \beta^T b_{T+1} =0$ 
+%suffices to impose \Ep{sprob3} on the debt path.
+%Take conditional expectations on both sides of \Ep{sprob6} and 
+%use \Ep{sprob5}
+%and the law of iterated expectations to deduce
+%$$ b_t = \sum_{j=0}^\infty \beta^j E_t y_{t+j} - {1 \over 
+%1-\beta} c_t
+%\EQN sprob7 $$
+% or
+%$$ c_t = (1-\beta)
+%\left[ \sum_{j=0}^\infty \beta^j E_t y_{t+j} - b_t\right].
+% \EQN sprob8  $$
+%If we define the net rate of interest $r$ by 
+%$\beta ={1 \over 1+r}$, we can
+%also express this
+%equation as
+%$$ c_t = {r \over 1+r}
+%\left[ \sum_{j=0}^\infty \beta^j E_t y_{t+j} - b_t\right]. \EQN 
+%sprob9 $$
+%Equation \Ep{sprob8} or \Ep{sprob9} asserts that consumption  
+%equals
+% ${r \over 1+r}$ times
+%the sum of nonfinancial wealth $
+%\sum_{j=0}^\infty \beta^j E_t y_{t+j}$ and financial
+%wealth $-b_t$.   We can use a version of  our formula 
+%\Ep{discount1} in  \Ep{sprob8} or \Ep{sprob9} to obtain
+%$$  c_t  = (1-\beta) [ \check G(I-\beta \check A)^{-1} z_t - 
+%b_t ]  .  \EQN eqn:lucascritiquecons $$
+%This is a ``consumption function'' that   represents
+%$c_t$  as a function of the {\it state\/} $[b_t, z_t]$ that
+% confronts the household, where  from \Ep{sprob15} $z_t$ 
+%contains present
+%information that is useful for forecasting the endowment 
+%process.
+
+
+
+Pulling together our preceding results, we can regard $(z_t, b_t)$ as
+the time $t$ state, where $z_t$ is an {\it exogenous\/} component of the state
+and $b_t$ is an {\it  endogenous\/} component of the state vector. The system
+can be represented as
+$$ \eqalign{ z_{t+1} & = \check A z_t + \check C w_{t+1} \cr
+   b_{t+1} & = b_t + \check G [ (I -\beta \check A)^{-1} (\check A - I) ] z_t \cr
+   y_t & = \check G z_t \cr
+   c_t & = (1-\beta) [ \check G(I-\beta \check A)^{-1} z_t - b_t ].  \cr }$$
+where  the last equation comes from applying to decision rule \Ep{sprob9} the appropriate version  our formula \Ep{discount1} for forecasting geometric sums of future values of the random variable $y_t$.
+
+
+\subsection{Another representation}
+Another  way to  understand the system under the  optimal decision rules for $(b_{t+1}, c_t)$  is to recognize that there is a point
+of view that allows us to regard
+the state as being  $c_t$  together with $z_t$
+  and to regard $b_t$ as an outcome.   Hall (1978) showed that this
+is a sharp way to summarize an  LQ permanent
+income theory. We  proceed to transform the state vector in this way.
+
+
+
+To represent an optimal plan for   $b_t$,
+substitute  \Ep{sprob8} into \Ep{sprob2} and after
+rearranging obtain
+$$ b_{t+1} = b_t +\left({\beta^{-1} -1}\right) \sum_{j=0}^\infty
+  \beta^j E_t y_{t+j} - \beta^{-1} y_t. \EQN sprob10 $$
+Next, shift \Ep{sprob8} forward one period and eliminate $b_{t+1}$ by
+using \Ep{sprob2}  to obtain
+$$ c_{t+1} = (1-\beta)\sum_{j=0}^\infty  E_{t+1} \beta^j y_{t+j+1}
+  - (1-\beta)[\beta^{-1} (c_t + b_t - y_t)]. $$
+If we add and subtract
+$ \beta^{-1} (1-\beta) \sum_{j=0}^\infty \beta^j E_t y_{t+j}$
+from the right side of the preceding equation and rearrange, we obtain
+$$ c_{t+1} - c_t = (1-\beta) \sum_{j=0}^\infty \beta^j (E_{t+1} y_{t+j+1}
+  - E_t y_{t+j+1} ) .\EQN sprob11 $$
+The right side is $(1 - \beta)$ times the time $t+1$  innovation to the  expected present
+value of the endowment process $\{y_t\}$.   It is useful to express this innovation in terms
+of a moving average representation for income $y_t$.  Suppose that the
+endowment process has the moving average representation\NFootnote{Representation
+\Ep{sprob15} implies that $d(L) = \check G (I - \check A L)^{-1} \check C$.}
+$$ y_{t+1} = d(L) w_{t+1} \EQN sprob12 $$
+where $\{w_{t+1}\}$ is an i.i.d.~vector process with $E w_{t+1}
+=0$
+and contemporaneous covariance matrix $E w_{t+1}
+w_{t+1}'=I$, $d(L) = \sum_{j=0}^\infty d_j L^j$, where $L$ is
+the lag operator, and the household has an information set
+$w^t = [w_t, w_{t-1}, \ldots, ]$ at time $t$.\NFootnote{A moving average
+representation for a process $y_t$ is said to be {\it fundamental} if the
+linear space spanned by $y^t$ is equal to the linear space spanned by $w^t$.  A time-invariant
+innovations representation, attained via the Kalman filter as in section \use{sec:Kalman100}, is by
+construction fundamental.}
+Then notice that
+$$y_{t+j} - E_t y_{t+j} = d_0 w_{t+j} + d_1 w_{t+j-1}
+  + \cdots + d_{j-1} w_{t+1}.  $$
+It follows that
+$$ E_{t+1} y_{t+j} - E_t y_{t+j} = d_{j-1} w_{t+1} .
+\EQN sprob120 $$
+Using \Ep{sprob120} in \Ep{sprob11} gives
+$$ c_{t+1} - c_t = (1-\beta) d(\beta) w_{t+1}. \EQN sprob13 $$
+The object $d(\beta)$ is the present value of the moving average
+coefficients in the representation for the endowment process $y_t$.
+Furthermore $d(\beta) w_{t+1}$ is  the time $t+1$  innovation to the  expected present
+value of the endowment process $\{y_t\}$.
+
+
+
+
+  After all of this work, we can represent the  optimal decision rule
+for $c_t, b_{t+1}$ in the form of the two equations
+\Ep{sprob11} and \Ep{sprob7}, which we repeat here for convenience:
+$$\EQNalign{ c_{t+1} &= c_t + (1-\beta) \sum_{j=0}^\infty \beta^j (E_{t+1} y_{t+j+1}
+  - E_t y_{t+j+1} ) \EQN sprob11aa \cr
+b_t  &= \sum_{j=0}^\infty \beta^j E_t y_{t+j} - {1 \over 1-\beta} c_t .
+\EQN sprob7aa \cr} $$
+Equation \Ep{sprob7aa} asserts that a household's debt  due at $t$ equals the
+expected present value of  its endowment minus the expected present value of its consumption stream.
+A high debt thus indicates a large expected present value of `surpluses' $y_t - c_t$.
+
+
+Recalling the form of the endowment process \Ep{sprob15}, we can
+compute
+$$ \EQNalign{  E_t \sum_{j=0}^\infty \beta^j z_{t+j} &  =
+   (I-\beta \check A)^{-1} z_t      \EQN  sprobform;a \cr
+    E_{t+1} \sum_{j=0}^\infty \beta^j z_{t+j+1} & = (I -\beta \check A)^{-1} z_{t+1}              \EQN  sprobform;b  \cr
+    E_t \sum_{j=0}^\infty \beta^j z_{t+j+1} & = (I - \beta \check A)^{-1}
+   \check A z_t.                   \EQN  sprobform;c  \cr} $$
+Substituting these formulas into \Ep{sprob11aa} and \Ep{sprob7aa}
+and using \Ep{sprob15;a}
+gives the following representation for the consumer's optimum decision
+rule:\NFootnote{See appendix \use{sec:perm_income_ge}
+of chapter \use{selfinsure} for a reinterpretation
+of precisely these outcomes in terms of a
+ competitive equilibrium of a model
+with a complete set of markets in history- and date-contingent claims to consumption.}
+$$ \EQNalign{ c_{t+1} & = c_t + (1-\beta) \check G  (I-\beta \check A)^{-1}
+  \check C w_{t+1}  \EQN  sprob16;a \cr
+    b_t & = \check G (I-\beta \check A)^{-1} z_t - {1 \over 1-\beta} c_t
+  \EQN sprob16;b \cr
+   y_t & = \check G z_t \EQN sprob16;c \cr
+   z_{t+1} & = \check A z_t + \check C w_{t+1} \EQN sprob16;d \cr }$$
+
+%%%% Tom: problem in preceding footnote.  doesn't like the chapter and section numbers under \use{ }.
+
+
+Representation \Ep{sprob16} reveals several things about the
+optimal decision rule.  (1) The {\it state\/} consists of the
+endogenous part $c_t$ and the exogenous part $z_t$.\NFootnote{Something subtle is going on in system \Ep{sprob11aa}-\Ep{sprob7aa}:
+ the {\it state\/} variable $c_t$ is actually responding to the shocks
+$w_t$ to $z_t$ that shape time $t$ nonfinancial income $y_t$ while the ``outcome'' variable $b_t$ has actually been chosen at $t-1$
+and so it is predetermined. It can be expressed as an exact function of the time $t$ ``state'' variables $c_t, z_t$ only because $c_t$
+adjusts to $z_t$ in just the right way.}
+  These contain
+all  information that is relevant  for forecasting future $c,y, b$.
+Notice that financial assets $b_t$ have disappeared as a component
+of the state because they are properly encoded in $c_t$. (2)
+According to \Ep{sprob16}, consumption is a random walk with
+innovation $(1-\beta) d(\beta)w_{t+1}$ as implied also by
+\Ep{sprob13}.  This outcome confirms that the Euler equation
+\Ep{sprob5} is built into the solution. That consumption is a
+random walk of course implies that it does not possess an
+asymptotic stationary distribution, at least so long as $z_t$
+exhibits perpetual random fluctuations, as it will generally under
+\Ep{sprob15}.\NFootnote{The failure of consumption to converge
+will  occur again in chapter \use{selfinsure} when we drop quadratic
+utility and assume that consumption must be nonnegative.} This feature
+is inherited partly from the assumption that $\beta R =1$. (3) The
+impulse response function of $c_t$ is a ``box'': for all $j\geq 1$,
+the response of $c_{t+j}$ to an increase in the innovation
+$w_{t+1}$ is $(1-\beta) d(\beta) = (1-\beta) \check G (I -\beta
+\check A)^{-1} \check C$. (4) Solution \Ep{sprob16} reveals that the
+joint process  $c_t,b_t$ possesses the property that
+ Granger and Engle (1987) called {\it cointegration\/}.
+ \tag{cointegrationtag}{\the\pageno}%
+ \index{cointegration}%
+   In particular,
+{\it both\/} $c_t$ and $b_t$ are non-stationary  because they have
+unit roots (see representation \Ep{sprob10} for $b_t$), but there
+is a  linear combination  of $c_t, b_t$ that {\it is\/} stationary
+provided that $z_t$ is stationary.  From \Ep{sprob7aa}, the linear
+combination is $(1-\beta) b_t + c_t$.  Accordingly, Granger and
+Engle would call $\left[\matrix{(1-\beta) & 1 \cr}\right]$ a
+cointegrating vector that, when applied to the nonstationary
+vector process $\left[ \matrix{b_t  & c_t \cr}\right]'$, yields a
+process that is asymptotically stationary. Equation \Ep{sprob7}
+can be arranged to take the form
+$$ (1-\beta) b_t + c_t = (1-\beta) E_t \sum_{j=0}^\infty \beta^j y_{t+j} ,
+\EQN sprob77 $$ which asserts that the `cointegrating residual'
+on the left side equals  the conditional expectation of the
+weighted sum  of future incomes on the right.\NFootnote{See
+Campbell and Shiller (1988) and  Lettau and Ludvigson (2001, 2004)
+for interesting applications of related ideas.} \auth{Engle,
+Robert F.}\auth{Granger, C.W.J.} \auth{Shiller, Robert}
+\auth{Campbell, John Y.} \auth{Ludvigson, Sydney}\auth{Lettau, Martin}
+
+
+
+\subsection{Debt dynamics}\label{sec:debt_dynamics}%
+If we subtract equation  \Ep{sprob16;b}  evaluated at time $t$ from
+equation  \Ep{sprob16;b}  evaluated at time $t+1$, we obtain
+$$ b_{t+1}- b_t = \check G (I-\beta \check A)^{-1} (z_{t+1} - z_t) - {\frac{1}{1-\beta}}(c_{t+1} - c_t ) .$$
+Substituting $z_{t+1} - z_t = (\check A - I )z_t + \check C w_{t+1}$ and equation \Ep{sprob16;a} into the
+above equation and rearranging gives
+$$ b_{t+1} - b_t =\check G (I - \beta \check A)^{-1} (\check A - I) z_t . \EQN debt_evolution $$
+This equation indicates how $b_{t+1}$ is predetermined at time $t$ as a function of $b_t$ and $z_t$.
+
+Representation  \Ep{debt_evolution} for the consumer's optimal borrowing rule can be solved backwards to 
+express $b_t$ as a function of  $z^{t-1} = [z_{t-1}, z_{t-2}, \ldots, z_0]$ and initial condition $b_0$.  
+Because $b_t$ depends on the entire history in a non-trivial way, we say that it is {\it history dependent\/},
+as is consumption, with which debt is cointegrated, as we have observed above.  History dependence of optimal debt and consumption
+in the LQ consumption smoothing model is a tell-tale sign of markets being incomplete in a sense that we'll investigate
+in section \use{sec:LQcomplete}. 
+
+\index{history dependence}%
+
+
+
+
+\subsection{Two classic examples}\label{sec:classic_consumption}%
+We illustrate formulas \Ep{sprob16} with the following two examples.
+In both examples,
+the endowment follows the process
+$y_t = z_{1t} + z_{2t} $ where
+$$ \bmatrix{ z_{1t+1} \cr z_{2t+1} } = \bmatrix{ 1 & 0 \cr 0 & 0 }
+                      \bmatrix{ z_{1t} \cr z_{2t} } + \bmatrix{ \sigma_1 & 0 \cr 0 & \sigma_2}
+                      \bmatrix{ w_{1t+1} \cr w_{2 t+1} }  \EQN eqn_statesptwoclassic $$
+where $w_{t+1}$ is an i.i.d.~$2 \times 1$ process distributed as ${\cal N}(0,I)$.  Here $z_{1t}$ is
+a permanent component of $y_t$ while $z_{2t}$ is  a purely transitory component.
+
+
+\medskip
+\noindent {\bf Example 1.} Assume that the consumer observes the state $z_t$ at time $t$. This implies that the consumer can
+construct $w_{t+1}$ from observations of $z_{t+1}$ and $z_t$.  Application
+of formulas \Ep{sprob16} implies that
+$$ c_{t+1} - c_t = \sigma_1 w_{1t+1} + (1-\beta) \sigma_2 w_{2t+1}. \EQN consexample1 $$
+Since $1-\beta = {\frac{r}{1+r}}$ where $R = (1+r)$,  formula \Ep{consexample1} shows how
+an increment $\sigma_1 w_{1t+1}$ to the permanent component of income $z_{1t+1}$ leads to
+a permanent one-for-one increase in consumption and no increase in savings $-b_{t+1}$; but how  the purely transitory component of income   $\sigma_2 w_{2t+1}$
+leads to a  permanent increment in consumption by a fraction  $(1-\beta)$ of transitory income, while
+the remaining  fraction $\beta$ is saved, leading to a permanent increment in savings $-b_{t+1}$. Application of formula \Ep{debt_evolution}
+to this example shows that
+$$ b_{t+1} - b_t = - z_{2t} = - \sigma_2 w_{2t}, \EQN consexample1a $$
+which confirms that none of $\sigma_1 w_{1t}$ is saved, while all of $\sigma_2 w_{2t}$ is saved.
+\medskip
+\noindent{\bf Example 2.} We build on Muth's classic reverse engineering exercise that we described in section \use{sec:Muth_reverse}. Thus, we assume that the income process $\{y_t\}$ obeys state space system \Ep{muth1} and that the consumer observes $y_t$, and its history up to $t$, but not the hidden state $x_t$ at time $t$.  In terms of the notation used in system \Ep{eqn_statesptwoclassic}, this amounts to assuming that the consumer observes $y_t = z_{1t} + z_{2t}$
+but not $z_{1t}$ and $z_{2t}$ separately.
+Under this assumption, it is appropriate to use an {\it innovation representation} to form $\check A, \check C, \check G$ in formulas
+\Ep{sprob16}.  In particular,  using the innovations representation \Ep{eqn:muthinnov} derived in  subsection \use{sec:Muth_reverse},  the appropriate  state-space
+representation for $y_t$ is
+$$\EQNalign{ \bmatrix{ y_{t+1} \cr a_{t+1} } & = \bmatrix{ 1 & -(1-K) \cr 0 & 0 } \bmatrix{y_t \cr a_t } + \bmatrix{ 1\cr 1} a_{t+1} \cr
+                    y_t & = \bmatrix{ 1 & 0 }  \bmatrix{y_t \cr a_t }  } $$
+where $K$ is the Kalman gain and $a_t = y_t - E [ y_t | y^{t-1}]$.  From subsection \use{sec:Muth_reverse}, we know that $K \in [0,1]$ and that $K$ increases as ${\frac{\sigma_1^2}{\sigma_2^2}}$
+increases, i.e., as the ratio of the variance of the permanent shock to the variance of the transitory shock to  income increases.
+Applying formulas \Ep{sprob16} implies
+$$    c_{t+1} - c_t = [1-\beta(1-K) ] a_{t+1} \EQN consexample2 $$
+where the endowment process can now be represented in terms of the univariate innovation to $y_t$ as
+$$ y_{t+1} - y_t = a_{t+1} - (1-K) a_t. \EQN incomemaar $$
+Equation \Ep{incomemaar} indicates that the consumer regards a fraction $K$ of an innovation $a_{t+1}$ to $y_{t+1}$
+as {\it permanent} and a fraction $1-K$ as purely transitory. He permanently increases his consumption by the full amount of his estimate of the permanent part of $a_{t+1}$,
+but by only $(1-\beta)$ times his estimate of the purely transitory part of $a_{t+1}$.   Therefore, in total  he permanently increments his  consumption by
+ a fraction $K + (1-\beta) (1-K) = 1 - \beta (1-K)$  of $a_{t+1}$ and saves the remaining fraction $\beta (1-K)$ of $a_{t+1}$.
+  According to equation \Ep{incomemaar}, the first difference of income is a first-order moving average, while \Ep{consexample2}
+  asserts that the first difference of consumption is   i.i.d.
+  Application of formula \Ep{debt_evolution}
+to this example shows that
+$$ b_{t+1} - b_t = (K-1) a_t , \EQN consexample1b $$
+which indicates how the fraction $K$ of the innovation to $y_t$ that is regarded as permanent influences the fraction of the innovation that is saved.
+
+
+
+\subsection{Spreading consumption cross sections}
+%Starting from an arbitrary initial distribution for $c_0$ and  the asymptotic stationary  distribution for $z_0$, if we were to apply formulas \Ep{diff6} and \Ep{ydiff2} to the state space system \Ep{sprob16},
+The common  unit root affecting $c_t, b_t$  causes  the time $t$ variance of $c_t$ to grow linearly with $t$.
+If we think of the initial distribution as describing the joint distribution of $c_0, b_0$ for a cross section
+of {\it ex ante} identical households born at time $0$, then our  formulas  describe the evolution of  cross section distributions of  $b_t, c_t$ as the population of households ages.  Cross-section consumption distributions  spreads out as time passes.\NFootnote{See Deaton
+and Paxton (1994) and Storesletten, Telmer, and  Yaron (2004) for evidence that cross section distributions of consumption spread out with age.}%
+\NFootnote{Our specification of the problem allows consumption to exceed bliss consumption and  be negative.  Similar features characterize  a wide  class
+of linear-quadratic models analyzed, for example, by Holt, Modigliani, Muth, and Simon (1960) and Hansen and Sargent (2013).}
+We'll reconsider this outcome in the next several  sections of this chapter, and also in chapters \use{recurge}, \use{selfinsure}, \use{incomplete}, \use{socialinsurance} and
+\use{socialinsurance2}. 
+\auth{Hansen, Lars Peter}%
+\auth{Sargent, Thomas J.}%
+\auth{Holt, Charles C.}%
+ \auth{Modigliani, Franco}%
+ \auth{Muth,  John F.}% 
+\auth{Simon,   Herbert A.}% 
+
+
+
+
+
+
+\section{A "borrowers and lenders" closed economy}\label{sec:borrowlender}%
+Up to now, we have set $R = \beta^{-1}$  and  taken it to be have  
+determined ``outside'' the model.  Saying that we are analyzing a ``small open economy''  is a common justification  for this assumption.
+\auth{Bewley, Truman F.}%
+By adapting ideas of   Truman Bewley (1977, 1980) to the present  setting, there is a way to fill out 
+the  consumer's environment  that makes  $R = \beta^{-1}$ an equilibrium outcome.  
+To do this, we imagine that our consumer is one of a  continuum of unit measure of {\it ex ante} identical, but {\it ex post} 
+heterogeneous consumers who trade a single risk-free one-period 
+bond whose price is $\beta$.  
+We index individual consumers  by $i\in [0,1]$ and 
+assume that their initial financial wealths $b^i_0$  equal 
+zero  for all $i$. 
+The consumers are {\it ex ante} identical in their preferences and in their stochastic processes for 
+their non-financial incomes as given by \Ep{sprob15}.
+But they are {\it ex post} heterogeneous in  realizations of their non-financial incomes from time $0$ on. 
+In particular, we assume that their initial
+vectors $z_0$ are independent draws from the stationary distribution  of the common statistical model \Ep{sprob15}. Let  $z^i_0$ denote the initial vector of consumer $i$ with
+an associated initial non-financial income of 
+$y^i_0 = \check G  z^i_0$. 
+Future realizations of consumer $i$'s non-financial income are driven by
+ idiosyncratic draws $w^i_{t+1}$ of a vector of shocks.
+ 
+% $w_{t+1}$, let  denote consumer $i$'s vector 
+% of shocks.
+%Lars2023$  We assume that their initial
+%non-financial incomes are independent draws from the stationary 
+%distribution  of their common statistical model \Ep{sprob15}, 
+%and that their initial financial wealth levels $b_0$  all equal  
+%$0$. 
+Our assumption about the initial distribution of 
+%Lars2023%non-financial incomes 
+the vectors $z^i_0$ implies that the cross-section average of non-financial income equals the mean of its  stationary distribution each period.   
+Since we are now analyzing a closed economy, it follows that the cross-section mean of consumption equals the stationary mean of non-financial income each period.\NFootnote{The cross-section mean of consumption appropriately accounts for  any negative consumption rates  as being production.} 
+But what about higher moments of the cross-section distribution of consumption? 
+
+
+With the intitial conditions that we have specified, each consumer's consumption follows a random walk and his/her financial wealth is co-integrated with his/her own consumption. But average debt in the cross-section of all consumers stays at zero.   Each period, the market for one-period risk-free loans clears at the same 
+constant gross interest rate $R = \beta^{-1}$. At this interest rate,  appropriate weighted sums of one-period risk-free borrowing equal  appropriate weighted sums of one-period risk free lending at each $t \geq 0$. 
+
+
+Thus, we have specified  an economy in which a  set of people are borrowing and lending
+with each other at a gross risk-free interest rate of
+$R = \beta^{-1}$.
+Across all consumers, risk-free loans are in zero net supply.
+We have arranged primitives so that $R = \beta^{-1}$ clears the market for risk-free loans at zero net supply each period. 
+So the risk-free loans are being made from one consumer to another within our closed set of agents.
+In this way, we have dispensed with the ``small open economy'' assumption and created our 
+first ``Bewley model''.  We'll encounter many more in chapter \use{incomplete}.
+
+%% NOTE TO TOM AND LARS: THE FOLLOWING COUPLE OF PARAGRAPHS BY LARS DESCRIBE HOW TO CONSTRUCT A BLANCHARD-YAARI VERSION OF OUR LQ MODEL. DO THIS FIRST AS A JUPTYER NOTEBOOK
+
+% As a last qualification, the outcome that each consumer's
+% consumption follows a random walk implies that there will
+% be agents who inevitably attain the bliss
+% level of consumption under the quadratic utility
+% specification.
+% %specification, $u(c_t) =  -.5 (c_t - \gamma)^2$. 
+% To avoid that eventual degeneration of equilibrium 
+% dynamics, we could assume a constant probability $\phi$ of 
+% consumers dying between periods and being replaced with 
+% new consumers who enter the economy in the same way
+% as described for the initial 
+% cohort at time $0$. Besides that such an economy will 
+% converge to a stationary equilibrium in terms of all
+% aggregate outcomes, other key features of the above
+% characterization of equilibrium outcomes would remain
+% unchanged with an equilibrium gross  risk-free interest 
+% rate now equal to $R = (\beta (1-\phi))^{-1}$, that is, 
+% consumers would simply discount the future at a higher 
+% rate. However, to eliminate the counterparty risk in 
+% credit transactions when some agents die, all borrowing 
+% and lending would
+% have to be mediated through a banking system. Note
+% that the composition of consumers stochastically dying 
+% between periods is the same as that of the general population
+% and hence, the banking system's losses from indebted 
+% agents dying are exactly offset by gains from agents 
+% dying with positive savings. 
+
+% Thus, by judiciously choosing a high enough bliss
+% point $\gamma$ in the utility specification, 
+% $u(c_t) =  -.5 (c_t - \gamma)^2$, and a large enough 
+% probability of dying $\phi$, we can make the 
+% equilibrium fraction of consumers attaining the 
+% bliss point in consumption to be arbitrarily small.
+
+
+
+\subsection{An inefficiency}
+Given initial condition $b^i_0 = 0$ and using expressions
+\Ep{sprob8} and \Ep{eqn:lucascritiquecons}, agent $i$'s
+consumption at time $0$ is 
+$$ c^i_0 = (1-\beta) \sum_{j=0}^\infty \beta^j E_0 y^i_{j} 
+         = (1-\beta) \check G(I-\beta \check A)^{-1} z^i_0.
+                                         \EQN eq:c_null $$
+ From equation \Ep{sprob16;a}, we know that  
+$$ c^i_{t+1} = c^i_t + h w^i_{t+1} , $$
+where $h = (1-\beta) \check G (I - \beta \check A)^{-1} \check C $
+so that
+$$ \eqalign{ E_0 c^i_t & = c^i_0 \cr
+              E_0(c^i_t  - c^i_0)^2 & = t h h' . } \EQN eq:spreadcons $$
+Because each consumer $i$ dislikes variance in consumption, he would prefer a completely smoothed   consumption stream  in which $c^i_t = c^i_0$ for all $t \geq 0$. Furthermore, such an allocation 
+would be physically feasible since the cross section average of our continuum of consumers actually equals the mean of the
+stationary distribution of non-financial income.
+If at time $0$ everyone could get together and agree to
+share  non-financial incomes in that manner, each 
+person would prefer that allocation to the 
+risky allocation they attain in our closed economy in which each period they trade one-period risk-free bonds.   In the next section, we describe an environment that our consumers would prefer to find themselves living in, one  with the same physical opportunities but with markets in more financial assets.  In particular, we add enough securities to the economy so that, by trading them, our consumers can  completely insure themselves against random 
+fluctuations in their non-financial incomes. 
+
+
+
+
+
+
+\index{consumption smoothing!complete markets}%.
+\index{complete markets}%
+\index{LQ permanent income model!complete markets}%
+\section{Consumption smoothing with complete markets}\label{sec:LQcomplete}%
+It is instructive to consider a complete markets
+version of the LQ permanent income model 
+studied in sections \use{sec:LQmodel} and 
+\use{sec:borrowlender}. It will provide  
+consumers  with the opportunity
+to avoid all fluctuations in consumption by trading state-contingent claims to future consumption. As in
+section \use{sec:LQmodel} we initially suppress the 
+index $i$ for a particular agent and simply study
+the  problem solved by a typical consumer. 
+Earlier budget constraint \Ep{sprob2} is now replaced by
+$$ c_t + b_{t-1}(z_t) = \int  q(z_{t+1} | z_t ) b_t(z_{t+1}) 
+d z_{t+1} + y_t , \EQN CMbudget101 $$
+where $q(z_{t+1} | z_t)$ is a  kernel for pricing bundles of  one-period  state contingent claims and $b_t(z_{t+1})$ is 
+a function describing a bundle of state-contingent debts 
+due at time $t+1$ that are chosen at time $t$. The 
+function $b_{t}(z_{t+1})$ describes the consumer's financial portfolio, chosen  at time $t$ of one-period state-contingent
+securities  that promises to pay off $b_{t}(z_{t+1})$ units 
+of time $t+1$ consumption at time $t+1$ in Markov state 
+$z_{t+1}$. The function  
+$b_{t}(z_{t+1}): \bbR \rightarrow \bbR$ 
+is measurable at time $t$ and maps next period's 
+$z_{t+1} \in \bbR$ into a $z_{t+1}$-contingent payment 
+at time $t+1$.
+
+Following the section \use{sec:LQmodel} approach  of
+arbitrarily setting $R^{-1}=\beta$ (and then showing in
+section \use{sec:borrowlender} that this price is an 
+equilibrium outcome), we guess that the equilibrium 
+pricing kernel is 
+$$ q(z_{t+1} | z_t ) = \beta \phi(z_{t+1} | z_t) , \EQN kernel101 $$
+where $\phi(z_{t+1} | z_t)$ is the probability density of 
+$z_{t+1}$ conditional on $z_t$. 
+Pricing kernel \Ep{kernel101} discounts state-contingent claims on consumption at date $t+1$ by the product of the time  discount factor $\beta$ and  conditional probabilities of    events
+at which  claims pay off. 
+Sometimes the kernel $q(z_{t+1} | z_t)$ is called  a state-price density,
+while  the function $b_t(z_{t+1})$ is said to describe a bundle of one-period ahead Arrow securities.
+
+
+We can use  the pricing kernel to  price ``redundant securities'' that are  bundles of 
+state-contingent claims.\NFootnote{For example, it is  redundant to add a risk-free one-period bond to the state-contingent one period securities that the consumer can trade in  our  complete markets model.  If that redundant asset were added, a no-arbitrage profits argument like  one that we shall apply  repeatedly in chapters \use{recurge}, \use{assetpricing1}, and \use{assetpricing2} would imply formula \Ep{ noarbitrageLQ101}.} 
+%An Arrow security issued at time $t$, Markov state $z_t$  
+%that  pays off $1$ unit of consumption at time $t+1$ whenever 
+%the realized time $t+1$ state $z_{t+1}$ lies in interval 
+%$(z_{t+1}, z_{t+1}+d z_{t+1})$ is priced  at time $t$ by $d 
+%q(z_{t+1} | z_t)$. Thus,   
+For example, in state $z_t $  at time $t$, the price  of a
+claim to one unit of  consumption
+at time $t+1$ when realization $z_{t+1} \in A \subset \bbR$ is 
+$$
+\int_A  q(z_{t+1} | z_t ) \cdot 1 \, d  z_{t+1} .
+$$ 
+% Where $\Phi_t(\,\cdot\,)$ is the standardized normal cumulative distribution function, 
+ % Let  a function  $\Pi(\,\cdot\,): (-\infty, \infty)\rightarrow\bf{R}$ represent
+%a bundle  of Arrow securities. The price at time $t$ of a bundle $ \Pi(z_{t+1})$ of
+%$z_{t+1}$-contingent payoffs %The price at time $t$ of  bundle $ \Pi$ %(\varepsilon_{t+1})$ of  
+ %is $\int \Pi(\tilde z) q(\tilde z| z_t) d \tilde z$.
+ %\NFootnote{Consider a claim whose payoff is $1$  for all $\varepsilon_{t+1}$ at $t+1$ so that $\Pi(\varepsilon_{t+1})=1$. The  time-$t$ price of this claim equals   $\int \Pi(\varepsilon) m(\varepsilon) d \Phi(\varepsilon) =\int m(\varepsilon) d \Phi(\varepsilon) = e^{-r}$.}  
+ Another example is a risk-free one period bond sold at time $t$ that  pays one unit of consumption for sure
+  (i.e.,  for all $z_{t+1}$) at time $t+1$. %at $t+1$ 
+ %so that $\Pi(z_{t+1})=1$.
+Pricing kernel \Ep{kernel101}
+implies that the price of  such a   one-period risk-free bond is
+$$ \int q(z_{t+1} | z_t) d z_{t+1} = \beta \int \phi(z_{t+1} | z_t) d z_{t+1} = \beta.  \EQN noarbitrageLQ101 $$
+Thus,   the gross interest rate on one-period risk free loans is  $R=\beta^{-1}$. This outcome indicates a sense in which our guess of pricing kernel \Ep{kernel101} might 
+correspond to its ``incomplete markets'' counterpart  in section \use{sec:LQmodel} model. 
+
+
+We conjecture that the equilibrium allocation is a time
+invariant consumption level, 
+$$ c_t = \bar c  = c_0 , \quad \forall t \geq 0, \EQN guess101 $$
+where  $c_0$ is given by equation \Ep{eq:c_null}, i.e.,
+the consumer's first-period consumption in the 
+incomplete markets version of the economy.
+%Because it  completely smooths consumption and has
+%the same time $0$ consumption,
+%this  $c_t = \bar c$ plan awards higher discounted utility to %the consumer
+%than does  the random walk consumption plan
+%implied by decision rule \Ep{sprob16;a},
+%an assertion that we'll soon verify.
+To construct a financial plan that supports this
+time invariant consumption level, we revisit consumption
+function \Ep{eqn:lucascritiquecons} in the 
+incomplete markets economy. In that economy recall that
+the consumer enters period $t$ in Markov state $z_t$
+with non-contingent debt $b_t$ and chooses a 
+consumption level $c_t$ that makes conditional 
+expectations of all future consumption satisfy 
+$E_t c_{t+j} = c_t$ for all $j>0$, which reflect
+first-order necessary conditions in the consumer's
+optimization problem. As a counterpart 
+in the present complete markets 
+economy we assume  that the consumer enters period $t$
+with a state-contingent debt $b_{t-1}(z_t)$ at which the  conjectured constant 
+consumption level $\bar c$ can be afforded. Thus, 
+substitute \Ep{guess101} into 
+\Ep{eqn:lucascritiquecons} and
+solve for the following state-contingent debt:
+$$ b_{t-1}(z_{t}) =  \check G(I-\beta \check A)^{-1} z_{t} 
+- {\frac{1}{1-\beta}} \bar c \equiv b(z_{t}, \bar c) . 
+                                           \EQN guess102 $$
+                                           
+Before confirming the conjectured debt function $b(z_{t}, \bar c)$, 
+we remark that it is 
+remarkable that indebtedness when entering
+period $t$ does not depend on history but only on 
+the realization of $z_{t}$.\NFootnote{Financial 
+wealth in all periods depends also on the second argument 
+$\bar c$ in $b(z_{t}, \bar c)$, which reflects 
+the initial value of a consumer's endowment process
+at time $0$. In our context, 
+each consumer randomly draws an initial vector $z_0$ as
+described in section \use{sec:borrowlender}, 
+which determines the initial value of a consumer's
+endowment process as of time $0$.}%
+It is a hallmark of risk sharing in 
+a complete markets equilibrium that idiosyncratic risks
+are not born by anyone.
+
+We now confirm that the conjectured portfolio choice
+attains the constant consumption level $\bar c$ and therefore  the consumer can afford it. Substituting conjectures 
+\Ep{kernel101} and \Ep{guess102} into budget 
+constraint \Ep{CMbudget101} and using formulas
+\Ep{sprobform;a}, \Ep{sprobform;b} and \Ep{sprob15;b}
+gives the following expression
+$$\EQNalign{ c_t + &E \left[\sum_{j=0}^\infty \beta^j y_{t+j} 
+          \Bigg| z_t\right] - {\frac{1}{1-\beta}} \bar c     \cr
+&= \int \beta  \phi(z_{t+1} | z_t ) (
+E \left[\sum_{j=0}^\infty \beta^j y_{t+j+1} 
+            \Bigg| z_{t+1}\right] d z_{t+1} 
+             - {\frac{1}{1-\beta}} \bar c ) +y_t \cr
+&= E \left[\sum_{j=0}^\infty \beta^j y_{t+j} 
+            \Bigg| z_{t}\right] 
+             - {\frac{\beta}{1-\beta}} \bar c  \,, \cr}
+$$
+where the last equality invokes the law of iterated 
+expectations on
+the right side of the second line.%  the budget constraint. 
+After 
+cancelling some terms and  collecting  others,
+this expression for the budget constraint simplifies to
+$c_t = \bar c$. Thus, we
+have confirmed that all one-period budget constraints
+at dates $t\geq 1$ and for all paths of $\{z_t\}_t$ 
+yield the same constant consumption level $\bar c$. 
+It  remains to be shown that the initial
+budget constraint at time $0$ also is satisfied, i.e.,
+that permanent  consumption  $\bar c$ and
+portfolio bundle $b(z_1, \bar c)$ are affordable.
+We do this by manipulating
+expression \Ep{eq:c_null}. To show  that the budget
+constraint at time $0$ emerges under our conjecture that 
+$\bar c= c_0$ in the incomplete markets economy:
+$$\EQNalign{ {\frac{\bar c}{1-\beta}} 
+    &= E \left[\sum_{j=1}^\infty \beta^j y_{j} 
+          \Bigg| z_0\right] + y_0  \,,  \cr
+\bar c + {\frac{\beta}{1-\beta}} \bar c 
+    &=  \int  \beta \phi(z_{1} | z_0 ) 
+E \left[\sum_{j=1}^\infty \beta^{j-1} y_{j} 
+            \Bigg| z_{1}\right] d z_{1}  + y_0 \,, \cr
+\bar c 
+    &=  \int  \beta \phi(z_{1} | z_0 ) (
+         \check G(I-\beta \check A)^{-1} z_{1} 
+        - {\frac{1}{1-\beta}} \bar c ) d z_{1}  
+                                          + y_0 \,, \cr
+\bar c &= \int q(z_{1} | z_0 ) b(z_1, \bar c) d z_{1}  
+                       + y_0 \,,                  \cr}
+$$
+where we  again have used the law of iterated 
+expectations in the transition between the first 
+two equations, and the last equation is the consumer's
+budget constraint at time $0$. We conclude that the 
+constant consumption level $\bar c$
+is indeed equal to the first-period consumption $c_0$
+in the incomplete markets economy, and the portfolio
+choice $b(z_{1},\bar c)$ is affordable at time $0$.
+
+Finally, we adopt the assumption of section
+\use{sec:borrowlender} that in 
+period $0$, consumers' initial $z^i_0$ are 
+independent draws from the stationary distribution  
+of their common statistical model \Ep{sprob15},
+where individual consumers are indexed by 
+$i\in[0,1]$. Under that assumption,
+together with the initial conditions of no
+outstanding debts at the beginning of period $0$,
+we have  characterized
+optimal consumption decisions  in a general equilibrium of the
+complete markets economy.
+The individual-specific draws of $z^i_0$ map 
+into different constant consumption levels 
+$\bar c^i = c^i_0$ as given by equation 
+\Ep{eq:c_null}. The cross-section distribution of consumption is time-invariant, in contrast to the
+incomplete markets economy where it spreads out over time.  And now an individual $i$'s location in the cross-section distribution of consumption is forever fixed.  He is destined to be in the same quantile forever. 
+%  Instead of
+% consumption spreading out over time as in
+% the incomplete markets economy, each consumer
+% is fixated in an unchanging initial distribution
+% of consumption inequality. 
+
+A lucky draw of $z^i_0$ at the beginning
+of period $0$ manifests itself both in perpetually 
+high consumption $\bar c^i$ described  by
+\Ep{eq:c_null} and in  
+lower indebtedness $b(z^i_{t}, \bar c)$ in 
+all future Markov states $z^i_{t}$ as described  by
+\Ep{guess102}. Evidently, the effect on 
+indebtedness is a common  downward
+shift in $b(z^i_{t}, \bar c)$ across all 
+possible Markov states $z^i_{t}$, which provides
+the financial resources  to sustain a permanently 
+a higher time invariant 
+consumption level $\bar c^i$. Differences in $b(z^i_{t}, \bar c)$ across 
+states $z^i_{t}$  serve to insure 
+against idiosyncratic shocks $w^i_{t}$ to  
+consumer $i$'s non-financial income.
+While there is  heterogeneity in  realizations
+of those idiosyncratic shocks $w^i_{t}$ and 
+the randomly drawn initial values of $z^i_0$, 
+all consumers share the same parametric 
+specification of their non-financial income processes described by  \Ep{sprob15}. It follows that the 
+optimum decision rule for indebtedness, 
+$b(\cdot, \cdot)$, is the same for all 
+consumers so that it need  bear no index $i$.
+
+The composition of 
+consumer $i$'s optimum  portfolio is time-invariant: the same bundle $b(z^i_{t+1}, \bar c^i)$
+is purchased at every date $t\geq 0$ regardless
+of the present Markov state $z^i_t$. Of course, the
+purchase price of that portfolio depends on 
+the pricing kernel $q(z^i_{t+1}|z^i_t)$ that 
+is a function of the Markov state $z^i_t$ at
+the time of purchase. As confirmed above,
+the  state-dependent purchase price of the optimum 
+portfolio, namely,  
+$$
+\int q(z^i_{t+1}|z^i_t) b(z^i_{t+1}, \bar c^i) d z^i_{t+1} \,,
+$$
+is affordable to each consumer $i$ in every 
+period $t$ and all  Markov states  $z^i_t$.
+
+Given their initial draws of $z^i_0$,
+ all consumers   
+attain  higher expected utilities  under complete 
+markets by consuming $\bar c^i$ forever. 
+In the incomplete markets economy of section \use{sec:borrowlender} in which  
+consumer $i$'s time $0$ expectations of 
+future consumption  equal 
+$E_0 c^i_t = c^i_0 = \bar c^i$ at all forecast
+horizons $t$, notice that  conditional {\it means}  equal 
+the constant consumption level $\bar c^i$ that
+consumer $i$ enjoys  in the complete markets
+economy. Consumers in the 
+incomplete markets economy attain  lower
+expected utility than they do in the complete markets economy since, while  their consumption varies
+around the same  mean as in the complete markets economy,
+the  conditional  variance of their consumption  grows
+with the forecast horizon as shown in
+\Ep{eq:spreadcons}. Consumers dislike
+variance in consumption because of their
+concave utility function.
+
+We shall study  more general complete markets models of consumption smoothing in chapter \use{recurge}
+and more general incomplete markets models in chapter
+\use{incomplete}.  In those chapters, among
+the objects to be  determined within an  equilibrium are  interest rates and state-contingent prices.
+
+
+
+
+\index{Lucas Critique}%
+\section{The Lucas Critique}\label{sec:lucascritique}%
+ We can use our chapter \use{timeseries} tools to describe reasoning that led Robert E. Lucas, Jr., (1976) to criticize some   procedures that were then  widely used in applied work, and that occasionally still are.
+Assume a jointly stationary Gaussian stochastic process for $\{x_t, y_t, d_t\}_{t=0}^\infty$ generated by   a state-space system
+$$ \EQNalign{ x_{t+1} & = A x_t + C w_{t+1}  \EQN lucas101;a \cr
+             y_t & = G x_t \EQN lucas101;b \cr
+             d_t & = S x_t \EQN lucas101;c \cr
+             S & = H G (I - \delta A)^{-1}  \EQN lucas101;d \cr} $$
+where $\delta \in (0,1)$ is a discount factor and $A$ is a stable matrix,
+ and   $x_0 \sim {\cal N}(\mu, \Sigma) $, where $\mu, \Sigma$ are the mean vector and covariance matrix, respectively, of a stationary distribution for the
+   $\{x_t\}_{t=0}^\infty$ process.\NFootnote{In applications, $A$ sometimes depends on deeper parameters.}  As usual, $w_{t+1}$ is the time $t+1$ component of   an i.i.d.~sequence of ${\cal N}(0,I)$ random vectors.
+   Here $d_t$ is a vector of decisions that  an econometrician observes. The  resolvent operator
+   $(I - \delta A)^{-1}$ appears on the right side of \Ep{lucas101;d}, reflecting that decisions embed   forecasts.   Equations \Ep{lucas101;c} and \Ep{lucas101;d} assert that $d_t$ equals a  fixed matrix $H$ times a   vector of
+forecasts of       discounted sums of current and future $y_t$ vectors, forecasts that equal  appropriate conditional expectations
+   (please see equation \Ep{discount1}). 
+   
+To fix ideas with an example, take a univariate autoregression for $\{y_t\}$, namely,
+$$ y_{t+1} = \alpha + \rho_1 y_t + \rho_2 y_{t-2} + \sigma w_{t+1}  \EQN lucas102 $$
+ that we can represent with equation \Ep{lucas101;a}-\Ep{lucas101;b}.  We can  think of
+$d_t$ as a time $t$ {\it decision\/}  and $d_t = S x_t$ as a {\it decision rule\/} that tells how a representative  economic agent  sets
+$d_t$ as a function of time $t$ information $x_t$ about future $y_{t+j}$'s, in particular, so that
+$d_t = H E_t \sum_{j=0}^\infty \delta^j y_{t+j}$ where $E_t$ denotes a mathematical expectation conditional on time $t$ information.
+Lucas (1976) offered three examples that   fit into this framework. In those examples the decisions $d_t$ were
+ choices either  of a consumption rate or  an   investment rate 
+or a labor supply (i.e., Lucas's Phillips curve example), and $y_t$ was a stochastic process embedding 
+government polices 
+(e.g., a tax rate or inflation process), forecasts
+of which influence time $t$ decisions $d_t$.\NFootnote{A variety of other examples  that we'll
+encounter later in this book also fit.  In those examples, counterparts of the parameter $\delta$
+in equation  \Ep{lucas101;d} are themselves functions of deeper parameters measuring costs of adjustment and other features of
+technologies and preferences. Also see Hansen and Sargent (1980, 1981).}
+\auth{Lucas, Robert E., Jr.}%
+
+
+By virtue of stationarity, $\bmatrix{d_t \cr x_t}$ is a  multivariate normal vector  with partitioned covariance matrix
+$\bmatrix{  \Sigma_{dd} & S\Sigma_{dx} \cr \Sigma_{xd} S' & \Sigma_{xx}}$, where $\Sigma_{xx}$ satisfies  the discrete Lyapunov equation $\Sigma_{xx}
+= A \Sigma_{xx} A' + C C'$ and $\Sigma_{dx} = S \Sigma_{xx}$.  Application of the least squares projection formula \Ep{leastsq12} confirms that  $S$  equals a matrix of population regression coefficients of $d_t$ on $x_t$
+   and that for each component of $d_t$ the $R^2$  is $1$.\NFootnote{Apply formula \Ep{leastsq12} for the matrix of regression coefficients
+    and notice that $\beta = S \Sigma_{xx} \Sigma_{xx}^{-1} = S$
+   and that the conditional covariance matrix $\hat \Sigma_{dd} = 0$.}
+
+   %
+%
+%
+%under the assumption
+%that the researcher does not understand the origin of the decision rule $S$ via restriction \Ep{lucas101;d}. Instead,
+%the researcher has a large set of observations on $\{d_t, x_t\}$ and estimates $S$ by least squares regression of $d_t$ on $x_t$.
+
+Lucas (1976) criticized a collection of  studies that had used the following faulty logic.
+
+\medskip
+
+\item{a.}  A researcher   wants to know    the decision rule for $d_t$  but  ignores that   
+ $S$ satisfies restriction \Ep{lucas101;d}.
+
+\medskip
+
+\item{b.}  The researcher gathers   historical observations on $\{d_t, x_t\}_{t=0}^T$,
+ correctly believes that $d_t = S x_t$ is a
+regression equation, and   estimates the matrix  $S$ of regression coefficients by applying  least squares  equation-by-equation.
+
+\medskip
+
+\item{c.}  Mistakenly, as it will turn out, the researcher  assumes that  estimated   decision rule %$d_t = S x_t$ that  estimated
+ %from historical data  
+ will remain  invariant under
+ arbitrary hypothetical alterations  of the right-hand side variables $\{x_t\}$, including ones that  
+ are not well   described by the historical law of motion
+ \Ep{lucas101;a}-\Ep{lucas101;b}.   Consequently, he falsely believes that he can use that estimated  decision rule to predict how variations in $\{x_t\}$ that  depart  systematically from system  \Ep{lucas101;a}-\Ep{lucas101;b}
+ %variations in $\{x_t\}$ 
+  will induce
+  systematic variations in  
+  $\{d_t\}$.\NFootnote{Of course, he could use the estimated decision rule to predict the consequences of  variations in $\{x_t\}$ that
+  {\it are \/} described by  system \Ep{lucas101;a}-\Ep{lucas101;b}.}
+
+\medskip
+
+\item{d.} Holding the historically estimated decision rule $S $ fixed,
+ the researcher simulates outcomes $\{y_t, d_t\}_{t=T+1}^{\tilde T}$
+under alternative rules for generating
+ time paths  for
+ $\{x_t\}_{t=T+1}^{\tilde T}$ and then evaluates the
+resulting $\{y_t, d_t, x_t\}_{t=T+1}^{\tilde T}$
+outcomes according to a social  welfare function that depends on these outcome paths.   %, that are functions of the joint sequence $\{d_t, x_t\}$.
+
+
+\medskip
+
+\item{e.} After
+learning how the  welfare function varies with the hypothetical rule for setting the $\{x_t\}_{t=T+1}^{\tilde T}$ sequence,
+the researcher recommends  a continuation $\{x_t\}_{t=T+1}^{\tilde T}$
+sequence that yields the best social welfare. For example, the researcher holds $S$ fix and uses it as a component
+of a state-space system to which he applies a linear-quadratic optimal control theory to be described in chapter \use{dplinear} to  recommend a
+law of motion for $x_t$ that manifests itself as a new pair of matrices $\tilde A, \tilde G$  that 
+will replace $A, G$ in the state-space representation \Ep{lucas101}, while he holds $S$ fixed at the value estimated from historical data.
+
+\medskip
+
+\item{f.} When  the  decision makers who choose $d_t$ recognize that under the new government policy  $\tilde A, \tilde G$ and not $A, G$ now  describe future $y_t$'s, they adjust their  decision rule $S$  to become 
+ $\tilde S = H \tilde G (I - \delta \tilde A)^{-1}$. The  policy maker will be disappointed to find that the regression that had been  estimated from  historical data  no longer  describes data generated
+under the new regime $\tilde G, \tilde A$.
+
+\medskip
+
+Lucas (1976) asserted  that the  line of reasoning in points (a)-(e)    characterized an influential  1940s-1960s econometric policy evaluation
+research method that  applied optimal control techniques to Keynesian and monetarist
+econometric models to propose  improved  macroeconomic policies. 
+In point (f) Lucas said that the method was flawed because it  ignored
+ the key cross-equation restrictions \Ep{lucas101;d}. Altering the policy-generating
+matrices from the $G, A$ pair that prevailed historically to the new pair  $\tilde G, \tilde A$ that describes a  hypothetical policy ``experiment'' 
+  amounts to   positing a  ``regime change'' that
+ should   systematically  alter how private decision makers make  $y_t$ depend on $x_t$, as
+ described by
+ % that would alter   the $A,G$ pair %and the associated $x_t$
+%of matrices that appears
+%in
+ system \Ep{lucas101}.  % and that governs the $\{y_t, x_t\}$ process.
+ In more detail, a 
+ change in the decision maker's  environment $G, A$   alters the moment matrices
+$ \Sigma_{xx}, \Sigma_{dx}$ and therefore the population  matrix of regression coefficient of  $d_t$ on $x_t$ that characterize outcomes
+under the new  regime. Thus,  structure \Ep{lucas101}, and in particular the cross-equation restrictions \Ep{lucas101;d},
+imply that $S$ will vary {\it systematically\/} with  hypothetical changes
+in  $\tilde G, \tilde A$, belying the assumption that $S$ is invariant to the hypothetical policy interventions being investigated.
+A concise way to say this is that the joint probability distribution of the $\{d_t, x_t\}$ process and the implied
+  probability distribution
+of $d_t$ conditional on  $x_t$ process  depend on the  triple of matrices $(A, C, G)$.
+
+Lucas (1976) summarized his argument as follows:
+
+\epigraph{$\ldots$ given that the structure of an econometric model consists of optimal decision rules of economic agents, and
+that optimal decision rules vary systematically with changes in the structure of series relevant to the decision makers, it follows
+that any change in policies will systematically affect the structure of econometric models.}{``Econometric Policy Evaluation: A Critique,'' 1976}
+
+
+ Equation \Ep{lucas101;d} is an effective way of capturing  how ``optimal decision rules vary systematically with changes in the structure of
+ series relevant to the decision makers.''  We   encountered an example of  such restrictions  on optimal decision rules in
+ section \use{sec:LQmodel} when we found that the LQ permanent income model of consumption smoothing implies an optimal decision rule
+   for consumption of the form \Ep{eqn:lucascritiquecons}. We shall encounter  more examples  in chapter \use{dplinear}.
+  We can read   Lucas (1976) as  calling for  a rational expectations econometrics that incorporates  the kinds of cross-equation
+restrictions  that system \Ep{lucas101} encodes as an essential part of a better theory of econometric policy 
+evaluation.\NFootnote{See  Sargent (1981) and the introductory essay in Lucas and Sargent (1981), a volume containing
+ early papers on  rational expectations econometrics.  See  Hansen and Sargent (1991a) for
+further
+technical contributions.}
+\index{rational expectations!econometrics}
+\auth{Lucas, Robert E., Jr.}%
+\auth{Hansen, Lars P.}%
+\auth{Sargent, Thomas J.}%
+
+
+\section{Responses to the Lucas Critique}\label{sec:lucascritique2}%
+Section \use{sec:lucascritique} mentioned a principal response to the Lucas Critique,  namely,
+rational expectations econometrics, an estimation and interpretation strategy now widely used throughout  applied economics.
+In this section, we use a  state-space system with coefficients that are functions of a finite state Markov process 
+as a vehicle to describe
+another response
+%We describe what amount to either extensions to, or  alternatives to, or elaborations of rational expectations econometrics
+that took  the perspective that 
+changes in  government  decision rules  or ``regimes''   
+unfold in ways that private agents  anticipate.  %don't occur in a vacuum but were
+%understood during the historical
+%sample period being modeled econometrically.
+%\NFootnote{Section 3 of Lucas (1976) suggested that  longstanding  evidence that coefficients in
+%macroeconomic models drifted over time reflected   the workings  of  cross-equation restrictions  
+%like \Ep{lucas101;d}.} 
+Sargent and Wallace (1976) argued that
+
+
+\epigraph{$\ldots$ new rules are not adopted
+in a vacuum. Something would cause the change -- a change in adminstrations,
+new appointments, and so on. Moreover, if rational agents live in a world in
+which rules can be and are changed, their behavior should take into account such
+possibilities and should depend on the process generating the rule changes. But
+invoking this kind of complete rationality seems to rule out normative economics
+completely by, in effect, ruling out freedom for the policymaker. For in a model
+with completely rational expectations, including a rich enough description
+of policy, it seems impossible to define a sense in which there is any scope for
+discussing the optimal design of policy rules. That is because the equilibrium
+values of the endogenous variables already reflect, in the proper way, the
+parameters
+describing the authorities' prospective subsequent behavior, including
+the probability that this or that proposal for reforming policy will be adopted.}{``Rational Expectations and the Theory of Economic Policy,''
+Sargent and Wallace (1976), p.~181}
+
+
+\auth{Wallace, Neil}%
+\auth{Sargent, Thomas J.}%
+
+This view interprets  government decisions as  random  processes
+ that are known to the private agents who  live inside a rational expectations model.  
+ Agents forecast   government decisions optimally  under those processes.
+ Sargent and Wallace's   view that  government decisions  are
+determined by a well understood process  leaves  econometricians and policy analysts with
+ no ``free parameters'' to change, giving them no scope  to offer policy advice.
+This perspective  was embraced  by
+ Christopher A. Sims (1982) and Sargent (1984).\NFootnote{Musto and Yilmaz (2003) extended the approach 
+ to a political 
+ economy  with complete financial markets.}
+ \auth{Musto, David K.}%
+ \auth{Yilmaz, Bilge}%
+ 
+\auth{Sims, Christopher A.}%
+\auth{Zha, Tao}%
+
+In describing  their vector autoregressions with regime-shifting coefficients and volatilities, Sims and Zha (2006)  link
+their work to the Lucas Critique: %\example
+\epigraph
+{The model with time variation in coefficients in all equations might be expected to fit best if there 
+were policy regime changes, and the nonlinear effects of these changes on private sector dynamics, via
+ changes in private sector forecasting behavior, were important. That this is possible was the main point 
+ of Robert E. Lucas (1972).
+$\ldots$ % as Sims (1987) has explained at more length,
+once we recognize that changes in policy must in principle themselves be modeled as 
+stochastic, Lucas's argument can be seen as a claim that a certain sort of nonlinearity is important. Even if the public believes that policy is time-varying and tries to adjust its expectation formation accordingly, its behavior could be well approximated as linear and non-time-varying. As with any use of a linear approximation, it is an empirical matter whether the linear approximation is adequate for a particular sample or counterfactual analysis.}{``Were There Regime  Switches in U.S. Monetary Policy?'' Sims and Zha (2006), p.~59}
+%\endexample
+
+
+\noindent Here we'll use chapter \use{timeseries} tools to  study the following  parts of Sims and Zha's analysis:
+
+\medskip
+\item{a.} How to represent ``nonlinearities'' in the form of dependencies of linear state-space model 
+coefficients that are functions of  a discrete  Markov state variable that
+represents a ``regime''.
+
+\medskip
+\item{b.} How agents make decisions when they  know regime transition probabilitiesand also  the current regime.
+
+\medskip
+\item{c.} How   a best-fitting fixed-coefficient linear model that does not condition on the current regime  can approximate observed 
+outcomes.
+
+
+\medskip
+
+\subsection{Markov switching linear state space model}
+
+We  can  represent the regime-change-induced 
+nonlinearities mentioned by Sims and Zha policy  with  a finite collection of linear state space models with
+ coefficients that are functions of a state $s_t$.\NFootnote{Hamilton (1989) introduces this 
+  type of model of a stochastic process  and calls it   ``non-stationary''.  If  we assume that 
+the initial marginal distribution  $\pi_0$ is  a stationary distribution, then the model  actually generates a stationary stochastic process,
+ a property that we exploit  below. Williams and Svensson (2008) and Svensson and Williams (2009) used linear quadratic dynamic programming problems with Markov-switching coefficients to model optimal
+monetary policies.}
+Let $s_t \in \{1, 2 , \ldots, n \}$ be governed by a Markov chain with transition matrix $P$, where
+$P_{ij} = {\rm Prob}(s_{t+1} = j| s_t  = i) $, $\pi_{0,i} = {\rm Prob}(s_0 = i)$, and  $\pi_{t,i} = {\rm Prob}(s_t = i)$. 
+Assume that $\{x_{t}, y_t\}_{t=0}^\infty$ is governed by  the linear state-space system 
+$$ \eqalign{ x_{t+1} & = A_{s_t} x_{t+1} + C_{s_t} w_{t+1} \cr
+                    y_t  & = G_{s_t} x_t ,  \cr  }   \EQN MSLQ $$ %
+where $x_0 $ is a random initial vector drawn from  density  $\phi_0$ and $w_{t+1} \sim {\cal N}(0,I)$ is an i.i.d.~sequence of random
+vectors and $A_{s_t}, C_{s_t}, G_{s_t}$ are matrices that are functions of the  
+Markov state $s_t$.    
+We  want to compute the conditional  mathematical expectations
+ $$ z_t = E ( \sum_{j=0}^\infty \delta^t y_{t+j} ) \Bigl| x_t, s_t . \EQN SimsZhaz_t $$
+  % and sometimes also
+  % $$ \tilde z_t =  E_{s_t} ( \sum_{j=0}^\infty \delta^t y_{t+j} ) \Bigl| x_t =  E_{s_t} z_t | x_t , $$
+  % where the last equality follows by an application of the \idx{law of iterated expectations}
+  % and where $E_{s{t_t}}$ denotes a mathematical expectation with respect to the probability distribution 
+  % of $s_t$.
+To simplify, we assume that $n=2$.
+To compute  $z_t$, the  expectation of the geometric sum of future $y_{t+j}$'s conditional on both $x_t$ and $s_t$ defined 
+in equation \Ep{SimsZhaz_t}, we begin by guessing that
+$$ z_t = H_{s_t} x_t \EQN guesszt $$
+and substitute this guess into
+$$ z_t = y_t + \delta  E  [ z_{t+1} | x_t, s_t ] $$
+to get
+$$  H_i  = G_{i}   + \delta \sum_{j} H_j A_i P_{ij}, $$
+which implies  that
+$$ \eqalign{ H_1 & = G_1 + \delta [ H_1 A_1 P_{11} + H_2 A_1 P_{12} ] \cr
+                   H_2 & = G_2 + \delta [ H_1 A_2 P_{21} + H_2 A_1 P_{22} ]. }$$
+Stacking these equations and solving for matrices $H_1, H_2$, we compute
+$$ \bmatrix{H_1 & H_2 }  = \bmatrix{G_1 & G_2}             (I - \delta \bmatrix {A_1 P_{11} & A_2 P_{21} \cr
+                                                   A_1 P_{12} & A_2 P_{22} }  )^{-1}. $$
+We have thus computed $z_t$ defined in \Ep{SimsZhaz_t}.
+
+\subsection{Time-invariant VAR}
+ We might also want to compute an associated first-order
+  time-invariant vector autoregression that is implied by   \Ep{MSLQ} and that takes the form
+  $$ x_{t+1} = \bar A x_t + v_{t+1} \EQN VARtimeinv$$
+  % where $v_{t+1} $ is a serially uncorrelated shock with mean zero and contemporaneous covariance matrix $E v_{t+1} v_{t+1}' = \bar \Sigma$.
+  where $v_{t+1}$ is orthogonal to $x_t$. 
+  Perhaps this is the type of  object that Sims and Zha had  in mind
+  when they say of the time-varying system that ``its behavior could be well approximated as linear and non-time-varying''. Or perhaps they had in mind higher than first-order vector autoregressions 
+  that involve projecting $x_{t+1}$ not just on $x_t$ but on lags $x_{t-j}, j= 1, \ldots, p$.
+To examine these issues, we shall want to compare three  conditional expectations, namely,
+$ E [ \ \cdot \  | x_t, s_t], E [ \ \cdot \ | x_t ]$, and $E [ \ \cdot \ | x^t ]$
+% $$\EQNalign{ & E [ \ \cdot \  | x_t, s_t] \EQN condE1.a \cr 
+%               & E [\cdot | x_t ] \EQN condE1.b \cr 
+%               & E [\cdot | x^t ] \EQN condE1.c \cr } $$
+where $x^t = x_t, x_{t-1}, \ldots, x_0$. A part of our story  will be to recognize that while the joint process $\{x_t, s_t\}$ is Markov, except for special $s_t$ processes,  the process $\{ x_t \}$ is not. In general then,  $ E [ \ \cdot \ | x_t ] \neq E [ \ \cdot \ | x^t ]$
+for random variables of economic interest, in which case higher order vector autoregressions fit better than 
+first-order vector autoregressions.
+
+In the remainder of this section, we restrict ourselves to situations in which $s_t$ is i.i.d.  In appendix  \use{appendixSimsZha} of this chapter, we discuss consequences of $s_t$ not being i.i.d.
+
+
+
+\subsection{I.I.D. $s_t$ process}
+
+We want to compute the conditional mean $E x_{t+1} | x_t$ and the conditional covariance 
+$ E (x_{t+1} - E(x_{t+1}| x_t))(x_{t+1} - E(x_{t+1}| x_t))^T$.  Define the indicator variables
+${\bf 1}_{s_t=1}$ and ${\bf 1}_{s_t=2}$, each of which is identically zero except when the condition in the subscript is met, when it equals $1$.   We can represent $x_{t+1}$ as 
+$$
+x_{t+1} = {\bf 1}_{s_t = 1} (A_1 x_t + C_2 w_{t+1}) + {\bf 1}_{s_t =2} (A_2 x_t + C_2 w_{t+1} ).
+$$
+Taking expectations with respect to the stationary distribution of $s_t$, we obtain
+$$
+E x_{t+1} | x_t = (\pi_1 A_1 + \pi_2 A_2 ) x_t.
+$$
+We can then represent $(x_{t+1} - E(x_{t+1}| x_t))(x_{t+1} - E(x_{t+1}| x_t))^T$ as 
+$$ 
+({\bf 1}_{s_t = 1}  C_2 w_{t+1} + {\bf 1}_{s_t =2}  C_2 w_{t+1})({\bf 1}_{s_t = 1}  C_2 w_{t+1} + {\bf 1}_{s_t =2}  C_2 w_{t+1})^T .
+$$
+Taking the expectations with respect to the stationary distribution of $s_t$ gives
+$$ E (x_{t+1} - E(x_{t+1}| x_t))(x_{t+1} - E(x_{t+1}| x_t))^T = \sum_i \pi_i C_i C_i^T .
+$$
+
+
+\auth{Hamilton, James D.}%
+\auth{Williams, Noah}%
+\auth{Svensson, Lars E. O.}%
+\auth{Sims, Christopher A.}%
+\auth{Zha, Tao}%
+
+
+
+
+
+\subsection{Example}
+Let's take an example fashioned after a rational expectations version of Philip Cagan's (1956) model of
+hyperinflation.\NFootnote{Sargent and Wallace (1973) and Sargent (1977) formulated a  rational expectations version of  Cagan's model.}   The rate of inflation is the first difference of the logarithm of the price level
+and the rate of growth of the money supply is  the first difference of the logarithm of the money supply.
+Let $p_t$ be the rate  of inflation and let $m_t$ be the rate of growth of the money supply.  Assume
+that
+$$ p_t = (1-\lambda) m_t + \lambda E_t p_{t+1},  \quad \lambda \in (0,1)  $$
+so that
+$$ p_t = (1-\lambda) E_t \sum_{j=0}^\infty \lambda^j m_{t+j} , $$
+where $E_t (\cdot)$ is a mathematical expectation conditioned on time $t$ information, which for us will be either $x_t$ or $(x_t, s_t)$, where the pair $(x_t, s_t)$ is defined as follows.
+We assume  that $s_t \in {1,2}$ is governed by a two-state Markov chain $P$ with initial distribution $\pi_0$.
+Setting  $x_t= \bmatrix{m_t & m_{t-1} }'$   lets us represent the following stochastic process for $\{m_t\}_{t=0}^\infty$ with the state-space form \Ep{MSLQ }:
+$$ m_{t+1} = \rho_{1,s_t} m_t + \rho_{2,s_t} m_{t-1} + c_{s_t}w_{t+1}, \EQN second_order_AR $$
+where $w_{t+1}$ is an i.i.d.~univariate standardized normal random variable. 
+In subsection \use{sec:cond_dist_102},
+we'll use this example
+as a vehicle for illustrating Sims and Zha's remark about how  a linear time-invariant autoregression can approximate
+a Markov-switching autoregression like \Ep{second_order_AR}.
+\auth{Cagan, Phillip}%
+\auth{Sargent, Thomas J.}%
+\auth{Wallace, Neil}%
+
+
+%\noindent{\bf Tom: add some discussion here.}
+%This example was done with the jupyter notebook in   markov_switching_lss_v16.ipynb/Dropbox/Brandon_Quentin/Quentin_2020
+
+\subsection{An example}\label{sec:cond_dist_102}%
+We can use some of the formulas above and our example in  equation \Ep{second_order_AR} to revisit Sims and Zha's (2006)
+comments about how in some circumstances   a linear time invariant autoregression can do a good job of  approximating a Markov switching autoregression.
+  We set $\beta = .95$, $(\rho_{1,1}, \rho_{2,1}, c_{1}) =
+(1.2, -.3, .5)$ and $(\rho_{1,2}, \rho_{2,2}, c_{2}) =
+(.8, 0.0, .8)$, $P = \bmatrix{.5 & .5 \cr .5 & .5}$, and $\pi_0 = \bmatrix{.5 \cr .5} $. Thus,   the one  step-ahead 
+ conditional variance is $.25$ in state $s_t=1$    and $.64$ in state $s_t=2$. 
+ In this special i.i.d. $s_t$ example,   the  $\{x_t\}$ process   is Markov and 
+$$ \eqalign{ x_{t+1}  & = \bar A x_t + v_{t+1} \cr 
+              z_t & = \bar H x_t } $$
+where 
+$$ \bar H = \bar G (I - \delta \bar A)^{-1}  , \EQN hall_mark_restr 
+$$
+ where 
+ $$ \eqalign{\bar G & = .5 G_1 + .5 G_2 \cr 
+            \bar A & = .5 A_1 + .5 A_2  .} $$
+In this special $s_t$ is i.i.d.~example,
+% in which $s_t$ is independently and identically distributed, 
+hall-mark cross-equation rational expectations restrictions of the form 
+\Ep{hall_mark_restr}   that link $\bar H$ to $\bar G$ and 
+$\bar A$ hold. 
+ Applying the preceding formulas, we
+can deduce the time-invariant second-order autoregression
+$$ m_{t+1} = 1.0 m_t - .15 m_{t-1} + v_{t+1} $$
+where $E v_{t+1}^2 = \bar \Sigma = .46$, which is to be compared with the conditional variances $.25$ in state $s_t=1$ and
+$.64$ in state $s_t = 2$.  
+For this same example, it is instructive to set the discount factor $\delta =.95$ and set $G_i =
+\bmatrix{1 & 0 \cr}'$ for $i = 1, 2$ so that $G_i$ does {\it \/} not depend on the Markov state $s_t$. 
+Then 
+$$ \bar H =  \bmatrix{5.39 & -.77 }.  $$ 
+
+In appendix \use{appendixSimsZha} of this chapter, we describe how higher-order VARs arise when the Markov-switching $s_t$ is statistically temporally dependent. 
+ 
+% \medskip
+% \noindent{\bf Request to Quentin:}  Could you please add to your notebook code for computing the quantities
+% that required to compute $\bar H$.  The preceding can be computed 
+% "analytically" using the above formulas, most of which you already have in the Jupyter notebook.
+% Another things that could be "fun" to compute would be the {\it average\/} value of $\Sigma_z(x_t)$.
+% I would recommend doing this just by running a very very long simulation and taking a time series average 
+% of $(H_i - \bar H) x_t x_t'
+% (H_i - \bar H)'$ as $s_t, x_t$ wander through time and states.  
+
+
+
+
+\auth{Sims, Christopher A.}%
+\auth{Zha, Tao}%
+
+
+
+% \noindent{\bf Quentin R0:} Please go over the code in your notebook and reorganize to have all population computations at the front
+% of the notebook. By ``population'' I mean analytic with our formulas, not the simulations with the least squares regressions. Please put that material at the end of the notebook. Please make the notebook so that Zejin can understand the flow and approve of its readability.
+
+% \noindent{\bf Quentin R1:} Please compute and display conveniently for me the objects $C_1 C_1', C_2 C_2', \bar \Sigma, \bar A$.
+
+
+% \noindent{\bf Quentin R2:} Please compute ``all of our objects'' for the above example with two $s_t$ dependent   $\rho_1, \rho_2$ vectors, namely $1.2, -.3$ and $.95, 0$ with
+% a transition matrix $P = \bmatrix{ .5 & .5 \cr .5 & .5 } $ using as $\pi_0 =\pi_\infty$ the stationary distribution $\bmatrix{.5 & .5}'$
+% or with another set of parameter values that I can input easily.  
+
+
+% \medskip
+% \noindent{\bf Quentin R3:} Please check whether $\bar H = \bar G (I -\delta \bar A)^{-1}$ and display outcomes so that Zejin and I can readily
+% spot them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Concluding remarks}
+Applications described  in this chapter are  indicative  of much  good theoretical and empirical work
+in  modern applied macroeconomics.\NFootnote{See
+Quah (1990) and Blundell and Preston (1998) for   applications
+ of some of the tools of this
+chapter and of chapter \use{dplinear} to  study some  properties of 
+consumption smooth models.} 
+In the
+next chapter, we study decision problems in which a goal is
+optimally to manage the evolution of a state vector that can be
+partially controlled.
+\auth{Quah, Danny}%
+\auth{Blundell, Richard}\auth{Preston, Ian}%
+
+\newpage
+
+
+
+\appendix{A}{Invariant subspace approach}\label{appendixinvariantsubspace}%
+%\subsection{Invariant subspace approach}
+We can glean additional insights about  the structure of the optimal
+decision rule in the section \use{sec:LQmodel} model  by solving  the decision problem
+in a mechanical but also enlightening way that
+easily generalizes to a host of problems, as we shall
+see later in chapter \use{dplinear}.
+  We can represent the system consisting of
+the Euler equation
+\Ep{sprob5}, the budget constraint \Ep{sprob2}, and the description of the
+endowment process \Ep{sprob15} as
+$$ \left[\matrix{\beta & 0 & 0 \cr
+                  0 & I & 0 \cr
+                  0 & 0 & 1 \cr}\right]
+\left[\matrix{b_{t+1} \cr z_{t+1} \cr c_{t+1} \cr} \right]
+  =     \left[\matrix{ 1 & - \check G & 1 \cr
+               0 & \check A & 0 \cr
+               0 & 0 & 1 \cr} \right]
+\left[\matrix{b_{t} \cr z_{t} \cr c_{t} \cr} \right]
+  + \left[\matrix{0 \cr \check C \cr  C_1 \cr}\right] w_{t+1} \EQN sprob17 $$
+where $C_1$ is an undetermined coefficient.  Premultiply both sides
+by the inverse of the matrix on the left and write
+$$ \left[\matrix{ b_{t+1} \cr z_{t+1} \cr c_{t+1} \cr}\right]
+   = \tilde A \left[\matrix{b_t \cr z_t \cr c_t \cr}\right]
+   + \tilde C w_{t+1}. \EQN sprob18 $$
+We want to find solutions of \Ep{sprob18} that satisfy the
+no-explosion condition \Ep{sprob3}.   We can do this
+by using machinery
+to be introduced in chapter \use{dplinear}.  The key idea is to discover what  part of
+the vector $\left[\matrix{b_t & z_t & c_t\cr}\right]'$
+is truly a {\it state\/} from the view of the decision maker, being
+inherited from the past,
+and what part is a {\it costate\/} or {\it jump\/} variable that can
+adjust at $t$.  For our problem $b_t, z_t$ are  truly components
+of the state, but $c_t$ is free to adjust. The theory
+determines $c_t$ at $t$ as a function of the true state
+variables $[b_t, z_t]$.
+A powerful approach to determining this function is the following
+so-called invariant subspace method of chapter \use{dplinear}.
+Obtain the eigenvector decomposition of $\tilde A$:
+$$ \tilde A = V \Lambda V^{-1}$$ where $\Lambda$ is a diagonal matrix
+consisting of the eigenvalues of $\tilde A$ and $V$ is a matrix of
+the associated eigenvectors. Order the eigenvalues from smallest absolute value to largest and
+form partition $\Lambda = \bmatrix{ \Lambda_1 & 0 \cr 0 & \Lambda_2 }$ where the eigenvalues in $\Lambda_1$ are less than unity in modulus
+and the eigenvalues in $\Lambda_2$ all exceed unity in modulus.  Let  $V^{-1}\equiv \left[\matrix{
+V^{11} & V^{12} \cr V^{21} & V^{22} \cr}\right]$ be the corresponding partition of $V^{-1}$.\NFootnote{It can be verifies by hand that
+for matrix $\tilde A$ defined in systems \Ep{sprob17} and \Ep{sprob18}, the matrix $\Lambda_2 = \beta^{-1}$, a scalar that exceeds unity.} Then applying
+formula \Ep{invarsub2} of chapter \use{dplinear} implies that if
+\Ep{sprob3} is to hold,  the jump variable $c_t$ must satisfy
+$$ c_t = -(V^{22})^{-1} V^{21} \left[\matrix{ b_t \cr z_t \cr}\right].
+ \EQN sprob19 $$
+Formula \Ep{sprob19} gives the unique value of $c_t$ that ensures
+that \Ep{sprob3} is satisfied, or in other words,
+that the state remains in the ``stabilizing subspace.''
+Notice that the variables on the right side of \Ep{sprob19} conform with
+those called for by \Ep{sprob9}: $-b_t$ is there as a measure
+of financial wealth, and  $z_t$ is there because it includes all variables
+that are useful for forecasting the  future endowments that appear in \Ep{sprob9}.
+
+
+\appendix{B}{Infinite-order VAR generated by Markov switching}\label{appendixSimsZha}%
+In this appendix, we describe how an infinite order VAR can arise from section \use{sec:lucascritique2}  Markov switching model.
+
+\subsection{Conditioning on  history  $x^t$}
+Consider again the Markov switching VAR studied in section \use{sec:lucascritique2}. 
+When the state $s_t$ is not i.i.d., the stochastic process $\{x_t\}_{t=0}^\infty$ is no longer Markov.
+But  under some restrictions on the eigenvalues of the $A_i$ matrices, it is possible that the doubly infinite  stochastic process $\{x_t\}_{t=-\infty}^\infty$ is  stationary. 
+In this situation,   an infinite-order vector autoregression exists that we can construct by computing the mathematical expectation of $x_{t+1}$ conditional
+on $x^t$, the history $\{x_s\}_{s=-\infty}^t$. % of $x$'s up to time $t$.
+We might also want to  compute a mathematical expectation of a geometric sum of future
+$y_t$'s conditional on $x^t$, namely, 
+$$ \tilde z_t =  E ( \sum_{j=0}^\infty \delta^t y_{t+j} ) | x^t . \EQN eq:Simszhahist $$ 
+%We let $\pi_t$ be the distribution over the finite Markov state $s_t$. Note that the
+ We start by recognizing that the probability distribution of $x_{t+1}$  conditional on $(x_t, s_t)$ is multivariate normal:
+$$  x_{t+1} | x_t, s_t   \sim {\cal N}( A_{s_t} x_t, C_{s_t}C_{s_t} ' ) . $$
+%The distribution of $x_{t+1}$ %, y_t$, and $z_t$ 
+%conditional on $x_t$ is a {\it mixture of normals}, with $\pi_{t,i}$   being the mixing probabilities over states $i$  at time $t$. 
+In Markov state
+$s_t = i$, let $\psi_i(x^*| x_t)$ be the Gaussian density  ${\cal N}( A_i x_t, C_{i}C_{i} ' )$.  
+Then  $x_{t+1}$ is distributed according to  a mixture of normals
+$$  x_{t+1}  \sim \sum_{i=1}^n \pi_{t,i} \psi_i(x^* | x_t) , \EQN mixture100  $$
+where $\pi_{t,i}$ is the   probability  that  $s_t =i $ conditional on history $x^t$.  To interpret
+formula \Ep{mixture100}, suppose that 
+at time $t$  we observe the state vector  $x_t$ but not  the regime $s_t$.
+Nature  draws $s_t$ from the time $t$ marginal distribution $\pi_t$; that determines    $A_{s_t}, C_{s_t}$;
+nature   
+then draws   $x_{t+1}$ from $ \psi_i(x^* | x_t)$. 
+At time $t$,   we know  $x_t$ and also   $x_{t-1}, x_{t-2}, \ldots, x_0$.
+These  past values of $x$  can 
+ contain  information about   $x_{t+1}$. % is contained in the preceding mixture of normals.
+
+We have remarked  that although  the joint process $\{x_t, s_t\}$ is 
+ Markov,  the process $\{x_t\}$ is {\it not} Markov unless the Markov regime $s_t$ is temporally independent. When $\{s_t\}$ is temporally statistically dependent,
+the history  
+$x^t$ % = x_t, x_{t-1}, \ldots, x_0$ 
+ carries information about $s_t$.  
+   A  way to show this
+is to compute the distribution of $x_{t+1}$ conditional on the history $x^t$.   
+ 
+Thus, let $q_{t,i} $ be the probability that $s_t = i$ after observing a history $x^t$. Let's study 
+how $q$ evolves by  starting from 
+an initial probability distribution  for $s_0$ in the form of an $n \times 1$ vector $q_0$. 
+ Application of Bayes' law implies that the vector of 
+time $t$ probabilities 
+$q_t$  conditional on $(x^t, q_0)$  can be computed recursively from 
+    $$ q_{t+1} = \left( {\frac{1}{q_t \cdot {\rm vec}\{\psi_i(x_{t+1}|x_t)\} } } \right)
+        P' {\rm diag}(q_t) {\rm vec}\{\psi_i(x_{t+1}|x_t)\}. $$ Here ${\rm diag}(q_t)$ is a diagonal matrix 
+        with components of the vector  $q_t$ on the diagonal and   ${\rm vec}\{\psi_i(x_{t+1}|x_t)\}$
+        is a vector with the density of $x_{t+1}$ conditional on $x_t$ and $s_t =i$ as its components.
+Write the recursion as 
+$$ q_{t+1} = b(x_{t+1}, x_t, q_t). \EQN bayes_nonlinstate $$
+Iterating on this recursion starting at time $1$ gives
+$$ q_{t} = \tilde b_t(x^t, q_0) . $$
+It follows that the distribution of $x_{t+1} $ conditional on $(x^t, q_0)$ is a history-dependent mixure of normals
+$$ \sum_{i=1}^n q_{t,i} \psi_i(x^* | x_t). \EQN mixture102 $$
+History dependence comes through the dependence on $x^t$ of the time $t$ mixing probabilities $q_t$.
+
+By a similar argument, from formula \Ep{guesszt} we can express    $z_t$ as an  exact function % $H_{s_t} x_t$
+of $x_t$ of the form 
+$$ z_t = I(s_t) \cdot {\rm vec} \{ H_i x_t \} , $$
+where the indicator vector $I(s_t)$ is an $n \times 1$ vector whose components are  all zeros except for a $1$ in the $i$th row when $s_t=i$.  It follows  that 
+$$ \tilde z_t = E [ z_t |  \{x_s\}_{s=0}^t, q_0]  = \sum_{i=1}^n  q_{t,i} H_i x_t,  \EQN mixture103 $$
+which shows how dependence of $z_t$ on  history $ \{x_s\}_{s=0}^t$ enters because it  contains information
+about the unobserved regime $s_t$. 
+
+% over the hidden state $s_t$.
+
+\subsection{Capturing stationarity}
+
+%It is useful to restrict  $q_0$ 
+By   imagining that the system has been running 
+ long enough, we can pretend that there is  an ``infinite past''.  In this case, under some restrictions on the eigenvalues of the $A_{s_t}$ matrices, the transition matrix $P$, and the initial probability vector $q_0$, the probability model
+provided by \Ep{bayes_nonlinstate}, \Ep{mixture102}, and  \Ep{mixture103} describe a  stationary stochastic process 
+for   $\{x_t, y_t, z_t, q_t \}$.  Since the process is stationary, the joint process for $\{x_t, y_t, z_t\}$  is  covariance
+stationary.  That means that population vector autoregressions for $y_t$ of the form
+$$ y_{t+1} = \sum_{j=0}^m b_j y_{t-j} + \epsilon_{t+1}^m $$
+with $E \epsilon_{t+1}^m y_{t-j}' =0 $ for $j =0, 1, \ldots, m$ are well defined, as are linear-least-squares 
+projections of the form
+$$ z_t = \sum_{j=0}^m h_j x_{t-j} + u_t^m $$
+where $E u_t^m x_{t-j}' = 0$.  
+Such autoregressions and  linear-least-squares projections are possibly examples of 
+the linear models that Sims and Zha (2006) had  in mind as  being   good approximations despite 
+the nonlinearities present in \Ep{mixture102}-\Ep{mixture103}. 
+
+
+\auth{Sims, Christopher A.}%
+\auth{Zha, Tao}%
+
+
+
+
+\showchaptIDfalse
+\showsectIDfalse
+\section{Exercises}
+\showchaptIDtrue
+\showsectIDtrue
+\eqnum=0
+
+\medskip
+\noindent{\it Exercise \the\chapternum.1}\quad  {\bf Consumption}  % old number 25
+\medskip
+\noindent {\bf a.}  Please use formulas \Ep{sprob16} to verify formulas  \Ep{consexample1}
+and \Ep{consexample2}-\Ep{incomemaar} of subsection \use{sec:classic_consumption}.
+\medskip
+\noindent{\bf b.} Please use formulas \Ep{muth2} to compute the decision rules
+in formulas   \Ep{consexample1} and \Ep{consexample2} for the following parameter values:
+$\delta = .95, \sigma_1= \sigma_2 =1$.
+\medskip
+\noindent{\bf c.}
+ Please use formulas \Ep{muth2} to compute the decision rules
+in formulas   \Ep{consexample1} and \Ep{consexample2} for the following parameter values:
+$\delta = .95, \sigma_1= 2,  \sigma_2 =1$.
+
+\medskip
+\noindent{\bf d.} Please use formula \Ep{debt_evolution} to confirm formulas
+\Ep{consexample1a} and \Ep{consexample1b}.\medskip
+
+\medskip
+\noindent{\it Exercise \the\chapternum.2}\quad % old number 13
+A household has preferences over
+consumption processes $\{c_t\}_{t=0}^\infty$ that are  ordered by
+$$ -  .5 \sum_{t=0}^\infty \delta^t [(c_t - 30)^2  + .000001b_t^2 ] \eqno(1)$$
+where $\delta=.95$.  The household chooses a consumption, borrowing
+plan to maximize (1) subject to the sequence of budget constraints
+$$ c_t + b_t = \beta b_{t+1} + y_t  $$ % \EQN e132 $$
+for $t \geq 0$, where $b_0$ is an initial condition,
+$\beta^{-1}$ is the one-period gross risk-free interest rate,
+$b_t$ is the household's one-period debt that is due in period $t$,
+and $y_t$ is its labor income, which obeys the second-order autoregressive
+process
+$$ (1-\rho_1 L - \rho_2 L^2)y _{t+1}  =    (1 -\rho_1 -\rho_2) 5 +
+    .05 w_{t+1} $$ % \EQN 133 $$
+where $\rho_1 =1.3, \rho_2 = -.4$.
+
+\medskip
+\noindent{\bf a.}  Define the {\it state\/} of the household  at $t$ as
+$x_t= \left[\matrix{1 & b_t & y_t & y_{t-1} \cr}\right]'$ and
+the {\it control\/} as   $u_t = (c_t -30)$.  Then express the
+transition law facing the household in the form \Ep{lasset1}.
+Compute the eigenvalues of $A$.  Compute the
+zeros of the characteristic polynomial $(1-\rho_1 z - \rho_2 z^2)$ and  compare
+them with the eigenvalues of $A$. ({\it Hint:} To compute the zeros in
+ Matlab,
+set
+%$a=\left[ \matrix{1 &  -1.3  & .4\cr}\right]$
+$a=\left[ \matrix{.4 &  -1.3  &  1 \cr}\right]$
+ and call
+{\tt roots(a)}. The zeros of $(1 -\rho_1 z  - \rho_2 z^2) $ equal
+the {\it reciprocals\/} of the eigenvalues of the associated $A$.)
+
+\medskip
+\noindent{\bf b.}  Write a Matlab program that uses the Howard improvement
+algorithm \Ep{howardimprove} to compute the household's optimal decision rule
+for $u_t = c_t -30$.   Tell how many iterations it takes for this to converge
+(also tell your convergence criterion).
+ \medskip
+\noindent{\bf c.}  Use the household's optimal decision rule
+to compute the law of motion for $x_t$ under the optimal decision rule in
+the form $$ x_{t+1} = (A - BF^*) x_t + C w_{t+1}, $$ where $u_t = - F^* x_t$
+is the optimal decision rule.  Using Matlab,
+compute the impulse response function
+of $\left[\matrix{c_t & b_t \cr}\right]'$ to $w_{t+1}$.
+Compare these with the theoretical expressions
+ \Ep{sprob16}.
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.3}\quad  {\bf Permanent income model again} % old number 27
+\medskip
+\noindent  Each of two consumers named $i=1,2$  has preferences over consumption streams
+that are ordered by
+the utility functional
+$$  E_0 \sum_{t=0}^\infty \beta^t u(c_t^i)  \leqno(1) $$
+where $E_t$ is the mathematical expectation conditioned
+on the consumer's time $t$ information,  $c_t^i$ is time $t$ consumption of consumer $i$ at time $t$,
+$u(c)$ is a strictly concave one-period utility function, and
+$\beta \in (0,1)$ is a discount factor.  The consumer maximizes
+(1)  by choosing a consumption, borrowing plan
+ $\{c_t^i, b_{t+1}^i\}_{t=0}^\infty$ subject to the sequence of budget constraints
+$$ c_t^i + b_t^i = R^{-1} b_{t+1}^i  + y_t^i  $$
+where $y_t$ is an exogenous
+ stationary endowment process, $R$ is a constant gross
+risk-free interest rate, $b_t^i$ is one-period risk-free  debt  maturing at
+$t$, and $b_0^i = 0$ is a given initial condition.  Assume
+that $R^{-1} = \beta$. We impose the following condition on the
+consumption, borrowing plan of consumer $i$:
+$$  % \lim_{T \rightarrow +\infty}
+ E_0 \sum_{t=0}^\infty \beta^t (b_t^i)^2 < +\infty. $$ % \EQN sprob3 $$
+Assume
+the quadratic  utility function
+$u(c_t) =  -.5 (c_t - \gamma)^2$,
+where $\gamma > 0 $ is a bliss level of consumption. Negative consumption  rates
+are allowed.
+
+ Let $s_t \in \{0,1\}$ be an i.i.d.~process
+with ${\rm Prob} (s_t =1) = {\rm Prob} (s_1 = 0 ) = .5$.  The endowment process
+of consumer 1 is $y_t^1 = 1 - .5 s_t$ and the endowment process of person 2 is
+$y_t^2 = .5+ .5 s_t$.  Thus, the two consumers' endowment processes are perfectly
+negatively correlated i.i.d.~processes with means of .75.
+
+
+\medskip
+\noindent{\bf a.} Find  optimal decision rules for consumption for both consumers.
+Prove that the consumers' optimal decisions imply the following laws of motion
+for $b_t^1, b_t^2$:
+$$ \eqalign{ b_{t+1}^1(s_t =0) & = b_t^1 - .25 \cr
+            b_{t+1}^1(s_t =1) & = b_t^1 + .25 \cr
+            b_{t+1}^2(s_t =0) & = b_t^2 + .25 \cr
+            b_{t+1}^2(s_t =1) & = b_t^2 - .25 \cr } $$
+\medskip
+\noindent{\bf b.} Show that for each consumer, $c_t^i, b_t^i$ are co-integrated.
+\medskip
+\noindent{\bf c.} Verify that $b_{t+1}^i$ is risk-free in the sense that conditional on
+information available at time $t$, it is independent of news arriving at time $t+1$.
+\medskip
+\noindent{\bf d.} Verify that with the initial conditions $b_{0}^1 = b_0^2 =0$, the following
+two equalities obtain:
+$$ \eqalign{ b_t^1 + b_t^2& = 0 \quad \forall t \geq 1 \cr
+             c_t^1 + c_t^2 & = 1.5 \quad \forall t \geq 1 \cr} $$
+Use these conditions to interpret the decision rules that you have computed as describing a closed pure consumption loans economy
+in which consumers $1$ and $2$ borrow and lend with each other and in which the risk-free asset is a one-period IOU from one of the consumers to the other.
+\medskip
+
+\noindent{\bf e.}  Define the `stochastic discount factor of consumer $i$' as
+$m_{t+1}^i = {\frac{\beta u'(c_{t+1}^i)}{u'(c_t^i)}}$.  Show that the stochastic discount factors of consumer $1$ and $2$ are
+$$  m_{t+1}^1 = \cases{ \beta + .25 {\frac{\beta(1-\beta)}{(\gamma- c_t^1)}} , & if $s_{t+1} = 0 $; \cr
+                          \beta - .25 {\frac{\beta(1-\beta)}{(\gamma- c_t^1)}} , & if $s_{t+1} = 1 $;    . \cr}  $$
+$$  m_{t+1}^2 = \cases{ \beta - .25 {\frac{\beta(1-\beta)}{(\gamma- c_t^2)}} , & if $s_{t+1} = 0 $; \cr
+                          \beta + .25 {\frac{\beta(1-\beta)}{(\gamma- c_t^2)}} , & if $s_{t+1} = 1 $;    . \cr}  $$
+Are the stochastic discount factors of the two consumers equal?
+\medskip
+\noindent{\bf f.} Verify that $E_t m_{t+1}^1 = E_t m_{t+1}^2 = \beta$.
+
+
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.4}\quad  {\bf IQ}. % old number 19
+\medskip
+\noindent An infinitely lived  person's `true intelligence'  $\theta \sim {\cal N}(100, 100)$, i.e., mean 100, variance 100. For each date $t \geq 0$,
+the person takes a `test' with the  outcome being a univariate random variable   $y_t = \theta + v_t$,
+where $v_t$ is an i.i.d.~process with distribution ${\cal N}(0, 100)$. The person's initial IQ is $IQ_0=100$ and at date  $t\geq 1$ before the date $t$ test is
+taken it is ${\rm IQ}_t = E \theta | y^{t-1}$, where $y^{t-1}$ is the history of test scores from date $0$ until date $t-1$.
+
+\medskip
+\noindent{\bf a.}  Give a recursive formula for ${\rm IQ}_t$ and for $E ({\rm IQ}_t - \theta)^2$.
+\medskip
+\noindent {\bf b.}  Use Matlab to simulate 10 draws of $\theta$ and associated paths of $y_t, {\rm IQ}_t$ for $t=0, \ldots, 50$.
+\medskip
+\noindent {\bf c.}  Prove that $  \lim_{t\rightarrow \infty} E ({\rm IQ}_t - \theta)^2=0$.
+
+
+
+\medskip
+\noindent {\it Exercise \the\chapternum.5}\quad  {\bf IQ again} % old number 36
+
+\medskip
+\noindent Latent intelligence is a scalar random variable $\theta \sim {\cal N}(\mu_\theta, \sigma_\theta^2)$.  An applicant for college
+takes $k$ tests whose scores are a $k\times 1$ random vector governed by
+$$ y = \lambda \theta + u \leqno(1) $$
+where $\lambda$ is a known $k\times 1 $ vector,  $u \sim {\cal N}(0, \Sigma_u)$, and $E u \theta =0$.
+% Sometimes the covariance matrix $\Sigma_u$ is
+diagonal, but that is not necessary.
+  The mean and variance parameters $\mu_\theta, \sigma_\theta$ and the covariance matrix
+$\Sigma_u$ as well as the vector of ``loadings'' $\lambda$ are all known.  A testing service summarizes results of the
+test as a single score $IQ = E [\theta | y]$, the mathematical expectation of the student's  $\theta$ conditional on his/her test scores $y$.
+Please show that $IQ$ is an affine  function of $y$ and give formulas for the constant and slope coefficients as functions
+of the known parameters $\lambda, \mu_\theta, \sigma_\theta, \Sigma_u$.
+
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.6}\quad  {\bf Math and verbal IQ's} % old number 26
+\medskip
+\noindent An infinitely lived  person's `true intelligence' $\theta$ has two components, math ability $\theta_1$ and
+verbal ability $\theta_2$, where  $\theta \sim {\cal N}\Biggl(\bmatrix{100 \cr 100},  \bmatrix{100 & 0 \cr 0 & 100}\Biggr)$.
+ For each date $t \geq 0$,
+the person takes a single `test' with the  outcome being a univariate random variable   $y_t = G_t \theta + v_t$,
+where $v_t$ is an i.i.d.~process with distribution ${\cal N}(0, 50)$ and $G_t =\bmatrix{.9 & .1 }$ for $t = 0, 2, 4, \ldots$ and
+$G_t = \bmatrix{.01 & .99}$ for $t=1, 3, 5, \ldots$.  Here the person takes a math test at $t$ even and a verbal test at $t$ odd (but you have to know
+how to read English to survive the math test, and you have to know how to tell time in order to plan your time allocation well for the verbal test).
+ The person's initial IQ vector is $IQ_0=\bmatrix{100 \cr 100}$ and at date  $t\geq 1$ before the date $t$ test is
+taken it is ${\rm IQ}_t = E \theta | y^{t-1}$, where $y^{t-1}$ is the history of test scores from date $0$ until date $t-1$.
+
+\medskip
+\noindent{\bf a.}  Give a recursive formula for ${\rm IQ}_t$ and for $E ({\rm IQ}_t - \theta)({\rm IQ}_t - \theta)'$.
+\medskip
+\noindent {\bf b.}  Use Matlab to simulate 10 draws of $\theta$ and associated paths of $y_t, {\rm IQ}_t$ for $t=0, \ldots, 50$.
+\medskip
+\noindent {\bf c.} Show computationally or analytically  that $\lim_{t\rightarrow +\infty}E({\rm IQ}_t - \theta)({\rm IQ}_t - \theta)'=\bmatrix{0 & 0 \cr 0 & 0}$.
+
+
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.7}\quad  {\bf Invertibility} % old number 28
+\medskip
+\noindent A univariate stochastic process $y_t$ has a first-order moving
+average representation
+$$ y_t = \epsilon_t - 2 \epsilon_{t-1} \leqno(1) $$
+where $\{\epsilon_t\}$ is an i.i.d.~process distributed
+${\cal N}(0,1)$.
+
+\medskip
+\noindent{\bf a.}  Argue that $\epsilon_t$ cannot be expressed as as linear combination of
+$y_{t-j}, j \geq 0$ where the sum of the squares of the weights is finite.  This means
+that $\epsilon_t$ is not in the space spanned by square summable linear combinations
+of the infinite history $y^t$.
+\medskip
+\noindent{\bf b.}  Write equation (1) as a state space system, indicating the matrices
+$A, C, G$.
+\medskip
+\noindent {\bf c.} Using the matlab program {\tt kfilter.m} \mtlb{kfilter.m}%
+to compute an innovations representation for $\{y_t\}$.  Verify that the innovations
+representation for $y_t$ can be represented as
+$$ y_t = a_t - .5 a_{t-1} \leqno(2) $$
+where $a_t = y_t - E [y_t| y^{t-1} ] $ is a serially uncorrelated process.
+Compute the variance of $a_t$.  Is it larger or smaller than the variance of $\epsilon_t$?
+
+\medskip
+\noindent{ \bf d.}  Find an autoregressive representation for $y_t$ of the form
+$$ y_t = \sum_{j=1}^\infty A_j y_{t-j} + a_t \leqno(3) $$
+where $E a_t y_{t-j} = 0 $ for $j \geq 1$. ({\it Hint:} either use formula (2) or else  remember formula \Ep{VAR1}.)
+
+\medskip
+\noindent{\bf e.}  Is $y_t$ Markov?  Is $\bmatrix{y_t & y_{t-1}}'$ Markov? Is $\bmatrix{y_t & y_{t-1} & \cdots & y_{t-10}}'$ Markov?
+
+\medskip
+\noindent{\bf f.}  Extra credit.  Verify that $\epsilon_t$ {\it can\/} be expressed as a square summable linear combination
+of $y_{t+j}, j\geq 1$.
+
+
+
+
+\medskip
+\noindent {\it Exercise \the\chapternum.8}\quad  {\bf Muth and Kalman again} % old number 32
+
+
+\medskip
+\noindent Consider the linear state space system
+$$\eqalign{ x_{t+1} & = \rho x_t + c w_{t+1} \cr
+            y_t & = x_t + v_t , } \ \leqno(1) $$
+where $ \rho \in [0, 1)$ and $c$ are scalars, $\{w_t\}_{t=0}^\infty$ is an i.i.d.~scalar process with $w_t \sim {\cal N}(0,1)$,
+ $\{v_t\}_{t=0}^\infty $ is an i.i.d.~process of measurement errors with $E v_t w_{s+1} = 0$ for all $t\geq 0 $ and $s\geq 0 $ with
+ $v_t \sim {\cal N}(0,r)$ with $r >0$, and $x_0$ is a random initial value distributed as $x_0 \sim {\cal N}(0, {\frac{c^2}{1 - \rho^2}})$. (Note: Muth (1960)
+ considered the limiting case in which $\rho \uparrow  1$.)
+ \auth{Muth, John F.}%
+ \auth{Kalman, Rudolf}%
+
+
+\medskip
+
+\noindent{\bf a.} Is the univariate process $\{x_t\}_{t=0}^\infty$  Markov?
+
+
+\medskip
+\noindent {\bf b.} Please compute the stationary distribution of the stochastic process $\{x_t\}$ and compare it to the initial distribution
+assumed here.
+
+\medskip
+\noindent{\bf c.} Is the univariate process $\{y_t\}_{t=0}^\infty$ Markov?
+
+\medskip
+
+\noindent {\bf d.}  Find an {\it innovations representation\/} for $\{y_t\}_{t=-\infty}^\infty$ of the time-invariant form
+$$\eqalign{ \hat x_{t+1} & = \rho \hat x_t + k a_t \cr
+            y_t & = \hat x_t + a_t,  } \ \leqno(2) $$
+where $k$ is a regression coefficient,  $\hat x_t = E x_t | y^{t-1}$, $a_t = y_t - E [y_t | y^{t-1}] $,  $a_t$ is by construction serially uncorrelated and homoskedastic
+with $E [a_t| y^{t-1}] = 0$ and $E a_t^2 = \omega$, and $y^{t-1}$ is the semi-infinite history $y_t, y_{t-1}, \ldots$.
+Please fill in the blanks in this sentence: ``$k$ is the regression coefficient of $\underline{ \ \ \ \ \ \ \ \ \ \ }$  on $\underline{ \ \ \ \ \ \ \ \ \ \ }$.''
+Please give formulas for $k$ and $\omega$.
+
+
+
+\medskip
+
+\noindent{\bf e.} Please verify the following formulas:
+$$ \eqalign{ \hat x_{t+1} & = k \sum_{j=0}^\infty (\rho - k)^j y_{t-j}  \cr
+             y_t & = k \sum_{j=0}^\infty (\rho - k)^j y_{t-j-1} + a_t , }$$
+where $a_t $ is orthogonal to $y_{t-j-1}$ for $j \geq 1$ so that the second equation is an {\it autoregressive representation} or {\it autoregression}
+for $y_t$. Please verify that $E[ y_{t+1} | y^t] = \hat x_{t+1}$.
+
+
+
+\medskip
+
+\noindent{\bf f.} Where $s^t = [s_t, s_{t-1}, \ldots, s_0]$ for a scalar process $\{s_t\}_{t=-\infty}^\infty$, please verify the following formulas:
+$$ \eqalign{ x_t & = c \sum_{j=0}^\infty \rho^j w_{t-j} \cr
+             y_t & =   c \sum_{j=0}^\infty \rho^j w_{t-j} + v_t \cr
+             E[y_t | w^{t-1}, v^{t-1}] & = c \sum_{j=1}^\infty \rho^j w_{t-j} \cr
+             E ( y_t - [y_t | w^{t-1}, v^{t-1}])^2 & = c^2 + r .}$$
+Please verify that the  prediction error variance    $E ( y_t - [y_t | w^{t-1}, v^{t-1}])^2$ is less than
+the prediction error variance $E a_t^2$.  Please explain why.
+
+\medskip
+\noindent {\bf g.}  Where $L$ is the lag operator presented in % appendix A of chapter 2 of RMT5, %
+appendix \use{appa1} of  chapter \use{timeseries},
+ please verify the following formula:
+$$ a_t = {\frac{1}{1- (\rho-k)L}} \left[ cw_t + (1-\rho L) v_t \right]. \leqno(\dagger) $$
+Please interpret this formula as showing how the contemporaneous scalar shock $a_t$ reflects ``old news'' in the form of past
+$w_t$'s and past $v_t$'s.  Please interpret the discrepancy in variances of one-step ahead prediction errors that you computed
+in part {\bf f} in light of this formula.
+
+\medskip
+\noindent{\bf h.} Show that while ${\frac{1}{1- (\rho-k)L}} \left[ cw_t \right]$ and
+${\frac{1}{1- (\rho-k)L}} \left[ (1-\rho L) v_t \right]$ are both serially correlated processes, their sum $a_t$ is not. Please interpret this
+peculiar situation.
+
+
+%
+\medskip
+\noindent {\it Exercise \the\chapternum.9}\quad  {\bf From shocks to innovations, I} % old number 33
+
+\medskip
+\noindent
+Consider again the setting described in exercise  {\it \the\chapternum.8\/}.  Let $\{y_t\}_{t=-\infty}^\infty$ be the covariance stationary scalar
+stochastic process appearing in exercise {\it \the\chapternum.8\/}.  We begin by introducing a
+covariance generating function defined as the $z$-transform of the autocovariance sequence $\{c_y(\tau)\}_{\tau =-\infty}^\infty$,
+where $c_y(\tau) = E y_t y_{t-\tau}$.  The covariance generating function is
+$$ S_y(z) = \sum_{j=\infty}^\infty c_y(j) z^j.$$  Using the original state-space representation for $y_t$, it can be verified that
+$$ \eqalign{ S_y(z) & = r + \left({\frac{c}{1-\rho z}}\right) \left({\frac{c}{1-\rho z^{-1}}} \right) \cr
+                    & = {\frac{c^2 + r(1-\rho z)(1 - \rho z^{-1} ) }{(1 -\rho z)(1 -\rho z)}} \cr
+                    & = {\frac{ c^2 + r(1 + \rho^2) - r \rho z - r \rho z^{-1}}{(1 -\rho z)(1 -\rho z^{-1})}}. } $$
+(The spectral density defined in section \use{sec:spectrum} is the covariance generating function obtained by setting $z= e^{-i \omega}, \omega \in [-\pi, \pi]$.)
+ Using  the innovations representation for $\{y_t\}$ instead of the original state-space representation cast in terms of the hidden state $x_t$,
+ it can  be verified that the covariance generating function also equals
+$$ S_y(z) =  {\frac{\omega ( 1 - (\rho -k )z)( 1 - (\rho - k)z^{-1} )}    {(1 -\rho z)(1 -\rho z^{-1})}} .  $$
+The denominators in both representations of $S_y(z)$ are equal and the numerators in both representations must also be equal.  Therefore,  it must be  true that
+$$   c^2 + r(1 + \rho^2) - r \rho z - r \rho z^{-1} = \omega ( 1 - (\rho -k )z)( 1 - (\rho - k)z^{-1}) . \leqno(1)  $$
+The left side is a  quadratic  polynomial in $z$. The right side factors this polynomial. The
+zeros of the quadratic polynomial  in $z$ evidently form  a reciprocal pair  $(\rho -k), (\rho -k)^{-1}$.\NFootnote{Such a reciprocal pairs property
+characterizes large classes of linear filtering problems and linear optimal control problems.  We shall encounter more examples in chapter
+\use{dplinear}.}  Equation   (1) as an instance of a more general   {\it  spectral factorization identity\/} (see Hansen and Sargent (2013, p.~164).)
+ Also, please note the steady state Kalman filter generates a Kalman
+gain $k$ that is a key to  achieving the factorization.
+\index{spectral factorization identity}%
+\auth{Hansen, Lars P.}%
+\auth{Sargent, Thomas J.}%
+
+Now take representation ($\dagger$) for $a_t$ from exercise {\it \the\chapternum.8\/} and use it to compute the covariance generating
+function of the innovation process $\{a_t\}$:
+$$ \eqalign{ S_a(z) & = {\frac{c^2}{(1 - (\rho - k) z) (1 - (\rho - k) z^{-1})}} + {\frac{r (1 - \rho z) (1 - \rho z^{-1})}{(1 - (\rho -k)z)
+         ( 1 - (\rho - k) z^{-1}) }} \cr
+         & = {\frac{  c^2 + r(1 + \rho^2) - r \rho z - r \rho z^{-1}  }  { ( 1 - (\rho -k )z)( 1 - (\rho - k)z^{-1})  }} .  } $$
+It follows from the preceding equation and  factorization identity (1) that
+$$ S_a(z) = \omega,  $$
+which implies that $c_a(j) = 0 $ for $j \neq 0$ and $c_a(0) = \omega$. This confirms that   $\{a_t\}$ is a serially uncorrelated process with variance $\omega$.
+
+\medskip
+\noindent {\bf a.} Please verify the preceding calculations.
+
+\medskip
+\noindent{\bf b.}  Please plot the spectral density $S_a(e^{-i \omega})$ against $\omega \in [0, \pi]$ and compare it with those of the scalar processes
+depicted in   Figures \Fg{r2red1a}, \Fg{r2red1b}, \Fg{r2red1d}, and \Fg{r2red1c} from section \use{sec:spectrum}.
+
+
+\medskip
+\noindent {\it Exercise \the\chapternum.10}\quad  {\bf From shocks to innovations, II} % old number 34
+
+
+\medskip
+\noindent Consider a state space system and the associated time-invariant innovations representation,
+which we repeat here for convenience. The original system is
+$$ \eqalign{ x_{t+1} & = A x_t + C w_{t+1} \cr
+         y_t & = G x_t  + v_t } \leqno(1)  $$
+where $\{w_{t+1}\}_{t=0}^\infty $ is an i.i.d.~sequence with $w_{t+1} \sim {\cal N}(0,I)$ for all $t$
+and $\{v_t\}_{t=0}^\infty$ is an i.i.d.~sequence with $v_t \sim {\cal N}(0, R)$ for all $t$; and $E w_t' v_s = 0$
+for all $t$ and $s$.
+The associated time-invariant ``innovations representation'' state-space system is
+$$ \eqalign{ \hat x_{t+1} & = A \hat x_t + K a_t \cr
+              y_t & = G \hat x_t + a_t. } \leqno(2) $$
+Here $C w_{t+1}$ are the shocks hitting the hidden state $x_{t+1}$ conditional on  $x_t$,
+$v_t$ are shocks or measurements hitting $y_t$ conditional on $G x_t$, and $a_t = y_t - E [y_t | y^{t-1}]  $ are
+shocks hitting $y_t$ given the infinite history $y^{t-1} = [ y_{t-1}, y_{t-2}, \ldots ]$.
+The shock $a_t$ is i.i.d.~with distribution $a_t \sim {\cal N} (0, \Omega)$.
+
+\medskip
+\noindent{\bf a.} Please provide formulas for $K$ and $\Omega$.
+
+\medskip
+
+\noindent{\bf b.} Please deduce from the above pair  of state-space systems a single state-space  system that maps the
+shocks $w_{t+1}, v_{t+1}$ into the innovation $a_{t+1}$ and verify that it takes the form:
+
+$$ \eqalign{ \bmatrix{x_{t+1} \cr \hat x_t \cr v_{t+1} } & = \bmatrix{A & 0 & 0 \cr
+                                                                    K G & (A-KG) &  K \cr
+                                                                    0 & 0 & 0 }
+                                                           \bmatrix{x_t \cr \hat x_t \cr v_t } +
+                                                           \bmatrix{ C & 0 \cr
+                                                             0 & 0 \cr
+                                                             0 & I }
+                                                             \bmatrix{ w_{t+1} \cr v_{t+1} }  \cr
+              a_t & = \bmatrix{ G & - G & I } \bmatrix{ x_t \cr \hat x_t \cr v_t } }    \leqno(3)                                             $$
+
+\medskip
+
+\noindent {\bf c.}  Please use formulas from section \use{sec:stochlinear}    to compute moving average representations and autocovariograms
+for the process $\{a_t\}$.
+Is $\{a_{t}\}$ a serially correlated process?
+
+
+\medskip
+\noindent{\bf d.}  Please use  formulas from part {\bf c.} to deduce impulse response functions of $a_t$ to $w_t$ and of
+$a_t$ to $v_t$ so that $a_t = \sum_{j=0}^\infty g_j w_{t-j} +  \sum_{j=0}^\infty h_j v_{t-j}$.  Please represent the
+autocovariance function of $\{a_t\}$ as the sum of the autocovariance functions of $\sum_{j=0}^\infty g_j w_{t-j} $
+and $\sum_{j=0}^\infty h_j v_{t-j}$ and  verify that $E a_t a_{t-j}' = 0 $ for $j\neq 0$. (Feel free to write a Matlab or Python program
+to perform these calculations and verifications.)
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.11}\quad  {\bf A monopolist, learning, and ergodicity} % old number 23
+\medskip
+ \noindent A monopolist  produces a quantity $Q_t$ of a single good in every period $t \geq 0$ at zero cost.
+ At the beginning of each period $t \geq 0$, before output price $p_t$ is observed, the monopolist sets quantity $Q_t$ to maximize
+$$ E_{t-1} p_t Q_t \leqno(1)  $$
+where $p_t$ satisfies the linear inverse demand curve
+$$ p_t = a - b Q_t + \sigma_p \epsilon_{t}  \leqno(2) $$
+where $b>0$ is a constant known to the firm,  $\epsilon_t$ is an i.i.d.~scalar with distribution $\epsilon_t \sim {\cal N}(0,1)$, and the constant
+in the inverse demand curve
+$a$ is a  scalar random variable unknown to the firm and whose  unconditional distribution is $a \sim {\cal N}(\mu_a, \sigma_a^2)$,
+where $\mu_a>0$ is large relative to $\sigma_a>0$. Assume that the random variable $a$  is independent of $\epsilon_t$ for all $t$. Before the firm chooses
+$Q_0$, it knows the unconditional distribution of $a$, but not the realized value of $a$. For each $t \geq 0$, the firm wants to estimate  $a$ because it wants to make a good decision about output $Q_t$.
+ At the end of each period $t$, when it must set $Q_{t+1}$, the firm observes $p_t$ and also of course knows the value of $Q_t$ that it had
+ set.
+ In (1), for $t \geq 1$,  $E_{t-1} (\cdot) $ denotes the mathematical expectation conditional on the history of signals $p_s, q_s, s= 0, \ldots, t-1$;
+for $t=0$, $E_{t-1} (\cdot)$ denotes the expectation conditioned on no previous  observations of $p_t, Q_t$.
+
+\medskip
+\noindent {\bf a.}    What is the optimal setting for $Q_0$?  For each date $t \geq 0$, determine the firm's optimal setting for  $Q_t$ as a function
+of the information $p^{t-1}, Q^{t-1}$ that the firm has when it sets $Q_t$.
+\medskip
+\noindent{\bf b.}  Under the firm's optimal policy, is  the pair $(p_t, Q_t)$ Markov?
+\medskip
+\noindent{\bf c.} `Finding the state is an art.' Find a recursive representation of the firm's optimal policy for setting $Q_t$ for $t \geq 0$.  Interpret the state variables that you
+propose.
+\medskip
+\noindent  {\bf d.} Under the firm's optimal rule for setting $Q_t$, does  the random variable $ E_{t-1} p_t$  converge to a constant
+as $t \rightarrow +\infty$?  If so, prove that it does and find the limiting value. If not, tell why it does not converge.
+\medskip
+\noindent {\bf e.}  Now suppose that instead of maximizing (1) each period, there is a single infinitely lived monopolist who
+once and for all before time $0$ chooses a plan for an entire sequence  $\{Q_t\}_{t=0}^\infty$, where the $Q_t$ component has to be a measurable function
+of $(p^{t-1}, q^{t-1})$, and where the monopolist's objective is to maximize
+$$ E_{-1} \sum_{t=0}^\infty \beta^t p_t Q_t \leqno(3)  $$
+where $\beta \in (0,1)$ and $E_{-1}$ denotes the mathematical expectation conditioned on the null history. Get as far as you can
+in deriving the monopolist's optimal sequence of decision rules.
+
+
+
+
+
+
+
+
+
+
+
+\eqnotracefalse
+%\showchaptIDtrue

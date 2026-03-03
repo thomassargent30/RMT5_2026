@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+
+\usepackage{tikz}
+
+\begin{document}
+\begin{figure}
+\centering
+\begin{tikzpicture}[xscale=8, yscale=8]
+\draw [<->] (0,1) -- (0,0) -- (1,0);  % Axes
+\draw [domain=0:0.4] plot (\x, {1.25*\x});  % Slope
+\draw [ultra thick, domain=0.4:0.8] plot (\x, {1.25*\x});  % Slope
+\draw [ultra thick] (0, 0.5) -- (0.4,0.5);  % Thick part of horizontal line
+\draw (0.4,0.5) -- (1.,0.5);  % Thin part of horizontal line
+\draw [dotted] (0.4,0) -- (0.4,0.5);  % Dotted line
+\draw (0.1,0) arc [radius=0.1, start angle=0, end angle=51.5];  % Angle
+
+% Labels
+\node [above right] at (0.095, 0.03) {$1/(1-\beta)$};
+\node [left] at (0,1) {\large $v$};
+\node [left] at (0,0.5) {\large $\frac{\bar{w}}{1-\beta}$};
+\node [below right] at (1,0) {\large $w$};
+\node [below ] at (0.4,0) {\large $\bar{w}$};
+
+\draw [<->] (0.01,-.09) -- (0.39,-.09);
+\node[below] at (0.2,-.1)%
+{\large Reject the offer};
+
+\draw [<-] (0.41,-.09) -- (1.,-.09);
+\node[below] at (0.7,-.1)%
+{\large Accept the offer};
+
+\end{tikzpicture}
+\caption{The function $v\left(w\right)=\max\left\{ w/\left(1-\beta\right),
+c+\beta\intop_{0}^{B}v\left(w'\right)dF\left(w'\right)\right\} $. The
+reservation wage $\bar{w}=\left(1-\beta\right)\left[c+\beta\intop_{0}^{B}v
+\left(w'\right)dF\left(w'\right)\right]$.}
+\end{figure}
+
+\end{document}

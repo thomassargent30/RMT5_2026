@@ -1,0 +1,6 @@
+
+Also, can I suggest a minor terminology modification/clarification for RMT from class? Would you be willing to consider the modification of the usage of ergodic outside ergodic  processes in ch 2 be changed to “(mean) ergodic”. The reason is, as I am sure you are aware, like identification, ergodic is a highly abused term that is thrown around quite a bit to refer to multiple (related) things in an informal way.
+
+I guess if we were to use ergodic on it's own, the nature definition is from measure preserving dynamical systems, where it is a property of a measure preserving map T, such that for any E, st. E=T^-1(E), the measure of E is 0 or 1.
+
+This is more general, as, for example, I believe it implies the induced probability measure over sequences is equal to the measure over space.

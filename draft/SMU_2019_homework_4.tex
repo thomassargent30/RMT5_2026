@@ -1,0 +1,99 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{Advanced Macro and Time Series \hfil SMU}
+\line{Winter 2019 \hfil Thomas Sargent}
+
+%\centerline{\bf Practice problems}
+\centerline{\bf Take Home Final Examination}
+
+
+\medskip
+
+\noindent{\bf Instructions:}  Please feel free to work  in groups of 3 or 4 students. But please hand in your own work. This take home final is
+due on  Thursday Feb 28.
+
+\medskip
+
+\noindent{\bf Multiple roles of $\theta_t$}
+
+\medskip
+
+\noindent This question is based on the quantecon lecture ``Ramsey Plans, Time Inconsistency, Sustainable Plans'' -- the second lecture in the Python
+``Dynamic Programming Squared'' section, which  we studied in detail in last Thursday's class. 
+
+\medskip
+\noindent The lecture shows how to  represent a Ramsey plan
+$ \vec \mu $ recursively with the following system created in the spirit of Chang in the quantecon lecture. 
+In particular, in the end we obtained the recursive representation:
+$$
+\eqalign{
+\theta_0 & = \theta_0^* \cr
+\mu_t &  = b_0 + b_1 \theta_t \cr
+\theta_{t+1} & = d_0 + d_1 \theta_t } \leqno(1) $$
+
+\medskip
+
+\noindent We can think of the  sequence
+$ \{\theta_t\}_{t=0}^\infty $ as a sequence of
+synthetic ``promised inflation rates'' that are just computational devices for
+generating a sequence $ \vec\mu $ of money growth rates that are to
+be substituted into the following equation in order to form actual rates of inflation:
+
+$$
+\theta_t = {\frac{1}{1+\alpha}} \sum_{j=0}^\infty \left(\frac{\alpha}{1+\alpha}\right)^j \mu_{t+j}. \quad \leqno(2)
+$$
+
+\noindent where $\alpha \in (0,1)$.
+
+\medskip
+\noindent{\bf a.} Please describe in detail an algorithm that compute the parameters $\theta_0^*, b_0, b_1, d_0, d_1$ that appear in
+system (1).  
+\medskip
+
+\medskip
+\noindent{\bf b.}  Please tell why the inflation rate $ \theta_t $ that appears in system (1) and 
+equation (2) can be thought of as  playing three roles simultaneously:
+
+  * In equation (2), $ \theta_t $ is the actual rate of inflation
+  between $ t $ and $ t+1 $
+  
+  * $ \theta_t $ is also the public's
+  expected rate of inflation between $ t $ and $ t+1 $
+
+  * $ \theta_t $ is a promised rate of inflation
+  chosen by the Ramsey planner at time $ 0 $  
+
+
+\medskip 
+\noindent{\bf c.} Please provide  representation of the Ramsey planner's optimal  $\vec \mu$, i.e., its Ramsey plan.
+
+
+\medskip
+\noindent{\bf d.} Please verify that your representation  of a Ramsey plan guarantees that promised
+inflation equals actual inflation. 
+
+
+\medskip \noindent {\it Hint:} Some  ``Big $K$, little $k$'' logic might help you.
+
+
+\bye
+
+
+
+
+
+
+\bye

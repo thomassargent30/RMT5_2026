@@ -1,0 +1,114 @@
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{PhD Macroeconomics \hfil NYU}
+\line{October 6, 2023 \hfil Thomas Sargent}
+%
+% \noindent Macroeconomics Q1 \hfill NYUAD \\
+% Fall, 2019 \hfill Thomas Sargent
+% \vspace{.3cm}
+
+\centerline{\bf Practice Problem}
+%\centerline{\bf Homework 3}
+
+
+\medskip
+
+\noindent{\bf Instructions:}  Please solve this fun problem.
+
+%\noindent {\bf 1. 15 points  \quad}
+
+\medskip
+\noindent{\bf 1.  \ } 
+  A consumer has preferences over consumption streams
+that are ordered by
+the utility functional
+$$  E_0 \sum_{t=0}^\infty \beta^t u(c_t)  \leqno(1) $$
+where $E_t$ is the mathematical expectation conditioned
+on the consumer's time $t$ information,  $c_t$ is time $t$ consumption,
+$u(c)$ is  utility function, and
+$\beta \in (0,1)$ is a discount factor.  The consumer maximizes
+(1) by choosing a consumption, borrowing plan
+ $\{c_t, b_{t+1}\}_{t=0}^\infty$ subject to the sequence of budget constraints
+$$ c_t + b_t = R^{-1} b_{t+1}  + y_t  , \quad t \geq 0$$
+where $\{y_t\}$ is an exogenous
+ stationary endowment process, $R$ is a constant gross
+risk-free interest rate, $b_t$ is one-period risk-free  bond   maturing at
+$t$, and $b_0 $ is a given initial debt that is due at time $0$.  Assume that for $t \geq 1 $, $b_t$ is chosen at time $t-1$.  Assume
+that $R^{-1} = \beta$.  Assume that the endowment
+process is governed by
+$$ \eqalign{ y_{t+1} & = \alpha_c
++ \sum_{j=1}^2 \rho_j y_{t-j+1}  + \sum_{j=1}^2
+ \delta_j  z_{t+1-j}  + \psi_1 w_{1,t+1} \cr
+  z_{t+1} & = \sum_{j=1}^2 \gamma_j y_{t-j+1} + \sum_{j=1}^2 \phi_j z_{t-j+1}
++ \psi_2 w_{2,t+1}
+   \cr} \leqno(1)   $$
+where $\{w_{t+1}\}$ is an i.i.d.  sequence of  $2 \times 1$ vectors of random shock whose time $t+1$ component is  distributed as ${\cal N}(0,I)$
+%martingale difference
+%sequence,  adapted to \hfil \break $J_t = \left[\matrix{w_t & \ldots w_1 &
+%c_{0} & c_{-1} & z_0 & z_{-1}\cr}\right]$, with contemporaneous
+%covariance matrix $E w_{t+1}w_{t+1}' | J_t = I$, 
+ and the
+coefficients  $\rho_j, \delta_j, \gamma_j, \phi_j$ are such
+that
+the matrix
+$$ A = \left[\matrix{ \rho_1 & \rho_2 & \delta_1 &\delta_2 & \alpha_c \cr
+                      1 & 0 & 0 & 0 & 0 \cr
+                     \gamma_1 & \gamma_2 & \phi_1 &\phi_2 & 0 \cr
+                     0 & 0 & 1 & 0 & 0 \cr
+                     0 & 0 & 0 & 0 & 1 \cr }\right]$$
+has eigenvalues less than or equal to unity in modulus.
+
+\medskip
+\noindent {\bf a.}. Assume that the utility function $u(c) = \ln c$ %satisfies $u' > 0, u''< 0$ 
+for all $c \geq 0$ and  the ``borrowing limit'' $b_t \leq \bar b$ for some $\bar b > 0$. Formulate the
+consumer's problem as a dynamic program.
+Write pseudo-code to solve it.
+\medskip
+\noindent{\bf b.}
+Now  assume the
+the quadratic  utility function
+$$u(c_t) =  -.5 (c_t - \gamma)^2 \leqno(2) $$
+where $\gamma >0$ is a bliss level of consumption.
+Assume that $\bar b =+\infty$ so that there is no borrowing limit.
+%
+%GGHH 
+%We assume that the endowment
+%process has the state-space representation
+%$$ \eqalign{ z_{t+1} & = \check A z_t + \check C w_{t+1}\cr
+%               y_t & = \check G  z_t \cr}$$
+%where $w_{t+1}$ is an i.i.d.~process with mean zero and
+%identity contemporaneous covariance matrix, $\check A$ is a stable matrix,
+%its eigenvalues being strictly below unity in modulus, and
+%$\check G$ is a vector. The {\it state\/} vector confronting the household at $t$  is
+%$\left[\matrix{b_t & z_t\cr}\right]'$, where $b_t$ is its one-period debt falling
+% due at the beginning of period $t$
+%and $z_t$ contains all variables useful for
+%forecasting its future endowment.
+Formulate the consumer's problem as a dynamic program and guess a solution.
+Justify your guess.
+
+\medskip
+\noindent {\bf c.}. Continue  to assume utility function (2), but now replace the part {\bf a}   borrowing limit  with 
+the following condition on the
+consumption, borrowing plan:
+$$  % \lim_{T \rightarrow +\infty}
+ E_0 \sum_{t=0}^\infty \beta^t b_t^2 < +\infty.  $$
+%This condition suffices to rule out Ponzi schemes.
+Formulate the consumer's problem as a dynamic program and write pseudo-code to solve it.
+  
+\bye
+
+\bye
+

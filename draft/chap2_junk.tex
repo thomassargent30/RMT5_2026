@@ -1,0 +1,169 @@
+\index{covariance stationary}
+\medskip
+%\specsec{Definition:}
+\definition{def:covstat}  A stochastic process $\{x_t\}$ is said to
+be {\it covariance stationary\/} if it
+satisfies the following two properties: (a) the mean is
+independent of time,
+ $ E x_t = E x_0$ for all $t$,
+ and (b) the sequence of autocovariance matrices
+ $E(x_{t+j} - E x_{t+j})(x_t - E x_t)'$
+depends on the separation between dates
+ $j = 0, \pm 1, \pm 2, \ldots$, but not on $t$.
+\enddefinition
+\smallskip
+
+
+
+
+
+=================================
+
+ We shall deduce
+starting values for the mean and covariance
+that make the process covariance
+stationary, though our formulas are also useful for describing
+what happens when we start from other initial conditions that
+generate transient behavior that stops the process from being covariance
+stationary.
+
+=====================
+
+
+We use
+\definition{stable}
+A square real valued matrix $A$ is said to be {\it stable\/} if
+all of its eigenvalues modulus   are strictly less than
+unity.
+\enddefinition
+\smallskip
+
+We will make an assumption that guarantees that there exists an initial
+condition $(\mu_0, \Sigma_0) = (Ex_0, E(x - Ex_0) (x-Ex_0)')$  that makes
+the $x_t$ process covariance stationary.
+Either of the following conditions works:
+
+\medskip
+\specsec{Condition A1:}  All of the eigenvalues of $A$ in
+\Ep{statesp1} are strictly less than $1$ in modulus.
+
+
+
+
+==============================
+
+
+============================
+
+A fixed point of the matrix difference equation \Ep{Sigma_diff} evidently  satisfies
+$$ \Sigma_\infty = A \Sigma_\infty A' + C C' .  \EQN diff5 $$
+A fixed point $ \Sigma_\infty  $
+ is the covariance matrix $E (x_t -\mu) (x_t - \mu)'$ under  a stationary distribution of $x$.
+%
+% Thus, to compute $C_x(0)$, we  must solve
+% $$ C_x(0)   =
+%    A C_x(0) A^\prime  + C C' ,\EQN diff5 $$
+% where $C_x(0) \equiv E (x_t -\mu) (x_t - \mu)'$.
+Equation \Ep{diff5} is
+a {\it discrete Lyapunov} equation in the $n \times n$ matrix
+$\Sigma_\infty$.  It can be solved with the Matlab program {\tt
+doublej.m}. % ^^|doublej.m|
+\mtlb{doublej.m}%
+
+============================
+
+
+In the special case that $\Sigma_t = \Sigma_\infty$ that solves the discrete Lyapunov equation
+\Ep{diff5}, $\Sigma_{t+j,t} = A^j \Sigma_\infty$ and so depends only on the gap $j$ between time
+periods. In this case, an autocovariance  matrix sequence $\{\Sigma_{t+j,t}\}_{j=0}^\infty$ is often  also called an {\it
+autocovariogram}.  \index{autocovariogram}%
+
+
+===============================
+
+
+
+diff2   mu motion
+
+Sigma_diff sigma motion
+
+============== Jan 29 2019 removed 
+
+
+\section{Population regression}\label{sec:populationregression}%
+\index{population regression}%
+This section explains the notion of a population regression
+equation.  \index{regression!population}%
+  Suppose that we have a state-space system \Ep{statesp1} with
+initial conditions that make it covariance stationary. We can use
+the preceding formulas to compute the second moments of any pair
+of random variables.  These moments let us compute a linear
+regression.   Thus, let $X$ be a $p \times 1$ vector of random
+variables somehow selected from the stochastic process $\{y_t\}$
+governed by the system \Ep{statesp1}.
+   For example,  let $p=  2m$, where
+$y_t$ is an $m \times 1$ vector, and take $X =  \bmatrix{y_t \cr y_{t-1}\cr}$ for any $t \geq 1$.   Let $Y$ be any scalar
+random variable selected from the $m \times 1$ stochastic process
+$\{y_t\}$.  For example, take $Y = y_{t+1,1}$ for the same $t$
+used to define $X$, where $y_{t+1,1}$ is the first component of
+$y_{t+1}$.
+
+  We consider the following least-squares approximation problem:
+find a  $1\times p$ vector of real numbers $\beta$ that attain
+$$ \min_\beta E (Y -  \beta X)^2.  \EQN leastsq  $$
+Here $ \beta X$ is being  used to estimate $Y$, and we want the
+value of $\beta$ that minimizes the expected squared error. The
+first-order necessary condition for minimizing $E (Y -  \beta
+X)^2$ with respect to $\beta$ is
+$$ E  (Y -  \beta  X) X' = 0 , \EQN normal$$
+which  can be rearranged as\NFootnote{That
+ $E X'X$ is nonnegative definite implies that
+the second-order conditions for a minimum of condition \Ep{leastsq} are
+satisfied.}
+$$ \beta =  (  E    YX') [E(X X')]^{-1}.  \EQN leastsq2  $$
+
+  By using the formulas \Ep{diff2}, \Ep{diff5}, \Ep{diff6},  and
+\Ep{ydiff2}, we can compute $E  X X'$ and $E Y X'$ for whatever
+selection of $X$ and $Y$ we choose. The condition \Ep{normal} is
+called the least-squares normal equation.  It states that the
+projection error $Y - \beta X $ is orthogonal to $X$. Therefore,
+we can represent $Y$ as
+$$ Y =  \beta X + \epsilon \EQN regress $$
+where $E  \epsilon X' =0$.   Equation \Ep{regress} is called a
+population regression equation, and $\beta X $ is called the least-squares
+projection of $Y$ on $X$ or the least-squares regression of $Y$ on
+$X$. The vector $\beta$ is called the population least-squares
+regression vector.
+ The law of large numbers for continuous-state Markov processes,
+\Theorem{LLNMarkovcontinuous},
+\index{law of large numbers}%
+states conditions  that guarantee that sample moments converge to
+population moments, that is, ${1 \over S} \sum_{s=1}^S  X_s X_s'
+\rightarrow E  X X' $ and ${ 1\over S} \sum_{s=1}^S  Y_s X_s'
+\rightarrow E  Y X'$. Under those conditions, sample least-squares
+estimates converge to $\beta$. \index{regression equation}
+\index{least-squares projection}
+
+
+  There are as many such regressions  as there are ways of selecting
+$Y, X$.    We have shown how a model (e.g., a triple $A, C, G$,
+together with an initial distribution for $x_0$) restricts a
+regression.    Going backward, that is, telling what a given
+regression tells about a model, is more difficult. Many regressions tell little about the model, and what little they
+have to say can be difficult to decode.    As we indicate in sections \use{sec:estimation1} and \use{sec:estimation2}, the \idx{likelihood
+function} completely describes what a given data set says about a model in a way that  is straightforward to decode.
+
+  \subsection{Multiple regressors}
+Now let $Y$ be an $n \times 1$ vector of random variables and
+think of regression solving the least squares problem for each of
+them to attain a representation
+$$ Y = \beta X  + \epsilon \EQN leastsq10 $$
+where $\beta$ is now $n \times p$ and $\epsilon$ is now an $n
+\times 1$ vector of least squares residuals.  The population
+regression coefficients are again given by
+$$ \beta = E(Y X') [E(X X')]^{-1} . \EQN leastsq12 $$
+We will use this formula repeatedly in section \use{sec:Kalman100} to derive
+the Kalman filter.\index{Kalman filter}%
+
+
+

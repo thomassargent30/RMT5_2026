@@ -1,0 +1,359 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{Teacher Evaluation Form \hfil NYU}
+\line{September 27, 2019 \hfil Thomas Sargent}
+
+\centerline{\bf  Quiz}
+%\centerline{\bf Homework 3}
+
+
+\medskip
+
+\noindent{\bf Instructions:} This exam consists of  ``inverse problems'' that assert answers and invite you to state  associated questions.
+ Thus, each item below is a Bellman equation for an intertemporal  optimum problem.  Your job is please to
+state completely the optimum problem to which that Bellman equation corresponds. 
+
+\medskip
+\noindent {\bf Note:} An ``intertemporal problem'' is stated in terms of  infinite sequences indexed by time $t = [0, 1, 2, \ldots, )$.
+
+
+
+\medskip
+
+\noindent{\bf 1.}
+Assume that  $F(P)$ is a right continuous function mapping $[0, B]$ into $[0,1]$ and that the real scalar $c > 0$.  For what intertemporal problem is the following
+a Bellman equation?
+$$ v(p) = \min \{p, c + \int v(p') d F(p') \}$$
+
+\medskip
+
+
+
+\noindent {\bf 2.}  Assume that  $F$ is a right continuous function mapping $[0, B]$ into $[0,1]$ and that $\beta \in (0,1)$. For what intertemporal problem is the following a Bellman equation?
+$$ v(w) = \max\left\{ {w\over{1-\beta}},  \beta \int v(w') d F^2(w') \right\} $$
+
+
+
+\medskip
+\noindent{\bf 3.} Where $x \in {\bf R}$, $f >0, d >0 $,   $\beta \in (0,1)$, and $g \in  {\bf R} \rightarrow {\bf R}$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) =  \{- f x^2 - d(gx  - x)^2 + \beta v(gx) \} $$
+
+
+\medskip
+\noindent{\bf 4.}   Where $x \in {\bf R}$, $f >0, d >0 $, and   $\beta \in (0,1)$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) = \max_{x'} \{ - f x - d(x' - x)^2 + \beta v(x') \} $$
+
+
+\medskip
+\noindent {\bf 5.} Where $x \in {\bf R}$, $f >0, d >0 $, $\sigma >0$,    $\beta \in (0,1)$, and $\phi$ is a univariate normal density function for a random
+variable with mean $0$ and variance $1$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) = \max_{u} \{ - f x - d u^2 + \beta \int v(x +u + \sigma \epsilon) d \phi(\epsilon) \} $$
+
+
+
+\medskip
+
+
+
+\noindent {\bf 6.}  Assume that  $F$ and $G$ are distinct  right continuous functions each mapping $[0, B]$ into $[0,1]$, that $\pi \in (0,1)$, and  that $\beta \in (0,1)$. For what intertemporal problem is the following a Bellman equation?
+$$ v(w) = \max\left\{ {w\over{1-\beta}},  \beta [  \pi \int v(w') d F(w') + (1-\pi) \int v(w') d G(w') ]  \right\} $$
+
+
+
+
+\bye
+
+
+
+\medskip
+\noindent{\it Exercise 3.1}
+\medskip \noindent  Consider a consumer who wants to choose $\{c_t\}_{t=0}^T$ to maximize
+$$\sum_{t=0}^T \beta^tc_t  \quad  , \;\;  0< \beta<1$$ subject to the intertemporal budget constraint
+$$\sum_{t=0}^T R^{-t}[c_t-y_t]=0  \quad  , \;\;  R>1$$ where $c_t\geq0$ and $y_t>0$ for $t=0,\cdots,T$. Here $R>1$ is the gross interest rate $(1+r),\;\; r>0$. Assume $R$ is constant. Here $\{y_t\}_{t=0}^T $ is an exogenous sequence of ``labor income''.
+\medskip
+\noindent {\bf a.} Assume that $\beta R < 1$. Find the optimal path $\{c_t\}_{t=0}^T$.
+\medskip
+\noindent {\bf b.} Assume that $\beta R > 1$. Find the optimal path $\{c_t\}_{t=0}^T$.
+\medskip
+\noindent {\bf c.} Assume that $\beta R = 1$. Find the optimal path $\{c_t\}_{t=0}^T$.
+
+\medskip
+\noindent{\it Exercise 3.2}
+\medskip
+\noindent
+ A representative consumer has preferences ordered by
+ $$ \sum_{t=0}^\infty \beta^t \log(c_t), \;\;  0< \beta<1$$
+ where $\beta = {\frac{1}{1+\rho}}, \rho>0$, and $c_t$ is the consumption per worker.
+The technology is $$ y_t=f(k_t)=zk_t^\alpha, \;\; 0<\alpha<1, \;\; z>0 $$
+where $y_t$ is the output per unit labor and $k_t$ is capital per unit labor
+$$\eqalign{
+y_t & =c_t+x_t+g_t \cr
+  k_{t+1} & =(1-\delta)k_t+x_t, \;\;  0 < \delta<1 \cr
+}$$
+and $x_t$ is  gross investment per unit of labor and $g_t$ is  government expenditures per unit of labor.
+Assume a competitive equilibrium with a price system $\{q_t,\eta_t,w_t\}_{t=0}^\infty$ and a government policy $\{g_t,T_t\}_{t=0}^\infty$, where
+$g_t$ is government consumption and $T_t$ is a lump sum tax at time $t$.
+
+ Assume that the government finances its expenditures by levying lump sum taxes. There are no distorting taxes. Assume that at time 0, the economy begins
+ with a capital per unit of labor $k_0$ that equals the steady state value appropriate for an economy in which $g_t$ had been zero forever.
+\medskip
+\noindent {\bf a.} Find a formula for the steady state capital stock when $g_t=0 \; \forall t$.
+\medskip
+
+\noindent {\bf b.} Compare the steady state capital labor ratio $\overline{k}$ in the competitive equilibrium with the capital labor ratio $\tilde{k}$ that maximizes steady state consumption per capita, i.e ,
+ $\tilde{k}$ solves $$\tilde{c}=\max_k \left( f(k)-\delta k \right) $$
+Is $\tilde{k}$ greater than or less that $\overline{k}$? If they differ, please tell why. Is $\tilde{c}$ greater or less than $\overline{c} = f(\overline{k})-\delta  \overline{k}$? Explain why.
+\medskip
+
+\noindent {\bf c.} Now assume that at time 0, $g_t$ suddenly jumps to the value $g={\frac{1}{2}}\overline{c}$ where
+$\overline{c}$ is the value of consumption per capita in the initial steady state in which $g$ was zero forever. Starting from $k_0 = \overline{k}$ for the old $g=0$ steady state, find the time paths of $\{c_t,k_{t+1}\}_{t=0}^\infty$ associated with the new path $g_t=g>0 \; \forall t$ for government expenditures per capita.
+Also show the time path for $\bar R_{t+1} \equiv (1-\delta) + f'(k_{t+1})$
+Explain why the new paths are as they are.
+
+
+
+\medskip
+\noindent{\it Exercise 3.3}
+\medskip
+\noindent
+ Assume
+
+ A representative consumer has preferences ordered by
+ $$ \sum_{t=0}^\infty \beta^t \log(c_t), \;\;  0< \beta<1$$
+ where $\beta = {\frac{1}{1+\rho}}, \rho>0$, and $c_t$ is the consumption per worker.
+The technology is $$ y_t=f(k_t)=zk_t^\alpha, \;\; 0<\alpha<1, \;\; z>0 $$
+where $y_t$ is the output per unit labor and $k_t$ is capital per unit labor
+$$\eqalign{
+y_t & =c_t+x_t+g_t \cr
+  k_{t+1} & =(1-\delta)k_t+x_t, \;\;  0 < \delta<1 \cr
+}$$
+and $x_t$ is  gross investment per unit of labor and $g_t$ is  government expenditures per unit of labor.
+Assume a competitive equilibrium with a price system $\{q_t,\eta_t,w_t\}_{t=0}^\infty$ and a government policy $\{g_t,T_t\}_{t=0}^\infty$, where
+$g_t$ is government consumption and $T_t$ is a lump sum tax at time $t$.
+
+
+Suppose that you observe the path for consumption per capita in figure 1. Say what you can about the likely behavior over time of $k_t$, $\bar R_t =[1 + (f'(k_t)-\delta)]$, $g_t$ and $T_t$. (You are free to make up any story that is consistent with the model.)
+
+\medskip
+
+
+\midfigure{fig_7_1}
+\centerline{\epsfxsize=2.5truein\epsffile{fig_7_1.eps}}
+\caption{Consumption per capita.}
+%\infiglist{fig_7_1}
+\endfigure
+
+
+
+
+\medskip
+\noindent{\it Exercise 3.4}
+\medskip
+\noindent Assume the same economic environment as in the previous  problem. Assume that someone has observed the  time path for $c_t$ in figure 2.
+\medskip
+\midfigure{fig_7_2}
+\centerline{\epsfxsize=2.5truein\epsffile{fig_7_2.eps}}
+\caption{Consumption per capita.}
+%\infiglist{fig_7_2}
+\endfigure
+\medskip
+\noindent {\bf a.} Describe a consistent set of assumptions about the fiscal policy that explains this time path for
+$c_t$. In doing so, please distinguish carefully between changes in taxes and expenditures that are \underbar{foreseen} versus \underbar{unforeseen}.
+
+\medskip
+\noindent {\bf b.} Describe what is happening to $k_t,\bar R_t$ and $g_t$ over time. Make whatever assumptions you must to get a complete but consistent story - here ``consistent'' means ``consistent with the economic environment we have assumed''.
+
+
+\midfigure{FN_2}
+%\centerline{\epsfxsize=2.25truein\epsffile{FN_2_tom.eps}}
+\centerline{\epsfxsize=2.25truein\epsffile{fig_11.4.eps}}
+\caption{Capital stock as function of time in two economies with different values of $\gamma$.}
+%\infiglist{FN_2}
+\endfigure
+
+\medskip
+\noindent{\it Exercise 3.5}
+\medskip
+\noindent
+ The structure of the  economy is identical to that described in the previous exercise.
+Assume that $\{g_t, T_t\}_{t=0}^\infty $ are all constant sequences (their values don't change over time).
+In this problem, we ask you to infer  differences
+across two economies in which all aspects of the economy are identical {\it except} the parameter $\gamma$ in the utility function and maybe the level
+of lump sum taxes $T_t$ imposed.  In both economies, $\gamma > 0$.  In one economy, $\gamma >0$ is high and in the other it is low.
+Among other identical features, the two economies have identical government policies and identical initial capital stocks.\medskip
+\medskip
+
+\noindent{\bf a.}   Please look at figure 3. Please tell which outcome for $\{k_{t+1}\}_{t=0}^\infty$ describes the low $\gamma$ economy, and which describes the high $\gamma$ economy.
+Please explain your reasoning.\medskip
+
+\noindent{\bf b.}   Please look at figure 4. Please tell which outcome for $\{f'(k_t)\}_{t=0}^\infty$ describes the low $\gamma$ economy, and which describes the high $\gamma$ economy.
+Please explain your reasoning.
+\medskip
+
+\noindent{\bf c.} Please plot time paths of consumption for the low $\gamma$ and the high $\gamma$ economies.
+\medskip
+
+
+
+
+\midfigure{FN_3}
+%\centerline{\epsfxsize=2.25truein\epsffile{FN_3_tom.eps}}
+\centerline{\epsfxsize=2.25truein\epsffile{fig_11_5.eps}}
+\caption{Marginal product of capital as function of time in two economies with different values of $\gamma$.}
+%\infiglist{FN_3}
+\endfigure
+\medskip
+
+\medskip
+\noindent{\it Exercise 3.6} \quad {\bf Trade and growth} \medskip
+\medskip
+\noindent
+{\bf Part  I}
+\medskip \noindent
+Consider the problem of a planner in a small economy. When the economy is closed to international trade, the planner chooses $\{c_t,k_{t+1}\}_{t=0}^\infty$ to maximize
+$$ \sum_{t=0}^\infty \beta^t u(c_t), $$
+where $ 0< \beta<1, \beta = {\frac{1}{1+\rho}}, \rho>0$
+subject to
+$$c_t+k_{t+1}=f(k_t)+(1-\delta)k_t,  \quad  \delta \in (0,1)$$
+\noindent where $u(c_t)={\frac{c_t^{1-\gamma}}{1-\gamma}}$, $\gamma>0$, $f(k_t)=zk_t^\alpha$, and $0<\alpha<1$.
+
+
+\medskip
+\noindent
+Let $\overline{k}$ be the steady state value of $k_t$ under the optimal plan.
+\medskip
+\noindent{\bf a.} Find a formula for $\overline{k}$.
+\medskip
+\noindent{\bf b.} Assume that $k_0<\overline{k}$. Describe time paths for $\{c_t,k_{t+1}\}_{t=0}^\infty$ and $\bar R_{t+1}=(1-\delta) + f'(k_{t+1})$.
+\medskip
+\noindent{\bf c.} What is the steady state value of $\bar R_{t+1}$?\medskip
+
+\noindent{\bf d.} Is $\bar R_{t+1}$ less or greater than its steady state value when $k_{t+1} < \overline{k}$?
+
+\medskip\noindent
+{\bf Part  II}
+\medskip \noindent
+Now assume that the economy is open to international trade in capital and financial assets. Assume that there is a fixed world gross rate of return $R=\beta^{-1}$ at which the planner can borrow or lend, what is often called a `small open economy' assumption.
+The planner can use the proceeds of borrowing to purchase goods on the international market. These goods can be used to augment capital or to consume.\medskip \noindent
+Let $\overline{k}_0$ be the level of initial capital $(\overline{k}_0<\overline{k})$ before the country opens up to trade just before time 0.  Let $\overline{k}_0$ be the same initial capital per capita $\overline{k}_0 < \overline{k}$ studied in parts {\bf a}-{\bf d}.\medskip \noindent
+At time $t=-1$, after $\overline{k}_0$ was set, trade opens up. At time $t=-1$, the planner can issue IOU's or bonds in amount $B_{-1}$ and use the proceeds to purchase capital, thereby setting
+$$k_0=\overline{k}_0+B_{-1} $$
+where $B_{-1}$ is denominated in time -1 consumption goods. The bonds are one period in duration and bear the constant world gross interest rate $R=\beta^{-1}$.
+For $t\geq 0$, the planner faces the constraints
+$$ c_t+k_{t+1}+RB_{t-1}=f(k_t)+(1-\delta)k_t+B_t$$
+Here $RB_{t-1}$ is the sum of interest and  principal on the bonds issued at $t-1$ and $B_t$ is the amount of one-period bonds issued at $t$. \medskip \noindent
+The planning problem in the small open economy is now to choose $\{c_t,k_{t},B_t\}_{t=0}^\infty$ and $B_{-1}$, subject to $\overline{k}_0$ given. (Notice that $k_0$ is a choice variable and that $\overline{k}_0$ is an initial condition.)
+Please solve the  planning problem in the small open economy and compare outcomes to those in the closed economy.
+ Is  welfare $\sum_{t=0}^\infty \beta^t u(c_t)$ higher in the ``open'' or ``closed'' economy?
+
+
+
+
+
+
+
+\noindent {\bf EXTRA CREDIT:}
+
+
+
+
+
+
+\medskip
+\noindent{\it Exercise 3.7}
+\quad {\bf Trade and growth, version II} \medskip\noindent
+{\bf Part  I}
+\medskip \noindent
+Consider the problem of the planner in a small economy. When the economy is \underbar{closed to trade}, the planner chooses $\{c_t,k_{t+1}\}_{t=0}^\infty$ to maximize
+$$ \sum_{t=0}^\infty \beta^t u(c_t), \quad  0< \beta<1, \quad  \beta = {{\frac{1}{1+\rho}}}, \rho>0$$
+subject to
+$$c_t+k_t+1=f(k_t)+(1-\delta)k_t,  \delta \in (0,1)$$
+\noindent where% $$\eqalign{u(c_t)={\frac{c_t^{1-\gamma}}{1-\gamma}} \quad  &, \;\; \gamma>0\cr
+%f(k_t)=zk_t^\alpha \quad &,\;\;0<\alpha<1
+%}$$
+\medskip
+\noindent
+Let $\overline{k}$ be the steady state value of $k_t$ under the optimal plan.
+\medskip
+\noindent{\bf a.} Find a formula for $\overline{k}$.
+\medskip
+\noindent{\bf b.} Assume that $k_0 > \overline{k}$. Describe time paths for $\{c_t,k_{t+1}\}_{t=0}^\infty$ and $\bar R_{t+1}=(1-\delta) + f'(k_{t+1})$.
+\medskip
+\noindent{\bf c.} What is the steady state value of $\bar R_{t+1}$?\medskip
+
+\noindent{\bf d.} Is $\bar R_{t+1}$ less or greater than its steady state value when $k_{t+1} > \overline{k}$?
+
+\medskip\noindent
+{\bf Part  II}
+\medskip
+\noindent{\bf e.} Now assume that the economy is open to international trade in capital and financial assets. Assume that there is a fixed world gross rate of return $R=\beta^{-1}$ at which the planner can borrow or \underbar{lend}.
+In particular, the planner is free to use the following plan. The planner can sell all of its capital $\overline{k}_0$ and simply consume the interest payments.
+\noindent
+Let $\overline{k}_0$ be the level of initial capital $(\overline{k}_0>\overline{k})$ just before the country opens up to trade just before time 0.  Let $\overline{k}_0$ be the initial capital per capita $\overline{k}_0 >\overline{k}$ studied in parts {\bf a}--{\bf d}.
+At time $t=-1$, after $\overline{k}_0$ was set, trade opens up. At time $t=-1$, the planner \underbar{sells} $\overline{k}_0$ in exchange for IOU's or bonds from the rest of the world in the amount $A_{-1}=\overline{k}_0$.
+\medskip \noindent
+The bonds $A_{-1}$ are one-period in duration and bear the constant world gross interest rate $R=\beta^{-1}$.
+After the sale of $\overline{k}_0=A_{-1}$, the planner has \underbar{zero} capital and so shuts down the technology. Instead, the planner uses the asset market to smooth consumption. The planner chooses $\{A_{t+1},c_t\}$ to maximize
+$$ \sum_{t=0}^\infty \beta^t u(c_t),  \quad   0< \beta<1,\quad   \beta = {\frac{1}{1+\rho}},  \quad \rho>0$$
+subject to
+$c_t+\beta A_{t+1}=A_t,  A_0 = \overline{k}_0 .$
+Please find the optimal path for consumption $\{c_t\}$.
+%                   Form the Lagrangian
+%$$L = \sum_{t=0}^\infty \beta^t \{u(c_t) + \lambda_t[\beta^{-1}(A_t-c_t)-A_{t+1}]\}$$
+%
+% $$\eqalign{ FONC &\colon \cr
+%c_t &\colon\; u'(c_t)-\lambda_t\beta^{-1}=0 \cr
+%A_t &\colon\; -\beta^-1\lambda_{t-1} + \beta^{-1}\lambda_t=0 \cr
+%&\lim_{T\to\infty}\beta^{T}\lambda_T A_{T+1}=0 \cr
+%\Rightarrow\;\; &\lambda_t  =\lambda_0 \;\; \forall t \cr
+%&u'(c_t) =u'(c_0)\;\; \forall t \cr
+%&c_t =c_0\;\; \forall t \cr
+%$The$&$n rollover assets and just consume interest:$ \cr
+%&A_{t+1} =\beta^{-1}[A_t -c_t] \Rightarrow \cr
+%&\bar A =\beta^{-1}[\bar A -c_0] \cr
+%&(1-\beta^{-1})\bar A = -c_0 \cr
+%& \quad $or$ \cr
+%& c_0  =(\beta^{-1}-1)\bar A \cr
+%& c_0  =(1+\rho-1)\bar A \cr
+%& c_0 =\rho \bar A \quad, \;\; \bar A= A_0=\overline{k}_0 \cr\
+%}$$
+%\medskip
+%\noindent
+%Thus, the optimal path for consumption is c_t = \rho \bar A=\rho \overline{k}_0
+\medskip
+\noindent{\bf f.} Compare the path of $(c_t,k_{t+1},\bar R_t)$ that you computed in parts {\bf a}-{\bf d} with ``no trade'' with the part {\bf e} path ``with trade'' in which the government ``shuts down the home technology'' and lives entirely from the returns on foreign assets. Can you say which path the representative consumer will prefer?
+%\medskip \underbar{Hint:} I think it could go either way for reasons that might be easier to appreciate after you look at part g.
+\medskip
+\noindent{\bf g.} Now return to the economy in part {\bf e} with $\overline{k}_0>\bar k$ from part {\bf d}.  Assume that the planner is free to borrow or lend capital at the fixed gross interest of $\beta^{-1}=1+\rho$, as before. But now assume the planner chooses the \underbar{optimal} amount of $\overline{k}_0$ to sell off and so does not necessarily sell off the entire $\overline{k}_0$ and possibly continues to operate the technology.
+
+\medskip
+\indent {\bf i)} Find the solution of the planning problem.\medskip
+%\underbar{Hint:} You might want to review your solution to problem 2 of the practice problem 4.
+%\medskip
+\indent {\bf ii)} Explain why it is optimal not to shut down the technology. {\bf Hint}: Starting from having shut the technology down, think of putting a small amount $\epsilon$ of capital into the technology-this earns $z\epsilon^\alpha$ and costs $\rho \epsilon$ in terms of foregone interest. Because $0<\alpha<1$, $\rho\epsilon<z\epsilon^\alpha$ for small $\epsilon$. Thus, the technology is \underbar{very productive} for small $\epsilon$, so it is efficient to use it.
+
+%\vfil\eject
+
+
+
+\bye
+
+
+
+
+
+
+\bye

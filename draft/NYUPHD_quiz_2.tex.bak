@@ -1,0 +1,210 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{Teaching tools  \hfil NYU}
+\line{October 7, 2019 \hfil Thomas Sargent}
+
+\centerline{\bf  Fun Exercises}
+%\centerline{\bf Homework 3}
+
+\medskip
+
+\noindent{\bf Instructions:} This document consists of  ``inverse problems'' that assert answers and invite you to state  associated questions.
+ Thus, for example, an  item below might be a Bellman equation for an intertemporal  optimum problem.  Your job then is  to
+state completely an optimum problem associated with that Bellman equation.
+
+\medskip
+\noindent {\bf Note:} An ``intertemporal problem'' is stated in terms of  infinite sequences indexed by time $t = [0, 1, 2, \ldots, )$.
+
+
+
+
+\medskip
+
+\noindent{\bf 1.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q) - \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \eqalign{ \hat Q & = H(Q) \cr
+            \hat q & = h(q, Q) .} $$
+Please interpret the following Bellman equation in terms of a problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q,Q)) + \beta v\left(h(q,Q), H(Q)\right) .$$
+
+\medskip
+
+
+\noindent{\bf 2.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q) - \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \hat Q  = H(Q)  $$
+Please interpret the following Bellman equations in terms of a problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q, Q) ) + \beta v\left(h(q,Q), H(Q)\right) = \max_{\hat q} \{\pi(q, Q) + \beta v(\hat q, H(Q) )   \} $$
+
+\medskip
+
+\noindent{\bf 3.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q) - \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \hat Q  = H(Q)  $$
+Assume that the following Bellman equations are satisfied: %in terms of problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q,Q)) + \beta v\left(h(q,Q), H(Q)\right) = \max_{\hat q} \{\pi(q, Q) + \beta v(\hat q, H(Q) )   \} $$
+
+\noindent Please interpret what it means to impose the condition
+
+$$ h(Q, Q) = H(Q) .$$
+
+\medskip
+
+\noindent{\bf 4.}  There are two firms indexed by $i = 1,2$.  A subscript $i$ indicates a  firm $i$ object  and a subscript $-i$ indicates
+a firm {\it not\/} $i$ object (i.e, it indicates the other firm). Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 (q_1 + q_2)  \cr
+           \pi_i  &  = p q_i - \gamma(\hat q_i - q_i)^2 } $$
+so that
+$$ \pi(q_i, q_{-i}, \hat q_i) = [a_0 - a_1 (q_i + q_{-i}) ] q_i - \gamma (\hat q_i - q_i)^2 . $$
+Let the following Bellman equations hold for $i=1,2$:
+$$ v_i(q_i, q_{-i}) = \pi_i( q_i, q_{-i}, f_i(q_i, \hat q_i)) + \beta v_i(f_i(q_i, q_{-i}), f_{-i}(q_{-i}, q_i) )   $$
+where
+$$\eqalign{ \hat q_i & = f_i(q_i, \hat q_{-i}) \cr
+                  \hat q_{-i} & = f_{-i}( q_{-i}, q_i)}. $$
+                  Please interpret these two functional equations in terms of problems  involving sequences $\{q_{1t}, q_{2t}\}_{t=0}^\infty$
+
+
+\medskip
+
+\noindent{\bf 5.}  There are two firms indexed by $i = 1,2$. ßA subscript $i$ indicates a  firm $i$ object  and a subscript $-i$ indicates
+a firm {\it not\/} $i$ object (i.e, it indicates the other firm).  Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 (q_1 + q_2)  \cr
+           \pi_i  &  = p q_i - \gamma(\hat q_i - q_i)^2 } $$
+so that
+$$ \pi(q_i, q_{-i}, \hat q_i) = [a_0 - a_1 (q_i + q_{-i}) ] q_i - \gamma (\hat q_i - q_i)^2 . $$
+Let the following Bellman equations hold for $i=1,2$:
+$$ v_i(q_i, q_{-i}) = \max_{\hat q_i} \{\pi_i( q_i, q_{-i}, \hat q_{i}) + \beta v_i(\hat q_i , f_{-i}(q_{-i}, q_i) )    \}$$
+where
+$$ q_{-i} = f_{-i}( q_{-i}, q_i). $$
+                  Please interpret these two functional equations in terms of problems  involving sequences $\{q_{1t}, q_{2t}\}_{t=0}^\infty$
+
+
+
+
+\medskip
+\noindent {\bf 6.}
+Let $\mu_t$ be an $n \times 1$ vector, $\Sigma_t$ be an $n \times n$ positive definite matrix, and $A$ be an $n \times n$ matrix.
+Let $z_1$ and $z_2$ each be $n \times 1$ random vectors. Then let  $z = \bmatrix {z_1 \cr z_2 }$ be the $2n \times 1$  multivariate normal random vector
+parameterized as
+$$ z \sim {\cal N}\left(\bmatrix{ \mu_t \cr A \mu_t }, \bmatrix{ \Sigma_t & \Sigma_t A' \cr
+                                                                              A \Sigma_t & A \Sigma_t A' + C C' } \right) $$
+By writing the distribution in this way we specify that  the mean vector of $z$ is the first argument of ${\cal N}$ and the covariance matrix of $z$ is the second argument of ${\cal N}$.
+\medskip
+\noindent{\bf a.}
+Please find the probability distribution of $z_2$ conditional on $z_1$.
+\medskip
+\noindent{\bf b.} Please compute the linear least squares projection of $z_2$ on $z_1$.
+
+
+\medskip
+\noindent{\bf 7.} Under government policy number 1, a consumer's non-financial income $\{y_t\}_{t=0}^\infty$  is described by the state-space system
+$$ \eqalign{ x_{t+1} & = A x_t + C \epsilon_{t+1} \cr
+              y_t & = U_y x_t }$$
+where $\epsilon_{t+1} \sim {\cal N}(0,I)$ is an i.i.d.~process.  The consumer faces a sequence of budget constraints
+$$ c_t + b_t = R^{-1} b_{t+1} + y_t$$
+where $R = \beta^{-1}$ is a time-invariant gross interest rate on one-period risk free debt and $b_t$ is the amount of one-period debt that
+the consumer brings into period $t$, measured in time $t$ consumption goods. For each date $t \geq 0$, the consumer chooses time $t$ consumption according to  the decision rule
+$$ c_t = (1-\beta) (- b_t + E_t \sum_{j=0}^\infty \beta^j y_{t+j} ) $$
+where $E_t y_{t+j} = U_c A^j x_t$.  
+
+\medskip
+\noindent{\bf a.} 
+ Under government policy number 2, the consumer's non-financial income process is $\{\tilde y_t\} = \{y_t\} + \{\check y_t\}$ where
+ $\{y_t\}$ is the same process that prevails under government policy 1 and the $\{\check y_t\}$ process satisfies
+ $$ \check y_t - \check y_{t-1} = \epsilon_t - \beta^{-1} \epsilon_{t-1} $$
+ where $\epsilon_t \sim {\cal N}(0,\sigma_\epsilon^2)$ is an i.i.d.\~process for $t \geq 0$  and $y_{-1}$ is a given initial condition.  
+ The consumer's information set at time $t$ includes $y_{t-1}$ and $\epsilon_t, \epsilon_{t-1}, \ldots, \epsilon_0$.  
+ 
+ \noindent{\bf b.}  Please show that the i response  of $y_{t+j}$ to $\epsilon_t$ is 
+  $$ d_j  = \cases{ 1 &if $j = 0$;\cr
+ 1 -\beta^{-1}  &if $j  \geq  1$.\cr}$$
+
+
+\medskip
+\noindent{\bf c.} Please compute the present value of the moving average (also called `impulse response') coefficients $\{d_j\}_{j=0}^\infty$, namely,
+$$ d(\beta) = \sum_{j=0}^\infty \beta^j d_j $$
+where $d(z)$ is defined as the polynomial $d(z) = \sum_{j=0}^\infty  d_j z^j$.    
+ 
+ 
+ 
+ 
+ \medskip
+\noindent{\bf d.}  Using mathematics for solving linear difference equations, please verify the following equation:
+$$ \epsilon_t = - \sum_{j=1}^\infty \beta^j (\check y_{t+j} - \check y_{t+j-1}) . $$ 
+What does this formula say about the response of the present value $\sum_{j=0}^\infty\beta^j \check y_{t+j}$ to a surprise $\epsilon_t$ at time $t$?
+
+
+\bye
+
+
+
+\medskip
+
+\noindent{\bf 1.}
+Assume that  $F(P)$ is a right continuous function mapping $[0, B]$ into $[0,1]$ and that the real scalar $c > 0$.  For what intertemporal problem is the following
+a Bellman equation?
+$$ v(p) = \min \{p, c + \int v(p') d F(p') \}$$
+
+\medskip
+
+
+
+\noindent {\bf 2.}  Assume that  $F$ is a right continuous function mapping $[0, B]$ into $[0,1]$ and that $\beta \in (0,1)$. For what intertemporal problem is the following a Bellman equation?
+$$ v(w) = \max\left\{ {w\over{1-\beta}},  \beta \int v(w') d F^2(w') \right\} $$
+
+
+
+\medskip
+\noindent{\bf 3.} Where $x \in {\bf R}$, $f >0, d >0 $,   $\beta \in (0,1)$, and $g \in  {\bf R} \rightarrow {\bf R}$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) =  \{- f x^2 - d(gx  - x)^2 + \beta v(gx) \} $$
+
+
+\medskip
+\noindent{\bf 4.}   Where $x \in {\bf R}$, $f >0, d >0 $, and   $\beta \in (0,1)$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) = \max_{x'} \{ - f x - d(x' - x)^2 + \beta v(x') \} $$
+
+
+\medskip
+\noindent {\bf 5.} Where $x \in {\bf R}$, $f >0, d >0 $, $\sigma >0$,    $\beta \in (0,1)$, and $\phi$ is a univariate normal density function for a random
+variable with mean $0$ and variance $1$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) = \max_{u} \{ - f x - d u^2 + \beta \int v(x +u + \sigma \epsilon) d \phi(\epsilon) \} $$
+
+
+
+\medskip
+
+
+
+\noindent {\bf 6.}  Assume that  $F$ and $G$ are distinct  right continuous functions each mapping $[0, B]$ into $[0,1]$, that $\pi \in (0,1)$, and  that $\beta \in (0,1)$. For what intertemporal problem is the following a Bellman equation?
+$$ v(w) = \max\left\{ {w\over{1-\beta}},  \beta [  \pi \int v(w') d F(w') + (1-\pi) \int v(w') d G(w') ]  \right\} $$
+
+
+\bye

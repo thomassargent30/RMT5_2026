@@ -1,0 +1,216 @@
+%
+\def\tr{{\rm tr}}
+\def\3he{{$^3${\rm He}}}
+\def\kbt{{\rm k_B T}}
+\def\const{{\rm const.}}
+\def\seco{{\rm sec}}
+\def\sech{\rm sech}
+\def\gev{{\rm GeV}}
+\def\tev{{\rm TeV}}
+\def\mev{{\rm MeV}}
+\def\kev{{\rm KeV}}
+\def\ev{{\rm eV}}
+\def\cm{{\rm cm}}
+ 
+\def\eg{{\it e.g.,\ }}
+\def\ie{{\it i.e.,\ }}
+\def\etal{{\it et al.}}
+\def\etc{{\it etc.\ }}
+\def\via{{\it via}}
+ 
+ 
+\def\slD{\raise.15ex\hbox{$/$}\kern-.53em\hbox{$D$}}
+\def\slA{\raise.15ex\hbox{$/$}\kern-.53em\hbox{$A$}}
+\def\dsl{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$\Delta$}}
+\def\slp{{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$\partial$}}}
+\def\nsl{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$\nabla$}}
+\def\sla{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$\rightarrow$}}
+\def\slla{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$\lambda$}}
+\def\slb{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$b$}}
+\def\slr{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$r$}}
+\def\lnp{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$p$}}
+\def\lnk{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$k$}}
+\def\lnK{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$K$}}
+\def\lnq{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$q$}}
+\def\slla{\raise.15ex\hbox{$/$}\kern-.57em\hbox{$a$}}
+ 
+ 
+\def\a{\alpha}
+\def\be{{\beta}}
+\def\ga{{\gamma}}
+\def\de{{\delta}}
+\def\eps{{\epsilon}}
+\def\ze{{\zeta}}
+\def\th{{\theta}}
+\def\ka{{\kappa}}
+\def\la{\lambda}
+\def\si{{\sigma}}
+\def\ups{{\upsilon}}
+\def\om{{\omega}}
+\def\G{{\Gamma}}
+\def\D{{\Delta}}
+\def\Th{{\Theta}}
+\def\La{{\Lambda}}
+\def\Si{{\Sigma}}
+\def\Ups{{\Upsilon}}
+\def\Om{{\Omega}}
+\def\epb{{\overline\epsilon}}
+\def\chib{{\overline\chi}}
+\def\psib{{\overline\psi}}
+\def\mnrst{{\mu\nu\rho\sigma\tau}}
+\def\munu{{\mu\nu}}
+\def\lbar{{\mathchar'26\mskip-9mu\lambda}}
+ 
+\def\cA{{\cal A}}
+\def\cB{{\cal B}}
+\def\cC{{\cal C}}
+\def\cD{{\cal D}}
+\def\cE{{\cal E}}
+\def\cF{{\cal F}}
+\def\cG{{\cal G}}
+\def\cH{{\cal H}}
+\def\cI{{\cal I}}
+\def\cJ{{\cal J}}
+\def\cK{{\cal K}}
+\def\cL{{\cal L}}
+\def\cM{{\cal M}}
+\def\cN{{\cal N}}
+\def\cO{{\cal O}}
+\def\cP{{\cal P}}
+\def\cQ{{\cal Q}}
+\def\cR{{\cal R}}
+\def\cS{{\cal S}}
+\def\cT{{\cal T}}
+\def\cU{{\cal U}}
+\def\cV{{\cal V}}
+\def\cW{{\cal W}}
+\def\cX{{\cal X}}
+\def\cY{{\cal Y}}
+\def\cZ{{\cal Z}}
+ 
+ 
+ 
+\def\bfa{{\bf a}}
+\def\bfb{{\bf b}}
+\def\bfc{{\bf c}}
+\def\bfd{{\bf d}}
+\def\bfe{{\bf e}}
+\def\bff{{\bf f}}
+\def\bfg{{\bf g}}
+\def\bfh{{\bf h}}
+\def\bfi{{\bf i}}
+\def\bfj{{\bf j}}
+\def\bfk{{\bf k}}
+\def\bfl{{\bf l}}
+\def\bfm{{\bf m}}
+\def\bfn{{\bf n}}
+\def\bfo{{\bf o}}
+\def\bfp{{\bf p}}
+\def\bfq{{\bf q}}
+\def\bfr{{\bf r}}
+\def\bfs{{\bf s}}
+\def\bft{{\bf t}}
+\def\bfu{{\bf u}}
+\def\bfv{{\bf v}}
+\def\bfw{{\bf w}}
+\def\bfx{{\bf x}}
+\def\bfy{{\bf y}}
+\def\bfz{{\bf z}}
+\def\bfA{{\bf A}}
+\def\bfB{{\bf B}}
+\def\bfC{{\bf C}}
+\def\bfD{{\bf D}}
+\def\bfE{{\bf E}}
+\def\bfF{{\bf F}}
+\def\bfG{{\bf G}}
+\def\bfH{{\bf H}}
+\def\bfI{{\bf I}}
+\def\bfJ{{\bf J}}
+\def\bfK{{\bf K}}
+\def\bfL{{\bf L}}
+\def\bfM{{\bf M}}
+\def\bfN{{\bf N}}
+\def\bfO{{\bf O}}
+\def\bfP{{\bf P}}
+\def\bfQ{{\bf Q}}
+\def\bfR{{\bf R}}
+\def\bfS{{\bf S}}
+\def\bfT{{\bf T}}
+\def\bfU{{\bf U}}
+\def\bfV{{\bf V}}
+\def\bfW{{\bf W}}
+\def\bfX{{\bf X}}
+\def\bfY{{\bf Y}}
+\def\bfZ{{\bf Z}}
+\def\bbR{{I\kern-0.3em R}}
+ 
+\def\svsp{\smallvspace}  %These three spacing deals will eventually
+\def\mvsp{\medvspace}    % be fixed by Tony.
+\def\bvsp{\bigvspace}
+\def\svsp{\vskip .33in}
+\def\mvsp{\vskip .67in}
+\def\bvsp{\vskip 1in}
+ 
+\def\sq{{\vbox {\hrule height 0.6pt\hbox{\vrule width 0.6pt\hskip 3pt
+\vbox{\vskip 6pt}\hskip 3pt \vrule width 0.6pt}\hrule height 0.6pt}}}
+ 
+\def\rec{{\vbox {\hrule height 0.6pt\hbox{\vrule width 0.6pt\hskip 3pt
+\vbox{\vskip 10pt}\hskip 3pt \vrule width 0.6pt}\hrule height 0.6pt}}}
+ 
+\def\pmb#1{\setbox0=\hbox{$#1$}%
+\kern-.025em\copy0\kern-\wd0
+\kern.05em\copy0\kern-\wd0
+\kern-.025em\raise.0433em\box0 }
+ 
+\def\asq{{\a_s(Q^2)}}
+\def\ee{{e^+e^-}}
+\def\pp{{\prime\prime}}
+\def\q2{{Q^2}}
+\def\gtwid{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}
+\def\ltwid{\raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}}
+\def\12{{1\over2}}
+\def\fourth{{1\over 4}}
+\def\sixth{{1\over 6}}
+\def\third{{1\over 3}}
+\def\part{\partial}
+%\def\refto#1{$^{#1}$}
+\def\btd{\bigtriangledown}
+\def\ads#1{{\hbox{AdS} {}^{#1}}}
+\def\ferm#1{\hbox{ #1 fermi terms}}
+\def\low#1{\lower.5ex\hbox{${}_#1$}}
+\def\m#1#2{{\hbox{#2} {}^{#1}}}
+\def\partt{\raise.15ex\hbox{$\widetilde$}{\kern-.37em\hbox{$\partial$}}}
+\def\r#1{{\frac1{#1}}}
+\def\vev#1{{\left\langle{#1}\right\rangle}}
+\def\pep#1{{\left\Vert{#1}\right\Vert}}
+ 
+\def\camreferences{{\noindent REFERENCES}
+    \beginparmode
+    \frenchspacing\parindent=0pt\leftskip=1truecm
+    \parskip=8pt plus 3pt\everypar{\hangindent=\parindent}}
+ 
+\def\notitle{{\noindent \quad}
+    \beginparmode
+    \frenchspacing\parindent=0pt\leftskip=1truecm
+    \parskip=8pt plus 3pt\everypar{\hangindent=\parindent}}
+\def\abs{
+         \vskip 3pt plus 0.3fill\beginparmode
+         \doublespace ABSTRACT:\ }
+\def\refind
+{\head {\quad}
+\beginparmode
+\frenchspacing\parindent=0pt\leftskip=1truecm
+\parskip=8pt plus 3pt\everypar{\hangindent=.75cm}}
+ 
+\def\topppageno1{\global\footline={\hfil}\global\headline
+={\ifnum\pageno<\firstpageno{\hfil}\else{\hss\twelverm --\ \folio
+\ --\hss}\fi}}
+ 
+\def\toppageno2{\global\footline={\hfil}\global\headline
+={\ifnum\pageno<\firstpageno{\hfil}\else{\rightline{\hfill\hfill
+\twelverm \ \folio
+\ \hss}}\fi}}
+ 
+\def\boxit#1{\vbox{\hrule\hbox{\vrule\kern3pt
+  \vbox{\kern3pt#1\kern3pt}\kern3pt\vrule}\hrule}}
+ 

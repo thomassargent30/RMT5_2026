@@ -1,0 +1,85 @@
+Defining the matrix averages
+$$ \eqalign{ \bar A_t & = \pi_{t,1} A_1 + \pi_{t,2} A_2   \cr
+                    \bar G_t & =\pi_{t,1} G_1 + \pi_{t,2} G_2 \cr
+                    \bar H_t & = \pi_{t,1} H_1 + \pi_{t,2} H_2  ,}$$
+we can deduce that means  conditional on $x_t$ are 
+$$ \eqalign{ E x_{t+1} | x_t & = \bar A_t x_t \cr
+                    E y_t | x_t & = \bar G_t x_t      \cr
+                    E z_t | x_t & \equiv \tilde z_t = \bar H_t x_t   . }$$
+The appearance of  time subscripts $t$ in the formulas for $\bar A_t, \bar G_t, \bar H_t$ are a 
+consequence of  $\pi_t$ not necessarily
+being a stationary distribution for $s_t$. % for Markov chain $P$.
+
+\subsection{More conditional distributions}\label{sec:cond_dist_102}%
+Having computed conditional means,  let's compute covariances conditional on $x_t$.
+Since
+$$ x_{t+1} - \bar A_t x_t = \cases{ (A_1 - \bar A_t) x_t  + C_1 w_{t+1} & if $s_t =1$ \cr
+                                                    (A_2 - \bar A_t) x_t  + C_2 w_{t+1} & if $s_t =2$ , } $$
+it follows that
+$$ \EQNalign{ E (x_{t+1} - \bar A_t x_t ) (x_{t+1} - \bar A _tx_t ) ' | x_t & = \sum_i \pi_{t,i} [ (A_i - \bar A_t) x_t x_t' (A_i - \bar A_t)' + C_i C_i' ] \cr
+        & \equiv \Sigma_t(x_t) \EQN Sigmatxt }   $$
+where $i$ is present through $\pi_{t,i}$ and $x_t$ is present because it appears on the right side of the first line.
+Since
+$$ y_t = \cases{ G_1 x_t & if $s_t =1$ \cr
+                           G_2 x_t & if $s_t =2 $ } $$
+and
+$$ y_t - \bar G_t x_t = \cases{ (G_1 - \bar G_t) x_t & if $s_t =1$ \cr
+                           (G_2  - \bar G_t) x_t & if $s_t =2 $ , } $$
+it follows that
+$$ E (y_t - \bar G_t x_t) (y_t - \bar G_t x_t)' | x_t = \sum_i \pi_{t,i} 
+(G_i - \bar G_t) x_t x_t' (G_i - \bar G_t)' \equiv \Sigma_{y,t}(x_t)   $$
+and similarly that
+$$ E (z_t - \bar H_t x_t) (z_t - \bar H_t x_t)' | x_t = \sum_i \pi_{t,i} (H_i - \bar H_t) x_t x_t'
+ (H_i - \bar H_t)' \equiv \Sigma_{z,t}(x_t),  $$
+ where the presence of $t$ subscripts in $ \Sigma_{y,t}(x_t)$ and $\Sigma_{z,t}(x_t)$ reflects that
+ $\pi_t$ might not be a stationary distribution, so that it and $\bar G_t$ and $\bar H_t$ all depend on $t$.
+We can compute  unconditional means and covariances of the $\{x_t\}_{t=0}^\infty$  process as follows.
+Define the unconditional moments
+$E x_t = \mu_t$ and $\Sigma_t = E (x_t - \mu_t) (x_t  - \mu_t)'$.
+Note that
+$$ x_{t+1} - \mu_{t+1} = \cases{ A_1 (x_t   - \mu_t)  + C_1 w_{t+1} & if $s_t =1$ \cr
+                                                    A_2  (x_t   - \mu_t)  + C_2 w_{t+1} & if $s_t =2$ .} $$
+It follows that
+$$ \mu_{t+1} = \bar A_t \mu_t$$
+and
+$$\Sigma_{t+1} = \pi_{t,1} (A_1 - \bar A_t) \Sigma_t (A_1 - \bar A_t)' + \pi_{t,2} (A_2 - \bar A_t) \Sigma_t (A_2 - \bar A_t)' + (\bar C \bar C')_t  $$
+where $(\bar C \bar C')_t = \sum_i \pi_{t,i} C_i C_i' $.
+When  $\pi_t \rightarrow \bar \pi$ as $t$ goes to infinity, iterations on these two recursions  converge, respectively, to
+a stationary mean vector $\mu$  and a stationary covariance matrix $\Sigma$ that
+satisfy
+$$ \mu  = \bar A \mu $$
+and
+$$\bar \Sigma =  \bar \pi_1 (A_1 - \bar A) \bar \Sigma (A_1 - \bar A)' + \bar \pi_2 (A_2 - \bar A) \bar \Sigma(A_2 - \bar A)' + \bar C \bar C' $$
+where $\bar \pi_i = \lim_{t \rightarrow +\infty} \pi_{t,i}$ and $\bar C \bar C' = \sum_i \bar \pi_i C_i C_i'$.
+A time-invariant vector autoregression of the form \Ep{VARtimeinv}, namely,
+$$ x_{t+1} = \bar A x_t + v_{t+1} .$$
+has $E v_{t+1} v_{t+1}' = \bar \Sigma$.
+When $\pi_t = \bar \pi_t$, formulas for $\Sigma_y(x_t)$ and $\Sigma_z(x_t)$ also  simplify: 
+$$ E (y_t - \bar G x_t) (y_t - \bar G x_t)' | x_t = \sum_i \pi_{i} 
+(G_i - \bar G) x_t x_t' (G_i - \bar G)' \equiv \Sigma_{y}(x_t)   $$
+and 
+$$ E (z_t - \bar H x_t) (z_t - \bar H x_t)' | x_t = \sum_i \pi_{i} (H_i - \bar H) x_t x_t'
+ (H_i - \bar H)' \equiv \Sigma_{z}(x_t),  $$
+ where  $t$ subscripts have disappeared from  $ \Sigma_{t}(x_t)$ and $\Sigma_{z}(x_t)$ because 
+ $\pi = \bar \pi$  and also now $\bar G$ and $\bar H$ no longer  depend on $t$.
+ Under this stationary specification, we thus have the regression equations
+ $$\eqalign{ x_{t+1} & = \bar A x_t + v_{t+1} \cr
+            y_t & = \bar G x_t + \epsilon_{y,t} \cr 
+             z_t & = \bar H x_t + \epsilon_{z,t}, }
+$$
+where $\bar H = \bar G (I - \delta \bar A)^{-1}$, $E v_{t+1} v_{t+1}'  = \bar \Sigma$,
+ $E \epsilon_{y,t} \epsilon_{y,t}' = \Sigma_y(x_t), \ E \epsilon_{z,t} \epsilon_{z,t}' = \Sigma_z(x_t) $.
+
+
+ ===============
+
+
+\subsection{Time series averages}
+Consider the conditional covariance matrix
+$$\Sigma(x_t)  = \sum_i \pi_{t,i} [ (A_i - \bar A) x_t x_t' (A_i - \bar A)' + C_i C_i' ] .$$
+Assume that the pair $(P, \pi_0)$ governing the  Markov state $s_t$ is stationary. Then  the joint process $\{x_t, s_t\}$ process is also  stationary,
+and so is the  process $\{x_t\}$. Say that $x_t$ has  the unconditional probability distribution $\Phi(x)$.
+Then a law of large numbers tells us that as $ {T \rightarrow + \infty}$
+$$ T^{-1} \sum_{t=0}^T \Sigma(x_t)  \rightarrow \int \Sigma(x) d \Phi(x) \equiv \Sigma $$
+
+

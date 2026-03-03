@@ -1,0 +1,396 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdftex 2023.2.3)  2 MAR 2026 15:11
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**aps_repair_review_plain.tex
+(./aps_repair_review_plain.tex
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/texsis.tex
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSfonts.tex TeXsis fonts:
+\ttglue=\skip18
+
+\mib, \scr,
+\scrfam=\fam8
+ 9pt, 10pt, 11pt, 12pt, 14pt, 16pt, 20pt, 24pt.)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSmacs.tex
+TeXsis main macros.
+\footnum=\count27
+\@quoteflag=\count28
+\AThelp=\toks13
+\beginhelp=\toks14
+ Checkpoint/Restart.
+\checkpointout=\write0
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSinit.tex
+Initialization.
+\txsfile=\read1
+\@utohelp=\toks15
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXShead.tex
+Running Headlines.
+\headlineoffset=\dimen16
+\footlineoffset=\dimen17
+\BindingMargin=\dimen18
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSeqns.tex
+Equation numbering.
+\eqnum=\count29
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSprns.tex
+Auto-sizing of Parentheses.)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSrefs.tex
+References and Citations.
+\refnum=\count30
+\@firstrefnum=\count31
+\@lastrefnum=\count32
+\@BadRefs=\count33
+\refindent=\dimen19
+\CiteType=\count34
+\reflistout=\write1
+\reflistin=\read2
+
+BIBTeX support for TeXsis (macros and patches) v 0.92)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSsects.tex
+Section and Chapter divisions.
+\chapternum=\count35
+\sectionnum=\count36
+\subsectionnum=\count37
+\subsubsectionnum=\count38
+\sectionskip=\skip19
+\subsectionskip=\skip20
+\sectionminspace=\dimen20
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXStags.tex
+Labels and tags.
+\auxfilein=\read3
+\auxfileout=\write2
+\@BadTags=\count39
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXStitle.tex
+Title Page macros.)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSenvmt.tex Environments.
+\EnvTopskip=\skip21
+\EnvBottomskip=\skip22
+\EnvLeftskip=\skip23
+\EnvRightskip=\skip24
+\EnvDelt@skip=\skip25
+\@envDepth=\count40
+\enumDepth=\count41
+\enumcnt=\count42
+\@desbox=\box16
+\@desline=\box17
+\@glodeswd=\dimen21
+\@deslines=\count43
+\theoremnum=\count44
+\lemmanum=\count45
+\corollarynum=\count46
+\definitionnum=\count47
+) (/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSfmts.tex
+Layout macros.) (/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSfigs.tex
+Figures and Tables.
+\tabnum=\count48
+\fignum=\count49
+\fgout=\write3
+\tbout=\write4
+\figlist=\write5
+\tablelist=\write6
+\caplist=\write7
+\@capbox=\box18
+\@caplines=\count50
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSruled.tex
+\ncols=\count51
+\nrows=\count52
+\curcol=\count53
+\thinsize=\dimen22
+\thicksize=\dimen23
+\tablewidth=\dimen24
+\parasize=\dimen25
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSdcol.tex
+- Double column format.
+\colwidth=\dimen26
+\pagewidth=\dimen27
+\pageheight=\dimen28
+\rulewd=\dimen29
+\colmaxdepth=\dimen30
+\@bigColHeight=\dimen31
+\@saveSplitmax=\dimen32
+\@saveVsize=\dimen33
+\s@veskip=\skip26
+\doublecolskip=\skip27
+\@leftpluscenter=\dimen34
+\partialpage=\box19
+\botins=\insert252
+\NWins=\insert251
+\SWins=\insert250
+\NEins=\insert249
+\SEins=\insert248
+\LFins=\insert247
+\RFins=\insert246
+\@balncErrormsg=\toks16
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSletr.tex Letter Format,
+\headlineoffset=\dimen35
+\longindent=\dimen36
+\hdimphone=\dimen37
+\vdimphone=\dimen38
+\hdimdate=\dimen39
+\vdimdate=\dimen40
+\bigletterskip=\skip28
+\theaddress=\box20
+
+with envelopes.
+\EnvlWidth=\dimen41
+\EnvlHeight=\dimen42
+\EnvlVoffset=\dimen43
+\Envout=\write8
+\fullHsize=\dimen44
+\fullVsize=\dimen45
+\lblHsize=\dimen46
+\lblVsize=\dimen47
+\lblVoffset=\dimen48
+\lblHoffset=\dimen49
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSmemo.tex Memo Format.
+\memoindent=\dimen50
+\firstheadoffset=\dimen51
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSconts.tex
+Table of Contents.
+\TOCout=\write9
+\TOCmargin=\skip29
+)
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSsymb.tex
+Extended math/physics symbols,
+\vbigd@men=\dimen52
+)
+> Trying to read in TXSsite.tex...
+(/usr/local/texlive/2022/texmf-dist/tex/texsis/base/TXSsite.tex
+Site dependent info.... Generic version.)
+TeXsis version 2.18 (21 April 2001) loaded.
+)
+./aps_repair_review_plain.tex:6: I can't find file `paper'.
+l.6 \input paper
+                
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: s
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/s.tex File ignored
+)
+1.  1. Background
+\openout9 = `aps_repair_review_plain.toc'.
+
+./aps_repair_review_plain.tex:47: Undefined control sequence.
+<write> ...job `\jobname ' -- Created at \runtime 
+                                                  
+<inserted text> 
+                }\endwrite 
+\TOCinit ...b `\jobname ' -- Created at \runtime }
+                                                  \immediate \write \TOCout ...
+
+\addTOC #1#2#3->\ifContents \TOCinit 
+                                     \write \TOCout {\string \TOCitem {#1}}\...
+
+\section ...TOC {1}{\TOCsID {\lab@l .}#1}{\folio }
+                                                  \endgroup \s@ction \afters...
+l.47 \section{1. Background}
+                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (13.88364pt too wide) detected at line 60
+[]  \tensy )  []  )  []  )  []  )  []|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x79.11127
+..\tenrm L
+..\tenrm e
+..\tenrm m
+..\tenrm m
+..\tenrm a
+..etc.
+.\glue 2.77771 plus 2.77771
+.\glue(\thickmuskip) 2.77771 plus 2.77771
+.\tensy )
+.\glue 2.77771 plus 2.77771
+.etc.
+
+2.  2. Errors That Remain in {APS\unhbox \voidb@x \kern .06em \vbox {\hrule wid
+th.3em}repair.pdf}
+./aps_repair_review_plain.tex:64: Undefined control sequence.
+l.64 \subsec
+            {2.1. Four-tuple language in the paragraph following Definition 7
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:70: Undefined control sequence.
+l.70 \bquote
+            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:79: Undefined control sequence.
+l.79 \ebquote
+             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:88: Undefined control sequence.
+l.88 \bquote
+            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:96: Undefined control sequence.
+l.96 \ebquote
+             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:98: Undefined control sequence.
+l.98 \subsec
+            {2.2. Two occurrences of ``4-tuples'' in Section 25.8.1
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:125: Undefined control sequence.
+l.125 \subsec
+             {2.3. The iteration algorithm in Section 25.9 uses the two-value
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+./aps_repair_review_plain.tex:149: Undefined control sequence.
+l.149 \bquote
+             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:153: Undefined control sequence.
+l.153 \ebquote
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:157: Undefined control sequence.
+l.157 ...\scriptstyle(x,y,w(\cdot))\;\hbox{\smalrm
+                                                   admissible w.r.t.}\;
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+3.  3. Summary of Remaining Issues
+4.  4. Items Correctly Implemented
+./aps_repair_review_plain.tex:191: Undefined control sequence.
+l.191 \bitem
+             {\bf Lemma~2} (p.~1140): states and proves the necessary and
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:194: Undefined control sequence.
+l.194 \bitem
+             {\bf Definition~7} (p.~1141): correctly defines admissible
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:197: Undefined control sequence.
+l.197 \bitem
+             {\bf Definition~8} (p.~1142): $B(W)$ defined via admissible tri...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:199: Undefined control sequence.
+l.199 \bitem
+             {\bf Monotonicity proof} (p.~1142--43): uses the triple/function
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:202: Undefined control sequence.
+l.202 \bitem
+             {\bf Theorem~1 proof} (p.~1143--44): constructs sequences of
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:205: Undefined control sequence.
+l.205 \bitem
+             {\bf Proposition~2} (compactness, p.~1144): present, correctly
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aps_repair_review_plain.tex:208: Undefined control sequence.
+l.208 \bitem
+             {\bf Corollary} (two-value characterization, p.~1144--45):
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2] )</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.
+pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on aps_repair_review_plain.pdf (2 pages, 123563 bytes).
+PDF statistics:
+ 51 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

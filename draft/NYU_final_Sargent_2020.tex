@@ -1,0 +1,178 @@
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{PhD Macroeconomics \hfil NYU}
+\line{December 11,  2020 \hfil Thomas Sargent}
+%
+% \noindent Macroeconomics Q1 \hfill NYUAD \\
+% Fall, 2019 \hfill Thomas Sargent
+% \vspace{.3cm}
+
+\centerline{\bf Final Examination}
+%\centerline{\bf Homework 3}
+
+
+\medskip
+
+\noindent{\bf Instructions:}  This is a closed book  exam.  100 points are possible. Points attached to each problem are stated
+at the beginning of each problem.
+
+\medskip
+
+
+
+\noindent{\bf 1. 25 points \quad} Where $c_t$ is consumption at date $t$ and $b_t$ is one-period debt owed at time $t$,
+a consumer chooses a consumption, borrowing plan $\{c_t, b_{t+1}\}_{t=0}^T$
+to maximize
+$$ \sum_{t=0}^T\beta^t \ln(c_t),  \ \  \beta \in (0,1) $$
+subject to the budget constraints
+$$  c_t + b_t \leq y_t + \beta b_{t+1} , \ \ t = 0, \ldots, T $$
+where $y_t = \lambda^t , \ \lambda \in (0,1)$, initial one-period risk-free debt $b_0 = 0$, and we impose
+ $b_{T+1} \leq 0$.   
+
+
+\medskip
+\noindent{\bf a.} Verify that it is optimal for the consumer to set $b_{T+1} =0$.
+
+\medskip
+\noindent{\bf b.} Argue that  because the consumer can afford to set $c_t >0$ for all $t \in [0, 1, \ldots, T]$,
+it follows that he will choose a  debt sequence that  satisfies 
+$$ \eqalign{ b_T & \leq y_T \cr
+                    b_{T-1} & \leq y_{T-1} + \beta y_T \cr
+                    \vdots & \quad \quad \quad \vdots \cr
+                    b_t & \leq y_t + \beta y_{t+1} + \cdots + \beta^{T-t} y_T }$$
+                    
+\medskip
+\noindent{\bf c.} Argue that it is not necessary to impose so-called ``natural debt limits'' to make the consumer's
+problem well posed.
+
+\medskip
+\noindent{\bf d.} Compute the consumer's optimal consumption plan.                                   
+
+
+\bigskip
+
+\noindent {\bf 2. 25 points \quad} Consider an infinite-horizon pure exchange economy that exists at $t=0, 1, \ldots $.
+There are unit measures of  two types of consumers.
+A type 1 consumer receives an endowment $y^1(s_t) = y(s_t) >0 $ of a nonstorable consumption good at times $t\geq T+1$
+in Markov state $s_t \in {\bf S}$ and zero endowment for all $ t \leq T$.  A type 2 consumer receives an endowment $y^2(s_t) = y(s_t) >0$ of a nonstorable consumption good at times $t =0, \ldots, T$
+in Markov state $s_t \in {\bf S}$ and zero endowment for all $t \geq T+1$.  Notice that $y^1(s_t) + y^2(s_t) = y(s_t)$ for all $t \geq 0$.
+
+Complete markets in time- and  history-contingent consumption goods
+meet at time $0$. A consumer of type 1  ranks consumption plans according to 
+$$ \sum_{t=0}^T \sum_{s^t} \beta^t u(c_t^1(s^t)) \pi_t(s^t)$$
+where $\pi_t(s^t)$ is a joint probability function over $s^t$ induced by the Markov chain $(P, \pi_0)$ for $s_t \in 
+{\bf S}$.
+A consumer of type 2 ranks consumption plans according to 
+$$ \sum_{t=T+1}^\infty \sum_{s^t} \beta^t u(c_t^2(s^t)) \pi_t(s^t) .$$
+%where $\pi_t(s^t)$ is a joint probability function over $s^t$ induced by the Markov chain $(P, \pi_0)$ on $s_t$.
+A type $i$ consumer's budget constraint is
+$$ \sum_{t=0}^\infty \sum_{s^t} q_t^0(s^t) c^i_t(s^t) \leq  \sum_{t=0}^\infty \sum_{s^t} q_t^0(s^t) y^i(s_t) . $$
+ 
+\medskip
+\noindent{\bf a.} Please define a competitive equilibrium with all trades occurring at time $0$.
+\medskip
+\noindent{\bf b.} Please compute a competitive equilibrium with time $0$ trades, being careful to compute
+all objects that comprise a competitive equilibrium.
+\medskip
+\noindent{\bf c.} Please define an equilibrium with sequential trades of a complete set of one-period Arrow  securities.
+\medskip
+\noindent{\bf d.} Please compute an equilibrium with sequential trading of a complete set of one-period Arrow securities.
+
+\bigskip
+
+\noindent {\bf 3. 25 points \quad} An economy consists of overlapping generations of two-period live people. At dates $t \geq 1$ there are born
+$N_t >0$ identical people who are endowed with $w_1 >0$ units of a nonstorable consumption good when they
+are young and $w_2 >0 $ units of a nonstorable consumption good when they are old.  In addition, at time $1$ there
+are $N_0> 0$ old people each of whom is endowed with ${M \over N_0}$ units of an intrinsically worthless unbacked (fiat) currency called
+dollars (it is not in anyone's utility function and is useless for production).  
+Population evolves as $N_{t+1} = n N_t$ for $t \geq 0$ where $n >0$.  The consumption profile
+of a person born at time $t$ is $c_t^t$ when young and $c_{t+1}^t$ when old; he/she orders profiles according to the
+utility functional
+$ \ln (c_t^t) + \ln (c^t_{t+1}) .$
+
+\medskip
+\noindent 
+{\bf a.} Define a competitive equilibrium in which no value is attached to fiat currency, being careful to define all
+of the objects that comprise a competitive equilibrium and telling who trades what with whom.
+
+\medskip
+\noindent {\bf b.} Please compute all competitive equilibria in which no value is attached to fiat currency.
+
+\medskip
+\noindent{\bf c.} Please define a competitive equilibrium in which value is attached to fiat currency, 
+being careful to define all
+of the objects that comprise a competitive equilibrium and telling who trades what with whom.
+
+\medskip
+\noindent{\bf d.} A ``friend'' makes the following guess.  If $n w_1 > w_2$ there exist competitive equilibria
+with valued fiat currency, while if $n w_1 < w_2$ there do not.  Please either confirm or dispose of this guess.
+If the guess is true, please define and compute a {\it stationary\/} equilibrium with valued fiat currency and give formulas
+for the equilibrium price level and rate of return on fiat currency.
+
+\medskip
+\noindent{\bf e.} Please argue that whenever a stationary equilibrium with valued fiat currency exists, then there
+also exists a continuum of equilibria with valued fiat currency, in each of which the rate of return on currency
+varies over time.  Please provide explicit formulas for an equilibrium  price level as a function of time.  
+{\bf Hint:} It might help to deploy a linear difference equation.
+
+\medskip
+\noindent{\bf f.} Assuming that a nonstationary equilibrium with valued fiat currency exists, please compute the
+the limiting value of the rate of return on currency as $t \rightarrow + \infty$. 
+
+
+\medskip
+
+\noindent {\bf 4. 25 points \quad} An economy consists of overlapping generations of two-period lived people.  Let $T > 2$ be a finite 
+integer. At dates $ 1 \leq t \leq T$ there are born
+$N >0 $ identical people who are endowed with $w_1 >0$ units of a nonstorable consumption good when they
+are young and $w_2>0 $ units of a nonstorable consumption good when they are old.  
+At dates $t \geq T+1$ there are born
+$N$ identical people who are endowed with $\bar w_1 >0$ units of a nonstorable consumption good when they
+are young and $\bar w_2>0$ units of a nonstorable consumption good when they are old. In addition, at time $1$ there
+are $N$ old people each of whom is endowed with ${M \over N}$ units of an intrinsically worthless unbacked (fiat) currency called
+dollars (it is not in anyone's utility function and is useless for production). The consumption profile
+of a person born at time $t$ is $c_t^t$ when young and $c_{t+1}^t$ when old; he/she orders profiles according to the
+utility functional
+$ \ln (c_t^t) + \ln (c^t_{t+1}) .$
+
+
+\medskip
+\noindent 
+{\bf a.} Define a competitive equilibrium in which no value is attached to fiat currency, being careful to define all
+of the objects that comprise a competitive equilibrium and telling who trades what with whom.
+
+\medskip
+\noindent {\bf b.} Please compute all competitive equilibria in which no value is attached to fiat currency.
+
+\medskip
+\noindent{\bf c.} Please define a competitive equilibrium in which value is attached to fiat currency, 
+being careful to define all
+of the objects that comprise a competitive equilibrium and telling who trades what with whom.
+
+\medskip
+\noindent {\bf d.} Please state conditions on $w_1, w_2, \bar w_1, \bar w_2$ for which there exist competitive
+equilibria with valued fiat currency.
+
+\medskip
+\noindent {\bf e.} Under sufficient conditions for there to exist competitive equilibria with valued fiat currency,
+please find explicit formulas for the equilibrium price level sequence in the equilibrium for which the value
+of currency is highest for all $t \geq 1$. {\bf Hint:} It might help to deploy a linear difference equation.
+
+
+
+
+\medskip
+\bye
+

@@ -1,0 +1,105 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{Advanced Macro \hfil SMU}
+\line{Winter 2019 \hfil Thomas Sargent}
+
+%\centerline{\bf Practice problems}
+\centerline{\bf Homework 1}
+
+
+\medskip
+
+\noindent{\bf Instructions:}  Please feel free to work on this problem in groups of 3 or 4 students. But please hand in your own work. This homework is
+due on Friday Jan 18.
+
+\medskip
+\noindent  {\bf Muth and Kalman again}
+
+\medskip
+\noindent Consider the linear state space system
+$$\eqalign{ x_{t+1} & = \rho x_t + c w_{t+1} \cr
+            y_t & = x_t + v_t , } \ \leqno(1) $$
+where $ \rho \in [0, 1)$ and $c$ are scalars, $\{w_t\}_{t=0}^\infty$ is an i.i.d.\ scalar process with $w_t \sim N(0,1)$,
+ $\{v_t\}_{t=0}^\infty $ is an i.i.d. process of measurement errors with $E v_t w_{s+1} = 0$ for all $t\geq 0 $ and $s\geq 0 $ with
+ $v_t \sim N(0,R)$, and $x_0$ is a random initial value distributed as $x_0 \sim N(0, {\frac{c^2}{1 - \rho^2}})$. ( Note: Muth (1960)
+ considered the limiting case in which $\rho \uparrow  1$.)
+ %\auth{Muth, John F.}%
+ %\auth{Kalman, Rudolf}%
+
+
+\medskip
+
+\noindent{\bf a.} Is the univariate process $\{x_t\}_{t=0}^\infty$  Markov?
+
+
+\medskip
+\noindent {\bf b.} Please compute the stationary distribution of the stochastic process $\{x_t\}$ and compare it to the initial distribution
+assumed here.
+
+\medskip
+\noindent{\bf c.} Is the univariate process $\{y_t\}_{t=0}^\infty$ Markov?
+
+\medskip
+
+\noindent {\bf d.}  Find an {\it innovations representation\/} for $\{y_t\}_{t=-\infty}^\infty$ of the time-invariant form
+$$\eqalign{ \hat x_{t+1} & = \rho \hat x_t + k a_t \cr
+            y_t & = \hat x_t + a_t,  } \ \leqno(2) $$
+where $k$ is a regression coefficient,  $\hat x_t = E x_t | y^{t-1}$, $a_t = y_t - E [y_t | y^{t-1}] $,  $a_t$ is by construction serially uncorrelated and homoskedastic
+with $E [a_t| y^{t-1}] = 0$ and $E a_t^2 = \omega$, and $y^{t-1}$ is the semi-infinite history $y_t, y_{t-1}, \ldots$.
+Please fill in the blanks in this sentence: ``$k$ is the regression coefficient of BLANK1  on $\underline{ \ \ \ }$.'' Please give formulas for $k$ and $\omega$.
+
+
+
+\medskip
+
+\noindent{\bf e.} Please verify the following formulas:
+$$ \eqalign{ \hat x_{t+1} & = k \sum_{j=0}^\infty (\rho - k)^j y_{t-j}  \cr
+             y_t & = k \sum_{j=0}^\infty (\rho - k)^j y_{t-j-1} + a_t , }$$
+where $a_t $ is orthogonal to $y_{t-j-1}$ for $j \geq 1$ so that the second equation is an {\it autoregressive representation} or {\it autoregression}
+for $y_t$. Please verify that $E[ y_{t+1} | y^t] = \hat x_{t+1}$.
+
+
+
+\medskip
+
+\noindent{\bf f.} Where $z^t$ denotes a semi-infinite history of a scalar process $z_t$, please verify the following formulas:
+$$ \eqalign{ x_t & = c \sum_{j=0}^\infty \rho^j w_{t-j} \cr
+             y_t & =   c \sum_{j=0}^\infty \rho^j w_{t-j} + v_t \cr
+             E[y_t | w^{t-1}, v^{t-1}] & = c \sum_{j=1}^\infty \rho^j w_{t-j} \cr
+             E ( y_t - [y_t | w^{t-1}, v^{t-1}])^2 & = c^2 + R .}$$
+Please verify that the one-step ahead prediction error variance    $E ( y_t - [y_t | w^{t-1}, v^{t-1}])^2$ is less than
+the one-step ahead prediction error variance $E a_t^2$.  Please explain why.
+
+\medskip
+\noindent {\bf g.}  Where $L$ is the lag operator presented in appendix A of chapter 2 of RMT5, %
+%appendix \use{appa1} of this chapter,
+ please verify the following formula:
+$$ a_t = {\frac{1}{1- (\rho-k)L}} \left[ cw_t + (1-\rho L) v_t \right]. $$
+Please interpret this formula as showing how the contemporaneous scalar shock $a_t$ reflects ``old news'' in the form of past
+$w_t$'s and past $v_t$'s.  Please interpret the discrepancy in variances of one-step ahead prediction errors that you computed
+in part {\bf f} in light of this formula.
+
+
+
+
+\bye
+
+
+
+
+
+
+\bye

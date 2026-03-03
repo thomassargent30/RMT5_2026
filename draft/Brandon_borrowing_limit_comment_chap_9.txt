@@ -1,0 +1,12 @@
+Hi Tom and Lars,
+
+In chapter 10, the book uses ‘natural debt limits’ for the weakest possible constraint on borrowing. In chapter 1,6  and 20, it uses 'natural borrowing limit.' In exercise 10.6 it also uses ‘natural borrowing limit.’ 
+
+I understand these are defined so that they aren’t exactly the same… natural borrowing limit is defined to be a constraint on the lowest level of a such that c is always nonnegative. Natural debt limit is the tail of the income sequence for all possible states today on valued in today’s goods.
+
+However, it feels a bit strange to me that if these are intended to be different this careful discrepancy isn’t noted somewhere, and if they aren’t then the language isn’t consistent. Furthermore, the usage of ’natural borrowing limit’ in 10.6 after talking about ‘natural debt limits’ throughout the chapter threw me off. Is this a typo? (In complete markets, I do believe the two will be identical, but natural borrowing limit has never been defined before seeing problem 10.6 explicitly.) 
+
+
+
+Best,
+Brandon

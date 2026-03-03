@@ -1,0 +1,89 @@
+
+======================
+
+
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.17} \quad {\bf Demand for labor}
+\medskip
+\noindent
+A representative firm chooses a labor input process $\{n_{t+1}\}_{t=0}^\infty$ to maximize $E_0 \sum_{t=0}^\infty \beta^t \pi_t$,
+where the discount factor $\beta \in (0,1)$, $E_0(\cdot)$ is a mathematical expectation operator conditional on date $0$ information, $n_0$
+is a given initial condition,
+$$ \pi_t = f_0 + s_t n_t - {\frac {f_2}{2}} n_t^2 - {\frac{d}{2}} (n_{t+1} - n_t)^2 - w_t n_t, $$
+  $s_t$ is an exogenous productivity shock, $w_t$ is an exogenous wage rate, and $d > 0$.  The $\{s_t, w_t\}_{t=0}^\infty$ process is governed by
+$$\eqalign{ z_{t+1}  & = A_{22} z_t + C_2 \epsilon_{t+1} \cr
+            \bmatrix{s_t \cr w_t} & = S z_t }$$
+where $A_{22}$ is a matrix whose eigenvalues are bounded in modulus by $\beta^{\frac{1}{2}}$ and $\{\epsilon_{t+1}\}_{t=0}^\infty$ is an i.i.d.~process
+of ${\cal N}(0,I)$ random vectors; $z_0$ is a given initial condition.
+
+\medskip
+\noindent{\bf a.} Please formulate the firm's optimum problem as a stochastic discounted optimal linear regulator problem, being careful to define the
+state and control vectors.  Please describe the form of the firm's demand curve for labor.
+
+\medskip
+\noindent{\bf b.} Please formulate the firm's problem using the Lagrangian approach of section \use{sec:Lagrangian_more}.
+ For a non-stochastic version of the problem
+ please obtain the first-order conditions with respect to $n_{t+1}$ for each $t \geq 0$ and show that they form a  second-order
+ linear difference equation of the type  analyzed in appendix \use{appa1} of chapter \use{timeseries}.
+
+
+
+
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.18} \quad {\bf Labor supply}
+\medskip
+\noindent
+A representative worker chooses a labor supply process $\{n_{t+1}\}_{t=0}^\infty$ to maximize $E_0 \sum_{t=0}^\infty \beta^t (c_t + u_t)$
+where  $c_t = w_t n_t$ is the worker's consumption rate, $u_t$ is the worker's utility from working,  $w_t$ is an exogenous wage rate, the discount factor $\beta \in (0,1)$, $E_0(\cdot)$ is a mathematical expectation operator conditional on date $0$ information, $n_0$
+is a given initial condition,
+$$ u_t = h_0  - b_t n_t - {\frac {h_2}{2}} n_t^2 - {\frac{q}{2}} (n_{t+1} + n_t)^2 , $$
+ $w_t$ is an exogenous wage, and $q > 0$.  The $\{b_t, w_t\}_{t=0}^\infty$ process is governed by
+$$\eqalign{ z_{t+1}  & = A_{22} z_t + C_2 \epsilon_{t+1} \cr
+            \bmatrix{b_t \cr w_t} & = S z_t }$$
+where $A_{22}$ is a matrix whose eigenvalues are bounded in modulus by $\beta^{\frac{1}{2}}$ and $\{\epsilon_{t+1}\}_{t=0}^\infty$ is an i.i.d.~process
+of ${\cal N}(0,I)$ random vectors; $z_0$ is a vector of given initial conditions.
+
+\medskip
+\noindent{\bf a.} Please formulate the worker's optimum labor supply problem as a stochastic discounted optimal linear regulator problem, being careful to define the state and control vectors.  Please describe the form of the worker's supply curve for labor and represent it in state-space form.
+
+\medskip
+\noindent{\bf b.} Please formulate the worker's problem using the Lagrangian approach of section \use{sec:Lagrangian_more}.
+ For a non-stochastic version of the problem
+ please obtain the first-order conditions with respect to $n_{t+1}$ for each $t \geq 0$ and show that they are a version of the second-order
+ linear difference equation analyzed in appendix \use{appa1} of chapter \use{timeseries}.
+
+
+%\vfil\eject
+
+\medskip
+\noindent{\it Exercise \the\chapternum.19} \quad {\bf A planning problem}
+\medskip
+
+\noindent A planner chooses a labor  process $\{n_{t+1}\}_{t=0}^\infty$ to maximize $E_0 \sum_{t=0}^\infty \beta^t (c_t + u_t)$, where
+$$\eqalign{ c_t &  = f_0 + s_t n_t - {\frac {f_2}{2}} n_t^2 - {\frac{d}{2}} (n_{t+1} - n_t)^2 \cr
+            u_t & =  h_0  - b_t n_t - {\frac {h_2}{2}} n_t^2 - {\frac{q}{2}} (n_{t+1} + n_t)^2 } $$
+where $f_0 > 0, h_0 >0, d > 0, q > 0$, $s_t$ is a productivity shock,  $b_t$ is a preference shock, $c_t$ is a worker's consumption, and $u_t$
+  is a worker's utility from working.  The shock processes $s_t, b_t$ are
+governed by
+$$\eqalign{ z_{t+1}  & = A_{22} z_t + C_2 \epsilon_{t+1} \cr
+            \bmatrix{s_t \cr b_t} & = S z_t }$$
+where $A_{22}$ is a matrix whose eigenvalues are bounded in modulus by $\beta^{\frac{1}{2}}$ and $\{\epsilon_{t+1}\}_{t=0}^\infty$ is an i.i.d.~process
+of ${\cal N}(0,I)$ random vectors; $z_0$ is a vector of given initial conditions as is the labor supply $n_0$.
+
+\medskip
+\noindent{\bf a.} Please formulate the planner's  optimum  problem as a stochastic discounted optimal linear regulator problem, being careful to define the state and control vectors.  Please describe the form of the planner's rule for setting $n_{t+1}$  and represent it in state-space form.
+
+\medskip
+\noindent{\bf b.}  Please formulate the planner's problem using the Lagrangian approach of section \use{sec:Lagrangian_more}.
+ For a non-stochastic version of the problem
+ please obtain the first-order conditions with respect to $n_{t+1}$ for each $t \geq 0$ and show that they are a version of the second-order
+ linear difference equation analyzed in appendix \use{appa1} of chapter \use{timeseries}.
+
+ \medskip
+ \noindent{\bf c.} Please stare at the difference equation that you derived in part {\bf b} and use it to define a ``shadow wage rate'' that makes
+ sense in view of your answers to parts {\bf b} of questions \the\chapternum.17 and \the\chapternum.18.
+

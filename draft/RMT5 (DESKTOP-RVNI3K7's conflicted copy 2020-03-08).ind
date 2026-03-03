@@ -1,0 +1,150 @@
+\begin{theindex}
+
+  \item adaptive expectations, 109, 111
+  \item autocovariogram, 50
+  \item autoregression
+    \subitem finite-horizon, 81
+
+  \indexspace
+
+  \item Bayes law
+    \subitem as conditional probability, 59
+
+  \indexspace
+
+  \item Cauchy-Schwarz inequality, 79
+  \item Cholesky decomposition, 81
+  \item conditional expectation, 41
+    \subitem wide sense, 60
+  \item covariance stationary, 49
+
+  \indexspace
+
+  \item distribution
+    \subitem Gaussian, 62
+    \subitem invariant, 39
+    \subitem multinomial, 43
+    \subitem stationary, 37, 39, 71
+  \item dynamic programming, 56
+    \subitem squared, 28
+
+  \indexspace
+
+  \item elliptical
+    \subitem probability distributions, 60
+
+  \indexspace
+
+  \item filter
+    \subitem linear, 62, 66
+  \item Fourier inversion formula, 71
+
+  \indexspace
+
+  \item golden ratio, 111
+  \item Gram-Schmidt process, 66, 80
+    \subitem Cholesky decomposition, 81
+  \item guess-and-verify method, 52
+
+  \indexspace
+
+  \item hidden Markov model, 41, 67, 70
+    \subitem Kalman filter, 63
+  \item Howard policy improvement algorithm, 56, 104
+
+  \indexspace
+
+  \item impulse response function, 51
+  \item innovations representation, 67, 70
+  \item inverse optimal prediction, 109
+
+  \indexspace
+
+  \item Jensen's inequality, 115
+
+  \indexspace
+
+  \item Kalman filter, 66
+    \subitem and vector autoregressions, 70
+    \subitem cross-products between measurement and state noise, 100
+
+  \indexspace
+
+  \item Law of cosines, 78
+  \item law of iterated expectations, 41, 42
+  \item least squares projection
+    \subitem Cholesky decomposition, 81
+  \item least-squares projection, 56, 78
+  \item likelihood function, 43, 58
+    \subitem Gaussian, 62
+    \subitem multinomial, 43
+  \item linear rational expectations models, 61
+  \item LQ permanent income model
+    \subitem incomplete markets, 114
+  \item Lyapunov equation
+    \subitem discrete, 53
+
+  \indexspace
+
+  \item Markov chain, 35, 36
+    \subitem as difference equation, 40
+  \item martingale, 46
+    \subitem difference sequence, 46
+  \item maximum likelihood, 43, 62
+  \item moving average
+    \subitem finite-horizon, 81
+  \item moving average representation, 51
+
+  \indexspace
+
+  \item Neumann series, 42
+
+  \indexspace
+
+  \item population regression, 56
+    \subitem Kalman filter, 63
+  \item posterior probability, 59
+  \item precautionary savings, 115
+  \item prior probability, 59
+  \item puzzle
+    \subitem definition, xii
+
+  \indexspace
+
+  \item regression
+    \subitem population, 56
+  \item resolvent operator, 42
+  \item Riccati equation
+    \subitem matrix difference, 66
+
+  \indexspace
+
+  \item second-moment restrictions, 44
+  \item spectral density, 71
+  \item state, 35
+  \item statistical model
+    \subitem likelihood function, 59
+  \item stochastic
+    \subitem linear difference equations, 35
+    \subitem matrix, 36
+    \subitem process, 35, 48
+  \item stochastic discount factor, 53
+  \item submartingale, 115
+  \item Sylvester equation, 103
+    \subitem discrete Lyapunov equation, 76
+
+  \indexspace
+
+  \item transition matrix, 36
+  \item typical spectral shape, 74
+
+  \indexspace
+
+  \item value function, 54
+  \item vector autoregression, 47, 69
+
+  \indexspace
+
+  \item white noise, 46
+
+\end{theindex}

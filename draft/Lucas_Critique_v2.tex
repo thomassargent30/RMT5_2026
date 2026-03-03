@@ -1,0 +1,142 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+%
+ 
+
+\centerline{\bf Lucas II}
+
+
+We let $s_t \in \{1,2\}$ be governed by a Markov chain with transition matrix $P$ where
+$P_{ij} = {\rm Prob}(s_{t+1} = j| s_t  = i) $ and initial probability distribution $\pi_0$.
+
+$$ \eqalign{ x_{t+1} & = A_{s_t} x_{t+1} + C_{s_t} w_{t+1} \cr
+                    y_t  & = G_{s_t} x_t  \cr  } $$
+We   want to compute the conditional  mathematical expectations
+ $$ z_t = E ( \sum_{t=0}^\infty \beta^t y_{t+j} ) \vert x_t, s_t  $$     
+ and 
+ $$ \tilde z_t =  E ( \sum_{t=0}^\infty \beta^t y_{t+j} ) | x_t . $$           
+We begin by guessing that
+$$ z_t = H_{s_t} x_t  $$
+and substitute this guess into
+$$ z_t = y_t + \beta E z_{t+1} | x_t, s_t  $$
+to get 
+$$  H_i  = G_{i}   + \beta \sum_{j} H_j A_i P_{ij}. $$
+which implies in particular that
+$$ \eqalign{ H_1 & = G_1 + \beta [ H_1 A_1 P_{11} + H_2 A_1 P_{12} ] \cr
+                   H_2 & = G_2 + \beta [ H_1 A_2 P_{21} + H_2 A_1 P_{22} ]. }$$                  
+Stacking and solving, we find
+$$ \bmatrix{H_1 & H_2 }  = \bmatrix{G_1 & G_2}             (I - \beta \bmatrix {A_1 P_{11} & A_2 P_{21} \cr
+                                                   A_1 P_{12} & A_2 P_{22} }  )^{-1}. $$                   
+
+
+\subsection{Conditional distributions}
+
+We let $\pi(t)$ be a distribution over the finite Markov state $s_t$ and denote $\pi_i(t)$ be the probability
+of state $i$ at $t$.  Below, we'll suppress the $t$ and just write $\pi_i$ with $t$ being understood, depending on the
+context of our application.
+
+
+We have the following  normal distributions  conditional on $x_t, s_t$:
+$$ \eqalign{ x_{t+1} | x_t, s_t  & \sim {\cal N}( A_{s_t} x_t, C_{s_t}C_{s_t} ' ) \cr
+                    y_t | x_t, s_t & \sim {\cal N}( G_{s_t} x_t, 0 )  \cr
+                    z_t | x_t, s_t & \sim {\cal N}( H_{s_t} x_t, 0 ) }  $$
+But distributions conditional on $x_t$ are {\it mixtures of normals}, with $\pi_i$ being mixing probabilities.               
+Where
+$$ \eqalign{ \bar A & = \pi(1) A_1 + \pi(2) A_2   \cr
+                    \bar G & = \pi(1) G_1 + \pi(2) G_2 \cr
+                    \bar H & = \pi(1) H_1 + \pi(2) H_2 }$$ 
+we have
+$$ \eqalign{ E x_{t+1} | x_t & = \bar A x_t \cr
+                    E y_t | x_t & = \bar G x_t      \cr
+                    E z_t | x_t & = \bar H x_t }$$ 
+Now let's compute conditional covariances.  
+Since
+$$ x_{t+1} - \bar A x_t = \cases{ (A_1 - \bar A) x_t  + C_1 w_{t+1} & if $s_t =1$ \cr
+                                                    (A_2 - \bar A) x_t  + C_2 w_{t+1} & if $s_t =2$ } $$
+it follows that 
+$$ E (x_{t+1} - \bar A x_t ) (x_{t+1} - \bar A x_t ) ' | x_t = \sum_i \pi_i [ (A_i - \bar A) x_t x_t' (A_i - \bar A)' + C_i C_i' ] $$
+And since                  
+$$ y_t = \cases{ G_1 x_t & if $s_t =1$ \cr
+                           G_2 x_t & if $s_t =2 $ } $$                     
+and 
+$$ y_t - \bar G x_t = \cases{ (G_1 - \bar G) x_t & if $s_t =1$ \cr
+                           (G_2  - \bar G) x_t & if $s_t =2 $ } $$                             
+it follows that 
+$$ E (y_t - \bar G x_t) (y_t - \bar G x_t)' | x_t = \sum_i \pi_i (G_i - \bar G) x_t x_t' (G_i - \bar G)'.  $$   
+and that
+$$ E (z_t - \bar H x_t) (z_t - \bar H x_t)' | x_t = \sum_i \pi_i (H_i - \bar H) x_t x_t' (H_i - \bar H)'.  $$                                                    
+       
+                
+                    
+                                              
+Let 
+$$\Sigma(x_t)  = \sum_i \pi_i [ (A_i - \bar A) x_t x_t' (A_i - \bar A)' + C_i C_i' ] $$
+Then since $\{x_{t}\}$ is a stationary and ergodic process with stationary distribution $\pi(x)$, we have a mean-ergodic theorem that
+tells us that as $ {T \rightarrow + \infty}$
+$$ T^{-1} \sum_{t=0}^T \Sigma(x_t)  \rightarrow \int \Sigma(x) d \pi(x) \equiv \Sigma $$
+A vector autoregression of the form
+$$ x_{t+1} = \bar A x_t + v_{t+1}$$
+has $E v_{t+1} v_{t+1}' = \Sigma$.
+
+We can compute  means and covariances directly as follows.
+Let
+$E x_t = \mu_t$ and $\Sigma_t = E (x_t - \mu_t) (x_t  - \mu_t)'$.  
+Note that
+$$ x_{t+1} - \mu_{t+1} = \cases{ (A_1 - \mu_t) x_t  + C_1 w_{t+1} & if $s_t =1$ \cr
+                                                    (A_2 - \mu_t) x_t  + C_2 w_{t+1} & if $s_t =2$ } $$
+It follows that
+$$ \mu_{t+1} = \bar A \mu_t$$
+and
+$$\Sigma_{t+1} = \pi_1 (A_1 - \bar A) \Sigma_t (A_1 - \bar A)' + \pi_2 (A_2 - \bar A) \Sigma_t (A_2 - \bar A)' + \bar C \bar C ' $$
+and that iterations on these two recursions will converge, respectively, to 
+a stationary mean vector $\mu$  and covariance matrix $\Sigma$ that
+satisfy
+$$ \mu  = \bar A \mu $$
+and
+$$\Sigma = \pi_1 (A_1 - \bar A) \Sigma (A_1 - \bar A)' + \pi_2 (A_2 - \bar A) \Sigma(A_2 - \bar A)' + \bar C \bar C ' .$$
+
+
+\subsection{Example}
+
+Let $p_t$ be the rate  of inflation and $m_t$ the rate of growth of the money supply, where the rate of inflation is the first difference in the logarithm of the price level
+and the rate of growth of the money supply is the first difference of the logarithm of the money supply.  Assume
+that 
+$$ p_t = (1-\lambda) m_t + \lambda E_t p_{t+1},  \quad \lambda \in (0,1)  $$
+so that
+$$ p_t = (1-\lambda) E_t \sum_{j=0}^\infty \lambda^j m_{t+j} $$
+where $E_t (\cdot)$ is a mathematical expectation conditioned on time $t$ information, which will be either $x_t$ or $x_t, s_t$ where $x_t, s_t$ are to be defined now.
+We assume  that $s_t \in {1,2}$ is governed by a two-state Markov chain $P$ with initial distribution $\pi_0$. 
+As for $x_t$, it is a state that lets us represent the following stochastic process for $\{m_t\}_{t=0}^\infty$ in the state-space form XXXX:
+$$ m_{t+1} = \rho_{1,s(t)} m_t + \rho_{2,s(t)} m_{t-1} + c_{s(t)}w_{t+1} $$
+where $w_{t+1}$ is an i.i.d. standardized normal random variable. 
+
+\noindent{\bf Quentin:} Please compute ``all of our objects'' for this example with two $s_t$ dependent   $\rho_1, \rho_2$ vectors, namely $1.2, -.3$ and $.95, 0$ with
+a transition matrix $P = \bmatrix{ .5 & .5 \cr .5 & .5 } $ using as $\pi_0 =\pi_\infty$ the stationary distribution $\bmatrix{.5 & .5}'$
+
+
+
+
+
+
+
+                                                    
+
+
+
+
+
+
+
+\bye

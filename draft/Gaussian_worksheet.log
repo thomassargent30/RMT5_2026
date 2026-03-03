@@ -1,0 +1,173 @@
+This is TeX, Version 3.14159265 (MiKTeX 2.9.6210 64-bit) (preloaded format=tex 2017.3.8)  29 JAN 2019 12:01
+**./Gaussian_worksheet.tex
+(Gaussian_worksheet.tex
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\texsis.tex
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSfonts.tex
+TeXsis fonts:
+\ttglue=\skip18
+ \mib, \scr,
+\scrfam=\fam8
+ 9pt, 10pt, 11pt, 12pt, 14pt, 16pt, 20pt, 24pt.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSmacs.tex
+TeXsis main macros.
+\footnum=\count26
+\@quoteflag=\count27
+\AThelp=\toks12
+\beginhelp=\toks13
+ Checkpoint/Restart.
+\checkpointout=\write0
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSinit.tex
+Initialization.
+\txsfile=\read0
+\@utohelp=\toks14
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXShead.tex
+Running Headlines.
+\headlineoffset=\dimen16
+\footlineoffset=\dimen17
+\BindingMargin=\dimen18
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSeqns.tex
+Equation numbering.
+\eqnum=\count28
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSprns.tex
+Auto-sizing of Parentheses.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSrefs.tex
+References and Citations.
+\refnum=\count29
+\@firstrefnum=\count30
+\@lastrefnum=\count31
+\@BadRefs=\count32
+\refindent=\dimen19
+\CiteType=\count33
+\reflistout=\write1
+\reflistin=\read1
+
+BIBTeX support for TeXsis (macros and patches) v 0.92)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSsects.tex
+Section and Chapter divisions.
+\chapternum=\count34
+\sectionnum=\count35
+\subsectionnum=\count36
+\subsubsectionnum=\count37
+\sectionskip=\skip19
+\subsectionskip=\skip20
+\sectionminspace=\dimen20
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXStags.tex
+Labels and tags.
+\auxfilein=\read2
+\auxfileout=\write2
+\@BadTags=\count38
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXStitle.tex
+Title Page macros.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSenvmt.tex
+Environments.
+\EnvTopskip=\skip21
+\EnvBottomskip=\skip22
+\EnvLeftskip=\skip23
+\EnvRightskip=\skip24
+\EnvDelt@skip=\skip25
+\@envDepth=\count39
+\enumDepth=\count40
+\enumcnt=\count41
+\@desbox=\box16
+\@desline=\box17
+\@glodeswd=\dimen21
+\@deslines=\count42
+\theoremnum=\count43
+\lemmanum=\count44
+\corollarynum=\count45
+\definitionnum=\count46
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSfmts.tex
+Layout macros.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSfigs.tex
+Figures and Tables.
+\tabnum=\count47
+\fignum=\count48
+\fgout=\write3
+\tbout=\write4
+\figlist=\write5
+\tablelist=\write6
+\caplist=\write7
+\@capbox=\box18
+\@caplines=\count49
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSruled.tex
+\ncols=\count50
+\nrows=\count51
+\curcol=\count52
+\thinsize=\dimen22
+\thicksize=\dimen23
+\tablewidth=\dimen24
+\parasize=\dimen25
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSdcol.tex
+- Double column format.
+\colwidth=\dimen26
+\pagewidth=\dimen27
+\pageheight=\dimen28
+\rulewd=\dimen29
+\colmaxdepth=\dimen30
+\@bigColHeight=\dimen31
+\@saveSplitmax=\dimen32
+\@saveVsize=\dimen33
+\s@veskip=\skip26
+\doublecolskip=\skip27
+\@leftpluscenter=\dimen34
+\partialpage=\box19
+\botins=\insert252
+\NWins=\insert251
+\SWins=\insert250
+\NEins=\insert249
+\SEins=\insert248
+\LFins=\insert247
+\RFins=\insert246
+\@balncErrormsg=\toks15
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSletr.tex
+Letter Format,
+\headlineoffset=\dimen35
+\longindent=\dimen36
+\hdimphone=\dimen37
+\vdimphone=\dimen38
+\hdimdate=\dimen39
+\vdimdate=\dimen40
+\bigletterskip=\skip28
+\theaddress=\box20
+ with envelopes.
+\EnvlWidth=\dimen41
+\EnvlHeight=\dimen42
+\EnvlVoffset=\dimen43
+\Envout=\write8
+\fullHsize=\dimen44
+\fullVsize=\dimen45
+\lblHsize=\dimen46
+\lblVsize=\dimen47
+\lblVoffset=\dimen48
+\lblHoffset=\dimen49
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSmemo.tex
+Memo Format.
+\memoindent=\dimen50
+\firstheadoffset=\dimen51
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSconts.tex
+Table of Contents.
+\TOCout=\write9
+\TOCmargin=\skip29
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSsymb.tex
+Extended math/physics symbols,
+\vbigd@men=\dimen52
+)
+> Trying to read in TXSsite.tex...
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSsite.tex
+Site dependent info.... Generic version.)
+TeXsis version 2.18 (21 April 2001) loaded.
+) [1] [2] )
+Output written on Gaussian_worksheet.dvi (2 pages, 5092 bytes).

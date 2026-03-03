@@ -1,0 +1,93 @@
+% Raw index file ``RMT5.idx''
+% ====================================
+\indexentry {puzzle!definition}{xii}
+\indexentry {dynamic programming!squared}{28}
+\indexentry {Markov chain}{35}
+\indexentry {state}{35}
+\indexentry {stochastic!linear difference equations}{35}
+\indexentry {stochastic!process}{35}
+\indexentry {Markov chain}{36}
+\indexentry {transition matrix}{36}
+\indexentry {stochastic!matrix}{36}
+\indexentry {distribution!stationary}{37}
+\indexentry {distribution!stationary}{39}
+\indexentry {distribution!invariant}{39}
+\indexentry {Markov chain!as difference equation}{40}
+\indexentry {hidden Markov model}{41}
+\indexentry {conditional expectation}{41}
+\indexentry {law of iterated expectations}{41}
+\indexentry {law of iterated expectations}{42}
+\indexentry {resolvent operator}{42}
+\indexentry {Neumann series}{42}
+\indexentry {likelihood function}{43}
+\indexentry {distribution!multinomial}{43}
+\indexentry {maximum likelihood}{43}
+\indexentry {likelihood function!multinomial}{43}
+\indexentry {second-moment restrictions}{44}
+\indexentry {martingale!difference sequence}{46}
+\indexentry {martingale}{46}
+\indexentry {white noise}{46}
+\indexentry {vector autoregression}{47}
+\indexentry {stochastic!process}{48}
+\indexentry {covariance stationary}{49}
+\indexentry {autocovariogram}{50}
+\indexentry {moving average representation}{51}
+\indexentry {impulse response function}{51}
+\indexentry {guess-and-verify method}{52}
+\indexentry {Lyapunov equation!discrete}{53}
+\indexentry {stochastic discount factor}{53}
+\indexentry {value function}{54}
+\indexentry {Howard policy improvement algorithm}{56}
+\indexentry {dynamic programming}{56}
+\indexentry {population regression}{56}
+\indexentry {regression!population}{56}
+\indexentry {least-squares projection}{56}
+\indexentry {likelihood function}{58}
+\indexentry {Bayes law!as conditional probability}{59}
+\indexentry {statistical model!likelihood function}{59}
+\indexentry {prior probability}{59}
+\indexentry {posterior probability}{59}
+\indexentry {conditional expectation!wide sense}{60}
+\indexentry {elliptical!probability distributions}{60}
+\indexentry {linear rational expectations models}{61}
+\indexentry {distribution!Gaussian}{62}
+\indexentry {likelihood function!Gaussian}{62}
+\indexentry {maximum likelihood}{62}
+\indexentry {filter!linear}{62}
+\indexentry {population regression!Kalman filter}{63}
+\indexentry {hidden Markov model!Kalman filter}{63}
+\indexentry {Kalman filter}{66}
+\indexentry {filter!linear}{66}
+\indexentry {Riccati equation!matrix difference}{66}
+\indexentry {Gram-Schmidt process}{66}
+\indexentry {hidden Markov model}{67}
+\indexentry {innovations representation}{67}
+\indexentry {vector autoregression}{69}
+\indexentry {hidden Markov model}{70}
+\indexentry {innovations representation}{70}
+\indexentry {Kalman filter!and vector autoregressions}{70}
+\indexentry {spectral density}{71}
+\indexentry {distribution!stationary}{71}
+\indexentry {Fourier inversion formula}{71}
+\indexentry {typical spectral shape}{74}
+\indexentry {Sylvester equation!discrete Lyapunov equation}{76}
+\indexentry {Law of cosines}{78}
+\indexentry {least-squares projection}{78}
+\indexentry {Cauchy-Schwarz inequality}{79}
+\indexentry {Gram-Schmidt process}{80}
+\indexentry {autoregression!finite-horizon}{81}
+\indexentry {moving average!finite-horizon}{81}
+\indexentry {Cholesky decomposition}{81}
+\indexentry {least squares projection!Cholesky decomposition}{81}
+\indexentry {Gram-Schmidt process!Cholesky decomposition}{81}
+\indexentry {Kalman filter!cross-products between measurement and state noise}{100}
+\indexentry {Sylvester equation}{103}
+\indexentry {Howard policy improvement algorithm}{104}
+\indexentry {adaptive expectations}{109}
+\indexentry {inverse optimal prediction}{109}
+\indexentry {golden ratio}{111}
+\indexentry {adaptive expectations}{111}
+\indexentry {LQ permanent income model!incomplete markets}{114}
+\indexentry {Jensen's inequality}{115}
+\indexentry {submartingale}{115}
+\indexentry {precautionary savings}{115}

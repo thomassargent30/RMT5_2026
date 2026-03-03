@@ -1,0 +1,34 @@
+Dear Tom,
+
+Hmmm. Unfortunately, I couldn’t seem to find a good tool to do this conversion. The one that exists (pscol) failed on your file because the Matlab code renamed some commands inside of the .eps file.
+
+There seem to be three ways to proceed:
+
+1) I wrote a little Python script of my own that reads in an eps file and converts it to grayscale. It was surprisingly simple. Colors are set in an eps file by giving three numbers and then the command setrgbcolor. All I had to do was use regex to find all instances of this and then take those three colors and convert them to grayscale using a formula. This is a relatively simple solution, but, as long as the files all have same style of content, it should be very efficient. It produces the smallest sized file.
+
+2) Write a bash script that converts the files to pdf using epstopdf, converts the pdf to grayscale using ghostscript, and then converts them back into an eps file using pdftops -eps. This produces a slightly larger file. This is probably more robust, but it feels clunky because we’re going back and forth between file formats.
+
+3) Convert files one by one using online tool Lars found ←- Not recommended! Would take a lot of time and it is creating larger files than the other two methods.
+
+What do you think? Given that this is a production level task, I might be inclined to recommend number 2 because it is least likely to fail on any one file. However, it might be worth trying number 1 first and seeing whether it succeeds.
+
+Best,
+
+Chase
+
+P.S. I’ve attached the scripts used to generate these files.
+
+To create the “Chase version”, you just need to run python convert_grayscale.py
+
+To create the “eps to pdf to eps” version, you need to   run bash convert_grayscale.sh
+
+
+NOTE: to run the .sh file in a bash terminal just type
+
+    bash  [filename.sh]
+
+
+to run python file, type
+
+        python convert_grayscale_tom.py
+

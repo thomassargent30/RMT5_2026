@@ -1,0 +1,14 @@
+Brandon questions about ch 19:
+
+
+Also, in 19.3.4 and the proceeding equations, I found what I think are a number of mathos. They are listed below
+* In the line below where you say 'compute the following inverse operator' 
+$-\delta_2$ in front of parenthesis on the right-hand side of the equals sign should be $-\delta_2^{-1}$
+* In the same line inside the parenthesis it should read $(1-\delta_2^{-1}L^{-1})$ not $(1-\delta_2^{-1})$.
+* 
+In equation 19.3.4:
+* Unless you did a negation I didn't see, I think there should be a plus sign in front of the $c_0$ term and a minus sign in front of the infinite sum term.
+* I think inside the infinite summation, it should read $\delta_2^{-j}$, since that follows from the math above and the fact that since $\delta_2>1/\sqrt{\beta}$, the infinite sum over $\delta_2^j$ is not stable.
+
+*The corresponding corrections need to be made in 19.3.5.
+

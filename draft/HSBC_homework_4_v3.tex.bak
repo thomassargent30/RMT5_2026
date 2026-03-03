@@ -1,0 +1,172 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+%
+
+
+\centerline{\bf Homework 4}
+
+
+\medskip
+\noindent{\bf Notation alert:}
+Please forgive us for recycling some notation. In particular, the state vector $x_t$ and control vector $u_t$ are recycled, being redefined as we move
+from one of the problems below to the next problem.
+
+
+\medskip
+\noindent{\it Exercise 1} \quad {\bf Demand for labor}
+\medskip
+\noindent
+A representative firm chooses a labor input process $\{n_{t+1}\}_{t=0}^\infty$ to maximize $E_0 \sum_{t=0}^\infty \beta^t \pi_t$,
+where the discount factor $\beta \in (0,1)$, $E_0(\cdot)$ is a mathematical expectation operator conditional on date $0$ information, $n_0$
+is a given initial condition,
+$$ \pi_t = s_t n_t -f n_t^2 - d (n_{t+1} - n_t)^2 - w_t n_t, $$
+  $s_t$ is an exogenous productivity shock, $w_t$ is an exogenous wage rate, $f > 0$, and $d > 0$.  The $\{s_t, w_t\}_{t=0}^\infty$ process is governed by
+$$\eqalign{ z_{t+1}  & = A_{22} z_t + C_2 \epsilon_{t+1} \cr
+            \bmatrix{s_t \cr w_t} & = S z_t } \leqno(1) $$
+where $A_{22}$ is a matrix whose eigenvalues are bounded in modulus by $\beta^{-{\frac{1}{2}}}$ and $\{\epsilon_{t+1}\}_{t=0}^\infty$ is an i.i.d.~process
+of ${\cal N}(0,I)$ random vectors; $z_0$ is a given initial condition.
+
+\medskip
+\noindent{\bf a.} Assume that the $\{s_t, w_t\}$ processes take the forms
+$$\eqalign{ s_{t+1} & = \alpha_s + \rho_1 s_t + \sigma_s \epsilon_{1,t+1} \cr
+           w_{t+1} & = \alpha_w + \gamma_1 w_t + \sigma_w \epsilon_{2,t+1} ,}$$
+where $\{\epsilon_{i,t}\}$ are each i.i.d.~sequences of ${\cal N}(0,1)$ random variables.  Show how to map these processes into system
+(1).
+
+\medskip
+\noindent{\bf b.} Please formulate the firm's optimum problem as a stochastic discounted optimal linear regulator problem. In particular, define the
+firm's state vector $x_t$ and define the firm's control
+  as $u_t = n_{t+1} - n_t$. Tell how to define the matrices $A_f, B_f, C_f$ that describe the firm's state-transition equations.
+   Describe how to create the matrices $R_f, Q_f, N_f$ that define the firm's return function
+$r_f (x_t, u_t) = x_t ' R_f x_t + u_t ' Q_f u_t + 2 u_t' N_f x_t$. Please describe the form of the firm's demand curve for labor.
+
+
+
+
+
+
+\medskip
+\noindent{\it Exercise 2.} \quad {\bf Labor supply}
+\medskip
+\noindent
+A representative worker chooses a labor input process $\{n_{t+1}\}_{t=0}^\infty$ to maximize $E_0 \sum_{t=0}^\infty \beta^t (c_t + \upsilon_t)$
+where  $c_t = w_t n_t$ is the worker's consumption rate, $\upsilon_t$ is the worker's utility from working,  $w_t$ is an exogenous wage rate, the discount factor $\beta \in (0,1)$, $E_0(\cdot)$ is a mathematical expectation operator conditional on date $0$ information, $n_0$
+is a given initial condition,
+$$ \upsilon_t =  - b_t n_t - h n_t^2 - q (n_{t+1} + n_t)^2 , $$
+ $w_t$ is an exogenous wage, $h > 0$,  and $q > 0$.  The $\{b_t, w_t\}_{t=0}^\infty$ process is governed by
+$$\eqalign{ z_{t+1}  & = A_{22} z_t + C_2 \epsilon_{t+1} \cr
+            \bmatrix{b_t \cr w_t} & = S z_t } \leqno(1) $$
+where $A_{22}$ is a matrix whose eigenvalues are bounded in modulus by $\beta^{-{\frac{1}{2}}}$ and $\{\epsilon_{t+1}\}_{t=0}^\infty$ is an i.i.d.~process
+of ${\cal N}(0,I)$ random vectors; $z_0$ is a vector of given initial conditions; the initial labor supply $n_0$ is given.
+
+\medskip
+
+\noindent{\bf a.} Assume that the $\{b_t, w_t\}$ processes take the forms
+$$\eqalign{ b_{t+1} & = \alpha_b + \rho_1 b_t + \sigma_b \epsilon_{1,t+1} \cr
+           w_{t+1} & = \alpha_w + \gamma_1 w_t + \sigma_w \epsilon_{2,t+1} ,}$$
+where $\{\epsilon_{i,t}\}$ are each i.i.d.~sequences of ${\cal N}(0,1)$ random variables.  Show how to map these processes into system
+(1).
+\medskip
+
+\noindent{\bf b.} Please formulate the worker's optimum labor supply problem as a stochastic discounted optimal linear regulator problem.
+In particular, define the
+worker's state vector $x_t$ and define the worker's control
+  as $u_t = n_{t+1} - n_t$. Tell how to define the matrices $A_w, B_w, C_w$ that describe the worker's state-transition equations.
+   Describe how to create the matrices $R_w, Q_w, N_w$ that define the worker's return function
+$r_w (x_t, u_t) = x_t ' R_w x_t + u_t ' Q_w u_t + 2 u_t' N_w x_t$.
+    Please describe the form of the worker's supply curve for labor and represent it in state-space form.
+
+
+
+
+
+\medskip
+\noindent{\it Exercise 3} \quad {\bf A planning problem}
+\medskip
+
+\noindent A planner chooses a labor input process $\{n_{t+1}\}_{t=0}^\infty$ to maximize $E_0 \sum_{t=0}^\infty \beta^t (c_t + \upsilon_t)$, where
+$$\eqalign{ c_t &  =  s_t n_t - f n_t^2 - d (n_{t+1} - n_t)^2 \cr
+            \upsilon_t & =   - b_t n_t - h n_t^2 - q (n_{t+1} + n_t)^2 } $$
+where $f > 0, h >0, d > 0, q > 0$, $s_t$ is a productivity shock,  $b_t$ is a preference shock, $c_t$ is a worker's consumption, and $\upsilon_t$
+  is a worker's utility from working.  The shock processes $s_t, b_t$ are
+governed by
+$$\eqalign{ z_{t+1}  & = A_{22} z_t + C_2 \epsilon_{t+1} \cr
+            \bmatrix{s_t \cr b_t} & = S z_t }$$
+where $A_{22}$ is a matrix whose eigenvalues are bounded in modulus by $\beta^{-{\frac{1}{2}}}$ and $\{\epsilon_{t+1}\}_{t=0}^\infty$ is an i.i.d.~process
+of ${\cal N}(0,I)$ random vectors; $z_0$ is a vector of given initial conditions; the initial  labor supply  $n_0$ is also given.
+
+\medskip
+\noindent{\bf a.} Please formulate the planner's  optimum labor supply problem as a stochastic discounted optimal linear regulator problem.
+ in particular, define the
+planner's state vector $x_t$ and define the planner's  control
+  as $u_t = n_{t+1} - n_t$. Tell how to define the matrices $A_p, B_p, C_p$ that describe the planner's state-transition equations.
+   Describe how to create the matrices $R_p, Q_p, N_p$ that define the planner's return function
+$r_p (x_t, u_t) = x_t ' R_p x_t + u_t ' Q_p u_t + 2 u_t' N_p x_t$. Please describe the form of the planner's rule for setting $n_{t+1}$  and represent it in state-space form.
+
+\medskip
+
+\noindent
+{\bf Hints:} Set $u_t =  n_{t+1} - n_t$, $x_t = \bmatrix{z_t \cr n_t}, C_p = \bmatrix{ C_2 \cr 0}$. The optimal decision rule is $u_{t} = - F_p x_t$ and the optimal closed loop system
+is $x_{t+1} = (A_p - B_pF_p) x_t + C \epsilon_{t+1}. $
+\medskip
+
+\noindent {\it Exercise 4.} {\bf A big $K$, little $k$ application}
+
+\medskip
+\noindent For convenience, please rewrite the controlled state-space system that emerged from solving the planner's problem in exercise 3
+as $ \tilde x_{t+1} = (\tilde A - \tilde B \tilde F) \tilde x_t + \tilde C \epsilon_{t+1}$, where $\tilde x_t = \bmatrix{ z_t \cr \tilde n_t}$
+and $\tilde A = A_p, \tilde B = B_p, \tilde F = F_p, \tilde C = C_p$.
+Define a putative wage rate $ w_t =  - 2 P_{w,n} \tilde x_t$, where $P_{w,n}$ is the last row of the matrix $P_w$ that satisfies the discrete Sylvester equation
+$$ P_w = (R_f + F_f' Q_f F_f) + \beta A_p' P_w (A_p - B_p F_p).   $$
+Please note the subscripts carefully: the matrices $R_f, Q_f, F_f$ are from the firm's problem, while  matrices $A_p, B_p, F_p$ are from the planner's problem.
+This discrete Sylvester equation can  be solved by iterating to convergence on $ P_w^{(j+1)} = (R_f + F_f' Q_f F_f) + \beta A_p' P_w^{(j)} (A_p - B_p F_p).   $
+ %Let $\tilde P$ be the matrix in the quadratic form for the value function and let
+% $\tilde \mu_t = 2  \tilde P \tilde x_t$ be  scaled Lagrange multipliers, where $\tilde \mu_t = \bmatrix{ \tilde \mu_{zt} \cr \tilde \mu_{nt}}$.
+
+
+Now consider the representative firm's problem.  Suppose  that the wage rate $w_t$ and the shocks $s_t, b_t$ obey  the process
+$$\eqalign{ \tilde x_{t+1} & = (\tilde A - \tilde B \tilde F) \tilde x_t + \tilde C \epsilon_{t+1} \cr
+               \bmatrix{ s_t \cr b_t \cr w_t } & = \bmatrix{ S_s \cr S_b \cr - 2  P_{w,n} } \tilde x_t, } $$
+where $\tilde P_{w,n}$ is the row of $ P_w$ corresponding to $\tilde n$ (i.e., the last row).
+Formulate the representative firm's problem as a discounted dynamic programming problem in which the control is $\hat u_t = \hat n_{t+1} - \hat n_t$ and the state is
+$\hat x_t = \bmatrix{ \tilde x_t \cr \hat n_t }$, where we use $(\hat \cdot)$ to denote variables chosen by the representative firm.
+Find the firm's optimal decision rule in the form $\hat u_{t} = - \hat F \hat x_t$.  Then verify by computation
+that if you set $\hat n_t = \tilde n_t$ it follows that
+$\hat u_{t} = - \hat F \bmatrix{ \tilde z_t \cr \tilde n_t \cr \hat n_t } =  \tilde u_t = - \tilde F \bmatrix{ \tilde z_t \cr \tilde n_t} $.
+
+\medskip
+
+\noindent {\it Exercise 5.} {\bf Another big $K$, little $k$ application}
+
+\medskip
+\noindent {\bf To be repaired later.} Now consider the representative worker's labor supply problem. We'll recycle some notation, hopefully without causing confusion.  Again,
+for convenience, please rewrite the controlled state-space system that emerged from  the planner's problem in exercise 3
+as $ \tilde x_{t+1} = (\tilde A - \tilde B \tilde F) \tilde x_t + \tilde C \epsilon_{t+1}$ where $\tilde x_t = \bmatrix{ z_t \cr \tilde n_t}$.
+ Let $\tilde P$ be the matrix in the quadratic form for the value function and let
+ $\tilde \mu_t = 2 \tilde P \tilde x_t$ be the scaled Lagrange multipliers where $\tilde \mu_t = \bmatrix{ \tilde \mu_{zt} \cr \tilde \mu_{nt}}$.
+ Suppose  that the wage rate $w_t$ and the shocks $s_t, b_t$ that the worker regards as exogenous obey  the process
+$$\eqalign{ \tilde x_{t+1} & = (\tilde A - \tilde B \tilde F) \tilde x_t + \tilde C \epsilon_{t+1} \cr
+               \bmatrix{ s_t \cr b_t \cr w_t } & = \bmatrix{ S_s \cr S_b \cr 2 \tilde P_n } \tilde x_t } $$
+where $\tilde P_n$ is again the row of $\tilde P$ corresponding to $\tilde n$.
+Formulate the representative worker's problem as a discounted dynamic programming problem in which the state is
+$\hat x_t = \bmatrix{ \tilde x_t \cr \hat n_t }$, where we use $(\hat \cdot )$ to denote variables chosen by the worker.
+Find the worker's optimal decision rule in the form $\hat u_{t} = - \hat F \hat x_t$.  Then verify by computation
+that if you set $\hat n_t = \tilde n_t$ it follows that
+$\hat u_{t} = - \hat F \bmatrix{ \tilde z_t \cr \tilde n_t \cr \hat n_t } = \tilde u_t = - \tilde F \bmatrix{ \tilde z_t \cr \tilde n_t} $.
+
+
+
+
+\bye

@@ -1,0 +1,3342 @@
+This is TeX, Version 3.1415926 (TeX Live 2013/Debian) (format=tex 2017.9.1)  2 MAR 2020 13:55
+**RMT5
+(./RMT5.tex (/usr/share/texlive/texmf-dist/tex/texsis/base/texsis.tex
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSfonts.tex TeXsis fonts:
+\ttglue=\skip18
+
+\mib, \scr,
+\scrfam=\fam8
+ 9pt, 10pt, 11pt, 12pt, 14pt, 16pt, 20pt, 24pt.)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSmacs.tex TeXsis main macros.
+\footnum=\count26
+\@quoteflag=\count27
+\AThelp=\toks12
+\beginhelp=\toks13
+
+Checkpoint/Restart.
+\checkpointout=\write0
+) (/usr/share/texlive/texmf-dist/tex/texsis/base/TXSinit.tex Initialization.
+\txsfile=\read0
+\@utohelp=\toks14
+) (/usr/share/texlive/texmf-dist/tex/texsis/base/TXShead.tex
+Running Headlines.
+\headlineoffset=\dimen16
+\footlineoffset=\dimen17
+\BindingMargin=\dimen18
+) (/usr/share/texlive/texmf-dist/tex/texsis/base/TXSeqns.tex
+Equation numbering.
+\eqnum=\count28
+) (/usr/share/texlive/texmf-dist/tex/texsis/base/TXSprns.tex Auto-sizing of Par
+entheses.)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSrefs.tex
+References and Citations.
+\refnum=\count29
+\@firstrefnum=\count30
+\@lastrefnum=\count31
+\@BadRefs=\count32
+\refindent=\dimen19
+\CiteType=\count33
+\reflistout=\write1
+\reflistin=\read1
+
+BIBTeX support for TeXsis (macros and patches) v 0.92)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSsects.tex
+Section and Chapter divisions.
+\chapternum=\count34
+\sectionnum=\count35
+\subsectionnum=\count36
+\subsubsectionnum=\count37
+\sectionskip=\skip19
+\subsectionskip=\skip20
+\sectionminspace=\dimen20
+)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXStags.tex Labels and tags.
+\auxfilein=\read2
+\auxfileout=\write2
+\@BadTags=\count38
+)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXStitle.tex Title Page macros.)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSenvmt.tex Environments.
+\EnvTopskip=\skip21
+\EnvBottomskip=\skip22
+\EnvLeftskip=\skip23
+\EnvRightskip=\skip24
+\EnvDelt@skip=\skip25
+\@envDepth=\count39
+\enumDepth=\count40
+\enumcnt=\count41
+\@desbox=\box16
+\@desline=\box17
+\@glodeswd=\dimen21
+\@deslines=\count42
+\theoremnum=\count43
+\lemmanum=\count44
+\corollarynum=\count45
+\definitionnum=\count46
+)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSfmts.tex Layout macros.)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSfigs.tex Figures and Tables.
+\tabnum=\count47
+\fignum=\count48
+\fgout=\write3
+\tbout=\write4
+\figlist=\write5
+\tablelist=\write6
+\caplist=\write7
+\@capbox=\box18
+\@caplines=\count49
+) (/usr/share/texlive/texmf-dist/tex/texsis/base/TXSruled.tex
+\ncols=\count50
+\nrows=\count51
+\curcol=\count52
+\thinsize=\dimen22
+\thicksize=\dimen23
+\tablewidth=\dimen24
+\parasize=\dimen25
+)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSdcol.tex
+- Double column format.
+\colwidth=\dimen26
+\pagewidth=\dimen27
+\pageheight=\dimen28
+\rulewd=\dimen29
+\colmaxdepth=\dimen30
+\@bigColHeight=\dimen31
+\@saveSplitmax=\dimen32
+\@saveVsize=\dimen33
+\s@veskip=\skip26
+\doublecolskip=\skip27
+\@leftpluscenter=\dimen34
+\partialpage=\box19
+\botins=\insert252
+\NWins=\insert251
+\SWins=\insert250
+\NEins=\insert249
+\SEins=\insert248
+\LFins=\insert247
+\RFins=\insert246
+\@balncErrormsg=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSletr.tex Letter Format,
+\headlineoffset=\dimen35
+\longindent=\dimen36
+\hdimphone=\dimen37
+\vdimphone=\dimen38
+\hdimdate=\dimen39
+\vdimdate=\dimen40
+\bigletterskip=\skip28
+\theaddress=\box20
+
+with envelopes.
+\EnvlWidth=\dimen41
+\EnvlHeight=\dimen42
+\EnvlVoffset=\dimen43
+\Envout=\write8
+\fullHsize=\dimen44
+\fullVsize=\dimen45
+\lblHsize=\dimen46
+\lblVsize=\dimen47
+\lblVoffset=\dimen48
+\lblHoffset=\dimen49
+) (/usr/share/texlive/texmf-dist/tex/texsis/base/TXSmemo.tex
+Memo Format.
+\memoindent=\dimen50
+\firstheadoffset=\dimen51
+) (/usr/share/texlive/texmf-dist/tex/texsis/base/TXSconts.tex
+Table of Contents.
+\TOCout=\write9
+\TOCmargin=\skip29
+) (/usr/share/texlive/texmf-dist/tex/texsis/base/TXSsymb.tex
+Extended math/physics symbols,
+\vbigd@men=\dimen52
+)
+> Trying to read in TXSsite.tex...
+(/usr/share/texlive/texmf-dist/tex/texsis/base/TXSsite.tex
+Site dependent info.... Generic version.)
+TeXsis version 2.18 (21 April 2001) loaded.
+) (./index.tex - indexing macros
+\beginhelp=\toks16
+\indexout=\write10
+) (./robustin.tex
+\scfam=\fam9
+ 8pt,) (./grafinp3.tex
+(./psfig2.tex
+\@unused=\write11
+
+psfig/tex 1.8
+\fboxrule=\dimen53
+\fboxsep=\dimen54
+\ps@tempdima=\dimen55
+\ps@tempboxa=\box21
+\ps@stream=\read3
+\p@intvaluex=\dimen56
+\p@intvaluey=\dimen57
+)
+\captionsize=\dimen58
+) (./RMT5.aux) (/usr/share/texlive/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read4
+\epsfframemargin=\dimen59
+\epsfframethickness=\dimen60
+\epsfrsize=\dimen61
+\epsftmp=\dimen62
+\epsftsize=\dimen63
+\epsfxsize=\dimen64
+\epsfysize=\dimen65
+\pspoints=\dimen66
+) (./txssectsblack2.tex Section and Chapter divisions.
+\chapternum=\count53
+\sectionnum=\count54
+\subsectionnum=\count55
+\subsubsectionnum=\count56
+\sectionskip=\skip30
+\subsectionskip=\skip31
+\sectionminspace=\dimen67
+)
+\authorindexout=\write12
+\openout12 = `authblk.idx'.
+
+\matlabindexout=\write13
+\openout13 = `matlblk.idx'.
+
+ (./blacktit3.tex
+[1] [2]) [3] (./copywrit8.tex) [4]
+ Contents
+(./RMT5.toc [-5]) [-6] [-7]
+ Acknowledgments
+\openout9 = `RMT5.toc'.
+
+(./blackack_2.tex
+> UNDEFINED TAG search1 ON PAGE viii.
+> UNDEFINED TAG ogmodels ON PAGE viii.
+> UNDEFINED TAG townsend ON PAGE viii.
+) [-8] [-9]
+ Preface to the fifth edition
+(./blackin_2.tex
+\openout10 = `RMT5.idx'.
+
+ [-10]
+> UNDEFINED TAG functional ON PAGE xi.
+[-11]
+> UNDEFINED TAG optaxrecur ON PAGE xii.
+> UNDEFINED TAG mechanics_matching ON PAGE xii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+\tok ->{\fam \bffam \tenbf @mechanics_
+                                      matching@}
+l.136  \use{mechanics_matching}
+                               
+? s
+OK, entering \scrollmode...
+! Extra }, or forgotten $.
+\tok ->{\fam \bffam \tenbf @mechanics_matching@}
+                                                
+l.136  \use{mechanics_matching}
+                               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+> UNDEFINED TAG stackel ON PAGE xii.
+> UNDEFINED TAG optaxrecur ON PAGE xii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.147 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (534.42122pt too wide) in paragraph at lines 129--147
+\tenrm on re-cur-sive for-mu-la-tions of op-ti-mal tax-a-tion prob-lems and cha
+p-ter \tenbf @mechanics$[]\teni atching\tenrm @\teni aboutthestructureunderlyin
+gmodelswith\tenrm \\teni matchingfunctions[]thatmapunemploymentandvacanciesinto
+job \tensy ^^@
+
+\hbox(7.51782+1.94444)x345.7008, glue set - 1.0
+.\tenrm o
+.\tenrm n
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm r
+.\tenrm e
+.etc.
+
+
+Overfull \hbox (1054.66574pt too wide) in paragraph at lines 129--147
+\teni findingandjob \tensy ^^@ \teni fillingprobabilities:Chapter[]hasbeenexten
+sivelyrevisedandsimplifiedinwaysthatcloselylinkitsformulationofStackelbergplans
+tooneinournewchapter[]:Thenewchaptersandrevisionscovertopicsthatwidenanddeepent
+hemessagethatrecursivemethodsarepervasiveandpowerful:$ 
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\teni f
+.\kern1.0764
+.\teni i
+.\teni n
+.\teni d
+.etc.
+
+> UNDEFINED TAG optaxrecur ON PAGE xii.
+> UNDEFINED TAG optax ON PAGE xii.
+> UNDEFINED TAG mechanics_matching ON PAGE xii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+\tok ->{\fam \bffam \tenbf @mechanics_
+                                      matching@}
+l.157 Chapter \use{mechanics_matching}
+                                       studies the mechanics of
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\tok ->{\fam \bffam \tenbf @mechanics_matching@}
+                                                
+l.157 Chapter \use{mechanics_matching}
+                                       studies the mechanics of
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   ^
+\Footnote ...efactor \the \spacefactor }\/\fi ${}^
+                                                  {\scriptstyle \smash {#1}}...
+l.165 ...bserved during business cycles.\NFootnote
+                                                  {A puzzle is always relati...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (1307.83902pt too wide) in paragraph at lines 157--187
+[]\tenbf Chapter @mechanics$[]\teni atching\tenrm @\teni studiesthemechanicsofm
+atchingmodelsandshedslightonthembyexploringtwosubstantiveissues; the\tenrm `\te
+ni Shimerpuzzle[]andtheroleofheterogeneity:The\tenrm \\teni Shimerpuzzle[]isthe
+findingthatcommoncalibrationsofthestandardmatchingmodeldonotgeneratefluctuation
+sinunemploymentratesnearlyaslargeasthoseobservedduringbusinesscycles:$$[]$
+
+\hbox(7.51782+1.94444)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenbf C
+.\tenbf h
+.\tenbf a
+.\tenbf p
+.etc.
+
+[-12] [-13] [-14]
+> UNDEFINED TAG recurge ON PAGE xv.
+> UNDEFINED TAG assetpricing2 ON PAGE xv.
+[-15]
+> UNDEFINED TAG selfinsure ON PAGE xvi.
+> UNDEFINED TAG incomplete ON PAGE xvi.
+> UNDEFINED TAG socialinsurance ON PAGE xvi.
+[-16] [-17]
+> UNDEFINED TAG dynamicdp1 ON PAGE xviii.
+> UNDEFINED TAG practical ON PAGE xviii.
+> UNDEFINED TAG dplinear ON PAGE xviii.
+> UNDEFINED TAG dynamicdp1 ON PAGE xviii.
+> UNDEFINED TAG practical ON PAGE xviii.
+> UNDEFINED TAG dplinear ON PAGE xviii.
+[-18]
+> UNDEFINED TAG dplinear ON PAGE xix.
+> UNDEFINED TAG search1 ON PAGE xix.
+> UNDEFINED TAG dynamicdp1 ON PAGE xix.
+> UNDEFINED TAG search1 ON PAGE xix.
+> UNDEFINED TAG recurpe ON PAGE xix.
+> UNDEFINED TAG recurge ON PAGE xix.
+> UNDEFINED TAG recurpe ON PAGE xix.
+> UNDEFINED TAG recurge ON PAGE xix.
+> UNDEFINED TAG ogmodels ON PAGE xix.
+> UNDEFINED TAG ricardian ON PAGE xix.
+> UNDEFINED TAG linappro ON PAGE xix.
+[-19] [-20]
+> UNDEFINED TAG growth1 ON PAGE xxi.
+> UNDEFINED TAG assetpricing1 ON PAGE xxi.
+> UNDEFINED TAG assetpricing2 ON PAGE xxi.
+> UNDEFINED TAG assetpricing2 ON PAGE xxi.
+> UNDEFINED TAG growth ON PAGE xxi.
+> UNDEFINED TAG optax ON PAGE xxi.
+> UNDEFINED TAG selfinsure ON PAGE xxi.
+> UNDEFINED TAG incomplete ON PAGE xxi.
+> UNDEFINED TAG incomplete ON PAGE xxi.
+> UNDEFINED TAG socialinsurance ON PAGE xxi.
+> UNDEFINED TAG stackel ON PAGE xxi.
+> UNDEFINED TAG optaxrecur ON PAGE xxi.
+> UNDEFINED TAG optax ON PAGE xxi.
+> UNDEFINED TAG socialinsurance ON PAGE xxi.
+> UNDEFINED TAG incomplete ON PAGE xxi.
+> UNDEFINED TAG socialinsurance ON PAGE xxi.
+> UNDEFINED TAG socialinsurance ON PAGE xxi.
+> UNDEFINED TAG socialinsurance2 ON PAGE xxi.
+> UNDEFINED TAG uninsur1 ON PAGE xxi.
+[-21]
+> UNDEFINED TAG credible ON PAGE xxii.
+> UNDEFINED TAG chang ON PAGE xxii.
+> UNDEFINED TAG optax ON PAGE xxii.
+> UNDEFINED TAG fiscalmonetary ON PAGE xxii.
+> UNDEFINED TAG wldtrade ON PAGE xxii.
+> UNDEFINED TAG socialinsurance ON PAGE xxii.
+> UNDEFINED TAG fiscalmonetary ON PAGE xxii.
+> UNDEFINED TAG townsend ON PAGE xxii.
+> UNDEFINED TAG incomplete ON PAGE xxii.
+
+Underfull \vbox (badness 1590) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 2.5182
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+..\hbox(0.0+0.0)x20.0
+..\tenbf T
+..\tenbf h
+..\tenbf e
+..\glue 3.83331 plus 1.91666 minus 1.27777
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.93034
+..\tenbf d
+..\tenbf e
+..\discretionary
+...\tenbf -
+..\tenbf s
+..\tenbf c
+..etc.
+.etc.
+
+ [-22]
+> UNDEFINED TAG search2 ON PAGE xxiii.
+> UNDEFINED TAG mechanics_matching ON PAGE xxiii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+\tok ->{\fam \bffam \tenbf @mechanics_
+                                      matching@}
+l.594 ... taxes.  Chapter \use{mechanics_matching}
+                                                   investigates
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\tok ->{\fam \bffam \tenbf @mechanics_matching@}
+                                                
+l.594 ... taxes.  Chapter \use{mechanics_matching}
+                                                   investigates
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+> UNDEFINED TAG macrolaborII ON PAGE xxiii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.598 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (775.52797pt too wide) in paragraph at lines 589--598
+\tenbf lay-off taxes. Chap-ter @mechanics$[]\teni atching\tenrm @\teni investig
+atessomefundamentalforcescommontoavarietyofotherwisequitedisparatematchingmodel
+s:Chapter[]comparesforcesinanemploymentlotteriesmodelwiththoseoperatinginatime 
+\tensy ^^@
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\tenbf l
+.\tenbf a
+.\kern-0.31944
+.\discretionary replacing 2
+..\tenbf y
+..\tenbf -
+.\tenbf y
+.etc.
+
+[-23]
+> UNDEFINED TAG search1 ON PAGE xxiv.
+> UNDEFINED TAG recurge ON PAGE xxiv.
+> UNDEFINED TAG ogmodels ON PAGE xxiv.
+> UNDEFINED TAG ricardian ON PAGE xxiv.
+> UNDEFINED TAG assetpricing1 ON PAGE xxiv.
+> UNDEFINED TAG growth ON PAGE xxiv.
+> UNDEFINED TAG optax ON PAGE xxiv.
+> UNDEFINED TAG recurge ON PAGE xxiv.
+> UNDEFINED TAG growth1 ON PAGE xxiv.
+> UNDEFINED TAG assetpricing1 ON PAGE xxiv.
+> UNDEFINED TAG assetpricing2 ON PAGE xxiv.
+> UNDEFINED TAG growth ON PAGE xxiv.
+> UNDEFINED TAG optax ON PAGE xxiv.
+> UNDEFINED TAG selfinsure ON PAGE xxiv.
+> UNDEFINED TAG incomplete ON PAGE xxiv.
+> UNDEFINED TAG socialinsurance ON PAGE xxiv.
+> UNDEFINED TAG ogmodels ON PAGE xxiv.
+> UNDEFINED TAG credible ON PAGE xxiv.
+> UNDEFINED TAG chang ON PAGE xxiv.
+> UNDEFINED TAG wldtrade ON PAGE xxiv.
+> UNDEFINED TAG fiscalmonetary ON PAGE xxiv.
+> UNDEFINED TAG townsend ON PAGE xxiv.
+> UNDEFINED TAG search2 ON PAGE xxiv.
+
+Overfull \hbox (23.6348pt too wide) in paragraph at lines 631--635
+\tenbf @cred-i-ble@, @chang@, @wld-trade@, @fis-cal-mon-e-tary@, @townsend@,
+
+\hbox(6.94444+1.94444)x325.7008, glue set - 1.0
+.\tenbf @
+.\tenbf c
+.\tenbf r
+.\tenbf e
+.\tenbf d
+.etc.
+
+> UNDEFINED TAG assetpricing1 ON PAGE xxiv.
+> UNDEFINED TAG macrolaborII ON PAGE xxiv.
+
+Overfull \hbox (60.36804pt too wide) in paragraph at lines 636--640
+[][]\tenbf A second-year macroe-co-nomics course: se-lect from chap-ters @asset
+pricing1@--
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\hbox(6.44444+0.0)x0.0, glue set - 14.69437fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+..\tenbf 4
+..\tenbf .
+..\kern 5.74997
+.\tenbf A
+.\glue 3.83331 plus 1.91473 minus 1.27904
+.\tenbf s
+.etc.
+
+> UNDEFINED TAG stackel ON PAGE xxiv.
+> UNDEFINED TAG wldtrade ON PAGE xxiv.
+
+Overfull \hbox (25.54042pt too wide) in paragraph at lines 641--647
+[][]\tenbf A self-contained course about re-cur-sive con-tracts: chap-ters @sta
+ckel@--
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\hbox(6.44444+0.0)x0.0, glue set - 14.69437fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+..\tenbf 5
+..\tenbf .
+..\kern 5.74997
+.\tenbf A
+.\glue 3.83331 plus 1.91473 minus 1.27904
+.\tenbf s
+.etc.
+
+> UNDEFINED TAG search1 ON PAGE xxiv.
+> UNDEFINED TAG recurge ON PAGE xxiv.
+> UNDEFINED TAG ogmodels ON PAGE xxiv.
+> UNDEFINED TAG fiscalmonetary ON PAGE xxiv.
+> UNDEFINED TAG townsend ON PAGE xxiv.
+> UNDEFINED TAG socialinsurance ON PAGE xxiv.
+> UNDEFINED TAG socialinsurance2 ON PAGE xxiv.
+> UNDEFINED TAG uninsur1 ON PAGE xxiv.
+[-24]
+> UNDEFINED TAG selfinsure ON PAGE xxv.
+> UNDEFINED TAG incomplete ON PAGE xxv.
+> UNDEFINED TAG socialinsurance ON PAGE xxv.
+> UNDEFINED TAG search1 ON PAGE xxv.
+> UNDEFINED TAG search2 ON PAGE xxv.
+> UNDEFINED TAG uninsur1 ON PAGE xxv.
+> UNDEFINED TAG search1 ON PAGE xxv.
+> UNDEFINED TAG search2 ON PAGE xxv.
+> UNDEFINED TAG search1 ON PAGE xxv.
+> UNDEFINED TAG search2 ON PAGE xxv.
+> UNDEFINED TAG incomplete ON PAGE xxv.
+> UNDEFINED TAG uninsur1 ON PAGE xxv.
+> UNDEFINED TAG search1 ON PAGE xxv.
+> UNDEFINED TAG linappro ON PAGE xxv.
+> UNDEFINED TAG assetpricing2 ON PAGE xxv.
+[-25]
+Overfull \hbox (37.0095pt too wide) in paragraph at lines 706--718
+\tenbf can be down-loaded from $\teni <$\tenbf www.tomsargent.com/source[]code/
+mitbook.zip$\teni >$\tenbf .
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\tenbf c
+.\tenbf a
+.\tenbf n
+.\glue 3.83331 plus 1.91666 minus 1.27777
+.\tenbf b
+.etc.
+
+[-26]
+Underfull \vbox (badness 2744) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 3.01839
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.40427
+..\tenbf v
+..\kern-0.31944
+..\tenbf e
+..\tenbf c
+..\discretionary
+...\tenbf -
+..etc.
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.2854
+..\tenbf a
+..\tenbf n
+..\tenbf d
+..\glue 3.83331 plus 1.91666 minus 1.27777
+..\tenbf n
+..etc.
+.\glue(\baselineskip) 5.11111
+.etc.
+
+ [-27])
+[-28] [-29]
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[1] [2] (./black0.tex
+\openout2 = `RMT5.aux'.
+
+
+1. Overview
+1.1.  Warning
+1.2.  A common ancestor
+[3]
+1.3.  The savings problem
+> UNDEFINED TAG selfinsure ON PAGE 4.
+> UNDEFINED TAG selfinsure ON PAGE 4.
+1.3.1. Linear quadratic permanent income theory
+[4]
+> UNDEFINED TAG recurge ON PAGE 5.
+> UNDEFINED TAG incomplete ON PAGE 5.
+> UNDEFINED TAG dplinear ON PAGE 5.
+> UNDEFINED TAG dplinear ON PAGE 5.
+[5]
+1.3.2. Precautionary saving
+> UNDEFINED TAG selfinsure ON PAGE 6.
+> UNDEFINED TAG dynamicdp1 ON PAGE 6.
+> UNDEFINED TAG selfinsure ON PAGE 6.
+> UNDEFINED TAG socialinsurance ON PAGE 6.
+[6]
+1.3.3. Complete markets, insurance, and the distribution of wealth
+> UNDEFINED TAG recurge ON PAGE 7.
+> UNDEFINED TAG optax ON PAGE 7.
+[7] [8]
+1.3.4. Bewley models
+[9]
+> UNDEFINED TAG incomplete ON PAGE 10.
+Figure 1.3.1. {chap0pic1}
+(Bewley_chap1.eps
+)
+\openout5 = `RMT5.fgl'.
+
+[10] [11]
+1.3.5. History dependence in standard consumption models
+> UNDEFINED TAG stackel ON PAGE 12.
+> UNDEFINED TAG wldtrade ON PAGE 12.
+[12]
+1.3.6. Growth theory
+> UNDEFINED TAG linappro ON PAGE 13.
+> UNDEFINED TAG growth ON PAGE 13.
+> UNDEFINED TAG linappro ON PAGE 13.
+[13]
+1.3.7. Limiting results from dynamic optimal taxation
+[14]
+1.3.8. Asset pricing
+[15]
+1.3.9. Multiple assets
+> UNDEFINED TAG assetpricing2 ON PAGE 16.
+[16]
+> UNDEFINED TAG assetpricing2 ON PAGE 17.
+
+Underfull \vbox (badness 7558) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 4.22948
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.86108)x345.7008, glue set 0.14235
+..\tenbf T
+..\tenbf h
+..\tenbf e
+..\glue 3.83331 plus 1.91666 minus 1.27777
+..\tenbf s
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 4.19447
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.54623
+..\tenbf f
+..\tenbf a
+..\tenbf c
+..\tenbf t
+..\tenbf o
+..etc.
+.etc.
+
+ [17]
+> UNDEFINED TAG socialinsurance2 ON PAGE 18.
+[18]
+1.4.  Recursive methods
+
+Overfull \hbox (24.7667pt too wide) in paragraph at lines 667--677
+[]\tenbf The no-tion that un-der-lies dy-namic pro-gram-ming is a finite-dimens
+ional
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenbf T
+.\tenbf h
+.\tenbf e
+.\glue 3.83331 plus 1.91666 minus 1.27777
+.etc.
+
+[19] [20]
+1.4.1. Dynamic programming and the Lucas Critique
+
+Underfull \vbox (badness 1931) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 2.68506
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 69.75462fil
+...\subsecfont 1
+...\subsecfont .
+...\subsecfont 4
+...\subsecfont .
+...\subsecfont 1
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{1.4.1.}Dynamic programming and the Lucas Critique.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [21]
+[22]
+1.4.2. Dynamic programming challenged
+1.4.3. Imperialistic response of dynamic programming
+
+Underfull \vbox (badness 1755) has occurred while \output is active
+\vbox(505.0364+2.5)x345.7008, glue set 2.60155
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 134.93295fil
+...\subsecfont 1
+...\subsecfont .
+...\subsecfont 4
+...\subsecfont .
+...\subsecfont 2
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{1.4.2.}Dynamic programming challenged.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [23]
+[24]
+> UNDEFINED TAG stackel ON PAGE 25.
+> UNDEFINED TAG stackel ON PAGE 25.
+[25]
+1.4.4. History dependence and ``dynamic programming squared''
+> UNDEFINED TAG recurge ON PAGE 26.
+> UNDEFINED TAG credible ON PAGE 26.
+
+Underfull \vbox (badness 1776) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 2.61134
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 13.09496fil
+...\subsecfont 1
+...\subsecfont .
+...\subsecfont 4
+...\subsecfont .
+...\subsecfont 4
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{1.4.4.}History dependence and ``dynamic programming squared'\
+ETC.}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [26]
+[27]
+1.4.5. Dynamic principal-agent problems
+[28] [29]
+> UNDEFINED TAG socialinsurance ON PAGE 30.
+> UNDEFINED TAG socialinsurance2 ON PAGE 30.
+> UNDEFINED TAG socialinsurance ON PAGE 30.
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 6.34547
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x345.7008, glue set - 0.57056
+..\tenbf w
+..\tenbf h
+..\tenbf e
+..\tenbf r
+..\tenbf e
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 4.55556
+.\hbox(6.94444+2.44443)x345.7008, glue set 0.38805
+..\tenbf t
+..\tenbf r
+..\tenbf u
+..\tenbf e
+..\glue 3.83331 plus 1.91666 minus 1.27777
+..etc.
+.etc.
+
+ [30]
+1.4.6. More applications
+) [31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[33] [34] (./black1a_2020.tex (./grafinp3.tex (./psfig2.tex)
+\captionsize=\dimen68
+) (./psfig.tex)
+2. Time Series Tools
+2.1.  Two workhorses
+2.2.  Markov chains
+[35] [36]
+2.2.1. Stationary distributions
+[37] [38]
+2.2.2. Asymptotic stationarity
+[39]
+2.2.3. Another representation of the state
+2.2.4. Forecasting the state
+> UNDEFINED TAG sec:HMM ON PAGE 40.
+> UNDEFINED TAG lincontrol ON PAGE 40.
+[40]
+> UNDEFINED TAG sec:HMM ON PAGE 41.
+> UNDEFINED TAG lincontrol ON PAGE 41.
+2.2.5. Forecasting functions of the state
+
+Overfull \hbox (16.73363pt too wide) in paragraph at lines 321--330
+\tenbf Equating the first and last terms yields $\teni E\tenrm [\teni E\tenrm (
+\teni y[]\tensy j\teni x[]\tenrm )\tensy j\teni x[] \tenrm = \teni e[]\tenrm ] 
+= \teni E\tenrm [\teni y[]\tensy j\teni x[] \tenrm =
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\tenbf E
+.\tenbf q
+.\tenbf u
+.\tenbf a
+.\tenbf t
+.etc.
+
+[41]
+2.2.6. Forecasting functions
+2.2.7. Enough one-step-ahead forecasts determine $P$
+[42]
+2.2.8. Simulating a Markov chain
+2.2.9. The likelihood function
+> UNDEFINED TAG recurge ON PAGE 43.
+[43]
+2.3.  Continuous-state Markov chain
+> UNDEFINED TAG recurge ON PAGE 44.
+2.4.  Linear state space model
+[44] [45] [46] [47]
+2.4.1. First and second unconditional moments
+[48]
+2.4.2. Covariance stationarity
+[49]
+2.4.3. Summary of moment formulas
+[Nrows=8, Ncols=2]
+[50]
+2.4.4. Impulse response function
+[51]
+2.4.5. Prediction and discounting
+2.4.6. Geometric sums of quadratic forms
+[52]
+2.4.6.1.  Asset pricing
+[53]
+2.4.6.2.  Evaluation of dynamic criterion
+> UNDEFINED TAG dplinear ON PAGE 54.
+[54]
+> UNDEFINED TAG practical ON PAGE 55.
+> UNDEFINED TAG dplinear ON PAGE 55.
+[55]
+2.5.  Multivariate normal distributions and regressions
+[56] [57]
+2.5.1. Bayesian interpretation of conditional probability
+[58] [59]
+2.5.2. Non normal distributions
+2.5.3. Linear least squares projection
+[60]
+2.6.  Estimation of model parameters
+> UNDEFINED TAG practical ON PAGE 61.
+> UNDEFINED TAG dplinear ON PAGE 61.
+[61] [62]
+2.7.  The Kalman filter
+
+Overfull \hbox (33.7116pt too wide) in paragraph at lines 1289--1293
+\tenbf The ob-jects $[]\teni ; \tenrm ^^F[]$ \tenbf char-ac-ter-ize the pop-u-l
+a-tion re-gres-sion $[] \tenrm = \teni E\tenrm [\teni x[]\tensy j\teni y[]; [] 
+; y[]\tenrm ]$
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\tenbf T
+.\tenbf h
+.\tenbf e
+.\glue 3.83331 plus 1.91666 minus 1.27777
+.\tenbf o
+.etc.
+
+[63] [64]
+> UNDEFINED TAG dplinear ON PAGE 65.
+> UNDEFINED TAG KfilterLQ ON PAGE 65.
+[65]
+2.7.0.1.  Gram-Schmidt process
+
+Overfull \hbox (45.38751pt too wide) in paragraph at lines 1396--1402
+\tenbf re-gres-sions on suc-ces-sive com-po-nents $\teni a[]$ \tenbf of an or-t
+hog-o-nal ba-sis $\tenrm [\teni a[]; a[]; [] ; a[]\tenrm ]$
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\tenbf r
+.\tenbf e
+.\discretionary
+..\tenbf -
+.\tenbf g
+.\tenbf r
+.etc.
+
+[66]
+2.7.0.2.  Hidden Markov model
+2.8.  Estimation again
+[67]
+2.9.  Vector autoregressions and the Kalman filter
+2.9.1. Conditioning on the semi-infinite past of $y$
+[68]
+2.9.2. A time-invariant VAR
+[69]
+2.9.3. Interpreting VARs
+> UNDEFINED TAG linappro ON PAGE 70.
+> UNDEFINED TAG sec:backus ON PAGE 70.
+> UNDEFINED TAG assetpricing2 ON PAGE 70.
+2.10.  The spectrum
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 31.446
+.\glue(\topskip) 0.0
+.\vbox(16.53331+0.0)x345.7008
+..\hbox(8.19998+2.33333)x345.7008, glue set 214.43208fil
+...\subsecfont 2
+...\subsecfont .
+...\subsecfont 9
+...\subsecfont .
+...\subsecfont 3
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{2.9.3.}Interpreting VARs.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [70]
+[71]
+Figure 2.10.1. {r2red1d}
+(r2red1d_gray.eps
+)
+[72]
+Figure 2.10.2. {r2red1a}
+(r2red1a_gray.eps
+)
+Figure 2.10.3. {r2red1b}
+(r2red1b_gray.eps
+)
+Figure 2.10.4. {r2red1c}
+(r2red1c_gray.eps
+)
+2.10.1. Examples
+[73] [74]
+2.11.  Concluding remarks
+appendix A.  Differentiating matrix forms
+[75]
+appendix B.  Linear difference equations
+2.B.1. A first-order difference equation
+[76]
+2.B.2. A second-order difference equation
+> UNDEFINED TAG lagrangianformulation ON PAGE 77.
+> UNDEFINED TAG dplinear ON PAGE 77.
+[77]
+appendix C.  Constant in the state vector
+appendix D.  Linear least squares projection
+[78] [79] [80] [81]
+appendix E.  Ergodicity
+2.E.1. Laws of large numbers
+[82]
+2.E.2. Right eigenvectors
+[83]
+> UNDEFINED TAG selfinsure ON PAGE 84.
+> UNDEFINED TAG incomplete ON PAGE 84.
+> UNDEFINED TAG selfinsure ON PAGE 84.
+[84] [85]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 7.22813
+.\glue(\topskip) 0.0
+.\hbox(14.5001+9.50012)x345.7008, glue set - 0.05225
+..\tenbf E
+..\tenbf x
+..\tenbf a
+..\tenbf m
+..\tenbf p
+..etc.
+.\penalty 10000
+.\glue(\lineskip) 1.0
+.\hbox(8.9167+2.5)x345.7008, glue set 0.455
+..\tenbf s
+..\tenbf t
+..\tenbf a
+..\discretionary
+...\tenbf -
+..\tenbf t
+..etc.
+.etc.
+
+ [86]
+2.E.3. Continuous state Markov processes
+[87] [88]
+Exercises
+[89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102]
+[103] [104] [105] [106]) (./black1b_2020.tex (./grafinp3.tex (./psfig2.tex)
+\captionsize=\dimen69
+)
+(./psfig.tex) [107]
+3. Time Series Applications
+3.1.  Introduction
+[108]
+3.2.  Applications of the Kalman filter
+3.2.1. Muth's reverse engineering exercise
+> UNDEFINED TAG lincontrol ON PAGE 109.
+[109]
+Figure 3.2.1. {muth1f}
+(muth1crop.eps
+)
+[110] [111]
+3.2.2. Jovanovic's application
+> UNDEFINED TAG search1 ON PAGE 112.
+[112]
+> UNDEFINED TAG Eq.kalman5 ON PAGE 113.
+> UNDEFINED TAG search1 ON PAGE 113.
+[113]
+3.3.  LQ permanent income model
+> UNDEFINED TAG selfinsure ON PAGE 114.
+[114]
+> UNDEFINED TAG selfinsure ON PAGE 115.
+> UNDEFINED TAG selfinsure ON PAGE 115.
+> UNDEFINED TAG recurge ON PAGE 115.
+> UNDEFINED TAG selfinsure ON PAGE 115.
+> UNDEFINED TAG incomplete ON PAGE 115.
+[115] [116]
+3.3.1. Another representation
+[117] [118]
+> UNDEFINED TAG sec:perm_income_ge ON PAGE 119.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+\tok ->{\fam \bffam \eightbf @sec:perm_
+                                       income_ge@}
+l.480 ...ote{See appendix \use{sec:perm_income_ge}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\tok ->{\fam \bffam \eightbf @sec:perm_income_ge@}
+                                                  
+l.480 ...ote{See appendix \use{sec:perm_income_ge}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+> UNDEFINED TAG selfinsure ON PAGE 119.
+! Extra }, or forgotten $.
+l.484 ...d date-contingent claims to consumption.}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! You can't use `\halign' in math mode.
+\EQNalign ...displ@y \tabskip =\centering \halign 
+                                                  to\displaywidth {\hfil $\r...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+\EQNalign ...=\centering \halign to\displaywidth {
+                                                  \hfil $\relax \displaystyl...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+\EQNalign ...=\centering \halign to\displaywidth {
+                                                  \hfil $\relax \displaystyl...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+\EQNalign ...ring \halign to\displaywidth {\hfil $
+                                                  \relax \displaystyle {##}$...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \displaystyle 
+\EQNalign ...aywidth {\hfil $\relax \displaystyle 
+                                                  {##}$\tabskip =0pt &$\rela...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! You can't use `macro parameter character #' in math mode.
+\EQNalign ...idth {\hfil $\relax \displaystyle {##
+                                                  }$\tabskip =0pt &$\relax \...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+\EQNalign ...ax \displaystyle {##}$\tabskip =0pt &
+                                                  $\relax \displaystyle {{}#...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! You can't use `macro parameter character #' in math mode.
+\EQNalign ...kip =0pt &$\relax \displaystyle {{}##
+                                                  }$\hfil \tabskip =\centeri...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Misplaced alignment tab character &.
+\EQNalign ...e {{}##}$\hfil \tabskip =\centering &
+                                                  \llap {$\relax \@@EQN {##}...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Illegal parameter number in definition of \next.
+<to be read again> 
+                   }
+\next #1->\def \next {#1}
+                         \@striplist 
+\@tag ...}\else \edef \@@temp {#2}\stripblanks @#1
+                                                  @\endlist \XA \xdef \csnam...
+
+\EQNOparse ...tID \the \eqnum }\Eqtag {#1}{\tnum }
+                                                  \@EQNOdisplay {#1}\else \s...
+
+\@@EQN ...;\endlist \else \EQNOparse #1;;\endlist 
+                                                  \fi 
+<argument> $\relax \@@EQN {##}
+                              $
+...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \tok.
+<to be read again> 
+                   }
+\@stripspace ...ext \else \edef \tok {\tok \next }
+                                                  \fi 
+\@striplist ...t \next =\relax \else \@stripspace 
+                                                  \let \next =\@stripblanks ...
+
+\@tag ...}\else \edef \@@temp {#2}\stripblanks @#1
+                                                  @\endlist \XA \xdef \csnam...
+
+\EQNOparse ...tID \the \eqnum }\Eqtag {#1}{\tnum }
+                                                  \@EQNOdisplay {#1}\else \s...
+
+\@@EQN ...;\endlist \else \EQNOparse #1;;\endlist 
+                                                  \fi 
+...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \tok.
+<to be read again> 
+                   @
+\@stripspace ...next \else \edef \tok {\tok \next 
+                                                  }\fi 
+\@striplist ...t \next =\relax \else \@stripspace 
+                                                  \let \next =\@stripblanks ...
+
+\@tag ...\else \edef \@@temp {#2}\stripblanks @#1@
+                                                  \endlist \XA \xdef \csname...
+
+\EQNOparse ...tID \the \eqnum }\Eqtag {#1}{\tnum }
+                                                  \@EQNOdisplay {#1}\else \s...
+
+\@@EQN ...;\endlist \else \EQNOparse #1;;\endlist 
+                                                  \fi 
+...
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! You can't use `\eqno' in math mode.
+\@EQNOdisplay #1->\@eqno 
+                         \ifeqnotrace \rlap {\phantom {(\tnum )}\quad {\tenp...
+
+\EQNOparse ...Eqtag {#1}{\tnum }\@EQNOdisplay {#1}
+                                                  \else \stripblanks #2\endl...
+
+\@@EQN ...;\endlist \else \EQNOparse #1;;\endlist 
+                                                  \fi 
+<argument> $\relax \@@EQN {##}
+                              $
+\llap #1->\hbox to\z@ {\hss #1
+                              }
+\EQNalign ...ntering &\llap {$\relax \@@EQN {##}$}
+                                                  \tabskip =0pt\crcr #1\crcr }
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Misplaced \crcr.
+<recently read> \crcr 
+                      
+\EQNalign ...elax \@@EQN {##}$}\tabskip =0pt\crcr 
+                                                  #1\crcr }
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+<argument>  c_
+              {t+1} & = c_t + (1-\beta ) \check G (I-\beta \check A)^{-1} \c...
+
+\EQNalign ...ax \@@EQN {##}$}\tabskip =0pt\crcr #1
+                                                  \crcr }
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced alignment tab character &.
+<argument>  c_{t+1} &
+                      = c_t + (1-\beta ) \check G (I-\beta \check A)^{-1} \c...
+
+\EQNalign ...ax \@@EQN {##}$}\tabskip =0pt\crcr #1
+                                                  \crcr }
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Argument of \@EQN has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+sprob16;a \cr b_t & = \check G (I-\beta \check A)^{-1} z_t - {1 \over \ETC.
+! Paragraph ended before \@EQN was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.490 ...t + \check C w_{t+1} \EQN sprob16;d \cr }
+                                                  $$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (399.53494pt too wide) in paragraph at lines 480--490
+[][][]\eightrm See ap-pendix \eightbf @sec:perm$[]\eighti ncome[]e\eightrm @\ei
+ghti ofchapter[]forareinterpretationofpreciselytheseoutcomesintermsofacompetiti
+veequilibriumofamodelwithacompletesetofmarketsinhistory \eightsy ^^@
+
+\hbox(8.0+2.3611)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\hbox(7.9789+0.0)x0.0, glue set - 11.00012fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+..\mathon, surrounded 1.0
+..\hbox(0.0+0.0)x0.0
+..\hbox(5.15556+0.0)x4.75006, shifted -2.82333
+...\eightrm 9
+..\mathoff, surrounded 1.0
+..etc.
+.\vbox(8.0+0.0)x0.0
+.\eightrm S
+.\eightrm e
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.491 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.491 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+> UNDEFINED TAG Eq.sprob16 ON PAGE 119.
+> UNDEFINED TAG Eq.sprob16 ON PAGE 119.
+> UNDEFINED TAG selfinsure ON PAGE 119.
+> UNDEFINED TAG Eq.sprob16 ON PAGE 119.
+3.3.2. Debt dynamics
+> UNDEFINED TAG Eq.sprob16;b ON PAGE 119.
+> UNDEFINED TAG Eq.sprob16;b ON PAGE 119.
+
+Overfull \hbox (23.52654pt too wide) in paragraph at lines 548--550
+\eightrm If we sub-tract equa-tion ($[]$) eval-u-ated at time $\eighti t$ \eigh
+trm from equa-tion ($[]$)
+
+\hbox(6.0+2.0)x345.7008, glue set - 1.0
+.\eightrm I
+.\eightrm f
+.\glue 2.83337 plus 1.41669 minus 0.94446
+.\eightrm w
+.\kern-0.23611
+.etc.
+
+> UNDEFINED TAG Eq.sprob16;a ON PAGE 119.
+3.3.3. Two classic examples
+> UNDEFINED TAG Eq.sprob16 ON PAGE 119.
+> UNDEFINED TAG Eq.sprob16 ON PAGE 119.
+> UNDEFINED TAG Eq.sprob16 ON PAGE 119.
+> UNDEFINED TAG Eq.sprob16 ON PAGE 119.
+3.3.4. Spreading consumption cross section
+> UNDEFINED TAG Eq.sprob16 ON PAGE 119.
+3.3.5. Invariant subspace approach
+> UNDEFINED TAG dplinear ON PAGE 119.
+> UNDEFINED TAG dplinear ON PAGE 119.
+> UNDEFINED TAG dplinear ON PAGE 119.
+> UNDEFINED TAG Eq.invarsub2 ON PAGE 119.
+> UNDEFINED TAG dplinear ON PAGE 119.
+3.4.  Consumption smoothing with complete markets
+> UNDEFINED TAG recurge ON PAGE 119.
+> UNDEFINED TAG assetpricing1 ON PAGE 119.
+> UNDEFINED TAG assetpricing2 ON PAGE 119.
+> UNDEFINED TAG Eq.sprob16;a ON PAGE 119.
+> UNDEFINED TAG recurge ON PAGE 119.
+> UNDEFINED TAG incomplete ON PAGE 119.
+3.5.  The Lucas Critique
+> UNDEFINED TAG dplinear ON PAGE 119.
+> UNDEFINED TAG dplinear ON PAGE 119.
+3.6.  Interpretations and responses to the Lucas Critique
+Missing character: There is no ^^92 in font cmti8!
+3.6.1. Markov switching linear state space model
+3.6.2. Example
+3.6.3. Conditional distributions of geometric sums
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \@right 
+)->\relax \ifmmode \@right 
+                           \rparen \pop@delim \@delim \if P\@delim \relax \e...
+<argument> ...i C_i' ] \cr & \equiv \Sigma _t*x_t)
+                                                   \EQN Sigmatxt 
+\eqalign ...$&$\displaystyle {{}##}$\hfil \crcr #1
+                                                  \crcr }}\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+)->\relax \ifmmode \@right \rparen 
+                                   \pop@delim \@delim \if P\@delim \relax \e...
+<argument> ...i C_i' ] \cr & \equiv \Sigma _t*x_t)
+                                                   \EQN Sigmatxt 
+\eqalign ...$&$\displaystyle {{}##}$\hfil \crcr #1
+                                                  \crcr }}\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm ignoring a \right that had no matching \left.
+
+! Argument of \pop@delimlist has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+\@delim \if P\@delim \relax \else \if B\@delim \emsg {> Expecting \string \ETC.
+! Paragraph ended before \pop@delimlist was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+<template> }
+            $\hfil \endtemplate 
+<inserted text> \cr 
+                    
+<to be read again> 
+                   }
+\eqalign ...playstyle {{}##}$\hfil \crcr #1\crcr }
+                                                  }\,
+l.1075 ...  & \equiv \Sigma_t*x_t) \EQN Sigmatxt }
+                                                  $$
+(That makes 100 errors; please try again.)
+Output written on RMT5.dvi (147 pages, 406840 bytes).

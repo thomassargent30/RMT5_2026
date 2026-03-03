@@ -1,0 +1,179 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\section{Interpretations and responses to the Lucas Critique}
+In this section we use a  state-space system with coefficients that are functions of a finite state Markov process as a vehicle to describe 
+research strategies that were created in response to the Lucas Critique.  Section XXXX already mentioned one major response, namely,
+rational expectations econometrics, an estimation and interpretation strategy widely used in modern applied macroeconomics. 
+In this section, we describe what amount to either extensions to, or  alternatives to, or elaborations of rational expectations econometrics based
+on the perspective that policy rule changes or ``regime changes'' don't occur in a vacuum.  Instead, they are themselves governed by statistical processes known to agents inside a rational expectations model, so there is a precise sense in which government policy rule change
+are not entirely unexpected and so are responded to in advance by private agents.
+All of these ideas adopt and elaborate a perspective of Sargent and Wallace (1976) that regards government policy rules themselves as being
+determined by a process that renders them econometrically endogenous and that leaves an econometrician with no ``free parameters'' to change,
+disabling him from being able to offer policy advice.  This circle of ideas was embraced and extended by
+ Christopher A. Sims (1982) and Sargent (1984).
+ We use tools encountered in chapter  to \use{timeseries} express these ideas.   
+
+
+
+Sims and Zha (2006) provide the following statement:
+\example
+ The model with time variation in coefficients in all equations might be expected to fit best if there were policy regime changes, and the nonlinear effects of these changes on private sector dynamics, via changes in private sector forecasting behavior, were important. That this is possible was the main point of Robert E. Lucas (1972).
+However, $\ldots$ % as Sims (1987) has explained at more length, 
+once we recognize that changes in policy must in principle themselves be modeled as stochastic, Lucas's argument can be seen as a claim that a certain sort of nonlinearity is important. Even if the public believes that policy is time-varying and tries to adjust its expectation-formation accordingly, its behavior could be well approximated as linear and non-time-varying. As with any use of a linear approximation, it is an empirical matter whether the linear approximation is adequate for a particular sample or counterfactual analysis.
+\endexample
+
+
+We use a linear state space model with coefficients governed by a finite state Markov chain to represent nonlinearities mentioned by
+Sims and Zha.  
+Let $s_t \in \{1,2\}$ be governed by a Markov chain with transition matrix $P$, where
+$P_{ij} = {\rm Prob}(s_{t+1} = j| s_t  = i) $, $\pi_{0,i} = {\rm Prob}(s_0 = i)$, and  $\pi_{t,i} = {\rm Prob}(s_t = i)$.
+We assume that $\{s_t, x_{t+1}, y_t\}_{t=0}^\infty$ is governed by  the linear state-space system with   Markov-switching matrices  $$ \eqalign{ x_{t+1} & = A_{s_t} x_{t+1} + C_{s_t} w_{t+1} \cr
+                    y_t  & = G_{s_t} x_t  \cr  }  $$ % \EQN MSLQ
+where $x_0 $ is a random initial vector drawn from  density  $\phi_0$ and $w_{t+1} \sim {\cal N}(0,I)$ is an i.i.d.~sequence of random
+vectors.                      
+We   want to compute the conditional  mathematical expectations
+ $$ z_t = E ( \sum_{t=0}^\infty \beta^t y_{t+j} ) \vert x_t, s_t  $$    
+  and 
+ $$ \tilde z_t =  E ( \sum_{t=0}^\infty \beta^t y_{t+j} ) | x_t . $$   
+ We also want to compute an associated  time-invariant vector autoregression that is implied by   XXX and that takes the form
+  $$ x_{t+1} = \bar A x_t + \bar C \bar w_{t+1}$$
+  where $\bar w_{t+1}  $ is a serially uncorrelated shock with mean zero and identity contemporaneous covariance matrix.
+ 
+  
+ 
+ 
+\subsection{Example}
+Before computing these objects, let's take an example. The rate of inflation is the first difference of the logarithm of the price level
+and the rate of growth of the money supply is  the first difference of the logarithm of the money supply.
+Let $p_t$ be the rate  of inflation and let $m_t$ be the rate of growth of the money supply.  Assume
+that 
+$$ p_t = (1-\lambda) m_t + \lambda E_t p_{t+1},  \quad \lambda \in (0,1)  $$
+so that
+$$ p_t = (1-\lambda) E_t \sum_{j=0}^\infty \lambda^j m_{t+j} , $$
+where $E_t (\cdot)$ is a mathematical expectation conditioned on time $t$ information, which will be either $x_t$ or $x_t, s_t$ where $x_t, s_t$ are to be defined now.
+We assume  that $s_t \in {1,2}$ is governed by a two-state Markov chain $P$ with initial distribution $\pi_0$. 
+As for $x_t$, in the present example it is a state vector $x_t= \bmatrix{1 & m_t & m_{t-1} }'$  that lets us represent the following stochastic process for $\{m_t\}_{t=0}^\infty$ in the state-space form XXXX:
+$$ m_{t+1} = \rho_{1,s(t)} m_t + \rho_{2,s(t)} m_{t-1} + c_{s(t)}w_{t+1} $$
+where $w_{t+1}$ is an i.i.d. standardized normal random variable. 
+
+\subsection{Conditional expectations of geometric sums}
+ 
+ 
+We begin by computing  $z_t$, an expectation conditional on both $x_t$ and $s_t$.        
+We begin by guessing that
+$$ z_t = H_{s_t} x_t  $$
+and substitute this guess into
+$$ z_t = y_t + \beta [ E z_{t+1} | x_t, s_t ] $$
+to get 
+$$  H_i  = G_{i}   + \beta \sum_{j} H_j A_i P_{ij}. $$
+which implies  that
+$$ \eqalign{ H_1 & = G_1 + \beta [ H_1 A_1 P_{11} + H_2 A_1 P_{12} ] \cr
+                   H_2 & = G_2 + \beta [ H_1 A_2 P_{21} + H_2 A_1 P_{22} ]. }$$                  
+Stacking these equations and solving for the matrices $H_1, H_2$, we compute
+$$ \bmatrix{H_1 & H_2 }  = \bmatrix{G_1 & G_2}             (I - \beta \bmatrix {A_1 P_{11} & A_2 P_{21} \cr
+                                                   A_1 P_{12} & A_2 P_{22} }  )^{-1}. $$                 
+
+Next we compute $ \tilde z_t =  E ( \sum_{t=0}^\infty \beta^t y_{t+j} ) | x_t$.  
+%We let $\pi_t$ be the distribution over the finite Markov state $s_t$. Note that the 
+ following  normal distributions  conditional on $x_t, s_t$ are multivariate normal:
+$$ \eqalign{ x_{t+1} | x_t, s_t  & \sim {\cal N}( A_{s_t} x_t, C_{s_t}C_{s_t} ' ) \cr
+                    y_t | x_t, s_t & \sim {\cal N}( G_{s_t} x_t, 0 )  \cr
+                    z_t | x_t, s_t & \sim {\cal N}( H_{s_t} x_t, 0 ) }  $$
+Distributions of $x_{t+1}, y_t$, and $z_t$ conditional on $x_t$ are {\it mixtures of normals}, with $\pi_{t,i}$   being the mixing probabilities over states $i$  at time $t$.              
+Defining the matrix averages
+$$ \eqalign{ \bar A_t & = \pi_{t,1} A_1 + \pi_{t,2} A_2   \cr
+                    \bar G_t & =\pi_{t,1} G_1 + \pi_{t,2} G_2 \cr
+                    \bar H_t & = \pi_{t,1\pi_{t,2}} H_1 + \pi_{t,i} H_2  ,}$$ 
+we can deduce three conditional means
+$$ \eqalign{ E x_{t+1} | x_t & = \bar A_t x_t \cr
+                    E y_t | x_t & = \bar G_t x_t      \cr
+                    E z_t | x_t & = \bar H_t x_t . }$$ 
+The appearance of  time subscripts $t$ in the formulas for $\bar A_t, G_t, H_t$ are a consequence of  $\pi_t$ not necessarily
+being a stationary distribution for Markov chain $P$.                
+                    
+Having computed conditional means,  let's compute conditional covariances.  
+Since
+$$ x_{t+1} - \bar A x_t = \cases{ (A_1 - \bar A_t) x_t  + C_1 w_{t+1} & if $s_t =1$ \cr
+                                                    (A_2 - \bar A_t) x_t  + C_2 w_{t+1} & if $s_t =2$ } $$
+it follows that 
+$$ E (x_{t+1} - \bar A_t x_t ) (x_{t+1} - \bar A _tx_t ) ' | x_t = \sum_i \pi_{t,i} [ (A_i - \bar A_t) x_t x_t' (A_i - \bar A_t)' + C_i C_i' ] $$
+Since                  
+$$ y_t = \cases{ G_1 x_t & if $s_t =1$ \cr
+                           G_2 x_t & if $s_t =2 $ } $$                     
+and 
+$$ y_t - \bar G x_t = \cases{ (G_1 - \bar G_t) x_t & if $s_t =1$ \cr
+                           (G_2  - \bar G_t) x_t & if $s_t =2 $ } $$                             
+it follows that 
+$$ E (y_t - \bar G_t x_t) (y_t - \bar G_t x_t)' | x_t = \sum_i \pi_{t,i} (G_i - \bar G_t) x_t x_t' (G_i - \bar G_t)'.  $$   
+and that
+$$ E (z_t - \bar H_t x_t) (z_t - \bar H_t x_t)' | x_t = \sum_i \pi_{t,i} (H_i - \bar H_t) x_t x_t' (H_i - \bar H_t)'.  $$                                                    
+       
+                
+                    
+       
+We can compute  conditional means and covariances of the $\{x_t\}_{t=0}^\infty$  as follows.
+Let
+$E x_t = \mu_t$ and $\Sigma_t = E (x_t - \mu_t) (x_t  - \mu_t)'$.  
+Note that
+$$ x_{t+1} - \mu_{t+1} = \cases{ A_1 (x_t   - \mu_t)  + C_1 w_{t+1} & if $s_t =1$ \cr
+                                                    A_2  (x_t   - \mu_t)  + C_2 w_{t+1} & if $s_t =2$ } $$
+It follows that
+$$ \mu_{t+1} = \bar A_t \mu_t$$
+and
+$$\Sigma_{t+1} = \pi_{t,1} (A_1 - \bar A_t) \Sigma_t (A_1 - \bar A_t)' + \pi_{t,2} (A_2 - \bar A_t) \Sigma_t (A_2 - \bar A_t)' + \bar C \bar C '  .$$
+When  $\pi_t \rightarrow \bar \pi$ as $t$ goes to infinity, iterations on these two recursions  converge, respectively, to 
+a stationary mean vector $\mu$  and a stationary covariance matrix $\Sigma$ that
+satisfy
+$$ \mu  = \bar A \mu $$
+and
+$$\Sigma =  \bar \pi_1 (A_1 - \bar A) \Sigma (A_1 - \bar A)' + \bar \pi_2 (A_2 - \bar A) \Sigma(A_2 - \bar A)' + \bar C \bar C ' $$
+where $\bar \pi_i = \lim_{t \rightarrow +\infty} \pi_{t,i}$.  
+
+\subsection{Time series averages}
+                                       
+Consider the conditional covariance matrix 
+$$\Sigma(x_t)  = \sum_i \pi_{t,i} [ (A_i - \bar A) x_t x_t' (A_i - \bar A)' + C_i C_i' ] .$$
+Assume that the pair $(P, \pi_0)$ governing the  Markov state $s_t$ is stationary. Then  the joint process $\{x_t, s_t\}$ process is also  stationary,
+and so is the  process $\{x_t\}$. Say that $x_t$ has  the unconditional probability distribution $\Phi(x)$.  
+Then a law of large numbers tells us that as $ {T \rightarrow + \infty}$
+$$ T^{-1} \sum_{t=0}^T \Sigma(x_t)  \rightarrow \int \Sigma(x) d \Phi(x) \equiv \Sigma $$
+A vector autoregression of the form
+$$ x_{t+1} = \bar A x_t + v_{t+1}$$
+has $E v_{t+1} v_{t+1}' = \Sigma$.
+
+
+
+\noindent{\bf Quentin R1 DONE:} Please compute ``all of our objects'' for this example with two $s_t$ dependent   $\rho_1, \rho_2$ vectors, namely $1.2, -.3$ and $.95, 0$ with
+a transition matrix $P = \bmatrix{ .5 & .5 \cr .5 & .5 } $ using as $\pi_0 =\pi_\infty$ the stationary distribution $\bmatrix{.5 & .5}'$
+
+
+\medskip
+\noindent{\bf Quentin R2:} Please check whether $\bar H = \bar G (I -\beta \bar A)^{-1}$ .
+
+
+
+
+
+
+                                                    
+
+
+
+
+
+
+
+\bye

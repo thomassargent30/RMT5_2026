@@ -1,0 +1,322 @@
+
+
+\subsection{Laws of large numbers}
+
+Let $P, \pi$ be a stationary $n$-state Markov chain with the
+ state space
+$X= \{e_i, i=1, \ldots, n\}$.   An $n \times 1$ vector $\overline y$
+defines a  random variable $y_t = \overline y' x_t$.
+%Thus, a random variable is another term for  ``function of the underlying
+%Markov state.''
+Let $E [y_\infty | x_0 = e_i]$ be the expectation of $y_s$ for $s$ very large,
+conditional on the initial state.
+The following is a  law of large numbers:
+\medskip
+\theorem{lawlargenumbers0}
+Let the $ n \times 1$ vector $\overline y$ define a random variable $y = \bar y ' x$ as a function of an underlying
+state $x$, where $x$ is governed by a stationary
+Markov chain $(P, \pi)$ with an absorbing subset $\tilde X \subset X = \{x_1, \ldots, x_n\}$.
+  Suppose that $e_i  \in \tilde X$.  Then
+$$ {1 \over T} \sum_{t=1}^T y_t \rightarrow   E [y_\infty |  x_0 = e_i]
+   \EQN lawlarge0 $$
+with probability $1$.
+\endtheorem
+\medskip
+
+\noindent The following example illustrates  \Theorem{lawlargenumbers0}.
+
+\medskip
+\noindent{\bf Example:}
+ Consider the Markov chain $P = \bmatrix{ 1 & 0 \cr 0 & 1\cr}, \pi_0 = \bmatrix{p \cr (1-p)\cr}$ for
+$p \in (0,1)$, where the state space $X = \{e_1, e_2\}$.  Consider the random variable $y_t = \bar y' x_t$ where $\bar y = \bmatrix{10 \cr 0 \cr}$. The chain has two possible sample
+paths, $y_t = 10, t\geq 0$, which occurs with probability $p$  and $y_t = 0, t\geq 0$, which occurs with probability $1-p$.
+Thus,  $ {1 \over T} \sum_{t=1}^T y_t \rightarrow 10$ with probability $p$ and ${1 \over T} \sum_{t=1}^T y_t \rightarrow  0$ with
+probability $(1-p)$.
+
+\medskip
+
+Outcomes in this example indicate why we  might want something   stronger  than \Ep{lawlarge0}, namely, to
+replace the conditional expectation $E[y_\infty |  x_0 = e_i ]$ with the unconditional
+mean $E[y_t] = E[y_0]$ associated with a stationary distribution $\pi$.\NFootnote{Suppose that $(P, \pi)$ is a stationary Markov chain.
+Imagine repeatedly drawing $x_0$ from $\pi$ and for each initial condition drawn
+then generating $x_t, t \geq 1$ by successively drawing from  transition densities given by the matrix $P$. Averages {\it across} such samples
+would correspond to $E [y_0]$.}
+ To get this stronger outcome, we must strengthen
+what we assume about $P$.  % by using the following concepts.
+To investigate how to accomplish this, we study  right eigenvectors of transition matrix $P$.
+
+\subsection{Right eigenvectors}
+Let $P, \pi$ be a stationary Markov chain and
+ let $y_t = \bar y' x_t$ be a random variable generated as a linear function of the Markov state $x_t \in X = \{e_1, \ldots, e_n\}$.
+ Notice that  the $i$th row of $P \bar y$
+equals
+$$ \sum_j P_{ij} \bar y_j = E [ y_{t+1} | x_t = e_i ]   $$
+Suppose now that $\bar y$ is a right eigenvector of $P$ associated with a unit eigenvalue of $P$:
+$$ P \bar y = \bar y   \EQN invariant22 $$
+The $i$th row of equation \Ep{invariant22} states that
+$$ E [y_{t+1} | x_t = e_i ] = \bar y_i , \EQN invariant23  $$
+so equation \Ep{invariant22} states that \Ep{invariant23} holds for all $i \in \{1, \ldots , n\}$.
+This can be written informally as
+$$ E_t y_{t+1} = y_t , \EQN invariant22 $$
+where $E_t$ denotes a mathematical expectation conditioned on time $t$ information, namely, the Markov state $x_t$.
+
+
+
+\medskip
+\noindent{\bf Example:}
+ Consider the Markov transition matrix  $P = \bmatrix{ 1 & 0 \cr 0 & 1\cr}$  where the state space $X = \{e_1, e_2\}$. A right eigenvector of $P$ associated
+ with a unit eigenvalue
+is $\bar y = \bmatrix{ \bar y_1  \cr \bar y_2 \cr} $ for any real numbers $\bar y_1, \bar y_2$.
+
+
+\medskip
+\noindent{\bf Example:}
+ Consider the Markov transition matrix  $P = \bmatrix{ 1 -\lambda & \lambda  \cr \delta & 1-  \delta \cr}$,   where the state space $X = \{e_1, e_2\}$,
+ $\lambda \in (0,1)$, and $\delta \in (0, 1]$. A right eigenvector of $P$ associated with a unit eigenvalue
+is $\bar y = \bmatrix{ \bar y_1  \cr \bar y_1 \cr} $ for any real number $\bar y_1$ (i.e, $\bar y_2$ must equal $\bar y_1$).
+
+
+\medskip
+
+
+We use
+\medskip
+\definition{invariant} A random variable $y_t = \overline y' x_t $ is said to
+be  {\it invariant\/} with respect to a stationary Markov chain $(P, \pi)$ if
+$y_t = y_0, t \geq 0$,
+ for all realizations of  $x_t, t \geq 0$ that occur with positive probability under $(P, \pi)$.
+%$\bar y_i = \bar y_j$ for all $i,j$ that occur with
+%positive probability according to the stationary probability distribution
+%$\pi$.
+\enddefinition
+\medskip
+\noindent  Thus, a random variable $y_t = \bar y' x_t $ is invariant (or ``an invariant function
+of the state'') with respect to $P, \pi$ if it remains constant
+at $y_0$ while the underlying state $x_t$ moves through the state space $X$.  Notice how
+the definition leaves open the possibility that $y_0 = \bar y' x_0$ itself might differ across sample paths indexed by
+different draws of the initial condition
+$x_0$ from the stationary density $\pi$.
+
+%
+%Evidently, ${\rm Prob}(y_{t+1} = \bar y_j | y_t = \bar y_i) = P_{ij}$.  If  $P_{ij} >0 $ for all $(i,j)$,
+%then the only way that we can have $y_{t+1} = y_t$ for all realizations  is if we have $\bar y_i = \bar y_j$
+%for all $i, j$.  More generally, the only way that we can have $y_{t+1} = y_t = \bar y_i$ for sure is that
+%$\bar y_j = \bar y_i $ whenever $P_{ij} >0$.  Thus, we can say that if $y_t = \bar y  x_t$ is an invariant variable for Markov chain
+%with transition matrix $P$,  then $P\bar y = \bar y$, which is to say, $\bar y$ is a right eigenvector of $P$ associated
+%with a unit eigenvalue.
+%
+%If $P_{ij} > 0$ for all $(i,j)$, then the only eigenvector associated with a unity eigenvector has the form $ \bar y_o {\bf 1} $,
+%where $y_o$ is a real scalar and ${\bf 1}$ is the $n \times 1$ unit vector.  If $P_{ij} = 0$ for some $(i,j)$, there
+%can be eigenvectors that are not of the form $ \bar y_o {\bf 1} $, as illustrated in the following example.
+%
+%\medskip
+%\specsec{Example:}  Consider the stochastic matrix
+%$$ P = \bmatrix{ 1 & 0 & 0 \cr
+%                 0 & 1 & 0 \cr
+%                 .25 & .25 & .5} .$$
+%A right eigenvector of $P$ associated with a unit eigenvalue is $\bmatrix{ 2 & -2 & 0 } $, which evidently is not constant across states.
+%
+%\medskip
+
+
+%
+%
+%The stationary Markov chain $(P, \pi)$ induces a joint density $f(x_{t+1}, x_t)$ over $(x_{t+1}, x_t)$ that
+%is independent of calendar time $t$; $P, \pi$ and the definition $y_t = \overline y' x_t$ also
+%induce a joint density $f_y(y_{t+1}, y_t)$ that is independent of calendar time.  In what follows,
+%we compute mathematical expectations with respect to the joint density $f_y(y_{t+1}, y_t)$.
+%
+%For a finite-state Markov chain, the following theorem gives a convenient
+%way to characterize
+%invariant        functions of the state.
+%
+%\medskip
+\theorem{invariant2200}  Let $(P, \pi)$ be a stationary Markov chain on a state space $X = \{e_1, \ldots, e_n \}$ consisting
+of $n$ unit vectors. Let $\bar y$ be a right eigenvector
+of $P$ associated with a unit eigenvalue. Let $y_t = \bar y' x_t$.
+% be
+%a random variable that is a fixed function of the Markov state.  %and assume that $\pi$ puts positive
+%probability on all $x_t \in X$.
+Suppose that $x_0 = e_i$, where $e_i $ belongs to an absorbing subset of the Markov chain.
+Then by virtue of equation \Ep{invariant22},
+%$$ E [y_{t+1} | x_t] = y_t , \EQN invariant22 $$
+ $y_{t+1} = y_t$ and the random variable   $y_t = \overline y' x_t$
+is invariant with respect to $P, \pi$.%
+\NFootnote{As we shall have cause to study in chapters \use{selfinsure} and
+\use{incomplete},
+{\it any\/} (not necessarily stationary) stochastic   process $y_t$ that satisfies
+\Ep{invariant22} is said to be a {\it martingale\/}.
+\Theorem{invariant2200} tells us that a martingale that is a function of a finite-state
+stationary Markov state $x_t$ must be constant over time.  This result is a special case of the
+martingale convergence theorem that underlies some remarkable results about savings to be studied
+in chapter \use{selfinsure}.  A stationary
+ martingale process generated by a finite-state stationary  Markov chain
+has so little freedom to move that it has to be constant forever, not just eventually, as asserted
+by the martingale convergence theorem.}
+
+\endtheorem
+
+\proof See exercise \the\chapternum.31.
+\endproof
+
+%\proof  By using the law of iterated expectations, notice that
+%$$\eqalign{ E (y_{t+1} - y_t)^2 &= E[E(y_{t+1}^2 - 2 y_{t+1} y_t
+%+ y_t^2)|x_t]  \cr
+% & = E[ E y_{t+1}^2 | x_t - 2 E (y_{t+1}| x_t) y_t + E y_t^2 | x_t]  \cr
+% & = E y_{t+1}^2 - 2 E y_t^2 + E  y_t^2  \cr
+% & =0 , \cr } $$
+%where the middle term on the right side of the second line
+%uses that $E[y_{t}|x_t]= y_t$, the middle term on the right side of the third line
+%uses  hypothesis \Ep{invariant22}, and the third line uses the hypothesis that $\pi$
+%is a stationary distribution.  In a finite Markov chain, if
+%$E (y_{t+1} - y_t)^2=0$,  then $y_{t+1} = y_t$ for all  $y_{t+1}, y_t$ that
+%occur with positive probability under the stationary distribution. \endproof
+
+
+
+
+Equation \Ep{invariant22}
+  states that an invariant function of the state is
+a right eigenvector of $P$ associated with a unit eigenvalue.
+Thus, associated with unit eigenvalues of $P$ are (1) left eigenvectors that are stationary distributions of the chain (recall equation \Ep{obA3}),
+and (2) right eigenvectors that can be used to construct  candidates for  invariant functions of the state. % (from equation \Ep{invariant3}).
+
+
+\definition{ergodicity}  Let $(P, \pi)$ be a stationary Markov chain on a  state space $X = \{e_1, \ldots, e_n\}$ consisting
+of $n$ unit vectors, and let $\overline y$ be a right eigenvector of $P$ associated with a unit eigenvalue.
+The stationary distribution $\pi$ is  said to be {\it ergodic\/} if the  random variable  $y_t = \overline y' x_t$
+ is constant with probability $1$, i.e.,
+$\overline y_i = \overline y_j$ for all $i, j$ with $\pi_i >0, \pi_j >0$.
+\enddefinition
+
+\medskip
+
+\specsec{Remark:}  Let $\tilde \pi^{(1)}, \tilde \pi^{(2)}, \ldots, \tilde \pi^{(m)}$ be
+$m$ distinct `basis' stationary distributions for an $n$ state Markov chain with transition matrix
+$P$ and state space $X= \{e_1, \ldots, e_n\}$.  Each $\tilde \pi^{(k)}$ is an $n \times 1$  left eigenvector of $P$ associated with a distinct
+unit eigenvalue, %. Each $\tilde \pi^{(j)}$ is
+scaled to be a probability vector (i.e., its components are nonnegative and sum to unity).
+The set $S$ of {\it all\/} stationary distributions is convex: an element $\pi_b \in S$   can  be represented
+as
+$$ \pi_b =   b_1 \tilde \pi^{(1)} + b_2 \tilde \pi^{(2)} +  \cdots + b_m \tilde \pi^{(m)} , $$
+where $b_j \geq 0, \sum_j b_j =1$ is a probability vector.
+
+\medskip
+\specsec{Remark:}  Each of the basis
+stationary distributions  $\tilde \pi^{(1)}, \tilde \pi^{(2)}, \ldots, \tilde \pi^{(m)}$ is  ergodic.  Think of the ergodic distributions as vertices and
+ the set of all stationary distributions
+ as the convex hull of these  vertices. % An ergodic stationary density $\pi_b$
+%is one of the vertices of the convex hull,
+ %$ \pi_b = \tilde \pi^{(j)} $
+%for one of the `basis' stationary densities.
+Where
+$\tilde \pi_b$ is an ergodic stationary density, we call a chain with $P, \pi_b$,  an {\it ergodic Markov chain}.
+
+
+
+\medskip
+\noindent A law of large numbers for Markov chains is:
+\medskip
+\theorem{LLNMarkov}
+Let $y_t = \overline y' x_t$ define a random variable on a stationary and ergodic
+Markov chain $(P, \pi)$ with state space $X = \{e_1, \ldots, e_n\}$.  Then
+$$ {1 \over T} \sum_{t=1}^T y_t \rightarrow     E[y_0]
+   \EQN lawlarge1 $$
+with probability $1$ with respect to probability distribution $\pi$.
+\endtheorem
+\medskip
+\noindent The theorem tells us that the time series average
+converges to the population mean of the stationary distribution of the random process $\{y_t\}$.
+
+\medskip
+ Four examples illustrate these concepts.
+\medskip
+\noindent{\bf Example 1.} A chain with transition matrix
+$P=\left[\matrix{0 & 1 \cr 1 & 0\cr}\right]$ has a unique stationary
+distribution $ \pi=\left[\matrix{.5 & .5 \cr}\right]'$  and
+the invariant functions are $\left[\matrix{\alpha & \alpha \cr}\right]'$
+for any scalar $\alpha$.  Therefore, the process is ergodic and
+\Theorem{LLNMarkov} applies.
+
+\medskip
+\noindent{\bf Example 2.}  A chain with transition matrix
+$P=\left[\matrix{1 & 0 \cr 0 & 1\cr}\right]$ has a continuum of
+stationary distributions
+$\gamma \left[\matrix{1 \cr 0 \cr}\right]+
+(1- \gamma )\left[\matrix{0 \cr 1 \cr}\right]$ for any $\gamma \in [0,1]$ and
+invariant functions
+$\left[\matrix{0 \cr \alpha_1 \cr}\right] $ and
+$\left[\matrix{\alpha_2  \cr 0 \cr}\right]$ for any scalars $\alpha_1 , \alpha_2 $ provided that $\alpha_1$ and $\alpha_2$ are not both equal to zero.
+ Therefore,
+the process is not ergodic when $\gamma \in (0,1)$, for note that neither invariant function is
+constant across states that receive positive probability according to a stationary distribution associated with $\gamma \in (0,1)$.
+Therefore, the  conclusion \Ep{lawlarge1} of  \Theorem{LLNMarkov} does not hold for an initial  stationary distribution associated with
+$\gamma \in (0,1)$,
+ although the weaker result  \Theorem{lawlargenumbers0} does hold. When $\gamma \in (0,1)$,  nature chooses state $i=1$ or
+ $i=2$ with probabilities $\gamma, 1-\gamma$, respectively,
+  at time $0$.   Thereafter, the chain remains stuck in the realized time $0$ state. Its failure ever to
+ visit the unrealized state prevents the sample average from converging to the population mean of  an arbitrary  function $\bar y$ of the state.
+Notice that conclusion \Ep{lawlarge1} of \Theorem{LLNMarkov}  does hold for  the stationary distributions associated
+with $\gamma=0$ and $\gamma=1$.
+\medskip
+\noindent{\bf Example 3.}
+  A chain with transition matrix
+$P=\left[\matrix{.8 & .2 & 0  \cr .1  & .9 & 0 \cr
+               0 & 0 & 1\cr}\right]$ has a continuum of
+stationary distributions
+$ \gamma \left[\matrix{ {1\over 3} & {2 \over 3} & 0 \cr}\right]'
++(1- \gamma) \left[\matrix{ 0 & 0 & 1 \cr}\right]' $ for $\gamma \in [0,1]$ and
+invariant functions
+$ \alpha_1\left[\matrix{1  &  1 & 0 \cr}\right]'$ and
+$ \alpha_2\left[\matrix{0 &  0 & 1 \cr}\right]'$
+for any scalars $\alpha_1, \alpha_2$ that are not both equal to zero.
+The conclusion \Ep{lawlarge1} of  \Theorem{LLNMarkov} does not hold for
+the stationary distributions associated with $\gamma \in (0,1)$,
+but the conclusion of  \Theorem{lawlargenumbers0} does hold.
+But again, conclusion \Ep{lawlarge1} does hold for the  stationary distributions associated with $\gamma =0$ and $\gamma=1$.
+
+
+
+\medskip
+
+\noindent{\bf Example 4:}
+Consider the Markov transition matrix $P = \bmatrix{ 1& 0 & 0 \cr .25 & .5 & .25 \cr 0 & 0 & 1 \cr}$.
+A right eigenvector associated with a unit eigenvalue is $\tilde y = \bmatrix{ \bar y_1 \cr \bar y_2 \cr \bar y_3 \cr}$  for  $\bar y_2 = .5 \bar y_1 + .5 \bar y_3$ where
+ $\bar y_1, \bar y_3$ are any
+two real numbers.
+Two stationary densities are  ergodic, namely, $\pi_1 = \bmatrix{ 1 \cr 0 \cr 0 \cr}$ and $\pi_2 =  \bmatrix{ 0 \cr 0 \cr 1 \cr}$.
+Stationary densities are $\alpha \pi_1 + (1-\alpha) \pi_2$ for any $\alpha \in [0, 1]$. There are two absorbing subsets, namely,
+$\{e_1\}$ and $\{e_3\}$.  Evidently,  for $i = 1, 3$,
+$ E [y_\infty | x_0 = e_i] = \lim_{T\rightarrow \infty} T^{-1} \sum_{t=0}^T y_t =  \bar y_i $.
+But notice that $E [y_\infty | x_0 = e_2 ] \neq \bar y_2$.  Instead,  $E [y_\infty | x_0 = e_2 ]$ equals $\bar y_1$
+with probability $.5$ and $\bar y_3$ with probability $.5$.  In this example, $y_{t+1} = y_t$ for $t \geq 0$ if $x_0 = e_i$ for
+$i =1$ or $i=3$, but not for $i =2$, i.e., not for an initial state having zero probability under an ergodic stationary  distribution.
+
+
+===================
+
+
+
+\medskip
+
+\specsec{Definition:} Paralleling our discussion of finite-state Markov chains,
+we can say that the function $\phi(s) $ is {\it invariant\/} if
+$$ \int \phi(s') \pi(s'| s) d s' = \phi(s). $$
+A stationary continuous-state Markov process is said to be {\it ergodic\/}
+if the only invariant functions  $\phi(s')$ are constant with probability
+$1$ under the stationary distribution $\pi_\infty$.
+
+\medskip
+
+\noindent A law of large numbers for Markov processes states:
+
+\medskip
+\theorem{LLNMarkovcontinuous}
+Let $y(s)$ be a random variable, a measurable  function of  $s$,
+and let
+$\bigl(\pi(s'|s),\pi_0(s)\bigr)$ be  a stationary  and  ergodic   continuous-state
+Markov process.   Assume that $E |y| < +\infty$. Then
+$$ {1 \over T} \sum_{t=1}^T y_t \rightarrow E y
+   = \int y(s) \pi_0(s) ds $$
+with probability $1$ with respect to the distribution $\pi_0$.
+\endtheorem

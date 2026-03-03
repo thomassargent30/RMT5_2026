@@ -1,0 +1,66 @@
+Dear Tom,
+
+ 
+
+Here are some notes on McKay, Nakamura and Steinsson’s (AER 2016, pp. 3133-3158) analysis in section “I. Why is forward guidance so powerful?”; but instead of using the IS and LM equations in that section, we adopt the preferences and technologies in their section II (which we specialize to be logarithmic utility of consumption and linear disutility of work).
+
+ 
+
+Moreover, we adopt Fahri and Werning’s (NBER wp 23281) assumption that “prices are fully rigid” (but NOT their assumption that wages are also fully rigid – something has to give in an equilibrium :-)
+
+ 
+
+The point of the exercise is to explicitly show how a constant increase or decrease in consumption can be achieved for an arbitrarily long period of time in anticipation of a distant government-engineered one-period decrease or increase in the real interest rate, respectively. As long as you buy into the Fahri-Werning assumption of fully rigid prices, it all makes sense. Specifically, intermediate good producers are obliged to meet demand at those rigid prices, and their changing demand for labor lead to a change in the wage rate. The resulting changes in the wage rate, profits and the equity price are just right for households to be maximizing utility and for markets to clear. A selective quote from McKay et al. (p. 3137) says it all:
+
+“The step-function shape of output response in Figure 1 is determined solely by the Euler equation. The level of consumption, and therefore output, is however determined by the intertemporal budget constraint. In general equilibrium, income rises in response to this type of shock because the level of production increases in response to the increase in demand.”
+
+ 
+
+Well, that was indeed a selective quote, as can be illustrated with another quote from McKay et al. (p. 3138) in that same section:
+
+“Figure 2 plots the response of inflation to forward guidance about interest rates at different horizons relative to the response of inflation to an equally large change in the current real interest rate. We see that the response of inflation to forward guidance about interest rates five years into the future is roughly 18 times larger than the response of inflation to an equally sized change in the current real interest rate.
+
+ 
+
+To build intuition, we have assumed that there is no endogenous feedback from changes in output and inflation back to onto real interest rates. Actual monetary policies are more complicated. …”
+
+Oops, our attached version of the analysis adopts the Fahri-Werning assumption of rigid prices (no inflation) and endogenize all other outcomes.
+
+ 
+
+So how can we bridge the dissonance between us and McKay et al.? Well, the good news are that they conduct an analysis based on primitives in their section “II. An incomplete markets model with nominal rigidities”. Here, we have a golden opportunity to sort out what is going. As a way forward, it would be great if we had a RA who would be interested in getting to know the computer code of McKay et al. and to replicate their analysis. We could then decompose the forces in McKay et als’s numerical analysis – a framework with not only Calvo price setting but also a government-debt-and-tax policy that redistributes resources across households.
+
+ 
+
+Returning to the grand picture of a New Keynesian chapter in RMT5:
+
+ 
+
+·       It would be nice if we could sort out the modern incarnations of IS and LM equations such as those of Eggertsson and Woodford. I believe that the forward guidance puzzle might indeed be a good venue for our inquiry.
+
+·       Yet another line of attack would be to dive into the dynamics in cases of ‘exploding outcomes’. On the basis of primitives, we might simply end up in problems of indeterminacy. For your information, I googled Obstfeld and Rogoff on hyperinflation and found their recent comment on Cochrane’s JPE article
+
+https://scholar.harvard.edu/files/rogoff/files/revisiting_speculative_hyperinflations.pdf
+
+Perhaps this exchange holds something useful for us.  
+
+·       Relatedly, it might be intriguing to contrast the rather mechanical (modern incarnation of) IS-LM dynamics to Atkeson-Chari-Kehoe type of ‘sophisticated policies’.
+
+·       I would also favor the inclusion of your 2011 exposition of a ‘wedge analysis’ by which taxes and transfers can undo most problems of rigidities. Besides this technique having been used to address issues such as fiscal devaluations, it can be a pedagogical device to highlight the channels of a New Keynesian model.
+
+·       Another topic could be the ‘balkanization’ of actors in heterogeneous-agent models. I haven’t followed the HANK development. Though, I saw one stark example by Broer, Hansen, Krusell and Oberg, “The New Keynesian transmission mechanism: A heterogeneous-agent perspective” (ReStud forthcoming), where workers and capitalists live in autarky eating their labor income and capital income, respectively. The ‘micro foundations’ are that agents are assumed not to hold negative amounts of bonds and bonds are in zero net supply, and hence, there is no trade. (A main result is that wage rather than price rigidity explains the data better.)   
+
+ 
+
+While we probably will not be able to settle anything, the hope would be to lay bare the mechanics of New Keynesian models.
+
+ 
+
+An exciting challenge and, as you said, it would be fun to close the circle from your first black book!
+
+ 
+
+Lars
+
+P.S. I find a course listing of my undergraduate course, and it seems that you are ‘relieved of duty’ on that one :-) An additional handful of students wrote me yesterday so I simply concocted and sent them and Konrad Menzel a version of our MBA syllabus. It will be fun to try out this material on the undergraduates.
+

@@ -1,0 +1,150 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+%
+
+
+\centerline{\bf Optimal Taxation Models}
+
+
+
+$$ E_t \sum_{j=0}^\infty \beta^t L(T_t)  $$
+
+$$ L(T) = .5 T^2. $$
+
+
+$$ T_t + a_t = R^{-1} a_{t+1} +  G _t   , \quad t \geq 0 $$
+
+or
+
+$$ T_t + a_t(z_t) = \int  q(z_{t+1} | z_t ) a_t(z_{t+1}) d z_{t+1}
+
+where
+$q(z_{t+1} | z_t)$ is a pricing kernel for one-period  state contingent claims and $b_t(z_{t+1})$ is   a vector of state-contingent debts due in state $z_{t+1}$
+ that are chosen at time $t$.
+We exogenously set the pricing kernel to 
+$$ q(z_{t+1} | z_t ) = \beta \phi(z_{t+1} \ z_t) ,  $$
+where $\phi(z_{t+1} \ z_t)$ is the probability density of $z_{t+1}$ conditional on $z_t$.  
+This specification of the pricing kernel
+implies that the price of a risk-free one period bond must be
+$$ \int q(z_{t+1} | z_t) d z_{t+1} = \beta \int \phi(z_{t+1} \ z_t) = \beta $$
+so that the gross interest rate on one-period risk free loans is  $\beta^{-1}$.
+
+
+$$  T_t =  (1-\beta)
+\left[ \sum_{j=0}^\infty \beta^j E_t y_{t+j} - b_t\right]. \EQN sprob9 $$
+
+$ 1 - \beta = {r \over 1+r} $
+
+ The consumer maximizes
+\Ep{sprob1} by choosing a consumption, borrowing plan
+ $\{c_t, b_{t+1}\}_{t=0}^\infty$ subject to the sequence of budget constraints
+$$ T_t + a_t = R^{-1} a_{t+1}  + G_t  $$
+where $\{y_t\}$ is an exogenous
+ stationary endowment process, $R$ is a constant gross
+risk-free interest rate, $a_t$ is one-period risk-free  debt  maturing at
+$t$, and $b_0$ is a given initial condition. It is important to note that for $t \geq $, $b_t$ is chosen at time $t-1$ and that $b_0$
+is a given initial condition at time $t=0$.  We shall assume
+that $R^{-1} = \beta$.  For example, we might assume that the endowment
+process has the state-space representation
+$$ \EQNalign{ z_{t+1} & = \check A z_t + \check C w_{t+1} \EQN sprob15;a \cr
+               y_t & = \check G  z_t \EQN sprob15;b \cr}$$
+where $w_{t+1}$ is an i.i.d.~process with mean zero and
+identity contemporaneous covariance matrix, $\check A$ is a stable matrix,
+its eigenvalues being strictly below unity in modulus, and
+$\check G$ is a selection vector that identifies $y$ with a particular
+linear combination of the $z_t$.
+We impose the following condition on the
+consumption, borrowing plan:
+$$  % \lim_{T \rightarrow +\infty}
+ E_0 \sum_{t=0}^\infty \beta^t b_t^2 < +\infty. \EQN sprob3 $$
+This condition suffices to rule out Ponzi schemes.
+The {\it state\/} vector confronting the household at $t$  is
+$\left[\matrix{b_t & z_t\cr}\right]'$, where $b_t$ is its one-period debt falling
+ due at the beginning of period $t$
+and $z_t$ contains all variables useful for
+forecasting its future endowment.
+
+
+$$ T_t = {r \over 1+r}
+\left[ \sum_{j=0}^\infty \beta^j E_t y_{t+j} - b_t\right]. \EQN sprob9 $$
+Equation \Ep{sprob8} or \Ep{sprob9} asserts that tax collections  equal
+economic {\it income\/}, namely,  a constant
+marginal propensity to consume or interest factor ${r \over 1+r}$ times
+the sum of nonfinancial wealth $
+\sum_{j=0}^\infty \beta^j E_t y_{t+j}$ and financial
+wealth $-b_t$.   Notice that we can use a version of  our formula \Ep{discount1} in  \Ep{sprob8} or \Ep{sprob9} to obtain
+$$  T_t  = (1-\beta) [ \check G(I-\beta \check A)^{-1} z_t - b_t ]  ,  \EQN eqn:lucascritiquecons $$
+a ``consumption function'' that   represents
+$T_t$  as a function of the {\it state\/} $[b_t, z_t]$ that
+ confronts the household, where  from \Ep{sprob15} $z_t$ contains present
+information that is useful for forecasting government expenditures.
+
+If we subtract equation  \Ep{sprob16;b}  evaluated at time $t$ from
+equation  \Ep{sprob16;b}  evaluated at time $t+1$, we obtain
+$$ a_{t+1}- a_t = \check G (I-\beta \check A)^{-1} (z_{t+1} - z_t) - {\frac{1}{1-\beta}}(T_{t+1} - _T ) .$$
+Substituting $z_{t+1} - z_t = (\check A - I )z_t + \check C w_{t+1}$ and equation \Ep{sprob16;a} into the
+above equation and rearranging gives
+$$ a_{t+1} - a_t =\check G (I - \beta \check A)^{-1} (\check A - I) z_t . \EQN debt_evolution $$
+This equation indicates how $b_{t+1}$ is predetermined at time $t$ as a function of $b_t$ and $z_t$.
+
+\section{Complete Markets}
+
+
+ To construct a financial plan that supports constant consumption, temporarily take $\bar c$ as known, substitute \Ep{guess101} into
+\Ep{stareatit101} and solve for a state-dependent debt function $b(z_t)$:
+$$ b(z_t, \bar c) =  \check G(I-\beta \check A)^{-1} z_t - {\frac{1}{1-\beta}} \bar c . \EQN guess102 $$
+To pin down the constant $\bar c$, we assume that the consumer enters time $0$ owing debt $\bar b_0$ and that $\bar c$ solves  the following version of \Ep{guess102} at time $t=0$:
+$$ \bar c = (1 -\beta) [ \check G(I-\beta \check A)^{-1} z_0 -  \bar b_0 ]  \EQN guess103 $$
+so that $b(z_0, \bar c) = \bar b_0$ also satisfies equation \Ep{guess102}.
+ 
+To begin, we note that the consumer's budget constraint is now
+$$ c_t + b_{t-1}(z_t) = \int  q(z_{t+1} | z_t ) b_t(z_{t+1}) d z_{t+1} + y_t  \EQN CMbudget101 $$
+where $q(z_{t+1} | z_t)$ is a pricing kernel for one-period  state contingent claims and $b_t(z_{t+1})$ is  now a vector of state-contingent debts due in state $z_{t+1}$
+ that are chosen at time $t$.
+To execute our reverse engineering exercise, we exogenously set the pricing kernel to 
+$$ q(z_{t+1} | z_t ) = \beta \phi(z_{t+1} \ z_t) , \EQN kernel101 $$
+where $\phi(z_{t+1} \ z_t)$ is the probability density of $z_{t+1}$ conditional on $z_t$.  This specification of the pricing kernel
+implies that the price of a risk-free bond must be
+$$ \int q(z_{t+1} | z_t) d z_{t+1} = \beta \int \phi(z_{t+1} \ z_t) = \beta $$
+so that the gross interest rate on one-period risk free loans is  $\beta^{-1}$ as we want.
+
+
+
+
+To construct a financial plan that supports constant consumption, temporarily take $\bar c$ as known, substitute \Ep{guess101} into
+\Ep{stareatit101} and solve for a state-dependent debt function $b(z_t)$:
+$$ b(z_t, \bar c) =  \check G(I-\beta \check A)^{-1} z_t - {\frac{1}{1-\beta}} \bar c . \EQN guess102 $$
+To pin down the constant $\bar c$, we assume that the consumer enters time $0$ owing debt $\bar b_0$ and that $\bar c$ solves  the following version of \Ep{guess102} at time $t=0$:
+$$ \bar c = (1 -\beta) [ \check G(I-\beta \check A)^{-1} z_0 -  \bar b_0 ]  \EQN guess103 $$
+so that $b(z_0, \bar c) = \bar b_0$ also satisfies equation \Ep{guess102}.
+ 
+
+
+
+
+Notice that $\bar c$ in equation \Ep{guess103} equals $c_0$ given by the optimal decision rule \Ep{eqn:lucascritiquecons} for the incomplete markets version
+of the LQ consumption smoothing model.   From equation \Ep{sprob16;a}, we know that in the incomplete markets version of the model
+$$ c_{t+1} = c_t + b w_{t+1} $$
+where $b = (1-\beta) \check G (I - \beta \check A)^{-1} \check C $
+so that 
+$$ \eqalign{ E_0 c_t & = c_0 \cr
+              E_0(c_t  - c_0)^2 & = t b b' } $$
+Because the consumer dislikes variance in consumption, he prefers the completely smoothed   consumption stream  that he can choose in the complete markets version of the model.
+
+
+\medskip
+
+
+\bye

@@ -1,0 +1,1879 @@
+This is TeX, Version 3.14159265 (MiKTeX 2.9.6210 64-bit) (preloaded format=tex 2017.3.8)  27 APR 2019 16:27
+**./RMT5_recovery.tex
+(RMT5_recovery.tex
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\texsis.tex
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSfonts.tex
+TeXsis fonts:
+\ttglue=\skip18
+ \mib, \scr,
+\scrfam=\fam8
+ 9pt, 10pt, 11pt, 12pt, 14pt, 16pt, 20pt, 24pt.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSmacs.tex
+TeXsis main macros.
+\footnum=\count26
+\@quoteflag=\count27
+\AThelp=\toks12
+\beginhelp=\toks13
+ Checkpoint/Restart.
+\checkpointout=\write0
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSinit.tex
+Initialization.
+\txsfile=\read0
+\@utohelp=\toks14
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXShead.tex
+Running Headlines.
+\headlineoffset=\dimen16
+\footlineoffset=\dimen17
+\BindingMargin=\dimen18
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSeqns.tex
+Equation numbering.
+\eqnum=\count28
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSprns.tex
+Auto-sizing of Parentheses.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSrefs.tex
+References and Citations.
+\refnum=\count29
+\@firstrefnum=\count30
+\@lastrefnum=\count31
+\@BadRefs=\count32
+\refindent=\dimen19
+\CiteType=\count33
+\reflistout=\write1
+\reflistin=\read1
+
+BIBTeX support for TeXsis (macros and patches) v 0.92)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSsects.tex
+Section and Chapter divisions.
+\chapternum=\count34
+\sectionnum=\count35
+\subsectionnum=\count36
+\subsubsectionnum=\count37
+\sectionskip=\skip19
+\subsectionskip=\skip20
+\sectionminspace=\dimen20
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXStags.tex
+Labels and tags.
+\auxfilein=\read2
+\auxfileout=\write2
+\@BadTags=\count38
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXStitle.tex
+Title Page macros.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSenvmt.tex
+Environments.
+\EnvTopskip=\skip21
+\EnvBottomskip=\skip22
+\EnvLeftskip=\skip23
+\EnvRightskip=\skip24
+\EnvDelt@skip=\skip25
+\@envDepth=\count39
+\enumDepth=\count40
+\enumcnt=\count41
+\@desbox=\box16
+\@desline=\box17
+\@glodeswd=\dimen21
+\@deslines=\count42
+\theoremnum=\count43
+\lemmanum=\count44
+\corollarynum=\count45
+\definitionnum=\count46
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSfmts.tex
+Layout macros.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSfigs.tex
+Figures and Tables.
+\tabnum=\count47
+\fignum=\count48
+\fgout=\write3
+\tbout=\write4
+\figlist=\write5
+\tablelist=\write6
+\caplist=\write7
+\@capbox=\box18
+\@caplines=\count49
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSruled.tex
+\ncols=\count50
+\nrows=\count51
+\curcol=\count52
+\thinsize=\dimen22
+\thicksize=\dimen23
+\tablewidth=\dimen24
+\parasize=\dimen25
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSdcol.tex
+- Double column format.
+\colwidth=\dimen26
+\pagewidth=\dimen27
+\pageheight=\dimen28
+\rulewd=\dimen29
+\colmaxdepth=\dimen30
+\@bigColHeight=\dimen31
+\@saveSplitmax=\dimen32
+\@saveVsize=\dimen33
+\s@veskip=\skip26
+\doublecolskip=\skip27
+\@leftpluscenter=\dimen34
+\partialpage=\box19
+\botins=\insert252
+\NWins=\insert251
+\SWins=\insert250
+\NEins=\insert249
+\SEins=\insert248
+\LFins=\insert247
+\RFins=\insert246
+\@balncErrormsg=\toks15
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSletr.tex
+Letter Format,
+\headlineoffset=\dimen35
+\longindent=\dimen36
+\hdimphone=\dimen37
+\vdimphone=\dimen38
+\hdimdate=\dimen39
+\vdimdate=\dimen40
+\bigletterskip=\skip28
+\theaddress=\box20
+ with envelopes.
+\EnvlWidth=\dimen41
+\EnvlHeight=\dimen42
+\EnvlVoffset=\dimen43
+\Envout=\write8
+\fullHsize=\dimen44
+\fullVsize=\dimen45
+\lblHsize=\dimen46
+\lblVsize=\dimen47
+\lblVoffset=\dimen48
+\lblHoffset=\dimen49
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSmemo.tex
+Memo Format.
+\memoindent=\dimen50
+\firstheadoffset=\dimen51
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSconts.tex
+Table of Contents.
+\TOCout=\write9
+\TOCmargin=\skip29
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSsymb.tex
+Extended math/physics symbols,
+\vbigd@men=\dimen52
+)
+> Trying to read in TXSsite.tex...
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSsite.tex
+Site dependent info.... Generic version.)
+TeXsis version 2.18 (21 April 2001) loaded.
+) (index.tex - indexing macros
+\beginhelp=\toks16
+\indexout=\write10
+) (robustin.tex
+\scfam=\fam9
+ 8pt,) (grafinp3.tex (psfig2.tex
+\@unused=\write11
+
+psfig/tex 1.8
+\fboxrule=\dimen53
+\fboxsep=\dimen54
+\ps@tempdima=\dimen55
+\ps@tempboxa=\box21
+\ps@stream=\read3
+\p@intvaluex=\dimen56
+\p@intvaluey=\dimen57
+)
+\captionsize=\dimen58
+) (RMT5_recovery.aux) ("C:\Program Files\MiKTeX 2.9\tex\generic\epsf\epsf.tex"
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read4
+\epsfframemargin=\dimen59
+\epsfframethickness=\dimen60
+\epsfrsize=\dimen61
+\epsftmp=\dimen62
+\epsftsize=\dimen63
+\epsfxsize=\dimen64
+\epsfysize=\dimen65
+\pspoints=\dimen66
+) (txssectsblack2.tex Section and Chapter divisions.
+\chapternum=\count53
+\sectionnum=\count54
+\subsectionnum=\count55
+\subsubsectionnum=\count56
+\sectionskip=\skip30
+\subsectionskip=\skip31
+\sectionminspace=\dimen67
+)
+\authorindexout=\write12
+\openout12 = `authblk.idx'.
+
+\matlabindexout=\write13
+\openout13 = `matlblk.idx'.
+
+ (blacktit3.tex [1]
+[2]) [3] (copywrit8.tex) [4]
+ Contents
+(RMT5_recovery.toc [-5]) [-6] [-7]
+ Acknowledgments
+\openout9 = `RMT5_recovery.toc'.
+
+(blackack_2.tex
+> UNDEFINED TAG townsend ON PAGE viii.
+) [-8] [-9]
+ Preface to the fourth edition
+(blackin_2.tex
+\openout10 = `RMT5_recovery.idx'.
+
+ [-10]
+> UNDEFINED TAG functional ON PAGE xi.
+[-11]
+> UNDEFINED TAG optaxrecur ON PAGE xii.
+> UNDEFINED TAG mechanics_matching ON PAGE xii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+\tok ->{\fam \bffam \tenbf @mechanics_
+                                      matching@}
+l.136  \use{mechanics_matching}
+                               
+? s
+OK, entering \scrollmode...
+! Extra }, or forgotten $.
+\tok ->{\fam \bffam \tenbf @mechanics_matching@}
+                                                
+l.136  \use{mechanics_matching}
+                               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+> UNDEFINED TAG stackel ON PAGE xii.
+> UNDEFINED TAG optaxrecur ON PAGE xii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.147 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (534.42122pt too wide) in paragraph at lines 129--147
+\tenrm on re-cur-sive for-mu-la-tions of op-ti-mal tax-a-tion prob-lems and cha
+p-ter \tenbf @mechanics$[]\teni atching\tenrm @\teni aboutthestructureunderlyin
+gmodelswith\tenrm \\teni matchingfunctions[]thatmapunemploymentandvacanciesinto
+job \tensy ^^@
+
+\hbox(7.51782+1.94444)x345.7008, glue set - 1.0
+.\tenrm o
+.\tenrm n
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm r
+.\tenrm e
+.etc.
+
+
+Overfull \hbox (1054.66574pt too wide) in paragraph at lines 129--147
+\teni findingandjob \tensy ^^@ \teni fillingprobabilities:Chapter[]hasbeenexten
+sivelyrevisedandsimplifiedinwaysthatcloselylinkitsformulationofStackelbergplans
+tooneinournewchapter[]:Thenewchaptersandrevisionscovertopicsthatwidenanddeepent
+hemessagethatrecursivemethodsarepervasiveandpowerful:$ 
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\teni f
+.\kern1.0764
+.\teni i
+.\teni n
+.\teni d
+.etc.
+
+> UNDEFINED TAG optaxrecur ON PAGE xii.
+> UNDEFINED TAG mechanics_matching ON PAGE xii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+\tok ->{\fam \bffam \tenbf @mechanics_
+                                      matching@}
+l.157 Chapter \use{mechanics_matching}
+                                       studies the mechanics of
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\tok ->{\fam \bffam \tenbf @mechanics_matching@}
+                                                
+l.157 Chapter \use{mechanics_matching}
+                                       studies the mechanics of
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   ^
+\Footnote ...efactor \the \spacefactor }\/\fi ${}^
+                                                  {\scriptstyle \smash {#1}}...
+l.165 ...bserved during business cycles.\NFootnote
+                                                  {A puzzle is always relati...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (1307.83902pt too wide) in paragraph at lines 157--187
+[][]\tenbf Chapter @mechanics$[]\teni atching\tenrm @\teni studiesthemechanicso
+fmatchingmodelsandshedslightonthembyexploringtwosubstantiveissues; the\tenrm `\
+teni Shimerpuzzle[]andtheroleofheterogeneity:The\tenrm \\teni Shimerpuzzle[]ist
+hefindingthatcommoncalibrationsofthestandardmatchingmodeldonotgeneratefluctuati
+onsinunemploymentratesnearlyaslargeasthoseobservedduringbusinesscycles:$$[]$
+
+\hbox(7.51782+1.94444)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\special{src:157blackin_2.tex}
+.\tenbf C
+.\tenbf h
+.\tenbf a
+.etc.
+
+[-12] [-13] [-14] [-15]
+> UNDEFINED TAG incomplete ON PAGE xvi.
+> UNDEFINED TAG socialinsurance ON PAGE xvi.
+[-16] [-17] [-18]
+Underfull \vbox (badness 3078) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 3.13649
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.46524
+..\special<-63>{src:440blackin_2.tex}
+..\tenbf t
+..\tenbf h
+..\tenbf e
+..\glue 3.83331 plus 1.91666 minus 1.27777
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.35095
+..\tenbf C
+..\tenbf h
+..\tenbf a
+..\tenbf p
+..\discretionary
+...\tenbf -
+..etc.
+.etc.
+
+ [-19]
+[-20]
+> UNDEFINED TAG incomplete ON PAGE xxi.
+> UNDEFINED TAG incomplete ON PAGE xxi.
+> UNDEFINED TAG socialinsurance ON PAGE xxi.
+> UNDEFINED TAG stackel ON PAGE xxi.
+> UNDEFINED TAG optaxrecur ON PAGE xxi.
+> UNDEFINED TAG socialinsurance ON PAGE xxi.
+> UNDEFINED TAG incomplete ON PAGE xxi.
+> UNDEFINED TAG socialinsurance ON PAGE xxi.
+> UNDEFINED TAG socialinsurance ON PAGE xxi.
+> UNDEFINED TAG socialinsurance2 ON PAGE xxi.
+> UNDEFINED TAG uninsur1 ON PAGE xxi.
+[-21]
+> UNDEFINED TAG credible ON PAGE xxii.
+> UNDEFINED TAG chang ON PAGE xxii.
+> UNDEFINED TAG fiscalmonetary ON PAGE xxii.
+> UNDEFINED TAG wldtrade ON PAGE xxii.
+> UNDEFINED TAG socialinsurance ON PAGE xxii.
+> UNDEFINED TAG fiscalmonetary ON PAGE xxii.
+> UNDEFINED TAG townsend ON PAGE xxii.
+> UNDEFINED TAG incomplete ON PAGE xxii.
+
+Underfull \vbox (badness 1590) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 2.5182
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+..\hbox(0.0+0.0)x20.0
+..\special{src:542blackin_2.tex}
+..\tenbf T
+..\tenbf h
+..\tenbf e
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.93034
+..\tenbf d
+..\tenbf e
+..\discretionary
+...\tenbf -
+..\tenbf s
+..\tenbf c
+..etc.
+.etc.
+
+ [-22]
+> UNDEFINED TAG search2 ON PAGE xxiii.
+> UNDEFINED TAG mechanics_matching ON PAGE xxiii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+\tok ->{\fam \bffam \tenbf @mechanics_
+                                      matching@}
+l.594 ... taxes.  Chapter \use{mechanics_matching}
+                                                   investigates
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\tok ->{\fam \bffam \tenbf @mechanics_matching@}
+                                                
+l.594 ... taxes.  Chapter \use{mechanics_matching}
+                                                   investigates
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+> UNDEFINED TAG macrolaborII ON PAGE xxiii.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.598 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (775.52797pt too wide) in paragraph at lines 589--598
+\tenbf lay-off taxes. Chap-ter @mechanics$[]\teni atching\tenrm @\teni investig
+atessomefundamentalforcescommontoavarietyofotherwisequitedisparatematchingmodel
+s:Chapter[]comparesforcesinanemploymentlotteriesmodelwiththoseoperatinginatime 
+\tensy ^^@
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\tenbf l
+.\tenbf a
+.\kern-0.31944
+.\discretionary replacing 2
+..\tenbf y
+..\tenbf -
+.\tenbf y
+.etc.
+
+[-23]
+> UNDEFINED TAG incomplete ON PAGE xxiv.
+> UNDEFINED TAG socialinsurance ON PAGE xxiv.
+> UNDEFINED TAG credible ON PAGE xxiv.
+> UNDEFINED TAG chang ON PAGE xxiv.
+> UNDEFINED TAG wldtrade ON PAGE xxiv.
+> UNDEFINED TAG fiscalmonetary ON PAGE xxiv.
+> UNDEFINED TAG townsend ON PAGE xxiv.
+> UNDEFINED TAG search2 ON PAGE xxiv.
+> UNDEFINED TAG macrolaborII ON PAGE xxiv.
+> UNDEFINED TAG stackel ON PAGE xxiv.
+> UNDEFINED TAG wldtrade ON PAGE xxiv.
+
+Overfull \hbox (25.54042pt too wide) in paragraph at lines 641--647
+[][][]\tenbf A self-contained course about re-cur-sive con-tracts: chap-ters @s
+tackel@--
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\special{src:641blackin_2.tex}
+.\hbox(6.44444+0.0)x0.0, glue set - 14.69437fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+..\tenbf 5
+..\tenbf .
+..\kern 5.74997
+.\tenbf A
+.\glue 3.83331 plus 1.91473 minus 1.27904
+.etc.
+
+> UNDEFINED TAG fiscalmonetary ON PAGE xxiv.
+> UNDEFINED TAG townsend ON PAGE xxiv.
+> UNDEFINED TAG socialinsurance ON PAGE xxiv.
+> UNDEFINED TAG socialinsurance2 ON PAGE xxiv.
+> UNDEFINED TAG uninsur1 ON PAGE xxiv.
+[-24]
+> UNDEFINED TAG incomplete ON PAGE xxv.
+> UNDEFINED TAG socialinsurance ON PAGE xxv.
+> UNDEFINED TAG search2 ON PAGE xxv.
+> UNDEFINED TAG uninsur1 ON PAGE xxv.
+> UNDEFINED TAG search2 ON PAGE xxv.
+> UNDEFINED TAG search2 ON PAGE xxv.
+> UNDEFINED TAG incomplete ON PAGE xxv.
+> UNDEFINED TAG uninsur1 ON PAGE xxv.
+[-25]
+Overfull \hbox (37.0095pt too wide) in paragraph at lines 706--718
+\tenbf can be down-loaded from $\teni <$\tenbf www.tomsargent.com/source[]code/
+mitbook.zip$\teni >$\tenbf .
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\tenbf c
+.\tenbf a
+.\tenbf n
+.\glue 3.83331 plus 1.91666 minus 1.27777
+.\tenbf b
+.etc.
+
+[-26]
+Underfull \vbox (badness 2744) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 3.01839
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.40427
+..\tenbf v
+..\kern-0.31944
+..\tenbf e
+..\tenbf c
+..\discretionary
+...\tenbf -
+..etc.
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.2854
+..\tenbf a
+..\tenbf n
+..\tenbf d
+..\glue 3.83331 plus 1.91666 minus 1.27777
+..\tenbf n
+..etc.
+.\glue(\baselineskip) 5.11111
+.etc.
+
+ [-27])
+[-28] [-29]
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[1] [2] (black0.tex
+\openout2 = `RMT5_recovery.aux'.
+
+
+1. Overview
+1.1.  Warning
+1.2.  A common ancestor
+[3]
+1.3.  The savings problem
+1.3.1. Linear quadratic permanent income theory
+[4]
+> UNDEFINED TAG incomplete ON PAGE 5.
+[5]
+1.3.2. Precautionary saving
+> UNDEFINED TAG socialinsurance ON PAGE 6.
+
+Underfull \vbox (badness 2096) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 2.75978
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x345.7008, glue set 0.19621
+..\tenbf a
+..\tenbf p
+..\discretionary
+...\tenbf -
+..\tenbf p
+..\tenbf l
+..etc.
+.\glue(\baselineskip) 4.55556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.2422
+..\tenbf e
+..\tenbf q
+..\tenbf u
+..\tenbf i
+..\discretionary replacing 2
+...\tenbf v
+...\tenbf -
+..etc.
+.\penalty 10000
+.etc.
+
+ [6]
+1.3.3. Complete markets, insurance, and the distribution of wealth
+[7] [8]
+1.3.4. Bewley models
+[9]
+> UNDEFINED TAG incomplete ON PAGE 10.
+Figure 1.3.1. {chap0pic1}
+(Bewley_chap1.eps
+)
+\openout5 = `RMT5_recovery.fgl'.
+
+[10] [11]
+1.3.5. History dependence in standard consumption models
+> UNDEFINED TAG stackel ON PAGE 12.
+> UNDEFINED TAG wldtrade ON PAGE 12.
+[12]
+1.3.6. Growth theory
+[13]
+1.3.7. Limiting results from dynamic optimal taxation
+[14]
+1.3.8. Asset pricing
+[15]
+1.3.9. Multiple assets
+[16]
+Underfull \vbox (badness 7558) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 4.22948
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.86108)x345.7008, glue set 0.14235
+..\special<-63>{src:566black0.tex}
+..\tenbf T
+..\tenbf h
+..\tenbf e
+..\glue 3.83331 plus 1.91666 minus 1.27777
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 4.19447
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.54623
+..\tenbf f
+..\tenbf a
+..\tenbf c
+..\tenbf t
+..\tenbf o
+..etc.
+.etc.
+
+ [17]
+> UNDEFINED TAG socialinsurance2 ON PAGE 18.
+[18]
+1.4.  Recursive methods
+
+Overfull \hbox (24.7667pt too wide) in paragraph at lines 667--677
+[][]\tenbf The no-tion that un-der-lies dy-namic pro-gram-ming is a finite-dime
+nsional
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\special{src:667black0.tex}
+.\tenbf T
+.\tenbf h
+.\tenbf e
+.etc.
+
+[19] [20]
+1.4.1. Dynamic programming and the Lucas Critique
+
+Underfull \vbox (badness 1931) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 2.68506
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 69.75462fil
+...\subsecfont 1
+...\subsecfont .
+...\subsecfont 4
+...\subsecfont .
+...\subsecfont 1
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{1.4.1.}Dynamic programming and the Lucas Critique.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [21]
+[22]
+1.4.2. Dynamic programming challenged
+1.4.3. Imperialistic response of dynamic programming
+
+Underfull \vbox (badness 1755) has occurred while \output is active
+\vbox(505.0364+2.5)x345.7008, glue set 2.60155
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 134.93295fil
+...\subsecfont 1
+...\subsecfont .
+...\subsecfont 4
+...\subsecfont .
+...\subsecfont 2
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{1.4.2.}Dynamic programming challenged.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [23]
+[24]
+> UNDEFINED TAG stackel ON PAGE 25.
+> UNDEFINED TAG stackel ON PAGE 25.
+[25]
+1.4.4. History dependence and ``dynamic programming squared''
+> UNDEFINED TAG credible ON PAGE 26.
+[26] [27]
+1.4.5. Dynamic principal-agent problems
+[28]
+> UNDEFINED TAG socialinsurance ON PAGE 29.
+> UNDEFINED TAG socialinsurance2 ON PAGE 29.
+[29]
+> UNDEFINED TAG socialinsurance ON PAGE 30.
+[30]
+1.4.6. More applications
+) [31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[33] [34] (black1_2017.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen68
+) (psfig.tex)
+2. Time Series
+2.1.  Two workhorses
+2.2.  Markov chains
+[35] [36]
+2.2.1. Stationary distributions
+[37]
+2.2.2. Asymptotic stationarity
+[38] [39]
+2.2.3. Forecasting the state
+> UNDEFINED TAG sec:HMM ON PAGE 40.
+> UNDEFINED TAG lincontrol ON PAGE 40.
+> UNDEFINED TAG sec:HMM ON PAGE 40.
+> UNDEFINED TAG lincontrol ON PAGE 40.
+[40]
+2.2.4. Forecasting functions of the state
+
+Overfull \hbox (16.73363pt too wide) in paragraph at lines 295--304
+[]\tenbf Equating the first and last terms yields $\teni E\tenrm [\teni E\tenrm
+ (\teni y[]\tensy j\teni x[]\tenrm )\tensy j\teni x[] \tenrm = \teni e[]\tenrm 
+] = \teni E\tenrm [\teni y[]\tensy j\teni x[] \tenrm =
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\special<-63>{src:296black1_2017.tex}
+.\tenbf E
+.\tenbf q
+.\tenbf u
+.\tenbf a
+.etc.
+
+2.2.5. Laws of large numbers
+[41]
+2.2.6. Right eigenvectors
+[42] [43]
+> UNDEFINED TAG incomplete ON PAGE 44.
+[44] [45] [46]
+2.2.7. Forecasting functions
+2.2.8. Enough one-step-ahead forecasts determine $P$
+[47]
+2.2.9. Simulating a Markov chain
+2.2.10. The likelihood function
+[48]
+2.3.  Continuous-state Markov chain
+[49]
+2.4.  Linear state space model
+[50] [51] [52]
+2.4.1. First and second unconditional moments
+[53]
+2.4.2. Covariance stationarity
+[54] [55]
+2.4.3. Summary of moment formulas
+[Nrows=8, Ncols=2]
+2.4.4. Impulse response function
+[56]
+2.4.5. Prediction and discounting
+[57]
+2.4.6. Geometric sums of quadratic forms
+2.4.6.1.  Asset pricing
+[58]
+2.4.6.2.  Evaluation of dynamic criterion
+[59] [60] [61]
+2.5.  Multivariate normal distributions and regressions
+[62] [63]
+2.5.1. Bayesian interpretation of conditional probability
+[64]
+2.5.2. Non normal distributions
+[65]
+2.6.  Estimation of model parameters
+[66]
+2.7.  The Kalman filter
+[67]
+Overfull \hbox (33.7116pt too wide) in paragraph at lines 1544--1548
+[]\tenbf The ob-jects $[]\teni ; \tenrm ^^F[]$ \tenbf char-ac-ter-ize the pop-u
+-la-tion re-gres-sion $[] \tenrm = \teni E\tenrm [\teni x[]\tensy j\teni y[]; [
+] ; y[]\tenrm ]$
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\special<-63>{src:1545black1_2017.tex}
+.\tenbf T
+.\tenbf h
+.\tenbf e
+.\glue 3.83331 plus 1.91666 minus 1.27777
+.etc.
+
+[68] [69]
+2.7.0.1.  Gram-Schmidt process
+[70]
+Overfull \hbox (45.38751pt too wide) in paragraph at lines 1652--1658
+\tenbf re-gres-sions on suc-ces-sive com-po-nents $\teni a[]$ \tenbf of an or-t
+hog-o-nal ba-sis $\tenrm [\teni a[]; a[]; [] ; a[]\tenrm ]$
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\tenbf r
+.\tenbf e
+.\discretionary
+..\tenbf -
+.\tenbf g
+.\tenbf r
+.etc.
+
+2.7.0.2.  Hidden Markov model
+[71]
+2.8.  Estimation again
+[72]
+2.9.  Vector autoregressions and the Kalman filter
+2.9.1. Conditioning on the semi-infinite past of $y$
+[73]
+2.9.2. A time-invariant VAR
+[74]
+2.9.3. Interpreting VARs
+2.10.  Applications of the Kalman filter
+[75]
+2.10.1. Muth's reverse engineering exercise
+> UNDEFINED TAG lincontrol ON PAGE 76.
+Figure 2.10.1. {muth1f}
+[76]
+(muth1crop.eps
+)
+[77] [78]
+2.10.2. Jovanovic's application
+[79] [80]
+2.11.  The spectrum
+[81]
+Figure 2.11.1. {r2red1d}
+(r2red1d_gray.eps
+)
+[82]
+Figure 2.11.2. {r2red1a}
+(r2red1a_gray.eps
+)
+Figure 2.11.3. {r2red1b}
+(r2red1b_gray.eps
+)
+Figure 2.11.4. {r2red1c}
+(r2red1c_gray.eps
+)
+2.11.1. Examples
+[83] [84]
+2.12.  Example: the LQ permanent income model
+[85]
+> UNDEFINED TAG incomplete ON PAGE 86.
+[86] [87]
+2.12.1. Another representation
+[88] [89] [90]
+2.12.2. Debt dynamics
+2.12.3. Two classic examples
+[91] [92] [93]
+2.12.4. Spreading consumption cross section
+2.12.5. Invariant subspace approach
+[94]
+2.13.  Concluding remarks
+[95]
+appendix A.  Linear difference equations
+2.A.1. A first-order difference equation
+[96]
+2.A.2. A second-order difference equation
+[97]
+appendix B.  Constant in the state
+[98]
+Exercises
+[99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
+[112] [113]
+Overfull \hbox (10.09291pt too wide) in paragraph at lines 3486--3488
+[]\tenbf a. Please use for-mu-las ($\tenrm 2\teni :\tenrm 12\teni :\tenrm 18$\t
+enbf ) to ver-ify for-mu-las ($\tenrm 2\teni :\tenrm 12\teni :\tenrm 21$\tenbf 
+) and ($\tenrm 2\teni :\tenrm 12\teni :\tenrm 23$\tenbf )-
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\special<-63>{src:3486black1_2017.tex}
+.\tenbf a
+.\tenbf .
+.\glue 5.11108 plus 5.74997 minus 0.42592
+.\tenbf P
+.etc.
+
+[114] [115] [116] [117] [118] [119] [120] [121] [122] [123]) (black2.tex
+(grafinp3.tex (psfig2.tex)
+\captionsize=\dimen69
+) (psfig.tex)
+3. Dynamic Programming
+3.1.  Sequential problems
+> UNDEFINED TAG functional ON PAGE 124.
+3.1.1. Three computational methods
+> UNDEFINED TAG functional ON PAGE 124.
+> UNDEFINED TAG functional ON PAGE 124.
+> UNDEFINED TAG functional ON PAGE 124.
+> UNDEFINED TAG credible ON PAGE 124.
+3.1.2. Cobb-Douglas transition, logarithmic preferences
+3.1.3. Euler equations
+3.1.4. A sample Euler equation
+3.2.  Stochastic control problems
+> UNDEFINED TAG functional ON PAGE 124.
+3.3.  Concluding remarks
+Exercise
+) (black3.tex
+4. Practical Dynamic Programming 
+4.1.  The curse of dimensionality
+4.2.  Discrete-state dynamic programming
+> UNDEFINED TAG incomplete ON PAGE 124.
+4.3.  Bookkeeping
+4.4.  Application of Howard improvement algorithm
+4.5.  Numerical implementation
+4.5.1. Modified policy iteration
+4.6.  Sample Bellman equations
+4.6.1. Example 1: calculating expected utility
+4.6.2. Example 2: risk-sensitive preferences
+4.6.3. Example 3: costs of business cycles
+4.7.  Polynomial approximations
+> UNDEFINED TAG socialinsurance ON PAGE 124.
+4.7.1. Recommended computational strategy
+4.7.2. Chebyshev polynomials
+4.7.3. Algorithm: summary
+> UNDEFINED TAG socialinsurance ON PAGE 124.
+
+Overfull \hbox (20.84558pt too wide) in paragraph at lines 674--677
+[][][]\eightrm For each point $\eighti V[]$\eightrm , use a nu-mer-i-cal min-i-
+miza-tion pro-gram to find $\eighti C[]\eightrm (\eighti V[]\eightrm ) = [][] [
+](\eighti V[]\eightrm )$. 
+
+\hbox(7.3873+3.63768)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\special{src:674black3.tex}
+.\hbox(5.15556+0.0)x0.0, glue set - 10.86127fil
+..\glue 0.0 plus 1.0fil minus 1.0fil
+..\eightrm 7
+..\eightrm .
+..\kern 4.25006
+.\eightrm F
+.\kern-0.70834
+.etc.
+
+4.7.4. Shape-preserving splines
+4.8.  Concluding remarks
+) (black4.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen70
+) (psfig.tex)
+5. Linear Quadratic Dynamic Programming
+5.1.  Introduction
+> UNDEFINED TAG stackel ON PAGE 124.
+5.2.  The optimal linear regulator problem
+5.2.1. Value function iteration
+5.2.2. Discounted linear regulator problem
+5.2.3. Policy improvement algorithm
+5.3.  The stochastic optimal linear regulator problem
+5.3.1. Discussion of certainty equivalence
+> UNDEFINED TAG incomplete ON PAGE 124.
+5.4.  Shadow prices in the linear regulator
+5.4.1. Stability
+5.5.  A Lagrangian formulation
+> UNDEFINED TAG Eq.c ON PAGE 124.
+> UNDEFINED TAG Eq.c ON PAGE 124.
+5.6.  The Kalman filter again
+5.7.  Concluding remarks
+appendix A.  Matrix formulas
+Exercises
+) (black5_2010.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen71
+) (psfig.tex)
+6. Search and Unemployment
+6.1.  Introduction
+6.2.  Preliminaries
+6.2.1. Nonnegative random variables
+6.2.2. Mean-preserving spreads
+Figure 6.2.1. {powdmt3f}
+(powdmt3new.eps
+)
+6.3.  McCall's model of intertemporal job search
+Figure 6.3.1. {powdmt4f}
+(powdmt4new.eps
+)
+
+Overfull \hbox (12.82799pt too wide) in paragraph at lines 243--243
+ []\eightbf Figure 6.3.1: \eightrm The func-tion $\eighti v\eightrm (\eighti w\
+eightrm ) = []\eightsy f\eighti w=\eightrm (1 \eightsy ^^@ \eighti ^^L\eightrm 
+)\eighti ; c \eightrm + \eighti ^^L [][] v\eightrm (\eighti w[]\eightrm )\eight
+i dF\eightrm (\eighti w[]\eightrm )\eightsy g$\eightrm . 
+
+\hbox(9.86674+4.0556)x345.7008, glue set - 1.0
+.\glue(\leftskip) 40.0
+.\special<-63>{src:243black5_2010.tex}
+.\eightbf F
+.\eightbf i
+.\eightbf g
+.etc.
+
+6.3.1. Characterizing reservation wage
+Figure 6.3.2. {powdmt5f}
+(powdmt5.eps
+)
+Figure 6.3.3. {powdmt6f}
+(powdmt6.eps
+)
+6.3.2. Effects of mean-preserving spreads
+6.3.3. Allowing quits
+6.3.4. Waiting times
+6.3.5. Firing
+6.4.  A lake model
+> UNDEFINED TAG incomplete ON PAGE 124.
+Figure 6.4.1. {lake1f}
+(lake1.eps
+)
+6.5.  A model of career choice
+Figure 6.5.1. {neal1newaf}
+(neal1newa_gray.eps
+)
+Figure 6.5.2. {neal2newaf}
+(neal2newa.eps
+)
+6.6.  Offer distribution unknown
+Figure 6.6.1. {two_densities}
+(two_densities_gray.eps
+)
+Figure 6.6.2. {reservation_wage_pi}
+(reservation_wage_pi_gray.eps
+)
+Figure 6.6.3. {cdf_graph_search}
+(Fig663_2.eps
+)
+6.7.  An equilibrium price distribution
+6.7.1. A Burdett-Judd setup
+6.7.2. Consumer problem with noisy search
+6.7.3. Firms
+6.7.4. Equilibrium
+6.7.5. Special cases
+6.8.  Jovanovic's matching model
+6.8.1. Recursive formulation and solution
+Figure 6.8.1. {powdmt7f}
+(powdmt7new.eps
+)
+> UNDEFINED TAG functional ON PAGE 124.
+6.8.2. Endogenous statistics
+6.9.  A longer horizon version of Jovanovic's model
+
+Overfull \hbox (21.50934pt too wide) in paragraph at lines 1706--1712
+[][]\eightrm Using the for-mu-las from chap-ter 2, we have that con-di-tional o
+n $\eighti y[]$\eightrm , $\eighti m[] \eightsy ^^X N\eightrm (\eighti m[]; K[]
+\eightrm ^^F[])$
+
+\hbox(7.12889+2.5889)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\special{src:1706black5_2010.tex}
+.\eightrm U
+.\eightrm s
+.\eightrm i
+.etc.
+
+6.9.1. The Bellman equations
+6.10.  Concluding remarks
+> UNDEFINED TAG uninsur1 ON PAGE 124.
+> UNDEFINED TAG uninsur1 ON PAGE 124.
+> UNDEFINED TAG search2 ON PAGE 124.
+appendix A.  More numerical dynamic programming
+6.A.1. Example 4: search
+6.A.2. Example 5: a Jovanovic model
+Figure 6.A.1. {jov1newf}
+(jov1new.ps
+)
+Figure 6.A.2. {jov2newf}
+(jov2new.ps
+)
+Figure 6.A.3. {jov3newf}
+(jov3new.ps
+)
+Exercises
+)
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+(black6.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen72
+) (psfig.tex)
+7. Recursive Competitive Equilibrium: I 
+7.1.  An equilibrium concept
+7.2.  Example: adjustment costs
+> UNDEFINED TAG incomplete ON PAGE 125.
+7.2.1. A planning problem
+7.3.  Recursive competitive equilibrium
+7.4.  Equilibrium human capital accumulation
+7.4.1. Planning problem
+7.4.2. Decentralization
+7.5.  Equilibrium occupational choice
+7.5.1. A planning problem
+7.5.2. Decentralization
+7.6.  Markov perfect equilibrium
+7.6.1. Computation
+7.7.  Linear Markov perfect equilibria
+> UNDEFINED TAG stackel ON PAGE 125.
+7.8.  Concluding remarks
+appendix A.  A model of Judd
+Exercises
+) (black7_2016.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen73
+) (psfig.tex) (psfig.tex)
+8. Equilibrium with Complete Markets
+8.1.  Time $0$ versus sequential trading
+> UNDEFINED TAG incomplete ON PAGE 125.
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+> UNDEFINED TAG socialinsurance2 ON PAGE 125.
+8.2.  The physical setting: preferences and endowments
+8.3.  Alternative trading arrangements
+Figure 8.3.1. {tree1f}
+(tree1.eps
+)
+8.3.1. History dependence
+> UNDEFINED TAG incomplete ON PAGE 125.
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+> UNDEFINED TAG incomplete ON PAGE 125.
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+Figure 8.3.2. {tree2f}
+(tree2.eps
+)
+8.4.  Pareto problem
+8.4.1. Time invariance of Pareto weights
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+8.5.  Time $0$ trading: Arrow-Debreu securities
+8.5.1. Equilibrium pricing function
+8.5.2. Optimality of equilibrium allocation
+8.5.3. Interpretation of trading arrangement
+8.5.4. Equilibrium computation
+8.6.  Simpler computational algorithm
+8.6.1. Example 1: risk sharing
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+8.6.2. Implications for equilibrium computation
+8.6.3. Example 2: no aggregate uncertainty
+8.6.4. Example 3: periodic endowment processes
+8.6.5. Example 4
+8.7.  Primer on asset pricing
+8.7.1. Pricing redundant assets
+8.7.2. Riskless consol
+8.7.3. Riskless strips
+8.7.4. Tail assets
+8.7.5. One-period returns
+8.8.  Sequential trading
+8.8.1. Arrow securities
+8.8.2. Financial wealth as an endogenous state variable
+8.8.3. Reopening markets
+8.8.4. Debt limits
+8.8.5. Sequential trading
+8.8.6. Equivalence of allocations
+8.9.  Recursive competitive equilibrium
+8.9.1. Endowments governed by a Markov process
+8.9.2. Equilibrium outcomes inherit the Markov property
+8.9.3. Recursive formulation of optimization and equilibrium
+
+Overfull \hbox (40.14178pt too wide) in paragraph at lines 1507--1512
+[]\eightrm where it is un-der-stood that $\eighti c[] \eightrm = \eighti h[]\ei
+ghtrm (\eighti a[]; s[]\eightrm )$ and $\eighti c[] \eightrm = \eighti h[]\eigh
+trm (\eighti a[]\eightrm (\eighti s[]\eightrm )\eighti ; s[]\eightrm ) = \eight
+i h[]\eightrm (\eighti g[]\eightrm (\eighti a[]; s[]; s[]\eightrm )\eighti ; s[
+]\eightrm )$. 
+
+\hbox(7.45526+4.12103)x345.7008, glue set - 1.0
+.\special<-63>{src:1508black7_2016.tex}
+.\eightrm w
+.\eightrm h
+.\eightrm e
+.\eightrm r
+.etc.
+
+8.9.4. Computing an equilibrium with sequential trading of Arrow-securities
+8.10.  $j$-step pricing kernel
+8.10.1. Arbitrage-free pricing
+8.11.  Term structure of yields on risk-free claims
+8.11.1. Constructing yields
+8.12.  Recursive version of Pareto problem
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+> UNDEFINED TAG credible ON PAGE 125.
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+8.13.  Concluding remarks
+> UNDEFINED TAG incomplete ON PAGE 125.
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+> UNDEFINED TAG socialinsurance2 ON PAGE 125.
+> UNDEFINED TAG fiscalmonetary ON PAGE 125.
+> UNDEFINED TAG townsend ON PAGE 125.
+> UNDEFINED TAG fiscalmonetary ON PAGE 125.
+> UNDEFINED TAG townsend ON PAGE 125.
+> UNDEFINED TAG search2 ON PAGE 125.
+appendix Appendices: Departures from key assumptions
+appendix A.  Heterogenous discounting
+appendix B.  Heterogenous beliefs 
+8.B.1. Example: one type's beliefs are closer to the truth
+8.B.2. Equilibrium prices reflect beliefs
+8.B.3. Mispricing?
+8.B.4. Learning
+8.B.5. Role of complete markets
+> UNDEFINED TAG incomplete ON PAGE 125.
+appendix C.  Incomplete markets
+> UNDEFINED TAG incomplete ON PAGE 125.
+> UNDEFINED TAG incomplete ON PAGE 125.
+8.C.1. An example economy
+8.C.2. Asset payoff correlated with i.i.d. aggregate endowment
+8.C.3. Beneficial market incompleteness
+Exercises
+) (black8.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen74
+) (psfig.tex) (psfig.tex)
+9. Overlapping Generations
+9.1.  Endowments and preferences
+9.2.  Time $0$ trading
+9.2.1. Example equilibria
+9.2.2. Relation to welfare theorems
+9.2.3. Nonstationary equilibria
+Figure 9.2.1. {graph12f}
+(graph12.eps
+)
+9.2.4. Computing equilibria
+Figure 9.2.2. {graph22f}
+(graph22.eps
+)
+Figure 9.2.3. {graph32f}
+(graph32.eps
+)
+Figure 9.2.4. {graph42f}
+(graph42.eps
+)
+9.3.  Sequential trading
+9.4.  Money
+9.4.1. Computing more equilibria with valued fiat currency
+9.4.2. Equivalence of equilibria
+9.5.  Deficit finance
+9.5.1. Steady states and the Laffer curve
+Figure 9.5.1. {graph52f}
+(graph52new.eps
+)
+9.6.  Equivalent setups
+9.6.1. The economy
+
+Overfull \hbox (20.9561pt too wide) in paragraph at lines 897--900
+[]\tensc Definition: \eightrm An equi-lib-rium with bond-financed gov-ern-ment 
+deficits is a se-quence $\eightsy f\eighti B[]; R[]\eightsy g[]$
+
+\hbox(6.83331+3.28769)x345.7008, glue set - 1.0
+.\special<-63>{src:897black8.tex}
+.\tensc D
+.\tensc e
+.\tensc f
+.\tensc i
+.etc.
+
+9.6.2. Growth
+9.7.  Optimality and the existence of monetary equilibria
+Figure 9.7.1. {graph16f}
+(graph16.eps
+)
+9.7.1. Balasko-Shell criterion for optimality
+9.8.  Within-generation heterogeneity
+9.8.1. Nonmonetary equilibrium
+9.8.2. Monetary equilibrium
+Figure 9.8.1. {savings1f}
+(savings1.eps
+)
+9.8.3. Nonstationary equilibria
+9.8.4. The real bills doctrine
+9.9.  Gift-giving equilibrium
+> UNDEFINED TAG credible ON PAGE 125.
+> UNDEFINED TAG credible ON PAGE 125.
+9.10.  Concluding remarks
+Exercises
+) (black9.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen75
+) (psfig.tex)
+10. Ricardian Equivalence
+10.1.  Borrowing limits and Ricardian equivalence
+10.2.  Infinitely lived agent economy
+10.2.1. Optimal consumption/savings decision when $b_{t+1} \geq 0$
+10.2.2. Optimal consumption/savings decision when $b_{t+1} \geq \mathaccent "70
+7E b_{t+1}$
+10.3.  Government finance
+10.3.1. Effect on household
+
+Overfull \hbox (12.44632pt too wide) in paragraph at lines 244--250
+[]\tensc Definition: \eightrm Given ini-tial con-di-tions $(\eighti b[]; B[]\ei
+ghtrm )$, an \eightit equi-lib-rium \eightrm is a house-hold plan $\eightsy f\e
+ighti c[]; b[]\eightsy g[]$
+
+\hbox(6.83331+3.28769)x345.7008, glue set - 1.0
+.\special<-63>{src:244black9.tex}
+.\tensc D
+.\tensc e
+.\tensc f
+.\tensc i
+.etc.
+
+10.4.  Linked generations interpretation
+10.5.  Concluding remarks
+> UNDEFINED TAG incomplete ON PAGE 125.
+) (blackpro_5_2012.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen76
+) (psfig.tex)
+11. Fiscal Policies in a Growth Model
+[125]
+11.1.  Introduction
+11.2.  Economy
+11.2.1. Preferences, technology, information
+11.2.2. Components of a competitive equilibrium
+11.3.  The term structure of interest rates
+11.4.  Digression: sequential version of government budget constraint
+
+Overfull \hbox (18.22078pt too wide) in paragraph at lines 293--298
+\eightrm con-di-tion on the path of gov-ern-ment debt $\eightsy f\eighti B[]\ei
+ghtsy g$\eightrm . To see this, first re-call that $[] = \eighti R[] [] R[]$
+
+\hbox(8.1+4.71657)x345.7008, glue set - 1.0
+.\eightrm c
+.\eightrm o
+.\eightrm n
+.\discretionary
+..\eightrm -
+.\eightrm d
+.etc.
+
+11.4.1. Irrelevance of maturity structure of government debt
+11.5.  Competitive equilibria with distorting taxes
+11.5.1. The household: no-arbitrage and asset-pricing formulas
+11.5.2. User cost of capital formula
+11.5.3. Household first-order conditions
+11.5.4. A theory of the term structure of interest rates
+11.5.5. Firm
+11.6.  Computing equilibria
+11.6.1. Inelastic labor supply
+11.6.2. The equilibrium steady state
+11.6.3. Computing the equilibrium path with the shooting algorithm
+11.6.4. Other equilibrium quantities
+11.6.5. Steady-state $\mathaccent "7016 R$
+11.6.6. Lump-sum taxes available
+11.6.7. No lump-sum taxes available
+11.7.  A digression on back-solving
+11.8.  Effects of taxes on equilibrium allocations and prices
+11.9.  Transition experiments with inelastic labor supply
+Figure 11.9.1. {fig_g}
+(fig_g.eps
+)
+Figure 11.9.2. {fig_g_gamma}
+(fig_g_gamma.eps
+)
+Figure 11.9.3. {fig_term}
+(fig_term.eps
+)
+Figure 11.9.4. {fig_tc}
+(fig_tc.eps
+)
+Figure 11.9.5. {fig_tk}
+(fig_tauk_gamma.eps
+)
+Figure 11.9.6. {fig_g1}
+(fig_g1.eps
+)
+11.10.  Linear approximation
+11.10.1. Relationship between the $\lambda _i$'s
+11.10.2. Conditions for existence and uniqueness
+11.10.3. Once-and-for-all jumps
+11.10.4. Simplification of formulas
+11.10.5. A one-time pulse
+11.10.6. Convergence rates and anticipation rates
+Figure 11.10.1. {lambdaogamma}
+(lambdaogamma_gray.eps
+)
+11.10.7. A remark about accuracy: Euler equation errors
+11.11.  Growth
+Figure 11.11.1. {fig_pr_1}
+(fig_pr_1.eps
+)
+Figure 11.11.2. {fig_pr_2}
+(fig_pr_2.eps
+)
+11.12.  Elastic labor supply
+11.12.1. Steady-state calculations
+11.12.2. Some experiments
+Figure 11.12.1. {fig_gnu}
+(fig_gnu.eps
+)
+Figure 11.12.2. {fig_tnu}
+(fig_tnu.eps
+)
+Figure 11.12.3. {fig_tn}
+(fig_tn.eps
+)
+11.13.  A two-country model
+11.13.1. Initial conditions
+11.13.2. Equilibrium steady state values
+11.13.3. Initial equilibrium values
+11.13.4. Shooting algorithm
+Figure 11.13.1. {fig1_kinit}
+(fig1_kinit.eps
+)
+11.13.5. Transition exercises
+11.13.5.1.  Opening International Flows
+Figure 11.13.2. {fig1_g-2}
+(fig1_g.eps
+)
+11.13.5.2.  Foreseen Increase in $g$
+Figure 11.13.3. {fig1_tauk}
+(fig1_tauk.eps
+)
+11.13.5.3.  Foreseen increase in $\tau _k$
+11.14.  Concluding remarks
+appendix A.  Log linear approximations
+Exercises
+Figure 11.1. {fig_7_1}
+(fig_7_1.eps
+)
+Figure 11.2. {fig_7_2}
+(fig_7_2.eps
+)
+
+Overfull \hbox (23.49905pt too wide) in paragraph at lines 3403--3408
+[]\eightrm A rep-re-sen-ta-tive con-sumer has pref-er-ences over con-sump-tion 
+streams or-dered by $[][] \eighti ^^L[]u\eightrm (\eighti c\eightrm )\eighti ; 
+ \eightrm 0 \eighti <
+
+\hbox(7.54175+3.50005)x345.7008, glue set - 1.0
+.\special<-63>{src:3404blackpro_5_2012.tex}
+.\eightrm A
+.\glue 2.83337 plus 1.41527 minus 0.94539
+.\eightrm r
+.\eightrm e
+.etc.
+
+Figure 11.3. {FN_1}
+(FN_1_tom_2.eps
+)
+Figure 11.4. {FN_2}
+(fig_11.4.eps
+)
+Figure 11.5. {FN_3}
+(fig_11_5.eps
+)
+Figure 11.6. {FN_4}
+(figv3_116_b.eps
+)
+) (bgrowth2.tex
+12. Recursive Competitive Equilibrium: II
+12.1.  Endogenous aggregate state variable
+12.2.  The stochastic growth model
+12.3.  Lagrangian formulation of the planning problem
+12.4.  Time $0$ trading: Arrow-Debreu securities
+12.4.1. Household
+12.4.2. Firm of type I
+12.4.3. Firm of type II
+12.4.4. Equilibrium prices and quantities
+12.4.5. Implied wealth dynamics
+12.5.  Sequential trading: Arrow securities
+12.5.1. Household
+12.5.2. Firm of type I
+12.5.3. Firm of type II
+12.5.4. Equilibrium prices and quantities
+12.5.5. Financing a type II firm
+
+Underfull \hbox (badness 10000) in paragraph at lines 799--803
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+12.6.  Recursive formulation
+12.6.1. Technology is governed by a Markov process
+12.6.2. Aggregate state of the economy
+12.7.  Recursive formulation of the planning problem
+12.8.  Recursive formulation of sequential trading
+12.8.1. A ``Big $K$, little $k$'' device
+12.8.2. Price system
+12.8.3. Household problem
+12.8.4. Firm of type I
+12.8.5. Firm of type II
+12.9.  Recursive competitive equilibrium
+12.9.1. Equilibrium restrictions across decision rules
+12.9.2. Using the planning problem
+12.10.  Concluding remarks
+appendix A.  The permanent income model revisited
+12.A.1. Reinterpreting the single-agent model
+12.A.2. Decentralization and scaled prices
+12.A.2.1.  The consumer
+12.A.2.2.  The firm
+12.A.3. Matching equilibrium and planning allocations
+12.A.4. Interpretation
+) (black10_part1.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen77
+) (psfig.tex)
+13. Asset Pricing Theory
+13.1.  Introduction
+13.2.  Euler equations
+> UNDEFINED TAG incomplete ON PAGE 126.
+13.3.  Martingale theories of consumption and stock prices
+
+Overfull \hbox (17.44717pt too wide) in paragraph at lines 221--224
+[]\eightrm To ob-tain a mar-tin-gale the-ory of stock prices, it is nec-es-sary
+ to as-sume, first, that $\eighti E[]u[]\eightrm (\eighti c[]\eightrm )\eighti 
+=u[]\eightrm (\eighti c[]\eightrm )$
+
+\hbox(6.71223+2.5889)x345.7008, glue set - 1.0
+.\special<-63>{src:222black10_part1.tex}
+.\eightrm T
+.\kern-0.70834
+.\eightrm o
+.\glue 2.83337 plus 1.41669 minus 0.94446
+.etc.
+
+13.4.  Equivalent martingale measure
+13.5.  Equilibrium asset pricing
+13.6.  Stock prices without bubbles
+13.7.  Computing asset prices
+13.7.1. Example 1: logarithmic preferences
+13.7.2. Example 2: finite-state version
+13.7.3. Example 3: growth
+13.8.  Term structure of interest rates
+13.9.  State-contingent prices
+13.9.1. Insurance premium
+13.9.2. Man-made uncertainty
+13.9.3. The Modigliani-Miller theorem
+13.10.  Government debt
+13.10.1. The Ricardian proposition
+13.10.2. No Ponzi schemes
+Figure 13.10.1. {returnf}
+(return.ps
+)
+appendix A.  Harrison-Kreps (1978) heterogeneous beliefs
+13.A.1. Optimism and Pessimism
+13.A.2. Equilibrium price function
+13.A.3. Comparisons of equilibrium price functions
+13.A.4. Single belief prices
+13.A.5. Pricing under heterogeneous beliefs
+Table 13.A.1. {HKtab}
+13.A.6. Insufficient funds
+appendix B.  Gaussian asset-pricing model
+Exercises
+) (black10_part2_new_ver3.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen78
+) (psfig.tex)
+14. Asset Pricing Empirics
+14.1.  Introduction
+14.2.  Interpretation of risk-aversion parameter
+Table 14.2.1. {old101}
+14.3.  The equity premium puzzle
+Table 14.3.1. {old102}
+14.4.  Market price of risk
+14.5.  Hansen-Jagannathan bounds
+14.5.1. Law of one price implies that $E m R =1$
+14.5.2. Inner product representation of price functional
+14.5.3. Admissible stochastic discount factors
+14.6.  Failure of CRRA to attain HJ bound
+
+Overfull \hbox (48.72943pt too wide) in paragraph at lines 707--709
+[]\tensc Property: \eightrm If $[] \eighti X \eightsy ^^X N\eightrm (\eighti ^^
+V[]; ^^[[]\eightrm )$, then $\eighti E\eightrm (\eighti X\eightrm ) = [] []$ an
+d $[](\eighti X\eightrm ) = \eighti E\eightrm (\eighti X\eightrm )[]$.
+
+\hbox(11.85004+6.55011)x345.7008, glue set - 1.0
+.\special<-63>{src:707black10_part2_new_ver3.tex}
+.\tensc P
+.\tensc r
+.\kern-0.22223
+.\tensc o
+.etc.
+
+Figure 14.6.1. {CRRAtimeseparablepreferences}
+(timeseparableCRRApreferences_gray.eps
+)
+Table 14.6.1. {table:parameterestimates}
+[Nrows=3, Ncols=2]
+14.7.  Non-expected utility
+14.7.1. Another representation of the utility recursion
+Figure 14.7.1. {treeAB}
+(PlansABtree.eps
+)
+Figure 14.7.2. {treeCD}
+(PlansCDtree.eps
+)
+14.7.2. Stochastic discount factor
+Figure 14.7.3. {tallarini}
+(Tallarinisfigure2_gray.eps
+)
+14.7.3. Twisted probability distributions
+14.8.  Reinterpretation of the utility recursion
+14.8.1. Risk aversion versus model misspecification aversion
+14.8.2. Recursive representation of probability distortions
+14.8.3. Entropy
+14.8.4. Expressing ambiguity aversion
+14.8.5. Ambiguity averse preferences
+14.8.6. Market price of model uncertainty
+14.8.7. Measuring model uncertainty
+Figure 14.8.1. {tallarini50}
+(MPRRWvsTS_Korea.eps
+)
+14.9.  Costs of aggregate fluctuations
+Figure 14.9.1. {BHS_punchline}
+(proportions1_gray.eps
+)
+14.10.  Reverse engineered consumption heterogeneity
+> UNDEFINED TAG socialinsurance ON PAGE 126.
+14.11.  Affine risk prices
+14.11.1. An application
+14.11.2. Affine term structure of yields
+14.12.  Risk-neutral probabilities
+14.12.1. Asset pricing in a nutshell
+14.13.  Distorted beliefs
+14.14.  Concluding remarks
+> UNDEFINED TAG incomplete ON PAGE 126.
+> UNDEFINED TAG socialinsurance ON PAGE 126.
+appendix A.  Riesz representation theorem
+appendix B.  Computing stochastic discount factors
+appendix C.  A log normal bond pricing model
+14.C.1. Slope of yield curve
+14.C.2. Backus and Zin's stochastic discount factor
+14.C.3. Reverse engineering a stochastic discount factor
+Figure 14.C.1. {backus1f}
+(backus1_gray.eps
+)
+Figure 14.C.2. {backus2f}
+(backus2_gray.eps
+)
+Figure 14.C.3. {backus3f}
+(backus3_gray.eps
+)
+Figure 14.C.4. {backus4f}
+(backus4_gray.eps
+)
+Figure 14.C.5. {backus5f}
+(backus5_gray.eps
+)
+Exercises
+(asset_exercise_new.tex)) (black11.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen79
+) (psfig.tex)
+15. Economic Growth
+15.1.  Introduction
+15.2.  The economy
+> Expecting ] but got ).
+15.2.1. Balanced growth path
+15.3.  Exogenous growth
+15.4.  Externality from spillovers
+15.5.  All factors reproducible
+15.5.1. One-sector model
+15.5.2. Two-sector model
+15.6.  Research and monopolistic competition
+15.6.1. Monopolistic competition outcome
+Figure 15.6.1. {growth1f}
+(grow1.ps
+)
+15.6.2. Planner solution
+15.7.  Growth in spite of nonreproducible factors
+15.7.1. ``Core'' of capital goods produced without nonreproducible inputs
+15.7.2. Research labor enjoying an externality
+15.8.  Concluding remarks
+Exercises
+) (black12_13.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen80
+) (psfig.tex)
+16. Optimal Taxation with Commitment
+16.1.  Introduction
+> UNDEFINED TAG fiscalmonetary ON PAGE 126.
+16.2.  A nonstochastic economy
+16.2.1. Government
+16.2.2. Household
+16.2.3. Firms
+16.3.  The Ramsey problem
+16.4.  Zero capital tax
+16.5.  Primal approach to the Ramsey problem
+16.5.1. Constructing the Ramsey plan
+16.5.2. Revisiting a zero capital tax
+16.6.  Taxation of initial capital
+16.7.  Nonzero capital tax due to incomplete taxation
+16.8.  A stochastic economy
+16.8.1. Government
+16.8.2. Household
+16.8.3. Firms
+16.9.  Indeterminacy of debt and capital taxes
+16.10.  A Ramsey plan under uncertainty
+16.11.  Ex ante capital tax varies around zero
+16.11.1. Sketch of the proof of Proposition 2
+16.12.  A stochastic economy without capital
+> UNDEFINED TAG fiscalmonetary ON PAGE 126.
+16.12.1. Computational strategy
+16.12.2. More specialized computations
+16.12.3. Time consistency
+> UNDEFINED TAG optaxrecur ON PAGE 126.
+16.13.  Examples of labor tax smoothing
+16.13.1. Example 1: $g_t=g$ for all $t\geq 0$
+16.13.2. Example 2: $g_t=0$ for $t\not = T$ and nonstochastic $g_T>0$
+16.13.3. Example 3: $g_t=0$ for $t\not = T$, and $g_T$ is stochastic
+16.13.4. Time $0$ is special with $b_0\not = 0$
+> UNDEFINED TAG optaxrecur ON PAGE 126.
+16.14.  Lessons for optimal debt policy
+> UNDEFINED TAG incomplete ON PAGE 126.
+16.15.  Taxation without state-contingent debt
+> UNDEFINED TAG incomplete ON PAGE 126.
+> UNDEFINED TAG socialinsurance ON PAGE 126.
+> UNDEFINED TAG abelsummation ON PAGE 126.
+16.15.1. Future values of $\delimiter "4266308 g_t\delimiter "5267309 $ become 
+deterministic
+16.15.2. Stochastic $\delimiter "4266308 g_t\delimiter "5267309 $ but special p
+references
+16.15.3. Example 3 revisited: $g_t=0$ for $t\not = T$, and $g_T$ is stochastic
+> UNDEFINED TAG credible ON PAGE 126.
+> UNDEFINED TAG chang ON PAGE 126.
+16.16.  Nominal debt as state-contingent real debt
+> UNDEFINED TAG fiscalmonetary ON PAGE 126.
+16.16.1. Setup and main ideas
+16.16.2. Optimal taxation in a nonmonetary economy
+16.16.3. Optimal policy in a corresponding monetary economy
+16.16.4. Sticky prices
+16.17.  Relation to fiscal theories of the price level
+> UNDEFINED TAG fiscalmonetary ON PAGE 126.
+16.17.1. Budget constraint versus asset pricing equation
+16.17.2. Disappearance of quantity theory?
+16.17.3. Price level indeterminacy under interest rate peg
+16.17.4. Monetary or fiscal theory of the price level?
+> UNDEFINED TAG sec:10Mdoctrines ON PAGE 126.
+> UNDEFINED TAG sec:FTPL_KW_SW ON PAGE 126.
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+\tok ->{\fam \bffam \eightbf @sec:FTPL_
+                                       KW_SW@}
+l.3570 and \use{sec:FTPL_KW_SW}
+                               , we will return to these issues in the
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\tok ->{\fam \bffam \eightbf @sec:FTPL_KW_SW@}
+                                              
+l.3570 and \use{sec:FTPL_KW_SW}
+                               , we will return to these issues in the
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.3572 ...urrency) overlapping generations model.}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.3573 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+> UNDEFINED TAG fiscalmonetary ON PAGE 126.
+> UNDEFINED TAG sec:BassettoFTPL ON PAGE 126.
+16.18.  Zero tax on human capital
+16.19.  Should all taxes be zero?
+16.20.  Concluding remarks
+> UNDEFINED TAG incomplete ON PAGE 126.
+> UNDEFINED TAG socialinsurance ON PAGE 126.
+> UNDEFINED TAG fiscalmonetary ON PAGE 126.
+Exercises
+)
+Underfull \hbox (badness 10000) in paragraph at lines 421--421
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+(black13.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen81
+) (psfig.tex)
+17. Self-Insurance
+17.1.  Introduction
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+> UNDEFINED TAG socialinsurance2 ON PAGE 125.
+> UNDEFINED TAG incomplete ON PAGE 125.
+17.2.  The consumer's environment
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+17.3.  Nonstochastic endowment
+17.3.1. An ad hoc borrowing constraint: nonnegative assets
+> UNDEFINED TAG incomplete ON PAGE 125.
+17.3.2. Example: periodic endowment process
+17.4.  Quadratic preferences
+17.5.  Stochastic endowment process: i.i.d. case
+> UNDEFINED TAG incomplete ON PAGE 125.
+17.6.  Stochastic endowment process: general case
+17.7.  Intuition
+17.8.  Endogenous labor supply
+17.9.  Concluding remarks
+> UNDEFINED TAG incomplete ON PAGE 125.
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+> UNDEFINED TAG socialinsurance2 ON PAGE 125.
+appendix A.  Supermartingale convergence theorem
+Exercises
+) (black14.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen82
+) (psfig.tex)
+18. Incomplete Markets Models
+18.1.  Introduction
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+> UNDEFINED TAG socialinsurance2 ON PAGE 125.
+> UNDEFINED TAG socialinsurance ON PAGE 125.
+> UNDEFINED TAG socialinsurance2 ON PAGE 125.
+18.2.  A savings problem
+18.2.1. Wealth-employment distributions
+
+Overfull \hbox (164.58127pt too wide) in paragraph at lines 220--231
+\eightbf the \eightit pair \eightbf ($\eighti a[]; s[]$\eightbf ), where $\eigh
+ti j \eightrm = (\eighti i \eightsy ^^@ \eightrm 1)\eighti m \eightrm + \eighti
+ h$\eightbf . De-note $\eighti x[] \eightrm = [([]\eighti ; []\eightrm )\eighti
+ ; \eightrm ([]\eighti ; []\eightrm )\eighti ; [] ; \eightrm ([]\eighti ; []\ei
+ghtrm )\eighti ; \eightrm ([]\eighti ; []\eightrm )\eighti ; [] ; \eightrm ([]\
+eighti ; []\eightrm )\eighti ; [] ; \eightrm ([]\eighti ; []\eightrm )\eighti ;
+ [] ; \eightrm ([]\eighti ; []\eightrm )]$\eightbf .
+
+\hbox(6.71223+2.10555)x345.7008, glue set - 1.0
+.\eightbf t
+.\eightbf h
+.\eightbf e
+.\glue 3.2667 plus 1.63335 minus 1.0889
+.\eightit p
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--231
+
+
+\hbox(0.0+0.0)x345.7008
+.\penalty -10000
+.\glue(\rightskip) 0.0
+
+18.2.2. Reinterpretation of the distribution $\lambda $
+18.2.3. Example 1: a pure credit model
+18.2.4. Equilibrium computation
+18.2.5. Example 2: a model with capital
+18.2.6. Computation of equilibrium
+18.3.  Unification and further analysis
+18.4.  The nonstochastic savings problem when $\beta (1+r) < 1$
+! TeX capacity exceeded, sorry [main memory size=3000000].
+l.581 $$
+         \bar a = \cases{ - \phi, & if $r < \rho$; \cr
+If you really absolutely need more capacity,
+you can ask a wizard to enlarge me.
+
+Output written on RMT5_recovery.dvi (153 pages, 441664 bytes).

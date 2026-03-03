@@ -1,0 +1,415 @@
+
+\medskip
+\noindent{\it Exercise \the\chapternum.13}\quad A household has preferences over
+consumption processes $\{c_t\}_{t=0}^\infty$ that are  ordered by
+$$ -  .5 \sum_{t=0}^\infty \beta^t [(c_t - 30)^2  + .000001b_t^2 ] \eqno(1)$$
+where $\beta=.95$.  The household chooses a consumption, borrowing
+plan to maximize (1) subject to the sequence of budget constraints
+$$ c_t + b_t = \beta b_{t+1} + y_t  $$ % \EQN e132 $$
+for $t \geq 0$, where $b_0$ is an initial condition,
+$\beta^{-1}$ is the one-period gross risk-free interest rate,
+$b_t$ is the household's one-period debt that is due in period $t$,
+and $y_t$ is its labor income, which obeys the second-order autoregressive
+process
+$$ (1-\rho_1 L - \rho_2 L^2)y _{t+1}  =    (1 -\rho_1 -\rho_2) 5 +
+    .05 w_{t+1} $$ % \EQN 133 $$
+where $\rho_1 =1.3, \rho_2 = -.4$.
+
+\medskip
+\noindent{\bf a.}  Define the {\it state\/} of the household  at $t$ as
+$x_t= \left[\matrix{1 & b_t & y_t & y_{t-1} \cr}\right]'$ and
+the {\it control\/} as   $u_t = (c_t -30)$.  Then express the
+transition law facing the household in the form \Ep{lasset1}.
+Compute the eigenvalues of $A$.  Compute the
+zeros of the characteristic polynomial $(1-\rho_1 z - \rho_2 z^2)$ and  compare
+them with the eigenvalues of $A$. ({\it Hint:} To compute the zeros in
+ Matlab,
+set
+%$a=\left[ \matrix{1 &  -1.3  & .4\cr}\right]$
+$a=\left[ \matrix{.4 &  -1.3  &  1 \cr}\right]$
+ and call
+{\tt roots(a)}. The zeros of $(1 -\rho_1 z  - \rho_2 z^2) $ equal
+the {\it reciprocals\/} of the eigenvalues of the associated $A$.)
+
+\medskip
+\noindent{\bf b.}  Write a Matlab program that uses the Howard improvement
+algorithm \Ep{howardimprove} to compute the household's optimal decision rule
+for $u_t = c_t -30$.   Tell how many iterations it takes for this to converge
+(also tell your convergence criterion).
+ \medskip
+\noindent{\bf c.}  Use the household's optimal decision rule
+to compute the law of motion for $x_t$ under the optimal decision rule in
+the form $$ x_{t+1} = (A - BF^*) x_t + C w_{t+1}, $$ where $u_t = - F^* x_t$
+is the optimal decision rule.  Using Matlab,
+compute the impulse response function
+of $\left[\matrix{c_t & b_t \cr}\right]'$ to $w_{t+1}$.
+Compare these with the theoretical expressions
+ \Ep{sprob16}.
+ 
+ 
+\medskip
+
+\noindent{\it Exercise \the\chapternum.19}\quad  {\bf IQ}
+\medskip
+\noindent An infinitely lived  person's `true intelligence'  $\theta \sim {\cal N}(100, 100)$, i.e., mean 100, variance 100. For each date $t \geq 0$,
+the person takes a `test' with the  outcome being a univariate random variable   $y_t = \theta + v_t$,
+where $v_t$ is an i.i.d.~process with distribution ${\cal N}(0, 100)$. The person's initial IQ is $IQ_0=100$ and at date  $t\geq 1$ before the date $t$ test is
+taken it is ${\rm IQ}_t = E \theta | y^{t-1}$, where $y^{t-1}$ is the history of test scores from date $0$ until date $t-1$.
+
+\medskip
+\noindent{\bf a.}  Give a recursive formula for ${\rm IQ}_t$ and for $E ({\rm IQ}_t - \theta)^2$.
+\medskip
+\noindent {\bf b.}  Use Matlab to simulate 10 draws of $\theta$ and associated paths of $y_t, {\rm IQ}_t$ for $t=0, \ldots, 50$.
+\medskip
+\noindent {\bf c.}  Prove that $  \lim_{t\rightarrow \infty} E ({\rm IQ}_t - \theta)^2=0$.
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.20}\quad  {\bf Random walk}
+\medskip
+\noindent A scalar process $x_t$ follows the process
+$$ x_{t+1} = x_t + w_{t+1}  $$
+where $w$ is an i.i.d.~${\cal N}(0,1)$ scalar process and $x_0 \sim {\cal N}(\hat x_0, \Sigma_0)$.
+Each period, an observer receives two signals in the form of a $2 \times 1$ vector $y_t$ that obeys
+$$ y_t = \bmatrix{1 \cr 1\cr} x_t + v_t $$
+where the $2 \times 1$ process $v_t$ is i.i.d.~with distribution $v_t \sim {\cal N}(0, R)$ where
+$R =\bmatrix{ 1 & 0 \cr 0 &1  \cr}$.
+
+\medskip
+\noindent{\bf a.}  Suppose that $\Sigma_0 = 1.36602540378444$.  For $t \geq 0$, find formulas for
+$E [x_t |  y^{t-1}] $, where $y^{t-1}$ is the history of $y_s$ for $s$ from $0$ to $t-1$.
+
+\medskip
+\noindent{\bf b.} Verify numerically that the matrix $A-KG$ in formula \Ep{VAR1} is stable.
+
+\medskip
+\noindent{\bf c.}  Find an infinite-order vector autoregression for $y_t$.
+
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.23}\quad  {\bf A monopolist, learning, and ergodicity}
+\medskip
+ \noindent A monopolist  produces a quantity $Q_t$ of a single good in every period $t \geq 0$ at zero cost.
+ At the beginning of each period $t \geq 0$, before output price $p_t$ is observed, the monopolist sets quantity $Q_t$ to maximize
+$$ E_{t-1} p_t Q_t \leqno(1)  $$
+where $p_t$ satisfies the linear inverse demand curve
+$$ p_t = a - b Q_t + \sigma_p \epsilon_{t}  \leqno(2) $$
+where $b>0$ is a constant known to the firm,  $\epsilon_t$ is an i.i.d.~scalar with distribution $\epsilon_t \sim {\cal N}(0,1)$, and the constant
+in the inverse demand curve
+$a$ is a  scalar random variable unknown to the firm and whose  unconditional distribution is $a \sim {\cal N}(\mu_a, \sigma_a^2)$,
+where $\mu_a>0$ is large relative to $\sigma_a>0$. Assume that the random variable $a$  is independent of $\epsilon_t$ for all $t$. Before the firm chooses
+$Q_0$, it knows the unconditional distribution of $a$, but not the realized value of $a$. For each $t \geq 0$, the firm wants to estimate  $a$ because it wants to make a good decision about output $Q_t$.
+ At the end of each period $t$, when it must set $Q_{t+1}$, the firm observes $p_t$ and also of course knows the value of $Q_t$ that it had
+ set.
+ In (1), for $t \geq 1$,  $E_{t-1} (\cdot) $ denotes the mathematical expectation conditional on the history of signals $p_s, q_s, s= 0, \ldots, t-1$;
+for $t=0$, $E_{t-1} (\cdot)$ denotes the expectation conditioned on no previous  observations of $p_t, Q_t$.
+
+\medskip
+\noindent {\bf a.}    What is the optimal setting for $Q_0$?  For each date $t \geq 0$, determine the firm's optimal setting for  $Q_t$ as a function
+of the information $p^{t-1}, Q^{t-1}$ that the firm has when it sets $Q_t$.
+\medskip
+\noindent{\bf b.}  Under the firm's optimal policy, is  the pair $(p_t, Q_t)$ Markov?
+\medskip
+\noindent{\bf c.} `Finding the state is an art.' Find a recursive representation of the firm's optimal policy for setting $Q_t$ for $t \geq 0$.  Interpret the state variables that you
+propose.
+\medskip
+\noindent  {\bf d.} Under the firm's optimal rule for setting $Q_t$, does  the random variable $ E_{t-1} p_t$  converge to a constant
+as $t \rightarrow +\infty$?  If so, prove that it does and find the limiting value. If not, tell why it does not converge.
+\medskip
+\noindent {\bf e.}  Now suppose that instead of maximizing (1) each period, there is a single infinitely lived monopolist who
+once and for all before time $0$ chooses a plan for an entire sequence  $\{Q_t\}_{t=0}^\infty$, where the $Q_t$ component has to be a measurable function
+of $(p^{t-1}, q^{t-1})$, and where the monopolist's objective is to maximize
+$$ E_{-1} \sum_{t=0}^\infty \beta^t p_t Q_t \leqno(3)  $$
+where $\beta \in (0,1)$ and $E_{-1}$ denotes the mathematical expectation conditioned on the null history. Get as far as you can
+in deriving the monopolist's optimal sequence of decision rules.
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.25}\quad  {\bf Consumption}
+\medskip
+\noindent {\bf a.}  Please use formulas \Ep{sprob16} to verify formulas  \Ep{consexample1}
+and \Ep{consexample2}-\Ep{incomemaar} of subsection \use{sec:classic_consumption}.
+\medskip
+\noindent{\bf b.} Please use formulas \Ep{muth2} to compute the decision rules
+in formulas   \Ep{consexample1} and \Ep{consexample2} for the following parameter values:
+$\beta = .95, \sigma_1= \sigma_2 =1$.
+\medskip
+\noindent{\bf c.}
+ Please use formulas \Ep{muth2} to compute the decision rules
+in formulas   \Ep{consexample1} and \Ep{consexample2} for the following parameter values:
+$\beta = .95, \sigma_1= 2,  \sigma_2 =1$.
+
+\medskip
+\noindent{\bf d.} Please use formula \Ep{debt_evolution} to confirm formulas
+\Ep{consexample1a} and \Ep{consexample1b}.
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.26}\quad  {\bf Math and verbal IQ's}
+\medskip
+\noindent An infinitely lived  person's `true intelligence' $\theta$ has two components, math ability $\theta_1$ and
+verbal ability $\theta_2$, where  $\theta \sim {\cal N}\Biggl(\bmatrix{100 \cr 100},  \bmatrix{100 & 0 \cr 0 & 100}\Biggr)$.
+ For each date $t \geq 0$,
+the person takes a single `test' with the  outcome being a univariate random variable   $y_t = G_t \theta + v_t$,
+where $v_t$ is an i.i.d.~process with distribution ${\cal N}(0, 50)$ and $G_t =\bmatrix{.9 & .1 }$ for $t = 0, 2, 4, \ldots$ and
+$G_t = \bmatrix{.01 & .99}$ for $t=1, 3, 5, \ldots$.  Here the person takes a math test at $t$ even and a verbal test at $t$ odd (but you have to know
+how to read English to survive the math test, and you have to know how to tell time in order to plan your time allocation well for the verbal test).
+ The person's initial IQ vector is $IQ_0=\bmatrix{100 \cr 100}$ and at date  $t\geq 1$ before the date $t$ test is
+taken it is ${\rm IQ}_t = E \theta | y^{t-1}$, where $y^{t-1}$ is the history of test scores from date $0$ until date $t-1$.
+
+\medskip
+\noindent{\bf a.}  Give a recursive formula for ${\rm IQ}_t$ and for $E ({\rm IQ}_t - \theta)({\rm IQ}_t - \theta)'$.
+\medskip
+\noindent {\bf b.}  Use Matlab to simulate 10 draws of $\theta$ and associated paths of $y_t, {\rm IQ}_t$ for $t=0, \ldots, 50$.
+\medskip
+\noindent {\bf c.} Show computationally or analytically  that $\lim_{t\rightarrow +\infty}E({\rm IQ}_t - \theta)({\rm IQ}_t - \theta)'=\bmatrix{0 & 0 \cr 0 & 0}$.
+
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.27}\quad  {\bf Permanent income model again}
+\medskip
+\noindent  Each of two consumers named $i=1,2$  has preferences over consumption streams
+that are ordered by
+the utility functional
+$$  E_0 \sum_{t=0}^\infty \beta^t u(c_t^i)  \leqno(1) $$
+where $E_t$ is the mathematical expectation conditioned
+on the consumer's time $t$ information,  $c_t^i$ is time $t$ consumption of consumer $i$ at time $t$,
+$u(c)$ is a strictly concave one-period utility function, and
+$\beta \in (0,1)$ is a discount factor.  The consumer maximizes
+(1)  by choosing a consumption, borrowing plan
+ $\{c_t^i, b_{t+1}^i\}_{t=0}^\infty$ subject to the sequence of budget constraints
+$$ c_t^i + b_t^i = R^{-1} b_{t+1}^i  + y_t^i  $$
+where $y_t$ is an exogenous
+ stationary endowment process, $R$ is a constant gross
+risk-free interest rate, $b_t^i$ is one-period risk-free  debt  maturing at
+$t$, and $b_0^i = 0$ is a given initial condition.  Assume
+that $R^{-1} = \beta$. We impose the following condition on the
+consumption, borrowing plan of consumer $i$:
+$$  % \lim_{T \rightarrow +\infty}
+ E_0 \sum_{t=0}^\infty \beta^t (b_t^i)^2 < +\infty. $$ % \EQN sprob3 $$
+Assume
+the quadratic  utility function
+$u(c_t) =  -.5 (c_t - \gamma)^2$,
+where $\gamma > 0 $ is a bliss level of consumption. Negative consumption  rates
+are allowed.
+
+ Let $s_t \in \{0,1\}$ be an i.i.d.~process
+with ${\rm Prob} (s_t =1) = {\rm Prob} (s_1 = 0 ) = .5$.  The endowment process
+of consumer 1 is $y_t^1 = 1 - .5 s_t$ and the endowment process of person 2 is
+$y_t^2 = .5+ .5 s_t$.  Thus, the two consumers' endowment processes are perfectly
+negatively correlated i.i.d.~processes with means of .75.
+
+
+\medskip
+\noindent{\bf a.} Find  optimal decision rules for consumption for both consumers.
+Prove that the consumers' optimal decisions imply the following laws of motion
+for $b_t^1, b_t^2$:
+$$ \eqalign{ b_{t+1}^1(s_t =0) & = b_t^1 - .25 \cr
+            b_{t+1}^1(s_t =1) & = b_t^1 + .25 \cr
+            b_{t+1}^2(s_t =0) & = b_t^2 + .25 \cr
+            b_{t+1}^2(s_t =1) & = b_t^2 - .25 \cr } $$
+\medskip
+\noindent{\bf b.} Show that for each consumer, $c_t^i, b_t^i$ are co-integrated.
+\medskip
+\noindent{\bf c.} Verify that $b_{t+1}^i$ is risk-free in the sense that conditional on
+information available at time $t$, it is independent of news arriving at time $t+1$.
+\medskip
+\noindent{\bf d.} Verify that with the initial conditions $b_{0}^1 = b_0^2 =0$, the following
+two equalities obtain:
+$$ \eqalign{ b_t^1 + b_t^2& = 0 \quad \forall t \geq 1 \cr
+             c_t^1 + c_t^2 & = 1.5 \quad \forall t \geq 1 \cr} $$
+Use these conditions to interpret the decision rules that you have computed as describing a closed pure consumption loans economy
+in which consumers $1$ and $2$ borrow and lend with each other and in which the risk-free asset is a one-period IOU from one of the consumers to the other.
+\medskip
+
+\noindent{\bf e.}  Define the `stochastic discount factor of consumer $i$' as
+$m_{t+1}^i = {\frac{\beta u'(c_{t+1}^i)}{u'(c_t^i)}}$.  Show that the stochastic discount factors of consumer $1$ and $2$ are
+$$  m_{t+1}^1 = \cases{ \beta + .25 {\frac{\beta(1-\beta)}{(\gamma- c_t^1)}} , & if $s_{t+1} = 0 $; \cr
+                          \beta - .25 {\frac{\beta(1-\beta)}{(\gamma- c_t^1)}} , & if $s_{t+1} = 1 $;    . \cr}  $$
+$$  m_{t+1}^2 = \cases{ \beta - .25 {\frac{\beta(1-\beta)}{(\gamma- c_t^2)}} , & if $s_{t+1} = 0 $; \cr
+                          \beta + .25 {\frac{\beta(1-\beta)}{(\gamma- c_t^2)}} , & if $s_{t+1} = 1 $;    . \cr}  $$
+Are the stochastic discount factors of the two consumers equal?
+\medskip
+\noindent{\bf f.} Verify that $E_t m_{t+1}^1 = E_t m_{t+1}^2 = \beta$.
+\medskip
+
+
+
+\vfill\break
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.28}\quad  {\bf Invertibility}
+\medskip
+\noindent A univariate stochastic process $y_t$ has a first-order moving
+average representation
+$$ y_t = \epsilon_t - 2 \epsilon_{t-1} \leqno(1) $$
+where $\{\epsilon_t\}$ is an i.i.d.~process distributed
+${\cal N}(0,1)$.
+
+\medskip
+\noindent{\bf a.}  Argue that $\epsilon_t$ cannot be expressed as as linear combination of
+$y_{t-j}, j \geq 0$ where the sum of the squares of the weights is finite.  This means
+that $\epsilon_t$ is not in the space spanned by square summable linear combinations
+of the infinite history $y^t$.
+\medskip
+\noindent{\bf b.}  Write equation (1) as a state space system, indicating the matrices
+$A, C, G$.
+\medskip
+\noindent {\bf c.} Using the matlab program {\tt kfilter.m} \mtlb{kfilter.m}%
+to compute an innovations representation for $\{y_t\}$.  Verify that the innovations
+representation for $y_t$ can be represented as
+$$ y_t = a_t - .5 a_{t-1} \leqno(2) $$
+where $a_t = y_t - E [y_t| y^{t-1} ] $ is a serially uncorrelated process.
+Compute the variance of $a_t$.  Is it larger or smaller than the variance of $\epsilon_t$?
+
+\medskip
+\noindent{ \bf d.}  Find an autoregressive representation for $y_t$ of the form
+$$ y_t = \sum_{j=1}^\infty A_j y_{t-j} + a_t \leqno(3) $$
+where $E a_t y_{t-j} = 0 $ for $j \geq 1$. ({\it Hint:} either use formula (2) or else  remember formula \Ep{VAR1}.)
+
+\medskip
+\noindent{\bf e.}  Is $y_t$ Markov?  Is $\bmatrix{y_t & y_{t-1}}'$ Markov? Is $\bmatrix{y_t & y_{t-1} & \cdots & y_{t-10}}'$ Markov?
+
+\medskip
+\noindent{\bf f.}  Extra credit.  Verify that $\epsilon_t$ {\it can\/} be expressed as a square summable linear combination
+of $y_{t+j}, j\geq 1$.
+
+
+%
+\medskip
+\noindent {\it Exercise \the\chapternum.33}\quad  {\bf From shocks to innovations, I}
+
+\medskip
+\noindent
+Consider again the setting described in exercise  {\it \the\chapternum.32\/}.  Let $\{y_t\}_{t=-\infty}^\infty$ be the covariance stationary scalar
+stochastic process appearing in exercise {\it \the\chapternum.32\/}.  We begin by introducing a
+covariance generating function defined as the $z$-transform of the autocovariance sequence $\{c_y(\tau)\}_{\tau =-\infty}^\infty$,
+where $c_y(\tau) = E y_t y_{t-\tau}$.  The covariance generating function is
+$$ S_y(z) = \sum_{j=\infty}^\infty c_y(j) z^j.$$  Using the original state-space representation for $y_t$, it can be verified that
+$$ \eqalign{ S_y(z) & = r + \left({\frac{c}{1-\rho z}}\right) \left({\frac{c}{1-\rho z^{-1}}} \right) \cr
+                    & = {\frac{c^2 + r(1-\rho z)(1 - \rho z^{-1} ) }{(1 -\rho z)(1 -\rho z)}} \cr
+                    & = {\frac{ c^2 + r(1 + \rho^2) - r \rho z - r \rho z^{-1}}{(1 -\rho z)(1 -\rho z^{-1})}}. } $$
+(The spectral density defined in section \use{sec:spectrum} is the covariance generating function obtained by setting $z= e^{-i \omega}, \omega \in [-\pi, \pi]$.)
+ Using  the innovations representation for $\{y_t\}$ instead of the original state-space representation cast in terms of the hidden state $x_t$,
+ it can  be verified that the covariance generating function also equals
+$$ S_y(z) =  {\frac{\omega ( 1 - (\rho -k )z)( 1 - (\rho - k)z^{-1} )}    {(1 -\rho z)(1 -\rho z^{-1})}} .  $$
+The denominators in both representations of $S_y(z)$ are equal and the numerators in both representations must also be equal.  Therefore,  it must be  true that
+$$   c^2 + r(1 + \rho^2) - r \rho z - r \rho z^{-1} = \omega ( 1 - (\rho -k )z)( 1 - (\rho - k)z^{-1}) . \leqno(1)  $$
+The left side is a  quadratic  polynomial in $z$. The right side factors this polynomial. The
+zeros of the quadratic polynomial  in $z$ evidently form  a reciprocal pair  $(\rho -k), (\rho -k)^{-1}$.\NFootnote{Such a reciprocal pairs property
+characterizes large classes of linear filtering problems and linear optimal control problems.  We shall encounter more examples in chapter
+\use{dplinear}.}  Equation   (1) as an instance of a more general   {\it  spectral factorization identity\/} (see Hansen and Sargent (2013, p.~164).)
+ Also, please note the steady state Kalman filter generates a Kalman
+gain $k$ that is a key to  achieving the factorization.
+\index{spectral factorization identity}%
+\auth{Hansen, Lars Peter}%
+\auth{Sargent, Thomas J.}%
+
+Now take representation ($\dagger$) for $a_t$ from exercise {\it \the\chapternum.32\/} and use it to compute the covariance generating
+function of the innovation process $\{a_t\}$:
+$$ \eqalign{ S_a(z) & = {\frac{c^2}{(1 - (\rho - k) z) (1 - (\rho - k) z^{-1})}} + {\frac{r (1 - \rho z) (1 - \rho z^{-1})}{(1 - (\rho -k)z)
+         ( 1 - (\rho - k) z^{-1}) }} \cr
+         & = {\frac{  c^2 + r(1 + \rho^2) - r \rho z - r \rho z^{-1}  }  { ( 1 - (\rho -k )z)( 1 - (\rho - k)z^{-1})  }} .  } $$
+It follows from the preceding equation and  factorization identity (1) that
+$$ S_a(z) = \omega,  $$
+which implies that $c_a(j) = 0 $ for $j \neq 0$ and $c_a(0) = \omega$. This confirms that   $\{a_t\}$ is a serially uncorrelated process with variance $\omega$.
+
+\medskip
+\noindent {\bf a.} Please verify the preceding calculations.
+
+\medskip
+\noindent{\bf b.}  Please plot the spectral density $S_a(e^{-i \omega})$ against $\omega \in [0, \pi]$ and compare it with those of the scalar processes
+depicted in   Figures \Fg{r2red1a}, \Fg{r2red1b}, \Fg{r2red1d}, and \Fg{r2red1c} from section \use{sec:spectrum}.
+
+
+
+
+
+
+\medskip
+\noindent {\it Exercise \the\chapternum.34}\quad  {\bf From shocks to innovations, II}
+
+
+\medskip
+\noindent Consider a state space system and the associated time-invariant innovations representation,
+which we repeat here for convenience. The original system is
+$$ \eqalign{ x_{t+1} & = A x_t + C w_{t+1} \cr
+         y_t & = G x_t  + v_t } \leqno(1)  $$
+where $\{w_{t+1}\}_{t=0}^\infty $ is an i.i.d.~sequence with $w_{t+1} \sim {\cal N}(0,I)$ for all $t$
+and $\{v_t\}_{t=0}^\infty$ is an i.i.d.~sequence with $v_t \sim {\cal N}(0, R)$ for all $t$; and $E w_t' v_s = 0$
+for all $t$ and $s$.
+The associated time-invariant ``innovations representation'' state-space system is
+$$ \eqalign{ \hat x_{t+1} & = A \hat x_t + K a_t \cr
+              y_t & = G \hat x_t + a_t. } \leqno(2) $$
+Here $C w_{t+1}$ are the shocks hitting the hidden state $x_{t+1}$ conditional on  $x_t$,
+$v_t$ are shocks or measurements hitting $y_t$ conditional on $G x_t$, and $a_t = y_t - E [y_t | y^{t-1}]  $ are
+shocks hitting $y_t$ given the infinite history $y^{t-1} = [ y_{t-1}, y_{t-2}, \ldots ]$.
+The shock $a_t$ is i.i.d.~with distribution $a_t \sim {\cal N} (0, \Omega)$.
+
+\medskip
+\noindent{\bf a.} Please provide formulas for $K$ and $\Omega$.
+
+\medskip
+
+\noindent{\bf b.} Please deduce from the above pair  of state-space systems a single state-space  system that maps the
+shocks $w_{t+1}, v_{t+1}$ into the innovation $a_{t+1}$ and verify that it takes the form:
+
+$$ \eqalign{ \bmatrix{x_{t+1} \cr \hat x_t \cr v_{t+1} } & = \bmatrix{A & 0 & 0 \cr
+                                                                    K G & (A-KG) &  K \cr
+                                                                    0 & 0 & 0 }
+                                                           \bmatrix{x_t \cr \hat x_t \cr v_t } +
+                                                           \bmatrix{ C & 0 \cr
+                                                             0 & 0 \cr
+                                                             0 & I }
+                                                             \bmatrix{ w_{t+1} \cr v_{t+1} }  \cr
+              a_t & = \bmatrix{ G & - G & I } \bmatrix{ x_t \cr \hat x_t \cr v_t } }    \leqno(3)                                             $$
+
+\medskip
+
+\noindent {\bf c.}  Please use formulas from section \use{sec:stochlinear}    to compute moving average representations and autocovariograms
+for the process $\{a_t\}$.
+Is $\{a_{t}\}$ a serially correlated process?
+
+
+\medskip
+\noindent{\bf d.}  Please use  formulas from part {\bf c.} to deduce impulse response functions of $a_t$ to $w_t$ and of
+$a_t$ to $v_t$ so that $a_t = \sum_{j=0}^\infty g_j w_{t-j} +  \sum_{j=0}^\infty h_j v_{t-j}$.  Please represent the
+autocovariance function of $\{a_t\}$ as the sum of the autocovariance functions of $\sum_{j=0}^\infty g_j w_{t-j} $
+and $\sum_{j=0}^\infty h_j v_{t-j}$ and  verify that $E a_t a_{t-j}' = 0 $ for $j\neq 0$. (Feel free to write a Matlab or Python program
+to perform these calculations and verifications.)
+
+
+
+
+\medskip
+\noindent {\it Exercise \the\chapternum.36}\quad  {\bf IQ again}
+
+\medskip
+\noindent Latent intelligence is a scalar random variable $\theta \sim {\cal N}(\mu_\theta, \sigma_\theta^2)$.  An applicant for college
+takes $k$ tests whose scores are a $k\times 1$ random vector governed by
+$$ y = \lambda \theta + u \leqno(1) $$
+where $\lambda$ is a known $k\times 1 $ vector,  $u \sim {\cal N}(0, \Sigma_u)$, and $E u \theta =0$.
+% Sometimes the covariance matrix $\Sigma_u$ is
+diagonal, but that is not necessary.
+  The mean and variance parameters $\mu_\theta, \sigma_\theta$ and the covariance matrix
+$\Sigma_u$ as well as the vector of ``loadings'' $\lambda$ are all known.  A testing service summarizes results of the
+test as a single score $IQ = E [\theta | y]$, the mathematical expectation of the student's  $\theta$ conditional on his/her test scores $y$.
+Please show that $IQ$ is an affine  function of $y$ and give formulas for the constant and slope coefficients as functions
+of the known parameters $\lambda, \mu_\theta, \sigma_\theta, \Sigma_u$.
+
+\vfil\eject
+
+
+
+
+
+
+

@@ -1,0 +1,180 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{Econ 311 \hfil U of Chicago}
+\line{February 4, 2021 \hfil Lars and Tom}
+
+\centerline{\bf  Fun Problems}
+
+
+\medskip
+
+\noindent{\bf -1.} Let $x_{t+1}, a_{t+1}, y_{t+1}$ all be scalar stochastic processes obeying the 
+state-space representation
+$$\eqalign{ x_{t+1} & = a x_t + b a_{t+1} \cr
+            y_{t+1} & = d x_t + g a_{t+1} }$$
+where $x_t$ is a hidden Markov state, $a_t \sim {\cal N}(0, \sigma_a^2)$is the time $t$ component
+of an i.i.d. sequence of random shocks, $x_0 \sim {\cal N}(0, \sigma_0)$
+ and at time $t$ a history $y^t =[] y_t, y_{t-1}, \ldots, ]$ is observed.  
+
+\medskip
+\noindent{\bf a.} Please find a time-invariant {\it innovations representation\/} corresponding to the preceding state
+space representation.  
+
+\medskip
+\noindent {\bf b.} Using the innovation representation,  please compute the conditional
+expectation $E [x_{t+1} | y^{t+1}]$. 
+
+\medskip
+
+
+\noindent{\bf 0.} Consider the follow special case of a classic Brock-Mirman growth model that 
+we assume describes economic history of a particular country called A.
+Let $k_t$ be a stock of physical capital, $c_t$ be a consumption rate, and the transition law for the capital 
+stock 
+$$ k_{t+1} + c_t = A k_t^\alpha \theta_t, \quad \alpha \in (0,1) $$
+where $k_0$ is an initial condition and $\ln (\theta_t) \sim {\cal N}(0, \sigma_\theta^2)$ is the time $t$
+component of an i.i.d. sequence of technology shocks.  Assume that consumption is described by
+the decision rule
+$$ c_t = (1-\beta \alpha) A k_t^\alpha \theta_t, \quad \beta \in (0,1) $$
+for all $t \geq 0$.
+
+An economist at the World Bank knows the parameters $A, \beta, \alpha, \sigma_\theta$ and the structure of
+the model.  The economist does not know the initial capital stock $k_0$ or subsequent capital stocks
+$\{k_{t+1}\}_{t=0}^T$ for some large $T$.  However, for country A the World Bank economist has an historical record
+of observations on $\log \tilde c_t, t=0, \ldots, T$, where 
+$$ \tilde c_t = c_t \epsilon_t $$
+where $\log \epsilon_t \sim {\cal N}(0, \sigma_\epsilon^2)$ is the time $t$ component of an i.i.d. sequence of
+of measurement errors.  The stochastic processes $\{\theta_t\}_{t=0}^T$ and $\{\epsilon_t\}_{t=0}^T$ are mutually
+independent at all dates.  The economist knows the measurement error parameter $\sigma_\epsilon$ along with the 
+other parameters already mentioned.  
+The economist's job is to  estimate  the capital stock process $\{k_t\}_{t=0}^T$ for country $A$. 
+
+ The economist expresses that he/she does not know $k_0$ by instead  pretending that 
+he/she knows very  little. In particular, he/she acts as if he/she has a prior probability distribution
+ $\log k_0 \sim {\cal N}(0, 10000)$. The prior variance  $10000$ is so very large that the implied
+distribution of $\log k_0$ covers all capital stocks that World Bank economists have ever reported ``seeing''.  
+
+\medskip
+\noindent{\bf a.} The economist's supervisor asks him/her to justify his/her choice of prior for $\log k_0$.
+Being a person of few words, the economist says: ``conjugate prior''. Does this make sense? Please elaborate
+on the economist's justification.
+
+\medskip
+\noindent{\bf b.} Please describe a recursive algorithm for computing the conditional mathematical
+expectation $E \log k_t | h_t$ where $h_t = []\log \tilde c_t, \log \tilde c_{t-1}, \ldots, \log \tilde c_0]$.
+
+\medskip
+\noindent {\bf c.} Please find a Hidden Markov Model for the $\{\log k_t\}_{t=0}^T$ process.
+
+
+
+
+
+\medskip
+
+\noindent{\bf 1.}  \quad Consider the
+modified version of the optimal linear regulator problem where the
+objective is to maximize
+$$-  \sum_{t=0}^\infty  \left\{ x_t' R x_t + u_t' Q u_t
+    + 2 u_t' H x_t \right\}$$
+subject to the law of motion:
+$$ x_{t+1} = A x_t + B u_t .$$
+Here $x_t$ is an $n \times 1$ state vector, $u_t$ is a $k \times 1$
+vector of controls, and $x_0$ is a given initial condition.   The matrices
+$R, Q$ are positive definite and symmetric.
+ The
+maximization is with respect to sequences $\{u_t, x_t\}_{t=0}^\infty$.
+\medskip
+\noindent {\bf a.} Show  that the optimal policy has the form
+$$ u_t = - (Q +  B'P B)^{-1} (B' P A + H) x_t,$$
+where $P$ solves the
+algebraic matrix Riccati equation
+$$ P = R +  A' P A - ( A' P B + H')
+       (Q+ B'PB)^{-1} ( B' P A + H) . \eqno(1) $$ %\EQN ricccross $$
+\medskip
+\noindent{\bf b.}  You have to solve such a control problem fast but have no computer resources available personally.
+But you do have a research assistant from the statistics department who knows nothing about linear quadratic optimal 
+control theory. But she is an expert on Kalman filtering and has fast programs ready to go.  Can you give
+her instructions that will trick  her programs into solving your problem?
+
+
+
+\medskip
+\noindent {\bf 2.}
+Let $\mu_t$ be an $n \times 1$ vector, $\Sigma_t$ be an $n \times n$ positive definite matrix,  
+$A$ be an $n \times n$ matrix, and $B$ be an $n \times k$ matrix.
+Let $z_1$ and $z_2$ each be $n \times 1$ random vectors. Then let  $z = \bmatrix {z_1 \cr z_2 }$ be the $2n \times 1$
+  multivariate normal random vector
+parameterized as
+$$ \bmatrix {z_1 \cr z_2 } \sim {\cal N}\left(\bmatrix{ \mu_t \cr A \mu_t }, \bmatrix{ \Sigma_t & \Sigma_t A' \cr
+                                                                              A \Sigma_t & A \Sigma_t A' + B B' } \right) $$
+%By writing the distribution in this way we specify that  the mean vector of $z$ is the first argument of ${\cal N}$ and the covariance matrix of $z$ is the second argument of ${\cal N}$.
+\medskip
+\noindent{\bf a.}
+Please find the probability distribution of $z_2$ conditional on $z_1$.
+\medskip
+\noindent{\bf b.} Please compute the linear least squares projection of $z_2$ on $z_1$.
+
+
+\medskip
+
+\noindent{\bf 3.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q)  q - \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \eqalign{ \hat Q & = H(Q) \cr
+            \hat q & = h(q, Q) .} $$
+Please interpret the following Bellman equation in terms of a problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q,Q)) + \beta v\left(h(q,Q), H(Q)\right) .$$
+
+\medskip
+
+
+\noindent{\bf 4.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q) q - \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \hat Q  = H(Q)  $$
+Please interpret the following Bellman equations in terms of a problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q, Q) ) + \beta v\left(h(q,Q), H(Q)\right) = \max_{\hat q} \{\pi(q, Q, \hat q) + \beta v(\hat q, H(Q) )   \} $$
+
+\medskip
+
+\noindent{\bf 5.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q) q- \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \hat Q  = H(Q)  $$
+Assume that the following Bellman equations are satisfied: %in terms of problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q,Q)) + \beta v\left(h(q,Q), H(Q)\right) = \max_{\hat q} \{\pi(q, Q, \hat q) + \beta v(\hat q, H(Q) )   \} $$
+
+\noindent Please interpret what it means to impose the condition
+
+$$ h(Q, Q) = H(Q) .$$
+
+
+
+\bye
+

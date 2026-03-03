@@ -1,0 +1,49 @@
+Hi Emily,
+
+ 
+
+Thank you for all your and Liz’s help with RMT4.
+
+ 
+
+Liz’s corrections include many good suggestions for improving the layout from earlier editions such as fixing irregular spacing between paragraphs and premature page breaks, and repositioning figures. Though, given the present tight deadline, I would recommend that we scale back the ambitions for RMT4 to the layout that have already appeared in RMT3. (But we should definitely shoot for all those good improvements in RMT5 and, if Tom agrees, I like your suggestion to then modify the present book classification as “Author prepared”.)
+
+ 
+
+For your information, we are using TeX “macros” that we got from colleagues, so the above examples of Liz’s corrections should be most efficiently handled by making changes to those macros, but I am afraid that Tom and I might not be the best persons for such fine tuning.
+
+ 
+
+With those limitations in mind and if you agree with the scaled-down ambition for the layout in RMT4, we should now focus on the absolutely necessary corrections.
+
+ 
+
+While we’ll have to await Tom’s return for making text changes in his master copies of the TeX files, I suggest that we already now fix the issues with the figures. Here follows three ideas that might be worth pursuing with the help of your technical staff.
+
+ 
+
+But first, please note that all new figures in RMT4 are in black and white. So the figures in color were already included in RMT3. I have counted to a total of 17 figures in color in RMT4 in chapters 2, 6, 11, 14, and 23 (former chapter 22 in RMT3). I suspect that most of those figures were created by Tom’s former PhD students and it is not sure if Tom has retained the students’ computer programs. Hence, we might have to convert the current color figures into black and white. (But the good news are that your former colleague at MIT Press successfully did so in RMT3.)
+
+ 
+
+(1)    Attached is one of those 17 problematic figures, namely figure 6.5.1. The original color version is in file neal1_newa.eps. A grayscale version appears in neal1_newa_gray.eps that I produced with the help of the free service at the web site  http://www.tlhiv.org/grayscale/
+
+This grayscale figure was then used to recompile the RMT4 manuscript (based on my dated version of RMT4) and the resulting page with that figure can be seen in file RMT4_figure_6_5_1.pdf. Please check if this conversion of figure 6.5.1 works for printing RMT4. If so, we can proceed to convert the other 16 color figures in the same way.
+
+(2)    Alternatively, we can proceed with your instructions below to make a conversion of the entire RMT4 pdf. If we want to try that route, perhaps you can convert the latest RMT4 version that Tom sent you, and I can then help to see if something got lost in the conversion process. If successful, we would be reassured that this alternative works, and we would stand ready to do that conversion again when Tom has made any last critical changes to the text in his master TeX file.
+
+(3)    If none of these work (perhaps because of the second problem that you mentioned about fonts not being embedded in some figures), I wonder if it would be possible to cut-and-paste images of figures from the RMT3 pdf to the present RMT4 pdf? It would be great if we could capitalize on everything working so well in that earlier edition RMT3.
+
+ 
+
+These were just some ideas on how we might proceed. I am sure that if we can fix the figures, it will be straightforward to handle any remaining absolutely critical changes to the text in RMT4 (while postponing the more ambitious overhaul of the layout to RMT5).
+
+ 
+
+Finally, it is now paramount that we hear back from the design department on the cover. It would be a pity if they end up being the bottle neck instead of our present troubles to fix the manuscript. So please ask the designer to send me a hard copy of the cover as soon as possible. Attached is the email with my mailing address.
+
+ 
+
+Thank you and best wishes,
+
+Lars 

@@ -1,0 +1,25 @@
+The Riesz representation theorem is very elegant. It has a flavor of almost a]
+ more complicated version of something like the mean value theorem. However, something isn't clear
+ to me in the Riesz representation argument in the Appendix A. I think there is a skipped step.
+
+You show the uniqueness of an element of N_complement, where N is the nullspace of the linear function.]
+ However, you haven't demonstrated that N_complement is indeed X\N_complement, and therefore that there exists 
+ such an element if X!= N_complement.  I think intuitively this is clear, since by linearity of \phi, if \phi(y) !=0, 
+ then clearly it contains at least some additive components that are orthogonal, but this is not immediately obvious. 
+ You also technically haven't shown that the nullspace is additively closed, only topologically closed, but I
+ think this is easy enough for the reader to follow from the property of inner product spaces <x+y,z>= <x,z>+<y,z>.
+
+Secondly, something also doesn't make sense. You argue by the linear *independence* of x_1, x_2 we can find some
+ a, b s.t. a\phi(x_1) -b\phi(x_2)=0. This holds true I think even if x_1, x_2 are linearly dependent, since \phi is a
+ linear functional that goes to the reals, no? We can always find a trivial a,b s.t. b=\phi(x_1)/\phi(x_2), a= 1, that
+ satisfies this. This does, however, imply the contradiction you mention.
+
+Also, there is a typo in the final line:
+
+It should read:
+\phi(y)= \phi(x_1)^2/<x_1,x_1>.
+
+I think everything else is great though.
+
+Best,
+Brandon

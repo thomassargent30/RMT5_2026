@@ -1,0 +1,58 @@
+to thomas.sargent, Lars, Emily 
+Hi Tom and Lars,
+
+ 
+
+I’ve uploaded the page proofs with my corrections to Dropbox: https://www.dropbox.com/s/xjikbd217esfhcs/11788_001p_EA.pdf?dl=0. I realized midway through that I was using the first version of the proofs, so the copyright page is out of date, but I know you’ve fixed that already.
+
+ 
+
+Don’t be alarmed at the number; it is a very long book, after all! And I would have done all of this much sooner if I’d realized the
+ technical stuff was going to hold us up for this long. Obviously you can’t make all of these changes by Tuesday—Emily, right now the 
+ books are due in the warehouse in mid-July; if I give them two weeks max to make corrections (Friday, April 13), will that have a hugely 
+ negative impact on books being available for the fall semester?
+
+ 
+
+That aside, these are some of the main things I flagged:
+
+ 
+
+1.       Every new element (TOC, acknowledgments, preface, chapters, part openers, refs, index, etc.) needs to start on a right-side
+         page and blank pages should be added where necessary to make that happen. I’ve inserted some blank pages just so you can see
+		 what the correct pagination should look like (for comparison). I also moved the dedication to the right-side page facing the
+   		 copyright page, since that’s where it’s usually placed in our other books.
+
+2.       Lists seem to be handled inconsistently; some list items are indicated with Arabic numbers, while others use lowercase Roman numerals or lowercase letters. I think using letters for the exercise sublists is fine, but it would be good to stick to a consistent format in the main text. The indentation of lists is inconsistent as well; generally we prefer a flush-and-hang style (as seen in the list in this email).
+
+3.       Paragraph spacing and space between elements varies from chapter to chapter.
+
+a.       Anytime you see the final line of a paragraph and the first line of the next paragraph highlighted in the PDF, it’s because it the paragraph spacing seemed to be too wide. There shouldn’t be any additional space before or after regular text paragraphs unless they come before or after an equation, proof, or definition (and so on). Some of the spacing may just appear too wide because of my screen size, so if that’s the case, you can ignore those highlights.
+
+b.       The amount of space between a chapter heading and the first paragraph of the chapter is not always consistent.
+
+c.       The amount of space between the last line of a figure caption and the main text is not always consistent.
+
+4.       In general, I think there’s too much space above and below your 1- and 2-heads, which results in a lot of unnecessary empty space at the end of pages.
+
+a.       As long as you can fit the heading and two lines of text at the bottom of a page, you don’t have to start the section on a new page.
+
+b.       I think 1.5–2 lines of space before 1- and 2-heads is sufficient. I don’t think space is needed after a 2-head, but if you feel differently, we can leave it as is.
+
+5.       I noticed some instances where a figure is in the middle of a page and there is text above and below it; I think this is confusing to the eye (especially because the spacing below figure captions is sometimes too tight). I would keep figures at the top or bottom of the page—I think the bottom would be ideal to avoid any confusion between the caption and main text, but I leave that up to you.
+
+6.       The position of equation numbers varies between the main text and the exercises; all equation numbers should be placed to the right of any display equations.
+
+7.       I noticed a few places where a decimal was missing a leading zero, but I saw other places where they were present, and all of the figures include them, so you may want to keep an eye out for that.
+
+8.       I flagged some orphan/widow lines and short lines (<6 characters) that should be run back or run over.
+
+9.       The numbering of sections seems a little odd to me. For example, the exercises are numbered in the TOC, but not in the chapters themselves. Also, on second glance, I noticed that whenever there’s an appendix to a chapter, even though it’s lettered, it’s treated like a number and the exercises skip to the next number—you should either assign a number to the appendices and call it “Appendix A/B/etc.: Whatever the current heading is” and add section numbers for all of the exercises (which I’ve marked) OR delete the section number for the exercises given in the TOC. (I prefer the first option myself.) It doesn’t really make sense as is.
+
+ 
+
+Let me know if you have any questions.
+
+ 
+
+Thanks,

@@ -1,0 +1,559 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 65001
+
+\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{jeep}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=65001}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Monday, June 17, 2002 11:08:57}
+%TCIDATA{LastRevised=Wednesday, June 13, 2012 13:27:16}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\JEEP -  A General Purpose Vehicle">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{Counters=arabic,1}
+%TCIDATA{AllPages=
+%H=36
+%F=36
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}{Case}
+\newtheorem{claim}{Claim}
+\newtheorem{conclusion}{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{solution}{Solution}
+\newtheorem{summary}{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\newenvironment{question}[1][Question]{}{}
+\newenvironment{answer}[1][Answer]{}{}
+\newenvironment{answerspace}[1][Answer space]{}{}
+\newenvironment{draftnote}[1][Draft note]{}{}
+
+\input{defs_coreexam}
+\pagestyle{plain}
+
+\begin{document}
+
+
+\thispagestyle{empty}\newpage
+
+\begin{equation*}
+\begin{tabular}{cccccccccccccccl}
+\begin{tabular}{l}
+{\small Macro Theory} \\
+{\small August 2018}%
+\end{tabular}
+&  &  &  &  &  &  &  &  &  &  &  &  &  &  &
+\begin{tabular}{l}
+{\small New York University} \\
+\end{tabular}%
+\end{tabular}%
+\end{equation*}%
+\begin{eqnarray*}
+&& \\
+&&
+\end{eqnarray*}
+
+\begin{center}
+{\large Make-Up Qualifier Exam}
+\end{center}
+
+\begin{eqnarray*}
+&& \\
+&&
+\end{eqnarray*}%
+\noindent If in order to answer a question you think that you need to make
+assumptions in addition to those provided in the statements, make them, but
+be sure to explain why those additional assumptions are needed.
+
+\bigskip
+
+\noindent Feel free to use, without proof, any theorem that was covered in
+class or in the problem sets. But if you are appealing to any of these
+theorems, make sure to: (\textit{a}) state the theorem, and (\textit{b})
+show that the hypotheses of the theorem are satisfied.
+
+%\bigskip
+%\noindent
+%The last page of the exam contains background material that might be
+%useful when solving some questions.
+
+
+\bigskip
+
+\noindent This is a four-hour exam. It will be graded out of 400 points. The
+points for each question are indicated in brackets. Allocate your time
+efficiently. Good luck.
+
+\newpage
+
+% ==========================================================================
+
+\noindent \textbf{Question 1} (100 points)\medskip
+
+\setcounter{section}{1}
+
+\noindent We study the decision problem of an infinitely lived firm that needs to hire
+one worker to produce output. At the beginning of each period, a firm that
+wants to engage in hiring must pay a search cost $c\geq 0$ and then randomly
+meets a worker who is characterized by his productivity $a$. Productivity is
+drawn from a distribution with cdf $F\left( a\right) $, and it is a fixed
+characteristic of the worker. $F\left( a\right) $ is is continuous with
+bounded support $\left[ 0,\bar{a}\right] $, with $\bar{a}>c$.\ If employed,
+the worker produces output $y=a$.
+
+If the firm decides to hire the worker, he immediately starts working, and
+the firm leaves the search market. The firm pays the worker a wage $w\in
+\left( 0,\bar{a}\right) $ in each period, irrespective of his productivity,
+and keeps profit $y-w$. The firm discounts profits at rate $\beta \in \left(
+0,1\right) $. After each period of employment, the worker may randomly
+separate from the firm---he stays with probability $\rho \in \left[ 0,1%
+\right] $ and leaves with probability $1-\rho $. If the worker leaves, the
+firm terminates its operation.
+
+If the firm decides not to hire the worker, it has to wait until the next
+period, pay the search cost again and repeat the process.
+
+\begin{question}
+\textbf{[5 points]} Denote $V\left( a\right) $ the value of a firm that met
+a worker with productivity $a$. Formulate the Bellman equation for the value
+of the firm.
+
+\begin{answer}
+Assuming that the firm wants to continue searching in the next period, we
+have%
+\begin{equation*}
+V\left( a\right) =\max_{\left\{ \text{accept, reject}\right\} }\left\{
+\sum_{t=0}^{\infty }\left( \beta \rho \right) ^{t}\left( a-w\right) ,-\beta
+c+\beta \int_{0}^{\bar{a}}V\left( a^{\prime }\right) dF\left( a^{\prime
+}\right) \right\} .
+\end{equation*}
+\end{answer}
+\end{question}
+
+\begin{question}
+\textbf{[5 points]} Prove that the optimal decision of the firm is
+characterized by a cutoff rule.
+
+\begin{answer}
+Again, assuming that the worker wants to search, we can rewrite the Bellman
+equation as%
+\begin{equation*}
+V\left( a\right) =\max_{\left\{ \text{accept, reject}\right\} }\left\{ \frac{%
+a-w}{1-\beta \rho },-\beta c+\beta \int_{0}^{\bar{a}}V\left( a^{\prime
+}\right) dF\left( a^{\prime }\right) \right\} .
+\end{equation*}%
+Since the first term on the right-hand side is linearly increasing in $a$,
+and the second is constant, there is a threshold $a^{\ast }$ such that if $%
+a>a^{\ast }$ strictly prefers to hire the worker.
+\end{answer}
+\end{question}
+
+\begin{question}
+\textbf{[10 points]} If a firm decided to search for a worker in this period
+and decided not to hire, will it want to search next period again? Prove
+your answer.
+
+\begin{answer}
+The decision to engage in searching is given by the problem%
+\begin{equation}
+\bar{V}=\max_{\left\{ \text{search, not search}\right\} }\left\{
+-c+\int_{0}^{\bar{a}}V\left( a\right) dF\left( a\right) ,0\right\}
+\label{eq:Vbar_ex_ante_search}
+\end{equation}%
+where $\bar{V}$ is the value of the firm before it enters the search market
+(it is the value of option to search). Since the terms on the right-hand
+side are constant, the decision is time invariant.
+\end{answer}
+\end{question}
+
+\begin{question}
+\textbf{[20 points]} Characterize the threshold $\bar{c}$ for the search
+cost such that firms stop searching for workers. How does the threshold $%
+\bar{c}$ depend on the wage $w$ and on the discount rate parameter $\beta $?
+
+\begin{answer}
+We can now write the ex ante value of search as a function of the search
+cost parameter, $\bar{V}\left( c\right) $. The first term in (\ref%
+{eq:Vbar_ex_ante_search}) is decreasing in $c$, since both $-c$ and $V\left(
+a\right) $ are decreasing in $c$, it is positive for $c=0$ and negative for
+sufficiently high $c$. Therefore, there exists a $\bar{c}$ such that if $c>%
+\bar{c}$, firms do not search, and search when $c<\bar{c}$.
+
+Further, $V\left( a\right) $ (the value of a searching firm that met worker
+with productivity $a$) is decreasing in $w$ and increasing in $\beta $. The
+first term in (\ref{eq:Vbar_ex_ante_search}) is therefore decreasing in $w$
+and increasing in $\beta $, and hence $\bar{c}$ is decreasing in $w$ and
+increasing in $\beta $.
+\end{answer}
+\end{question}
+
+\begin{question}
+\textbf{[20 points]} Assume that there is a fixed unit mass of firms that
+engage in search (i.e., firms that have been successful in the previous
+period are replaced by new entrants in the search market). We can define the
+labor demand curve in this model to be the relationship between the market
+wage $w$ and the number of new workers hired by firms in a given period.
+Show that the labor demand curve is decreasing in $w$.
+
+\begin{answer}
+The number of hired workers in each period depends on the productivity
+cutoff and is given by $1-F\left( a^{\ast }\right) $. Hence we need to
+establish the dependence of $a^{\ast }$ on $w$. Notice that we have%
+\begin{equation*}
+V\left( a\right) =\left\{
+\begin{array}{cc}
+\frac{a-w}{1-\beta \rho } & \text{if }a\geq a^{\ast } \\
+V\left( a^{\ast }\right) =\frac{a^{\ast }-w}{1-\beta \rho } & \text{if }%
+a\leq a^{\ast }%
+\end{array}%
+\right.
+\end{equation*}%
+The indifference condition that determines the cutoff is therefore given by%
+\begin{eqnarray*}
+\frac{a^{\ast }-w}{1-\beta \rho } &=&-\beta c+\beta \int_{0}^{\bar{a}%
+}V\left( a^{\prime }\right) dF\left( a^{\prime }\right) =-\beta c+\beta
+\int_{0}^{a^{\ast }}V\left( a^{\prime }\right) dF\left( a^{\prime }\right)
++\beta \int_{a^{\ast }}^{\bar{a}}V\left( a^{\prime }\right) dF\left(
+a^{\prime }\right)  \\
+&=&-\beta c+\beta \frac{a^{\ast }-w}{1-\beta \rho }+\beta \int_{a^{\ast }}^{%
+\bar{a}}\left[ V\left( a^{\prime }\right) -V\left( a^{\ast }\right) \right]
+dF\left( a^{\prime }\right)  \\
+&=&-\beta c+\beta \frac{a^{\ast }-w}{1-\beta \rho }+\frac{\beta }{1-\beta
+\rho }\int_{a^{\ast }}^{\bar{a}}\left[ a^{\prime }-a^{\ast }\right] dF\left(
+a^{\prime }\right)
+\end{eqnarray*}%
+and hence%
+\begin{equation*}
+\frac{1-\beta }{1-\beta \rho }\left( a^{\ast }-w\right) +\beta c=\frac{\beta
+}{1-\beta \rho }\int_{a^{\ast }}^{\bar{a}}\left[ a^{\prime }-a^{\ast }\right]
+dF\left( a^{\prime }\right) .
+\end{equation*}%
+The left-hand side, as a function of $a^{\ast }$ is linearly increasing and
+starts negative at zero. The right-hand side is strictly decreasing, starts
+positive and ends at zero at $a^{\ast }=\bar{a}$. Hence the two curves
+intersect exactly once, determining the cutoff point $\bar{w}$. Moreover, an
+increase in $w$ shifts the curve on the left-hand side down, hence
+increasing the cutoff productivity level $a^{\ast }$. Hence a higher $w$
+leads to a (strict) decrease in the number of hired workers $1-F\left(
+a^{\ast }\right) $, and the labor demand curve is decreasing.
+\end{answer}
+\end{question}
+
+\begin{question}
+\textbf{[20 points]} Imagine that at time $t=0$, the economy starts with
+zero employed workers. Denote $e_{t}$ the number of workers who work in
+period $t$. Formulate the law of motion for employment $e_{t}$ in this
+economy. How does $e_{t}$ behave as $t\rightarrow \infty $?
+
+\begin{answer}
+We have%
+\begin{equation*}
+e_{t+1}=\rho e_{t}+\left( 1-F\left( a^{\ast }\right) \right)
+\end{equation*}%
+where $\rho $ is the staying rate. Since $1-F\left( a^{\ast }\right) $ is a
+constant, $e_{t}$ will converge to the limit%
+\begin{equation*}
+\bar{e}=\lim_{t\rightarrow \infty }e_{t}=\frac{1-F\left( a^{\ast }\right) }{%
+1-\rho }\text{.}
+\end{equation*}%
+The rate of convergence is determined by%
+\begin{eqnarray*}
+e_{t+1}-\bar{e} &=&\rho \left( e_{t}-\bar{e}\right) +\left( 1-F\left(
+a^{\ast }\right) \right) -\left( 1-\rho \right) \bar{e} \\
+&=&\rho \left( e_{t}-\bar{e}\right)
+\end{eqnarray*}%
+and hence the rate of convergence is $\rho $.
+\end{answer}
+\end{question}
+
+\begin{question}
+\textbf{[20 points]} Consider an alternative economy in which the government
+taxes profits $y-w$ at rate $\tau \in \left[ 0,1\right] $ (and firms cannot
+deduct search cost as an expense). Imagine both economies start with zero
+employment at time $t=0$. Compare their employment levels at a given time $t$%
+.
+
+\begin{answer}
+Assume for now that the tax rate is sufficiently low such that firms are
+willing to pay the search cost. Denote $a_{\tau }^{\ast }$ the cutoff for
+the productivity level when the tax rate is $\tau $ and $V_{\tau }$ the
+associated value function. Then the cutoff is determined by the indifference
+condition%
+\begin{equation*}
+\frac{\left( 1-\tau \right) \left( a^{\ast }-w\right) }{1-\beta \rho }%
+=-\beta c+\beta \int_{0}^{\bar{a}}V_{\tau }\left( a^{\prime }\right)
+dF\left( a^{\prime }\right) .
+\end{equation*}%
+Further, we have%
+\begin{eqnarray*}
+\frac{\left( 1-\tau \right) \left( a^{\ast }-w\right) }{1-\beta \rho }
+&=&-\beta c+\beta \int_{0}^{a_{\tau }^{\ast }}V_{\tau }\left( a^{\prime
+}\right) dF\left( a^{\prime }\right) +\beta \int_{a_{\tau }^{\ast }}^{\bar{a}%
+}V_{\tau }\left( a^{\prime }\right) dF\left( a^{\prime }\right)  \\
+&=&-\beta c+\beta \frac{\left( 1-\tau \right) \left( a^{\ast }-w\right) }{%
+1-\beta \rho }+\beta \int_{a_{\tau }^{\ast }}^{\bar{a}}\left[ V_{\tau
+}\left( a^{\prime }\right) -V_{\tau }\left( a^{\ast }\right) \right]
+dF\left( a^{\prime }\right)  \\
+&=&-\beta c+\beta \frac{\left( 1-\tau \right) \left( a^{\ast }-w\right) }{%
+1-\beta \rho }+\beta \frac{1-\tau }{1-\beta \rho }\int_{a_{\tau }^{\ast }}^{%
+\bar{a}}\left[ a^{\prime }-a_{\tau }^{\ast }\right] dF\left( a^{\prime
+}\right)
+\end{eqnarray*}%
+and hence%
+\begin{equation*}
+\frac{\left( 1-\beta \right) \left( a^{\ast }-w\right) }{1-\beta \rho }+%
+\frac{\beta c}{1-\tau }=\frac{\beta }{1-\beta \rho }\int_{a_{\tau }^{\ast
+}}^{\bar{a}}\left[ a^{\prime }-a_{\tau }^{\ast }\right] dF\left( a^{\prime
+}\right)
+\end{equation*}%
+Repeating the argument from a previous exercise, treating both sides as
+functions of $a_{\tau }^{\ast }$, an increase in $\tau $ shifts the function
+on the left-hand side upward, and hence the intersect (optimal $a_{\tau
+}^{\ast }$) decreases. As a consequence, the number of employed workers $%
+1-F\left( a_{\tau }^{\ast }\right) $ increases, as firms become less
+selective and reject less workers. The reason is that with the tax, search
+costs are relatively higher compared to after tax profits, so firms want to
+avoid paying the cost repeatedly (the option value of waiting is lower). In
+such an economy with tax, employment $e_{t}$ will be higher at any given
+time $t$ compared to an economy without tax.
+
+However, when the tax increases so much that firms find it optimal not to
+search,%
+\begin{equation*}
+\bar{V}_{\tau }=\max_{\left\{ \text{search, not search}\right\} }\left\{
+-c+\int_{0}^{\bar{a}}V_{\tau }\left( a\right) dF\left( a\right) ,0\right\}
+\end{equation*}
+(see equation (\ref{eq:Vbar_ex_ante_search})), then employment in the
+economy with tax remains at zero forever.
+\end{answer}
+\end{question}
+
+
+
+\newpage
+
+% ==========================================================================
+
+\noindent \textbf{Question 2} (100 points)\medskip
+
+\noindent One share of a risk-free asset pays a constant dividend $d >0$ at each time $t = 0, 1, 2, \ldots$.
+The asset is traded by two types of risk neutral investors that we call  `temporarily odd' and `temporarily even'. There are equal numbers of the two types.
+Both types are infinitely lived.  There is one share of the asset for each pair of agents.  Each type of agent has ``deep pockets'' and can afford to hold the total supply of the asset.
+A temporarily odd investor
+has a sequence of one-period discount factors $\beta_o, \beta_e, \beta_o, \beta_e, \ldots $, while a temporarily  even investor
+has a sequence of one-period discount factors   $\beta_e, \beta_o, \beta_e,  \beta_o, \ldots $, where $\beta_e > \beta_o$
+and $\beta_i \in (0,1)$ for $i=o, e$. For example, if a temporarily odd investor were to hold the asset forever, he would value
+it at $p_o = d( 1 + \beta_o + \beta_o \beta_e + \beta_o \beta_e \beta_o + \cdots )$.
+
+\medskip
+\noindent {\it Fundamental values}
+
+\medskip
+\noindent   Note that if he were to hold it forever, a temporarily odd investor would value the asset at
+$$ p_o = d + \beta_o p_e$$
+where
+$$ p_e = d + \beta_e p_o .$$
+If he were to hold it forever, a temporarily even investor would value the asset at
+$p_e$.
+
+\medskip
+\noindent {\bf a.} Verify that $p_o = {\frac{1 + \beta_o}{1-\beta_e \beta_o}} d $ and
+$ p_e = {\frac{1 + \beta_e}{1-\beta_e \beta_o}} d $.
+
+\medskip
+\noindent {\bf b.} Verify that $p_e > p_o$.
+
+
+\medskip
+\noindent{\bf c.} Please imagine a  ``perpetually even agent'' who has a constant one-period discount factor equal to
+$\beta_e$.  (There is actually no perpetually even agent in our model, so this is just a mental exercise.)  Please verify
+that a perpetually even agent would pay $\bar p_e = {\frac{1}{1-\beta_e}}d $ for the asset.
+
+
+
+\medskip
+\noindent {\bf d.}  Now assume that the  two actual types of agents, each of which oscillates between being temporarily odd and temporarily even,  trade the asset
+under the following rules. They cannot short sell the asset, so their holdings of the asset must be nonnegative.  Ownership of the asset at the beginning of a period entitles the owner to sell the asset ``cum dividend'', meaning that the buyer
+receives the current dividend and the right to sell the asset at the beginning of the next period.
+Argue  that the agent who owns  the asset each period after trading  is the one who is temporarily even in that period.  Write a Bellman equation for the equilibrium price
+of the asset under that assumption.
+At what price does the asset trade? What is trading volume each period?  Please describe who trades what when.
+
+\medskip
+\noindent{\bf e.}  How does the equilibrium price of the asset compare with the amount that would be paid by a perpetually even agent?
+
+\medskip
+\noindent{\bf f.} How does the equilibrium price of the asset compare with the personal value  assigned  to the stream of dividends  by each type of agent?
+{\bf Hint:} Please verify  that ${\frac{\bar p_e}{p_e}} = {\frac{ 1- \beta_o \beta_e}{1 - \beta_e^2}} >1$ and tell how this calculation bears on the answer.
+
+\medskip
+\noindent{\bf g.}  Please explain whether you agree or disagree with the following statement.  ``The asset trades for more than anyone personally thinks that the asset's dividend stream is worth because
+acquiring the asset now gives a purchaser this period  the option to sell it next period to someone who is more patient than  he or she will be.''
+
+
+
+\newpage
+
+% ==========================================================================
+
+\noindent \textbf{Question 3} (100 points)\medskip
+
+\noindent\ Two notable trends in the macro data are a declining labor share
+of income and a declining real interest rate. Analyze this issue in the
+context of the following model..
+
+\qquad Households preferences:
+
+\begin{center}
+$E_{0}\left\{ \sum_{t=0}^{\infty }\beta ^{t}\left[ \log C_{t+i}-\frac{1}{%
+1+\varphi }L_{t+i}^{1+\varphi }\right] \right\} $
+\end{center}
+
+\qquad Budget constraint:
+
+\begin{center}
+$C_{t}=w_{t}L_{t}+\Pi _{t}-\frac{\left( \frac{1}{R_{t+1}}\right)
+B_{t+1}-B_{t}}{P_{t}}$
+\end{center}
+
+\qquad Final goods output
+
+\begin{center}
+$Y_{t}=\left[ \int_{0}^{1}Y_{t}\left( f\right) ^{\frac{\varepsilon _{t}-1}{%
+\varepsilon _{t}}}df\right] ^{\frac{\varepsilon _{t}}{\varepsilon _{t}-1}}$
+\end{center}
+
+\qquad Intermediate goods output
+
+\begin{center}
+$Y_{t}\left( f\right) =A L_{t}(f)$
+\end{center}
+
+\qquad First order condition for labor demand
+
+\begin{center}
+$A=(1+\mu _{t})w_{t}$
+\end{center}
+
+\qquad Markup (under flexible prices)
+
+\begin{center}
+$\frac{1}{1-1/\varepsilon _{t}}=1+\mu _{t}$
+\end{center}
+
+\qquad Resource constraint
+
+\begin{center}
+$Y_{t}=C_{t}$
+\end{center}
+
+\qquad Zero net supply of bonds in equilibrium
+
+\begin{center}
+$B_{t}=0$
+\end{center}
+
+with $0<\beta <1,$ $\varepsilon >1$ and $\varphi >0.$
+
+i. \ \ What are the household's first order conditions for
+consumption/saving and for labor supply?. Also, briefly, what is the
+intuition for the intermediate goods producer's first order condition for
+labor.?\bigskip
+
+ii. \ Given i, collapse the flexible price model into three equations for $Y$
+, $L_{t}$ and $R_{t+1}$(Assume a symmetric equilibrium:\ i.e. $Y_{t}\left(
+f\right) =Y_{t}$ and $L_{t}(f)=L_{t}$)$.$\bigskip
+
+iii. Now solve for the steady state values of $Y$ , $L_{t}$ and $R_{t+1}$,
+given $\varepsilon $ is the steady state value of $\varepsilon _{t}.$ Also
+find the steady state value of the wage $w$ and the labor share $wL/Y.$%
+\bigskip
+
+iv. Now suppose that the economy moves to a new steady state with a lower
+labor share and a lower real interest rate. What primitive parameters of the
+model need to change and how do they need to change in order to account for
+the new steady state?
+
+
+\newpage
+
+
+% ==========================================================================
+
+\noindent \textbf{Question 4} (100 points)\medskip
+
+\noindent Consider the following environment. Time is
+discrete and the horizon infinite; every period is indexed by $t\in \mathbb{T%
+}\equiv \left\{ 0,1,...\right\} $. There is a countably infinite number of
+agent types, also indexed by $t\in \mathbb{T}$, and a large number (a unit
+continuum) of agents of each type. There is a countably infinite number of
+consumption goods, indexed by $s\in \mathbb{T}$. Let $c_{t}\left( s\right) $
+denote the quantity of good $s$ consumed by agent of type $t$, and let $%
+\boldsymbol{c}_{t}\equiv \left\{ c_{t}\left( s\right) \right\} _{s\in
+\mathbb{T}}$. Each agent of type $t\in \mathbb{T}$, ranks consumption
+bundles according to the following utility function
+\begin{equation*}
+U\left( \boldsymbol{c}_{t}\right) =c_{t}\left( t\right) +c_{t}\left(
+t+1\right) .
+\end{equation*}%
+This is a pure-endowment economy. Let $\omega _{t}\left( s\right) $ denote
+the quantity of good $s$ that an agent of type $t$ is endowed with, and let $%
+\boldsymbol{\omega }_{t}\equiv \left\{ \omega _{t}\left( s\right) \right\}
+_{s\in \mathbb{T}}$, with%
+\begin{equation*}
+\omega _{t}\left( s\right) =\mathbb{I}_{\left\{ t=s\right\} },
+\end{equation*}%
+where $\mathbb{I}_{\left\{ t=s\right\} }$ is an indicator function that
+equals $1$ if $t=s$, and $0$ otherwise.
+
+\begin{description}
+\item[\textbf{(1)} ] [20 points] Define a competitive equilibrium with
+Arrow-Debreu time-0 trading for this economy.
+
+\item[\textbf{(2) }] [20 points] Prove that the prices $\left\{ p_{t}^{\ast
+}\right\} _{t\in \mathbb{T}}$, with $p_{t}^{\ast }=1$ for all $t$, support
+the allocation $\left\{ \boldsymbol{c}_{t}^{\ast }\right\} _{t\in \mathbb{T}%
+}=\left\{ c_{t}^{\ast }\left( s\right) \right\} _{s,t\in \mathbb{T}}$, with $%
+c_{t}^{\ast }\left( s\right) =\mathbb{I}_{\left\{ s=t\right\} }$ as a
+competitive equilibrium.
+
+\item[\textbf{(3)} ] [20 points] Define Pareto optimality in the context of
+this particular environment.
+
+\item[\textbf{(4) }] [40 points] Prove one of the following statements:
+
+\begin{description}
+\item[\textbf{(a)} ] The competitive equilibrium described in part (2) is
+Pareto optimal.
+
+\item[\textbf{(b) }] The competitive equilibrium described in part (2) is
+not Pareto optimal.
+\end{description}
+\end{description}
+
+\end{document}

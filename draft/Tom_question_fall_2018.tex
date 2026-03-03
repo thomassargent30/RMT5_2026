@@ -1,0 +1,90 @@
+
+\input texsis
+\book
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\centerline{\bf Tom Question -- number  2 on qualifier}
+\medskip
+
+
+
+\noindent{\bf 2.} \quad 
+\medskip
+
+
+\noindent One share of a risk-free asset pays a constant dividend $d >0$ at each time $t = 0, 1, 2, \ldots$.  
+The asset is traded by two types of risk neutral investors that we call  `temporarily odd' and `temporarily even'. There are equal numbers of the two types.
+Both types are infinitely lived.  There is one share of the asset for each pair of agents.  Each type of agent has ``deep pockets'' and can afford to hold the total supply of the asset.  
+A temporarily odd investor
+has a sequence of one-period discount factors $\beta_o, \beta_e, \beta_o, \beta_e, \ldots $, while a temporarily  even investor
+has a sequence of one-period discount factors   $\beta_e, \beta_o, \beta_e,  \beta_o, \ldots $, where $\beta_e > \beta_o$
+and $\beta_i \in (0,1)$ for $i=o, e$. For example, if a temporarily odd investor were to hold the asset forever, he would value
+it at $p_o = d( 1 + \beta_o + \beta_o \beta_e + \beta_o \beta_e \beta_o + \cdots )$.    
+
+\medskip
+\noindent {\it Personal  valuation of dividend stream}
+
+\medskip
+\noindent   Note that if he were to hold it forever, a temporarily odd investor would value the asset at
+$$ p_o = d + \beta_o p_e$$
+where 
+$$ p_e = d + \beta_e p_o .$$
+If he were to hold it forever, a temporarily even investor would value the asset at 
+$p_e$.  
+
+\medskip
+\noindent {\bf a.} Verify that $p_o = {\frac{1 + \beta_o}{1-\beta_e \beta_o}} d $ and
+$ p_e = {\frac{1 + \beta_e}{1-\beta_e \beta_o}} d $.
+
+\medskip
+\noindent {\bf b. } Verify that $p_e > p_o$.
+
+
+\medskip
+\noindent{\bf c.} Please imagine a  ``perpetually even agent'' who has a constant one-period discount factor equal to 
+$\beta_e$.  (There is actually no perpetually even agent in our model, so this is just a mental exercise.)  Please verify
+that a perpetually even agent would pay $\bar p_e = {\frac{1}{1-\beta_e}}d $ for the asset.    
+
+
+
+\medskip
+\noindent {\bf d.}  Now assume that the  two actual types of agents, each of which oscillates between being temporarily odd and temporarily even,  trade the asset
+under the following rules. They cannot short sell the asset, so their holdings of the asset must be nonnegative.  Ownership of the asset at the beginning of a period entitles the owner to sell the asset ``cum dividend'', meaning that the buyer
+receives the current dividend and the right to sell the asset at the beginning of the next period.
+Argue  that the agent who owns  the asset each period after trading  is the one who is temporarily even in that period.  Write a Bellman equation for the equilibrium price
+of the asset under that assumption.
+At what price does the asset trade? What is trading volume each period?  Please describe who trades what when. 
+
+\medskip
+\noindent{\bf e.}  How does the equilibrium price of the asset compare with the amount that would be paid by a perpetually even agent?
+
+\medskip
+\noindent{\bf f.} How does the equilibrium price of the asset compare with the personal value  assigned  to the stream of dividends  by each type of agent?
+{\bf Hint:} Please verify  that ${\frac{\bar p_e}{p_e}} = {\frac{ 1- \beta_o \beta_e}{1 - \beta_e^2}} >1$ and tell how this calculation bears on the answer.
+
+\medskip
+\noindent{\bf g.}  Please explain whether you agree or disagree with the following statement.  ``The asset trades for more than anyone personally thinks that the asset's dividend stream is worth because
+acquiring the asset now gives a purchaser this period  the option to sell it next period to someone who is more patient than  he or she will be.''
+
+
+
+
+
+
+\bye
+
+
+
+
+
+
+\bye

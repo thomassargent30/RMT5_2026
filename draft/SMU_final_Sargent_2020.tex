@@ -1,0 +1,112 @@
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{PhD Macroeconomics \hfil Singapore Management University}
+\line{February 2020\hfil Thomas Sargent}
+%
+% \noindent Macroeconomics Q1 \hfill NYUAD \\
+% Fall, 2019 \hfill Thomas Sargent
+% \vspace{.3cm}
+
+\centerline{\bf Final Examination}
+%\centerline{\bf Homework 3}
+
+
+\medskip
+
+\noindent{\bf Instructions:}  This is a closed book  exam.  100 points are possible. Each problem is worth 25 points.
+
+
+\medskip
+
+
+
+\noindent{\bf 1.}
+Assume that  $F(P)$ is a right continuous function mapping $[0, B]$ into $[0,1]$ and that the real scalar $c > 0$.  For what intertemporal problem is the following
+a Bellman equation?
+$$ v(p) = \min \{p, c + \int v(p') d F(p') \}$$
+
+\medskip
+
+
+
+\noindent {\bf 2.}  Assume that  $F$ is a right continuous function mapping $[0, B]$ into $[0,1]$ and that $\beta \in (0,1)$. For what intertemporal problem is the following a Bellman equation?
+$$ v(w) = \max\left\{ {w\over{1-\beta}},  \beta \int v(w') d F^2(w') \right\} $$
+
+
+
+\medskip
+\noindent{\bf 3.} Where $x \in {\bf R}$, $f >0, d >0 $,   $\beta \in (0,1)$, and $g \in  {\bf R} \rightarrow {\bf R}$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) =  \{- f x^2 - d(gx  - x)^2 + \beta v(gx) \} $$
+
+
+
+\medskip
+\noindent{\bf 4.}   Where $x \in {\bf R}$, $f >0, d >0 $, and   $\beta \in (0,1)$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) = \max_{x'} \{ - f x - d(x' - x)^2 + \beta v(x') \} $$
+
+\medskip
+\noindent {\bf 5.} Where $x \in {\bf R}$, $f >0, d >0 $, $\sigma >0$,    $\beta \in (0,1)$, and $\phi$ is a univariate normal density function for a random
+variable with mean $0$ and variance $1$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) = \max_{u} \{ - f x - d u^2 + \beta \int v(x +u + \sigma \epsilon) d \phi(\epsilon) \} $$
+
+
+
+\medskip
+
+
+
+\noindent {\bf 6.}  Assume that  $F$ and $G$ are distinct  right continuous functions each mapping $[0, B]$ into $[0,1]$, that $\pi \in (0,1)$, and  that $\beta \in (0,1)$. For what intertemporal problem is the following a Bellman equation?
+$$ v(w) = \max\left\{ {w\over{1-\beta}},  \beta [  \pi \int v(w') d F(w') + (1-\pi) \int v(w') d G(w') ]  \right\} $$
+
+
+\medskip
+
+\noindent{\bf 7.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q)  q - \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \eqalign{ \hat Q & = H(Q) \cr
+            \hat q & = h(q, Q) .} $$
+Please interpret the following Bellman equation in terms of a problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q,Q)) + \beta v\left(h(q,Q), H(Q)\right) .$$
+
+
+\medskip
+
+\noindent{\bf 8.}  There are two firms indexed by $i = 1,2$.  A subscript $i$ indicates a  firm $i$ object  and a subscript $-i$ indicates
+a firm {\it not\/} $i$ object (i.e, it indicates the other firm). Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 (q_1 + q_2)  \cr
+           \pi_i  &  = p q_i - \gamma(\hat q_i - q_i)^2 } $$
+so that
+$$ \pi(q_i, q_{-i}, \hat q_i) = [a_0 - a_1 (q_i + q_{-i}) ] q_i - \gamma (\hat q_i - q_i)^2 . $$
+Let the following Bellman equations hold for $i=1,2$:
+$$ v_i(q_i, q_{-i}) = \pi_i( q_i, q_{-i}, f_i(q_i, \hat q_i)) + \beta v_i(f_i(q_i, q_{-i}), f_{-i}(q_{-i}, q_i) )   $$
+where
+$$\eqalign{ \hat q_i & = f_i(q_i,  q_{-i}) \cr
+                  \hat q_{-i} & = f_{-i}( q_{-i}, q_i)} $$
+                  Please interpret the two functional equations for $ v_i(q_i, q_{-i})$ iin terms of problems  involving sequences $\{q_{1t}, q_{2t}\}_{t=0}^\infty$
+
+
+
+
+
+\bye
+
+
+\bye
+

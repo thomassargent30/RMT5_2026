@@ -1,0 +1,3567 @@
+This is TeX, Version 3.14159265 (MiKTeX 2.9.6210 64-bit) (preloaded format=tex 2017.3.8)  1 JUN 2018 15:54
+**./RMT4.tex
+(RMT4.tex (C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\texsis.tex
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSfonts.tex
+TeXsis fonts:
+\ttglue=\skip18
+ \mib, \scr,
+\scrfam=\fam8
+ 9pt, 10pt, 11pt, 12pt, 14pt, 16pt, 20pt, 24pt.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSmacs.tex
+TeXsis main macros.
+\footnum=\count26
+\@quoteflag=\count27
+\AThelp=\toks12
+\beginhelp=\toks13
+ Checkpoint/Restart.
+\checkpointout=\write0
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSinit.tex
+Initialization.
+\txsfile=\read0
+\@utohelp=\toks14
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXShead.tex
+Running Headlines.
+\headlineoffset=\dimen16
+\footlineoffset=\dimen17
+\BindingMargin=\dimen18
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSeqns.tex
+Equation numbering.
+\eqnum=\count28
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSprns.tex
+Auto-sizing of Parentheses.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSrefs.tex
+References and Citations.
+\refnum=\count29
+\@firstrefnum=\count30
+\@lastrefnum=\count31
+\@BadRefs=\count32
+\refindent=\dimen19
+\CiteType=\count33
+\reflistout=\write1
+\reflistin=\read1
+
+BIBTeX support for TeXsis (macros and patches) v 0.92)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSsects.tex
+Section and Chapter divisions.
+\chapternum=\count34
+\sectionnum=\count35
+\subsectionnum=\count36
+\subsubsectionnum=\count37
+\sectionskip=\skip19
+\subsectionskip=\skip20
+\sectionminspace=\dimen20
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXStags.tex
+Labels and tags.
+\auxfilein=\read2
+\auxfileout=\write2
+\@BadTags=\count38
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXStitle.tex
+Title Page macros.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSenvmt.tex
+Environments.
+\EnvTopskip=\skip21
+\EnvBottomskip=\skip22
+\EnvLeftskip=\skip23
+\EnvRightskip=\skip24
+\EnvDelt@skip=\skip25
+\@envDepth=\count39
+\enumDepth=\count40
+\enumcnt=\count41
+\@desbox=\box16
+\@desline=\box17
+\@glodeswd=\dimen21
+\@deslines=\count42
+\theoremnum=\count43
+\lemmanum=\count44
+\corollarynum=\count45
+\definitionnum=\count46
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSfmts.tex
+Layout macros.)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSfigs.tex
+Figures and Tables.
+\tabnum=\count47
+\fignum=\count48
+\fgout=\write3
+\tbout=\write4
+\figlist=\write5
+\tablelist=\write6
+\caplist=\write7
+\@capbox=\box18
+\@caplines=\count49
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSruled.tex
+\ncols=\count50
+\nrows=\count51
+\curcol=\count52
+\thinsize=\dimen22
+\thicksize=\dimen23
+\tablewidth=\dimen24
+\parasize=\dimen25
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSdcol.tex
+- Double column format.
+\colwidth=\dimen26
+\pagewidth=\dimen27
+\pageheight=\dimen28
+\rulewd=\dimen29
+\colmaxdepth=\dimen30
+\@bigColHeight=\dimen31
+\@saveSplitmax=\dimen32
+\@saveVsize=\dimen33
+\s@veskip=\skip26
+\doublecolskip=\skip27
+\@leftpluscenter=\dimen34
+\partialpage=\box19
+\botins=\insert252
+\NWins=\insert251
+\SWins=\insert250
+\NEins=\insert249
+\SEins=\insert248
+\LFins=\insert247
+\RFins=\insert246
+\@balncErrormsg=\toks15
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSletr.tex
+Letter Format,
+\headlineoffset=\dimen35
+\longindent=\dimen36
+\hdimphone=\dimen37
+\vdimphone=\dimen38
+\hdimdate=\dimen39
+\vdimdate=\dimen40
+\bigletterskip=\skip28
+\theaddress=\box20
+ with envelopes.
+\EnvlWidth=\dimen41
+\EnvlHeight=\dimen42
+\EnvlVoffset=\dimen43
+\Envout=\write8
+\fullHsize=\dimen44
+\fullVsize=\dimen45
+\lblHsize=\dimen46
+\lblVsize=\dimen47
+\lblVoffset=\dimen48
+\lblHoffset=\dimen49
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSmemo.tex
+Memo Format.
+\memoindent=\dimen50
+\firstheadoffset=\dimen51
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSconts.tex
+Table of Contents.
+\TOCout=\write9
+\TOCmargin=\skip29
+)
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSsymb.tex
+Extended math/physics symbols,
+\vbigd@men=\dimen52
+)
+> Trying to read in TXSsite.tex...
+(C:\Users\Tom\AppData\Roaming\MiKTeX\2.9\tex\texsis\base\TXSsite.tex
+Site dependent info.... Generic version.)
+TeXsis version 2.18 (21 April 2001) loaded.
+) (index.tex - indexing macros
+\beginhelp=\toks16
+\indexout=\write10
+) (robustin.tex
+\scfam=\fam9
+ 8pt,) (grafinp3.tex (psfig2.tex
+\@unused=\write11
+
+psfig/tex 1.8
+\fboxrule=\dimen53
+\fboxsep=\dimen54
+\ps@tempdima=\dimen55
+\ps@tempboxa=\box21
+\ps@stream=\read3
+\p@intvaluex=\dimen56
+\p@intvaluey=\dimen57
+)
+\captionsize=\dimen58
+) (RMT4.aux) ("C:\Program Files\MiKTeX 2.9\tex\generic\epsf\epsf.tex"
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read4
+\epsfframemargin=\dimen59
+\epsfframethickness=\dimen60
+\epsfrsize=\dimen61
+\epsftmp=\dimen62
+\epsftsize=\dimen63
+\epsfxsize=\dimen64
+\epsfysize=\dimen65
+\pspoints=\dimen66
+) (txssectsblack2.tex Section and Chapter divisions.
+\chapternum=\count53
+\sectionnum=\count54
+\subsectionnum=\count55
+\subsubsectionnum=\count56
+\sectionskip=\skip30
+\subsectionskip=\skip31
+\sectionminspace=\dimen67
+)
+\authorindexout=\write12
+\openout12 = `authblk.idx'.
+
+\matlabindexout=\write13
+\openout13 = `matlblk.idx'.
+
+ (blacktit3.tex [1]
+[2]) [3] (copywrit8.tex) [4]
+ Contents
+(RMT4.toc [-5] [-6] [-7] [-8] [-9] [-10] [-11] [-12] [-13] [-14] [-15] [-16]
+[-17] [-18]) [-19] [-20]
+ Acknowledgments
+\openout9 = `RMT4.toc'.
+
+(blackack_2.tex) [-21] [-22]
+ Preface to the fourth edition
+(blackin_2.tex
+\openout10 = `RMT4.idx'.
+
+ [-23] [-24] [-25] [-26] [-27] [-28]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 12.25864
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x345.7008, glue set 0.05862
+..\tenrm m
+..\tenrm o
+..\kern0.27779
+..\tenrm d
+..\tenrm e
+..etc.
+.\glue(\baselineskip) 4.0
+.\hbox(7.5+2.5)x345.7008, glue set - 0.15572
+..\tenrm i
+..\tenrm n
+..\tenrm d
+..\tenrm i
+..\tenrm v
+..etc.
+.\glue(\baselineskip) 4.0
+.etc.
+
+ [-29]
+[-30] [-31] [-32] [-33] [-34] [-35] [-36]) [-37] [-38]
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[1] [2] (black0.tex
+\openout2 = `RMT4.aux'.
+
+
+1. Overview
+1.1.  Warning
+1.2.  A common ancestor
+[3]
+1.3.  The savings problem
+[4]
+1.3.1. Linear quadratic permanent income theory
+[5]
+1.3.2. Precautionary saving
+
+Underfull \vbox (badness 2318) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 2.85237
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.23927
+..\tenrm h
+..\kern-0.27779
+..\tenrm y
+..\discretionary
+...\tenrm -
+..\tenrm p
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 313.20071fil
+..\tenrm e
+..\tenrm x
+..\discretionary
+...\tenrm -
+..\tenrm p
+..\tenrm l
+..etc.
+.etc.
+
+ [6]
+1.3.3. Complete markets, insurance, and the distribution of wealth
+[7]
+1.3.4. Bewley models
+[8]
+Figure 1.3.1. {chap0pic1}
+(Bewley_chap1.eps
+)
+\openout5 = `RMT4.fgl'.
+
+[9]
+1.3.5. History dependence in standard consumption models
+[10]
+1.3.6. Growth theory
+[11]
+1.3.7. Limiting results from dynamic optimal taxation
+[12]
+1.3.8. Asset pricing
+[13]
+1.3.9. Multiple assets
+[14] [15]
+1.4.  Recursive methods
+[16] [17]
+1.4.1. Dynamic programming and the Lucas Critique
+[18]
+1.4.2. Dynamic programming challenged
+1.4.3. Imperialistic response of dynamic programming
+[19] [20]
+1.4.4. History dependence and ``dynamic programming squared''
+[21] [22]
+1.4.5. Dynamic principal-agent problems
+[23] [24]
+1.4.6. More applications
+) [25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[27] [28] (black1_2017.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen68
+) (psfig.tex)
+2. Time Series
+2.1.  Two workhorses
+2.2.  Markov chains
+[29] [30]
+2.2.1. Stationary distributions
+[31]
+2.2.2. Asymptotic stationarity
+[32]
+2.2.3. Forecasting the state
+[33]
+2.2.4. Forecasting functions of the state
+2.2.5. Forecasting functions
+[34]
+2.2.6. Enough one-step-ahead forecasts determine $P$
+[35]
+2.2.7. Invariant functions and ergodicity
+[36] [37] [38] [39]
+2.2.8. Simulating a Markov chain
+2.2.9. The likelihood function
+[40]
+2.3.  Continuous-state Markov chain
+[41]
+2.4.  Stochastic linear difference equations
+[42] [43]
+2.4.1. First and second moments
+[44] [45] [46] [47]
+2.4.2. Summary of moment formulas
+[Nrows=8, Ncols=2]
+2.4.3. Impulse response function
+[48]
+2.4.4. Prediction and discounting
+[49]
+2.4.5. Geometric sums of quadratic forms
+[50]
+2.4.5.1.  Asset pricing
+2.4.5.2.  Evaluation of dynamic criterion
+[51] [52]
+2.5.  Population regression
+[53] [54]
+2.5.1. Multiple regressors
+2.6.  Estimation of model parameters
+[55] [56]
+2.7.  The Kalman filter
+[57] [58]
+2.7.0.1.  Gram-Schmidt process
+[59]
+2.7.0.2.  Hidden Markov model
+[60]
+2.8.  Estimation again
+[61]
+2.9.  Vector autoregressions and the Kalman filter
+2.9.1. Conditioning on the semi-infinite past of $y$
+2.9.2. A time-invariant VAR
+[62]
+2.9.3. Interpreting VARs
+[63]
+2.10.  Applications of the Kalman filter
+2.10.1. Muth's reverse engineering exercise
+[64]
+Figure 2.10.1. {muth1f}
+(muth1crop.eps
+)
+[65] [66]
+2.10.2. Jovanovic's application
+[67]
+2.11.  The spectrum
+[68]
+Figure 2.11.1. {r2red1d}
+(r2red1d_gray.eps
+)
+[69]
+Figure 2.11.2. {r2red1a}
+(r2red1a_gray.eps
+)
+Figure 2.11.3. {r2red1b}
+(r2red1b_gray.eps
+)
+Figure 2.11.4. {r2red1c}
+(r2red1c_gray.eps
+)
+2.11.1. Examples
+[70] [71]
+2.12.  Example: the LQ permanent income model
+[72] [73] [74]
+2.12.1. Another representation
+[75] [76] [77]
+2.12.2. Debt dynamics
+[78]
+2.12.3. Two classic examples
+[79]
+2.12.4. Spreading consumption cross section
+2.12.5. Invariant subspace approach
+[80] [81]
+2.13.  Concluding remarks
+appendix A.  Linear difference equations
+2.A.1. A first-order difference equation
+[82]
+2.A.2. A second-order difference equation
+[83] [84]
+Exercises
+[85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99]
+[100] [101] [102] [103]) (black2.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen69
+) (psfig.tex)
+[104]
+3. Dynamic Programming
+3.1.  Sequential problems
+[105] [106]
+3.1.1. Three computational methods
+[107] [108]
+3.1.2. Cobb-Douglas transition, logarithmic preferences
+[109] [110]
+3.1.3. Euler equations
+3.1.4. A sample Euler equation
+[111]
+3.2.  Stochastic control problems
+[112]
+3.3.  Concluding remarks
+[113]
+Exercise
+) (black3.tex [114]
+4. Practical Dynamic Programming 
+4.1.  The curse of dimensionality
+4.2.  Discrete-state dynamic programming
+[115] [116]
+4.3.  Bookkeeping
+[117]
+4.4.  Application of Howard improvement algorithm
+[118] [119]
+4.5.  Numerical implementation
+4.5.1. Modified policy iteration
+[120]
+4.6.  Sample Bellman equations
+4.6.1. Example 1: calculating expected utility
+[121]
+4.6.2. Example 2: risk-sensitive preferences
+[122]
+4.6.3. Example 3: costs of business cycles
+[123]
+4.7.  Polynomial approximations
+[124]
+4.7.1. Recommended computational strategy
+[125]
+4.7.2. Chebyshev polynomials
+[126]
+4.7.3. Algorithm: summary
+[127]
+4.7.4. Shape-preserving splines
+4.8.  Concluding remarks
+) (black4.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen70
+) (psfig.tex) [128]
+5. Linear Quadratic Dynamic Programming
+5.1.  Introduction
+[129]
+5.2.  The optimal linear regulator problem
+[130]
+5.2.1. Value function iteration
+5.2.2. Discounted linear regulator problem
+[131]
+5.2.3. Policy improvement algorithm
+[132]
+5.3.  The stochastic optimal linear regulator problem
+[133]
+5.3.1. Discussion of certainty equivalence
+[134]
+5.4.  Shadow prices in the linear regulator
+[135]
+5.4.1. Stability
+[136] [137]
+5.5.  A Lagrangian formulation
+[138] [139] [140] [141]
+5.6.  The Kalman filter again
+[142] [143]
+5.7.  Concluding remarks
+appendix A.  Matrix formulas
+[144]
+Exercises
+[145]
+Overfull \hbox (10.09418pt too wide) in paragraph at lines 1022--1026
+[]\tenbf b. \tenrm For the same pa-ram-e-ter val-ues as in ex-er-cise \headline
+font 5.3 \tenrm and $(\teni ^^U; ^^Y; ^^N; ^^R\tenrm ) = (1\teni ; :\tenrm 05\t
+eni ; :\tenrm 95\teni ; \tenrm 1)$,
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\special<-63>{src:1022black4.tex}
+.\tenbf b
+.\tenbf .
+.\glue 4.44444 plus 4.99997 minus 0.37036
+.\tenrm F
+.etc.
+
+[146] [147] [148] [149]
+Overfull \hbox (14.1455pt too wide) in paragraph at lines 1221--1229
+\tenrm au-tore-gres-sion for $[\teni g[]; T[]; []\tenrm ]$ is re-lated to the p
+a-ram-e-ters $[\teni ^^Z; ^^L; ^^V; q; w[]; w[]; c[]; c[]; c[]\tenrm ]$.
+
+\hbox(9.31749+2.5)x345.7008, glue set - 1.0
+.\tenrm a
+.\tenrm u
+.\discretionary
+..\tenrm -
+.\tenrm t
+.\tenrm o
+.etc.
+
+[150] [151] [152] [153] [154]) [155] [156] (black5_2010.tex (grafinp3.tex
+(psfig2.tex)
+\captionsize=\dimen71
+) (psfig.tex)
+6. Search and Unemployment
+6.1.  Introduction
+[157]
+6.2.  Preliminaries
+6.2.1. Nonnegative random variables
+[158]
+6.2.2. Mean-preserving spreads
+Figure 6.2.1. {powdmt3f}
+(powdmt3new.eps
+)
+[159] [160]
+6.3.  McCall's model of intertemporal job search
+[161]
+Figure 6.3.1. {powdmt4f}
+(powdmt4new.eps
+)
+
+Underfull \vbox (badness 2941) has occurred while \output is active
+\vbox(505.0364+0.0)x345.7008, glue set 3.08995
+.\glue(\topskip) 2.48218
+.\hbox(7.51782+1.94444)x345.7008, glue set 0.9457
+..\tenrm t
+..\tenrm h
+..\tenrm e
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..\tenrm o
+..etc.
+.\glue(\baselineskip) 5.10435
+.\hbox(6.9512+4.80951)x345.7008, glue set 0.9373
+..\teni F
+..\kern1.3889
+..\mathoff, surrounded 1.0
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..\tenrm n
+..etc.
+.\glue(\baselineskip) 2.24605
+.etc.
+
+ [162]
+6.3.1. Characterizing reservation wage
+Figure 6.3.2. {powdmt5f}
+[163]
+(powdmt5.eps
+)
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 4.58629
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+0.0)x345.7008, glue set 288.70074fil
+..\special<-63>{src:297black5_2010.tex}
+..\tenrm W
+..\kern-0.83334
+..\tenrm e
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..etc.
+.\penalty 10000
+.\glue(\abovedisplayshortskip) 0.0 plus 3.0
+.\glue(\baselineskip) 0.29048
+.etc.
+
+ [164]
+Figure 6.3.3. {powdmt6f}
+(powdmt6.eps
+)
+6.3.2. Effects of mean-preserving spreads
+[165] [166]
+6.3.3. Allowing quits
+[167]
+6.3.4. Waiting times
+[168]
+6.3.5. Firing
+[169] [170]
+6.4.  A lake model
+[171]
+Figure 6.4.1. {lake1f}
+(lake1.eps
+)
+[172]
+6.5.  A model of career choice
+[173]
+Figure 6.5.1. {neal1newaf}
+(neal1newa_gray.eps
+)
+Figure 6.5.2. {neal2newaf}
+(neal2newa.eps
+)
+[174] [175] [176]
+6.6.  Offer distribution unknown
+[177] [178]
+Figure 6.6.1. {two_densities}
+(two_densities_gray.eps
+)
+Figure 6.6.2. {reservation_wage_pi}
+(reservation_wage_pi_gray.eps
+)
+[179] [180]
+Figure 6.6.3. {cdf_graph_search}
+(Fig663_2.eps
+)
+[181]
+6.7.  An equilibrium price distribution
+[182]
+6.7.1. A Burdett-Judd setup
+6.7.2. Consumer problem with noisy search
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 14.4071
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.17249
+..\tenrm a
+..\tenrm n
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..\tenrm e
+..\tenrm q
+..etc.
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.5632
+..\tenrm g
+..\tenrm e
+..\tenrm n
+..\tenrm e
+..\tenrm r
+..etc.
+.\glue(\baselineskip) 5.11111
+.etc.
+
+ [183]
+6.7.3. Firms
+[184] [185]
+6.7.4. Equilibrium
+[186]
+6.7.5. Special cases
+
+Underfull \vbox (badness 2564) has occurred while \output is active
+\vbox(505.0364+2.5)x345.7008, glue set 2.95152
+.\glue(\topskip) 2.5
+.\hbox(7.5+3.94434)x345.7008, glue set 0.08754
+..\special<-63>{src:1188black5_2010.tex}
+..\tenrm T
+..\tenrm h
+..\tenrm e
+..\tenrm r
+..etc.
+.\penalty 10050
+.\glue(\baselineskip) 3.37708
+.\hbox(6.67859+0.0)x345.7008, glue set 338.97858fil
+..\tenrm i
+..\tenrm s
+..\penalty 10000
+..\glue(\parfillskip) 0.0 plus 1.0fil
+..\glue(\rightskip) 0.0
+.etc.
+
+ [187]
+6.8.  Jovanovic's matching model
+[188] [189]
+6.8.1. Recursive formulation and solution
+[190]
+Figure 6.8.1. {powdmt7f}
+(powdmt7new.eps
+)
+[191] [192] [193] [194]
+6.8.2. Endogenous statistics
+[195] [196]
+6.9.  A longer horizon version of Jovanovic's model
+[197]
+6.9.1. The Bellman equations
+[198] [199]
+6.10.  Concluding remarks
+[200]
+appendix A.  More numerical dynamic programming
+6.A.1. Example 4: search
+[201]
+6.A.2. Example 5: a Jovanovic model
+[202] [203]
+Figure 6.A.1. {jov1newf}
+(jov1new.ps
+)
+Figure 6.A.2. {jov2newf}
+(jov2new.ps
+)
+Figure 6.A.3. {jov3newf}
+(jov3new.ps
+)
+Exercises
+[204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215]
+[216] [217] [218] [219] [220] [221]) [222]
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[223] [224] (black6.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen72
+) (psfig.tex)
+7. Recursive Competitive Equilibrium: I 
+7.1.  An equilibrium concept
+[225]
+7.2.  Example: adjustment costs
+[226] [227] [228]
+7.2.1. A planning problem
+[229] [230]
+7.3.  Recursive competitive equilibrium
+[231]
+7.4.  Equilibrium human capital accumulation
+7.4.1. Planning problem
+[232]
+7.4.2. Decentralization
+[233]
+7.5.  Equilibrium occupational choice
+[234] [235]
+7.5.1. A planning problem
+[236]
+7.5.2. Decentralization
+[237]
+7.6.  Markov perfect equilibrium
+[238]
+7.6.1. Computation
+[239]
+7.7.  Linear Markov perfect equilibria
+[240] [241]
+7.7.1. An example
+[242]
+7.8.  Concluding remarks
+[243]
+Exercises
+[244] [245] [246] [247]) (black7_2016.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen73
+)
+(psfig.tex) (psfig.tex) [248]
+8. Equilibrium with Complete Markets
+8.1.  Time $0$ versus sequential trading
+8.2.  The physical setting: preferences and endowments
+[249]
+8.3.  Alternative trading arrangements
+[250]
+Figure 8.3.1. {tree1f}
+(tree1.eps
+)
+[251]
+8.3.1. History dependence
+Figure 8.3.2. {tree2f}
+(tree2.eps
+)
+[252]
+8.4.  Pareto problem
+[253]
+8.4.1. Time invariance of Pareto weights
+[254]
+8.5.  Time $0$ trading: Arrow-Debreu securities
+[255]
+8.5.1. Equilibrium pricing function
+[256]
+8.5.2. Optimality of equilibrium allocation
+[257]
+8.5.3. Interpretation of trading arrangement
+8.5.4. Equilibrium computation
+[258]
+8.6.  Simpler computational algorithm
+8.6.1. Example 1: risk sharing
+[259]
+8.6.2. Implications for equilibrium computation
+8.6.3. Example 2: no aggregate uncertainty
+[260]
+8.6.4. Example 3: periodic endowment processes
+[261]
+8.6.5. Example 4
+[262]
+8.7.  Primer on asset pricing
+8.7.1. Pricing redundant assets
+8.7.2. Riskless consol
+8.7.3. Riskless strips
+[263]
+8.7.4. Tail assets
+[264]
+8.7.5. One-period returns
+[265]
+8.8.  Sequential trading
+8.8.1. Arrow securities
+[266]
+8.8.2. Financial wealth as an endogenous state variable
+
+Underfull \vbox (badness 7851) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 4.28506
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 61.25125fil
+...\subsecfont 8
+...\subsecfont .
+...\subsecfont 8
+...\subsecfont .
+...\subsecfont 2
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{8.8.2.}Financial wealth as an endogenous state variable.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [267]
+8.8.3. Reopening markets
+[268]
+8.8.4. Debt limits
+[269]
+8.8.5. Sequential trading
+[270] [271]
+8.8.6. Equivalence of allocations
+[272] [273]
+8.9.  Recursive competitive equilibrium
+[274]
+8.9.1. Endowments governed by a Markov process
+[275]
+8.9.2. Equilibrium outcomes inherit the Markov property
+[276]
+8.9.3. Recursive formulation of optimization and equilibrium
+[277] [278]
+8.9.4. Computing an equilibrium with sequential trading of Arrow-securities
+[279]
+8.10.  $j$-step pricing kernel
+[280]
+8.10.1. Arbitrage-free pricing
+[281] [282]
+8.11.  Term structure of yields on risk-free claims
+8.11.1. Constructing yields
+[283] [284]
+8.12.  Recursive version of Pareto problem
+[285] [286]
+8.13.  Concluding remarks
+[287] [288]
+appendix Appendices: Departures from key assumptions
+appendix A.  Heterogenous discounting
+[289]
+appendix B.  Heterogenous beliefs 
+[290] [291]
+8.B.1. Example: one type's beliefs are closer to the truth
+[292] [293]
+8.B.2. Equilibrium prices reflect beliefs
+8.B.3. Mispricing?
+8.B.4. Learning
+[294]
+8.B.5. Role of complete markets
+appendix C.  Incomplete markets
+[295]
+8.C.1. An example economy
+[296] [297]
+Overfull \hbox (11.68686pt too wide) in paragraph at lines 2596--2605
+[]\tenrm for any $[]\tensy j\teni s[]$\tenrm . Equal-ity ($8\teni :C:\tenrm 6$)
+ im-plies that the prod-uct $\teni ^^V[]\tenrm (\teni s[]\tenrm )[\teni c[]\ten
+rm (\teni s[]\tenrm )][]$
+
+\hbox(8.14003+3.31544)x345.7008, glue set - 1.0
+.\special<-63>{src:2597black7_2016.tex}
+.\tenrm f
+.\tenrm o
+.\tenrm r
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+[298]
+8.C.2. Asset payoff correlated with i.i.d. aggregate endowment
+[299] [300]
+8.C.3. Beneficial market incompleteness
+
+Underfull \vbox (badness 3612) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 3.30844
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x345.7008, glue set - 0.608
+..\hbox(0.0+0.0)x20.0
+..\special{src:2744black7_2016.tex}
+..\tenrm I
+..\tenrm t
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 3.35997
+.\hbox(8.14003+2.5)x345.7008, glue set 0.34744
+..\tenrm f
+..\tenrm a
+..\tenrm c
+..\tenrm t
+..\tenrm o
+..etc.
+.etc.
+
+ [301]
+[302] [303]
+Exercises
+[304] [305] [306] [307] [308] [309] [310] [311] [312] [313] [314] [315]
+[316] [317] [318] [319] [320] [321] [322] [323] [324] [325] [326] [327]
+[328] [329]) (black8.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen74
+) (psfig.tex) (psfig.tex)
+[330]
+9. Overlapping Generations
+[331]
+9.1.  Endowments and preferences
+9.2.  Time $0$ trading
+
+Underfull \vbox (badness 2005) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 2.71983
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 140.93253fil
+...\secfont 9
+...\secfont .
+...\secfont 1
+...\secfont .
+...\glue(\xspaceskip) 5.0
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\penalty 10000
+.\write9{\string \TOCitem {1}}
+.\write9{{\TOCsID{9.1.}Endowments and preferences.}}
+.etc.
+
+ [332]
+9.2.1. Example equilibria
+[333]
+9.2.2. Relation to welfare theorems
+[334]
+9.2.3. Nonstationary equilibria
+Figure 9.2.1. {graph12f}
+(graph12.eps
+)
+[335]
+9.2.4. Computing equilibria
+[336]
+Figure 9.2.2. {graph22f}
+(graph22.eps
+)
+[337] [338]
+Figure 9.2.3. {graph32f}
+(graph32.eps
+)
+
+Underfull \vbox (badness 2057) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 2.74228
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.44537
+..\special<-63>{src:400black8.tex}
+..\tenrm f
+..\tenrm o
+..\tenrm r
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.30096
+..\tenrm F
+..\kern-0.83334
+..\tenrm r
+..\tenrm o
+..\tenrm m
+..etc.
+.etc.
+
+ [339]
+Figure 9.2.4. {graph42f}
+(graph42.eps
+)
+[340] [341]
+9.3.  Sequential trading
+9.4.  Money
+[342]
+9.4.1. Computing more equilibria with valued fiat currency
+[343]
+9.4.2. Equivalence of equilibria
+[344]
+9.5.  Deficit finance
+[345] [346]
+9.5.1. Steady states and the Laffer curve
+Figure 9.5.1. {graph52f}
+(graph52new.eps
+)
+[347]
+9.6.  Equivalent setups
+9.6.1. The economy
+[348] [349]
+9.6.2. Growth
+[350]
+9.7.  Optimality and the existence of monetary equilibria
+[351] [352] [353] [354] [355] [356]
+Figure 9.7.1. {graph16f}
+(graph16.eps
+)
+9.7.1. Balasko-Shell criterion for optimality
+[357] [358]
+9.8.  Within-generation heterogeneity
+[359]
+9.8.1. Nonmonetary equilibrium
+9.8.2. Monetary equilibrium
+
+Underfull \vbox (badness 2050) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 2.74062
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x345.7008, glue set - 0.67143
+..\special<-63>{src:1439black8.tex}
+..\tenrm A
+..\kern-0.27779
+..\tenrm t
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..etc.
+.\penalty 20000
+.\glue(\baselineskip) 4.55556
+.\hbox(6.94444+1.94444)x345.7008, glue set 196.67276fil
+..\tenrm u
+..\tenrm n
+..\tenrm i
+..\tenrm t
+..\tenrm s
+..etc.
+.etc.
+
+ [360]
+Figure 9.8.1. {savings1f}
+(savings1.eps
+)
+[361]
+9.8.3. Nonstationary equilibria
+9.8.4. The real bills doctrine
+[362] [363]
+9.9.  Gift-giving equilibrium
+[364] [365]
+9.10.  Concluding remarks
+Exercises
+[366] [367] [368] [369] [370] [371] [372] [373] [374] [375] [376] [377])
+(black9.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen75
+) (psfig.tex) [378]
+10. Ricardian Equivalence
+10.1.  Borrowing limits and Ricardian equivalence
+[379]
+10.2.  Infinitely lived agent economy
+10.2.1. Optimal consumption/savings decision when $b_{t+1} \geq 0$
+[380] [381]
+10.2.2. Optimal consumption/savings decision when $b_{t+1} \geq \mathaccent "70
+7E b_{t+1}$
+[382]
+10.3.  Government finance
+10.3.1. Effect on household
+[383] [384] [385] [386]
+10.4.  Linked generations interpretation
+[387]
+10.5.  Concluding remarks
+
+Underfull \vbox (badness 2635) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 2.97829
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 187.14192fil
+...\secfont 1
+...\secfont 0
+...\secfont .
+...\secfont 5
+...\secfont .
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\penalty 10000
+.\write9{\string \TOCitem {1}}
+.\write9{{\TOCsID{10.5.}Concluding remarks.}}
+.etc.
+
+ [388])
+(blackpro_5_2012.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen76
+) (psfig.tex) [389]
+11. Fiscal Policies in a Growth Model
+[390]
+11.1.  Introduction
+[391]
+11.2.  Economy
+11.2.1. Preferences, technology, information
+[392]
+11.2.2. Components of a competitive equilibrium
+[393]
+11.3.  The term structure of interest rates
+[394]
+11.4.  Digression: sequential version of government budget constraint
+[395] [396] [397]
+11.4.1. Irrelevance of maturity structure of government debt
+
+Overfull \hbox (11.6326pt too wide) in paragraph at lines 344--346
+[]\tenrm The se-quence of period-by-period net re-turns on the gov-ern-ment deb
+t $\tensy f\teni r[]B[]\tensy g[]$
+
+\hbox(7.5+2.86108)x345.7008, glue set - 1.0
+.\special<-63>{src:344blackpro_5_2012.tex}
+.\tenrm T
+.\tenrm h
+.\tenrm e
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+[398]
+11.5.  Competitive equilibria with distorting taxes
+11.5.1. The household: no-arbitrage and asset-pricing formulas
+[399] [400]
+11.5.2. User cost of capital formula
+[401]
+11.5.3. Household first-order conditions
+11.5.4. A theory of the term structure of interest rates
+11.5.5. Firm
+[402]
+11.6.  Computing equilibria
+[403]
+11.6.1. Inelastic labor supply
+[404]
+11.6.2. The equilibrium steady state
+[405]
+Underfull \hbox (badness 1838) in paragraph at lines 723--723
+\subsecfont 11.6.3. Computing the equilibrium path with the shooting 
+
+\hbox(8.33333+2.33333)x345.7008, glue set 2.64156
+.\subsecfont 1
+.\subsecfont 1
+.\subsecfont .
+.\subsecfont 6
+.\subsecfont .
+.etc.
+
+11.6.3. Computing the equilibrium path with the shooting algorithm
+[406]
+11.6.4. Other equilibrium quantities
+11.6.5. Steady-state $\mathaccent "7016 R$
+[407]
+11.6.6. Lump-sum taxes available
+11.6.7. No lump-sum taxes available
+[408]
+11.7.  A digression on back-solving
+[409]
+11.8.  Effects of taxes on equilibrium allocations and prices
+[410]
+11.9.  Transition experiments with inelastic labor supply
+[411]
+Figure 11.9.1. {fig_g}
+(fig_g.eps
+)
+Figure 11.9.2. {fig_g_gamma}
+(fig_g_gamma.eps
+)
+Figure 11.9.3. {fig_term}
+(fig_term.eps
+)
+Figure 11.9.4. {fig_tc}
+(fig_tc.eps
+)
+Figure 11.9.5. {fig_tk}
+(fig_tauk_gamma.eps
+)
+[412] [413]
+Underfull \vbox (badness 1231) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 2.31097
+.\glue(\splittopskip) 0.0
+.\vbox(289.4815+0.0)x345.7008
+..\rule(0.0+0.0)x0.0
+..\glue 12.0 plus 4.0 minus 4.0
+..\hbox(183.59262+0.0)x345.7008, glue set 64.4454fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+...\hbox(183.59262+0.0)x216.81 []
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\write5{% > Figure 11.9.3:}
+..\write5{\FIGLitem{Figure} {11.9.3. }}
+..etc.
+.\penalty 10000
+.\penalty -200
+.\glue 12.0 plus 4.0 minus 4.0
+.etc.
+
+ [414]
+[415] [416]
+Figure 11.9.6. {fig_g1}
+(fig_g1.eps
+)
+[417]
+11.10.  Linear approximation
+[418] [419] [420]
+11.10.1. Relationship between the $\lambda _i$'s
+11.10.2. Conditions for existence and uniqueness
+[421]
+11.10.3. Once-and-for-all jumps
+[422]
+11.10.4. Simplification of formulas
+[423]
+11.10.5. A one-time pulse
+11.10.6. Convergence rates and anticipation rates
+[424]
+Figure 11.10.1. {lambdaogamma}
+(lambdaogamma_gray.eps
+)
+[425]
+11.10.7. A remark about accuracy: Euler equation errors
+11.11.  Growth
+[426]
+Figure 11.11.1. {fig_pr_1}
+(fig_pr_1.eps
+)
+Figure 11.11.2. {fig_pr_2}
+(fig_pr_2.eps
+)
+[427]
+Underfull \vbox (badness 1622) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 2.53325
+.\penalty 100
+.\vbox(249.30363+0.0)x345.7008
+..\rule(0.0+0.0)x0.0
+..\glue 12.0 plus 4.0 minus 4.0
+..\hbox(173.35919+0.0)x345.7008, glue set 64.4454fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+...\hbox(173.35919+0.0)x216.81 []
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\write5{% > Figure 11.11.1:}
+..\write5{\FIGLitem{Figure} {11.11.1. }}
+..etc.
+.\penalty 10000
+.\penalty -200
+.\glue 12.0 plus 4.0 minus 4.0
+.etc.
+
+ [428]
+[429]
+11.12.  Elastic labor supply
+11.12.1. Steady-state calculations
+[430]
+11.12.2. Some experiments
+[431]
+Figure 11.12.1. {fig_gnu}
+[432]
+(fig_gnu.eps
+)
+[433]
+Figure 11.12.2. {fig_tnu}
+(fig_tnu.eps
+)
+[434]
+Figure 11.12.3. {fig_tn}
+(fig_tn.eps
+)
+[435]
+11.13.  A two-country model
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 6.71266
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.20677
+..\special<-63>{src:2096blackpro_5_2012.tex}
+..\tenrm T
+..\tenrm h
+..\tenrm e
+..\tenrm s
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.14258
+..\tenrm r
+..\tenrm e
+..\tenrm a
+..\tenrm r
+..\tenrm r
+..etc.
+.etc.
+
+ [436]
+[437] [438]
+11.13.1. Initial conditions
+11.13.2. Equilibrium steady state values
+11.13.3. Initial equilibrium values
+[439]
+11.13.4. Shooting algorithm
+Figure 11.13.1. {fig1_kinit}
+(fig1_kinit.eps
+)
+[440]
+11.13.5. Transition exercises
+[441]
+11.13.5.1.  Opening International Flows
+[442]
+Figure 11.13.2. {fig1_g-2}
+(fig1_g.eps
+)
+
+Overfull \hbox (15.31226pt too wide) in paragraph at lines 2335--2335
+ \tenrm seen at time $1$. From left to right, top to bot-tom: $\teni k; c; []; 
+x; g; B[]$\tenrm . 
+
+\hbox(8.49002+1.94444)x345.7008, glue set - 1.0
+.\glue(\leftskip) 40.0
+.\tenrm s
+.\tenrm e
+.\tenrm e
+.\tenrm n
+.etc.
+
+11.13.5.2.  Foreseen Increase in $g$
+
+Underfull \vbox (badness 5924) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 3.90103
+.\glue 0.0
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.51883
+..\special<-63>{src:2299blackpro_5_2012.tex}
+..\tenrm N
+..\tenrm o
+..\tenrm t
+..\tenrm i
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.etc.
+
+ [443]
+[444]
+Figure 11.13.3. {fig1_tauk}
+(fig1_tauk.eps
+)
+[445]
+11.13.5.3.  Foreseen increase in $\tau _k$
+[446]
+11.14.  Concluding remarks
+[447]
+appendix A.  Log linear approximations
+[448]
+Exercises
+[449] [450] [451] [452] [453] [454] [455] [456] [457] [458] [459] [460]
+[461]
+Overfull \hbox (11.35016pt too wide) in paragraph at lines 3223--3230
+\tenrm goods per worker at time $\teni t$\tenrm . De-fine $[] = [] [] \teni :$ 
+
+
+\hbox(10.09998+5.28177)x345.7008, glue set - 1.0
+.\tenrm g
+.\tenrm o
+.\kern0.27779
+.\tenrm o
+.\kern0.27779
+.etc.
+
+[462]
+Figure 11.1. {fig_7_1}
+(fig_7_1.eps
+)
+Figure 11.2. {fig_7_2}
+(fig_7_2.eps
+)
+[463] [464] [465]
+Figure 11.3. {FN_1}
+(FN_1_tom_2.eps
+)
+Figure 11.4. {FN_2}
+(fig_11.4.eps
+)
+
+Overfull \hbox (10.20897pt too wide) in paragraph at lines 3467--3467
+ []\tenbf Figure 11.4: \tenrm Cap-i-tal stock as func-tion of time in two econo
+mies 
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\glue(\leftskip) 40.0
+.\special<-63>{src:3467blackpro_5_2012.tex}
+.\tenbf F
+.\tenbf i
+.\tenbf g
+.etc.
+
+[466]
+Figure 11.5. {FN_3}
+(fig_11_5.eps
+)
+[467] [468]
+Figure 11.6. {FN_4}
+(figv3_116_b.eps
+)
+[469]) [470] (bgrowth2.tex
+12. Recursive Competitive Equilibrium: II
+12.1.  Endogenous aggregate state variable
+[471]
+12.2.  The stochastic growth model
+[472] [473]
+12.3.  Lagrangian formulation of the planning problem
+12.4.  Time $0$ trading: Arrow-Debreu securities
+[474]
+12.4.1. Household
+[475]
+12.4.2. Firm of type I
+[476]
+12.4.3. Firm of type II
+[477]
+12.4.4. Equilibrium prices and quantities
+
+Overfull \hbox (14.21652pt too wide) in paragraph at lines 433--435
+[][]\tenrm After sub-sti-tut-ing ($12\teni :\tenrm 4\teni :\tenrm 9\teni b$\ten
+rm ) into the house-hold's first-order con-di-tion ($12\teni :\tenrm 4\teni :\t
+enrm 3\teni b$\tenrm ),
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\special{src:433bgrowth2.tex}
+.\tenrm A
+.\tenrm f
+.\tenrm t
+.etc.
+
+[478] [479]
+12.4.5. Implied wealth dynamics
+[480]
+12.5.  Sequential trading: Arrow securities
+[481]
+12.5.1. Household
+[482]
+12.5.2. Firm of type I
+[483]
+12.5.3. Firm of type II
+12.5.4. Equilibrium prices and quantities
+[484]
+12.5.5. Financing a type II firm
+
+Underfull \hbox (badness 10000) in paragraph at lines 799--803
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[485]
+12.6.  Recursive formulation
+[486]
+12.6.1. Technology is governed by a Markov process
+12.6.2. Aggregate state of the economy
+[487]
+12.7.  Recursive formulation of the planning problem
+[488]
+12.8.  Recursive formulation of sequential trading
+12.8.1. A ``Big $K$, little $k$'' device
+[489]
+12.8.2. Price system
+[490]
+12.8.3. Household problem
+[491]
+12.8.4. Firm of type I
+12.8.5. Firm of type II
+[492]
+12.9.  Recursive competitive equilibrium
+12.9.1. Equilibrium restrictions across decision rules
+[493] [494]
+12.9.2. Using the planning problem
+[495]
+12.10.  Concluding remarks
+[496]
+appendix A.  The permanent income model revisited
+12.A.1. Reinterpreting the single-agent model
+[497]
+12.A.2. Decentralization and scaled prices
+[498]
+12.A.2.1.  The consumer
+[499]
+12.A.2.2.  The firm
+12.A.3. Matching equilibrium and planning allocations
+[500]
+12.A.4. Interpretation
+) [501] [502] (black10_part1.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen77
+) (psfig.tex)
+13. Asset Pricing Theory
+13.1.  Introduction
+13.2.  Euler equations
+[503] [504] [505]
+13.3.  Martingale theories of consumption and stock prices
+
+Overfull \hbox (12.17827pt too wide) in paragraph at lines 198--200
+[][]\tenrm As an ex-am-ple, with the constant-relative-risk-aversion util-ity f
+unc-tion $\teni u\tenrm (\teni c[]\tenrm ) =
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\special{src:198black10_part1.tex}
+.\tenrm A
+.\tenrm s
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+[506] [507]
+13.4.  Equivalent martingale measure
+[508] [509] [510]
+13.5.  Equilibrium asset pricing
+[511]
+13.6.  Stock prices without bubbles
+[512] [513]
+13.7.  Computing asset prices
+13.7.1. Example 1: logarithmic preferences
+13.7.2. Example 2: finite-state version
+[514]
+13.7.3. Example 3: growth
+[515]
+13.8.  Term structure of interest rates
+[516] [517] [518]
+13.9.  State-contingent prices
+[519]
+13.9.1. Insurance premium
+13.9.2. Man-made uncertainty
+[520]
+13.9.3. The Modigliani-Miller theorem
+[521] [522] [523]
+13.10.  Government debt
+13.10.1. The Ricardian proposition
+[524] [525] [526] [527] [528] [529] [530]
+13.10.2. No Ponzi schemes
+[531] [532]
+Figure 13.10.1. {returnf}
+(return.ps
+)
+[533] [534]
+appendix A.  Harrison-Kreps (1978) heterogeneous beliefs
+[535]
+13.A.1. Optimism and Pessimism
+13.A.2. Equilibrium price function
+[536]
+13.A.3. Comparisons of equilibrium price functions
+13.A.4. Single belief prices
+13.A.5. Pricing under heterogeneous beliefs
+[537]
+Table 13.A.1. {HKtab}
+[538] [539]
+13.A.6. Insufficient funds
+[540]
+appendix B.  Gaussian asset-pricing model
+[541] [542]
+Exercises
+[543] [544] [545] [546] [547]) (black10_part2_new_ver3.tex (grafinp3.tex
+(psfig2.tex)
+\captionsize=\dimen78
+) (psfig.tex) [548]
+14. Asset Pricing Empirics
+14.1.  Introduction
+[549]
+14.2.  Interpretation of risk-aversion parameter
+[550]
+Table 14.2.1. {old101}
+[551]
+14.3.  The equity premium puzzle
+Table 14.3.1. {old102}
+[552] [553] [554]
+14.4.  Market price of risk
+[555] [556]
+14.5.  Hansen-Jagannathan bounds
+14.5.1. Law of one price implies that $E m R =1$
+[557] [558]
+14.5.2. Inner product representation of price functional
+[559]
+14.5.3. Admissible stochastic discount factors
+[560] [561]
+14.6.  Failure of CRRA to attain HJ bound
+[562]
+Figure 14.6.1. {CRRAtimeseparablepreferences}
+(timeseparableCRRApreferences_gray.eps
+)
+[563] [564]
+Table 14.6.1. {table:parameterestimates}
+[Nrows=3, Ncols=2]
+[565]
+14.7.  Non-expected utility
+[566] [567] [568]
+14.7.1. Another representation of the utility recursion
+Figure 14.7.1. {treeAB}
+(PlansABtree.eps
+)
+Figure 14.7.2. {treeCD}
+(PlansCDtree.eps
+)
+[569]
+14.7.2. Stochastic discount factor
+[570]
+Figure 14.7.3. {tallarini}
+(Tallarinisfigure2_gray.eps
+)
+[571] [572] [573]
+14.7.3. Twisted probability distributions
+14.8.  Reinterpretation of the utility recursion
+[574]
+14.8.1. Risk aversion versus model misspecification aversion
+[575]
+14.8.2. Recursive representation of probability distortions
+14.8.3. Entropy
+[576] [577]
+14.8.4. Expressing ambiguity aversion
+[578]
+14.8.5. Ambiguity averse preferences
+[579] [580]
+14.8.6. Market price of model uncertainty
+[581]
+14.8.7. Measuring model uncertainty
+[582]
+Figure 14.8.1. {tallarini50}
+(MPRRWvsTS_Korea.eps
+)
+[583]
+14.9.  Costs of aggregate fluctuations
+[584]
+Figure 14.9.1. {BHS_punchline}
+(proportions1_gray.eps
+)
+[585] [586]
+14.10.  Reverse engineered consumption heterogeneity
+[587] [588] [589] [590]
+14.11.  Affine risk prices
+[591] [592]
+14.11.1. An application
+14.11.2. Affine term structure of yields
+[593] [594]
+14.12.  Risk-neutral probabilities
+[595]
+14.12.1. Asset pricing in a nutshell
+14.13.  Distorted beliefs
+[596] [597]
+14.14.  Concluding remarks
+[598]
+appendix A.  Riesz representation theorem
+[599] [600]
+appendix B.  Computing stochastic discount factors
+[601]
+appendix C.  A log normal bond pricing model
+[602] [603]
+14.C.1. Slope of yield curve
+[604]
+14.C.2. Backus and Zin's stochastic discount factor
+[605]
+14.C.3. Reverse engineering a stochastic discount factor
+[606]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.35031
+..\special<-63>{src:2476black10_part2_new_ver3.tex}
+..\tenrm T
+..\tenrm h
+..\tenrm i
+..\tenrm s
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.0237
+..\tenrm t
+..\tenrm o
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..\tenrm p
+..\tenrm r
+..etc.
+.etc.
+
+ [607]
+Figure 14.C.1. {backus1f}
+(backus1_gray.eps
+)
+Figure 14.C.2. {backus2f}
+(backus2_gray.eps
+)
+Figure 14.C.3. {backus3f}
+(backus3_gray.eps
+)
+Figure 14.C.4. {backus4f}
+(backus4_gray.eps
+)
+Figure 14.C.5. {backus5f}
+(backus5_gray.eps
+)
+[608]
+Underfull \vbox (badness 2165) has occurred while \output is active
+\vbox(505.0364+2.5)x345.7008, glue set 2.78827
+.\penalty 100
+.\vbox(181.11136+0.0)x345.7008
+..\rule(0.0+0.0)x0.0
+..\glue 12.0 plus 4.0 minus 4.0
+..\hbox(133.16692+0.0)x345.7008, glue set 91.54666fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+...\hbox(133.16692+0.0)x162.6075 []
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\write5{% > Figure 14.C.3:}
+..\write5{\FIGLitem{Figure} {14.C.3. }}
+..etc.
+.\penalty 10000
+.\penalty -200
+.\glue 12.0 plus 4.0 minus 4.0
+.etc.
+
+ [609]
+Exercises
+[610] [611] [612] [613] (asset_exercise_new.tex [614] [615] [616] [617]
+[618] [619] [620] [621] [622] [623] [624] [625] [626] [627] [628] [629]))
+(black11.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen79
+) (psfig.tex) [630]
+15. Economic Growth
+15.1.  Introduction
+[631] [632]
+15.2.  The economy
+> Expecting ] but got ).
+[633]
+15.2.1. Balanced growth path
+[634]
+15.3.  Exogenous growth
+[635] [636]
+15.4.  Externality from spillovers
+[637] [638]
+15.5.  All factors reproducible
+15.5.1. One-sector model
+[639] [640]
+15.5.2. Two-sector model
+[641] [642]
+15.6.  Research and monopolistic competition
+[643]
+15.6.1. Monopolistic competition outcome
+[644]
+Figure 15.6.1. {growth1f}
+(grow1.ps
+)
+[645] [646]
+15.6.2. Planner solution
+[647]
+15.7.  Growth in spite of nonreproducible factors
+15.7.1. ``Core'' of capital goods produced without nonreproducible inputs
+[648] [649]
+15.7.2. Research labor enjoying an externality
+[650] [651]
+15.8.  Concluding remarks
+[652] [653]
+Exercises
+[654] [655] [656] [657] [658]) [659] [660] (black12_13.tex (grafinp3.tex
+(psfig2.tex)
+\captionsize=\dimen80
+) (psfig.tex)
+16. Optimal Taxation with Commitment
+16.1.  Introduction
+[661] [662] [663]
+16.2.  A nonstochastic economy
+16.2.1. Government
+[664]
+16.2.2. Household
+[665] [666]
+16.2.3. Firms
+[667]
+16.3.  The Ramsey problem
+[668]
+16.4.  Zero capital tax
+[669]
+16.5.  Primal approach to the Ramsey problem
+[670] [671]
+16.5.1. Constructing the Ramsey plan
+[672] [673] [674]
+16.5.2. Revisiting a zero capital tax
+16.6.  Taxation of initial capital
+[675]
+16.7.  Nonzero capital tax due to incomplete taxation
+[676] [677]
+16.8.  A stochastic economy
+16.8.1. Government
+[678]
+16.8.2. Household
+[679] [680]
+16.8.3. Firms
+16.9.  Indeterminacy of debt and capital taxes
+[681] [682]
+16.10.  A Ramsey plan under uncertainty
+[683]
+16.11.  Ex ante capital tax varies around zero
+[684] [685] [686]
+16.11.1. Sketch of the proof of Proposition 2
+[687] [688]
+16.12.  A stochastic economy without capital
+[689] [690] [691] [692]
+16.12.1. Computational strategy
+[693]
+16.12.2. More specialized computations
+[694] [695]
+16.12.3. Time consistency
+[696]
+16.13.  Examples of labor tax smoothing
+16.13.1. Example 1: $g_t=g$ for all $t\geq 0$
+16.13.2. Example 2: $g_t=0$ for $t\not = T$ and nonstochastic $g_T>0$
+[697]
+16.13.3. Example 3: $g_t=0$ for $t\not = T$, and $g_T$ is stochastic
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 4.96266
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.04958
+..\hbox(0.0+0.0)x20.0
+..\special{src:1976black12_13.tex}
+..\tenrm T
+..\tenrm h
+..\tenrm i
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.38779
+..\tenrm p
+..\tenrm l
+..\tenrm a
+..\tenrm n
+..\tenrm n
+..etc.
+.etc.
+
+ [698]
+16.13.4. Time $0$ is special with $b_0\not = 0$
+[699] [700]
+16.14.  Lessons for optimal debt policy
+[701] [702] [703] [704]
+16.15.  Taxation without state-contingent debt
+[705] [706] [707] [708] [709]
+16.15.1. Future values of $\delimiter "4266308 g_t\delimiter "5267309 $ become 
+deterministic
+[710]
+16.15.2. Stochastic $\delimiter "4266308 g_t\delimiter "5267309 $ but special p
+references
+[711] [712]
+16.15.3. Example 3 revisited: $g_t=0$ for $t\not = T$, and $g_T$ is stochastic
+[713] [714] [715] [716]
+16.16.  Nominal debt as state-contingent real debt
+[717]
+16.16.1. Setup and main ideas
+[718] [719] [720] [721]
+16.16.2. Optimal taxation in a nonmonetary economy
+[722] [723]
+16.16.3. Optimal policy in a corresponding monetary economy
+[724] [725] [726]
+16.16.4. Sticky prices
+16.17.  Relation to fiscal theories of the price level
+[727]
+16.17.1. Budget constraint versus asset pricing equation
+[728]
+16.17.2. Disappearance of quantity theory?
+[729]
+16.17.3. Price level indeterminacy under interest rate peg
+[730]
+16.17.4. Monetary or fiscal theory of the price level?
+[731]
+16.18.  Zero tax on human capital
+[732] [733] [734] [735] [736] [737]
+16.19.  Should all taxes be zero?
+[738]
+16.20.  Concluding remarks
+[739] [740]
+Exercises
+[741] [742] [743] [744] [745] [746] [747] [748] [749] [750] [751] [752]
+[753] [754]) [755] [756]
+Underfull \hbox (badness 10000) in paragraph at lines 421--421
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[757] [758] (black13.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen81
+) (psfig.tex)
+17. Self-Insurance
+17.1.  Introduction
+[759]
+17.2.  The consumer's environment
+[760]
+17.3.  Nonstochastic endowment
+
+Underfull \vbox (badness 2197) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 2.80237
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+..\hbox(0.0+0.0)x20.0
+..\special{src:109black13.tex}
+..\tenrm \ (ligature ``)
+..\tenrm S
+..\tenrm e
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.22038
+..\tenrm i
+..\tenrm n
+..\discretionary
+...\tenrm -
+..\tenrm c
+..\tenrm o
+..etc.
+.etc.
+
+ [761]
+[762]
+17.3.1. An ad hoc borrowing constraint: nonnegative assets
+[763] [764] [765] [766]
+17.3.2. Example: periodic endowment process
+17.4.  Quadratic preferences
+[767] [768]
+17.5.  Stochastic endowment process: i.i.d. case
+[769] [770]
+17.6.  Stochastic endowment process: general case
+[771]
+17.7.  Intuition
+[772] [773]
+17.8.  Endogenous labor supply
+[774] [775] [776]
+17.9.  Concluding remarks
+[777] [778]
+appendix A.  Supermartingale convergence theorem
+Exercises
+[779] [780] [781] [782]) [783] [784] (black14.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen82
+)
+(psfig.tex)
+18. Incomplete Markets Models
+18.1.  Introduction
+[785] [786]
+18.2.  A savings problem
+[787]
+18.2.1. Wealth-employment distributions
+[788]
+18.2.2. Reinterpretation of the distribution $\lambda $
+[789]
+18.2.3. Example 1: a pure credit model
+[790]
+18.2.4. Equilibrium computation
+18.2.5. Example 2: a model with capital
+[791] [792]
+18.2.6. Computation of equilibrium
+[793]
+Overfull \hbox (10.8276pt too wide) in paragraph at lines 470--474
+[][]\tenrm Later, we shall dis-play some com-puted ex-am-ples of equi-lib-ria o
+f both Huggett's
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\special{src:470black14.tex}
+.\tenrm L
+.\tenrm a
+.\tenrm t
+.etc.
+
+18.3.  Unification and further analysis
+18.4.  The nonstochastic savings problem when $\beta (1+r) < 1$
+[794] [795] [796]
+18.5.  Borrowing limits: natural and ad hoc
+[797]
+18.5.1. A candidate for a single state variable
+[798]
+18.5.2. Supermartingale convergence again
+[799]
+18.6.  Average assets as a function of $r$
+Figure 18.6.1. {rao1f}
+(rao1.eps
+)
+[800]
+Underfull \vbox (badness 2050) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 2.7379
+.\penalty 100
+.\vbox(374.08482+0.0)x345.7008
+..\rule(0.0+0.0)x0.0
+..\glue 12.0 plus 4.0 minus 4.0
+..\hbox(214.14038+0.0)x345.7008, glue set 64.4454fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+...\hbox(214.14038+0.0)x216.81 []
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\write5{% > Figure 18.6.1:}
+..\write5{\FIGLitem{Figure} {18.6.1. }}
+..etc.
+.\penalty 10000
+.\penalty -200
+.\glue 12.0 plus 4.0 minus 4.0
+.etc.
+
+ [801]
+Figure 18.6.2. {rao3f}
+(rao3.eps
+)
+[802]
+Figure 18.6.3. {bewley00w1f}
+(bewley00w1.eps
+)
+[803]
+18.7.  Computed examples
+Figure 18.7.1. {newfig5f}
+(newfig5.eps
+)
+Figure 18.7.2. {newfig4f}
+(newfig4.eps
+)
+
+Underfull \vbox (badness 5533) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 3.81212
+.\glue 0.0
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 185.85863fil
+...\secfont 1
+...\secfont 8
+...\secfont .
+...\secfont 7
+...\secfont .
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\penalty 10000
+.\write9{\string \TOCitem {1}}
+.etc.
+
+ [804]
+[805]
+18.8.  Several Bewley models
+18.8.1. Optimal stationary allocation
+[806]
+18.9.  A model with capital and private IOUs
+[807]
+18.10.  Private IOUs only
+18.10.1. Limitation of what credit can achieve
+[808]
+18.10.2. Proximity of $r$ to $\rho $
+18.10.3. Inside money or free banking interpretation
+[809]
+18.10.4. Bewley's basic model of fiat money
+[810]
+18.11.  A model of seigniorage
+[811]
+Figure 18.11.1. {rao4f}
+(rao4.eps
+)
+[812]
+18.12.  Exchange rate indeterminacy
+[813] [814]
+18.13.  Interest on currency
+[815]
+18.13.1. Explicit interest
+[816]
+18.13.2. The upper bound on ${M \over p}$
+[817]
+18.13.3. A very special case
+[818]
+18.13.4. Implicit interest through deflation
+[819]
+18.14.  Precautionary savings
+[820] [821]
+18.15.  Models with fluctuating aggregate variables
+[822]
+18.15.1. Aiyagari's model again
+[823]
+18.15.2. Krusell and Smith's extension
+[824] [825] [826]
+18.16.  Concluding remarks
+Exercises
+[827] [828] [829] [830] [831] [832] [833] [834]) [835] [836]
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[837] [838] (blkstack_2.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen83
+) (psfig.tex)
+19. Dynamic Stackelberg Problems
+19.1.  History dependence
+[839]
+19.2.  The Stackelberg problem
+[840] [841] [842]
+19.3.  Timing protocol
+19.4.  Recursive formulation
+[843]
+19.4.1. Two Bellman equations
+19.4.2. Subproblem 1
+[844]
+19.4.3. Subproblem 2
+19.4.4. Timing protocol
+[845]
+19.4.5. Time inconsistency
+[846]
+19.5.  Large firm facing a competitive fringe
+[847]
+19.5.1. The competitive fringe
+[848]
+19.5.2. The large firm's problem
+[849] [850]
+19.5.3. Numerical example
+19.6.  Concluding remarks
+[851]
+Exercises
+[852] [853] [854]) [855] [856] (opt_tax_recur_3.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen84
+) (psfig.tex)
+20. Two Ramsey Problems Revisited
+20.1.  Introduction
+20.2.  The Lucas-Stokey economy
+[857] [858]
+20.2.1. Finding the state is an art
+20.2.2. Intertemporal delegation
+[859]
+20.2.3. Bellman equations
+20.2.4. Subproblem 1: Continuation Ramsey problem
+[860]
+20.2.5. Subproblem 2: Ramsey problem
+[861]
+20.2.6. First-order conditions
+[862]
+20.2.7. State variable degeneracy
+20.2.8. Symptom and source of time inconsistency
+[863]
+20.3.  Recursive formulation of AMSS model
+[864]
+20.3.1. Recasting state variables
+[865]
+20.3.2. Measurability constraints
+20.3.3. Bellman equations
+[866]
+20.3.4. Martingale replaces state-variable degeneracy
+[867] [868]
+20.4.  Concluding remarks
+) [869] [870] (black15.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen85
+) (psfig.tex)
+21. Incentives and Insurance
+21.1.  Insurance with recursive contracts
+[871]
+21.2.  Basic environment
+[872]
+Figure 21.2.1. {triKoch}
+(Seb_1_a_v2.eps
+)
+(Seb_1_b_v2.eps
+)
+Figure 21.2.2. {triCKf}
+(Seb_2_v2.eps
+)
+[873] [874]
+21.3.  One-sided no commitment
+[875]
+21.3.1. Self-enforcing contract
+21.3.2. Recursive formulation and solution
+[876] [877] [878]
+Figure 21.3.1. {commit1af}
+[879]
+(commit1a.eps
+)
+[880] [881]
+Figure 21.3.2. {commit2af}
+(commit2a.eps
+)
+[882]
+21.3.3. Recursive computation of contract
+[883]
+Overfull \hbox (10.00345pt too wide) in paragraph at lines 735--740
+[]\tenrm These suc-ces-sive it-er-a-tions yield the op-ti-mal con-tract char-ac
+-ter-ized by $\tensy f[][]\teni ; [][]\tensy g[]$\tenrm .
+
+\hbox(8.41226+2.5)x345.7008, glue set - 1.0
+.\special<-63>{src:736black15.tex}
+.\tenrm T
+.\tenrm h
+.\tenrm e
+.\tenrm s
+.etc.
+
+[884] [885]
+21.3.4. Profits
+[886] [887] [888]
+21.3.5. $P(v)$ is strictly concave and continuously differentiable
+[889]
+21.3.6. Many households
+[890] [891] [892]
+21.3.7. An example
+Figure 21.3.3. {tworr1f}
+(tworr1update.ps
+)
+Figure 21.3.4. {tworr2f}
+(tworr2update.ps
+)
+21.4.  A Lagrangian method
+[893] [894] [895] [896]
+21.5.  Insurance with asymmetric information
+[897] [898]
+Figure 21.5.1. {thomworrf}
+(thomworr.eps
+)
+[899]
+21.5.1. Efficiency implies $b_{s-1} \geq b_s, w_{s-1} \leq w_s$
+[900]
+21.5.2. Local upward and downward constraints are enough
+21.5.3. Concavity of $P$
+[901] [902]
+21.5.4. Local downward constraints always bind
+21.5.5. Coinsurance
+[903]
+21.5.6. $P'(v)$ is a martingale
+[904]
+21.5.7. Comparison to model with commitment problem
+21.5.8. Spreading continuation values
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 16.7031
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 58.7709fil
+...\subsecfont 2
+...\subsecfont 1
+...\subsecfont .
+...\subsecfont 5
+...\subsecfont .
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{21.5.7.}Comparison to model with commitment problem.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [905]
+21.5.9. Martingale convergence and poverty
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+2.5)x345.7008, glue set 4.68488
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.54953
+..\hbox(0.0+0.0)x20.0
+..\special{src:1886black15.tex}
+..\tenrm T
+..\tenrm h
+..\tenrm e
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set - 0.8454
+..\tenrm w
+..\kern-0.27779
+..\tenrm o
+..\tenrm u
+..\tenrm l
+..etc.
+.etc.
+
+ [906]
+[907]
+21.5.10. Extension to general equilibrium
+21.5.11. Comparison with self-insurance
+[908]
+21.6.  Insurance with unobservable storage
+[909]
+21.6.1. Feasibility
+[910]
+21.6.2. Incentive compatibility
+[911]
+21.6.3. Efficient allocation
+[912] [913]
+21.6.4. The two-period case
+[914] [915] [916] [917] [918]
+21.6.5. Role of the planner
+[919]
+21.6.6. Decentralization in a closed economy
+[920] [921]
+21.7.  Concluding remarks
+appendix A.  Historical development
+21.A.1. Spear and Srivastava
+[922]
+21.A.2. Timing
+[923]
+21.A.3. Use of lotteries
+[924] [925]
+Exercises
+[926] [927] [928] [929] [930] [931]) (blk15closed.tex (grafinp3.tex (psfig2.tex
+)
+\captionsize=\dimen86
+) (psfig.tex) [932]
+22. Equilibrium without Commitment 
+22.1.  Two-sided lack of commitment
+[933]
+22.2.  A closed system
+[934] [935]
+22.3.  Recursive formulation
+[936] [937]
+22.4.  Equilibrium consumption
+22.4.1. Consumption dynamics
+[938] [939]
+22.4.2. Consumption intervals cannot contain each other
+[940] [941]
+22.4.3. Endowments are contained in the consumption intervals
+[942]
+22.4.4. All consumption intervals are nondegenerate (unless autarky is the only
+ sustainable allocation)
+[943]
+22.5.  Pareto frontier and ex ante division of the gains
+[944]
+22.6.  Consumption distribution
+22.6.1. Asymptotic distribution
+[945] [946]
+22.6.2. Temporary imperfect risk sharing
+[947]
+22.6.3. Permanent imperfect risk sharing
+22.7.  Alternative recursive formulation
+[948] [949]
+22.8.  Pareto frontier revisited
+[950]
+22.8.1. Values are continuous in implicit consumption
+[951] [952]
+22.8.2. Differentiability of the Pareto frontier
+[953]
+22.9.  Continuation values {{\accent 18 a} la} Kocherlakota
+22.9.1. Asymptotic distribution is nondegenerate for imperfect risk sharing (ex
+cept when $S=2$)
+[954] [955] [956] [957]
+22.9.2. Continuation values do not always respond to binding participation cons
+traints
+[958]
+Underfull \hbox (badness 1371) in paragraph at lines 1558--1558
+\secfont 22.10.  A two-state example: amnesia overwhelms 
+
+\hbox(8.33333+2.33333)x345.7008, glue set 2.39534
+.\secfont 2
+.\secfont 2
+.\secfont .
+.\secfont 1
+.\secfont 0
+.etc.
+
+22.10.  A two-state example: amnesia overwhelms memory
+[959] [960]
+Figure 22.10.1. {koch2s1bf}
+(koch2s1b.ps
+)
+Figure 22.10.2. {koch2s1af}
+(koch2s1a.ps
+)
+[961]
+22.10.1. Pareto frontier
+[962]
+Figure 22.10.3. {rm1f}
+[963]
+(rm1.eps
+)
+[964]
+22.10.2. Interpretation
+22.11.  A three-state example
+[965] [966] [967]
+Figure 22.11.1. {icpairs}
+(ic_high.ps
+)
+(ic_low.ps
+)
+Figure 22.11.2. {ic_bothf}
+(ic_both.ps
+)
+[968]
+22.11.1. Perturbation of parameter values
+[969]
+Figure 22.11.3. {contvpi}
+(c07.ps
+)
+(v07.ps
+)
+[970] [971]
+22.11.2. Pareto frontier
+[972]
+Figure 22.11.4. {pareto3f}
+(pareto3.ps
+)
+[973]
+22.12.  Empirical motivation
+22.13.  Generalization
+[974]
+22.14.  Decentralization
+[975]
+22.15.  Endogenous borrowing constraints
+[976] [977] [978]
+22.16.  Concluding remarks
+[979]
+Exercises
+[980] [981] [982] [983] [984]) [985] [986] (blinsur.tex (grafinp3.tex
+(psfig2.tex)
+\captionsize=\dimen87
+) (psfig.tex)
+23. Optimal Unemployment Insurance
+23.1.  History-dependent unemployment insurance
+[987]
+23.2.  A one-spell model
+[988]
+23.2.1. The autarky problem
+[989]
+23.2.2. Unemployment insurance with full information
+[990]
+23.2.3. The incentive problem
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 11.86975
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.40796
+..\tenrm r
+..\tenrm e
+..\discretionary
+...\tenrm -
+..\tenrm p
+..\kern0.27779
+..etc.
+.\glue(\baselineskip) 4.55556
+.\hbox(7.5+2.5)x345.7008, glue set - 0.34729
+..\tenrm d
+..\tenrm u
+..\tenrm r
+..\discretionary
+...\tenrm -
+..\tenrm i
+..etc.
+.\glue(\baselineskip) 4.0
+.etc.
+
+ [991]
+23.2.4. Unemployment insurance with asymmetric information
+
+Overfull \vbox (0.98999pt too high) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set - 1.0
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 20.21748fil
+...\subsecfont 2
+...\subsecfont 3
+...\subsecfont .
+...\subsecfont 2
+...\subsecfont .
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{23.2.4.}Unemployment insurance with asymmetric information.}}
+
+.\write9{{\folio }\@comment }
+.etc.
+
+
+[992]
+Figure 23.2.1. {hugoreplnewf}
+(hugoreplnew_gray.eps
+)
+23.2.5. Computed example
+[993] [994]
+23.2.6. Computational details
+[995]
+23.2.7. Interpretations
+23.2.8. Extension: an on-the-job tax
+[996]
+23.2.9. Extension: intermittent unemployment spells
+23.3.  A multiple-spell model with lifetime contracts
+[997]
+23.3.1. The setup
+Missing character: There is no ^^ad in font cmr7!
+[998]
+23.3.2. A recursive lifetime contract
+[999]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+3.38332)x345.7008, glue set 5.11322
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x345.7008, glue set 0.5903
+..\special<-63>{src:636blinsur.tex}
+..\tenrm C
+..\tenrm o
+..\tenrm n
+..\tenrm s
+..etc.
+.\penalty 20000
+.\glue(\baselineskip) 4.55556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.61513
+..\tenrm c
+..\tenrm o
+..\tenrm m
+..\tenrm p
+..\tenrm a
+..etc.
+.etc.
+
+ [1000]
+[1001]
+23.3.3. Compensation dynamics when unemployed
+23.3.4. Compensation dynamics while employed
+[1002] [1003]
+23.3.5. Summary
+[1004]
+23.4.  Concluding remarks
+Exercises
+[1005] [1006] [1007] [1008]) [1009] [1010] (black16_2010.tex (grafinp3.tex
+(psfig2.tex)
+\captionsize=\dimen88
+) (psfig.tex)
+24. Credible Government Policies: I
+24.1.  Introduction
+[1011]
+24.1.1. Diverse sources of history dependence
+[1012]
+24.2.  One-period economy
+[1013]
+24.2.1. Competitive equilibrium
+24.2.2. Ramsey problem
+[1014]
+24.2.3. Nash equilibrium
+[1015]
+24.3.  Nash and Ramsey outcomes
+24.3.1. Taxation example
+[1016]
+Figure 24.3.1. {cred1f}
+(cred1.ps
+)
+
+Overfull \hbox (10.92947pt too wide) in paragraph at lines 475--479
+[]\tenrm The Ram-sey tax rate and al-lo-ca-tion are de-ter-mined by the so-lu-t
+ion to $[][] \teni W[]\tenrm (\teni ^^\\tenrm )$.
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\special<-63>{src:476black16_2010.tex}
+.\tenrm T
+.\tenrm h
+.\tenrm e
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+[1017] [1018]
+24.3.2. Black-box example with discrete choice sets
+Table 24.3.1. {junk1}
+Figure 24.3.2. {game1f}
+(game1.ps
+)
+Figure 24.3.3. {game2f}
+[1019]
+(game2.ps
+)
+24.4.  Reputational mechanisms: general idea
+[1020] [1021]
+24.4.1. Dynamic programming squared
+[1022]
+Figure 24.4.1. {cred2f}
+(cred2.ps
+)
+[1023] [1024]
+24.4.2. Etymology of `dynamic programming squared'
+[1025]
+24.5.  The infinitely repeated economy
+24.5.1. A strategy profile implies a history and a value
+[1026]
+24.5.2. Recursive formulation
+[1027] [1028]
+24.6.  Subgame perfect equilibrium (SPE)
+[1029] [1030]
+24.7.  Examples of SPE
+24.7.1. Infinite repetition of one-period Nash equilibrium
+[1031]
+24.7.2. Supporting better outcomes with trigger strategies
+[1032]
+24.7.3. When reversion to Nash is not bad enough
+[1033]
+24.8.  Values of all SPEs
+[1034]
+24.8.1. Basic idea of dynamic programming squared
+[1035]
+24.9.  APS machinery
+[1036] [1037]
+24.10.  Self-enforcing SPE
+[1038] [1039]
+24.10.1. The quest for something worse than repetition of Nash outcome
+24.11.  Recursive strategies
+[1040] [1041] [1042]
+24.12.  Examples of SPE with recursive strategies
+[1043]
+24.12.1. Infinite repetition of Nash outcome
+24.12.2. Infinite repetition of a better-than-Nash outcome
+[1044]
+24.12.3. Something worse: a stick-and-carrot strategy
+[1045] [1046]
+24.13.  Best and worst SPE values
+[1047]
+24.13.1. When $v_1$ is outside the candidate set
+[1048]
+24.14.  Examples: alternative ways to achieve the worst
+24.14.1. Attaining the worst, method 1
+[1049]
+24.14.2. Attaining the worst, method 2
+24.14.3. Attaining the worst, method 3
+[1050]
+24.14.4. Numerical example
+Figure 24.14.1. {cred3f}
+(cred3.ps
+)
+[1051]
+Figure 24.14.2. {cred5f}
+(cred5.ps
+)
+[1052]
+24.15.  Interpretations
+[1053]
+24.16.  Extensions
+Exercises
+[1054] [1055] [1056] [1057]) [1058] (black_chang.tex
+25. Credible Government Policies: II
+25.1.  History-dependent government policies
+[1059]
+25.2.  The setting
+25.2.1. Household problem
+[1060]
+25.2.2. Government
+[1061]
+25.2.3. Analysis of household's problem
+[1062]
+25.2.4. $\theta _{t+1}$ as intermediating variable
+25.3.  Recursive approach to Ramsey problem
+[1063]
+25.3.1. Subproblem 1: Continuation Ramsey problem
+25.3.2. Subproblem 2: Ramsey problem
+[1064]
+25.3.3. Finding set $\Omega $
+[1065]
+25.3.4. An example
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+2.33333)x345.7008, glue set 5.2031
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 234.48651fil
+...\subsecfont 2
+...\subsecfont 5
+...\subsecfont .
+...\subsecfont 3
+...\subsecfont .
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{25.3.3.}Finding set $\Omega $.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [1066]
+Figure 25.3.1. {chang_gr1}
+(J_theta.eps
+)
+Figure 25.3.2. {chang_gr2}
+(theta_prime.eps
+)
+Figure 25.3.3. {chang_gr3}
+(policy_functions.eps
+)
+Figure 25.3.4. {chang_gr4}
+(time_series.eps
+)
+[1067]
+25.4.  Chang's formulation
+[1068]
+25.4.1. Competitive equilibrium
+25.5.  Inventory of key objects
+[1069] [1070] [1071]
+25.6.  Analysis
+[1072] [1073]
+25.6.1. Notation
+[1074]
+25.6.2. An operator
+[1075]
+Figure 25.6.1. {chang_graph1_exo}
+(Chang1_B.eps
+)
+Figure 25.6.2. {chang_graph2_exo}
+(Chang2_B.eps
+)
+[1076] [1077]
+25.7.  Sustainable plans
+
+Overfull \hbox (20.79181pt too wide) in paragraph at lines 705--706
+[]\tensc Definition: \tenrm Let $^^B = \tensy f\tenrm ([]\teni ; []; []\tenrm )
+ \tensy 2 \teni CE \tenrm : [] ([]\teni ; []; []\tenrm )\tensy g\teni :$ 
+
+\hbox(9.78334+2.5)x345.7008, glue set - 1.0
+.\special<-63>{src:705black_chang.tex}
+.\tensc D
+.\tensc e
+.\tensc f
+.\tensc i
+.etc.
+
+[1078] [1079] [1080]
+25.8.  Concluding remarks
+) [1081] [1082] (blktrade.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen89
+) (psfig.tex)
+26. Two Topics in International Trade
+26.1.  Two dynamic contracting problems
+[1083]
+26.2.  Moral hazard and difficult enforcement
+[1084] [1085]
+26.2.1. Autarky
+26.2.2. Investment with full insurance
+[1086] [1087] [1088]
+26.2.3. Limited commitment and unobserved investment
+[1089] [1090] [1091]
+26.2.4. Optimal capital outflows under distress
+[1092] [1093]
+26.3.  Gradualism in trade policy
+[1094]
+26.3.1. Closed-economy model
+[1095] [1096]
+26.3.2. A Ricardian model of two countries under free trade
+26.3.3. Trade with a tariff
+[1097] [1098]
+26.3.4. Welfare and Nash tariff
+[1099]
+26.3.5. Trade concessions
+[1100]
+26.3.6. A repeated tariff game
+26.3.7. Time-invariant transfers
+[1101] [1102] [1103]
+26.3.8. Gradualism: time-varying trade policies
+[1104]
+26.3.9. Baseline policies
+[1105] [1106] [1107] [1108]
+Figure 26.3.1. {bondpark1f}
+(bondpark1.eps
+)
+[1109] [1110]
+26.3.10. Multiplicity of payoffs and continuation values
+[1111] [1112] [1113] [1114]
+26.4.  Another model
+[1115]
+26.5.  Concluding remarks
+[1116]
+appendix A.  Computations for Atkeson's model
+[1117] [1118]
+Exercises
+) [1119] [1120]
+Underfull \hbox (badness 10000) in paragraph at lines 455--455
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[1121] [1122] (black17_tom_4.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen90
+) (psfig.tex)
+27. Fiscal-Monetary Theories of Inflation
+27.1.  The issues
+[1123]
+27.2.  A shopping time monetary economy
+[1124]
+27.2.1. Household
+[1125] [1126]
+27.2.2. Government
+[1127]
+27.2.3. Equilibrium
+27.2.4. ``Short run'' versus ``long run''
+[1128]
+27.2.5. Stationary equilibrium
+27.2.6. Initial date (time 0)
+[1129]
+27.2.7. Equilibrium determination
+Figure 27.2.1. {mon1af}
+(mon1a_new.ps
+)
+Figure 27.2.2. {mon1bf}
+(mon1b_new.ps
+)
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+0.0)x345.7008, glue set 5.09258
+.\glue 0.0
+.\glue(\topskip) 0.0
+.\vbox(18.0+0.0)x345.7008
+..\hbox(9.0+3.0)x345.7008, glue set 202.48933fil
+...\subsecfont 2
+...\subsecfont 7
+...\subsecfont .
+...\subsecfont 2
+...\subsecfont .
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{27.2.6.}Initial date (time 0).}}
+.etc.
+
+ [1130]
+[1131]
+27.3.  Ten monetary doctrines
+27.3.1. Quantity theory of money
+27.3.2. Sustained deficits cause inflation
+[1132]
+27.3.3. Fiscal prerequisites of zero inflation policy
+27.3.4. Unpleasant monetarist arithmetic
+[1133]
+27.3.5. An ``open market'' operation delivering neutrality
+[1134]
+27.3.6. The ``optimum quantity'' of money
+27.3.7. Legal restrictions to boost demand for currency
+
+Underfull \vbox (badness 1755) has occurred while \output is active
+\vbox(505.0364+2.5)x345.7008, glue set 2.60155
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 127.03676fil
+...\subsecfont 2
+...\subsecfont 7
+...\subsecfont .
+...\subsecfont 3
+...\subsecfont .
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{27.3.6.}The ``optimum quantity'' of money.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [1135]
+27.3.8. One big open market operation
+[1136] [1137]
+27.3.9. A fiscal theory of the price level
+[1138] [1139]
+27.3.10. Exchange rate indeterminacy
+[1140]
+27.3.11. Determinacy of the exchange rate retrieved
+[1141] [1142]
+27.4.  An example of exchange rate (in)determinacy
+[1143]
+27.4.1. Trading before sunspot realization
+[1144]
+27.4.2. Fiscal theory of the price level
+[1145]
+27.4.3. A game theoretic view of the fiscal theory of the price level
+[1146] [1147]
+27.5.  Optimal inflation tax: the Friedman rule
+27.5.1. Economic environment
+[1148]
+27.5.2. Household's optimization problem
+[1149]
+27.5.3. Ramsey plan
+[1150] [1151]
+27.6.  Time consistency of monetary policy
+[1152] [1153]
+27.6.1. Model with monopolistically competitive wage setting
+[1154] [1155]
+27.6.2. Perfect foresight equilibrium
+
+Overfull \vbox (0.59341pt too high) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set - 1.0
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+0.0)x345.7008, glue set 252.06172fil
+..\tenrm h
+..\tenrm o
+..\tenrm u
+..\tenrm s
+..\tenrm e
+..etc.
+.\penalty 10000
+.\glue(\abovedisplayskip) 12.0 plus 3.0 minus 9.0
+.\glue(\lineskip) 1.0
+.etc.
+
+
+[1156] [1157]
+27.6.3. Ramsey plan
+[1158] [1159]
+27.6.4. Credibility of the Friedman rule
+
+Underfull \vbox (badness 5490) has occurred while \output is active
+\vbox(505.0364+4.0)x345.7008, glue set 3.8046
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+2.33333)x345.7008, glue set 0.3547
+..\teni x
+..\hbox(4.51111+0.83334)x13.64589, shifted 1.49998
+...\seveni t
+...\sevenrm +
+...\sevenrm 1
+..\glue(\thickmuskip) 2.77771 plus 2.77771
+..\tenrm =
+..\penalty 500
+..etc.
+.\glue(\baselineskip) 4.72223
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.09557
+..\tenrm t
+..\tenrm h
+..\tenrm e
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..\tenrm ^^L (ligature fi)
+..etc.
+.\glue(\baselineskip) 4.55556
+.etc.
+
+ [1160]
+[1161] [1162]
+27.7.  Concluding remarks
+[1163]
+Exercises
+[1164] [1165] [1166] [1167] [1168] [1169]) (black18.tex (grafinp3.tex
+(psfig2.tex)
+\captionsize=\dimen91
+) (psfig.tex) [1170]
+28. Credit and Currency
+28.1.  Credit and currency with long-lived agents
+[1171]
+28.2.  Preferences and endowments
+28.3.  Complete markets
+[1172]
+28.3.1. A Pareto problem
+28.3.2. A complete markets equilibrium
+[1173] [1174]
+28.3.3. Ricardian proposition
+[1175]
+28.3.4. Loan market interpretation
+[1176]
+28.4.  A monetary economy
+[1177]
+Figure 28.4.1. {dmt62f}
+(dmt62.ps
+)
+[1178]
+28.5.  Townsend's ``turnpike'' interpretation
+[1179]
+Figure 28.5.1. {turn10f}
+(turn10.eps
+)
+[1180] [1181]
+28.6.  The Friedman rule
+[1182]
+28.6.1. Welfare
+[1183]
+Figure 28.6.1. {townsendf}
+(townsend.ps
+)
+28.7.  Inflationary finance
+[1184]
+Underfull \vbox (badness 3058) has occurred while \output is active
+\vbox(505.0364+2.5)x345.7008, glue set 3.12904
+.\glue(\splittopskip) 0.0
+.\vbox(386.46642+0.0)x345.7008
+..\rule(0.0+0.0)x0.0
+..\glue 12.0 plus 4.0 minus 4.0
+..\hbox(280.57753+0.0)x345.7008, glue set 64.4454fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+...\hbox(280.57753+0.0)x216.81 []
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\write5{% > Figure 28.6.1:}
+..\write5{\FIGLitem{Figure} {28.6.1. }}
+..etc.
+.\penalty 10000
+.\penalty -200
+.\glue 12.0 plus 4.0 minus 4.0
+.etc.
+
+ [1185]
+[1186]
+Figure 28.7.1. {town7f}
+(town7.ps
+)
+Figure 28.7.2. {town5f}
+(town5.ps
+)
+[1187]
+Figure 28.7.3. {town6f}
+(town6.ps
+)
+[1188]
+28.8.  Legal restrictions
+Figure 28.8.1. {bryant4f}
+(bryant4.eps
+)
+Figure 28.8.2. {bryant5f}
+(bryant5.eps
+)
+[1189]
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+4.0)x345.7008, glue set 4.99922
+.\glue(\splittopskip) 0.0
+.\vbox(385.45497+0.0)x345.7008
+..\hbox(235.01053+0.0)x345.7008, glue set 73.47916fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+...\hbox(235.01053+0.0)x198.7425 []
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\write5{% > Figure 28.8.1:}
+..\write5{\FIGLitem{Figure} {28.8.1. }}
+..\write5{bryant4f\noexpand \@endFIGLitem }
+..\write5{{\folio }}
+..etc.
+.\penalty 10000
+.\penalty -200
+.\glue 12.0 plus 4.0 minus 4.0
+.etc.
+
+ [1190]
+[1191] [1192]
+28.9.  A two-money model
+
+Overfull \hbox (20.40283pt too wide) in paragraph at lines 1018--1031
+\tenrm lo-ca-tion $\tensy f\teni c[]; c[]; G[]; G[]\tensy g[]$\tenrm , non-neg-
+a-tive money hold-ings $\tensy f\teni m[]; m[]; m[]; m[]\tensy g[]$\tenrm ,
+
+\hbox(7.5+3.31544)x345.7008, glue set - 1.0
+.\tenrm l
+.\discretionary replacing 2
+..\tenrm o
+..\tenrm -
+.\tenrm o
+.\kern0.27779
+.\tenrm c
+.etc.
+
+[1193] [1194] [1195]
+28.10.  A model of commodity money
+Figure 28.10.1. {silverf}
+(silver.eps
+)
+
+Overfull \hbox (22.96227pt too wide) in paragraph at lines 1178--1178
+ \teni ^^Lu[]\tenrm (\teni c[]\tenrm )$. For as long as it is fea-si-ble, the e
+ven agent sets $\teni u[]\tenrm (\teni c[]\tenrm )\teni =u[]\tenrm (\teni c[]\t
+enrm ) = 
+
+\hbox(7.51782+3.31544)x345.7008, glue set - 1.0
+.\glue(\leftskip) 28.45273
+.\teni ^^L
+.\kern0.52777
+.\teni u
+.\hbox(3.8889+0.0)x2.80556, shifted -3.62892
+..\sevensy 0
+.etc.
+
+[1196]
+28.10.1. Equilibrium
+[1197] [1198]
+28.10.2. Virtue of fiat money
+[1199]
+28.11.  Concluding remarks
+Exercises
+[1200] [1201] [1202] [1203] [1204] [1205]) (black19_2.tex (grafinp3.tex
+(psfig2.tex)
+\captionsize=\dimen92
+) (psfig.tex) [1206]
+29. Equilibrium Search, Matching, and Lotteries
+29.1.  Introduction
+[1207]
+29.2.  An island model
+[1208]
+29.2.1. A single market (island)
+[1209] [1210]
+29.2.2. The aggregate economy
+[1211]
+Figure 29.2.1. {fig191f}
+(fig191.eps
+)
+29.3.  A matching model
+[1212] [1213]
+29.3.1. A steady state
+[1214] [1215]
+29.3.2. Welfare analysis
+[1216] [1217]
+29.3.3. Size of the match surplus
+[1218] [1219]
+29.4.  Matching model with heterogeneous jobs
+29.4.1. A steady state
+[1220]
+29.4.2. Welfare analysis
+[1221] [1222] [1223]
+29.4.3. The allocating role of wages I: separate markets
+[1224] [1225]
+29.4.4. The allocating role of wages II: wage announcements
+[1226]
+29.5.  Employment lotteries
+[1227] [1228]
+Figure 29.5.1. {fig192f}
+(fig192.eps
+)
+[1229]
+29.6.  Lotteries for households versus lotteries for firms
+[1230]
+29.6.1. An aggregate production function
+[1231]
+29.6.2. Time-varying capacity utilization
+[1232] [1233]
+29.7.  Employment effects of layoff taxes
+[1234]
+29.7.1. A model of employment lotteries with layoff taxes
+[1235] [1236] [1237] [1238]
+Figure 29.7.1. {hsm_pic1f}
+(hsm_pic1.ps
+)
+[1239]
+Figure 29.7.2. {hsm_pic3f}
+(hsm_pic3.ps
+)
+Figure 29.7.3. {hsm_pic4f}
+(hsm_pic4.ps
+)
+Figure 29.7.4. {lay_p5f}
+(lay_p5.ps
+)
+Figure 29.7.5. {hsm_pic5f}
+(hsm_pic5.ps
+)
+[1240] [1241]
+29.7.2. An island model with layoff taxes
+[1242] [1243]
+29.7.3. A matching model with layoff taxes
+[1244] [1245] [1246] [1247]
+29.8.  Kiyotaki-Wright search model of money
+[1248] [1249]
+29.8.1. Monetary equilibria
+[1250]
+Figure 29.8.1. {fig194f}
+[1251]
+(fig194.eps
+)
+[1252]
+29.8.2. Welfare
+[1253] [1254]
+29.9.  Concluding remarks
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 27.42531
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x345.7008, glue set 0.54955
+..\tenrm T
+..\tenrm h
+..\kern-0.27779
+..\tenrm u
+..\tenrm s
+..etc.
+.\glue(\baselineskip) 4.0
+.\hbox(7.5+2.5)x345.7008, glue set 0.43999
+..\teni x
+..\glue(\thickmuskip) 2.77771 plus 2.77771
+..\teni <
+..\penalty 500
+..\glue(\thickmuskip) 2.77771 plus 2.77771
+..etc.
+.\glue(\baselineskip) 4.0
+.etc.
+
+ [1255]
+[1256]
+Exercises
+[1257] [1258]
+Figure 29.1. {pic11f}
+(pic11.ps
+)
+[1259] [1260] [1261] [1262] [1263] [1264] [1265] [1266] [1267])
+(Matching_new_Tom_7.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen93
+) (psfig.tex) [1268]
+30. Matching Models Mechanics
+30.1.  Introduction
+[1269] [1270]
+30.2.  Fundamental surplus
+30.2.1. Sensitivity of unemployment to market tightness
+[1271]
+Overfull \hbox (14.4216pt too wide) detected at line 195
+[]  \tenrm =  \tensy ^^@[]  \tenrm =  \tensy ^^@ [] []  \tenrm =  \tensy ^^@\te
+nrm (1 \tensy ^^@ \teni ^^K\tenrm ) [] \teni ;
+
+\hbox(14.5001+9.50012)x345.7008, glue set - 1.0
+.\hbox(13.70952+6.85951)x14.99606
+..\hbox(13.70952+6.85951)x14.99606
+...\hbox(0.0+0.0)x1.2, shifted -2.5
+...\vbox(13.70952+6.85951)x12.59607 []
+...\hbox(0.0+0.0)x1.2, shifted -2.5
+.\glue 2.77771 plus 2.77771
+.\glue(\thickmuskip) 2.77771 plus 2.77771
+.\tenrm =
+.\glue 2.77771 plus 2.77771
+.etc.
+
+30.2.2. Nash bargaining model
+[1272]
+30.2.3. Shimer's critique
+[1273]
+30.2.4. Relationship to worker's outside value
+[1274] [1275]
+30.2.5. Relationship to match surplus
+[1276]
+30.2.6. Fixed matching cost
+[1277]
+30.2.7. Sticky wages
+[1278] [1279]
+30.2.8. Alternating-offer wage bargaining
+[1280] [1281] [1282]
+30.3.  Business cycle simulations
+30.3.1. Hall's sticky wage
+
+Underfull \vbox (badness 7740) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 4.26285
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 151.51085fil
+...\secfont 3
+...\secfont 0
+...\secfont .
+...\secfont 3
+...\secfont .
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\penalty 10000
+.\write9{\string \TOCitem {1}}
+.\write9{{\TOCsID{30.3.}Business cycle simulations.}}
+.etc.
+
+ [1283]
+Figure 30.3.1. {figMLIHall1}
+(MLI_Hall1.eps
+)
+Figure 30.3.2. {figMLIHall2}
+(MLI_Hall2.eps
+)
+[1284]
+30.3.2. Hagedorn and Manovskii's high value of leisure
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 6.42023
+.\glue(\splittopskip) 0.0
+.\vbox(203.26859+0.0)x345.7008
+..\hbox(151.3797+0.0)x345.7008, glue set 64.4454fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+...\hbox(151.3797+0.0)x216.81 []
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\write5{% > Figure 30.3.2:}
+..\write5{\FIGLitem{Figure} {30.3.2. }}
+..\write5{figMLIHall2\noexpand \@endFIGLitem }
+..\write5{{\folio }}
+..etc.
+.\penalty 10000
+.\penalty -200
+.\glue 12.0 plus 4.0 minus 4.0
+.etc.
+
+ [1285]
+Figure 30.3.3. {figMLINash1}
+(MLI_Nash1.eps
+)
+Figure 30.3.4. {figMLINash2}
+(MLI_Nash2.eps
+)
+[1286]
+30.3.3. Hall and Milgrom's alternating-offer bargaining
+[1287]
+Figure 30.3.5. {figMLIHallMilgrom}
+(MLI_HallMilgrom.eps
+)
+[1288]
+30.3.4. Matching and bargaining protocols in a DSGE model
+[1289]
+Figure 30.3.6. {figMLI_CLT}
+(AllComparisonFigure.eps
+)
+[1290]
+30.4.  Overlapping generations in one matching function
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+\vbox(505.0364+3.0)x345.7008, glue set 4.49617
+.\glue(\topskip) 2.5
+.\hbox(7.5+2.5)x345.7008, glue set 0.35927
+..\hbox(0.0+0.0)x14.22636
+..\special{src:1223Matching_new_Tom_7.tex}
+..\tenrm C
+..\tenrm h
+..\tenrm r
+..etc.
+.\penalty 10000
+.\glue(\baselineskip) 4.55556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.15797
+..\tenrm t
+..\tenrm h
+..\tenrm e
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..\tenrm v
+..etc.
+.etc.
+
+ [1291]
+30.4.1. A steady state
+[1292] [1293] [1294]
+30.4.2. Reservation productivity is increasing in age
+[1295]
+30.4.3. Wage rate is decreasing in age
+[1296] [1297]
+30.4.4. Welfare analysis
+[1298] [1299]
+30.4.5. The optimal policy
+[1300] [1301] [1302]
+30.5.  Directed search: age-specific matching functions
+30.5.1. Value functions and market tightness
+[1303]
+Overfull \hbox (13.75462pt too wide) in paragraph at lines 2041--2050
+[]\tenrm By sub-sti-tut-ing this ex-pres-sion into ($30\teni :\tenrm 5\teni :\t
+enrm 5$), mul-ti-ply-ing through by [],
+
+\hbox(7.5+2.5)x345.7008, glue set - 1.0
+.\special<-63>{src:2047Matching_new_Tom_7.tex}
+.\tenrm B
+.\tenrm y
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm s
+.etc.
+
+[1304] [1305]
+30.5.2. Job finding rate is decreasing in age
+[1306] [1307]
+Figure 30.5.1. {DS_job_finding_prob}
+(DS_job_finding_prob.eps
+)
+30.5.3. Block recursive equilibrium computation
+[1308] [1309]
+30.5.4. Welfare analysis
+[1310] [1311]
+30.6.  Concluding remarks
+[1312]) [1313] [1314] (macrolaborII.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen94
+) (psfig.tex)
+31. Foundations of Aggregate Labor Supply
+31.1.  Introduction
+[1315] [1316]
+31.2.  Equivalent allocations
+[1317]
+31.2.1. Choosing career length
+[1318] [1319]
+31.2.2. Employment lotteries
+[1320] [1321]
+31.3.  Taxation and social security
+[1322]
+31.3.1. Taxation
+[1323]
+31.3.2. Social security
+[1324] [1325] [1326]
+Figure 31.3.1. {figLSsocsec}
+(LS_socsec.ps
+)
+[1327]
+31.4.  Earnings-experience profiles
+[1328]
+31.4.1. Time averaging
+[1329]
+31.4.2. Employment lotteries
+[1330]
+31.4.3. Prescott tax and transfer scheme
+31.4.4. No discounting now matters
+[1331]
+31.5.  Intensive margin
+[1332]
+31.5.1. Employment lotteries
+[1333]
+31.5.2. Time averaging
+[1334]
+31.5.3. Prescott taxation
+[1335] [1336]
+31.6.  Ben-Porath human capital
+[1337]
+31.6.1. Time averaging
+[1338]
+31.6.2. Employment lotteries
+[1339] [1340]
+31.6.3. Prescott taxation
+[1341] [1342]
+31.7.  Earnings shocks
+[1343] [1344] [1345]
+31.7.1. Interpretation of wealth and substitution effects
+[1346]
+31.8.  Time averaging in a Bewley model
+[1347]
+31.8.1. Incomplete markets
+[1348]
+31.8.2. Complete markets
+[1349]
+Overfull \hbox (11.8739pt too wide) in paragraph at lines 1771--1777
+[]\tenrm In a steady state, con-sump-tion is con-stant over time. Ap-pli-ca-tio
+n of the Benveniste-
+
+\hbox(6.94444+1.94444)x345.7008, glue set - 1.0
+.\special<-63>{src:1772macrolaborII.tex}
+.\tenrm I
+.\tenrm n
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm a
+.etc.
+
+31.8.3. Simulations of Prescott taxation
+[1350]
+Figure 31.8.1. {figLSCKreswage}
+(LS_CK_reswage.ps
+)
+[1351]
+Figure 31.8.2. {figLSCKprod}
+(LS_CK_prod.ps
+)
+[1352]
+Figure 31.8.3. {figLSCKassets}
+(LS_CK_assets.ps
+)
+
+Underfull \vbox (badness 1590) has occurred while \output is active
+\vbox(505.0364+1.94444)x345.7008, glue set 2.5182
+.\glue 0.0
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.78618
+..\tenrm a
+..\tenrm r
+..\tenrm e
+..\glue 3.33333 plus 1.66666 minus 1.11111
+..\tenrm a
+..etc.
+.\glue(\baselineskip) 5.11111
+.\hbox(6.94444+1.94444)x345.7008, glue set 0.81369
+..\tenrm i
+..\tenrm n
+..\tenrm c
+..\tenrm o
+..\tenrm m
+..etc.
+.etc.
+
+ [1353]
+Figure 31.8.4. {figLSCKwage}
+(LS_CK_wage.ps
+)
+Figure 31.8.5. {figLSCKfrac}
+(LS_CK_frac.ps
+)
+[1354]
+Overfull \vbox (8.8999pt too high) has occurred while \output is active
+\vbox(505.0364+1.55556)x345.7008, glue set - 1.0
+.\glue(\splittopskip) 0.0
+.\vbox(232.61638+0.0)x345.7008
+..\rule(0.0+0.0)x0.0
+..\glue 12.0 plus 4.0 minus 4.0
+..\hbox(168.17194+0.0)x345.7008, glue set 64.4454fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+...\hbox(168.17194+0.0)x216.81 []
+...\glue 0.0 plus 1.0fil minus 1.0fil
+..\write5{% > Figure 31.8.4:}
+..\write5{\FIGLitem{Figure} {31.8.4. }}
+..etc.
+.\penalty 10000
+.\penalty -200
+.\glue 12.0 plus 4.0 minus 4.0
+.etc.
+
+
+[1355] [1356]
+31.9.  L and S equivalence meets C and K's agents
+31.9.1. Guess the value function
+[1357] [1358]
+31.9.2. Verify optimality of time averaging
+[1359] [1360] [1361]
+31.9.3. Equivalence of time averaging and lotteries
+[1362] [1363]
+31.10.  Two pillars for high elasticity at extensive margin
+31.11.  No pillars at intensive margin
+[1364] [1365]
+31.11.1. Special example of high elasticity at intensive margin
+Figure 31.11.1. {figRWLSdisutility}
+(RW_LS_disutility.eps
+)
+[1366]
+31.11.2. Fragility of the special example
+[1367] [1368]
+31.12.  Concluding remarks
+[1369]) [1370]
+Underfull \hbox (badness 10000) in paragraph at lines 470--470
+
+
+\hbox(0.0+0.0)x345.7008
+.\glue(\rightskip) 0.0
+
+[1371] [1372] (black20.tex (gayedef.txt)
+Appendix A. Functional Analysis
+A.1.  Metric spaces and operators
+[1373]
+Overfull \hbox (42.61012pt too wide) in paragraph at lines 79--84
+\headlinefont for any $\teni n; m \tensy ^^U \teni N\tenrm (\teni ^^O\tenrm )$\
+headlinefont . Thus a se-quence $\tensy f\teni x[]\tensy g$ \headlinefont is sa
+id to be Cauchy if $[][] \teni d\tenrm (\teni x[]; x[]\tenrm ) =
+
+\hbox(7.5+2.86108)x345.7008, glue set - 1.0
+.\headlinefont f
+.\headlinefont o
+.\headlinefont r
+.\glue 3.57774 plus 1.53333 minus 1.0222
+.\headlinefont a
+.etc.
+
+[1374] [1375] [1376] [1377] [1378]
+A.2.  Discounted dynamic programming
+[1379]
+A.2.1. Policy improvement algorithm
+[1380] [1381] [1382]
+A.2.2. A search problem
+
+Underfull \vbox (badness 2460) has occurred while \output is active
+\vbox(505.0364+4.0)x345.7008, glue set 2.90926
+.\glue(\topskip) 0.0
+.\vbox(16.66666+0.0)x345.7008
+..\hbox(8.33333+2.33333)x345.7008, glue set 220.20894fil
+...\subsecfont A
+...\subsecfont .
+...\subsecfont 2
+...\subsecfont .
+...\subsecfont 2
+...etc.
+..\glue 6.0 plus 2.0 minus 2.0
+.\write9{\string \TOCitem {2}}
+.\write9{{\TOCsID{A.2.2.}A search problem.}}
+.\write9{{\folio }\@comment }
+.etc.
+
+ [1383])
+(black21_a.tex (grafinp3.tex (psfig2.tex)
+\captionsize=\dimen95
+) (psfig.tex) [1384]
+Appendix B. Linear Projections and Hidden Markov Models
+B.1.  Linear projections
+[1385] [1386]
+B.2.  Hidden Markov models
+[1387]
+B.3.  Nonlinear filtering
+[1388]) [1389] [1390]
+ References
+(blackref.tex [1391] [1392] [1393] [1394] [1395] [1396] [1397] [1398] [1399]
+[1400] [1401] [1402] [1403] [1404] [1405] [1406] [1407] [1408] [1409] [1410]
+[1411] [1412] [1413] [1414] [1415] [1416] [1417] [1418] [1419]
+Missing character: There is no ^^96 in font cmr8!
+ [1420] [1421]
+[1422] [1423]) [1424]
+ Subject Index
+(rmt4.ind [1425]
+Missing character: There is no ^^96 in font cmr8!
+ [1426] [1427] [1428] [1429]) [1430]
+ Author Index
+(authblk.ind [1431] [1432] [1433] [1434] [1435]) [1436]
+ Matlab Index
+(matlblk.ind) [1437] )
+(\end occurred inside a group at level 1)
+Output written on RMT4.dvi (1475 pages, 5117716 bytes).

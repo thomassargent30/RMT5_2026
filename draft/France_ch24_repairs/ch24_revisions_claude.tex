@@ -1,0 +1,398 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{geometry}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+\usepackage{microtype}
+
+\geometry{margin=1.25in}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{property}[theorem]{Property}
+
+\title{Suggested Revisions to Chapter~24:\\
+\textit{Credible Government Policies: I}\\[0.5ex]
+\large \textit{Recursive Macroeconomic Theory}, 4th edition}
+\author{Based on the note by Barth\'{e}lemy and Mengus (2020)}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+This document collects suggested revisions to the statements and proofs in
+Chapter~24 of Ljungqvist and Sargent (2018). The core issue, identified by
+Barth\'{e}lemy and Mengus (2020), is that the two-value characterization of
+supported equilibria stated on page~1034 is presented as a necessary and
+sufficient condition, but is in fact only sufficient at the point where it is
+invoked. It becomes necessary only \emph{after} $V$ is known to be compact,
+which is precisely what the surrounding argument is trying to establish. The
+fix requires replacing every admissible \emph{4-tuple} $(x, y, w_1, w_2)$ with
+an admissible \emph{triple} $(x, y, w(\cdot))$ where $w(\cdot)$ is a function
+on $Y$, proving compactness of $V$ using this refined machinery, and then
+recovering the two-value formulation as a corollary. The economic content of
+the chapter is entirely unaffected.
+\end{abstract}
+
+\tableofcontents
+
+\bigskip
+
+%------------------------------------------------------------------
+\section{The Gap and Its Source}
+%------------------------------------------------------------------
+
+On page~1034, the text states that a competitive equilibrium $(x, y) \in C$
+is supported by a subgame perfect equilibrium (SPE)---that is, $x = \sigma^h_1$
+and $y = \sigma^g_1$---\emph{if and only if} there exist two values
+$(v_1, v_2) \in V \times V$ such that
+\begin{equation}
+(1-\delta)\,r(x,y) + \delta v_1
+\;\geq\;
+(1-\delta)\,r(x,\eta) + \delta v_2,
+\qquad \forall\, \eta \in Y.
+\label{eq:two-value}
+\end{equation}
+No explicit proof of the ``only if'' direction is provided. As we show below,
+condition~\eqref{eq:two-value} is \emph{sufficient} but not \emph{necessary}
+unless $V$ is already known to be compact---but compactness of $V$ is precisely
+what the subsequent argument aims to establish.
+
+The correct necessary and sufficient condition replaces the two scalar
+continuation values $(v_1, v_2)$ with a \emph{function} $v(\cdot) : Y \to V$,
+one continuation value for each possible government action. We state and prove
+this refined lemma in Section~\ref{sec:lemma}, use it to rebuild the APS
+machinery in Sections~\ref{sec:def7}--\ref{sec:theorem1}, prove compactness of
+$V$ in Section~\ref{sec:compact}, and then recover the two-value
+characterization as a corollary in Section~\ref{sec:corollary}.
+
+%------------------------------------------------------------------
+\section{Revised Characterization of Supported Equilibria}
+\label{sec:lemma}
+%------------------------------------------------------------------
+
+The following lemma replaces the ``if and only if'' assertion on page~1034.
+
+\begin{lemma}[Necessary and sufficient condition for support by an SPE]
+\label{lem:nsc}
+A competitive equilibrium $(x, y) \in C$ is supported by an SPE, i.e.\
+$x = \sigma^h_1$ and $y = \sigma^g_1$, if and only if there exists a function
+$v(\cdot) : Y \to V$ such that
+\begin{equation}
+(1-\delta)\,r(x,y) + \delta v(y)
+\;\geq\;
+(1-\delta)\,r(x,\eta) + \delta v(\eta),
+\qquad \forall\, \eta \in Y.
+\label{eq:func-cond}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+\textbf{Necessity.}
+Suppose $(x, y) \in C$ is supported by an SPE $\sigma$, so that
+$x = \sigma^h_1$ and $y = \sigma^g_1$.
+By condition~(1) of the Lemma on page~1030, for each $\eta \in Y$ the
+continuation strategy $\sigma|_{(x,\eta)}$ is itself an SPE.
+Define $v(\eta) = V_g(\sigma|_{(x,\eta)}) \in V$ for each $\eta \in Y$.
+Condition~(3) of the Lemma on page~1030 then gives
+\[
+(1-\delta)\,r(x,y) + \delta V_g(\sigma|_{(x,y)})
+\;\geq\;
+(1-\delta)\,r(x,\eta) + \delta V_g(\sigma|_{(x,\eta)}),
+\]
+which is exactly \eqref{eq:func-cond} with $v(\eta) = V_g(\sigma|_{(x,\eta)})$.
+
+\textbf{Sufficiency.}
+Suppose there exists $v(\cdot) : Y \to V$ satisfying \eqref{eq:func-cond}.
+Since $v(\eta) \in V$ for each $\eta \in Y$, there exists for each $\eta$ an
+SPE $\tilde\sigma(\eta)$ with $V_g(\tilde\sigma(\eta)) = v(\eta)$.
+Construct a strategy profile $\sigma$ by setting
+$\sigma|_{(x,\eta)} = \tilde\sigma(\eta)$ for all $\eta \in Y$, and
+(without loss of generality) $\sigma|_{(\nu,\eta)} = \tilde\sigma(\eta)$
+for all $\nu \in X$.
+By construction, this profile satisfies all three conditions of the Lemma on
+page~1030 and is therefore an SPE with $\sigma^h_1 = x$ and $\sigma^g_1 = y$.
+\end{proof}
+
+\bigskip
+
+The two-value condition~\eqref{eq:two-value} of the original text is
+\emph{sufficient}: if $(v_1, v_2) \in V \times V$ satisfy it, set $v(y) = v_1$
+and $v(\eta) = v_2$ for $\eta \neq y$, and \eqref{eq:func-cond} holds.
+The reverse implication holds once $V$ is known to be compact
+(see Section~\ref{sec:corollary}), but cannot be assumed at this stage.
+
+%------------------------------------------------------------------
+\section{Revised Definition 7: Admissible Triples}
+\label{sec:def7}
+%------------------------------------------------------------------
+
+Using Lemma~\ref{lem:nsc}, Definition~7 on page~1034 should be replaced as
+follows.
+
+\begin{definition}[Admissible triple]
+\label{def:admissible}
+Let $W \subset \mathbb{R}$.  A triple $(x, y, w(\cdot))$ is said to be
+\emph{admissible with respect to $W$} if $(x, y) \in C$ and
+$w(\cdot) : Y \to W$ is a function satisfying
+\[
+(1-\delta)\,r(x,y) + \delta w(y)
+\;\geq\;
+(1-\delta)\,r(x,\eta) + \delta w(\eta),
+\qquad \forall\, \eta \in Y.
+\]
+\end{definition}
+
+%------------------------------------------------------------------
+\section{Revised Definition 8: The Operator $B$}
+\label{sec:def8}
+%------------------------------------------------------------------
+
+Definition~8 on page~1036 is updated to reflect the triple-based notion of
+admissibility.
+
+\begin{definition}[The operator $B$]
+\label{def:B}
+For each set $W \subset \mathbb{R}$, let $B(W)$ be the set of possible values
+\[
+w \;=\; (1-\delta)\,r(x,y) + \delta\,w(y)
+\]
+associated with admissible triples $(x, y, w(\cdot))$ with respect to $W$.
+\end{definition}
+
+%------------------------------------------------------------------
+\section{Revised Monotonicity of $B$}
+\label{sec:mono}
+%------------------------------------------------------------------
+
+The monotonicity property is unchanged in statement; only the proof is
+adjusted.
+
+\begin{property}[Monotonicity of $B$]
+If $W \subseteq W' \subseteq \mathbb{R}$, then $B(W) \subseteq B(W')$.
+\end{property}
+
+\begin{proof}
+Suppose $w \in B(W)$.  Then there exists an admissible triple $(x, y, w(\cdot))$
+with respect to $W$ such that $w = (1-\delta)r(x,y)+\delta w(y)$.
+Since $W \subseteq W'$, the function $w(\cdot)$ maps $Y$ into $W'$ as well, so
+$(x, y, w(\cdot))$ is admissible with respect to $W'$ and $w \in B(W')$.
+\end{proof}
+
+%------------------------------------------------------------------
+\section{Revised Theorem 1: Self-Generating Sets Are Subsets of $V$}
+\label{sec:theorem1}
+%------------------------------------------------------------------
+
+Definition~9 (self-generating sets) is unchanged: $W$ is self-generating if
+$W \subseteq B(W)$.  Theorem~1 is restated and its proof is adapted to use
+admissible triples.
+
+\begin{theorem}[Self-generating sets are subsets of $V$]
+\label{thm:selfgen}
+If $W \subset \mathbb{R}$ is bounded and self-generating, then $B(W) \subseteq V$.
+\end{theorem}
+
+\begin{proof}
+Assume $W \subseteq B(W)$.  Choose $w \in B(W)$ and construct an SPE with
+value $w$ as follows.
+
+\smallskip
+\noindent\textbf{Step 1.}
+Because $w \in B(W)$, there exist $(x_1, y_1) \in C$ and a function
+$w_1(\cdot) : Y \to W$ such that
+\[
+w
+\;=\;
+(1-\delta)\,r(x_1, y_1) + \delta\,w_1(y_1)
+\;\geq\;
+(1-\delta)\,r(x_1,\eta) + \delta\,w_1(\eta),
+\qquad \forall\, \eta \in Y.
+\]
+Set $\sigma_1 = (x_1, y_1)$.
+
+\smallskip
+\noindent\textbf{Step 2.}
+Since $w_1(y_1) \in W \subseteq B(W)$, there exist $(x_2, y_2) \in C$ and a
+function $w_2(\cdot) : Y \to W$ such that
+\[
+w_1(y_1)
+\;=\;
+(1-\delta)\,r(x_2, y_2) + \delta\,w_2(y_2)
+\;\geq\;
+(1-\delta)\,r(x_2,\eta) + \delta\,w_2(\eta),
+\qquad \forall\, \eta \in Y.
+\]
+Set the first-period outcome of the continuation economy (occurring given that
+$y_1$ was chosen in period~1) equal to $(x_2, y_2)$; that is, set
+$(\sigma|_{(x_1,y_1)})_1 = (x_2, y_2)$.
+
+\smallskip
+\noindent\textbf{Continuation.}
+Iterating in this way, for each $w \in B(W)$ we construct sequences of
+functions $w_1(\cdot), w_2(\cdot), w_3(\cdot), \ldots$ and first-period
+outcomes $(x_1, y_1), (x_2, y_2), (x_3, y_3), \ldots$.
+Since $\delta < 1$ and $W$ is bounded,
+\[
+w
+\;=\;
+\lim_{t\to\infty}
+\left[
+  (1-\delta)\sum_{s=1}^{t} \delta^{s-1} r(x_s, y_s)
+  + \delta^t\, w_t(y_t)
+\right]
+\;=\;
+(1-\delta)\sum_{s=1}^{\infty} \delta^{s-1} r(x_s, y_s).
+\]
+At each stage, the continuation values make one-period deviations
+unimprovable, so the constructed strategy profile is an SPE.  By construction,
+$V_g(\sigma) = w$, which shows $w \in V$.
+\end{proof}
+
+%------------------------------------------------------------------
+\section{Compactness of $V$}
+\label{sec:compact}
+%------------------------------------------------------------------
+
+With the revised machinery in place, compactness of $V$ follows by an argument
+parallel to the proof of Theorem~4 in Abreu, Pearce, and Stacchetti (1990).
+
+\begin{proposition}[Compactness of $V$]
+\label{prop:compact}
+The set $V$ is compact.
+\end{proposition}
+
+\begin{proof}
+We know that $V$ is bounded and self-generating ($V \subseteq B(V)$).
+Let $\mathrm{cl}(V)$ denote the closure of $V$.  Since $V$ is bounded,
+$\mathrm{cl}(V)$ is compact and $V \subseteq \mathrm{cl}(V)$.
+
+By monotonicity of $B$,
+\[
+V \;=\; B(V) \;\subseteq\; B(\mathrm{cl}(V)).
+\]
+Since $B(\cdot)$ maps compact sets into compact sets, $B(\mathrm{cl}(V))$ is
+compact.  Because $\mathrm{cl}(V)$ is the smallest closed (hence compact) set
+containing $V$, and $V \subseteq B(\mathrm{cl}(V))$, it follows that
+\[
+\mathrm{cl}(V) \;\subseteq\; B(\mathrm{cl}(V)),
+\]
+so $\mathrm{cl}(V)$ is bounded and self-generating.
+Theorem~\ref{thm:selfgen} then gives $\mathrm{cl}(V) \subseteq V$, and
+therefore $V = \mathrm{cl}(V)$, which means $V$ is compact.
+\end{proof}
+
+%------------------------------------------------------------------
+\section{Corollary: The Two-Value Characterization}
+\label{sec:corollary}
+%------------------------------------------------------------------
+
+Now that $V$ is known to be compact, the function-valued condition of
+Lemma~\ref{lem:nsc} collapses to the economically transparent two-value form,
+and the assertion on page~1034 can be stated cleanly as the following
+corollary.
+
+\begin{corollary}[Two-value characterization]
+\label{cor:two-value}
+A competitive equilibrium $(x, y) \in C$ is supported by an SPE, that is
+$x = \sigma^h_1$ and $y = \sigma^g_1$, if and only if there exist
+$(v_1, v_2) \in V \times V$ such that
+\[
+(1-\delta)\,r(x,y) + \delta v_1
+\;\geq\;
+(1-\delta)\,r(x,\eta) + \delta v_2,
+\qquad \forall\, \eta \in Y.
+\]
+\end{corollary}
+
+\begin{proof}
+\textbf{Sufficiency} is immediate: given $(v_1, v_2) \in V \times V$, define
+$v(y) = v_1$ and $v(\eta) = v_2$ for $\eta \neq y$; then
+\eqref{eq:func-cond} holds, so Lemma~\ref{lem:nsc} applies.
+
+\textbf{Necessity.}
+Since $(x,y)$ is supported by an SPE, Lemma~\ref{lem:nsc} yields a function
+$v(\cdot) : Y \to V$ satisfying \eqref{eq:func-cond}.
+Set $v_1 = v(y)$.
+The set $\{v(\eta) : \eta \in Y\}$ is a subset of $V$; since $V$ is compact
+(Proposition~\ref{prop:compact}) and bounded, its infimum is attained in $V$.
+Set
+\[
+v_2 \;=\; \inf_{\eta \in Y}\, v(\eta) \;\in\; V.
+\]
+Then $v(\eta) \geq v_2$ for all $\eta \in Y$, so \eqref{eq:func-cond} implies
+\[
+(1-\delta)\,r(x,y) + \delta v_1
+\;=\;
+(1-\delta)\,r(x,y) + \delta v(y)
+\;\geq\;
+(1-\delta)\,r(x,\eta) + \delta v(\eta)
+\;\geq\;
+(1-\delta)\,r(x,\eta) + \delta v_2,
+\]
+for all $\eta \in Y$, as required.
+\end{proof}
+
+%------------------------------------------------------------------
+\section{Summary of Changes}
+%------------------------------------------------------------------
+
+The table below lists the specific replacements needed in the text of
+Chapter~24.
+
+\medskip
+\begin{center}
+\begin{tabular}{lll}
+\hline
+\textbf{Location} & \textbf{Current text} & \textbf{Replacement} \\
+\hline
+p.\ 1034, main assertion & ``if and only if $\exists\,(v_1,v_2)$\ldots'' &
+  Lemma~\ref{lem:nsc} above \\
+p.\ 1034, Definition~7 & admissible 4-tuple $(x,y,w_1,w_2)$ &
+  Definition~\ref{def:admissible} above \\
+p.\ 1036, Definition~8 & $B(W)$ via 4-tuples &
+  Definition~\ref{def:B} above \\
+p.\ 1036, Monotonicity proof & uses $(w_1,w_2)$ pair &
+  Section~\ref{sec:mono} above \\
+p.\ 1037, Theorem~1 proof & uses scalar $w_1, w_2$ &
+  Theorem~\ref{thm:selfgen} above \\
+p.\ 1038, after Theorem~1 & compactness asserted without proof &
+  Proposition~\ref{prop:compact} above \\
+p.\ 1034, ``if and only if'' & stated without full proof &
+  Corollary~\ref{cor:two-value} above \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+\noindent
+All other material in Chapter~24---the economic motivation, the examples
+(infinite repetition of Nash, trigger strategies, when reversion to Nash is not
+bad enough), the iteration algorithm for computing $V$, and the discussion of
+best and worst SPE values---is unaffected by these changes.
+
+%------------------------------------------------------------------
+\begin{thebibliography}{9}
+\bibitem{APS1990}
+Abreu, D., D.\ Pearce, and E.\ Stacchetti (1990):
+``Toward a Theory of Discounted Repeated Games with Imperfect Monitoring,''
+\textit{Econometrica}, 58, 1041--1063.
+
+\bibitem{BM2020}
+Barth\'{e}lemy, J.\ and E.\ Mengus (2020):
+``Note on Chapter~24 on Credible Government Policies: Proof of the Compactness
+of the Set of Equilibrium Payoffs,'' unpublished manuscript.
+
+\bibitem{LS2018}
+Ljungqvist, L.\ and T.\ J.\ Sargent (2018):
+\textit{Recursive Macroeconomic Theory}, 4th edition, MIT Press.
+\end{thebibliography}
+
+\end{document}

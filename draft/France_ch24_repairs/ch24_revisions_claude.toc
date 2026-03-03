@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}The Gap and Its Source}{1}{section.1}%
+\contentsline {section}{\numberline {2}Revised Characterization of Supported Equilibria}{2}{section.2}%
+\contentsline {section}{\numberline {3}Revised Definition 7: Admissible Triples}{2}{section.3}%
+\contentsline {section}{\numberline {4}Revised Definition 8: The Operator $B$}{3}{section.4}%
+\contentsline {section}{\numberline {5}Revised Monotonicity of $B$}{3}{section.5}%
+\contentsline {section}{\numberline {6}Revised Theorem 1: Self-Generating Sets Are Subsets of $V$}{3}{section.6}%
+\contentsline {section}{\numberline {7}Compactness of $V$}{4}{section.7}%
+\contentsline {section}{\numberline {8}Corollary: The Two-Value Characterization}{4}{section.8}%
+\contentsline {section}{\numberline {9}Summary of Changes}{5}{section.9}%

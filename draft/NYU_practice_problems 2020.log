@@ -1,0 +1,191 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdftex 2017.5.23)  26 NOV 2020 17:12
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"NYU_practice_problems 2020.tex"
+(./NYU_practice_problems 2020.tex
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/texsis.tex
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSfonts.tex TeXsis fonts:
+\ttglue=\skip18
+
+\mib, \scr,
+\scrfam=\fam8
+ 9pt, 10pt, 11pt, 12pt, 14pt, 16pt, 20pt, 24pt.)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSmacs.tex
+TeXsis main macros.
+\footnum=\count27
+\@quoteflag=\count28
+\AThelp=\toks13
+\beginhelp=\toks14
+ Checkpoint/Restart.
+\checkpointout=\write0
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSinit.tex
+Initialization.
+\txsfile=\read1
+\@utohelp=\toks15
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXShead.tex
+Running Headlines.
+\headlineoffset=\dimen16
+\footlineoffset=\dimen17
+\BindingMargin=\dimen18
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSeqns.tex
+Equation numbering.
+\eqnum=\count29
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSprns.tex
+Auto-sizing of Parentheses.)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSrefs.tex
+References and Citations.
+\refnum=\count30
+\@firstrefnum=\count31
+\@lastrefnum=\count32
+\@BadRefs=\count33
+\refindent=\dimen19
+\CiteType=\count34
+\reflistout=\write1
+\reflistin=\read2
+
+BIBTeX support for TeXsis (macros and patches) v 0.92)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSsects.tex
+Section and Chapter divisions.
+\chapternum=\count35
+\sectionnum=\count36
+\subsectionnum=\count37
+\subsubsectionnum=\count38
+\sectionskip=\skip19
+\subsectionskip=\skip20
+\sectionminspace=\dimen20
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXStags.tex
+Labels and tags.
+\auxfilein=\read3
+\auxfileout=\write2
+\@BadTags=\count39
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXStitle.tex
+Title Page macros.)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSenvmt.tex Environments.
+\EnvTopskip=\skip21
+\EnvBottomskip=\skip22
+\EnvLeftskip=\skip23
+\EnvRightskip=\skip24
+\EnvDelt@skip=\skip25
+\@envDepth=\count40
+\enumDepth=\count41
+\enumcnt=\count42
+\@desbox=\box16
+\@desline=\box17
+\@glodeswd=\dimen21
+\@deslines=\count43
+\theoremnum=\count44
+\lemmanum=\count45
+\corollarynum=\count46
+\definitionnum=\count47
+) (/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSfmts.tex
+Layout macros.) (/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSfigs.tex
+Figures and Tables.
+\tabnum=\count48
+\fignum=\count49
+\fgout=\write3
+\tbout=\write4
+\figlist=\write5
+\tablelist=\write6
+\caplist=\write7
+\@capbox=\box18
+\@caplines=\count50
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSruled.tex
+\ncols=\count51
+\nrows=\count52
+\curcol=\count53
+\thinsize=\dimen22
+\thicksize=\dimen23
+\tablewidth=\dimen24
+\parasize=\dimen25
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSdcol.tex
+- Double column format.
+\colwidth=\dimen26
+\pagewidth=\dimen27
+\pageheight=\dimen28
+\rulewd=\dimen29
+\colmaxdepth=\dimen30
+\@bigColHeight=\dimen31
+\@saveSplitmax=\dimen32
+\@saveVsize=\dimen33
+\s@veskip=\skip26
+\doublecolskip=\skip27
+\@leftpluscenter=\dimen34
+\partialpage=\box19
+\botins=\insert252
+\NWins=\insert251
+\SWins=\insert250
+\NEins=\insert249
+\SEins=\insert248
+\LFins=\insert247
+\RFins=\insert246
+\@balncErrormsg=\toks16
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSletr.tex Letter Format,
+\headlineoffset=\dimen35
+\longindent=\dimen36
+\hdimphone=\dimen37
+\vdimphone=\dimen38
+\hdimdate=\dimen39
+\vdimdate=\dimen40
+\bigletterskip=\skip28
+\theaddress=\box20
+
+with envelopes.
+\EnvlWidth=\dimen41
+\EnvlHeight=\dimen42
+\EnvlVoffset=\dimen43
+\Envout=\write8
+\fullHsize=\dimen44
+\fullVsize=\dimen45
+\lblHsize=\dimen46
+\lblVsize=\dimen47
+\lblVoffset=\dimen48
+\lblHoffset=\dimen49
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSmemo.tex Memo Format.
+\memoindent=\dimen50
+\firstheadoffset=\dimen51
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSconts.tex
+Table of Contents.
+\TOCout=\write9
+\TOCmargin=\skip29
+)
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSsymb.tex
+Extended math/physics symbols,
+\vbigd@men=\dimen52
+)
+> Trying to read in TXSsite.tex...
+(/usr/local/texlive/2017/texmf-dist/tex/texsis/base/TXSsite.tex
+Site dependent info.... Generic version.)
+TeXsis version 2.18 (21 April 2001) loaded.
+) [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3] [4] [5] [6] [7] )</usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+0.pfb>
+Output written on "NYU_practice_problems 2020.pdf" (7 pages, 144428 bytes).
+PDF statistics:
+ 72 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

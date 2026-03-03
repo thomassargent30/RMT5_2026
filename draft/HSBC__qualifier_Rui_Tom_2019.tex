@@ -1,0 +1,121 @@
+
+
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{Qualifier Question\hfil HSBC}
+\line{November 2019 \hfil Rui and Tom}
+%
+% \noindent Macroeconomics Q1 \hfill NYUAD \\
+% Fall, 2019 \hfill Thomas Sargent
+% \vspace{.3cm}
+
+\centerline{\bf Qualifier Questions}
+
+
+
+
+\medskip
+\noindent {\bf 1.  \quad}
+  Consider the following model of a monopolist.  Let  $S_t$ be sales at time $t$, $Q_t$ be the monopolist's production  at time $t$,
+ $I_t$ be inventories at the beginning of time $t$,  $\beta \in (0,1)$ be a discount factor,  $c(Q_t) = c_1 Q_t + c_2 Q_t^2$ be a cost-of-production function, where $c_1>0, c_2>0$;
+  $d(I_t, S_t) = d_1 I_t + d_2 I_t^2  + d_3 (S_t - I_t)^2$ be a cost-of-holding inventories function, where $d_1 >0, d_2 >0 $ and $d_3 >0$;
+$p_t = a_0 - a_1 S_t + \eta_t $ be an inverse demand function for a firm's product, where $a_0>0, a_1 >0$ and $\eta_t$ is a demand shock at time  $t$;
+   $\pi_t = p_t S_t - c(Q_t) - d(I_t, S_t) $ be the firm's profits at time $t$;
+   $\sum_{t=0}^\infty \beta^t \pi_t $ be the present value of the firm's profits at time $0$;  $I_{t+1} = I_t + Q_t - S_t$ be the law of motion of inventories;
+ $z_{t+1} = A_{22} z_t + C_2 \epsilon_{t+1} $ be the law of motion for an exogenous state vector $z_t$ that contains time $t$ information useful for predicting the demand shock $\eta_t$ where
+ $\epsilon_{t+1}$ is an i.i.d.~random vector distributed as ${\cal N}(0,I)$;
+   $\eta_t = G z_t $ links the demand shock to the information set $z_t$;
+   the constant $1$ is the first component of $z_t$.
+
+   The firm wants  a production, sales, inventory-management plan $\{Q_t, S_t, I_{t+1}\}_{t=0}^\infty$ that maximizes $E_0 \sum_{t=0}^\infty \beta^t \pi_t $
+   subject to $z_0,  I_0 $ being given initial conditions.
+
+
+ \noindent{\bf a.}. Please formulate the firm's  problem as a discounted dynamic programming problem.  Feel free to use  the word "let" somewhere in your answer.
+ Please clearly define the ``state'' in your formulation of the problem.
+
+ \medskip
+
+
+\noindent{\bf b.} Please describe the form of the firm's optimal {\it decision rule\/}. Is it linear or nonlinear?
+
+\medskip
+\noindent{\bf c.} Please describe the law of motion of the state, as you have defined it, under the firm's optimal decision rule.
+
+\medskip
+
+ \noindent{\bf d.} Please state conditions on the solution of the firm's  problem that are sufficient to imply that  $x_t \equiv \bmatrix{z_t \cr I_t} $ converges  to a normally distributed random vector $x_\infty \sim {\cal N}(\mu, \Omega)$ as $t \rightarrow + \infty$.
+
+ \medskip
+\noindent{\bf e.} Please give formulas for $\mu$ and $\Omega $ in terms of the firm's objective and its constraints.
+
+\medskip
+
+
+\newpage
+\medskip
+\noindent{\bf 2.} \quad
+  An economy consists of two consumers, named $i=1,2$.
+The economy exists in discrete time  for periods $t =0, 1, 2, \ldots$.
+There is one good that is not storable and
+arrives in the form of an endowment stream owned by each consumer.
+The endowments to consumers $i=1,2$ are
+$$\eqalign{ y_t^1 & = s_t \cr
+            y_t^2 & = 1 \cr }  $$
+where $s_t$ is a random variable governed by a two-state Markov
+chain with values $s_t =  0$ or  $s_t  =  1 $.
+The Markov chain  has time invariant transition probabilities
+denoted by $\pi(s_{t+1} =  s' | s_t = s) = \pi(s'|s)$, and the
+probability distribution over the initial  state is $\pi_0(s)$.
+The {\it aggregate endowment} at $t$ is $Y(s_t) = y_t^1 + y_t^2$.
+
+
+   Let $c^i$ denote the stochastic
+process of consumption for agent $i$.
+  Consumer $i$ orders consumption streams according to
+$$ U(c^i)= \sum_{t=0}^\infty \sum_{s^t}  \beta^t \ln [c_t^i(s^t)]
+ \pi_t (s^t),  $$
+where $\pi_t(s^t)$ is the probability of the history $s^t = (s_t, s_{t-1},  \ldots , s_1,  s_0)$.
+\medskip
+\noindent{\bf a.}  Give a formula for $\pi_t(s^t)$ in terms of $\pi(s'|s)$ and  $\pi_0(s)$.
+\medskip
+\noindent{\bf b.}  Let $\theta \in (0,1)$ be a Pareto weight on
+consumer $1$.  Consider the     planning problem
+$$ \max_{c^1, c^2} \left\{ \theta U(c^1) + (1-\theta) U(c^2)
+  \right\}  $$
+where  maximization is subject to
+$$ c_t^1(s^t) + c_t^2(s^t) \leq Y(s_t) , \forall t, \forall s^t . $$
+Solve the Pareto problem, taking $\theta$ as a parameter.
+\medskip
+
+\noindent{\bf c.}   Define a {\it competitive equilibrium} with
+history-dependent Arrow-Debreu  securities traded once and for all
+at time $0$.  Be careful to define all of the objects that compose
+a competitive equilibrium.
+\medskip
+\noindent{\bf d.}   Compute the competitive equilibrium price
+system (i.e., find the prices of all  Arrow-Debreu
+securities).
+\medskip
+\noindent{\bf e.}    Tell the relationship between  solutions
+ of the Pareto problem  (indexed by $\theta$) and the competitive
+equilibrium allocation.  
+\medskip
+
+
+
+
+\bye

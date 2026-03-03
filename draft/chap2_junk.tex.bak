@@ -1,0 +1,89 @@
+\index{covariance stationary}
+\medskip
+%\specsec{Definition:}
+\definition{def:covstat}  A stochastic process $\{x_t\}$ is said to
+be {\it covariance stationary\/} if it
+satisfies the following two properties: (a) the mean is
+independent of time,
+ $ E x_t = E x_0$ for all $t$,
+ and (b) the sequence of autocovariance matrices
+ $E(x_{t+j} - E x_{t+j})(x_t - E x_t)'$
+depends on the separation between dates
+ $j = 0, \pm 1, \pm 2, \ldots$, but not on $t$.
+\enddefinition
+\smallskip
+
+
+
+
+
+=================================
+
+ We shall deduce
+starting values for the mean and covariance
+that make the process covariance
+stationary, though our formulas are also useful for describing
+what happens when we start from other initial conditions that
+generate transient behavior that stops the process from being covariance
+stationary.
+
+=====================
+
+
+We use
+\definition{stable}
+A square real valued matrix $A$ is said to be {\it stable\/} if
+all of its eigenvalues modulus   are strictly less than
+unity.
+\enddefinition
+\smallskip
+
+We will make an assumption that guarantees that there exists an initial
+condition $(\mu_0, \Sigma_0) = (Ex_0, E(x - Ex_0) (x-Ex_0)')$  that makes
+the $x_t$ process covariance stationary.
+Either of the following conditions works:
+
+\medskip
+\specsec{Condition A1:}  All of the eigenvalues of $A$ in
+\Ep{statesp1} are strictly less than $1$ in modulus.
+
+
+
+
+==============================
+
+
+============================
+
+A fixed point of the matrix difference equation \Ep{Sigma_diff} evidently  satisfies
+$$ \Sigma_\infty = A \Sigma_\infty A' + C C' .  \EQN diff5 $$
+A fixed point $ \Sigma_\infty  $
+ is the covariance matrix $E (x_t -\mu) (x_t - \mu)'$ under  a stationary distribution of $x$.
+%
+% Thus, to compute $C_x(0)$, we  must solve
+% $$ C_x(0)   =
+%    A C_x(0) A^\prime  + C C' ,\EQN diff5 $$
+% where $C_x(0) \equiv E (x_t -\mu) (x_t - \mu)'$.
+Equation \Ep{diff5} is
+a {\it discrete Lyapunov} equation in the $n \times n$ matrix
+$\Sigma_\infty$.  It can be solved with the Matlab program {\tt
+doublej.m}. % ^^|doublej.m|
+\mtlb{doublej.m}%
+
+============================
+
+
+In the special case that $\Sigma_t = \Sigma_\infty$ that solves the discrete Lyapunov equation
+\Ep{diff5}, $\Sigma_{t+j,t} = A^j \Sigma_\infty$ and so depends only on the gap $j$ between time
+periods. In this case, an autocovariance  matrix sequence $\{\Sigma_{t+j,t}\}_{j=0}^\infty$ is often  also called an {\it
+autocovariogram}.  \index{autocovariogram}%
+
+
+===============================
+
+
+
+diff2   mu motion
+
+Sigma_diff sigma motion
+

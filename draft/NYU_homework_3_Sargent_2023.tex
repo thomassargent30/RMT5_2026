@@ -1,0 +1,154 @@
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{PhD Macroeconomics \hfil NYU}
+\line{October 12, 2023 \hfil Thomas Sargent}
+%
+% \noindent Macroeconomics Q1 \hfill NYUAD \\
+% Fall, 2019 \hfill Thomas Sargent
+% \vspace{.3cm}
+
+\centerline{\bf Homework 3}
+%\centerline{\bf Homework 3}
+
+
+\medskip
+
+\noindent{\bf Instructions:}  Please feel free to work in groups of 3 or 4. But please hand in  your own work
+before the end of the TA session on Friday October 20.
+
+%\noindent {\bf 1. 15 points  \quad}
+
+\medskip
+\noindent{\bf 1.  \ } 
+  A consumer has preferences over consumption streams
+that are ordered by
+the utility functional
+$$  E_0 \sum_{t=0}^\infty \beta^t u(c_t)  \leqno(1) $$
+where $E_t$ is the mathematical expectation conditioned
+on the consumer's time $t$ information,  $c_t$ is time $t$ consumption,
+$u(c)$ is  utility function, and
+$\beta \in (0,1)$ is a discount factor.  The consumer maximizes
+(1) by choosing a consumption, borrowing plan
+ $\{c_t, b_{t+1}\}_{t=0}^\infty$ subject to the sequence of budget constraints
+$$ c_t + b_t = R^{-1} b_{t+1}  + y_t  , \quad t \geq 0$$
+where $\{y_t\}$ is an exogenous
+ stationary endowment process, $R$ is a constant gross
+risk-free interest rate, $b_t$ is one-period risk-free  bond   maturing at
+$t$, and $b_0 $ is a given initial debt that is due at time $0$.  Assume that for $t \geq 1 $, $b_t$ is chosen at time $t-1$.  Assume
+that $R^{-1} = \beta$.  Assume that the endowment
+process is governed by
+$$ \eqalign{ y_{t+1} & = \alpha_c
++ \sum_{j=1}^2 \rho_j y_{t-j+1}  + \sum_{j=1}^2
+ \delta_j  z_{t+1-j}  + \psi_1 w_{1,t+1} \cr
+  z_{t+1} & = \sum_{j=1}^2 \gamma_j y_{t-j+1} + \sum_{j=1}^2 \phi_j z_{t-j+1}
++ \psi_2 w_{2,t+1}
+   \cr} \leqno(1)   $$
+where $\{w_{t+1}\}$ is an i.i.d.  sequence of  $2 \times 1$ vectors of random shock whose time $t+1$ component is  distributed as ${\cal N}(0,I)$
+%martingale difference
+%sequence,  adapted to \hfil \break $J_t = \left[\matrix{w_t & \ldots w_1 &
+%c_{0} & c_{-1} & z_0 & z_{-1}\cr}\right]$, with contemporaneous
+%covariance matrix $E w_{t+1}w_{t+1}' | J_t = I$, 
+ and the
+coefficients  $\rho_j, \delta_j, \gamma_j, \phi_j$ are such
+that
+the matrix
+$$ A = \left[\matrix{ \rho_1 & \rho_2 & \delta_1 &\delta_2 & \alpha_c \cr
+                      1 & 0 & 0 & 0 & 0 \cr
+                     \gamma_1 & \gamma_2 & \phi_1 &\phi_2 & 0 \cr
+                     0 & 0 & 1 & 0 & 0 \cr
+                     0 & 0 & 0 & 0 & 1 \cr }\right]$$
+has eigenvalues less than or equal to unity in modulus.
+
+\medskip
+\noindent {\bf a.}. Assume that the utility function $u(c) = \ln c$ %satisfies $u' > 0, u''< 0$ 
+for all $c \geq 0$ and  the ``borrowing limit'' $b_t \leq \bar b$ for some $\bar b > 0$. Formulate the
+consumer's problem as a dynamic program.
+Write pseudo-code to solve it.
+\medskip
+\noindent{\bf b.}
+Now  assume the
+the quadratic  utility function
+$$u(c_t) =  -.5 (c_t - \gamma)^2 \leqno(2) $$
+where $\gamma >0$ is a bliss level of consumption.
+Assume that $\bar b =+\infty$ so that there is no borrowing limit.
+%
+%GGHH 
+%We assume that the endowment
+%process has the state-space representation
+%$$ \eqalign{ z_{t+1} & = \check A z_t + \check C w_{t+1}\cr
+%               y_t & = \check G  z_t \cr}$$
+%where $w_{t+1}$ is an i.i.d.~process with mean zero and
+%identity contemporaneous covariance matrix, $\check A$ is a stable matrix,
+%its eigenvalues being strictly below unity in modulus, and
+%$\check G$ is a vector. The {\it state\/} vector confronting the household at $t$  is
+%$\left[\matrix{b_t & z_t\cr}\right]'$, where $b_t$ is its one-period debt falling
+% due at the beginning of period $t$
+%and $z_t$ contains all variables useful for
+%forecasting its future endowment.
+Formulate the consumer's problem as a dynamic program and guess a solution.
+Justify your guess.
+
+\medskip
+\noindent {\bf c.}. Continue  to assume utility function (2), but now replace the part {\bf a}   borrowing limit  with 
+the following condition on the
+consumption, borrowing plan:
+$$  % \lim_{T \rightarrow +\infty}
+ E_0 \sum_{t=0}^\infty \beta^t b_t^2 < +\infty.  $$
+%This condition suffices to rule out Ponzi schemes.
+Formulate the consumer's problem as a dynamic program and write pseudo-code to solve it.
+
+
+\medskip
+
+
+\medskip
+\noindent {\it \bf 3.}  \quad 
+A worker who  lives during periods $t = 0, 1, 2, \ldots, + \infty$  has an opportunity to work in period $t$ at wage $w_t \geq 0 $ and disutility of labor $\xi_t \geq 0$.  Each period a previously unemployed worker has the opportunity to draw a  new wage from a c.d.f. $F$ that satisfies $F(0) = 0, F(B) = 1$ for $B >0$.  In period $t$, a worker   employed last period at wage $w_{t-1}$ has the opportunity  not to draw again but instead to retain  $w_{t-1} $  and to  set $w_t = w_{t-1}$.  But if the worker quits, she cannot draw a new offer this period and in the future
+she cannot recall that offer or any other  past offer.  A worker draws one offer from $F$ each period she starts a period after being unemployed the period before.  An employed  worker receives time $t$ utility $w_t - \xi_t$, where each period $\xi_t$ is a nonnegative random variable drawn afresh from c.d.f. $G$ that satisfies $G(0) = 0, G(D)= 1$.  Successive draws of $\xi_t$ from $G$ are independently and identically distributed.
+Successive new draws of $w$ from $F$ are independently and identically distributed. A worker receives unemployment benefits
+$b \geq 0 $ each period she is unemployed. Where $\beta \in (0,1)$ and time $t$ utility is
+$$u_t = \cases{w_t - \xi_t&
+if working  \cr
+\Big. $b$  & if not working, \cr} $$
+  a worker wants to maximize  
+the mathematical expectation of 
+$
+\sum_{t=0}^\infty \beta^t u_t 
+$
+by sequentially deciding whether  to retain last period's job being employed  at wage $w_{t-1}$ or  quit and become unemployed and receive $b$ for a period and then next period draw a new wage offer $w$ and  disutility of working $\xi$. 
+
+\medskip
+\noindent {\bf a.}
+Please tell how the following functional equation    generates  a statistical model of quits and exits from unemployment:
+$$
+\eqalign{ v(w_t, \xi_t) & = \max_{{\rm accept}, {\rm reject}} \left\{ w_t - \xi_t + \beta p(w_t) , b + \beta Q \right\} \cr
+    p(w_t) & = \int v(w_t, \xi') d G (\xi') \cr
+    Q & = \int v(w, \xi) d F(w) d G(\xi) . } \leqno(1)
+$$
+Please carefully describe the objects $v(w, \xi), p(w),$ and $Q$.
+
+\medskip
+\noindent{\bf b.} Please describe a previously employed worker's optimal policy for quitting.
+\medskip
+
+\noindent{\bf c.} Please describe a previously unemployed worker's optimal policy for accepting a new job.
+\medskip
+\noindent{\bf d.} \quad {\it Extra Credit} Assume that $G$ and $F$ are both uniform distributions.  Write Python, Julia, 
+or Matlab code to solve functional equation (1) when $b = B/4$,  $D= B/2$, and $\beta = .95$. Describe the worker's
+optimal decisions quantitatively.  
+\bye
+
+\bye
+

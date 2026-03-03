@@ -1,0 +1,41 @@
+Dear Tom,
+
+ 
+
+Your exercise is a very pedagogical one that makes readers ponder on equilibrium calculations in general, not only with respect to this particular case of heterogeneous discount factors.
+
+ 
+
+I just have a few comments/reflections.
+
+ 
+
+(1)    I am a little wary about the use of the term ‘fundamental value’. In the description of the question, the fundamental value is defined to be the value of the asset if one type of agents “were to hold it forever.” Hmm, perhaps a more common use of the term ‘fundamental value’ would involve the totality of circumstances that make the asset valuable to all agents of the economy. For example, the ‘bubble literature’ seems to have a more encompassing meaning of fundamental value when distinguishing it from any inflated bubble price outcome. (In our present economy, there is no such issue since the asset is uniquely priced and therefore, our equilibrium price would seem to correspond to a fundamental value – incorporating the equilibrium outcome that the asset will be changing hands over time. An easy remedy to my concern would be to refer to the fundamental values of the asset in two alternative economies in which only one or the other type of agents is present, which are then compared to the equilibrium price (fundamental value) in the economy with both types of agents present.
+
+By the way, Harrison and Kreps (1978) have an interesting discussion of ‘fundamentalism’ in their section Concluding Remarks: “in one sense, we think that our analysis is consistent with the fundamentalist spirit, tempered by a subjective view of probability.” They go on to elaborate on their interpretation as well as to remark on one caveat “from a fundamentalist point of view.”
+
+ 
+
+(2)    While Harrison and Kreps’s (1978) heterogeneous beliefs are quite different from the heterogeneous discount factors in the exercise, I agree with you that the exercise can serve as an introduction to the Harrison-Kreps analysis, including the (implicit) adoption adopted from Harrison and Kreps of agents having deep pockets or ‘infinite wealth’ in their formulation. Actually, one way for closing a general equilibrium version of Harrison and Kreps (1978) would be to have both a tradable Lucas tree (the asset) and nontradable endowment processes, where the latter processes yield per-period endowments large enough for each type of agents to purchase the Lucas tree.
+
+ 
+
+(3)    In terms of RMT4 section 13.A.3 on Harrison and Kreps, the latter formulation with additional (nontradable) endowment processes would work well for your case 2 where “each type of agents has sufficient resources to purchase all of the asset” (the Lucas tree). But it would not necessarily work for your case 3 where both types of agents hold the asset/Lucas tree “because of limited wealth and/or limited leverage’. The reason for the proposed setup not closing a general equilibrium here is that past realizations of shocks favorable to one type of the agents could enable that type of agents to successively increase their holdings of the asset until there are periods when they hold all of the asset.
+
+ 
+
+(4)    Finally, there is a typo in the exercise – the subscript ‘e’ is missing from the very last occurrence of \beta just before question a.
+
+ 
+
+ 
+
+RMT5 will indeed be a fun undertaking, and I agree that it would be great if its cover could be the same as on your original book – black with golden letters, preferably with a similar nice texture as on that Academic Press publication.  
+
+ 
+
+Let’s work towards that end.
+
+ 
+
+Lars 

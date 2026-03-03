@@ -1,0 +1,578 @@
+\begin{theindex}
+
+  \item adaptive expectations, 64, 66
+  \item affine
+    \subitem yields to maturity, 594
+  \item alternating-offer bargaining, 1280
+  \item ambiguity
+    \subitem model uncertainty, 582
+  \item amnesia, 965
+    \subitem of risk-sharing contract, 881, 939
+  \item approximation
+    \subitem higher order, 448
+  \item arbitrage, 281, 282, 666
+    \subitem no-arbitrage principle, 281, 282, 559
+  \item Arrow securities, 249, 266, 976, 1086
+  \item asymmetric information, 897
+    \subitem hidden income and hidden storage, 909
+  \item autarky value, 876
+  \item autocovariogram, 47
+
+  \indexspace
+
+  \item back-solving, 409, 588, 817
+  \item balanced growth path, 634
+  \item Bayes' Law
+    \subitem with search model, 178
+  \item beliefs
+    \subitem distorted, 597
+  \item Bellman equation, 105, 111, 517, 787, 823, 824, 860, 861, 866, 
+		923, 936, 948, 977, 980, 989, 990, 995, 1000, 1007, 
+		1022, 1023, 1064, 1086, 1087, 1089, 1209, 1235, 1242, 
+		1251, 1274, 1348, 1359, 1380
+    \subitem dynamic games, 247
+    \subitem stacked, 240
+  \item Benveniste-Scheinkman formula, 107, 111, 227, 278, 769, 770, 
+		800
+  \item Bertrand competition, 187
+  \item best response, 1252
+  \item beta distribution, 179
+  \item Bewley models, 172, 785, 789
+  \item Big $K$, little $k$, 226, 470, 489
+  \item Black-Scholes formula, 510
+  \item block recursive equilibrium, 1308
+  \item borrowing constraint, 504
+    \subitem endogenous, 976
+    \subitem natural, 379
+  \item bubbles
+    \subitem and volume, 538
+    \subitem leverage constraints, 538
+    \subitem short sales constraints, 538
+
+  \indexspace
+
+  \item call option
+    \subitem European, 510
+  \item capacity utilization, 1232
+  \item capital tax, 684
+  \item carrot and stick, 996
+  \item cash-in-advance constraint, 1155
+  \item Cauchy-Schwarz inequality, 556
+  \item certainty equivalence, 135, 768
+    \subitem proof, 133
+  \item certainty equivalent, 566
+  \item Chebyshev polynomial, 126
+  \item coefficient of relative risk aversion, 550
+  \item coinsurance, 903
+  \item cointegration, 78, 768
+  \item commitment
+    \subitem one-sided lack of, 875
+    \subitem technology, 1011
+    \subitem two-sided, 897, 909
+    \subitem two-sided lack of, 933
+  \item communism
+    \subitem rational expectations, 290
+  \item competitive equilibrium, 1014, 1174, 1186
+    \subitem sequential trading, 271
+  \item complete markets, 249, 1086, 1173
+    \subitem no role for money, 1123
+  \item conditional covariance, 507
+  \item conditional expectation, 34
+  \item consol, 399
+  \item constant absolute risk aversion, 821
+  \item constant relative risk aversion, 821
+  \item continuation
+    \subitem of a sequence, 846
+    \subitem of a Stackelberg plan, 846
+  \item contract design, 934
+    \subitem dynamic program, 936
+  \item costate vector, 138
+  \item covariance stationary, 45
+  \item credible government policies, 1040
+  \item credit and currency, 1171
+  \item cross-equation restrictions, 423
+  \item curse of dimensionality, 114
+
+  \indexspace
+
+  \item debt limit
+    \subitem natural, 268
+  \item deficit finance, 340
+    \subitem as cause of inflation, 1132, 1184
+  \item deposit insurance, 829
+  \item detection error probability, 582
+  \item deterministic
+    \subitem stochastic process, 585
+  \item directed search, 1302
+  \item discount factor, 394
+  \item discretization
+    \subitem of state space, 115
+  \item distorted transition density, 508
+  \item distorting tax, 410
+  \item distribution
+    \subitem Gaussian, 55
+    \subitem invariant, 32
+    \subitem log normal, 553
+    \subitem multinomial, 40
+    \subitem stationary, 31, 32, 69, 788
+  \item double coincidence of wants, 1249
+  \item doubling algorithms, 132
+  \item DSGE model, 1290
+  \item duality, 137
+  \item dynamic optimization, 105
+  \item dynamic programming, 53, 105, 1011
+    \subitem  discrete state space, 116
+    \subitem linear quadratic, 129
+    \subitem squared, 23, 1022
+  \item dynamic programming squared, 861
+    \subitem etymology, 1025
+
+  \indexspace
+
+  \item eigenvalue, 136
+    \subitem decomposition, 140
+  \item employment lottery, 1208, 1227
+    \subitem layoff taxes, 1235
+  \item endowment stream, 872
+  \item entropy, 292, 577
+    \subitem detection errors, 582
+    \subitem rlative, 577
+  \item equilibrium, 1128, 1194, 1196
+    \subitem incomplete markets, 785
+    \subitem multiple, 333
+    \subitem rational expectations, 230
+    \subitem recursive competitive, 230
+    \subitem stationary, 790, 793
+  \item equilibrium price distribution
+    \subitem Burdett-Judd model, 183
+  \item equity premium, 124
+  \item equity premium puzzle, 552, 565
+  \item equivalent martingale measure, 314
+  \item Euler equation, 137
+  \item Euler's theorem, 633
+  \item exchange rate, 1192
+    \subitem determinacy, 1141
+    \subitem indeterminacy, 813, 1140, 1195
+  \item expectations
+    \subitem disappearance of, 232
+    \subitem theory of the term structure, 395, 604
+    \subitem without promises, 342
+
+  \indexspace
+
+  \item family
+    \subitem one big happy, 1230
+  \item fanning out
+    \subitem of wealth distribution, 890
+  \item filter
+    \subitem linear, 56, 59, 142
+    \subitem nonlinear, 1386
+  \item fiscal theory of inflation, 1138
+  \item fiscal theory of price level, 717
+  \item folk theorem, 1011
+  \item Fourier inversion formula, 69
+  \item Friedman rule, 717, 1135, 1147, 1159, 1181, 1184
+    \subitem and free banking, 818
+    \subitem Bewley's model, 818
+    \subitem credibility, 1160
+  \item functional equation, 106
+  \item fundamental surplus, 1271
+
+  \indexspace
+
+  \item gift-giving game, 1181
+    \subitem with overlapping generations, 364
+  \item Golden rule
+    \subitem augmented, 405
+  \item government deficit
+    \subitem gross of interest, 397
+    \subitem net of interest, 397
+    \subitem operational, 397
+    \subitem primary, 397
+  \item Gram^^96Schmidt process, 59
+  \item growth
+    \subitem exogenous, 635
+    \subitem externality, 636, 650
+    \subitem nonreproducible factors, 648
+    \subitem reproducible factors, 638
+    \subitem research and monopolistic competition, 643, 650
+  \item growth model
+    \subitem stochastic, 472
+  \item guess-and-verify method, 50, 108, 110, 333
+
+  \indexspace
+
+  \item Hamiltonian, 1318
+  \item hazard rate, 171
+  \item hidden Markov model, 34, 60, 63
+    \subitem Kalman filter, 57
+  \item history dependence, 256, \see{reputation}{1041}
+    \subitem lack of, 275
+    \subitem of consumption stream, 876
+    \subitem of contracts, 876
+    \subitem of strategies, 1041
+  \item holding period yields, 395
+  \item Howard policy improvement algorithm, 53, 104
+  \item human capital, 641, 732
+  \item hyperbolic absolute risk aversion, 821
+
+  \indexspace
+
+  \item impulse response function, 48
+  \item Inada condition, 473, 633
+  \item incentive-compatibility constraint, 899, 923
+  \item incomplete markets, 704
+  \item indirect utility function, 579
+  \item innovation
+    \subitem in time series representation, 143
+  \item innovations representation, 61, 63
+  \item interest rate peg, 1138
+  \item intertemporal elasticity of substitution, 635
+  \item inverse
+    \subitem generalized, 284
+  \item inverse optimal prediction, 64
+  \item inverse probability integral transform, 834
+  \item island model, 1207, 1208, 1257
+    \subitem layoff taxes, 1242
+  \item Italy and Brazil
+    \subitem inflation and measured deficits, 1164
+
+  \indexspace
+
+  \item Jensen's inequality, 74, 523
+
+  \indexspace
+
+  \item Kalman filter, 55, 59, 142
+    \subitem and optimal linear regulator, 129
+    \subitem and vector autoregressions, 64
+    \subitem cross-products between measurement and state noise, 97
+    \subitem dual to linear regulator, 143
+  \item Kalman gain, 143
+  \item Kronecker product, 203
+
+  \indexspace
+
+  \item l'Hopital's rule, 579
+  \item Laffer curve, 347, 812, 1132, 1188
+  \item Lagrange multiplier, 135
+  \item law of iterated expectations, 34
+  \item law of large numbers, 54
+  \item law of one price, 558
+  \item layoff taxes, 1229
+    \subitem employment lottery, 1235
+    \subitem island model, 1242
+    \subitem matching model, 1244
+  \item least-squares projection, 54, 284
+  \item legal restrictions, 1135, 1189
+    \subitem Terror, 1136
+  \item lending with moral hazard, 1083
+  \item likelihood function, 40, 54
+    \subitem Gaussian, 55
+    \subitem multinomial, 40
+  \item likelihood ratio, 571
+    \subitem martingale, 576
+  \item linear quadratic
+    \subitem dynamic games, 240
+    \subitem dynamic programming, 129
+  \item linear rational expectations models, 55
+  \item logarithmic preferences, 109
+  \item long run risk, 618
+  \item lotteries
+    \subitem firms, 1230
+    \subitem households, 1227
+    \subitem man-made, 521
+  \item Lucas tree
+    \subitem in overlapping generations model, 338
+  \item Lyapunov equation, 132
+    \subitem discrete, 50, 543
+
+  \indexspace
+
+  \item M1, 362
+  \item market price of model uncertainty, 581
+  \item market price of risk, 555
+  \item Markov chain, 29, 788
+    \subitem as difference equation, 33
+    \subitem hidden, 1386
+  \item Markov perfect equilibrium, 240
+    \subitem fish and fishers, 239
+    \subitem linear, 239
+    \subitem prices and inventory example, 242
+    \subitem self-control, 247
+  \item martingale, 43, 510
+    \subitem convergence theorem, 178, 770, 868, 906, 908
+    \subitem difference sequence, 43
+    \subitem equivalant measure, 509
+    \subitem equivalent measure, 315, 507
+    \subitem likelihood ratio, 576
+  \item martingale difference, 1387
+  \item matching model, 1207, 1213
+    \subitem dispersion of match values, 1261
+    \subitem heterogeneous jobs, 1220
+    \subitem layoff taxes, 1244
+    \subitem match surplus, 1207, 1215, 1218
+    \subitem matching function, 1214
+    \subitem separate markets, 1224
+    \subitem skill-biased technological change, 1261
+    \subitem wage announcements, 1225
+  \item maximum likelihood, 40, 56
+  \item mean-preserving spread, 160
+  \item measurability constraints
+    \subitem AMSS model, 866
+  \item measurement equation, 1387
+  \item method of undetermined coefficients, 110
+  \item moment generating function, 563
+  \item money
+    \subitem commodity, 1195
+    \subitem demand function, 1127
+    \subitem inside, 811
+    \subitem outside, 811
+    \subitem search model, 1248
+  \item monopolistic competition, 643, 1153
+  \item moving average representation, 48
+  \item multiplier preferences, 579
+    \subitem ambiguity, 614, 618
+
+  \indexspace
+
+  \item Nash bargaining, 1215
+  \item Nash equilibrium, 1015, 1249
+    \subitem infinite repetition, 1031
+  \item natural debt limit, 269, 380
+  \item no-trade result, 268
+  \item noisy search
+    \subitem Burdett and Judd, 184
+  \item non-expected utility, 566
+  \item nondistorting tax, 410
+
+  \indexspace
+
+  \item observational equivalence
+    \subitem risk sensitivity and robustness, 579, 580
+  \item observer equation, 1388
+  \item occupational choice, 234
+  \item one-period
+    \subitem deviations, 1071
+    \subitem returns, 395
+  \item open market operation, 1128
+    \subitem another definition, 1134
+    \subitem in private securities, 363
+    \subitem one big one, 1136
+    \subitem one definition, 1134
+  \item optimal growth, 109
+  \item optimal inflation tax, 1147
+  \item optimal linear regulator, 128, 132, 138, 241
+    \subitem dynamic game, 239
+  \item optimal quantity of money, 1134
+    \subitem Friedman rule, 1147
+  \item optimal savings problem, 115, 759
+  \item optimal taxation
+    \subitem {\it ex ante\/} capital tax varies around zero, 684
+    \subitem commitment, 661, 857
+    \subitem human capital, 732
+    \subitem incomplete taxation, 676
+    \subitem indeterminacy of state-contingent debt and capital taxes, 
+		681
+    \subitem initial capital, 675
+    \subitem labor tax smoothing, 688
+    \subitem zero capital tax, 669, 674
+
+  \indexspace
+
+  \item Pareto optimal allocation, 1174
+  \item Pareto problem, 1173
+  \item Pareto weights
+    \subitem time invariance, 254
+  \item participation constraint, 876, 878, 881
+  \item permanent income model, 1171
+    \subitem general equilibrium version, 496
+  \item policy function, 105
+  \item policy improvement algorithm, 108, 118--120, 132, 1037
+    \subitem  modified, 120
+  \item Ponzi schemes
+    \subitem ruling out, 268
+  \item population regression, 53
+    \subitem Kalman filter, 57
+  \item precautionary savings, 74, 565, 820
+  \item predetermined wage, 1155
+  \item price system, 1128
+  \item primal approach, 670
+  \item primary surplus, 528
+  \item promise-keeping constraint, 878
+  \item promised value
+    \subitem as state variable, 871, 877
+  \item public policies
+    \subitem credible, 1012
+    \subitem sustainable, 1012
+  \item pulse, 417
+  \item pure consumption loans economy, 790
+  \item pure credit model, 790
+  \item puzzle
+    \subitem definition, xxv
+
+  \indexspace
+
+  \item quantity theory of money, 1132, 1157
+  \item quasi-linear utility, 713
+
+  \indexspace
+
+  \item Ramsey outcome, 1014
+  \item Ramsey plan, 661, 1014, 1150, 1158
+  \item Ramsey problem, 661, 668, 1014, 1151
+    \subitem primal approach, 670
+    \subitem uncertainty, 683
+  \item randomization, 924
+  \item rational expectations, 290, 291, 595
+    \subitem communism, 290
+  \item real bills doctrine, 363, 835, 1206
+  \item real business cycle model, 472
+  \item reciprocal pairs
+    \subitem of eigenvalues, 140
+  \item recursive, 1027
+    \subitem competitive equilibrium, 228, 230, 279
+    \subitem contracts, 871
+  \item redistribution, 740
+  \item redundant assets, \see {arbitrage pricing theory}{503}
+  \item regression
+    \subitem population, 53
+  \item regression equation, 54
+  \item relative entropy, 292, 577
+  \item relaxation
+    \subitem method, 794
+    \subitem parameter, 794
+  \item renegotiation proof, 979
+  \item repeated principal-agent problem, 922
+  \item representative agent, 231
+  \item reputation, 1011
+  \item resolvent operator, 35, 695
+  \item reverse engineer, 587
+  \item Ricardian proposition, 410, 1171, 1175
+  \item Riccati equation, 132, 141
+    \subitem  algebraic, 130
+    \subitem matrix difference, 60
+    \subitem stacked, 240
+  \item Riesz representation theorem, 559
+  \item risk aversion
+    \subitem versus robustness, 575
+  \item risk exposure, 593
+  \item risk neutral probabilities, 595
+  \item risk prices, 593
+    \subitem affine, 593
+  \item risk sensitivity, 568, 579
+    \subitem versus robustness, 575
+  \item risk-free rate puzzle, 555, 565
+  \item risk-sensitivity, 579
+  \item risk-sharing mechanisms, 785
+  \item Rosen schooling model, 232
+
+  \indexspace
+
+  \item scale effects, 646
+  \item Schur decomposition, 140
+  \item search model, 201
+    \subitem business cycles, 1258
+    \subitem money, 1248
+    \subitem shocks to human capital, 1262
+  \item second-moment restrictions, 42
+  \item self-control
+    \subitem Markov perfect equilibrium, 247
+  \item self-enforcing contract, 875
+  \item self-enforcing equilibrium, 1038
+  \item self-generation, 1036, 1037
+  \item self-insurance, 760, 785, 908
+  \item sequential, \see{recursive}{105}
+  \item shadow price, 135
+  \item Sharpe ratio, 556
+  \item shooting algorithm, 392, 406
+  \item shopping technology, 1124
+  \item short sales, 400
+  \item single-crossing property, 159, 160
+  \item Smirnov transform, 834
+  \item spectral density, 69
+  \item spline
+    \subitem shape preserving, 128, 1117
+  \item stability properties, 135
+  \item stabilizable, 137
+  \item stable matrix, 136
+  \item state, 29, 105
+  \item state-contingent policies, 1011
+  \item stick and carrot, 1043, 1045
+  \item sticky wage, 1279
+  \item stochastic
+    \subitem linear difference equations, 29
+    \subitem matrix, 30
+    \subitem process, 29, 45
+  \item stochastic differential utility, 569
+  \item stochastic discount factor, 51, 266, 509, 549, 555, 557, 559, 
+		570
+    \subitem exponential affine, 615
+  \item stochastic volatility, 619
+  \item strips, 264
+  \item subgame perfect equilibrium, 1028, 1038, 1160
+  \item submartingale, 74
+  \item sunspots, 1143
+  \item supermartingale convergence theorem, 770, 799
+  \item sustainable contract, 876
+  \item sustainable plans, \see{credible government policies}{1040}
+  \item Sylvester equation
+    \subitem discrete Lyapunov equation, 144
+  \item symplectic matrix, 139
+
+  \indexspace
+
+  \item term structure
+    \subitem affine yield model, 592
+    \subitem expectations theory, 518
+    \subitem of interest rates, 394
+    \subitem slope, 518
+  \item term structure of interest rates, 394
+  \item tightness of labor market, 1214
+  \item time consistency, 839, 1011, 1015, 1124, 1152
+  \item time inconsistency
+    \subitem of Ramsey plan, 696
+  \item time to build
+    \subitem Rosen schooling model, 233
+  \item transition matrix, 30
+  \item transversality condition, 227, 529
+  \item trigger strategy, 1031
+  \item turnpike
+    \subitem Townsend's, 1179
+  \item twisted transition measure, \see{ martingale}{509}, 510
+  \item typical spectral shape, 72
+
+  \indexspace
+
+  \item uncertainty
+    \subitem measuring, 582
+  \item unemployment
+    \subitem compensation, 987
+    \subitem European, 1261, 1312
+    \subitem voluntary, 200
+  \item unpleasant monetarist arithmetic, 1133
+
+  \indexspace
+
+  \item vacancy, 1213
+  \item value function, 51, 105, \see{Bellman equation}{105}
+    \subitem iteration, 108
+  \item vector autoregression, 44, 63
+
+  \indexspace
+
+  \item wealth-employment distributions, 788
+  \item white noise, 43
+
+  \indexspace
+
+  \item yield
+    \subitem to maturity, 283
+
+  \indexspace
+
+  \item zero coupon bonds, 395
+  \item zero inflation policy, 1133
+  \item zero lower bound, 720
+
+\end{theindex}

@@ -1,0 +1,206 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{recommendation}{Recommendation}
+
+\title{Review of \texttt{APS\_repair.pdf}:\\
+Remaining Errors and Recommendations}
+\author{Review against \texttt{ch24\_revisions\_claude.pdf}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The document \texttt{APS\_repair.pdf} successfully incorporates the principal
+logical corrections recommended in \texttt{ch24\_revisions\_claude.pdf}:
+Lemma~2, Definitions~7 and~8, the monotonicity proof, Theorem~1, the
+compactness proposition, and the two-value corollary are all correctly
+stated and correctly ordered.  Three expository residues of the old
+four-tuple formulation remain, however, and one algorithmic passage
+should either be rewritten or given an explicit citation to the corollary
+that licenses it.  This note identifies each issue and states the required
+correction.
+\end{abstract}
+
+\section{Background}
+
+The core repair identified in \texttt{ch24\_revisions\_claude.pdf} is the
+replacement of every admissible \emph{four-tuple} $(x,y,w_1,w_2)$ by an
+admissible \emph{triple} $(x,y,w(\cdot))$, where $w(\cdot):Y\to W$ is a
+function, throughout the argument that establishes compactness of $V$.
+The two-value characterization---using scalar continuation values
+$(v_1,v_2)\in V\times V$---is then recovered as a \emph{corollary} once
+compactness is in hand.  The logical structure of the revised chapter is:
+
+\begin{center}
+Lemma~2 (triples) $\;\Rightarrow\;$
+Definitions~7--8 (triples) $\;\Rightarrow\;$
+Theorem~1 $\;\Rightarrow\;$
+Proposition~2 (compactness) $\;\Rightarrow\;$
+Corollary (two-value form).
+\end{center}
+
+\section{Errors That Remain in \texttt{APS\_repair.pdf}}
+
+\subsection{Error~1: Four-tuple language in the paragraph following
+Definition~7 (p.\,1141)}
+
+After stating Definition~7 correctly in triple form, the immediately
+following paragraph reverts to the old language.  The text reads:
+
+\begin{quote}
+``Notice that when $W\subset V$, the admissible 4-tuple
+$(x,y,w_1,w_2)$ determines an SPE with strategy profile
+$\sigma_1=(x,y)$, $\sigma|_{(x,y)}=\sigma^1$,
+$\sigma|_{(\nu,\eta)}=\sigma^2$ for $(\nu,\eta)\neq(x,y)$
+where $\sigma^1$ is a continuation strategy that yields value
+$w_1=V_g(\sigma^1)$ and $\sigma^2$ is a strategy that yields
+continuation value $w_2=V_g(\sigma^2)$.  The value of the SPE is
+$V_g(\sigma)=w=(1-\delta)r(x,y)+\delta w_1$.''
+\end{quote}
+
+This paragraph introduces scalar continuation values $w_1$ and $w_2$
+under the label ``admissible 4-tuple,'' contradicting the corrected
+Definition~7 that precedes it.
+
+\begin{recommendation}
+Replace the paragraph with the following:
+
+\smallskip
+\noindent
+Notice that when $W\subset V$, an admissible triple $(x,y,w(\cdot))$
+determines an SPE with strategy profile
+\[
+  \sigma_1 = (x,y), \qquad
+  \sigma|_{(x,\eta)} = \tilde\sigma(\eta) \quad \forall\,\eta\in Y,
+\]
+where $\tilde\sigma(\eta)$ is any SPE with value $w(\eta)\in V$.  The
+value of the SPE is
+\[
+  V_g(\sigma) = (1-\delta)\,r(x,y)+\delta\,w(y).
+\]
+\end{recommendation}
+
+\subsection{Error~2: Two occurrences of ``4-tuples'' in Section~25.8.1
+(p.\,1141--1142)}
+
+Section~25.8.1 (``Basic idea of dynamic programming squared'') contains
+two sentences that still use four-tuple language:
+
+\begin{enumerate}
+\item ``APS define a mapping $B(W)$ that, by considering only admissible
+      \textbf{4-tuples}, maps a \emph{set} of values $W$ tomorrow into a
+      new \emph{set} $B(W)$ of values today.''
+\item ``Thus, APS use admissible \textbf{4-tuples} to map candidate
+      continuation values tomorrow into new candidate values today.''
+\end{enumerate}
+
+\begin{recommendation}
+Replace both occurrences of ``4-tuples'' with ``triples,'' so that the
+two sentences read:
+
+\begin{enumerate}
+\item ``APS define a mapping $B(W)$ that, by considering only admissible
+      \textbf{triples}, maps a set of values $W$ tomorrow into a new set
+      $B(W)$ of values today.''
+\item ``Thus, APS use admissible \textbf{triples} to map candidate
+      continuation values tomorrow into new candidate values today.''
+\end{enumerate}
+\end{recommendation}
+
+\subsection{Error~3: The iteration algorithm in Section~25.9 uses the
+two-value form without citing the corollary (p.\,1145--1146)}
+
+The algorithm for computing the boundaries of $B(W_0)$ states the
+problem for the worst value $\underline{w}_1$ as a minimization over
+$(x,y)\in C$ and $(w_1,w_2)\in[\underline{w}_0,\overline{w}_0]^2$:
+\[
+\underline{w}_1 =
+\min_{\substack{(x,y)\in C\\(w_1,w_2)\in[\underline{w}_0,\overline{w}_0]^2}}
+(1-\delta)\,r(x,y)+\delta w_1
+\]
+subject to
+\[
+(1-\delta)\,r(x,y)+\delta w_1 \;\ge\;
+(1-\delta)\,r(x,\eta)+\delta w_2
+\quad\forall\,\eta\in Y.
+\]
+This is the four-tuple formulation.  It is mathematically correct
+\emph{given} the two-value Corollary, but in the revised chapter the
+Corollary appears \emph{before} this algorithm on p.\,1144--1145.
+The algorithm therefore either (a)~should be rewritten in triple form
+for full consistency, or (b)~must include an explicit forward reference to
+the Corollary that licenses the reduction to two scalar values.  As
+currently written it does neither, leaving the reader without justification
+for the move from $w(\cdot)$ back to $(w_1,w_2)$.
+
+\begin{recommendation}
+Add a sentence immediately before the two optimization problems:
+
+\smallskip
+\noindent
+``By the two-value Corollary above, it suffices to search over pairs
+$(w_1,w_2)\in W\times W$ rather than full functions $w(\cdot):Y\to W$;
+the boundary problems therefore reduce to:''
+
+\smallskip
+\noindent
+Alternatively, rewrite the optimization entirely in triple form:
+\[
+\underline{w}_1 =
+\min_{(x,y,w(\cdot))\text{ admissible w.r.t.\,}[\underline{w}_0,\overline{w}_0]}
+(1-\delta)\,r(x,y)+\delta\,w(y),
+\]
+and note that, by the Corollary, the minimum is attained at a function
+$w(\cdot)$ that takes at most two values.
+\end{recommendation}
+
+\section{Summary Table}
+
+\begin{center}
+\begin{tabular}{llp{6cm}}
+\toprule
+\textbf{Location} & \textbf{Issue} & \textbf{Required action} \\
+\midrule
+p.\,1141, paragraph after Def.\,7
+  & ``admissible 4-tuple $(x,y,w_1,w_2)$''
+  & Replace with triple $(x,y,w(\cdot))$ description \\[4pt]
+p.\,1141--42, \S25.8.1 (twice)
+  & ``admissible 4-tuples'' (two occurrences)
+  & Replace both with ``admissible triples'' \\[4pt]
+p.\,1145--46, algorithm in \S25.9
+  & Minimization over $(w_1,w_2)\in W^2$ without justification
+  & Add citation to two-value Corollary, or rewrite in triple form \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Items Correctly Implemented}
+
+For completeness, the following elements of
+\texttt{ch24\_revisions\_claude.pdf} are correctly incorporated:
+
+\begin{itemize}
+\item \textbf{Lemma~2} (p.\,1140): states and proves the necessary and
+  sufficient condition using a function $v(\cdot):Y\to V$.
+\item \textbf{Definition~7} (p.\,1141): correctly defines admissible
+  \emph{triples} $(x,y,w(\cdot))$.
+\item \textbf{Definition~8} (p.\,1142): $B(W)$ defined via admissible
+  triples.
+\item \textbf{Monotonicity proof} (p.\,1142--43): uses the
+  triple/function formulation throughout.
+\item \textbf{Theorem~1 proof} (p.\,1143--44): constructs sequences of
+  functions $w_1(\cdot),w_2(\cdot),\ldots$ correctly.
+\item \textbf{Proposition~2} (compactness, p.\,1144): present, correctly
+  placed, and correctly proved.
+\item \textbf{Corollary} (two-value characterization, p.\,1144--45):
+  correctly positioned \emph{after} compactness, with a correct
+  necessity proof using $v_2=\inf_{\eta\in Y}v(\eta)\in V$.
+\end{itemize}
+
+\end{document}

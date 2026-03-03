@@ -1,0 +1,199 @@
+\documentclass[12pt]{article}
+\input{tcilatex}\textheight 22.5cm \textwidth 16cm\setlength{\oddsidemargin}{-0.1cm} \setlength{\topmargin}{-1.5cm}
+\begin{document}
+
+\noindent Lars Ljungqvist  \hfill  Macroeconomic Theory I
+ 
+\noindent New York University                               \hskip7.55cm Fall 2023
+
+
+
+\vskip1cm
+
+
+\centerline{{\bf Final Exam} (100 points)}
+\vskip.6cm
+
+\vskip.5cm
+\noindent
+{\it Explain your answers both with mathematics and in words. 
+If you find any ambiguity in the questions, state your clarifying 
+assumptions and proceed with the analysis.}
+
+
+\vskip1cm
+
+\noindent
+Consider an infinite-horizon pure endowment economy.  
+In each period $t\geq 0$, there is a realization of 
+a stochastic event $s_{t}\in \mathbf{S}$.
+The history of events up and until time $t$
+is denoted $s^t = [s_0, s_1, \ldots, s_t]$. The 
+unconditional probability of observing a particular 
+sequence of events $s^t$ is given by a probability 
+measure $\pi_t(s^t)$. The economy starts at time $0$ 
+with a known $s_0$, i.e., $\pi_0(s_0)=1$ for that
+particular $s_0$. 
+
+There are equal numbers of two types of consumers, $i=1,2$. 
+Consumers of type $i$ order consumption
+streams of the one good according to
+$$ \sum_{t=0}^\infty \sum_{s^t} \beta^t \pi_t(s^t)
+\left\{\alpha c_{it}(s^t) 
+- \frac{[c_{it}(s^t)]^2}{2}\right\}, \hskip.6cm 
+ \beta\in(0,1),\;\, \alpha>1, $$
+where $c_{it}(s^t)\geq 0$ is the consumption of a type $i$ consumer
+after history $s^t$. The good is tradable but nonstorable. 
+At time $t$ and history $s^t$, consumer $1$ receives
+the endowment $y_{1t}(s^t) \in (0,1)$ and consumer $2$
+receives $y_{2t}(s^t) = 1 - y_{1t}(s^t)$.
+
+
+\begin{itemize}
+
+\item[a.] \textbf{(8 points)} 
+Solve the social planner problem
+with Pareto weights $\lambda_1$ and $\lambda_2$ for
+consumers of type 1 and 2, respectively. Find the 
+range of relative Pareto weights, $\lambda_1/\lambda_2$, that
+fully maps out the Pareto frontier.
+\medskip
+
+\item[b.] \textbf{(4 points)} 
+Define a competitive equilibrium with 
+time $0$ trading. 
+\medskip
+
+\item[c.] \textbf{(20 points)} 
+Compute a time $0$ trading  
+equilibrium, i.e., find an allocation 
+$\{c_{it}(s^t); \forall i,$ $\forall t, \forall s^t\}$ 
+and prices $\{q^0_t(s^t); \forall t, \forall s^t\}$
+expressed in terms of primitives.
+\medskip
+
+\item[d.] \textbf{(3 points)} 
+Define a competitive equilibrium with 
+sequential trading. 
+
+
+\end{itemize}
+
+\vskip.5cm
+
+\noindent
+{\bf From hereon}, we assume that the stochastic event $s_t$
+can take on two values, $s_{t}\in \{0,1\}$, with
+the following probabilities. 
+The economy starts with $s_0=0$, i.e., $\pi_0(0)=1$. Next
+period, either $s_1=0$ or $s_1=1$ is realized with
+probabilities $\bar \pi \in(0,1)$ and $1-\bar \pi$,
+respectively: $\pi_1(0, 0)=\bar \pi$ and
+$\pi_1(0, 1)= 1 - \bar \pi$. Thereafter, the realization
+of the stochastic event in period~1 persists forever, 
+$s_t=s_1$ for all $t>1$. Thus, for $t\geq 1$, there are
+just two possible paths of $s^t$, namely
+$s^t = [0, 0, 0, \ldots 0, 0]$ and
+$s^t = [0, 1, 1, \ldots 1, 1]$. The endowment process 
+of a consumer of type~1 is given by
+\begin{equation}
+y_{1t}(s^t) = \left\{ \begin{array}{cc}
+    \bar y_{10}\in (0,1),     & \hbox{\rm if  } s_t=0;  \\
+    \bar y_{11}\in (0,1),     & \hbox{\rm if  } s_t=1;
+\end{array} \right.
+\end{equation}
+and as stated earlier, the endowment of a consumer of 
+type 2 is given by 
+$y_{2t}(s^t)=1-y_{1t}(s^t)$.
+
+
+
+\vskip.75cm
+
+\begin{itemize}
+
+\item[e.] \textbf{(30 points)} 
+Compute a sequential trading equlibrium, i.e.,
+find an allocation, prices 
+$\{Q_t(s_{t+1}\vert s^t); \forall t, \forall s_{t+1}, \forall s^t\}$
+and asset holdings  
+$\{a_{it+1}(s_{t+1}, s^t); \forall i, \forall t+1, 
+                          \forall s_{t+1}, \forall s^t\}$
+expressed in terms of primitives. (Hint: Use  
+your results above for a time $0$ trading equilibrium.) 
+\medskip
+
+\item[f.] \textbf{(5 points)} 
+Use a no-arbitrage argument to find an
+expression for the rate of return on a risk-free asset 
+between periods
+$t$ and $t+1$, $R_t(s^t)$. That is, express the sequence 
+$\{R_t(s^t); \forall t, \forall s^t\}$ in terms of other 
+prices.
+(Provide a mathematical derivation rather than a verbal 
+argument.)
+%\medskip
+
+%\item[g.] \textbf{(5 points)} 
+%Suppose that the economy consists only
+%of consumers of type~1. Compute a sequential trading 
+%equilibrium for such an economy, and compare its prices, 
+%including the risk-free 
+%interest rate, to those of the original economy.
+
+\end{itemize}
+
+\vskip.5cm
+
+\noindent
+{\bf From hereon}, we drop the assumption of complete markets.
+Instead, we assume that consumers can only borrow and
+lend among themselves at a risk-free interest rate.
+They trade in ``discount bonds'' as follows. 
+Let $b_{it}(s^t)$ be the purchase of bonds at
+time $t$ and history $s^t$ by consumers of type~$i$ 
+at the price $p_t(s^t)$. 
+Each unit of bonds promises to pay one consumption 
+good next period $t+1$ regardless of which state 
+$s_{t+1}$ is realized. A
+negative value of $b_{it}(s^t)$ means that consumers 
+of type~$i$ are issuing bonds and hence, they are
+borrowing from others. The bonds are in zero net 
+supply, $b_{1t}(s^t) + b_{2t}(s^t)=0$.
+
+\vskip.75cm
+
+\begin{itemize}
+
+\item[g.] \textbf{(25 points)} 
+Compute a sequential trading equlibrium in this
+incomplete-markets economy, i.e.,
+find an allocation, prices 
+$\{p_t(s^t); \forall t, \forall s^t\}$
+and asset holdings  
+$\{b_{it}(s^t); \forall i,$ $\forall t, 
+                          \forall s^t\}$
+expressed in terms of primitives. (Hints: (1) Think
+recursively. (2) Make the conjecture that 
+$p_t(s^t)=\beta$
+%for all $t$ and $s^t$, 
+and later confirm that to be an equilibrium 
+outcome.)
+
+\medskip
+
+\item[h.] \textbf{(5 points)} 
+Compare consumption outcomes across the
+two economies in questions e and g, including the
+time $0$ expectations of future consumption
+levels. 
+Are there any agents who are better off in one
+economy as compared to the other one? 
+
+\end{itemize} 
+
+
+
+
+\end{document}
+

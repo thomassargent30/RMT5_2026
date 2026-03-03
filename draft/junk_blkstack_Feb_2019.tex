@@ -1,0 +1,172 @@
+
+
+### Recursive formulation of a follower’s problem
+
+We now  use  what amounts to another  “Big $ K $, little $ k $” trick (see  [rational expectations equilibrium](https://lectures.quantecon.org/py/rational_expectations.html))  to formulate a recursive version of a follower’s problem cast in terms of an ordinary Bellman equation
+
+Firm 1, the follower, faces $ \{q_{2t}\}_{t=0}^\infty $ as a given quantity sequence chosen
+by the leader and believes that its output price at $t$ satisfies
+
+
+<a id='equation-oli22'></a>
+$$ p_t  = a_0 - a_1 ( q_{1t} + q_{2t})  , \quad t \geq 0 \tag{30}
+$$
+
+Our challenge is to represent $\{q_{2t}\}_{t=0}^\infty $ as a given sequence
+
+
+To do so, recall that under the Stackelberg plan, firm 2 sets output according to the $q_{2t}$
+component of $$y_{t+1} = \begin{bmatrix}  1 \cr q_{2t} \cr q_{1t} \cr x_t \end{bmatrix}$$
+which is governed by
+
+$$ y_{t+1} = (A - BF) y_t $$
+
+
+To obtain a recursive representation of a $\{q_{2t}\}$ sequence that is exogenous to firm 1, we
+define a state $\tilde y_t$
+
+$$ \tilde y_t = \begin{bmatrix}  1 \cr q_{2t} \cr \tilde q_{1t} \cr \tilde x_t \end{bmatrix}$$
+
+that evolves according to
+
+$$ \tilde y_{t+1} = (A - BF) \tilde y_t $$
+
+subject to the initial condition $\tilde q_{10} = q_{10}$ and $\tilde x_0 = x_0$ where
+$x_0 = - P_{22}^{-1} P_{21}$ as stated above.
+
+Firm 1's state vector is
+
+$$ X_t = \begin{bmatrix} \tilde y_t \cr q_{1t}  \end{bmatrix} $$
+
+It follows that the follower firm 1 faces law of motion
+
+
+<a id='equation-oli21'></a>
+$$
+\begin{bmatrix} \tilde y_{t+1} \\
+q_{1t+1} \end{bmatrix} = \begin{bmatrix} A - BF & 0 \\
+0  & 1 \end{bmatrix}  \begin{bmatrix} \tilde y_{t} \\
+q_{1t} \end{bmatrix} + \begin{bmatrix} 0 \cr 1 \end{bmatrix} x_t \tag{31}
+$$
+
+This specfification assures that from the point of the view of a firm 1, $ \{q_{2t}\} $ is an exogenous process.
+
+Here
+
+   * $ \tilde q_{1t}, \tilde x_t$ play the role of **Big K**
+
+   * $q_{1t}, x_t$   play the role of **little k**
+
+
+  The time $t$ component of firm 1's objective  is
+
+$$ \tilde X_t' \tilde R x_t - x_t^2 \tilde Q = \begin{bmatrix} 1 \cr q_{2t} \cr \tilde q_{1t} \cr \tilde x_t \cr q_{1t} \end{bmatrix}'
+  \begin{bmatrix} 0 & 0 & 0 & 0 & \frac{a_0}{2} \cr
+                  0 & 0 & 0 & 0 & - \frac{a_1}{2} \cr
+                  0 & 0 & 0 & 0 & 0 \cr
+                  0 & 0 & 0 & 0 & 0 \cr
+                  \frac{a_0}{2} &  -\frac{a_1}{2} & 0 & 0 & - a_1 \end{bmatrix}
+  \begin{bmatrix} 1 \cr q_{2t} \cr \tilde q_{1t} \cr \tilde x_t \cr q_{1t} \end{bmatrix} - \gamma
+     x_t^2 $$
+
+
+
+Firm 1's optimal decision rule is
+
+$$ x_t = - \tilde F X_t $$
+
+and it's state evolves according to
+
+$$ \tilde X_{t+1} = (\tilde A - \tilde B \tilde F) X_t $$
+
+under its optimal decision rule
+
+Recall that
+
+$$ \tilde y_{t+1} = (A - BF ) \tilde y_t $$
+
+
+
+#### Explanation:  the above calculation is designed to set $q_{1t} = \tilde q_{1t}$ in the law
+of motion for $X_{t+1}$, in which case we should recover the law of motion for $\tilde y_t$
+
+
+
+
+
+
+=======================
+
+
+
+
+\section{Timing protocol and Stackelberg policy}
+For any vector $a_t$, define $\vec a_t = [a_t, a_{t+1}, \ldots]$.
+
+\specsec{Definition:} Given $z_0$, the {\it Stackelberg problem\/} is to choose $\vec u_0, \vec x_0, \vec z_1$ that maximize
+ criterion \Ep{new1} subject to \Ep{new3} for $t \geq 0$.
+
+ \medskip
+
+\noindent The timing protocol is:
+
+\smallskip
+\item{i.} Nature chooses  $z_0$.
+\medskip
+\item{ii.}  The Stackelberg leader chooses $\vec u_0$.
+\medskip
+\item{iii.} The Stackelberg follower chooses $\vec x_0$ and an  outcome path $\vec z_1$ emerges.
+\medskip
+
+\noindent The Stackelberg leader understands how the objects in item (iii) depend on its choice of  $\vec u_0$.
+A {\it Stackelberg plan\/}  $(\vec u_0, \vec x_0, \vec z_1)$ solves the Stackelberg problem starting from a given $z_0$.
+
+Let $z^t = z_t, z_{t-1}, \ldots, z_0$ be a history of the natural state variables up to time $t$.  A {\it plan\/} or {\it policy\/} for the Stackelberg leader is a sequence of functions $\sigma = \{\sigma_t(z^t)\}_{t=0}^\infty$ whose $t$th component maps $z^t$ into $u_t$ so that $u_t = \sigma_t(z^t)$.
+A Stackelberg plan  is a  $\sigma$ that solves the Stackelberg leader's decision problem, which is to choose a $\vec u_0$ that maximizes
+criterion \Ep{target} knowing that $\vec u_0$ affects the follower's choice of  $\vec x_0$ as described by system \Ep{new2}.
+
+This description of a Stackelberg plan views it from a static point of view in terms of a sequence of functions $\sigma$ that the
+ Stackelberg leader chooses  at time $0$.  In the following section,  we describe
+how to represent the problem of the Stackelberg leader recursively.
+
+
+==================================
+
+
+
+\medskip
+
+\noindent{\it Exercise \the\chapternum.3} \quad {\bf Duopoly}
+
+\medskip
+\noindent
+An   industry with two firms produces a single nonstorable homogeneous good. Firm $i = 1,2$ produces $Q_{it}$.
+Costs of production for firm $i$ are
+${\cal C}_{it} = e Q_{it} + .5 g Q_{it}^2+ .5 c (Q_{i,t+1} - Q_{it})^2 , $
+where $ e >0,  g >0, c>0 $ are cost parameters.
+There is a linear inverse demand curve
+$$ p_t = A_0 - A_1 (Q_{1t} + Q_{2t} ) + v_t, \EQN oli1 $$
+where $A_0, A_1$ are both positive and  $v_t$ is a disturbance
+to demand governed by
+$$ v_{t+1}= \rho v_t  $$
+and where $ | \rho | < 1$. Assume that firm $1$ is a Stackelberg leader and that firm $2$ is a Stackelberg follower.
+
+\medskip
+\noindent{\bf a.}   Please formulate the decision problem of firm $2$ and derive  Euler equations that relate its current
+decisions to  current and future decisions of firm 1.
+
+\medskip
+\noindent{\bf b.} Please formulate the decision problem of firm $1$ as Stackelberg leader.  Please tell how to solve it.
+%
+%\medskip
+%\noindent{\bf c.}  Describe some calculations for answering the following question.  Starting from an initial state $Q_{1,0}, Q_{2,0}$ and initial situation in which
+%firm $1$ acts as Stackelberg leader and firm $2$ acts as follower, how much would firm $1$ be willing to pay to buy out firm $2$ and thereby acquire the ability to act as
+%the leader?
+
+
+\medskip
+\noindent{\bf c.}  Describe calculations that answer the following question.  Starting from an initial state $Q_{1,0}, Q_{2,0}$ and situation in which
+firm $1$ acts as Stackelberg leader and firm $2$ acts as follower, how much would firm $2$ be willing to pay to buy  firm $1$ and thereby acquire the ability to act as
+a monopolist?
+
+\medskip

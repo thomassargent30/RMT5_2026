@@ -1,0 +1,44 @@
+Hi Tom,
+
+Here are my comments and suggestions for the updated version of pages 30 to 40.
+
+- There is a repetition of what P^(k)_(i,j) stands for: the first explanation is at the bottom of page 30,
+ and the second is after equation (2.2.9) on page 35.
+
+- Definition 2.2.1: I find the following to be conceptually clearer for part i.: for any nonnegative integer T, 
+if e_i in X_tilde is visited at time t=T, only states e_j in X_tilde are visited at time t >= T. I believe that the
+ two definitions are equivalent for time-invariant Markov chains. The advantage is that it has the following interpretation:
+ once the Markov chain reaches the absorbing subset, it cannot escape it. Alternatively, if you keep your current definition,
+ you could mention that the two are equivalent and encourage the reader to prove it himself/herself.
+
+- Example on page 36: you might want to consider explicitly specifying the state space as {[1, 0], [0, 1]} since n=2.
+
+- Right eigenvector discussion on page 37: Unless the dot in "Py_bar." has a mathematical meaning, Py_bar is an n x 1 vector 
+so the ith column would only have a sensible interpretation if i=1. You could either refer to the ith entry of the vector or 
+alternatively, transpose Py_bar. Additionally, it might be a good idea to reorganize the discussion because you ask the reader 
+to think about the ith column of Py_bar twice. I would start by supposing that y_bar is a right eigenvector, and then expand the 
+ith entry of Py_bar.
+
+- Definition 2.2.4: it might be worth reiterating that the state space consists of unit vectors because y_bar_i = y_bar_j 
+for all i, j is true only if the state is represented using unit vectors. Additionally, it might be a good idea to describe the 
+relationship between an invariant random variable and an ergodic distribution. Finally, since a distribution may or may not be
+ ergodic depending on the random variable that it governs, I would personally prefer to refer to pi(y_bar) as being ergodic 
+ instead of simply pi to make this dependence explicit. 
+
+- Remarks on page 38 and 39: I think that the expression "extreme point of the convex set S" is a little imprecise because 
+any point on the boundary of S could be interpreted as extreme. If my understanding is correct, I would state that the basis 
+stationary distributions are ergodic stationary, then treat them vertices and state that the set of all stationary distributions
+ is the convex hull of the set of vertices.
+
+- Example 2 on page 39 and example 3 on page 40: the processes are ergodic when alpha_1 and alpha_2 equal to 0 regardless 
+of the value of gamma. These cases must be excluded to preserve the validity of the argument.
+
+- Some minor formatting comments: vector dimensions are sometimes parenthesized and other times not. They are parenthesized 
+in line 4 of page 30, line 4 & 5 of page 31 and in the second line of the remark on page 38. However, they are not parenthesized 
+in line 2 & 3 of page 30. Also, unconditional expectations are sometimes not bracketed like in line 3 of page 35, at the bottom of page 36 and in equation (2.2.13).
+
+As a side note, the Shenzhen machine seems to be currently inaccessible outside of China and I am waiting to regain access 
+in order to run the notebooks and add some graphs to the Knightian model progress report. I will send the report over after.
+
+Best,
+Quentin

@@ -1,0 +1,445 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{PhD Macroeconomics \hfil NYU}
+\line{\today \hfil Thomas Sargent}
+
+\centerline{\bf  Fun Problems}
+%\centerline{\bf Homework 3}
+
+
+\medskip
+
+\noindent{\bf Instructions:} Among other things, this document includes some ``inverse problems'' that assert answers and invite you to state  associated questions.
+ Each such item presents a Bellman equation for an intertemporal  optimum problem.  For such ``inverse problems,'' your job is please to
+state completely the optimum problem to which that Bellman equation corresponds.  There are also some 
+``normal'' or "direct" questions that ask you to supply answers.
+
+\medskip
+\noindent {\bf Note:} An ``intertemporal problem'' is stated in terms of  infinite sequences indexed by time $t = [0, 1, 2, \ldots, )$.
+
+
+
+\medskip
+
+\noindent{\bf 1.}
+Assume that  $F(P)$ is a right continuous function mapping $[0, B]$ into $[0,1]$ and that the real scalar $c > 0$.  For what intertemporal problem is the following
+a Bellman equation?
+$$ v(p) = \min \{p, c + \int v(p') d F(p') \}$$
+
+\medskip
+
+
+
+\noindent {\bf 2.}  Assume that  $F$ is a right continuous function mapping $[0, B]$ into $[0,1]$ and that $\beta \in (0,1)$. For what intertemporal problem is the following a Bellman equation?
+$$ v(w) = \max\left\{ {w\over{1-\beta}},  \beta \int v(w') d F^2(w') \right\} $$
+
+
+
+\medskip
+\noindent{\bf 3.} Where $x \in {\bf R}$, $f >0, d >0 $,   $\beta \in (0,1)$, and $g \in  {\bf R} \rightarrow {\bf R}$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) =  \{- f x^2 - d(gx  - x)^2 + \beta v(gx) \} $$
+
+
+\medskip
+\noindent{\bf 4.}   Where $x \in {\bf R}$, $f >0, d >0 $, and   $\beta \in (0,1)$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) = \max_{x'} \{ - f x - d(x' - x)^2 + \beta v(x') \} $$
+
+
+\medskip
+\noindent {\bf 5.} Where $x \in {\bf R}$, $f >0, d >0 $, $\sigma >0$,    $\beta \in (0,1)$, and $\phi$ is a univariate normal density function for a random
+variable with mean $0$ and variance $1$, for what intertemporal problem is the following  a Bellman equation?
+$$ v(x) = \max_{u} \{ - f x - d u^2 + \beta \int v(x +u + \sigma \epsilon) d \phi(\epsilon) \} $$
+
+
+
+\medskip
+
+
+
+\noindent {\bf 6.}  Assume that  $F$ and $G$ are distinct  right continuous functions each mapping $[0, B]$ into $[0,1]$, that $\pi \in (0,1)$, and  that $\beta \in (0,1)$. For what intertemporal problem is the following a Bellman equation?
+$$ v(w) = \max\left\{ {w\over{1-\beta}},  \beta [  \pi \int v(w') d F(w') + (1-\pi) \int v(w') d G(w') ]  \right\} $$
+
+
+\medskip
+
+\noindent{\bf 7.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q)  q - \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \eqalign{ \hat Q & = H(Q) \cr
+            \hat q & = h(q, Q) .} $$
+Please interpret the following Bellman equation in terms of a problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q,Q)) + \beta v\left(h(q,Q), H(Q)\right) .$$
+
+\medskip
+
+
+\noindent{\bf 8.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q) q - \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \hat Q  = H(Q)  $$
+Please interpret the following Bellman equations in terms of a problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$v(q, Q)  = \pi(q,Q, h(q, Q) ) + \beta v\left(h(q,Q) ,
+H(Q)\right)  = \max_{\hat q} \{\pi(q, Q, \hat q) + \beta v(\hat q, H(Q) )   \} 
+$$
+
+\medskip
+
+\noindent{\bf 9.} Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 Q \cr
+           \pi &  = p q - \gamma(\hat q - q)^2 } $$
+so that
+$$ \pi(q, Q, \hat q) = (a_0 - a_1 Q) q- \gamma (\hat q - q)^2 .$$
+Suppose that
+$$ \hat Q  = H(Q)  $$
+Assume that the following Bellman equations are satisfied: %in terms of problem stated in terms of sequences  $\{p_t, q_t, Q_t\}_{t=0}^\infty$:
+
+$$ v(q, Q) = \pi(q,Q, h(q,Q)) + \beta v\left(h(q,Q), H(Q)\right) = \max_{\hat q} \{\pi(q, Q, \hat q) + \beta v(\hat q, H(Q) )   \} $$
+
+\noindent Please interpret what it means to impose the condition
+
+$$ h(Q, Q) = H(Q) .$$
+
+\medskip
+
+\noindent{\bf 10.}  There are two firms indexed by $i = 1,2$.  A subscript $i$ indicates a  firm $i$ object  and a subscript $-i$ indicates
+a firm {\it not\/} $i$ object (i.e, it indicates the other firm). Where $a_0 >0, a_1> 0, \gamma > 0$ and $\beta \in (0,1)$ suppose that
+$$\eqalign{ p & = a_0 - a_1 (q_1 + q_2)  \cr
+           \pi_i  &  = p q_i - \gamma(\hat q_i - q_i)^2 } $$
+so that
+$$ \pi(q_i, q_{-i}, \hat q_i) = [a_0 - a_1 (q_i + q_{-i}) ] q_i - \gamma (\hat q_i - q_i)^2 . $$
+Let the following Bellman equations hold for $i=1,2$:
+$$ v_i(q_i, q_{-i}) = \pi_i( q_i, q_{-i}, f_i(q_i, q_{-i})) + \beta v_i(f_i(q_i, q_{-i}), f_{-i}(q_{-i}, q_i) )   $$
+where
+$$\eqalign{ \hat q_i & = f_i(q_i,  q_{-i}) \cr
+                  \hat q_{-i} & = f_{-i}( q_{-i}, q_i)} $$
+                  Please interpret the two functional equations for $ v_i(q_i, q_{-i})$ iin terms of problems  involving sequences $\{q_{1t}, q_{2t}\}_{t=0}^\infty$
+
+
+
+
+\medskip
+\noindent {\bf 11.}
+
+
+
+\medskip
+\noindent {\bf Reminder}
+\medskip
+
+\noindent For integer $k \in [2, \ldots, N-1]$, partition $z$ as $z = \bmatrix{z_1 \cr z_2}$, where $z_1$ is an   $(N-k) \times 1 $ vector and $z_2$ is
+a $k \times 1 $ vector.  Let
+$$ \mu = \bmatrix{\mu_1 \cr \mu_2} , \quad \quad \Sigma = \bmatrix{ \Sigma_{11} & \Sigma_{12} \cr
+                                                                     \Sigma_{21} & \Sigma_{22} } $$
+\noindent be  corresponding partitions of $\mu$ and $\Sigma$. 
+The {\it conditional density\/} of $z_2$ given $z_1$, denoted $f(z_2 | z_1; \hat \mu_2, \hat \Sigma_{22})$, is multivariate normal with mean
+%$$ \hat \mu_1 = \mu_1 + \Sigma_{12} \Sigma_{22}^{-1} ( z_2 - \mu) $$
+$$ \hat \mu_2 = \mu_2 + \beta ( z_1 - \mu_1)   $$
+and covariance matrix
+$$ \hat \Sigma_{22}  = \Sigma_{22} - \Sigma_{21} \Sigma_{11}^{-1} \Sigma_{12} = \Sigma_{22} - \beta \Sigma_{11} \beta'  $$
+where
+$$\beta = \Sigma_{21} \Sigma_{11}^{-1}  $$ is an $(N- k) \times k$ matrix
+ of population {\it regression coefficients \/} of $z_2 -\mu_2$ on $z_1- \mu_1$.
+
+
+\medskip
+\noindent{\bf Now onto problem 11.}
+\medskip
+\noindent
+Let $\mu_t$ be an $n \times 1$ vector, $\Sigma_t$ be an $n \times n$ positive definite matrix, and $A$ be an $n \times n$ matrix.
+Let $z_1$ and $z_2$ each be $n \times 1$ random vectors. Then let  $z = \bmatrix {z_1 \cr z_2 }$ be the $2n \times 1$  multivariate normal random vector
+parameterized as
+$$ z \sim {\cal N}\left(\bmatrix{ \mu_t \cr A \mu_t }, \bmatrix{ \Sigma_t & \Sigma_t A' \cr
+                                                                              A \Sigma_t & A \Sigma_t A' + C C' } \right) $$
+By writing the distribution in this way we specify that  the mean vector of $z$ is the first argument of ${\cal N}$ and the covariance matrix of $z$ is the second argument of ${\cal N}$.
+\medskip
+\noindent{\bf a.}
+Please find the probability distribution of $z_2$ conditional on $z_1$.
+\medskip
+\noindent{\bf b.} Please compute the linear least squares projection of $z_2$ on $z_1$.
+\medskip
+\noindent{\bf c.} Do your findings remind you  of a linear state-space system?
+
+\medskip
+\noindent {\bf 12.} Consider the following model of a monopolist.  Let  $S_t$ be sales at time $t$, $Q_t$ be production output at time $t$,
+ $I_t$ be inventories at the beginning of time $t$,  $\beta \in (0,1)$ be a discount factor,  $c(Q_t) = c_1 Q_t + c_2 Q_t^2$ be a cost-of-production function, where $c_1>0, c_2>0$; 
+  $d(I_t, S_t) = d_1 I_t + d_2 I_t^2  + d_3 (S_t - I_t)^2$ be a cost-of-holding inventories function, where $d_1 >0, d_2 >0 $ and $d_3 >0$;
+$p_t = a_0 - a_1 S_t + d_t $ be an inverse demand function for a firm's product, where $a_0>0, a_1 >0$ and $d_t$ is a demand shock at time  $t$;
+   $\pi_t = p_t S_t - c(Q_t) - d(I_t, S_t) $ be the firm's profits at time $t$;
+   $\sum_{t=0}^\infty \beta^t \pi_t $ be the present value of the firm's profits at time $0$;  $I_{t+1} = I_t + Q_t - S_t$ be the law of motion of inventories;
+ $z_{t+1} = A_{22} z_t + C_2 \epsilon_{t+1} $ be the law of motion for an exogenous state vector $z_t$ that contains time $t$ information useful for predicting the demand shock $d_t$ where
+ $\epsilon_{t+1}$ is an i.i.d.~random vector distributed as ${\cal N}(0,I)$; 
+   $d_t = G z_t $ links the demand shock to the information set $z_t$ ;
+   the constant $1$ is the first component of $z_t$.
+   
+   The firm wants  a production, sales, inventory-management plan $\{Q_t, S_t, I_{t+1}\}_{t=0}^\infty$ that maximizes $E_0 \sum_{t=0}^\infty \beta^t \pi_t $
+   subject to $z_0,  I_0 $ being given initial conditions.
+   
+   \medskip
+   
+ \noindent{\bf a.}. Please formulate the firm's  problem as a discounted dynamic programming problem.  Feel free to use  the word "let" somewhere in your answer.
+ 
+ \medskip
+ 
+ 
+ \noindent{\bf b.} Please state conditions on the solution of the firm's  problem that are sufficient to imply that as $t \rightarrow + \infty$ $\bmatrix{z_t \cr I_t} $ converges  to a normally distributed random vector $x_\infty \sim {\cal N}(\mu, \Omega)$.
+ 
+ \medskip
+\noindent{\bf c.} Please give formulas for $\mu$ and $\Omega $ in terms of the firm's objective and its constraints.
+   
+
+   
+\medskip
+\noindent{\bf 13.} Let $C(Q) = c_1 Q + c_2 Q^2$ where $c_1, c_2 > 0$; $d(I, S) = d_1 I + d_2 I^2 + d_3 (S - I)^2$ where $d_1>0, d_2 >0, d_3 >0$; 
+$a_1 >0, a_2 >0$ and $\pi(S, Q, I, z) = (a_0 - a_1 S + G z) S - c(Q) - d(I,S)$.  Suppose that $\phi(\epsilon)$ is a probability density for an $m$-dimensional vector
+$\epsilon$ with mean vector $0$ and covariance matrix $I$. Consider the following functional  equation in $v(I, z)$:
+$$ v(I, z) = \max_{Q, S} = \left\{ \pi(S, Q, I, z) + \beta \int v(I+Q - S, Az + C \epsilon) \phi(\epsilon) d \epsilon \right\} . $$
+Please describe a problem in a space of sequences of $\{S_t, Q_t, I_t, z_t\}_{t=0}^\infty$ for which    the above functional equation provides an answer.
+
+
+
+\medskip
+\noindent{\bf 14. }
+\noindent Suppose that a non-negative random variable $X$ has probability density $f$ and that another non-negative random variable $Y$  has probability density $f$.  Let $\pi \in [0,1]$.   Please describe an intertemporal optimum problem associated with the following functional equation
+
+
+$$
+v(w, \pi)
+= \max \left\{
+{\frac{w}{1 - \beta}}, \, c + \beta \int v(w', \kappa(w', \pi))  q_{\pi}(w') \, dw'
+\right\}
+$$
+%
+%$$
+%\pi' = \kappa(w', \pi) \tag{51.3}
+%$$
+
+where
+
+$$
+\eqalign{q_{\pi}(w) & = \pi f(w) + (1 - \pi) g(w) \cr
+\kappa(w, \pi)  &= {\frac{\pi f(w)}{\pi f(w) + (1 - \pi) g(w)}}}
+$$
+
+
+\medskip
+\noindent {\bf 15.} Please describe a decision problem whose optimal value is given by a function $v(w)$ that
+satisfies the following equations:
+$$ \eqalign{ v(w)  & = \max \left\{ w + \beta (1-\alpha) v(w) + \beta \alpha Q, c + \beta Q \right\} \cr
+                     Q & = \int v(w) d F (w) .} $$
+In your answer, please define and interpret $c, \beta, F, Q$ and $v(w)$.
+\medskip
+
+\noindent{\bf 16.} Please describe a decision problem whose optimal value is given by a function $v(w)$ that
+satisfies the following equations: 
+$$ \eqalign{ v(w)  & = \max \left\{ w + \beta (1-\alpha) v(w) + \beta \alpha Q_f, c + \beta Q \right\} \cr
+                     Q & = \int v(w) d F^2 (w) \cr
+                     Q_f & = \int v(w) d F(w). } $$
+In your answer, please define and interpret $c, \beta, F, Q, Q_f$ and $v(w)$.
+                     
+
+\medskip
+\noindent{\bf 17.} 
+\noindent
+A worker who  lives during periods $t = 0, 1, 2, \ldots, + \infty$  has an opportunity to work in period $t$ at wage $w_t \geq 0 $ and disutility of labor $\xi_t \geq 0$.  Each period a previously unemployed worker has the opportunity to draw a  new wage from a c.d.f. $F$ that satisfies $F(0) = 0, F(B) = 1$ for $B >0$.  In period $t$, a worker   employed last period at wage $w_{t-1}$ has the opportunity  not to draw again but instead to retain  $w_{t-1} $  and to  set $w_t = w_{t-1}$.  But if the worker quits, she cannot draw a new offer this period and in the future
+she cannot recall that offer or any other  past offer.  A worker draws one offer from $F$ each period she starts a period after being unemployed the period before.  An employed  worker receives time $t$ utility $w_t - \xi_t$, where each period $\xi_t$ is a nonnegative random variable drawn afresh from c.d.f. $G$ that satisfies $G(0) = 0, G(D)= 1$.  Successive draws of $\xi_t$ from $G$ are independently and identically distributed.
+Successive new draws of $w$ from $F$ are independently and identically distributed. A worker receives unemployment benefits
+$b \geq 0 $ each period she is unemployed. Where $\beta \in (0,1)$ and time $t$ utility is
+$$u_t = \cases{w_t - \xi_t&
+if working  \cr
+\Big. $b$  & if not working, \cr} $$
+  a worker wants to maximize  
+the mathematical expectation of 
+$$
+\sum_{t=0}^\infty \beta^t u_t 
+$$
+by sequentially deciding whether  to retain last period's job being employed  at wage $w_{t-1}$ or  quit and become unemployed and receive $b$ for a period and then next period draw a new wage offer $w$ and  disutility of working $\xi$. 
+
+\medskip
+\noindent {\bf a.}
+Please tell how the following functional equation might be   help generate  a statistical model of quits and exits from unemployment:
+$$
+\eqalign{ v(w_t, \xi_t) & = \max_{{\rm accept}, {\rm reject}} \left\{ w_t - \xi_t + \beta p(w_t) , b + \beta Q \right\} \cr
+    p(w_t) & = \int v(w_t, \xi') d G (\xi') \cr
+    Q & = \int v(w, \xi) d F(w) d G(\xi) . }
+$$
+Please carefully describe the objects $v(w, \xi), p(w),$ and $Q$.
+
+\medskip
+\noindent{\bf b.} Please describe a previously employed worker's optimal policy for quitting.
+\medskip
+
+\noindent{\bf c.} Please describe a previously unemployed worker's optimal policy for accepting a new job.
+\medskip
+
+
+
+
+
+
+\noindent{\bf 18.} Let $f:[0, B] \rightarrow {\bf R}^+$ be a known probability density function for a nonnegative random variable
+and let $g:[0, B] \rightarrow {\bf R}^+$ be another known probability density function that puts positive probabilities on the
+same events as $f$.  Let $p_{-1}(\alpha):[0,1] \rightarrow {\bf R}+$ be another known probability density function.
+Let 
+$$
+p_t(\alpha) = {\frac{[\alpha f(w_t) + (1-\alpha) g(w_t) ]  p_{t-1} (\alpha) } {\int [\tilde \alpha f(w_t) + (1-\tilde \alpha) g(w_t) ] p_{t-1} (\tilde \alpha) d \tilde  \alpha}} \ \, , \eqno(1)
+$$
+and let 
+$$
+h(w_{t+1};p_t(\alpha) )= \int [ \alpha  f(w_{t+1}) + (1 - \alpha) g(w_{t+1}) ] p_t(\alpha) d \alpha \,  . \eqno(2)
+$$
+
+\medskip
+\noindent {\bf a.} Please interpret $p_{-1} (\alpha)$ and $p_t(\alpha)$.
+\medskip
+
+\noindent {\bf b.} Please interpret formula  (1) 
+
+
+\medskip
+\noindent{\bf c.} Please interpret formula (2).
+
+\medskip
+\noindent {\bf d.}
+Please describe a decision problem that is associated with the following equation in the unknown function
+$v(w_t, p_t(\alpha))$:
+$$
+v(w_t, p_t(\alpha)) = \max \left\{ {\frac {w_t}{1 - \beta}}, c + \beta\int v(w_{t+1}; p_{t+1}(\tilde \alpha)) h(w_{t+1} ; p_{t}( \alpha)) d w_{t+1} d \alpha  \right\} \, .
+$$ 
+
+\medskip
+
+
+\medskip
+\noindent{\bf 19. Maybe too challenging}
+\medskip
+\noindent{\bf a.} For the purposes of this problem, we'll define a {\it model\/} as a probability distribution over a sequence, indexed by some parameters.
+
+\medskip
+
+\noindent Time is discrete and takes values $t =0, 1, \ldots$.  Let $F = \{f_j\}_{j=0}^N$ be  a discrete probability distribution that satisfies $f_j > 0$ for $j=0, \ldots, N$, $\sum_{j=0}^N f_j = 1$,
+where $f_j = {\rm Prob}(W = j)$.  Let $G = \{g_j\}_{j=0}^N$ be  another  discrete probability distribution that satisfies $g_j > 0$ for $j=0, \ldots, N$, $\sum_{j=0}^N g_j = 1$,
+where $g_j = {\rm Prob}(W = j)$.  A state variable $s_t \in \{0,1\}$, meaning that $s_t$ takes value either $0$ or $1$.  The state variable follows the law of motion
+$$ s_{t+1} = s_t \quad \forall t \geq 0 .$$
+The initial state $s_0$ is a random variable with ${\rm Prob} (s_0 = 1) = \pi \in (0,1)$.
+
+\medskip
+\noindent{\bf b.}  Let  $\{w_t\}_{t=0}^\infty$ be a sequence formed as independent draws from the distribution $G$, meaning that
+for any sequence of $i_0, i_1, i_2, \ldots $ of integers $\{i_t\}$ where the $t$th element $i_t  \in \{0, 1, \ldots, N\}$,
+ $${\rm Prob}(w_0 = i_0, w_1 = i_1, w_2 = i_2, \ldots)  = g_{i_0} g_{i_1} g_{i_2}  \cdots $$
+(i.e., successive draws are from the same distribution and don't depend on earlier draws). Please compute the mean of $w_t$ for $t \geq 0$.
+For $t \geq 1$,
+please compute the probability distribution of  $w_t$ conditional on the history $w^{t-1} = w_{t-1}, w_{t-2}, \ldots, w_0$.
+
+\medskip
+\noindent {\bf c.} Now let  the probability distribution of $w_t$  be given by
+$$ h_j \equiv {\rm Prob}(w_t = j | s_t)  = s_t f_j + (1-s_t) g_j ,  \quad \forall j \geq 0. $$
+Assume that you know the three probability distibutions $G, F, \pi$.
+Please answer these questions about the associated   model of  $\{w_t\}_{t=0}^\infty$.
+
+
+\smallskip
+\item{i.}  For $t \geq 1$,
+please compute the probability distribution of  $w_t$ conditional on the history $w^{t-1} = w_{t-1}, w_{t-2}, \ldots, w_0$.
+
+
+\item{ii.} Under the model implied by $G, F, \pi$, is $\{w_t\}_{t=0}^\infty$ an independently and identically distributed sequence of random variables?
+
+\medskip
+
+
+\noindent The following questions change conditioning information in an important way; depending on how you define ``model'', perhaps they also change the ``model''.
+
+
+\medskip
+\noindent{\bf d.} For $t \geq 1$,
+please compute the probability distribution of  $w_t$ conditional on  the history $w^{t-1} = w_{t-1}, w_{t-2}, \ldots, w_0$ AND $s_0$.
+
+\medskip
+\noindent{\bf e.} Under the ``model'' implied by $G, F, s_0$  - meaning that you can assume that $G, F,$ and $s_0$ are all known --  is $\{w_t\}_{t=0}^\infty$ an independently and identically distributed sequence of random variables?
+
+\medskip
+\noindent{\bf HINT:}  You can read about some of the issues involved in this problem in this quantecon lecture:
+https://python.quantecon.org/exchangeable.html
+
+
+
+\medskip
+\noindent{\bf 20. Maybe too challenging} 
+
+\medskip
+
+\noindent Under government policy number 1, a consumer's non-financial income $\{y_t\}_{t=0}^\infty$  is described by the state-space system
+$$ \eqalign{ x_{t+1} & = A x_t + C \epsilon_{t+1} \cr
+              y_t & = U_y x_t }$$
+where $\epsilon_{t+1} \sim {\cal N}(0,I)$ is an i.i.d.~process.  The consumer faces a sequence of budget constraints
+$$ c_t + b_t = R^{-1} b_{t+1} + y_t$$
+where $R = \beta^{-1}$ is a time-invariant gross interest rate on one-period risk free debt and $b_t$ is the amount of one-period debt that
+the consumer brings into period $t$, measured in time $t$ consumption goods. For each date $t \geq 0$, the consumer chooses time $t$ consumption according to  the decision rule
+$$ c_t = (1-\beta) (- b_t + E_t \sum_{j=0}^\infty \beta^j y_{t+j} ) $$
+where $E_t y_{t+j} = U_y A^j x_t$.  
+
+\medskip
+\noindent{\bf a.} 
+ Under government policy number 2, the consumer's non-financial income process is $\{\tilde y_t\} = \{y_t\} + \{\check y_t\}$ where
+ $\{y_t\}$ is the same process that prevails under government policy 1 and the $\{\check y_t\}$ process satisfies
+ $$ \check y_t - \check y_{t-1} = \epsilon_t - \beta^{-1} \epsilon_{t-1} $$
+ where $\epsilon_t \sim {\cal N}(0,\sigma_\epsilon^2)$ is an i.i.d.~process for $t \geq 0$  and $y_{-1}$ is a given initial condition.  
+ The consumer's information set at time $t$ includes $y_{t-1}$ and $\epsilon_t, \epsilon_{t-1}, \ldots, \epsilon_0$.  
+ 
+ \noindent{\bf b.}  Please show that the impulse response  of $\check y_{t+j}$ to $\epsilon_t$ is 
+  $$ d_j  = \cases{ 1 &if $j = 0$;\cr
+ 1 -\beta^{-1}  &if $j  \geq  1$.\cr}$$
+
+
+\medskip
+\noindent{\bf c.} Please compute the present value of the moving average (also called `impulse response') coefficients $\{d_j\}_{j=0}^\infty$, namely,
+$$ d(\beta) = \sum_{j=0}^\infty \beta^j d_j $$
+where $d(z)$ is defined as the polynomial $d(z) = \sum_{j=0}^\infty  d_j z^j$.    
+ 
+ 
+ 
+ 
+ \medskip
+\noindent{\bf d.}  Using what you know about imposing stability conditions for  linear difference equations by ``solving unstable roots forward'', please verify the following equation:
+$$ \epsilon_t = - \sum_{j=1}^\infty \beta^j (\check y_{t+j} - \check y_{t+j-1}) . $$ 
+What does this formula say about the response of the present value $\sum_{j=0}^\infty\beta^j \check y_{t+j}$ to a surprise $\epsilon_t$ at time $t$?
+{\it Hint:} Does it or does it not say that a surprise increase in $\check y_t$ at time $t$ is accompanied by an offsetting increase in future values of $\tilde y_{t+j},
+j = 1, 2, \ldots$ that leaves the present value of income as of time $t$ unaltered?
+
+\medskip
+\noindent{\bf HINTS:} You can read about the structure of this problem and why it might be interesting in this quantecon lecture: https://python-advanced.quantecon.org/cons\_news.html
+
+
+
+
+
+ 
+
+
+
+
+\bye
+
+
+

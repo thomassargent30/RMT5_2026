@@ -1,0 +1,105 @@
+
+Inserted suggestion Dear Lars,Trimmed content expanded.
+
+Skip to content
+Using New York University Mail with screen readers
+3 of 106,043
+Harrison-Kreps appendix
+Inbox
+
+Lars Ljungqvist
+Attachments
+10:18 AM (43 minutes ago)
+to thomas.sargent@nyu.edu
+
+Dear Tom,
+
+ 
+
+For pedagogical purposes, I have reinterpreted the Harrison-Kreps analysis as a general equilibrium in an endowment economy with a perishable good. Actually, for the stationary price dynamics analyzed by Harrison and Kreps, there appears to be no need for their assumption of agents having infinite wealth.
+
+ 
+
+My additions are primarily on how true probabilities shape the actual returns on agents’ investments and the welfare effects of their subjective beliefs.
+
+ 
+
+When departing from your text, I have as usual put the earlier formulations behind percentage signs.
+
+ 
+
+A substantive removal is the section on “Insufficient funds”. I am afraid that we are not solving for the correct equilibrium prices under the assumption that both types of agents have insufficient wealth to hold the entire stock of the asset. Specifically, the computed prices appear not to properly take into account the shadow value of wealth when agents expect to have insufficient wealth for future desirable investments. That is, there should be an additional return for wealth-constrained agents to hold on to, and possibly add to, their asset holdings in their “pessimistic state” in order to have more wealth in their subsequent “optimistic state” when they subjectively believe to earn supernormal returns on their wealth-constrained asset purchases.  
+
+ 
+
+As an illustration, suppose that the current state is 2 in the earlier section “Insufficient funds” when agents of type b are subjectively believing to be earning an expected net rate of return equal to 129%. Thus, for any period that goes by in that state 2, agents of type b would want to reinvest the state 2 dividend by buying additional shares of the asset. But here we run into a problem with our computed equilibrium prices that are alleged to stay constant at 1 across the two states (and the implied returns on holding the asset).
+
+ 
+
+In particular, agents of type a would not be willing to sell any shares at a price equal to 1. Admittedly, they subjectively believe to be earning an expected net rate of return equal to 33% in state 2. So from that perspective they should be indifferent to holding the asset and thus, supposedly should be willing to sell shares to agents of type b in state 2. But that is not correct because we are missing a premium for agents to hold onto shares, i.e., to hold on to wealth, in order for them to subsequently earn a subjective supernormal return of 60% in the subsequent state 1.
+
+ 
+
+So how should we proceed? Scheinkman in his Arrow lecture offers us some indirect advice in the appendix in the context of his 4-period model (first sentence of subsection A.2 Limited Capital): “It is straightforward to incorporate more periods into the model or treat a stationary model with infinite horizon.” That is, if we want to analyze insufficient funds (or for that matter, to analyze the relaxation of the short-sale constraint), it would be straightforward (but cumbersome, as in Scheinkman’s appendix) to pursue that analysis in a finite-horizon model. Though, while I enjoy Scheinkman’s analysis in that appendix, it might not be the kind of material that we would like to include in RMT.
+
+ 
+
+Regarding the idea of an infinite-horizon analysis, I do not see any way forward under the assumption of risk neutrality (which is alluded to in the revised reflections at the end of our Harrison-Kreps section). This is also my reading of Scheinkman’s statement above about taking the second route of “a stationary model with an infinite horizon” (i.e., “stationary” is not only referring to the model environment but also to equilibrium outcomes, so we are doomed to take wealth dynamics off the table in such a stationary model and adopt the common assumption of infinite wealth; and there goes any analysis of insufficient funds).
+
+ 
+
+Also, I have dialed back on our report of Scheinkman’s policy conclusions. While his characterization of the implications of restrictions on leverage versus short sales is intuitively appealing, it feels unsatisfactory unless we provide explicit references to research arriving at those conclusions. Admittedly, I have not done any comprehensive review of that literature. Do you know if Scheinkman has any particular research in mind when saying that “the most straightforward policy recommendations that arise from the arguments advanced in this lecture is that to avoid bubbles, policy makers should consider limiting leverage and facilitating, instead of impeding, short-selling”?
+
+ 
+
+Just an idea: if the goal for a snuffing out `bubbles’ is to make the agents with less accurate beliefs vanish, it might be that combinations of allowing for short sales and leverage would be the most potent way to speed up such an outcome. It’s like a double whammy when agents with less accurate beliefs face short-sellers who are also willing to lend them funds to engage in their excesses (but of course where the lenders must be keenly aware of the borrowers’ natural debt limits so that those agents with less accurate beliefs vanish from the economy without any bang of bankruptcy :-)
+
+ 
+
+In any case, it would indeed be exciting to see any formal analysis that bears out any of such policy recommendations (and the exciting wealth dynamics that would arise in such an analysis, because I gather that assumptions of infinite wealth cannot be adopted if we would like to study restrictions on leverage and relaxations of the prohibition against short sales).
+
+ 
+
+Well, the ball is now in your court! If you would like, please take custody to add, reinsert or subtract. Needless to say, please feel free cut back on the addition of true probabilities if too much is being said.
+
+ 
+
+Let’s see what you think.
+
+ 
+
+To summarize, I have only changed Appendix A on the Harrison-Kreps model in the attached chapter. And my only addition to blackref.tex is:
+
+ 
+
+\article{Scheinkman, Jose, and Wei Xiong}{2003}{Overconfidence,
+
+and Speculative Bubbles.}{Journal of Political Economy}
+
+{Vol. 111(6), pp. 1183--1219}
+
+ 
+
+ 
+
+Now, it’s onto our exciting research projects.
+
+ 
+
+Lars 
+
+ 
+
+5 Attachments
+
+Thomas J Sargent
+11:01 AM (0 minutes ago)
+to Lars
+
+Dear Lars,  Hi. Thanks for this report.  There is a lot here for me to digest. I will do so in the coming days.  I'll take custody of the files too.  
+
+It is important that we straighten out the erroneous ideas I introduced in this section. Thanks so much for beginning to set us straight.
+
+Tom
+
+Displaying networks.pdf.

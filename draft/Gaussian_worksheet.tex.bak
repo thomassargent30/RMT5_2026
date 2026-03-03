@@ -1,0 +1,99 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{Advanced Macro \hfil SMU}
+\line{Winter 2019 \hfil Thomas Sargent}
+
+%\centerline{\bf Practice problems}
+\centerline{\bf Homework 2}
+
+
+\medskip
+
+\noindent{\bf Instructions:}  Please feel free to work on this problem in groups of 3 or 4 students. But please hand in your own work. This homework is
+due on Friday Feb 1.
+
+\medskip
+\noindent  {\bf 1. \quad From shocks to innovations}
+
+\medskip
+
+\noindent Consider a state space system and the associated time-invariant innovations representation,
+which we repeat here for convenience. The original system is
+$$ \eqalign{ x_{t+1} & = A x_t + C w_{t+1} \cr
+         y_t & = G x_t  + v_t } \leqno(1)  $$
+where $\{w_{t+1}\}_{t=0}^\infty $ is an i.i.d. sequence with $w_{t+1} \sim N(0,I)$ for all $t$
+and $\{v_t\}{t=0}^\infty$ is an i.i.d. sequence with $v_t \sim N(0, R)$ for all $t$; and $E w_t' v_s = 0$
+for all $t$ and $s$.
+The associated time-invariant ``innovations representation" state-space system is
+$$ \eqalign{ \hat x_{t+1} & = A \hat x_t + K a_t \cr
+              y_t & = G \hat x_t + a_t. } \leqno(2) $$
+Here $C w_{t+1}$ are the shocks hitting the hidden state $x_{t+1}$ conditional on  $x_t$,
+$v_t$ are shocks or measurements hitting $y_t$ conditional on $G x_t$, and $a_t = y_t - E [y_t | y^{t-1}]  $ are
+shocks hitting $y_t$ given the infinite history $y^{t-1} = [ y_{t-1}, y_{t-2}, \ldots ]$.
+The shock $a_t$ is i.i.d. with distribution $a_t \sim N (0, \Omega)$.
+
+\medskip
+\noindent{\bf a.} Please provide formulas for $K$ and $\Omega$.
+
+\medskip
+
+\noindent{\bf b.} Please deduce from the above pair  of state-space systems a single state-space  system that maps the
+shocks $w_{t+1}, v_{t+1}$ into the innovation $a_{t+1}$ and verify that it takes the form:
+
+$$ \eqalign{ \bmatrix{x_{t+1} \cr \hat x_t \cr v_{t+1} } & = \bmatrix{A & 0 & 0 \cr
+                                                                    K G & (A-KG) &  K \cr
+                                                                    0 & 0 & 0 }
+                                                           \bmatrix{x_t \cr \hat x_t \cr v_t } +
+                                                           \bmatrix{ C & 0 \cr
+                                                             0 & 0 \cr
+                                                             0 & I }
+                                                             \bmatrix{ w_{t+1} \cr v_{t+1} }  \cr
+              a_t & = \bmatrix{ G & - G & I } \bmatrix{ x_t \cr \hat x_t \cr v_t } }    \leqno(3)                                             $$
+
+\medskip
+
+\noindent {\bf c.}  Please use formulas from section 2.4 of chapter 2 of RMT5    to compute moving average representations and autocovariograms
+for the process $\{a_t\}$.
+Is $\{a_{t}\}$ a serially correlated process?
+
+
+\medskip
+\noindent{\bf d.}  Please use  formulas from part {\bf c.} to deduce impulse response functions of $a_t$ to $w_t$ and of
+$a_t$ to $v_t$ so that $a_t = \sum_{j=0}^\infty g_j w_{t-j} +  \sum_{j=0}^\infty h_j v_{t-j}$.  Please represent the
+autocovariance function of $\{a_t\}$ as the sum of the autocovariance functions of $\sum_{j=0}^\infty g_j w_{t-j} $
+and $\sum_{j=0}^\infty h_j v_{t-j}$ and  verify that $E a_t a_{t-j}' = 0 $ for $j\neq 0$. (Feel free to write a Matlab or Python program
+to perform these calculations and verifications. Or instead, just describe pseudo code that will do the job. See below for an explanation
+of pseudo code.)
+
+
+\bigskip
+
+\noindent{\bf RMT5 exercises}
+
+\medskip
+
+\noindent Please solve exercises 5.1, 5.6, and 5.7 of chapter 5 or RMT5, but with the following modifications.
+When the exercises ask you to write Matlab code, please instead just write "pseudo code" telling precisely what algorithm you would
+use to solve the problem.  (Pseudo code just lays out equations to be solved step by step.)
+
+\bye
+
+
+
+
+
+
+\bye

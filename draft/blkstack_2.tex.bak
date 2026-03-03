@@ -1,0 +1,1382 @@
+
+\input grafinp3
+%\input grafinput8
+\input psfig
+%\eqnotracetrue
+
+
+%\showchaptIDtrue
+%\def\@chaptID{7.}
+
+%\eqnotracetrue
+
+%\hbox{}
+
+\def\toone{{t+1}}
+\def\ttwo{{t+2}}
+\def\tthree{{t+3}}
+\def\Tone{{T+1}}
+\def\TTT{{T-1}}
+\def\rtr{{\rm tr}}
+
+\chapter{Dynamic Stackelberg Problems\label{stackel}}
+\footnum=0
+
+\section{History dependence}
+
+  Except for chapter \use{optax}, previous chapters described decision problems that are recursive in
+what we can call ``natural'' state variables, meaning state variables that
+describe stocks of capital, wealth, and information that helps forecast
+future values of prices and quantities that impinge on  utilities
+or profits.  In problems that are recursive in the natural state variables,
+optimal decision rules are functions of the natural state variables.
+
+\index{time consistency}
+%  This chapter studies a class of
+% problems that are not recursive in the natural state variables.
+Kydland and Prescott (1977)  and Calvo (1978) gave
+macroeconomic examples of decision problems
+that %whose solutions  exhibited {\it time inconsistency\/}
+are not  recursive in natural state variables.
+At time $0$, a government
+chooses  actions for all $t \geq 0$, knowing that it  confronts  a competitive market composed of many small private
+agents
+whose decisions are influenced by their
+{\it forecasts\/} of the government's future actions. In particular, what private agents choose to do at date $t$ depends
+ partly on what they expect the government  to do at dates $t+j, \ \forall t \geq 0$.   In a rational expectations equilibrium in a nonstochastic setting,
+ the government's actions at time $t \geq 1$ equal private agents' earlier forecasts of
+those actions.
+Knowing that, the government uses its time $t \geq 1$ actions
+to influence earlier actions by private agents.  The rational expectations equilibrium concept requires that the government  confirm
+private sector forecasts. That
+prevents the government's decision problem from being
+recursive in  natural state variables and makes  the government's optimal
+decision rule at $t$ depend on the {\it history\/} of the natural
+state variables from time $0$ to time $t$.
+
+ \auth{Kydland, Finn E.} \auth{Prescott, Edward C.}%
+It took  time for economists to learn how to formulate policy problems of this type
+recursively.
+Prescott  (1977) asserted that
+ recursive optimal control theory (i.e., dynamic programming) did not apply
+to problems with this structure.  This chapter and chapters \use{optaxrecur},
+\use{socialinsurance}, and \use{credible} describe
+how Prescott's initial pessimism about the inapplicability
+of optimal control theory was overturned.\NFootnote{The important contribution by Kydland and Prescott (1980)
+ rejected
+ Prescott's initial pessimism.}
+An important finding is that if the natural state variables
+are augmented with state variables that are simultaneously  `forward looking' and `backward looking', this class of problems
+can be made recursive. This affords
+computational advantages and yields substantial insights.
+  This chapter displays these
+within the tractable framework of linear-quadratic problems.
+
+\section{The Stackelberg problem}
+
+To exhibit the essential structure of
+the decision problems that concerned Kydland and Prescott (1977) and Calvo (1979),
+this chapter uses the optimal linear regulator problem of chapter \use{dplinear}
+to solve a linear-quadratic version of
+what is known as a dynamic Stackelberg problem.\NFootnote{In some settings
+it is  called a Ramsey problem. See chapters \use{optax} and \use{optaxrecur}.}
+In some examples, the  Stackelberg leader is  a government or Pareto planner and
+the Stackelberg follower is a representative agent or
+private sector.  In section \use{sec:monopfringe},   we'll give industrial organization
+ application with another  interpretation of the leaders and followers.
+ We'll begin with another industrial organization example, namely,
+ the duopoly model that we used as a laboratory  in chapter \use{recurpe} for illustrating
+ the formulation and computation of a Markov perfect equilibrium.
+ \index{Markov perfect equilibrium}%
+
+
+
+\section{Duopoly example}\label{sec:duopoly}%
+Time is discrete and is indexed by $t = 0, 1, \ldots, $.
+Two firms produce a single good whose demand is governed by the linear inverse demand curve
+$$ p_t = a_0 - a_1 (q_{1t}+ q_{2t} ) $$
+where $q_{it}$ is output of firm $i$ at time $t$ and $a_0$ and $a_1$ are both positive;
+$q_{10}, q_{20}$ are given numbers that serve as  initial conditions at time $0$.
+By incurring a cost of change $ \gamma v_{it}^2  $,
+where $\gamma > 0$,  firm $i$ can change its output according to
+$$ q_{it+1} = q_{it} + v_{it} . $$
+Firm $i$'s profits at time $t$ equal
+$$ \pi_{it} = p_t q_{it} - \gamma v_{it}^2 $$
+Firm $i$ wants to maximize the present value of its profits
+$$ \sum_{t=0}^\infty \beta^t \pi_{it}  $$
+where  $\beta \in (0,1)$ is a time discount factor
+
+\subsection{Stackelberg leader and follower}
+In contrast to the timing protocol within the Markov perfect equilibrium studied in chapter \use{recurpe}, in the setting to be analyzed here
+each firm $i=1,2$ chooses a sequence $\vec q_i \equiv \{q_{it+1}\}_{t=0}^\infty$ once and for all at time $0$.
+We  let firm 2 be a {\it Stackelberg leader\/} and firm 1 be a {\it Stackelberg follower}.
+The leader firm 2 goes first and chooses $\{q_{2t+1}\}_{t=0}^\infty$  once and for all at time $0$.
+Knowing that firm 2 has chosen $\{q_{2t+1}\}_{t=0}^\infty$, the follower firm 1 goes second and chooses $\{q_{1t+1}\}_{t=0}^\infty$  once and for all at time $0$.
+In choosing $\vec q_2$, firm 2 takes into account that firm 1 will base its choice of
+$\vec q_1$ on firm 2's choice of $\vec q_2$.
+
+
+
+We begin with a concise  statement of the Stackelberg leader's and follower's problems.
+We can express firm 1's problem as
+$$ \max_{\vec q_1} \Pi_1(\vec q_1; \vec q_2)  $$
+where the appearance behind the semi-colon indicates that  $\vec q_2$ is taken as given.
+Firm 1's problem induces a best response mapping
+$$ \vec q_1 = B(\vec q_2). $$
+Here $B$ maps a sequence into a sequence.
+The Stackelberg leader's problem is
+$$ \max_{\vec q_2} \Pi_2 (B(\vec q_2), \vec q_2) $$
+whose maximizer is a sequence $\vec q_2$ that depends on the initial conditions $q_{10}, q_{20}$ and the parameters of
+the model $a_0, a_1, \gamma$.
+
+
+While our abstract formulation reveals the timing protocol and equilibrium concept well, it obscures details
+that must be addressed when we want to compute and interpret a Stackelberg plan and the follower's best response to it
+To gain insights about these things, we study them in more detail
+
+\subsection{The   firms' problems}
+
+Firm 1  acts as if firm 2's sequence  $\{q_{2t+1}\}_{t=0}^\infty$ is given and beyond its control.
+Firm 2 knows that firm 1 chooses second and takes this into account in choosing $\{q_{2t+1}\}_{t=0}^\infty$.
+In the spirit of working backwards, we study firm 1's problem first, taking $\{q_{2t+1} \}_{t=0}^\infty $ as given.
+We can formulate firm 1's optimum problem in terms of the Lagrangian
+$$L=\sum_{t=0}^{\infty}\beta^{t}\{a_{0}q_{1t}-a_{1}q_{1t}^{2}-a_{1}q_{1t}q_{2t}-\gamma v_{1t}^{2}+\lambda_{t}[q_{1t}+v_{1t}-q_{1t+1}]\} .$$
+Firm 1 seeks a maximum with respect to $\{q_{1t+1}, v_{1t} \}_{t=0}^\infty$ and a minimum with respect
+to $\{ \lambda_t\}_{t=0}^\infty$.
+We approach this problem using the lag operator  methods described in chapter \use{timeseries}, appendix A and Sargent (1987a,chapter IX).
+\auth{Sargent, Thomas J.}%
+\index{lag operator}%
+First-order conditions are
+$$\eqalign{ \frac{\partial L}{\partial q_{1t}} & = a_0 - 2 a_1 q_{1t} - a_1 q_{2t} + \lambda_t - \beta^{-1}
+             \lambda_{t-1} = 0 , \quad t \geq 1 \cr
+             \frac{\partial L}{\partial v_{1t}} & = -2 \gamma v_{1t} +  \lambda_t = 0 , \quad t \geq 0  \cr }$$
+These first-order   conditions and the constraint $q_{1t+1} = q_{1t} + v_{1t} $
+can be rearranged to take the form
+$$ \eqalign{ v_{1t} & = \beta v_{1t+1} + {\frac{\beta a_0}{2 \gamma}} - {\frac{\beta a_1}{\gamma}} q_{1t+1} -
+                       {\frac{\beta a_1}{2 \gamma}} q_{2t+1} \cr
+             q_{t+1} & = q_{1t} + v_{1t} \cr } \EQN eq_duop0$$
+We can substitute the second equation into the first equation to obtain
+$$ (q_{1t+1} - q_{1t} ) = \beta (q_{1t+2} - q_{1t+1}) + c_0 - c_1 q_{1t+1} - c_2 q_{2t+1}  $$
+where $c_0 = {\frac{\beta a_0}{2 \gamma}}, c_1 = {\frac{\beta a_1}{\gamma}}, c_2 = {\frac{\beta a_1}{2 \gamma}} $.
+This equation can in turn be rearranged to become the  second-order difference equation
+$$ - q_{1t} + (1+\beta + c_1) q_{1t+1} - \beta q_{1t+2} = c_0 - c_2 q_{2t+1} \EQN eq_duop1 $$
+Equation (1) is a second-order difference equation in the sequence $\vec q_1$ whose solution we want to satisfy two boundary conditions, namely,
+an initial condition that $q_{1,0}$ is given and a  terminal condition requiring that $\lim_{T\rightarrow + \infty} \beta^T q_{1t}^2 < + \infty $.
+
+Using the lag operators described in appendix A of chapter \use{timeseries} and  chapter IX of Sargent (1987a, chapter IX), difference equation \Ep{eq_duop1} can be written as
+$$ \beta (1 - {\frac{1+\beta + c_1}{\beta}} L + \beta^{-1} L^2 ) q_{1t+2} = - c_0 + c_2 q_{2t+1} \EQN eq_duop2 $$
+The polynomial in the lag operator on the left side of equation \Ep{eq_duop2} can be {\it factored\/} as
+$$ (1 - {\frac{1+\beta + c_1}{\beta}} L + \beta^{-1} L^2 )  = ( 1 - \delta_1 L ) (1 - \delta_2 L) $$
+where $0 < \delta_1 < 1 < {\frac{1}{\sqrt{\beta}}} < \delta_2 $.
+Because $\delta_2 > {\frac{1}{\sqrt{\beta}}}$
+the operator $(1 - \delta_2 L)$ contributes an {\it unstable\/} component if solved {\it backwards\/} but a
+{\it stable\/} component if solved {\it forwards}.
+To see this, mechanically  write
+$$ (1- \delta_2 L) = -\delta_{2} L (1 - \delta_2^{-1} L^{-1} ) $$
+and compute the following inverse operator
+$$ \left[-\delta_{2} L (1 - \delta_2^{-1} L^{-1} )\right]^{-1} = - \delta_2^{=1} (1 - {\delta_2}^{-1} L^{-1} )^{-1} L^{-1} $$
+Operating on both sides of equation \Ep{eq_duop2} with $\beta^{-1}$ times  this inverse operator gives the follower's decision rule for setting  $q_{1t+1}$
+in the  {\it feedback-feedforward\/} form
+$$ q_{1t+1} = \delta_1 q_{1t} + c_0 \delta_2^{-1} \beta^{-1} { \frac{1}{1 -\delta_2^{-1}}}  - c_2 \delta_2^{-1} \beta^{-1} \sum_{j=0}^\infty \delta_2^{-j} q_{2t+j+1} ,  \quad t \geq 0
+\EQN eq_duop3 $$
+This representation summarizes the follower's best response function and  shows how the continuation $\{q_{2s}\}_{s=t+1}^\infty$  of the leader's setting of $\vec q_2$ influences the follower's choice of $q_{1t+1}$.
+
+
+The problem of the Stackelberg leader firm 1 is to choose the sequence $\{q_{2t+j+1}\}_{t=0}^\infty$ to
+maximize its discounted profits
+$$ \sum_{t=0}^\infty \{ (a_0 -  a_1 (q_{1t} + q_{2t})) q_{2t}  - \gamma (q_{2t+1} - q_{2t})^2 \} $$
+subject to the sequence of constraints \Ep{eq_duop3} for $t \geq 0$.
+We can attach a sequence $\{\theta_t\}_{t=0}^\infty$ of Lagrange multipliers to  the sequence of equations \Ep{eq_duop3}    and formulate the following Lagrangian for  the Stackelberg leader firm 2's problem:
+$$ \eqalign{ \tilde L & = \sum_{t=0}^\infty  \beta^t\{( (a_0 -  a_1 (q_{1t} + q_{2t}))q_{2t}  - \gamma (q_{2t+1} - q_{2t})^2 \} \cr
+  &  + \sum_{t=0}^\infty \beta^t \theta_t \{ \delta_1 q_{1t} -  c_0 \delta_2^{-1} \beta^{-1} +  c_2 \delta_2^{-1} \beta^{-1}
+    \sum_{j=0}^\infty \delta_2^{-j} q_{2t+j+1} - q_{1t+1} \} } \quad \EQN eq_duop4 $$
+subject to initial conditions for $q_{1t}, q_{2t}$ at $t=0$.
+
+The max-min problem  associated with Lagrangian \Ep{eq_duop4}  is unpleasant because the time $t$ component of  firm $1$'s payoff function
+depends on the entire future of its choices of $\{q_{1t+j}\}_{j=0}^\infty$.
+This feature renders a direct attack on the problem cumbersome.
+It is more convenient to formulate a Stackelberg leader's problem recursively, as we do in a more general linear-quadratic setting next.
+
+
+
+
+\section{Recursive representation of Stackelberg problem}
+
+Let $z_t$ be  an $n_z \times 1$  vector of natural state variables,
+$x_t$ an $n_x \times 1$  vector of  endogenous forward-looking variables, and $u_t$ a vector of  variables chosen by the Stackelberg leader.
+Included in $x_t$ are prices and quantities that adjust
+instantaneously to clear markets at time $t$.
+The $z_t$ vector is inherited from the past.
+The vector $x_t$ is a function of  {\it future} values of $z$ and $u$.
+Nevertheless,   at $t \geq 1$, $x_t$ is  inherited from the past  because
+values of how $z$ and $u$ for all $ t \geq 0$ are set  in a Stackelberg plan devised at time $0$.
+%   The model determinesunder a Stackelberg plan,
+%  the ``jump variables'' $x_t$ at time
+% $t$.
+
+\specsec{Remark:}  For $t \geq 1$, $x_t$ will turn out to be both a {\it forward-looking\/} and
+a {\it backward-looking\/} variable.  It is forward looking because it depends on forecasts of future actions of the Stackelberg leader.
+It is backward looking because it is a promise about time $t$ continuation policies  that was  chosen  by the Stackelberg leader at time $0$.
+
+\newpage
+
+Let $ y_t = \left[\matrix{z_t \cr x_t \cr} \right]$. Let $u_t$ be a vector of variables chosen by
+the Stackelberg leader at $t$.
+Define the
+leader's one-period loss function\NFootnote{The
+ problem assumes that there
+are no cross products between states and controls in the
+return function.  There is a simple transformation that converts a problem
+whose return function has cross products into an equivalent problem
+that has no cross products. For example, see Hansen and Sargent (2008, chapter 4, pp. 72-73).}
+$$ r(y, u)  =  y' R y  + u' Q u . \EQN target $$
+Subject to an initial condition for $z_0$, but not for
+$x_0$, a Stackelberg leader at time $0$ wants to % chooses $(x_0, \{u_t, y_t\}_{t=0}^\infty)$  to
+ maximize %  chooses $\{y_{t+1}, x_t, u_t \}_{t=0}^\infty$  to maximize
+$$ -  \sum_{t=0}^\infty \beta^t r(y_t, u_t) \EQN new1 $$
+in light of  the structural economic model
+$$ \left[\matrix{I & 0 \cr
+                 G_{21} & G_{22} \cr}\right]
+    \left[ \matrix{   z_{t+1} \cr  x_{t+1} \cr} \right]
+  = \left[ \matrix{ \hat A_{11}  &  \hat A_{12} \cr
+                    \hat A_{21} & \hat A_{22}  \cr} \right]
+\left[\matrix{ z_t \cr x_t \cr} \right]
+    + \hat B u_t   . \EQN new2$$
+We shall explain the meaning of the second block of equations in system \Ep{new2} soon.
+We assume that the matrix on the left is invertible,
+so that we can multiply both sides of the above equation by its
+inverse to obtain
+% \NFootnote{We
+% have assumed that the matrix on the left of \Ep{new2} is invertible
+% for ease of presentation.
+% However, by appropriately using the
+% invariant subspace methods described
+% under step 2 below (see Appendix \the\chapternum\use{appBblkstack}),
+% it is straightforward to adapt the computational
+% method when this assumption is violated.}
+$$ \left[ \matrix{   z_{t+1} \cr  x_{t+1} \cr} \right]
+  = \left[ \matrix{ A_{11}  &   A_{12} \cr
+                     A_{21} &  A_{22}  \cr} \right]
+   \left[\matrix{ z_t \cr x_t \cr} \right]
+    +  B u_t   \EQN new3$$
+or
+$$ y_{t+1} = A y_t + B u_t  . \EQN new30 $$
+At time $0$, the leader maximizes \Ep{new1} by choosing
+$\{u_t, x_t, z_{t+1}\}_{t=0}^\infty$ subject to
+\Ep{new3} and an initial condition for $z_0$.\NFootnote{Miller and Salmon (1982, 1985),
+Hansen, Epple, and Roberds (1985), Pearlman, Currie, and Levine (1986),
+Sargent (1987a, chapter XIII),
+Pearlman (1992), and others have  studied
+versions of this problem.}%
+
+The  second
+block of equations of \Ep{new2}  or \Ep{new3}
+typically includes first-order conditions
+for Stackelberg followers' optimization problems (i.e., their Euler equations). These
+summarize the forward-looking aspect of followers' behavior.
+We shall provide an example in section \use{sec:monopfringe} in which
+the last $n_x$ equations
+of \Ep{new3} or \Ep{new30} constitute {\it implementability constraints} consisting of followers' Euler equations.
+When combined with a stability condition to be imposed below, these
+Euler equations
+summarize the followers' best responses to the
+sequence of actions chosen  by the Stackelberg leader. The leader uses its understanding of these best responses
+to manipulate the followers' choices.
+
+To indicate features of the problem that make $x_t$ a vector of forward-looking
+variables, write the second block of system \Ep{new2}
+as
+$$ x_t =  \phi_1 z_t + \phi_2 z_{t+1} +  \phi_3 u_t + \phi_0 x_{t+1} , \EQN eqn:xlawforward $$
+where $\phi_0 = \hat A_{22}^{-1} G_{22}$.
+The models we study in this chapter typically satisfy
+
+\specsec{Condition A:}
+The eigenvalues of $\phi_0$ % = \hat A_{22}^{-1} G_{22}$
+are bounded in modulus by $1$.\NFootnote{It will suffice if the eigenvalues of $\phi_0$ are bounded in modulus
+by $\beta^{-.5}$.} %${\frac{1}{\sqrt{\beta}}}$.
+
+\medskip
+
+\noindent Condition A makes equation \Ep{eqn:xlawforward} explosive if ``solved backward'' but stable if ``solved forward''.\NFootnote{See
+appendix \use{appa1} of chapter \use{timeseries} and   chapter \use{dplinear}. Also, see Sargent (1987a, chapter IX).}$^,$\NFootnote{Equation
+\Ep{eq_duop3} in the duopoly model is an instance of equation \Ep{eqn:xlawforward}.} So we solve
+equation \Ep{eqn:xlawforward} forward to get
+$$ x_t = \sum_{j=0}^\infty \phi_0^j \left[ \phi_1 z_{t+j} + \phi_2 z_{t+j+1} + \phi_3 u_{t+j} \right] . \EQN bell101 $$
+In choosing $u_t$ for $t \geq 1$ at time $0$, the leader  takes into account how future $z$'s and $u$'s affect earlier
+$x$'s through equation \Ep{bell101}.
+
+
+
+
+%
+% Let $X^t$ denote the history of any variable $X$  from
+% $0$ to $t$. Miller and Salmon (1982, 1985),
+% Hansen, Epple, and Roberds (1985), Pearlman, Currie, and Levine (1986),
+% Sargent (1987),
+% Pearlman (1992), and others have all studied
+% versions of the following problem:
+% \medskip
+% \noindent {\bf Problem S:}
+% The  {\it
+%  Stackelberg problem\/}
+% is to  maximize \Ep{new1} by choosing an $x_0$ and
+%  a sequence of decision rules, the time $t$ component of which
+% maps the time $t$ history of the state
+% $z^t$ into the time $t$ decision $u_t$ of the Stackelberg leader.
+%    The Stackelberg leader commits to
+% this sequence of decision  rules at time $0$.
+% The maximization is subject to a given initial condition
+% for $z_0$.
+% %But $x_0$ is among the objects  to be chosen by the Stackelberg leader.
+% %The jump variables $x_t$ are functions of both the natural state variables $z_t$ and
+%the multipliers $\mu_{xt}$.
+
+\specsec{Remark:}
+We can regard $x_t$ in equation \Ep{eqn:xlawforward} or \Ep{bell101} as summarizing the optimal behavior of the followers
+in response to a Stackelberg plan $\{u_t\}_{t=0}^\infty$.  In chapters \use{optaxrecur} and  \use{chang}, we use counterparts to $x_t$ to index
+competitive equilibria with distorting taxes.  In equation \Ep{eqn:xlawforward}, the effects of $\{u_{t+j}\}_{j=1}^\infty$ on $x_t$ are all
+ intermediated through $x_{t+1}$.
+
+
+\specsec{Remark:}
+The   certainty equivalence principle
+stated in chapter \use{dplinear} motivates us
+to  work with a nonstochastic model.
+ We would attain the
+same decision rule for the Stackelberg leader   if we were  to replace
+$x_{t+1}$ with the forecast $E_t x_{t+1}$ and to add  a shock process
+$C \epsilon_{t+1}$ to the right side of \Ep{new3}, where
+$\epsilon_{t+1}$ is an i.i.d.\ random vector
+ with mean   zero
+and identity covariance matrix.
+
+
+
+
+\subsection{Duopoly example}
+To illustrate our structure, let's map the duopoly model into it.
+We begin with firm 1's problem.
+Use  firm 1's
+%
+%We again  formulate firm 1's optimum problem in terms of the Lagrangian
+%
+%
+%$$L=\sum_{t=0}^{\infty}\beta^{t}\{a_{0}q_{1t}-a_{1}q_{1t}^{2}-a_{1}q_{1t}q_{2t}-\gamma v_{1t}^{2}+\lambda_{t}[q_{1t}+v_{1t}-q_{1t+1}]\}$$
+%
+%
+%Firm 1 seeks a maximum with respect to $\{q_{1t+1}, v_{1t} \}_{t=0}^\infty$ and a minimum with respect
+%to $\{ \lambda_t\}_{t=0}^\infty$.
+%
+%First-order conditions for this problem are
+%
+%$$\eqalign{ \frac{\partial L}{\partial q_{1t}} & = a_0 - 2 a_1 q_{1t} - a_1 q_{2t} + \lambda_t - \beta^{-1}
+%             \lambda_{t-1} = 0 , \quad t \geq 1 \cr
+%             \frac{\partial L}{\partial v_{1t}} & = -2 \gamma v_{1t} +  \lambda_t = 0 , \quad t \geq 0  \cr }$$
+first-order order  conditions \Ep{eq_duop0}
+%% and the constraint $q_{1t+1} = q_{1t} + v_{1t} $
+%% to take the form
+%
+%$$ \eqalign{ v_{1t} & = \beta v_{1t+1} + \frac{\beta a_0}{2 \gamma} - \frac{\beta a_1}{\gamma} q_{1t+1} -
+%                       \frac{\beta a_1}{2 \gamma} q_{2t+1} \cr
+%             q_{t+1} & = q_{1t} + v_{1t} } $$
+as components of the following  linear system that confronts the Stackelberg leader firm $2$:
+$$ \bmatrix{       1 & 0 & 0 & 0 \cr
+                        0 & 1 & 0 & 0 \cr
+                        0 & 0 & 1 & 0 \cr
+        \frac{\beta a_0}{2 \gamma} & - \frac{\beta a_1}{2 \gamma} & -\frac{\beta a_1}{\gamma} & \beta }
+        \bmatrix{ 1 \cr q_{2t+1} \cr q_{1t+1} \cr v_{1t+1} }
+        = \bmatrix{ 1 & 0 & 0 & 0 \cr
+                          0 & 1 & 0 & 0 \cr
+                           0 & 0 & 1 & 1 \cr
+                           0 & 0 & 0 & 1 } \bmatrix{ 1 \cr q_{2t} \cr q_{1t} \cr v_{1t} }
+        + \bmatrix{ 0 \cr 1 \cr 0 \cr 0 } v_{2t} $$
+Time $t$ revenues  of  firm 2 are $\pi_{2t} = a_0 q_{2t} - a_1 q_{2t}^2 - a_1 q_{1t} q_{2t}$ which evidently
+equal
+$$ z_t' R_1 z_t \equiv \bmatrix{ 1 \cr q_{2t} \cr q_{1t}  }'
+   \bmatrix{ 0 & \frac{a_0}{2}& 0 \cr
+                   \frac{a_0}{2} & -a_1 & -\frac{a_1}{2}\cr
+                   0 & -\frac{a_1}{2} & 0 }
+\bmatrix{ 1 \cr q_{2t} \cr q_{1t}  } $$
+If we set $Q = \gamma$, then firm 2's period $t$ profits can then be written
+$$ y_t' R y_t - Q v_{2t}^2  $$
+where $y_t = \bmatrix{ z_t \cr x_t } $ with $x_t = v_{1t}$ and
+$R = \bmatrix{ R_1 & 0 \cr 0 & 0 }. $
+
+
+
+
+
+\section{Recursive formulation}\label{recurstack}%
+ To solve  a Stackelberg problem recursively,
+ we formulate two Bellman equations in two sets of  state variables.
+
+\subsection{Two Bellman equations}
+Given $y_0$, define a feasible set of $(\vec y_1, \vec u_0)$ sequences
+% $$
+%    \Omega(y_0) = \left\{ (\vec y_1, \vec u_0) : - \sum_{t=0}^\infty \beta^t r(y_t, u_t) > -\infty \ {\rm and} \ y_{t+1} = A y_t + B u_t, \forall t \geq 0 \right\} $$
+   $$
+   \Omega(y_0) = \left\{ (\vec y_1, \vec u_0) : \ y_{t+1} = A y_t + B u_t, \forall t \geq 0 \right\} $$
+%In the definition of $\Omega(y_0)$, $y_0$ is taken as given.
+We  express a Stackelberg problem in terms of  two subproblems:
+
+\medskip
+\specsec{subproblem 1}
+
+$$   v(y_0) = \max_{(\vec y_1, \vec u_0) \in \Omega(y_0)} - \sum_{t=0}^\infty \beta^t r(y_t, u_t)
+   \EQN stacksub1  $$
+
+%\vfil\eject
+
+\medskip
+\specsec{subproblem 2}
+
+$$
+   w(z_0) = \max_{x_0} v(y_0) \EQN stacksub2 $$
+
+\noindent Working backwards, we solve subproblem 1 first, then subproblem 2.
+
+\subsection{Subproblem 1}
+The value function $v(y)$ in  subproblem 1 satisfies the Bellman equation
+
+$$    v(y) = \max_{u, y^*} \left\{ - r(y,u) + \beta v(y^*) \right\} \EQN bell1
+$$
+where  maximization is subject to
+$$     y^* = A y + B u,
+  \EQN bell2 $$
+and $y^*$ denotes next period's value of $y$.
+% The optimal value function $v(y) = - y' P y$ is attained by
+% the linear decision rule
+% $$ u = - F y $$
+% where XXXX
+% he linear regulator is
+% $$ v(y_0) = -y_0' P y_0
+% = {\rm max}_{\{  u_t, y_{t+1}\}_{t=0}^\infty} - \sum_{t=0}^\infty \beta^t
+%   \left( y_t' R y_t +   u_t'   Q   u_t \right) \EQN olrp1a $$
+% where the maximization is subject to a fixed initial condition for
+% $y_0$ and the law of motion\NFootnote{In step 4, we acknowledge that the $x_0$ component
+% is {\it not\/} given but is to be chosen by the Stackelberg leader.}
+% $$ y_{t+1} = A y_t +   B   u_t . \EQN new30a  $$
+ The problem is an instance  of the linear quadratic dynamic programming problem studied in
+  chapter \use{dplinear}.  Substituting the (correct) guess  $v(y) = - y'P y$ into  Bellman equation \Ep{bell1}  gives
+$$   - y' P y = {\rm max}_{  u, y^*} \left\{ -  y' R y -   u'Q     u - \beta y^{* \prime} P y^* \right\} , $$
+which as in chapter \use{dplinear} gives rise to the algebraic matrix Riccati equation
+$$    P = R + \beta A' P A - \beta^2 A' P   B (  Q  + \beta   B' P   B)^{-1}   B' P A
+    \EQN bell3 $$
+and the optimal decision rule  %    the formula for $F$ in the   decision rule
+$$    u_t = - F y_t,
+  \EQN bell5 $$
+where
+$$   F = \beta(   Q + \beta   B' P   B)^{-1}  B' P A . \EQN bell4 $$
+
+
+% Thus, we can solve problem \Ep{new1}, \Ep{new30} by iterating
+% to convergence on the difference equation counterpart to the algebraic Riccati equation \Ep{bell3}, or by using
+% a faster computational method that emerges as a by-product in
+% step 2.  This method is described in Appendix \the\chapternum\use{appBblkstack}.
+
+
+\subsection{Subproblem 2}
+
+The value function $v(y_0)$ satisfies $v(y) = - y_0' P y_0$ or
+$$ v(y_0) = - z_0 ' P_{11} z_0 - 2 x_0' P_{21} z_0 - x_0' P_{22} x_0
+     \EQN valuefny $$
+where
+$$P = \bmatrix{P_{11} & P_{12} \cr P_{21} & P_{22} }.$$
+Choose $x_0$ by equating to zero the gradient of $v(y_0)$ with respect to  $x_0$:
+$$ - 2 P_{21} z_0 - 2 P_{22} x_0 =0,   $$
+which implies that
+$$ x_0 = - P_{22}^{-1} P_{21} z_0. \EQN king6x0 $$
+We have solved subproblem 2.
+
+
+
+
+\subsection{Representation of Stackelberg plan}
+
+In order to attain an appropriate representation of the Stackelberg leader's history-dependent plan, we will employ what amounts to a version
+ of the  ``Big $K$, little $k$'' device encountered in chapter \use{recurpe}  by  distinguishing $z_t$, which depends partly  on decisions $x_t$
+of the followers, from $\check z_t$, which does not.  We will use $\check z_t$ and its history $\check z^t = [\check z_t, \check z_{t-1}, \ldots,
+\check z_0] $ to describe the sequence of the Stackelberg leader's  decisions  that the Stackelberg follower takes as given.
+Thus, we let $\check y_t' = \bmatrix{\check z_t' & \check x_t'}$ with initial condition $\check z_0 = z_0$ given.
+We have demonstrated that a Stackelberg plan for $\{u_t\}_{t=0}^\infty$  has a recursive representation
+$$ \eqalign{ \check x_0 & = - P_{22}^{-1} P_{21} z_0 \cr
+             u_t & = - F \check y_t, \quad t \geq 0 \cr
+             \check y_{t+1} & = (A - BF) \check y_t, \quad t \geq 0 . } $$
+From this representation we can deduce the sequence of functions $\sigma = \{\sigma_t(\check z^t)\}_{t=0}^\infty$
+that comprise a Stackelberg plan.
+For convenience, let $\check A \equiv A -  BF$ and partition $\check A$ conformably to the partition
+$y_t = \bmatrix{\check z_t \cr \check x_t  }$ as $\bmatrix{\check A_{11} & \check A_{12} \cr \check A_{21} & \check A_{22} } $.
+Let $H^0_0 \equiv - P_{22}^{-1} P_{21}$ so that   $\check x_0 = H^0_0 \check z_0$.  Then
+iterations on $\check y_{t+1} = \check A \check y_t$ starting from initial condition $\check y_0 = \bmatrix{\check z_0 \cr H^0_0 \check z_0}$
+imply that for $t \geq 1$
+$$ x_t = \sum_{j=1}^t H_j^t \check z_{t-j} \EQN stackelbergsigma1 $$
+where
+$$\eqalign{ H^t_1 & = \check A_{21} \cr
+            H^t_2 & = \check A_{22} \check A_{21} \cr
+           \ \   \vdots \  \  &  \  \ \quad \vdots \cr
+           H^t_{t-1} & = \check A_{22}^{t-2} \check A_{21} \cr
+            H^t_t & = \check A_{22}^{t-1}(\check A_{21} + \check A_{22} H^0_0 ) . }  $$
+%$$\eqalign{ H^t_1 & = \check A_{21} \cr
+%            H^t_2 & = \check A_{22} H^{t-1}_1 \cr
+%           \ \   \vdots \  \  &  \  \ \quad \vdots \cr
+%            H^t_t & = \check A_{22} H^{t-1}_{t-1} . }  $$
+An optimal decision rule for the Stackelberg's choice of $u_t$ is
+$$ u_t  = - F \check y_t \equiv - \bmatrix{ F_z & F_x \cr } \bmatrix{\check z_t \cr x_t \cr } $$
+or
+$$   u_t  = - F_z \check z_t - F_x \sum_{j=1}^t H^t_j z_{t-j} = \sigma_t(\check z^t) \EQN  stackelbergsigma2 $$
+Representation \Ep{stackelbergsigma2} confirms that whenever $F_x \neq 0$, the typical situation, the time $t$ component $\sigma_t$ of a Stackelberg plan
+is {\it history dependent\/}, meaning that the Stackelberg leader's choice $u_t$  depends not just on $\check z_t$ but on components of $\check z^{t-1}$.
+
+
+
+\subsection{Backwards-looking representation of $x_t$}
+
+We have noted that equation \Ep{eqn:xlawforward}  portrays $x_t$ as a {\it forward-looking\/} variable that depends on the continuation $\vec u_{t}$ chosen
+by the Stackelberg leader. We have now discovered that equation \Ep{stackelbergsigma1} represents $x_t$ as a {\it backward-looking variable} that
+depends only on the history of $\check z^t$.  That $x_t$ is both backward and forward  looking reveals essential features of a Stackelberg plan.
+The backward looking representation \Ep{stackelbergsigma2} tells how a Stackelberg leader's decisions $u_t$ as functions of histories $\check z^t$ are designed in a way to affect what can be interpreted as a promised value in the form of an  $x_t$ to be delivered by the Stackelberg policy $\sigma$.
+We shall use this notion of a promised value often in subsequent chapters.
+
+
+
+
+\subsection{Time  inconsistency}
+
+It is convenient temporarily to proliferate notation by writing history $\check z^t = \check z^t_0$ to emphasize that it starts at $0$ and ends at $t$.
+More generally, let $\check z^t_s = [\check z_t, \check z_{t-1}, \ldots, \check z_s] $. A policy $\sigma$ for the Stackelberg leader is the sequence
+$$ \sigma =\{\sigma_t(\check z^t_0)\}_{t=0}^\infty .$$   A one-period  continuation of policy $\sigma$ is
+
+$$\sigma_{+1} = \{\sigma_t(\check z^t_0)\}_{t=1}^\infty .$$
+Notice that in general
+$$ \{ \sigma_1(\check z_0^1), \sigma_2(\check z_0^2), \ldots \} \neq \{\sigma_1(\check z_1^1), \sigma_2(\check z_1^2), \ldots \} .$$
+This inequality evidently holds for the representation \Ep{stackelbergsigma2} of the Stackelberg plan derived above.
+We conclude that in general a one-period continuation of policy $\sigma$ is not a Stackelberg plan starting from the value of
+$\check z_1$ implied by  $\sigma_0(\check z_0)$. A concise way of saying that a one-period continuation of a Stackelberg plan is not a Stackelberg plan is
+the statement that  a Stackelberg plan is {\it time inconsistent\/} or {\it dynamically
+inconsistent\/}.
+
+
+
+
+\subsection{Recursive representation again}
+Recalling that $y_t = \bmatrix{z_t \cr x_t }$, we conclude that, given $z_0$, we also recall that a recursive representation of a Stackelberg plan is
+$$\EQNalign{ x_0 & = - P_{22}^{-1} P_{21} z_0 \cr
+             u_t & = - F y_t \quad t \geq 0 \cr
+             y_{t+1} & = (A - BF) y_t \quad t \geq 0   . \cr}  $$
+%
+%Equations \Ep{bell5} and \Ep{king6x0} form a  recursive representation of a Stackelberg plan
+It is sometimes helpful to adopt the artificial device of imagining that the Stackelberg leader implements the plan with the assistance of
+  a sequence of ``continuation Stackelberg leaders.'' These continuation Stackelberg leaders are bound to respect the following rules and
+   and   the following timing protocol:\NFootnote{Think of a continuation Stackelberg leader as a computer program that executes the time $t$ component
+    of the  plan designed  by the Stackelberg leader at time $0$.}
+\smallskip
+
+
+\item{1.} At time $0$,  a Stackelberg leader takes $z_0$ as given and chooses $x_0$.
+
+\medskip
+
+\item{2.} At times $t \geq 0$,  a continuation Stackelberg  leader takes $(z_t, x_t)$ as given and chooses $ (u_t, z_{t+1}, x_{t+1}) $.
+
+\medskip
+
+
+
+\noindent Notice how we have distinguished the problems confronting
+  continuation Stackelberg leaders who choose at times $t \geq 0$ and a Stackelberg leader who
+chooses at time $t=0$.
+In this timing protocol, the  forward looking vector $x_t$ that obeys \Ep{eqn:xlawforward} is part of the  state vector confronting
+a continuation Stackelberg leader at times $t \geq 0$ but not  part of the state confronting the Stackelberg leader at time $t=0$.  It is  presented to a continuation leader
+at time $t \geq 0$ as a promise to be kept.  The time $t$ continuation leader delivers $x_t$  by choosing $u_t, z_{t+1}, x_{t+1}$.\NFootnote{See
+exercise \the\chapternum.2 for a  timing protocol that builds in time consistency.}
+
+
+
+
+\subsection{Time inconsistency again}
+We can use the  two subproblems in section \use{recurstack} to glean further insights about  the time inconsistency of the optimal decisions of a Stackelberg leader.
+In the recursive representation of
+ a Stackelberg plan, different state variables confront a Stackelberg leader at $t=0$, on the one hand, and continuation Stackelberg leaders at dates $t \geq 0$, on the other.
+At $t =0$, the leader faces $z_0$ as a state vector and  chooses the forward looking
+vector $x_0$ as well as the forward looking vector $x_1$ that will confront the continuation
+leader at time $1$.  At dates $t \geq 0$,  a continuation leader confronts the state vector $x_t$  as  values promised at time $t-1$ that must
+be confirmed at $t$.\NFootnote{Another manifestation of time-inconsistency is that $\mu_{xt}$ is zero at $t=0$ and different
+from zero at $t \geq  1$.}
+%The multiplier $\mu_{xt}$  accounts for how the optimal plan used $u_{t+j}, j \geq 0$ to influence the followers' choice of
+%$x_s$  at dates $s <  t$ and assures  that the Stackelberg leader confirm those expectations.
+
+
+Define $\vec a_1$ as the continuation of the sequence $\vec a_0$. A
+ Stackelberg plan is a triple $(\vec u_0, \vec x_0, \vec z_1)$ that solves the Stackelberg problem starting from a given $z_0$.
+
+\specsec{Time inconsistency:}
+  A concise way
+to say that a Stackelberg plan is {\it time inconsistent\/} is to note that a continuation of a Stackelberg plan is not
+a Stackelberg plan. Why? Because $x_1$ does not solve subproblem 2 at initial condition $z_1$ generated by a Stackelberg plan.
+\index{continuation!of a sequence}%
+\index{continuation!of a Stackelberg plan}%
+
+
+
+
+\specsec{Remark about shadow prices:}
+From chapter \use{dplinear}, recall the formula $\mu_t = P y_t$ for the vector of
+shadow prices $\mu_t = \bmatrix{ \mu_{zt} \cr \mu_{xt} }$ on the time $t$  transition equations.
+The shadow price $\mu_{xt}$ evidently equals
+$$ \mu_{xt} = P_{21} z_t + P_{22} x_t.   \EQN eqnmux $$
+So  \Ep{king6x0} is equivalent with
+$$ \mu_{x0} = 0 . \EQN mu0condition  $$
+The Lagrange multiplier $\mu_{xt}$ measures the cost to the leader at $t \geq 0$
+of confirming expectations about its time $t$ action that the followers held
+at dates $s < t$.
+Setting
+$\mu_{x0}=0$ reflects the situation that at time $0$ there are no prior expectations to confirm.  But
+when $\mu_{xt} \neq 0 $ for $ t \geq 1$, it indicates that  it is costly to the original (time $0$) Stackelberg leader for a time $t$ continuation leader to confirm  the followers'  expectations about
+ the leader's time $s \geq t$ actions.
+ %The  Stackelberg leader takes these costs into account when at time $0$  it weighs the costs and benefits
+%of using its choice of $ u_{t}, t \geq 1$ to influence $\{x_s\}_{s=0}^{t-1}$.
+
+%
+%\subsection{Digression on determinacy of equilibrium}
+%Appendix \the\chapternum\use{appBblkstack} describes methods for  solving a system of difference
+%equations of the form \Ep{new2} or \Ep{new3} with an arbitrary feedback rule that
+%expresses the decision rule for
+%$u_t$ as a function of current and  previous values of $y_t$ and perhaps previous values
+%of itself.  The difference equation system has  a unique solution
+%satisfying the stability condition $\sum_{t=0}^\infty \beta^t y_t \cdot  y_t$
+%if the eigenvalues of the matrix \Ep{symplec2} split, with half being greater than
+%unity and half being less than unity in modulus.  If more than half are less than
+%unity in modulus, the equilibrium is said to be indeterminate \index{indeterminacy!of equilibrium}%
+% in the sense that there are multiple equilibria starting from any initial condition.
+%
+%If we choose to represent the solution of a Stackelberg or Ramsey problem in the form
+%\Ep{vonzer3}, we can substitute that representation for $u_t$ into
+%\Ep{new3}, obtain a difference equation system in $y_t, u_t$, and ask whether
+%the resulting system is determinate. To answer this question, we would use the method
+%of Appendix \the\chapternum\use{appBblkstack}, form system \Ep{symplec2}, then check whether the generalized
+%eigenvalues split as required.   Researchers have used this method to study the determinacy
+%of equilibria under Stackelberg plans with representations like \Ep{vonzer3} and have discovered
+%that sometimes an equilibrium can be indeterminate.\NFootnote{The existence of a Stackelberg plan is not at
+%issue because we know how to construct one using the method in the text.}  See Evans
+%and Honkapohja (2003) for a discussion of determinacy of equilibria under commitment
+%in a class of equilibrium monetary models and
+%how determinacy depends on how the decision rule of the Stackelberg leader is represented.  Evans and
+%Honkapohja argue that casting a government decision rule in a way that leads to indeterminacy is a bad idea.
+%\auth{Evans, George W.}
+%\auth{Honkapohja, Seppo}
+%\index{implementation!of Stackelberg plan}
+\section{Large firm facing a competitive fringe}\label{sec:monopfringe}%
+We have indicated how the duopoly model of section \use{sec:duopoly} fits within the  frameork of this chapter.
+As an additional example, this section studies the equilibrium of an industry with
+a large firm that acts as a Stackelberg leader with respect to a competitive
+fringe.\NFootnote{Sometimes we call this the large firm  `the monopolist' even though there are
+actually many firms in the industry.}%
+  The industry produces a single nonstorable homogeneous good. One
+large firm produces $Q_t$ and a representative firm in a competitive
+fringe produces $q_t$.  The representative firm in the competitive
+fringe acts as a price taker and chooses sequentially.  The large firm
+commits to a policy at time $0$, taking into account its ability to
+manipulate the price sequence, both directly through the effects of
+its quantity choices on prices, and indirectly through the responses of
+the competitive fringe to its forecasts of prices.\NFootnote{Hansen and Sargent
+(2012) use this model as a laboratory to illustrate an equilibrium concept featuring
+robustness in which at least one of the agents has doubts about the stochastic specification
+of the demand shock process.}
+
+  The costs of production are
+${\cal C}_t = e Q_t + .5 g Q_t^2+ .5 c (Q_{t+1} - Q_{t})^2 $
+for the large firm
+and $ \sigma_t= d q_t + .5 h q_t^2 + .5 c (q_{t+1} - q_t)^2$
+for the competitive firm,
+where $d>0, e >0, c>0, g >0, h>0 $ are cost parameters.
+There is a linear inverse demand curve
+$$ p_t = A_0 - A_1 (Q_t + \overline q_t) + v_t, \EQN oli1 $$
+where $A_0, A_1$ are both positive and  $v_t$ is a disturbance
+to demand governed by
+$$ v_{t+1}= \rho v_t + C_\epsilon \check \epsilon_{t+1} \EQN oli2 $$
+and where $ | \rho | < 1$ and $\check \epsilon_{t+1}$ is an i.i.d.\
+sequence of random variables with mean zero and variance $1$.
+In \Ep{oli1}, $\overline q_t$ is equilibrium output  of the representative
+competitive firm.  In equilibrium, $\overline q_t = q_t$, but we
+must distinguish between $q_t$ and $\overline q_t$ in posing the optimum
+problem of a competitive firm.
+
+\subsection{The competitive fringe}
+
+ The representative competitive firm regards $\{p_t\}_{t=0}^\infty$
+as an exogenous  stochastic process and chooses
+an output plan to
+maximize
+$$ E_0 \sum_{t=0}^\infty \beta^t \left\{
+ p_t q_t - \sigma_t
+% .5 c(q_{t+1} - q_t)^2 -.5h q_t^2  - d q_t
+ \right\}, \quad \beta \in(0,1) \EQN oli3 $$
+subject to $q_0$ given, where  %$c>0, d>0, h>0$ are cost parameters,
+$E_t$ is the mathematical expectation based on time
+$t$ information.
+Let $i_t = q_{t+1} - q_t.$  We
+regard $i_t$ as the representative firm's control at $t$.  The
+first-order conditions
+ for maximizing \Ep{oli3} are
+$$  i_t =  E_t  \beta i_{t+1} -c^{-1} \beta h  q_{t+1}
+  + c^{-1} \beta  E_t( p_{t+1} -d) \EQN oli4   $$
+for $t \geq 0$.
+We appeal to the  certainty equivalence principle stated on
+page \use{certequiv} to justify working with
+a non-stochastic version of \Ep{oli4} formed by dropping
+the expectation operator and the random term $\check \epsilon_{t+1}$
+from \Ep{oli2}.   We use
+an insight  of Sargent (1979) and Townsend
+(1983).\NFootnote{They used this method to compute a rational expectations
+competitive equilibrium.  The  key step was
+to eliminate price and output by substituting
+  from the inverse demand curve and the production function into
+the firm's first-order conditions to get a difference equation
+in capital.}
+  Shift  \Ep{oli1} forward one period, replace conditional
+expectations with realized values,  use \Ep{oli1} to  substitute
+for $p_{t+1}$ in  \Ep{oli4}, and set $q_t = \overline q_t$  and $i_t = \overline i_t$ for all
+$t\geq 0$  to get
+%{\ninepoint
+$$ \overline i_t = \beta \overline  i_{t+1}  - c^{-1} \beta h \overline q_{t+1}
+ + c^{-1} \beta (A_0-d) - c^{-1} \beta    A_1 \overline q_{t+1}
+  -  c^{-1} \beta    A_1 Q_{t+1} + c^{-1} \beta    v_{t+1}. \EQN oli5 $$
+%}%endninepoint
+Given sufficiently stable sequences $\{Q_t, v_t\}$, we can solve \Ep{oli5}
+and $\overline i_t = \overline q_{t+1} - \overline q_t$ to get a second-order difference equation
+in $\bar q_t$, then use the method  for constructing a stable solution
+of a second order linear difference equation described  in appendix A of chapter \use{timeseries}  to
+express the competitive fringe's
+output sequence  as a function of the (tail of the)
+large firm's output sequence:
+$$ \bar q_{t+1} = \lambda \bar q_t +k_0 + k_1 \sum_{j=0}^\infty (\beta \lambda)^j Q_{t+j+1} + k_2 \sum_{j=0}^\infty (\beta \lambda)^j v_{t+j+1} , $$
+where $\lambda \in (0,1)$ and the $k_i$s  are constants that are functions of demand and cost parameters.
+The dependence of $\bar q_{t+1}$ on future $Q_{t+j+1}$'s opens an avenue for the large firm to influence $\bar q_{t+1}$ by its choice
+of  future $Q_{t+j+1}$'s.
+  It is this feature that makes the  large firm's problem fail  to be
+recursive in the natural state variables $\overline q, Q$. In effect, the large firm arrives
+at time $t+j$ {\it not\/} in the position of being able to take past values of $\bar q_t$ as given because these have already
+been influenced by the large firm's choice of $Q_{t+j}$.  Instead, the large firm
+arrives at period $t >0$  facing the  constraint that it must
+ confirm the expectations about its time $t$ decision
+upon which the competitive fringe   based its decisions at dates
+before $t$.
+
+\subsection{The large firm's problem}
+
+The large firm views the competitive firm's sequence of Euler equations
+as  constraints on its own opportunities.
+They are {\it implementability constraints\/} on the
+large firm's choices.
+ Including the implementability constraints \Ep{oli5},
+we can represent
+the constraints
+in terms of the transition law facing the large firm:
+%{\ninepoint
+$$ \eqalign{ \left[\matrix{ 1 & 0 & 0 & 0 & 0 \cr
+                  0 & 1 & 0 & 0 & 0 \cr
+                  0 & 0 & 1 & 0 & 0 \cr
+                  0 & 0 & 0 & 1 & 0 \cr
+                  A_0 -d & 1 & - A_1 & - A_1 -h & c \cr }\right]
+   \left[\matrix{ 1 \cr v_{t+1} \cr Q_{t+1} \cr \overline
+ q_{t+1} \cr i_{t+1} \cr}
+    \right]
+  & = \left[ \matrix{ 1 & 0 & 0 & 0 & 0 \cr
+             0 & \rho & 0 & 0 & 0 \cr
+             0 & 0 & 1 & 0 & 0 \cr
+             0 & 0 & 0 & 1 & 1 \cr
+             0 & 0 & 0 & 0 & {c\over \beta} \cr} \right]
+     \left[ \matrix{ 1 \cr v_t \cr Q_t \cr \overline
+    q_t \cr i_t \cr} \right] \cr
+& + \left[\matrix{ 0 \cr 0 \cr 1 \cr 0 \cr 0 \cr}\right] u_t
+   , \cr}   \EQN oli6 $$
+%}%endninepoint
+where $u_t = Q_{t+1} - Q_t $ is the control of the large firm.
+The last row portrays the implementability constraints \Ep{oli5}.
+Represent \Ep{oli6} as
+$$ y_{t+1} = A y_t + B u_t .  \EQN oli6a  $$
+
+Although we have included  the competitive fringe's choice variable  $i_t$  as a component
+of the ``state''  $y_t$ in the large firm's transition law  \Ep{oli6a},
+$i_t$ is actually  a ``jump''
+ variable. Nevertheless, the analysis  in earlier sections of this chapter
+implies that the  solution of the large firm's
+problem is encoded in the Riccati equation associated with
+\Ep{oli6a} as the transition law.  Let's decode it.
+
+To match our general setup, we partition $y_t$ as
+$y_t' = \left[\matrix{z_t' &  x_t' \cr} \right]$ where
+$z_t' = \left[\matrix{ 1 & v_t & Q_t & \overline q_t \cr}\right]$
+and $x_t = i_t$.
+ The large firm's problem is
+$$
+\max_{\{u_t, p_{t+1}, Q_{t+1}, \overline q_{t+1}, i_t\}}
+ \sum_{t=0}^\infty \beta^t \left\{ p_t Q_t  - {\cal C}_t \right\} $$
+subject to  the given initial condition
+for $z_0$, equations \Ep{oli1} and \Ep{oli5} and $i_t = \overline q_{t+1} -
+\overline q_t$,
+ as well as the laws of motion
+of the natural state variables $z$.     Notice that the large firm  in effect chooses the
+price sequence, as well as the quantity sequence of the
+competitive fringe, albeit subject to the restrictions imposed by
+the behavior of consumers, as summarized by the demand curve
+\Ep{oli1} and the implementability constraint \Ep{oli5} that
+describes the best responses  of the competitive fringe.
+
+By substituting \Ep{oli1} into  the above objective function,
+the large firm's problem can be expressed as
+$$
+\max_{\{u_t\}}
+ \sum_{t=0}^\infty \beta^t
+    \left\{ (A_0 - A_1 (\overline q_t + Q_t) + v_t) Q_t - eQ_t - .5gQ_t^2 -
+    .5 c u_t^2
+ \right\} \EQN oli7  $$
+subject to \Ep{oli6a}.
+This can be written
+$$
+\max_{\{u_t\}}
+ -  \sum_{t=0}^\infty \beta^t \left\{ y_t' R y_t +   u_t' Q u_t
+   \right\} \EQN oli9 $$
+subject to \Ep{oli6a}
+where
+$$  R =  - \left[\matrix{ 0 & 0 & {A_0-e \over 2} & 0 & 0 \cr
+                       0 & 0 & {1 \over 2} & 0 & 0 \cr
+                       {A_0-e \over 2} & {1 \over 2} & - A_1 -.5g
+                   & -{A_1 \over 2} & 0 \cr
+                   0 & 0 & -{A_1 \over 2} & 0 & 0 \cr
+                  0 & 0 & 0 & 0 & 0 \cr} \right] $$
+and $Q= {c \over 2}$.
+
+%
+% \subsection{Equilibrium representation}
+%
+%  We can use \Ep{king11} to  represent the
+% solution of the large firm's problem  \Ep{oli9}  in the form:
+% $$ \left[\matrix{z_{t+1} \cr \mu_{x,t+1}\cr}\right]
+%    = \left[\matrix{m_{11} & m_{12} \cr
+%                    m_{21} & m_{22}\cr}\right]
+%      \left[\matrix{z_t \cr \mu_{x,t} \cr} \right]  \EQN oli11 $$
+% or
+% $$ \left[\matrix{z_{t+1} \cr \mu_{x,t+1}\cr}\right]
+%    = m
+%      \left[\matrix{z_t \cr \mu_{x,t} \cr} \right] . \EQN oli11 $$
+%  The large firm is
+% constrained to set $\mu_{x,0} \leq 0$, but will find it optimal to
+% set it to zero.
+% Recall that $z_t =\left[\matrix{ 1 & v_t & Q_t & \overline q_t \cr}\right]'$.
+% Thus, \Ep{oli11}  includes the equilibrium law of motion for the quantity
+% $\overline q_t$
+% of the competitive fringe.  By construction,  $\overline q_t$ satisfies the Euler
+% equation of the representative firm in the competitive fringe, as
+% we elaborate in Appendix \the\chapternum\use{appCblkstack}.
+%% TTTTTT
+\subsection{Numerical example}
+We computed the optimal Stackelberg plan
+for parameter settings $A_0, A_1, \rho, C_\epsilon,\hfil\break
+  c, d, e, g, h,  \beta $ = $100, 1, .8, .2, 1,  20, 20, .2, .2,
+.95$.\NFootnote{These calculations were performed
+by the Matlab program {\tt oligopoly5.m} or the Python program {\tt oligopoly.py}.}\mtlb{olipololy5.m}%
+%, a modification of Stijn and Tom's earlier
+%program with robustness.XXXXX}
+ For these parameter values, a recursive representation of the Stackelberg plan is
+ $$x_0 = \bmatrix{ 31.08 &   0.29  & -0.15  & -0.56     } z_0  $$
+ and
+$$u_t = (Q_{t+1} - Q_t) =\left[\matrix{-83.98 & -0.78 &  0.95 &  1.31  &  2.07  \cr}\right]
+\left[ \matrix{z_t \cr x_t \cr}\right]  $$
+for $ t \geq 0$.
+
+
+
+ %Note in Figure  4.5 %\Fg{oli30}
+%how starting from $0$ the implementation multiplier
+%decreases toward its negative steady state value.  The negative
+%value of the multiplier reflects the cost to the large firm
+%of adhering to its plan.  The time inconsistency
+%of the large firm's plan is reflected in the incentive
+%the large firm would have to reset the multiplier to zero
+%in any period and thereby reinitialize its plan (see Hansen,
+%Epple, and Roberds (1985)).   Figure  4.5 %\Fg{oli30}
+%and the other sample paths show that the large firm is acting
+%to smooth total output $Q+q$, and that it does so by inducing
+%a negative contemporaneous covariance between its own output
+%and the price.
+%%
+%%%%%%%%%
+%%\midinsert
+%%$$ \grafone{oli10.eps,height=2.5in}
+%%{{\bf Figure 4.2.}
+%%Impulse response of $p, q, Q, \mu_x$ to innovation to demand
+%%shock $\epsilon$.} $$
+%%\endinsert
+%%%%%%%%
+%
+%\midfigure{oli10f}
+%\centerline{\epsfxsize=3truein\epsffile{oli10.eps}}
+%\caption{Impulse response of $p, q, Q, \mu_x$ to innovation to demand shock
+%$\epsilon$.}
+%\infiglist{oli10f}
+%\endfigure
+%
+%%%%%%%%
+%%\midinsert
+%%$$\grafone{oli60.eps,height=2.5in}{{\bf Figure 4.3.}
+%%Impulse response of  $q+Q, w, v$ to $\epsilon$.} $$
+%%\endinsert
+%%%%%%%%%%%%
+%
+%\midfigure{oli60f}
+%\centerline{\epsfxsize=3truein\epsffile{oli60.eps}}
+%\caption{Impulse response of  $q+Q, w, v$ to $\epsilon$.}
+%\infiglist{oli60f}
+%\endfigure
+%
+%%%%%%%%%%%%
+%%\midinsert
+%%$$
+%%\grafone{oli20.eps,height=2.5in}{{\bf Figure 4.4.} Sample path of $q+Q, q, Q$.}
+%% $$
+%%\endinsert
+%%%%%%%%%%%%%%%
+%
+%\midfigure{oli20f}
+%\centerline{\epsfxsize=3truein\epsffile{oli20.eps}}
+%\caption{Sample path of $q+Q, q, Q$.}
+%\infiglist{oli20f}
+%\endfigure
+%
+%%%%%%%%%%%
+%% \midinsert
+%%$$\grafone{oli30.eps,height=3in}
+%% {{\bf Figure 4.5.}  Sample path of $\mu_x, Q, p$.} $$
+%% \endinsert
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\midfigure{oli30f}
+%\centerline{\epsfxsize=3truein\epsffile{oli30.eps}}
+%\caption{Sample path of $\mu_x, Q, p$.}
+%\infiglist{oli30f}
+%\endfigure
+%
+%%%%%%%%%%%%%%%%%%
+%% \midinsert
+%%$$
+%%\grafone{oli50.eps,height=3in}{{\bf Figure 4.6.} Sample path of $v, Q, q, p$.}
+%%$$
+%% \endinsert
+%%%%%%%%%%%%%%%%%%%
+%
+%\midfigure{oli50f}
+%\centerline{\epsfxsize=3truein\epsffile{oli50.eps}}
+%\caption{Sample path of $v, Q, q, p$.}
+%\infiglist{oli50f}
+%\endfigure
+
+\section{Concluding remarks}
+We shall
+confront other problems in which optimal decision rules are history dependent in chapters \use{optaxrecur},  \use{socialinsurance},
+\use{socialinsurance2},
+and \use{credible} and shall see in various contexts how history
+dependence can be represented recursively by
+appropriately augmenting the natural state variables with
+ forward-looking variables chosen by Stackelberg followers.\NFootnote{For another application of the techniques
+in this chapter and how they related to the method recommended by
+Kydland and Prescott (1980), see Evans and Sargent (2013).}
+In
+chapters \use{socialinsurance}, \use{socialinsurance2}, and \use{credible}, we make dynamic
+incentive and enforcement problems recursive  by augmenting the
+state with continuation values of other decision
+makers.\NFootnote{In chapter \use{socialinsurance}, we describe Marcet and Marimon's (1992, 1999) method of
+constructing recursive contracts, which  is closely related to the method
+that we have presented in this chapter.}
+\auth{Marcet, Albert}%
+ \auth{Marimon, Ramon}%
+  \auth{Kydland, Finn E.} \auth{Prescott, Edward C.}%
+  \auth{Evans, David} \auth{Sargent, Thomas J.}%
+
+%
+%\appendix{A}{History-dependent representation of Stackelberg plan}\label{appa1stack}%
+%Substituting $u_t = - F y_t$ into the law of motion \Ep{bell2} gives the following motion
+%for $y$:
+%$$ \bmatrix{ z_{t+1} \cr x_{t+1} } = (A- BF) \bmatrix{ z_t \cr x_t }
+%\EQN king11 $$
+%or
+%$$  \left[ \matrix{ z_{t+1} \cr x_{t+1} \cr} \right]
+%   = \left[ \matrix{m_{11} & m_{12} \cr m_{21} & m_{22}\cr} \right]
+%    \left[\matrix{ z_t \cr x_t \cr} \right] \EQN vonzer1 $$
+%\auth{Von Zur Muehlen, Peter}%
+% For present purposes, it is useful to eliminate $x_t$ as an argument of
+% the decision rule $u_t = - F \bmatrix{z_t \cr x_t }$ by expressing it as a function of
+% $[z_{t-1}, x_{t-1}]$ and then  expressing
+%the decision rule for $u_t$ as a function
+%of $z_t, z_{t-1},$ and $u_{t-1}$.
+%This can be accomplished as
+%follows.\NFootnote{Peter Von Zur Muehlen suggested
+%this representation to us.} First write the feedback rule \Ep{bell5} for $u_t$
+%$$u_t  = -F_1  z_{t} - F_2 x_t . \EQN vonzer2 $$
+%Then where $F_2^{-1}$ denotes
+%a generalized inverse of $F_2$,
+% \Ep{vonzer2} implies $x_t = F_2^{-1}(u_t - F_1 z_t)$.
+%Equate the right side of this expression to the right side
+%of the second line of \Ep{vonzer1} lagged once and rearrange by using
+%\Ep{vonzer2} lagged once to eliminate $\mu_{x,t-1}$
+%to get
+%% $$ u_t =  f_{12} m_{22} f_{12}^{-1} u_{t-1} + f_{11} z_t
+%%    + f_{12}(m_{21} - m_{22} f_{12}^{-1} f_{11}) z_{t-1}
+%%    \EQN vonzer3;a $$
+%% or
+%$$ u_t = \rho u_{t-1} + \alpha_0 z_t + \alpha_1 z_{t-1} \EQN vonzer3 $$
+%for $t \geq 1$, where $\rho = F_2 m_{22} F_2^{-1} , \alpha_0 = -F_1 ,
+%\alpha_1 =  -F_2(m_{21} - m_{22} F_2^{-1} F_1) $,\NFootnote{By making the instrument feed back on itself,
+%the form of \Ep{vonzer3} potentially allows for
+%``instrument-smoothing'' to emerge as an optimal rule under
+%commitment. This insight partly motivated Woodford
+%(2003) to use his model to interpret empirical evidence about
+%interest rate smoothing in the United States.} while
+%for $t =0$ the decision rule is
+%$$ u_0 = -(F_1 + F_2 P_{22}^{-1} P_{21}) z_0.  \EQN vonzer4 $$
+%The difference equation \Ep{vonzer3} can be solved backwards subject to the initial condition  \Ep{vonzer4} to deduce a sequence
+%of history-dependent decision rules
+%$$ u_t = \sigma_t(z^t),  \   t \geq 0 , $$
+%where $z^t = \left[ z_t, z_{t-1}, \ldots, z_0 \right]$.
+%% For $t=0$, the initialization $\mu_{x,0}=0$ implies
+%% that
+%% $$ u_0 = f_{11} z_0. \EQN vonzer3;c $$
+%
+
+
+
+%\section{Exercises}
+\showchaptIDfalse
+\showsectIDfalse
+\section{Exercises}
+\showchaptIDtrue
+\showsectIDtrue
+\medskip
+% \noindent{\it Exercise \the\chapternum.1} \quad   There is no uncertainty.
+% For $t \geq 0$, a  monetary authority sets the growth of the (log)
+% of money according to
+% $$ m_{t+1} = m_t + u_t \leqno(1)  $$
+% subject to the initial condition $m_0>0$ given.  The demand for money
+% is
+%   $$  m_t - p_t = - \alpha (p_{t+1} - p_t), \alpha > 0,  \leqno(2)     $$
+% where $p_t$ is the log of the price level.  Equation (2) can be
+% interpreted as the Euler equation  of the holders of money.
+%
+% \medskip
+% \noindent{\bf a.}  Briefly interpret how equation
+% (2) makes the demand for real balances vary inversely with
+% the expected rate of inflation.
+% Temporarily (only for this part of the exercise) drop
+% equation (1) and assume instead that $\{m_t\}$ is a given sequence
+% satisfying $\sum_{t=0}^\infty m_t^2 < + \infty$.
+% Please solve the difference equation (2) ``forward''
+% to express $p_t$ as a function of current and future values of $m_s$.
+% Note how future values of $m$ influence the current price level.
+%
+% \medskip
+% At time $0$,  a  monetary authority chooses a possibly
+% history-dependent strategy for setting $\{u_t\}_{t=0}^\infty$.  (The monetary
+% authority commits to this strategy.)  The monetary authority orders
+% sequences $\{m_t, p_t\}_{t=0}^\infty$ according to
+% $$ - \sum_{t=0}^\infty .95^t \left[  (p_t - \overline p)^2 +
+%     u_t^2 + .00001 m_t^2  \right]. \leqno(3) $$
+% Assume that $m_0=10, \alpha=5, \bar p=1$.
+% \medskip
+% \noindent{\bf b.} Please briefly interpret  this problem
+% as one where the monetary authority wants
+% to stabilize the price level, subject
+% to costs of adjusting the money supply and some implementability
+% constraints.    (We include the term $.00001m_t^2$ for purely technical
+% reasons that you need not discuss.)
+%
+% \noindent {\bf c.} Please write and run a Matlab program
+% to find the optimal  sequence
+% $\{u_t\}_{t=0}^\infty$.
+% \medskip
+% \noindent {\bf d.}  Display the optimal decision rule for $u_t$
+% as a function of $u_{t-1},  m_t, m_{t-1}$.
+% \medskip
+% \noindent{\bf e.} Compute the optimal $\{m_t, p_t\}_t$
+%  sequence for $t=0, \ldots,  10$.
+%
+% \medskip
+% \noindent{\it Hint:} The optimal $\{m_t\}$ sequence must satisfy
+% $ \sum_{t=0}^\infty (.95)^t m_t^2 < +\infty$.
+% You are free to apply the Matlab program {\tt olrp.m\/}.
+% % that is available
+% %from the course web site or from Yongs Shin.
+
+
+
+\noindent{\it Exercise \the\chapternum.1} \quad There is no uncertainty.
+For $t \geq 0$, a  monetary authority sets the growth of the (log)
+of money according to
+$$ m_{t+1} = m_t + u_t \leqno(1)  $$
+subject to the initial condition $m_0>0$ given.  The demand for money
+is
+  $$  m_t - p_t = - \alpha (p_{t+1} - p_t), \quad \alpha > 0,  \leqno(2)     $$
+where $p_t$ is the log of the price level.  Equation (2) can be
+interpreted as an Euler equation  of  holders of money.
+
+\medskip
+\noindent{\bf a.}  Briefly interpret how equation
+(2) makes the demand for real balances vary inversely with
+the expected rate of inflation.
+Temporarily (only for this part of the exercise) drop
+equation (1) and assume instead that $\{m_t\}$ is a given sequence
+satisfying $\sum_{t=0}^\infty m_t^2 < + \infty$. Please verify that
+equation (2) implies that $p_t = (1-\lambda ) m_t + \lambda p_{t+1}$,
+where $\lambda = {\frac{\alpha}{1 + \alpha}} \in (0,1)$.
+Please solve this difference equation  ``forward''
+to express $p_t$ as a function of current and future values of $m_s$.
+{\it Hint:} If necessary, please review appendix A of chapter \use{timeseries}.
+
+
+\medskip
+\noindent At time $0$,  a  monetary authority chooses a possibly
+history-dependent strategy for setting $\{u_t\}_{t=0}^\infty$.  (The monetary
+authority somehow commits to this strategy once and for all at time $0$.)  The monetary authority orders
+sequences $\{m_t, p_t\}_{t=0}^\infty$ according to
+$$ - \sum_{t=0}^\infty .95^t \left[  p_t^2 +
+    u_t^2 + .00001 m_t^2  \right]. \leqno(3) $$
+%$Assume that $m_0=10, \alpha=5$.
+\medskip
+\noindent{\bf b.} Please briefly interpret  this problem
+as one where the monetary authority wants
+to stabilize the price level, subject
+to costs of adjusting the money supply rapidly and a set of  implementability
+constraints.    (We include the term $.00001m_t^2$ for purely technical
+reasons that you need not discuss.)
+
+\medskip
+
+\noindent {\bf c.} Please formulate a `dynamic programming squared' problem
+to find the optimal  sequence
+$\{u_t\}_{t=0}^\infty$. Please tell why it can be called a `dynamic programming squared' problem.
+
+\medskip
+
+\noindent{\bf d.} Define a plan and a continuation of a plan.
+
+
+\medskip
+
+\noindent {\bf e.} Describe a recursive representation of the optimal plan.
+
+
+\medskip
+
+\noindent{\bf f.} Tell whether you agree or disagree with the following statement.
+``A continuation of an optimal plan is an optimal plan.'' Please describe the logic that causes you to agree or to disagree.
+
+\medskip
+\noindent{\bf g.} Please describe formulas to compute all elements of an optimal plan.  (You don't have to write
+a Matlab or Python program to implement those formulas, but a Matlab or Python programmer should be able to write a program  based on your formulas.)
+
+
+
+
+\medskip
+\noindent{\it Exercise \the\chapternum.2}  \quad  {\bf Markov perfect policy makers}
+\medskip
+\noindent   Now let's redo the optimal policy problem in  exercise \the\chapternum.1  with timing protocols like those in
+the Markov perfect equilibrium concept introduced in chapter 7.
+There is a sequence of monetary policy authorities, each in office for only one period.  Let
+$$ L(p_t, m_t, u_t) =  \left[  p_t^2 +
+    u_t^2 + .00001 m_t^2  \right]. $$
+The
+policy authority in office at time $t$ chooses $u_t$ to maximize
+% $$ - \sum_{j=0}^\infty .95^t \left[  p_{t+j}^2 +
+%     u_{t+j}^2 + .00001 m_{t+j}^2  \right]. \leqno(3') $$
+$$ - \sum_{j=0}^\infty .95^j L(p_{t+j}, m_{t+j}, u_{t+j}) \leqno(1) $$
+subject to
+$$ m_{t+1} = m_t + u_t ,$$
+taking as given $m_t$. To make the time $t$ decision maker's  problem well posed, we must attribute views about $\{p_{t+j}, m_{t+j}\}_{j=1}^\infty$ to the time
+$t$ decision maker. In the Markov perfect spirit, we assume that the time $t$ policy maker takes as given a policy rule $u_{t+j} = \overline g m_{t+j}$ that
+it assumes will be chosen by all
+successor monetary policy authorities $j \geq 1$.  We also assume that the  date $t$ policy authority believes that $p_{t+j} = \overline h m_{t+j}$ for all $j \geq 1$.
+What about the public? If it were to believe that the law of motion of the money supply
+is
+$$ m_{t+1} = (1+ \overline g) m_t $$
+for all $t \geq 0$, then to satisfy the difference equation $p_t = (1-\lambda) m_t + \lambda p_{t+1}$,  it would act to set the price level according to
+$$ p_t = \overline h m_t,  \quad {\rm where} \ \overline  h = {\frac{(1-\lambda) }{1 - \lambda (1+\overline g)}}, \leqno(2) $$
+and where we computed $\lambda \in (0,1)$ in the previous problem.
+
+\medskip
+\noindent{\bf a.} Please verify that equation (2) solves  $p_t = (1-\lambda) m_t + \lambda p_{t+1}$ .
+\medskip
+
+\noindent{\bf b.}  Consider the value function
+$$ w(m_t) = - \sum_{j=0}^\infty \beta^j L (p_{t+j}, m_{t+j}, u_{t+j}) $$
+where
+$$ \eqalign{ p_{t+j} & = \overline h m_{t+j} \cr
+            u_{t+j} & = \overline g m_{t+j} \cr
+            m_{t+j+1} & = m_{t+j} + u_{t+j}  .} $$
+Please interpret this value function in terms of the behavior that it assumes about (i) the sequence of monetary policy makers who choose
+$\{u_{t+j}\}_{j=0}^\infty$, and (ii) the money holders who choose $\{p_{t+j}\}_{j=0}^\infty$.
+
+\medskip
+\noindent{\bf c.}  Now please consider the following functional equation:
+$$ v(m_0) = \max_{u_0} \left\{ - L(p_0, m_0, u_0) + \beta w(m_1) \right\} \leqno(3) $$
+where the maximization is subject to
+$$ \eqalign{ m_1 & = m_0 + u_0  \cr
+            p_0 & = \lambda \overline h [ m_0 + u_0] + (1 - \lambda) m_0 . } $$
+Please interpret the equation $p_0  = \lambda \overline h [ m_0 + u_0] + (1 - \lambda) m_0 $ in terms of what it assumes about the
+beliefs of the money holders who set the price level at time $0$.
+Please interpret the functional equation (3) in terms of the beliefs of the time $0$ monetary authority who chooses $u_0$, in particular,
+its beliefs about the decisions of successor monetary authorities.
+
+\medskip
+\noindent{\bf d.}  Let the optimizer of the right side of equation (3) be $u_0 = g m_0$.
+Please define a Markov perfect equilibrium.   Tell who chooses what when.  Also tell what each decision maker assumes about
+other pertinent decision makers.
+
+\medskip
+\noindent{\bf e.} Please describe a computer algorithm for computing a Markov perfect equilibrium, being careful first to describe all of the objects comprising
+a Markov perfect equilibrium.
+
+\noindent{\bf f.}  Is a continuation of a Markov perfect equilibrium a Markov perfect equilibrium?
+
+
+
+
+
+\noindent{\it Exercise \the\chapternum.3} \quad {\bf Verification}
+
+
+\medskip
+
+\noindent Please verify the formulas for
+where for $t\geq 1$
+$$\eqalign{ H^t_1 & = \check A_{21} \cr
+            H^t_2 & = \check A_{22} \check A_{21} \cr
+           \ \   \vdots \  \  &  \  \ \quad \vdots \cr
+           H^t_{t-1} & = \check A_{22}^{t-2} \check A_{21} \cr
+            H^t_t & = \check A_{22}^{t-1}(\check A_{21} + \check A_{22} H^0_0 ) . }  $$
+for $j = 1, \ldots, t$  for the coefficients
+in the  representation $ x_t = \sum_{j=1}^t H_j^t z_{t-j} $
+that we use to construct the representation  in equation \Ep{stackelbergsigma2} for
+$  u_t  = - F_z z_t - F_x \sum_{j=1}^t H^t_j z_{t-j} = \sigma_t(z^t)$  for $\sigma_t(z^t)$.
+\medskip
+\noindent{\it Hint:} Construct a recursion starting from $t=1$.
+
+\medskip
+
+
+\noindent{\it Exercise \the\chapternum.4} \quad {\bf Big $K$, little $k$ again}
+
+
+\medskip
+
+\noindent Please provide a recursive formulation of a follower's problem in the duopoly model described in the text of this chapter.
+Firm 1, the follower, faces $ \{q_{2t}\}_{t=0}^\infty $ as a given quantity sequence chosen
+by the leader and believes that its output price at $t$ satisfies
+$$ p_t  = a_0 - a_1 ( q_{1t} + q_{2t})  , \quad t \geq 0 .
+$$
+The  challenge is to represent $\{q_{2t}\}_{t=0}^\infty $ as a given sequence that  firm 1 believes it cannot affect.
+Please feel free to use the following hints.
+
+\medskip
+\noindent {\bf a.} Recall that under the Stackelberg plan, firm 2 sets output according to the $q_{2t}$
+component of $$y_{t+1} = \bmatrix{  1 \cr q_{2t} \cr q_{1t} \cr x_t }$$
+which is governed by
+$$ y_{t+1} = (A - BF) y_t .$$
+
+
+\medskip
+\noindent{\bf b.} Define a state vector
+$$ \tilde y_t = \bmatrix{  1 \cr q_{2t} \cr \tilde q_{1t} \cr \tilde x_t }$$
+that evolves according to
+$$ \tilde y_{t+1} = (A - BF) \tilde y_t $$
+subject to the initial condition $\tilde q_{10} = q_{10}$ and $\tilde x_0 = x_0$ where
+$x_0 = - P_{22}^{-1} P_{21}$.
+
+
+\medskip
+\noindent {\bf c.} Let firm 1's state vector be
+$$ X_t = \bmatrix{ \tilde y_t \cr q_{1t}  } $$
+Then argue that  the follower firm 1 faces law of motion
+$$
+\bmatrix{ \tilde y_{t+1} \cr
+q_{1t+1} } = \bmatrix{ A - BF & 0 \cr
+0  & 1 }  \bmatrix{ \tilde y_{t} \cr
+q_{1t} } + \bmatrix{ 0 \cr 1 } x_t
+$$
+Argue that this specification assures that from the point of the view of  firm 1, $ \{q_{2t}\} $ is an exogenous process.
+
+
+\medskip
+\noindent{\bf d.} Argue that  $ \tilde q_{1t}, \tilde x_t$ play the role of ``Big $K$'' and that  $q_{1t}, x_t$   play the role of ``little $k$''.
+
+
+\medskip
+\noindent{\bf e.} Argue that the time $t$ component of firm 1's objective  is
+$$ \tilde X_t' \tilde R x_t - x_t^2 \tilde Q = \bmatrix{ 1 \cr q_{2t} \cr \tilde q_{1t} \cr \tilde x_t \cr q_{1t} }'
+  \bmatrix{ 0 & 0 & 0 & 0 & \frac{a_0}{2} \cr
+                  0 & 0 & 0 & 0 & - \frac{a_1}{2} \cr
+                  0 & 0 & 0 & 0 & 0 \cr
+                  0 & 0 & 0 & 0 & 0 \cr
+                  \frac{a_0}{2} &  -\frac{a_1}{2} & 0 & 0 & - a_1 }
+  \bmatrix{ 1 \cr q_{2t} \cr \tilde q_{1t} \cr \tilde x_t \cr q_{1t} } - \gamma
+     x_t^2 $$
+
+\medskip
+\noindent {\bf f.} Argue that firm 1's optimal decision rule is
+$ x_t = - \tilde F X_t $
+and its state evolves according to
+$ \tilde X_{t+1} = (\tilde A - \tilde B \tilde F) X_t .$
+
+
+
+
+
+%
+%
+% \medskip
+% \noindent{\it Exercise \the\chapternum.3}  \quad A representative
+% consumer has quadratic utility functional
+% $$ \sum_{t=0}^\infty \beta^t \left\{ -.5 (b -c_t)^2 \right\} \leqno(1) $$
+% where $\beta \in (0,1)$, $b = 30$,  and $c_t$ is time $t$ consumption.
+% The consumer faces a sequence of budget constraints
+% $$ c_t + a_{t+1} = (1+r)a_t + y_t - \tau_t \leqno(2) $$
+% where $a_t $ is the household's holdings of an  asset at the beginning
+% of $t$, $r >0$ is a constant net interest rate satisfying $\beta (1+r) <1$, $\tau_t$
+% are lump sum taxes at time $t$,
+%  and
+% $y_t$ is the consumer's endowment at $t$.  The consumer's plan for
+% $(c_t, a_{t+1})$  must obey the boundary condition
+% $\sum_{t=0}^\infty \beta^t a_t^2 < + \infty$.
+% Assume that $y_0, a_0$ are given
+% initial conditions and that
+% $y_t$ obeys
+% $$ y_t = \rho y_{t-1}, \quad t \geq 1,  \leqno(3)$$
+% where $|\rho| <1$.
+% Assume that $a_0=0$, $y_0=3$, and $\rho=.9$.
+%
+%
+% At time $0$, a    planner commits to a plan
+% for taxes $\{\tau_t\}_{t=0}^\infty$.  The planner designs the plan
+%    to maximize
+% $$ \sum_{t=0}^\infty \beta^t
+% \left\{ -.5 (c_t-b)^2 -   \tau_t^2\right\}  \leqno(4) $$
+% over $\{c_t, \tau_t\}_{t=0}^\infty$ subject
+%  to the implementability constraints
+% (2) for $t\geq 0$ and
+% $$\lambda_t =  \beta (1+r) \lambda_{t+1} \leqno(5) $$
+% for $t\geq 0$, where $\lambda_t \equiv (b-c_t)$.
+%
+% \medskip
+% \noindent{\bf a.}  Argue that (5) is the Euler equation for a consumer
+% who maximizes (1) subject to (2), taking $\{\tau_t\}$ as a given sequence.
+% \medskip
+% \noindent{\bf b.}  Formulate the planner's problem as a Stackelberg problem.
+% \medskip
+% \noindent{\bf c.}  For $\beta=.95, b=30, \beta(1+r)=.95$,
+%   formulate an artificial
+% optimal linear regulator  problem and use it to solve the Stackelberg problem.
+% \medskip
+% \noindent{\bf d.} Give a recursive representation  of the
+% Stackelberg plan for $\tau_t$.
+
+
+\eqnotracefalse

@@ -1,0 +1,177 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+%
+
+
+\centerline{Teaching Evaluation Number 1}
+
+\medskip
+
+\noindent {\bf 1.} A deterministic sequence $y_t, t \geq 0$ satisfies
+$$ y_t = a_0 + a_1 t + a_2 t^2 .$$
+A deterministic sequence $x_t , t \geq 0$ is satisfies
+$$ z_t = \sum_{j=0}^\infty \beta^j y_{t+j} \leqno(1) $$
+where $\beta$ is a real valued scalar.
+
+\noindent {\bf a.}  Please state conditions   on $\beta$ under which the infinite sum on the right side of (1) converges.
+
+\medskip
+
+\noindent{\bf b.}  Please provide a formula and pseudo-code for computing coefficients $b_0, b_1, b_2$
+in the following formula for $z_t$  that is consistent with definition (1):
+$$ z_t = b_0 + b_1 t + b_2 t^2 . $$
+
+\medskip
+\noindent{\bf Hints:} It might be helpful to ``work backwards'' by answering part ({\bf b}) first. 
+
+
+
+
+
+
+\bye
+
+Let $x$ and $y$ be  $N \times 1$ vectors. The inner product of $x$ with $y$ is $\sum_{i=1}^n x_i y_i$.  The $l_2$ norms of $x$ and $y$
+are $| x| = \left(\sum_{i=1}^n x_i^2\right)^{\frac{1}{2}} = (x \cdot x)^{\frac{1}{2}}  $ and $|y| = \left(\sum_{i=1}^n y_i^2\right)^{\frac{1}{2}} =
+(y \cdot y)^{\frac{1}{2}}$ , respectively.
+%The inner product
+%of $x$ with $y$ is $ x \cdot y = \sum_{i=1}^n x_i y_i$.
+ An inner product satisfies
+$$ x \cdot y = |x| |y| \cos (\theta )$$
+or
+$$ \cos (\theta) = {\frac{x \cdot y}{|x| |y|}} $$
+where $\theta$ is the angle between vectors $x$ and $y$. We say that $x$ and $y$ are {\it orthogonal\/} if $\cos(\theta) = 0$, which also
+means that $ x \cdot y =0$.\NFootnote{We can deduce the a generalization of Pythagoras' theorem called the {\it law of cosines\/} from the following
+calculation: $(x-y) \cdot (x - y) = x \cdot x + y\cdot y - 2 x.y = x \cdot x + y \cdot y - 2 |x| |y| \cos(\theta)$. When $\cos(\theta) = 0$, we obtain
+Pythagoras's theorem for right triangles.}
+
+Where ${\frac{x}{|x|}}$ is the unit vector in the direction of $x$, the {\it projection of $y$ on $x$ in the direction of $x$\/} is
+$$ \eqalign{ \cos(\theta) |y| {\frac{x}{|x|}} & = {\frac{ x \cdot y}{|x| | y|}} |y| {\frac{x}{|x|}} \cr
+                         & = {\frac{x \cdot y}{x\cdot x}} x \cr
+                         & = b x } $$
+where
+$$ b =  {\frac{x \cdot y}{x \cdot x} } $$
+is the least squares {\it regression coefficient\/} of $y$ on $x$.
+
+Least squares  projection induces a decomposition of  vector $y$ as a sum of the projection $b x$ on $x$ and an orthogonal vector $v$:
+$$ y = b x + v $$
+where $v \cdot x =0$  is a first-order condition for the least-squares  problem
+$$ \min_{b \in {\bf R}} | y - b x |^2 $$
+that confirms that the residual vector  $v = y - b x$ is orthogonal to the vector $x$.
+
+The {\it correlation coefficient\/} between vectors $x$ and $y$
+$ {\frac{x \cdot y}{|x| |y|}}$  equals $\cos(\theta)$.  The orthogonal decomposition $ y = b x + v$ induces the following decomposition
+of $y \cdot y $:
+$$ y \cdot y = {\frac{(x \cdot y)^2}{ x \cdot x}} + v\cdot v .$$
+Dividing both sides of this equation by $y \cdot y$ tells us that
+$$ \eqalign{ {\frac{ y \cdot y} { y \cdot y}} &=  {\frac{(x \cdot y)^2}{ (x \cdot x) (y \cdot y) }} + {\frac{ v\cdot v}{ y \cdot y}} \cr
+    1 & = R^2 + {\frac{ v\cdot v}{ y \cdot y}},   }$$
+  which defines the  $R^2$ between $x$ and $y$.  Here ${\frac{ v\cdot v}{ y \cdot y}}$ is the fraction of the $l_2$ variation in vector $y$
+  that is not explained by  $l_2$ variation in the vector $x$.\NFootnote{Evidently, $R^2 = \cos (\theta)^2$.}
+
+  Thus, least squares  projection allows us to take two  non-orthogonal vectors  $x$ and $y$ and from them to
+  construct two vectors $x$ and $v$ that are orthogonal.  This fact is the starting point for the {\it Gram-Schmidt\/} method
+  of taking $m$ non-orthogonal vectors $x_1, x_2, \ldots, x_m$ and from them constructing an orthogonal basis $v_1, v_2, \ldots, v_m$ for the linear
+  space spanned by vectors $x_1, x_2, \ldots, x_m$  .
+  The Gram-Schmidt recursion is
+  $$ \eqalign{ v_1 & = x_1 \cr
+               v_2 & = x_2 - {\frac{x_2 \cdot v_1}{v_1 \cdot v_1}} v_1 \cr
+               v_3 & = x_3 -  {\frac{x_3 \cdot v_1}{v_1 \cdot v_1}} v_1 - {\frac{x_3 \cdot v_2}{v_2 \cdot v_2}} v_2 \cr
+               \vdots &  \quad \quad  \vdots  \quad \quad \quad \vdots \cr } $$
+which we can summarize as $v_1= x_1$ and for $j \geq 2$
+$$ v_j = x_j - \sum_{i=1}^{j-1} {\frac{ x_j \cdot v_i}{v_i \cdot v_i}} v_i  .$$
+
+
+
+
+
+
+\bye
+
+%\line{Advanced Macro \hfil SMU}
+%\line{Winter 2019 \hfil Thomas Sargent}
+%
+%%\centerline{\bf Practice problems}
+%\centerline{\bf Homework 3}
+%
+%
+%\medskip
+%
+%\noindent{\bf Instructions:}  Please feel free to work on this problem in groups of 3 or 4 students. But please hand in your own work. This homework is
+%due on Wednesday Feb 13.
+
+\medskip
+
+\noindent{\bf 1. \quad Verification}
+
+\medskip
+\noindent Please verify the formulas
+$$\eqalign{ H^t_1 & = \check A_{21} \cr
+            H^t_2 & = \check A_{22} \check A_{21} \cr
+           \ \   \vdots \  \  &  \  \ \quad \vdots \cr
+           H^t_{t-1} & = \check A_{22}^{t-2} \check A_{21} \cr
+            H^t_t & = \check A_{22}^{t-1}(\check A_{21} + \check A_{22} H^0_0 )  }  $$
+for $j = 1, \ldots, t$  for the coefficients
+in the  representation $ x_t = \sum_{j=1}^t H_j^t z_{t-j} $
+that we use to construct the representation  in equation 19.4.10 for
+$  u_t  = - F_z z_t - F_x \sum_{j=1}^t H^t_j z_{t-j} = \sigma_t(z^t)$  for $\sigma_t(z^t)$.
+\medskip
+\noindent{\it Hint:} Maybe construct a recursion starting from $t=1$.
+
+
+
+\medskip
+\noindent  {\bf 2. \quad  Duopoly}
+
+\medskip
+\noindent
+An   industry with two firms produces a single nonstorable homogeneous good. Firm $i = 1,2$ produces $Q_{it}$.
+Costs of production for firm $i$ are
+${\cal C}_{it} = e Q_{it} + .5 g Q_{it}^2+ .5 c (Q_{i,t+1} - Q_{it})^2 , $
+where $ e >0,  g >0, c>0 $ are cost parameters.
+There is a linear inverse demand curve
+$$ p_t = A_0 - A_1 (Q_{1t} + Q_{2t} ) + v_t, \EQN oli1 $$
+where $A_0, A_1$ are both positive and  $v_t$ is a disturbance
+to demand governed by
+$$ v_{t+1}= \rho v_t  $$
+and where $ | \rho | < 1$. Assume that firm $1$ is a Stackelberg leader and that firm $2$ is a Stackelberg follower.
+
+\medskip
+\noindent{\bf a.}   Please formulate the decision problem of firm $2$ and derive  Euler equations that relate its current
+decisions to  current and future decisions of firm 1.
+
+\medskip
+\noindent{\bf b.} Please formulate the decision problem of firm $1$ as Stackelberg leader.  Please tell how to solve it.
+%
+%\medskip
+%\noindent{\bf c.}  Describe some calculations for answering the following question.  Starting from an initial state $Q_{1,0}, Q_{2,0}$ and initial situation in which
+%firm $1$ acts as Stackelberg leader and firm $2$ acts as follower, how much would firm $1$ be willing to pay to buy out firm $2$ and thereby acquire the ability to act as
+%the leader?
+
+
+\medskip
+\noindent{\bf c.}  Describe calculations that answer the following question.  Starting from an initial state $Q_{1,0}, Q_{2,0}$ and situation in which
+firm $1$ acts as Stackelberg leader and firm $2$ acts as follower, how much would firm $2$ be willing to pay to buy  firm $1$ and thereby acquire the ability to act as
+a monopolist?
+
+
+\bye
+
+
+
+
+
+
+\bye

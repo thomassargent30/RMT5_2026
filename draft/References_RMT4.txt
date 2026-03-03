@@ -1,0 +1,100 @@
+
+
+UPDATED
+==========================================
+
+\article{Ch\'eron, Arnaud, Jean-Olivier Hairault, and Fran\c cois Langot}
+{2013}{Life-Cycle Equilibrium Unemployment.}{Journal of Labor Economics}
+{Vol. 31(4), pp. 843--882}
+
+
+%% Earlier working paper title
+%% "Job Creation and Job Destruction over the Life Cycle"
+
+
+
+\contribution{Ljungqvist, Lars, and Thomas J. Sargent}{2006}{Do Taxes
+Explain European Employment?: Indivisible Labor, Human Capital, Lotteries,
+and Savings}{Daron Acemoglu, Kenneth Rogoff, and Michael Woodford}
+{Macroeconomics Annual 2006} {Cambridge MA.,  MIT Press pp 181--224}
+
+%% Converting to tradition of referring to year 2006 (rather than 2007)
+
+
+
+\article{Ljungqvist, Lars, and Thomas J. Sargent}{2014}
+{Career Length: Effects of Curvature of Earnings Profiles,
+Earnings Shocks, Taxes, and Social Security.}
+{Review of Economic Dynamics}{Vol. 17, pp. 1--20}
+
+\article{Menzio, Guido, Irina A. Telyukova, and Ludo Visschers}{2016}
+{Directed Search over the Life Cycle.}
+{Review of Economic Dynamics}{Vol. 19, pp. 38--62}
+
+\contribution{Prescott, Edward C}{2006a}{Comment}
+{Daron Acemoglu, Kenneth Rogoff, and Michael Woodford}
+{Macroeconomics Annual 2006} {Cambridge MA.,  MIT Press pp 233--242}
+
+%% Converting to tradition of referring to year 2006 (rather than 2007)
+
+
+
+\article{Prescott, Edward C}{2006b}
+{Nobel Lecture: The Transformation of Macroeconomic Policy and Research.}
+{Journal of Political Economy}{Vol. 114 pp. 203--235}
+
+
+
+
+NEW
+===============================================
+
+\article{Christiano, Lawrence J., Martin S. Eichenbaum,
+and Mathias Trabandt}{2016}{Unemployment and Business Cycles.}
+{Econometrica}{Vol. 84(4), pp. 1523--1569}
+
+\article{Hagedorn, Marcus, and Iourii Manovskii}{2008}{The Cyclical
+Behavior of Equilibrium Unemployment and Vacancies Revisited.}
+{American Economic Review}{Vol. 98(4), pp. 1692--1706}
+
+\article{Hall, Robert E.}{2005}{Employment Fluctuations with 
+Equilibrium Wage Stickiness.}
+{American Economic Review}{Vol. 95(1), pp. 50--65}
+
+\article{Hall, Robert E., and Paul R. Milgrom}{2008}{The
+Limited Influence of Unemployment on the Wage Bargain.}
+{American Economic Review}{Vol. 98(4), pp. 1653--1674}
+
+\article{Ljungqvist, Lars, and Thomas J. Sargent}{2007}{Understanding
+European Unemployment with Matching and Search-Island Models.}
+{Journal of Monetary Economics}{Vol. 54, pp. 2139--2179}
+
+\article{Ljungqvist, Lars, and Thomas J. Sargent}{2017}{The
+Fundamental Surplus.}{American Economic Review}{Vol. 107, pp. }
+
+\article{Menzio, Guido, and Shouyong Shi}{2011}
+{Efficient Search on the Job and the Business Cycle.}
+{Journal of Political Economy}{Vol. 119(3), pp. 468--510}
+
+\article{Petrongolo, Barbara, and Christopher A. Pissarides}{2001}
+{Looking into the Black Box: A Survey of the Matching Function.}
+{Journal of Economic Literature}{Vol. 39(2), pp. 390--431}
+
+\article{Pissarides, Christopher A.}{1992}{Loss of Skill During
+Unemployment and the Persistence of Employment Shocks.}
+{Quarterly Journal of Economics}{Vol. 107(4), pp. 1371--1391}
+
+\article{Pissarides, Christopher A.}{2009}{The Unemployment 
+Volatility Puzzle: Is Wage Stickiness the Answer?}
+{Econometrica}{Vol. 77(5), pp. 1339--1369}
+
+\contribution{Rogerson, Richard, and Robert Shimer}
+{2011}{Search in Macroeconomic Models of the Labor Market}
+{Orley Ashenfelter and David Card}{Handbook of Labor Economics. 
+{\rm Volume 4A}}{Amsterdam: Elsevier, pp. 619--700}
+
+\article{Shimer, Robert}{2005}{The Cyclical Behavior of Equilibrium
+Unemployment and Vacancies.}{American Economic Review}
+{Vol. 95(1), pp. 25--49}
+
+

@@ -1,0 +1,90 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+
+\line{Advanced Macro \hfil SMU}
+\line{Winter 2019 \hfil Thomas Sargent}
+
+%\centerline{\bf Practice problems}
+\centerline{\bf Homework 3}
+
+
+\medskip
+
+\noindent{\bf Instructions:}  Please feel free to work on this problem in groups of 3 or 4 students. But please hand in your own work. This homework is
+due on Wednesday Feb 13.
+
+\medskip
+
+\noindent{\bf 1. \quad Verification}
+
+\medskip
+\noindent Please verify the formulas
+$$\eqalign{ H^t_1 & = \check A_{21} \cr
+            H^t_2 & = \check A_{22} \check A_{21} \cr
+           \ \   \vdots \  \  &  \  \ \quad \vdots \cr
+           H^t_{t-1} & = \check A_{22}^{t-2} \check A_{21} \cr
+            H^t_t & = \check A_{22}^{t-1}(\check A_{21} + \check A_{22} H^0_0 ) . }  $$
+for $j = 1, \ldots, t$  for the coefficients
+in the  representation $ x_t = \sum_{j=1}^t H_j^t z_{t-j} $
+that we use to construct the representation  in equation 19.4.10 for
+$  u_t  = - F_z z_t - F_x \sum_{j=1}^t H^t_j z_{t-j} = \sigma_t(z^t)$  for $\sigma_t(z^t)$.
+\medskip
+\noindent{\it Hint:} Maybe construct a recursion starting from $t=1$.
+
+
+
+\medskip
+\noindent  {\bf 2. \quad  Duopoly}
+
+\medskip
+\noindent
+An   industry with two firms produces a single nonstorable homogeneous good. Firm $i = 1,2$ produces $Q_{it}$.
+Costs of production for firm $i$ are
+${\cal C}_{it} = e Q_{it} + .5 g Q_{it}^2+ .5 c (Q_{i,t+1} - Q_{it})^2 , $
+where $ e >0,  g >0, c>0 $ are cost parameters.
+There is a linear inverse demand curve
+$$ p_t = A_0 - A_1 (Q_{1t} + Q_{2t} ) + v_t, \EQN oli1 $$
+where $A_0, A_1$ are both positive and  $v_t$ is a disturbance
+to demand governed by
+$$ v_{t+1}= \rho v_t  $$
+and where $ | \rho | < 1$. Assume that firm $1$ is a Stackelberg leader and that firm $2$ is a Stackelberg follower.
+
+\medskip
+\noindent{\bf a.}   Please formulate the decision problem of firm $2$ and derive  Euler equations that relate its current
+decisions to  current and future decisions of firm 1.
+
+\medskip
+\noindent{\bf b.} Please formulate the decision problem of firm $1$ as Stackelberg leader.  Please tell how to solve it.
+%
+%\medskip
+%\noindent{\bf c.}  Describe some calculations for answering the following question.  Starting from an initial state $Q_{1,0}, Q_{2,0}$ and initial situation in which
+%firm $1$ acts as Stackelberg leader and firm $2$ acts as follower, how much would firm $1$ be willing to pay to buy out firm $2$ and thereby acquire the ability to act as
+%the leader?
+
+
+\medskip
+\noindent{\bf c.}  Describe calculations that answer the following question.  Starting from an initial state $Q_{1,0}, Q_{2,0}$ and situation in which
+firm $1$ acts as Stackelberg leader and firm $2$ acts as follower, how much would firm $2$ be willing to pay to buy  firm $1$ and thereby acquire the ability to act as
+a monopolist?
+
+
+\bye
+
+
+
+
+
+
+\bye

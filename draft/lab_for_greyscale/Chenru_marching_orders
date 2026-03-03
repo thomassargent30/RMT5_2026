@@ -1,0 +1,36 @@
+Dear Chenru,
+
+
+   Hi. First, congratulations on getting admitted to those superb graduate schools.  And it is wonderful
+that you decided to accept Stanford -- you are  going to a great University and a great program. I am very pleased
+at how well you have done (but not surprised).
+
+  Thanks for being willing to help me.  Here is what I would like you to do.   I will prepare a *.zip file that has all of the relevant
+files.  
+
+  1.  In the folder there is a small python program called convert_grayscale_tom.py
+
+    this program takes a file backus1.eps and creates a new file called backus1_gray.eps  
+
+    In particular, backus1.eps is an rgb colored file and my publisher wants grayscale. This little program accomplishes this.
+
+ 2. I ask you to write an extension of my little file that does the following:
+
+      a. The user (you or I!) specifies the name of a *.eps file (e.g., backus2 or ....) It will be a *.eps file.
+
+      b. Your function or wrapper would take a *.eps file name as an argument and automatically generate a grayscale *.eps  file  with
+         the same name but blank_gray.eps as the output. Thus the program should take blank.eps as an input argument and just automatically generate
+         a file called blank_gray.eps.  Here blank.eps will be one of my rgb *.eps colored files.
+
+
+3. I have prepared a directory with all of the rgb *.eps files to which I'd like the function to be applied.  I am calling this directory just "files".
+
+4. Maybe we could make a new directory with the _gray.eps files or else we could just put them in a revised files directory with the original files. 
+I am open to either choice.  
+
+That is the complete task. It would be a big help to me if you can do this.  I think that the *.py function that will do the work will be short and
+a modification of the file convert_grayscale_tom.py that I am including with this message.
+
+Thanks very much for your help!
+
+Tom

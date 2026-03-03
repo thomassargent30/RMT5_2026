@@ -1,0 +1,50 @@
+
+\item{2.} At time $0$,  a Stackelberg leader takes $z_0$ as given and chooses $(x_0, u_0, z_1, x_1)$.
+
+
+
+
+
+\subsection{Summary and timing protocol}
+
+Recalling that $y_t = \bmatrix{z_t \cr x_t }$, we conclude that, given $z_0$, a recursive representation of a Stackelberg plan is
+$$\EQNalign{ x_0 & = - P_{22}^{-1} P_{21} z_0 \cr
+             u_t & = - F y_t \cr
+             y_{t+1} & = (A - BF) y_t   . \cr}  $$
+%
+%Equations \Ep{bell5} and \Ep{king6x0} form a  recursive representation of a Stackelberg plan
+The plan is implemented with a sequence of ``continuation Stackelberg leaders'' that respect  the following timing protocol:
+\smallskip
+
+
+\item{1.} At time $0$,  a Stackelberg leader takes $z_0$ as given and chooses $x_0$.
+
+\medskip
+
+\item{2.} At times $t \geq 0$,  a continuation Stackelberg  leader takes $(z_t, x_t)$ as given and chooses $ (u_t, z_{t+1}, x_{t+1}) $.
+
+\medskip
+
+
+
+\noindent Notice how we have distinguished between  continuation Stackelberg leaders who choose at times $t \geq 0$ and a Stackelberg leader who
+chooses at time $t=0$.
+In this timing protocol, the  forward looking vector $x_t$ that obeys \Ep{eqn:xlawforward} is part of the  state vector confronting
+a continuation Stackelberg leader at times $t \geq 0$ but not  part of the state confronting the Stackelberg leader at time $t=0$.  It is  presented to a continuation leader
+at time $t \geq 0$ as a promise to be kept.  The time $t$ continuation leader delivers $x_t$  by choosing $u_t, z_{t+1}, x_{t+1}$.\NFootnote{See
+exercise \the\chapternum.2 for a  timing protocol that builds in time consistency.}
+
+\item{1.} At times $t \geq 0$,  a continuation Stackelberg  leader takes $(z_t, x_t)$ as given and chooses $ (u_t, z_{t+1}, x_{t+1}) $.
+
+\medskip
+
+\item{2.} At time $0$,  a Stackelberg leader takes $z_0$ as given and chooses $(x_0, u_0, z_1, x_1)$.
+
+\smallskip
+\noindent Notice how we have distinguished between  continuation Stackelberg leaders who choose at times $t \geq 0$ and a Stackelberg leader who
+chooses at time $t=0$.
+In this timing protocol, the entirely  forward looking vector $x_t$ that obeys \Ep{eqn:xlawforward} is part of the  state vector confronting
+a continuation Stackelberg leader at times $t \geq 0$ but not  part of the state confronting the Stackelberg leader at time $t=0$.  It is  presented to the continuation leader
+at time $t \geq 0$ as a promise to be kept.  The time $t$ continuation leader delivers $x_t$  by choosing $u_t, z_{t+1}, x_{t+1}$.\NFootnote{See
+exercise \the\chapternum.2 for a  timing protocol that builds in time consistency.}
+

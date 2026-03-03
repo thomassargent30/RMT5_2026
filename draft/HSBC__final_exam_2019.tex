@@ -1,0 +1,429 @@
+
+\input texsis
+\paper
+
+\overfullrule=0pt
+\def\frac#1#2{#1\over #2}
+%
+\def\bmatrix#1{\left[ \matrix{#1} \right]}
+\def\be{{\beta}}
+\def\toone{{t+1}}
+
+%\def\frac#1#2{#1\over #2}
+%\magnification=1200
+\overfullrule=0pt
+%
+\line{PhD macroeconomics \hfil June 2019}
+\line{HSBC Peking University \hfil Rui Zhao and Thomas Sargent}
+
+\medskip
+
+
+\centerline{\bf Final Examination }
+
+\bigskip
+
+\noindent {\bf Instructions:} This examination is for two hours.  This is a closed book exam. You may not use notes or your phone or computer.
+There are three questions, each worth 33.33 points.
+\bigskip
+
+
+
+\medskip
+
+\noindent{\bf 1. \quad 33.33 points} \quad Consider the forward-looking vector difference equation
+$$ \mu_t = R x_t + H \mu_{t+1}, \leqno(1) $$
+where $ x_{t+1} = A x_t $.  Here $x_t$ is an $n \times 1$ vector, $A$
+is an $n \times n$ stable matrix, $H$ is an $n \times n $ stable matrix, and $R$ is an $n \times n$ positive definite matrix.
+
+\medskip
+
+\noindent{\bf a.} Show that $$\mu_t =  (\sum_{j=0}^\infty  H^j R A^j ) x_t \leqno(2) $$ is a solution of difference
+equation (1).
+
+\medskip
+
+\noindent{\bf b.} Guess that $\mu_t = P x_t$. Then find a formula for $P$ and tell how to compute it.  
+
+% then verify that
+%$$ P = R + H P A . \leqno(3) $$
+%(Equation (3) is an example of a discrete Sylvester equation.)
+
+
+
+%
+%\medskip
+%\noindent{\bf c.}  Set $H = A'$  and note that then equation (3) becomes
+%$P = R + A' P A $. Please compare  this special version of formula (3)
+% with formula  for the unconditional covariance matrix of
+%a vector governed by an autoregression.
+
+\medskip
+\noindent{\bf c.} In the special case that $H = A'$, verify that $\mu_t$ defined in equation (2) satisfies
+$ \mu_t = .5 {\frac{\partial V_t}{\partial x_t } } $
+where
+$$ V_t = \sum_{j=0}^\infty x_{t+j}' R x_{t+j} . \leqno(4) $$
+
+
+\medskip
+
+
+
+
+
+\medskip
+\noindent{\bf 2. \quad 33.33 points} \quad
+ An economy consists of two consumers, named $i=1,2$.
+The economy exists in discrete time  for periods $t \geq 0$.
+There is one good in the economy, which is not storable and
+arrives in the form of an endowment stream owned by each consumer.
+The endowments to consumers $i=1,2$ are
+$$\eqalign{ y_t^1 & = s_t \cr
+            y_t^2 & = 1 - s_t \cr }  $$
+where $s_t$ is a random variable governed by a two-state Markov
+chain with values $s_t = \bar s_1 = 0$ or  $s_t  = \bar s_2 = 1 $.
+The Markov chain  has time invariant transition probabilities
+denoted by $\pi(s_{t+1} =  s' | s_t = s) = \pi(s'|s)$, and the
+probability distribution over the initial  state is $\pi_0(s)$.
+The {\it aggregate endowment} at $t$ is $Y(s_t) = y_t^1 + y_t^2$.
+
+
+   Let $c^i$ denote the stochastic
+process of consumption for agent $i$.
+  Consumer $i$ orders consumption streams according to
+$$ U(c^i)= \sum_{t=0}^\infty \sum_{s^t}  \beta^t \ln [c_t^i(s^t)]
+ \pi_t (s^t),  $$
+where $\pi_t(s^t)$ is the probability of the history $s^t = (s_0,
+s_1, \ldots , s_t)$.
+\medskip
+\noindent{\bf a.}  Give a formula for $\pi_t(s^t)$.
+\medskip
+\noindent{\bf b.}  Let $\theta \in (0,1)$ be a Pareto weight on
+consumer $1$.  Consider the     planning problem
+$$ \max_{c^1, c^2} \left\{ \theta U(c^1) + (1-\theta) U(c^2)
+  \right\}  $$
+where  maximization is subject to
+$$ c_t^1(s^t) + c_t^2(s^t) \leq Y(s_t) , \forall t, \forall s^t . $$
+Solve the Pareto problem, taking $\theta$ as a parameter.
+\medskip
+
+\noindent{\bf c.}   Define a {\it competitive equilibrium} with
+history-dependent Arrow-Debreu  securities traded once and for all
+at time $0$.  Be careful to define all of the objects that compose
+a competitive equilibrium.
+\medskip
+\noindent{\bf d.}   Compute the competitive equilibrium price
+system (i.e., find the prices of all  Arrow-Debreu
+securities).
+\medskip
+\noindent{\bf e.}    Tell the relationship between the solutions
+(indexed by $\theta$) of the Pareto problem  and the competitive
+equilibrium allocation.  If you wish, refer to the two welfare
+theorems.
+\medskip
+
+
+\medskip
+\noindent{\bf 3. \quad 33.33 points} \quad  Consider a pure
+endowment economy with a single representative consumer; $\{c_t,
+d_t\}_{t=0}^\infty$ are the consumption and endowment processes,
+respectively. Feasible allocations satisfy
+$$ c_t \leq d_t .$$
+The endowment process is described by
+$$ d_{t+1} =\lambda_{t+1} d_t .  $$
+The growth rate $\lambda_{t+1}$ is described by a two-state
+Markov process with transition probabilities
+$$ P_{ij} = {\rm Prob} (\lambda_{t+1} = \bar \lambda_j \vert
+    \lambda_t = \bar \lambda_i ). $$
+Assume that
+$$ P = \left[\matrix{ .8 & .2 \cr
+                      .1 & .9 \cr} \right], $$
+and that
+$$ \bar \lambda = \left[\matrix{.97 \cr
+                                1.03 \cr}\right].$$
+In addition, $\lambda_0 = .97$ and $d_0 = 1$  are both known at
+date $0$.  The consumer has preferences over consumption ordered
+by
+$$ E_0 \sum_{t=0}^\infty \beta^t {c_t^{1-\gamma} \over 1 - \gamma},$$
+where $E_0$ is the mathematical expectation operator, conditioned
+on information known at time $0$, $\gamma = 2, \beta = .95$.
+\medskip
+
+
+\medskip
+\noindent  At time $0$, after $d_0$ and $\lambda_0$ are known,
+there are complete markets in date- and history-contingent claims.
+The market prices are denominated in units of time $0$ consumption
+goods.
+
+\medskip
+\noindent{\bf a.}  Define a competitive equilibrium, being careful
+to specify all  the objects composing an equilibrium.
+
+\medskip
+\noindent{\bf b.}  Compute the equilibrium price of a claim to one
+unit of consumption at date $5$, denominated in units of time $0$
+consumption, contingent on the following history of growth rates:
+$(\lambda_1, \lambda_2, \ldots, \lambda_5) =( .97, .97, 1.03, .97,
+1.03)$.
+
+\medskip
+\noindent{\bf c.}  Compute the equilibrium price of a claim to one
+unit of consumption at date $5$, denominated in units of time $0$
+consumption, contingent on the following history of growth rates:
+$(\lambda_1, \lambda_2, \ldots, \lambda_5) = (1.03,  1.03, 1.03,
+1.03, .97)$.
+
+
+
+\medskip
+\noindent{\bf d.}  Give a formula for the price at time $0$ of a
+claim on the entire endowment sequence.
+%
+%\medskip
+%\noindent{\bf e.}  Give a formula for the price at time $0$ of a
+%claim on consumption in period 5,   contingent on the growth rate
+%$\lambda_5$ being $.97$ (regardless of the intervening growth
+%rates).
+
+
+
+
+\bye 
+
+
+
+\noindent{\it Exercise 1.} \quad This exercise
+deals with Cagan's  money demand under rational
+expectations.
+A version of Cagan's (1956) demand function for money
+is
+$$ m_t - p_t = - \alpha (p_{t+1} - p_t),  \alpha > 0, \ t \geq 0, \leqno(1) $$
+where $m_t$ is the log of the nominal money supply and
+$p_t$ is the price level at $t$.  Equation  (1) states
+that the demand for real balances varies inversely with
+the expected rate of inflation, $(p_{t+1} -p_t)$.  There
+is no uncertainty, so the expected   inflation rate equals
+the actual one.   The money supply obeys  the
+difference equation
+$$ (1-L)(1-\rho L) m_t^s = 0  \leqno(2)$$
+subject to initial condition for $m_{-1}^s, m_{-2}^s$.
+In equilibrium, $$m_t \equiv m_t^s  \ \  \forall t \geq 0  \leqno(3) $$
+ (i.e., the
+demand for money equals the supply).  Assume that
+$$ \vert \rho \alpha  /( 1+ \alpha ) \vert< 1. \leqno(4)$$
+An {\it equilibrium} is a $\{p_t\}_{t=0}^\infty$
+that satisfies equations  (1), (2), and  (3)  for all $t$.
+
+\medskip
+\noindent{\bf a.}  Find an expression for an equilibrium $p_t$
+of the form
+$$ (p_t- p_{t-1}) = \sum_{j=0}^\infty w_j (m_{t-j}- m_{t-j-1}) + f_t. \leqno(5)  $$
+Please tell how to get formulas for the $w_j$ for all $j$ and
+the $f_t$ for all $t$.
+
+\medskip
+\noindent{\bf b.}  How many equilibria are there?
+
+\medskip
+\noindent{\bf c.}  Is there an equilibrium with $f_t =0$ for
+all $t$?
+\medskip
+\noindent{\bf d.}  Briefly tell where, if anywhere, condition
+(4) plays a role in your answer to part a.
+
+\medskip
+\noindent{\bf e.}  For the parameter values $\alpha =1,
+\rho=1$, compute and display all the equilibria.
+
+
+\medskip
+
+
+\noindent{\it Exercise 2.} \quad
+  The $n \times 1$  state vector of an economy
+is governed by the linear stochastic difference equation
+$$ x_{t+1} = A x_t + C_t w_{t+1} \leqno(1) $$
+where $C_t$ is a possibly time-varying matrix (known at $t$)
+and $w_{t+1}$ is an $m \times 1$ martingale difference
+sequence adapted to its own history with $E w_{t+1} w_{t+1} '| J_t = I$,
+where $J_t = \left[\matrix{w_t & \ldots & w_1 & x_0\cr}\right]$.
+A scalar one-period payoff $p_{t+1}$ is given by
+$$ p_{t+1} = P x_{t+1} \leqno(2)  $$
+The stochastic discount factor for this economy is
+a scalar $m_{t+1}$ that obeys
+$$ m_{t+1} = {M x_{t+1}\over M x_t}. \leqno(3) $$
+Finally, the price at time $t$ of the one-period payoff
+is given by $q_t = f_t(x_t)$, where $f_t$ is some possibly time-varying
+function
+of the   state.    That $m_{t+1}$ is  a  stochastic   discount factor means
+that
+ $$E(m_{t+1} p_{t+1} | J_t) = q_t. \leqno(4) $$
+\medskip
+\noindent{\bf a.}   Compute  $f_t(x_t)$, describing in
+detail how it depends on $A$ and $C_t$.
+
+\medskip
+\noindent{\bf b.}   Suppose that an econometrician has a time series
+data set \hfil\break $X_t = \left[\matrix{z_t & m_{t+1} &  p_{t+1} & q_t \cr} \right]$,
+for $t =1, \ldots, T$,
+where $ z_t$ is a strict subset of the variables in the
+state   $x_t$.  Assume that  investors in the economy see $x_t$ even
+though the econometrician  sees only a subset $z_t$ of $x_t$.
+Briefly describe a way to use these data to test implication
+(4).  (Possibly but perhaps not useful hint: recall the law
+of iterated expectations.)
+
+\medskip
+
+
+\noindent{\it Exercise 3.} \quad An infinitely lived  person's `true intelligence'  $\theta \sim {\cal N}(100, 100)$, i.e., mean 100, variance 100. For each date $t \geq 0$,
+the person takes a `test' with the  outcome being a univariate random variable   $y_t = \theta + v_t$,
+where $v_t$ is an i.i.d.~process with distribution ${\cal N}(0, 100)$. The person's initial IQ is $IQ_0=100$ and at date  $t\geq 1$ before the date $t$ test is
+taken it is ${\rm IQ}_t = E \theta | y^{t-1}$, where $y^{t-1}$ is the history of test scores from date $0$ until date $t-1$.
+
+\medskip
+\noindent{\bf a.}  Give a recursive formula for ${\rm IQ}_t$ and for $E ({\rm IQ}_t - \theta)^2$.
+\medskip
+\noindent {\bf b.}  Use Matlab to simulate 10 draws of $\theta$ and associated paths of $y_t, {\rm IQ}_t$ for $t=0, \ldots, 50$.
+\medskip
+\noindent {\bf c.}  Prove that $  \lim_{t\rightarrow \infty} E ({\rm IQ}_t - \theta)^2=0$.
+
+
+
+\noindent{\it Exercise 5.}\quad  A sequence of decision makers at dates $t= 0, 1, \ldots, $ chooses $\{x_{t+1}, u_t \}_{t=0}^\infty$ subject to
+$$ x_{t+1} = A x_t + B u_t, \quad t \geq 0 $$
+where $A$ is an $n \times n$ matrix, $B$ is an $n \times k$ matrix,  $u_t$ is a $k \times 1$ vector of time $t$
+``controls'', and $x_0$ is a given initial condition.   Let $r(x_t, u_t ) = - ( x_t ' R x_t + u_t' Q u_t)$, where $R$ and $Q$ are positive definite
+matrices.  A time $t$ decision maker chooses $u_t, x_{t+1} $. A time $t$ decision maker's preferences are ordered by
+$$ r(x_t, u_t) + \delta \sum_{j=1}^\infty \beta^j r(x_{t+j}, u_{t+j}), \leqno(0) $$
+where $\beta \in (0,1)$ and $\delta \in (0,1]$.
+
+\medskip
+\noindent{\bf a.} Let $V(x)$ solve the following Bellman equation:
+$$ V(x) = r(x, -Fx) + \beta V((A-BF)x )  .  \leqno(1) $$
+Please interpret $V(x)$; i.e., please complete the sentence ``$V(x)$ is the value of $\ldots$ ''.
+
+% \medskip
+%
+% \noindent{\bf a'. }  Please write a discrete Lyapunov equation whose solution determines $V(x)$.
+
+\medskip \noindent{\bf b.} For a given matrix $F$, please guess a functional form for $V(x)$, then
+describe an algorithm for solving the functional equation (1) for $V(x)$.  Please get as far as you can in computing  $V(x)$.
+
+\medskip
+
+\noindent{\bf c.}  Consider the functional equation
+$$ U(x) = \max_u \left\{ r(x,u) + \delta \beta V(Ax + B u) \right\} , \leqno(2) $$
+where $V(x)$ satisfies the Bellman equation (1). Further, let $U(x)$ be attained by
+$u = - G x$, so that
+$$ U(x) = r(x,-Gx) + \delta \beta V\left((A-BG)x\right) . \leqno(2) $$
+Please interpret $U(x)$ as a value function.
+
+\medskip
+\noindent{\bf d.} Please define a Markov perfect equilibrium for the sequence of  problems solved by the sequence
+of decision makers who choose $\{u_t\}_{t=0}^\infty$.
+
+\medskip
+\noindent{\bf e.} Please describe how to compute a Markov perfect equilibrium in this setting.
+
+\medskip
+\noindent{\bf f.} Please compare your algorithm for computing a Markov perfect equilibrium with the Howard policy improvement
+algorithm.
+
+
+\medskip
+
+\noindent{\it Exercise 6. }  \quad Consider the
+modified version of the optimal linear regulator problem where the
+objective is to maximize
+$$-  \sum_{t=0}^\infty \beta^t \left\{ x_t' R x_t + u_t' Q u_t
+    + 2 u_t' H x_t \right\}$$
+subject to the law of motion:
+$$ x_{t+1} = A x_t + B u_t .$$
+Here $x_t$ is an $n \times 1$ state vector, $u_t$ is a $k \times 1$
+vector of controls, and $x_0$ is a given initial condition.   The matrices
+$R, Q$ are positive definite and symmetric.
+ The
+maximization is with respect to sequences $\{u_t, x_t\}_{t=0}^\infty$.
+\medskip
+\noindent {\bf a.} Show  that the optimal policy has the form
+$$ u_t = - (Q + \beta B'P B)^{-1} (\beta B' P A + H) x_t,$$
+where $P$ solves the
+algebraic matrix Riccati equation
+$$ P = R + \beta A' P A - (\beta A' P B + H')
+       (Q+\beta B'PB)^{-1} (\beta B' P A + H) . \eqno(1) $$ %\EQN ricccross $$
+\medskip
+
+
+
+
+
+\noindent{\it Exercise 7.}  \quad
+  A government faces an  exogenous stream of
+government expenditures $\{g_t\}$ that it must finance. Total
+government expenditures at $t$ consist of two components:
+$$ g_t = g_{Tt} + g_{Pt} \leqno(1) $$
+where $g_{Tt}$ is transitory expenditures and $g_{Pt}$ is
+permanent expenditures.  At the beginning of period $t$, the
+government observes the history up to $t$ of both $g_{Tt}$ and
+$g_{Pt}$.  Further, it knows the stochastic laws of motion of
+both, namely,
+$$ \eqalign{ g_{Pt+1} &= g_{Pt} + c_1 \epsilon_{1,t+1} \cr
+             g_{Tt+1} & = (1 -\rho) \mu_T + \rho g_{Tt} + c_2
+             \epsilon_{2t+1} \cr } \leqno(2) $$
+where $\epsilon_{t+1} = \left[\matrix{\epsilon_{1t+1} \cr
+\epsilon_{2t+1} \cr}\right]$ is an i.i.d.\ Gaussian vector process
+with mean zero and identity covariance matrix.  The government
+finances its budget with a distorting taxes. If it collects $T_t$
+total revenues at $t$, it bears a dead weight loss of $W(T_t)$
+where $W(T) = w_1 T_t + .5 w_2 T_t^2 $, where $w_1 , w_2 > 0$. The
+government's loss functional is
+$$ E \sum_{t=0}^\infty \beta^t W(T_t), \quad \beta \in (0,1). \leqno (3) $$
+The government can purchase or issue one-period risk-free loans at
+a constant price $q$. Therefore, it faces a sequence of budget
+constraints
+$$ g_t + q b_{t+1} = T_t + b_t, \leqno(4)  $$
+where $q^{-1}$ is the gross rate of return on one-period risk-free
+government loans.  Assume that $b_0 = 0$.  The government also
+faces the terminal value condition
+$$ \lim_{t \rightarrow +\infty} \beta^t W'(T_t) b_{t+1} = 0 ,$$
+which prevents it from running a Ponzi scheme. The government
+wants to design a tax collection strategy expressing $T_t$ as a
+function of the history of $g_{Tt}, g_{Pt}, b_t$ that {\it
+minimizes\/} (3) subject to (1), (2), and (4).
+
+\medskip
+\noindent {\bf a.}  Formulate the government's problem as a
+dynamic programming problem.  Please carefully define the state
+and control for this problem.  Write the Bellman equation in as
+much detail as you can.  Tell a computational strategy for solving
+the Bellman equation. Tell the forms of the optimal value function
+and the optimal decision rule.
+
+\medskip \noindent
+{\bf b.} \ Using objects that you computed in part {\bf a}, please state
+the form of the law of motion for the joint process of $g_{Tt},
+g_{Pt}, T_t, b_{t+1}$ under the optimal government policy.
+\medskip
+
+
+
+\medskip\noindent
+{\it Exercise 8.} \quad
+For $t \geq 0$, the endowment for a one-good economy  $d_t$ is governed by the second order stochastic difference equation
+$$ d_{t+1} = \rho_0 + \rho_1 d_t + \rho_2 d_{t-1} + \sigma_d \epsilon_{t+1} $$
+where $\epsilon_{t+1}$ is an i.i.d.\ process and $\epsilon_{t+1} \sim {\cal N}(0,1)$, $\rho_0, \rho_1$, and  $\rho_2$ are scalars, and $d_0, d_1$ are given initial conditions.
+  A {\it stochastic discount factor}
+is given by $s_t = \beta^t (b_0- b_1 d_t)$, where $b_0$ is a positive  scalar, $b_1 \geq 0$, and $\beta \in (0,1)$.   The value of the endowment at time $0$ is defined to be
+$$ v_0 = E_0 \sum_{t=0}^\infty s_t d_t  \leqno(1) $$
+and $E_0$ is the mathematical expectation operator conditioned on $d_0, d_{-1}$.
+
+\medskip
+\noindent{\bf a.}  Assume that $v_0$ in equation (1) is finite.  Carefully describe a recursive algorithm for computing
+$v_0$.
+
+\medskip
+\noindent{\bf b.}   Describe conditions on $\beta, \rho_1, \rho_2$ that are sufficient to make  $v_0$  finite.
+
+

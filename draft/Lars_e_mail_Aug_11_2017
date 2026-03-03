@@ -1,0 +1,25 @@
+Dear Tom,
+
+Since both of your emails yesterday night were sent to Chase and me, I simply replied directly to Chase. He had indeed produced the best graphical outcomes that we could ever have wished for. Earlier eye-ball comparison of the two perturbations in the Econometrica article and CET’s experiment for us, respectively, really panned out and outcomes are strikingly similar.
+
+To bring that point across clear and loud, my recommendation is that we choose the format with all four lines in the same figure. To see how it will look like, please import Chase’s AllComparisonFigure.eps into you RMT4 folder and replace the present CET figure command with the new figure and caption:
+AllComparisonFigure
+
+\midfigure{figMLI_CLT}
+\centerline{\epsfxsize=3truein\epsffile{AllComparisonFigure.eps}}
+\caption{Impulse response of unemployment to a neutral
+technology shock in the DSGE analyses. The solid lines refer
+to estimated models of AOB and Nash bargaining,
+respectively. The
+dashed lines refer to the perturbed models where parameter
+values are cut in half for the replacement ratio, as well as
+for a firm's cost to make a counteroffer in the AOB model. The
+two solid (dashed) lines are almost indistinguishable from each
+other, except for the Nash bargaining model being slightly below
+the AOB model.}
+\infiglist{figMLI_CLT}
+\endfigure
+
+Besides this revision of the figure caption, we will also have to change a few descriptions of the figure in  the main text.
+
+Lars

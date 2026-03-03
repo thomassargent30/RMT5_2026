@@ -1,0 +1,35 @@
+Dear Tom,
+
+ 
+
+It is great to have researchers like Michael Reiter who make research tools available to others.
+
+ 
+
+As a check of our Chang-Kim calculations from RMT3, it would be an educational experience for a good PhD student to adapt Reiter’s code and compute our Prescott tax-and-transfer examples. After shutting down the aggregate uncertainty, one would simply have to introduce taxes and transfers, and then, for a given tax rate, write a “loop” to find the equilibrium lump-sum transfer that balances the government budget constraint.
+
+ 
+
+As mentioned earlier, my conjecture would be that Takahashi’s corrections of Chang and Kim’s computation method for aggregate uncertainty do not affect our steady-state calculations without aggregate uncertainty. Recall that Takahashi (p. 1448) identifies two sources of errors: (1) inaccurate interpolations of “within-the-period value function [due to] a discontinuity in the aggregate state,” and (2) problems when “the perceived [Krusell-Smith] and equilibrium [market clearing]
+
+wages are different.” Well, none of these issues should be at play in our steady-state calculations without aggregate uncertainty.
+
+ 
+
+Certainly, it would be a excellent exercise for a student wanting to master computational tools and to engage in a substantive issue. The student might even want to go to the bottom of remaining differences between Takahashi’s corrected numbers and those in Chang and Kim’s back-to-back rejoinder in that AER issue – differences not addressed by the authors.
+
+ 
+
+Specifically, it is sort of annoying that you after corrections still end up with different numbers for the standard deviation of the labor market wedge relative to output (Takahashi 0.24 versus Chang-Kim’s rejoinder 0.32) and the correlation between hours and labor productivity (Takahashi 0.80 versus Chang-Kim’s rejoinder 0.70). My guess is that the answer to those differences lies in Takahashi’s footnote 11, i.e., instead of simulating 200,000 individuals, Takahashi imposes constancy of the idiosyncratic productivity distribution by “approximating the household distribution at 2,000 (wealth) × 17 (productivity) points and thereby holding the productivity distribution constant throughout my simulation.” As you can see in Takahashi’s tables, this alternative algorithm does indeed lower the labor wedge statistic by 9 percentage points and increase the hour-productivity correlation by 10 percentage points in the column “adjusted replication” of the original Chang-Kim paper. So, it seems likely that those outcomes then spill over to their respective corrections of the original Chang-Kim paper. (But I have no clue why simulating 200,000 individuals versus an imposition of constant productivity distribution would lead to those particular differences …)
+
+ 
+
+Well, for the purpose of RMT5, we are simply interested to confirm that our Chang-Kim calculations are unaffected by Takahashi’s corrections, and we will include a brief footnote to warn our readers about Takahashi’s finding of computational challenges under simulations with aggregate uncertainty.
+
+ 
+
+Yes, our RMT adventures have been very exciting and thanks to RMT, we get to learn about all these things that might never have crossed our path otherwise. Thank you very much for inviting me to this most exciting collaboration.
+
+ 
+
+Lars

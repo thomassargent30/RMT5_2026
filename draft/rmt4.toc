@@ -1,0 +1,2683 @@
+% Table of Contents for job `RMT4' -- Created at 2018/6/1 15:54
+% ====================================
+\TOCitem{0}
+{Acknowledgements}
+{xxi}% 
+\TOCitem{0}
+{Preface to the fourth edition}
+{xxiii}% 
+\vskip 0pt\penalty -200\hbox {\vrule height10.675pt depth5.325pt width0pt}\penalty \@M 
+\TOCitem{0}
+{{\fam \bffam \twelvebf Part I: Imperialism of Recursive Methods}}
+{}% 
+\TOCitem{0}
+{\TOCcID{1.}Overview}
+{3}% 
+\TOCitem{1}
+{\TOCsID{1.1.}Warning.}
+{3}% 
+\TOCitem{1}
+{\TOCsID{1.2.}A common ancestor.}
+{3}% 
+\TOCitem{1}
+{\TOCsID{1.3.}The savings problem.}
+{4}% 
+\TOCitem{2}
+{\TOCsID{1.3.1.}Linear quadratic permanent income theory.}
+{5}% 
+\TOCitem{2}
+{\TOCsID{1.3.2.}Precautionary saving.}
+{6}% 
+\TOCitem{2}
+{\TOCsID{1.3.3.}Complete markets, insurance, and the distribution of wealth.}
+{7}% 
+\TOCitem{2}
+{\TOCsID{1.3.4.}Bewley models.}
+{8}% 
+\TOCitem{2}
+{\TOCsID{1.3.5.}History dependence in standard consumption models.}
+{10}% 
+\TOCitem{2}
+{\TOCsID{1.3.6.}Growth theory.}
+{11}% 
+\TOCitem{2}
+{\TOCsID{1.3.7.}Limiting results from dynamic optimal taxation.}
+{12}% 
+\TOCitem{2}
+{\TOCsID{1.3.8.}Asset pricing.}
+{13}% 
+\TOCitem{2}
+{\TOCsID{1.3.9.}Multiple assets.}
+{14}% 
+\TOCitem{1}
+{\TOCsID{1.4.}Recursive methods.}
+{16}% 
+\TOCitem{2}
+{\TOCsID{1.4.1.}Dynamic programming and the Lucas Critique.}
+{18}% 
+\TOCitem{2}
+{\TOCsID{1.4.2.}Dynamic programming challenged.}
+{19}% 
+\TOCitem{2}
+{\TOCsID{1.4.3.}Imperialistic response of dynamic programming.}
+{19}% 
+\TOCitem{2}
+{\TOCsID{1.4.4.}History dependence and ``dynamic programming squared''.}
+{21}% 
+\TOCitem{2}
+{\TOCsID{1.4.5.}Dynamic principal-agent problems.}
+{23}% 
+\TOCitem{2}
+{\TOCsID{1.4.6.}More applications.}
+{25}% 
+\vfil \par \penalty -\@M 
+\vskip 0pt\penalty -200\hbox {\vrule height10.675pt depth5.325pt width0pt}\penalty \@M 
+\TOCitem{0}
+{{\fam \bffam \twelvebf Part II: Tools}}
+{}% 
+\TOCitem{0}
+{\TOCcID{2.}Time Series}
+{29}% 
+\TOCitem{1}
+{\TOCsID{2.1.}Two workhorses.}
+{29}% 
+\TOCitem{1}
+{\TOCsID{2.2.}Markov chains.}
+{29}% 
+\TOCitem{2}
+{\TOCsID{2.2.1.}Stationary distributions.}
+{31}% 
+\TOCitem{2}
+{\TOCsID{2.2.2.}Asymptotic stationarity.}
+{32}% 
+\TOCitem{2}
+{\TOCsID{2.2.3.}Forecasting the state.}
+{33}% 
+\TOCitem{2}
+{\TOCsID{2.2.4.}Forecasting functions of the state.}
+{34}% 
+\TOCitem{2}
+{\TOCsID{2.2.5.}Forecasting functions.}
+{35}% 
+\TOCitem{2}
+{\TOCsID{2.2.6.}Enough one-step-ahead forecasts determine $P$.}
+{35}% 
+\TOCitem{2}
+{\TOCsID{2.2.7.}Invariant functions and ergodicity.}
+{36}% 
+\TOCitem{2}
+{\TOCsID{2.2.8.}Simulating a Markov chain.}
+{40}% 
+\TOCitem{2}
+{\TOCsID{2.2.9.}The likelihood function.}
+{40}% 
+\TOCitem{1}
+{\TOCsID{2.3.}Continuous-state Markov chain.}
+{41}% 
+\TOCitem{1}
+{\TOCsID{2.4.}Stochastic linear difference equations.}
+{42}% 
+\TOCitem{2}
+{\TOCsID{2.4.1.}First and second moments.}
+{45}% 
+\TOCitem{2}
+{\TOCsID{2.4.2.}Summary of moment formulas.}
+{48}% 
+\TOCitem{2}
+{\TOCsID{2.4.3.}Impulse response function.}
+{48}% 
+\TOCitem{2}
+{\TOCsID{2.4.4.}Prediction and discounting.}
+{49}% 
+\TOCitem{2}
+{\TOCsID{2.4.5.}Geometric sums of quadratic forms.}
+{50}% 
+\TOCitem{3}
+{\TOCsID{2.4.5.1.}Asset pricing}
+{51}% 
+\TOCitem{3}
+{\TOCsID{2.4.5.2.}Evaluation of dynamic criterion}
+{51}% 
+\TOCitem{1}
+{\TOCsID{2.5.}Population regression.}
+{53}% 
+\TOCitem{2}
+{\TOCsID{2.5.1.}Multiple regressors.}
+{55}% 
+\TOCitem{1}
+{\TOCsID{2.6.}Estimation of model parameters.}
+{55}% 
+\TOCitem{1}
+{\TOCsID{2.7.}The Kalman filter.}
+{57}% 
+\TOCitem{3}
+{\TOCsID{2.7.0.1.}Gram-Schmidt process}
+{60}% 
+\TOCitem{3}
+{\TOCsID{2.7.0.2.}Hidden Markov model}
+{60}% 
+\TOCitem{1}
+{\TOCsID{2.8.}Estimation again.}
+{61}% 
+\TOCitem{1}
+{\TOCsID{2.9.}Vector autoregressions and the Kalman filter.}
+{62}% 
+\TOCitem{2}
+{\TOCsID{2.9.1.}Conditioning on the semi-infinite past of $y$.}
+{62}% 
+\TOCitem{2}
+{\TOCsID{2.9.2.}A time-invariant VAR.}
+{62}% 
+\TOCitem{2}
+{\TOCsID{2.9.3.}Interpreting VARs.}
+{63}% 
+\TOCitem{1}
+{\TOCsID{2.10.}Applications of the Kalman filter.}
+{64}% 
+\TOCitem{2}
+{\TOCsID{2.10.1.}Muth's reverse engineering exercise.}
+{64}% 
+\TOCitem{2}
+{\TOCsID{2.10.2.}Jovanovic's application.}
+{67}% 
+\TOCitem{1}
+{\TOCsID{2.11.}The spectrum.}
+{68}% 
+\TOCitem{2}
+{\TOCsID{2.11.1.}Examples.}
+{70}% 
+\TOCitem{1}
+{\TOCsID{2.12.}Example: the LQ permanent income model.}
+{72}% 
+\TOCitem{2}
+{\TOCsID{2.12.1.}Another representation.}
+{75}% 
+\TOCitem{2}
+{\TOCsID{2.12.2.}Debt dynamics.}
+{78}% 
+\TOCitem{2}
+{\TOCsID{2.12.3.}Two classic examples.}
+{79}% 
+\TOCitem{2}
+{\TOCsID{2.12.4.}Spreading consumption cross section.}
+{80}% 
+\TOCitem{2}
+{\TOCsID{2.12.5.}Invariant subspace approach.}
+{81}% 
+\TOCitem{1}
+{\TOCsID{2.13.}Concluding remarks.}
+{82}% 
+\TOCitem{1}
+{\TOCsID{A.}Linear difference equations.}
+{82}% 
+\TOCitem{2}
+{\TOCsID{2.A.1.}A first-order difference equation.}
+{82}% 
+\TOCitem{2}
+{\TOCsID{2.A.2.}A second-order difference equation.}
+{83}% 
+\TOCitem{1}
+{\TOCsID{2.15.}Exercises.}
+{85}% 
+\TOCitem{0}
+{\TOCcID{3.}Dynamic Programming}
+{105}% 
+\TOCitem{1}
+{\TOCsID{3.1.}Sequential problems.}
+{105}% 
+\TOCitem{2}
+{\TOCsID{3.1.1.}Three computational methods.}
+{108}% 
+\TOCitem{2}
+{\TOCsID{3.1.2.}Cobb-Douglas transition, logarithmic preferences.}
+{109}% 
+\TOCitem{2}
+{\TOCsID{3.1.3.}Euler equations.}
+{111}% 
+\TOCitem{2}
+{\TOCsID{3.1.4.}A sample Euler equation.}
+{111}% 
+\TOCitem{1}
+{\TOCsID{3.2.}Stochastic control problems.}
+{112}% 
+\TOCitem{1}
+{\TOCsID{3.3.}Concluding remarks.}
+{114}% 
+\TOCitem{1}
+{\TOCsID{3.4.}Exercise.}
+{114}% 
+\TOCitem{0}
+{\TOCcID{4.}Practical Dynamic Programming }
+{115}% 
+\TOCitem{1}
+{\TOCsID{4.1.}The curse of dimensionality.}
+{115}% 
+\TOCitem{1}
+{\TOCsID{4.2.}Discrete-state dynamic programming.}
+{115}% 
+\TOCitem{1}
+{\TOCsID{4.3.}Bookkeeping.}
+{117}% 
+\TOCitem{1}
+{\TOCsID{4.4.}Application of Howard improvement algorithm.}
+{118}% 
+\TOCitem{1}
+{\TOCsID{4.5.}Numerical implementation.}
+{120}% 
+\TOCitem{2}
+{\TOCsID{4.5.1.}Modified policy iteration.}
+{121}% 
+\TOCitem{1}
+{\TOCsID{4.6.}Sample Bellman equations.}
+{121}% 
+\TOCitem{2}
+{\TOCsID{4.6.1.}Example 1: calculating expected utility.}
+{121}% 
+\TOCitem{2}
+{\TOCsID{4.6.2.}Example 2: risk-sensitive preferences.}
+{122}% 
+\TOCitem{2}
+{\TOCsID{4.6.3.}Example 3: costs of business cycles.}
+{123}% 
+\TOCitem{1}
+{\TOCsID{4.7.}Polynomial approximations.}
+{124}% 
+\TOCitem{2}
+{\TOCsID{4.7.1.}Recommended computational strategy.}
+{125}% 
+\TOCitem{2}
+{\TOCsID{4.7.2.}Chebyshev polynomials.}
+{126}% 
+\TOCitem{2}
+{\TOCsID{4.7.3.}Algorithm: summary.}
+{127}% 
+\TOCitem{2}
+{\TOCsID{4.7.4.}Shape-preserving splines.}
+{128}% 
+\TOCitem{1}
+{\TOCsID{4.8.}Concluding remarks.}
+{128}% 
+\TOCitem{0}
+{\TOCcID{5.}Linear Quadratic Dynamic Programming}
+{129}% 
+\TOCitem{1}
+{\TOCsID{5.1.}Introduction.}
+{129}% 
+\TOCitem{1}
+{\TOCsID{5.2.}The optimal linear regulator problem.}
+{130}% 
+\TOCitem{2}
+{\TOCsID{5.2.1.}Value function iteration.}
+{131}% 
+\TOCitem{2}
+{\TOCsID{5.2.2.}Discounted linear regulator problem.}
+{131}% 
+\TOCitem{2}
+{\TOCsID{5.2.3.}Policy improvement algorithm.}
+{132}% 
+\TOCitem{1}
+{\TOCsID{5.3.}The stochastic optimal linear regulator problem.}
+{133}% 
+\TOCitem{2}
+{\TOCsID{5.3.1.}Discussion of certainty equivalence.}
+{134}% 
+\TOCitem{1}
+{\TOCsID{5.4.}Shadow prices in the linear regulator.}
+{135}% 
+\TOCitem{2}
+{\TOCsID{5.4.1.}Stability.}
+{136}% 
+\TOCitem{1}
+{\TOCsID{5.5.}A Lagrangian formulation.}
+{138}% 
+\TOCitem{1}
+{\TOCsID{5.6.}The Kalman filter again.}
+{142}% 
+\TOCitem{1}
+{\TOCsID{5.7.}Concluding remarks.}
+{144}% 
+\TOCitem{1}
+{\TOCsID{A.}Matrix formulas.}
+{144}% 
+\TOCitem{1}
+{\TOCsID{5.9.}Exercises.}
+{145}% 
+\TOCitem{0}
+{\TOCcID{6.}Search and Unemployment}
+{157}% 
+\TOCitem{1}
+{\TOCsID{6.1.}Introduction.}
+{157}% 
+\TOCitem{1}
+{\TOCsID{6.2.}Preliminaries.}
+{158}% 
+\TOCitem{2}
+{\TOCsID{6.2.1.}Nonnegative random variables.}
+{158}% 
+\TOCitem{2}
+{\TOCsID{6.2.2.}Mean-preserving spreads.}
+{159}% 
+\TOCitem{1}
+{\TOCsID{6.3.}McCall's model of intertemporal job search.}
+{161}% 
+\TOCitem{2}
+{\TOCsID{6.3.1.}Characterizing reservation wage.}
+{163}% 
+\TOCitem{2}
+{\TOCsID{6.3.2.}Effects of mean-preserving spreads.}
+{165}% 
+\TOCitem{2}
+{\TOCsID{6.3.3.}Allowing quits.}
+{167}% 
+\TOCitem{2}
+{\TOCsID{6.3.4.}Waiting times.}
+{168}% 
+\TOCitem{2}
+{\TOCsID{6.3.5.}Firing.}
+{169}% 
+\TOCitem{1}
+{\TOCsID{6.4.}A lake model.}
+{171}% 
+\TOCitem{1}
+{\TOCsID{6.5.}A model of career choice.}
+{173}% 
+\TOCitem{1}
+{\TOCsID{6.6.}Offer distribution unknown.}
+{177}% 
+\TOCitem{1}
+{\TOCsID{6.7.}An equilibrium price distribution.}
+{182}% 
+\TOCitem{2}
+{\TOCsID{6.7.1.}A Burdett-Judd setup.}
+{183}% 
+\TOCitem{2}
+{\TOCsID{6.7.2.}Consumer problem with noisy search.}
+{183}% 
+\TOCitem{2}
+{\TOCsID{6.7.3.}Firms.}
+{185}% 
+\TOCitem{2}
+{\TOCsID{6.7.4.}Equilibrium.}
+{186}% 
+\TOCitem{2}
+{\TOCsID{6.7.5.}Special cases.}
+{187}% 
+\TOCitem{1}
+{\TOCsID{6.8.}Jovanovic's matching model.}
+{188}% 
+\TOCitem{2}
+{\TOCsID{6.8.1.}Recursive formulation and solution.}
+{191}% 
+\TOCitem{2}
+{\TOCsID{6.8.2.}Endogenous statistics.}
+{195}% 
+\TOCitem{1}
+{\TOCsID{6.9.}A longer horizon version of Jovanovic's model.}
+{197}% 
+\TOCitem{2}
+{\TOCsID{6.9.1.}The Bellman equations.}
+{198}% 
+\TOCitem{1}
+{\TOCsID{6.10.}Concluding remarks.}
+{200}% 
+\TOCitem{1}
+{\TOCsID{A.}More numerical dynamic programming.}
+{201}% 
+\TOCitem{2}
+{\TOCsID{6.A.1.}Example 4: search.}
+{201}% 
+\TOCitem{2}
+{\TOCsID{6.A.2.}Example 5: a Jovanovic model.}
+{202}% 
+\TOCitem{1}
+{\TOCsID{6.12.}Exercises.}
+{204}% 
+\vskip 0pt\penalty -200\hbox {\vrule height10.675pt depth5.325pt width0pt}\penalty \@M 
+\TOCitem{0}
+{{\fam \bffam \twelvebf Part III: Competitive Equilibria and Applications}}
+{}% 
+\TOCitem{0}
+{\TOCcID{7.}Recursive Competitive Equilibrium: I }
+{225}% 
+\TOCitem{1}
+{\TOCsID{7.1.}An equilibrium concept.}
+{225}% 
+\TOCitem{1}
+{\TOCsID{7.2.}Example: adjustment costs.}
+{226}% 
+\TOCitem{2}
+{\TOCsID{7.2.1.}A planning problem.}
+{229}% 
+\TOCitem{1}
+{\TOCsID{7.3.}Recursive competitive equilibrium.}
+{231}% 
+\TOCitem{1}
+{\TOCsID{7.4.}Equilibrium human capital accumulation.}
+{232}% 
+\TOCitem{2}
+{\TOCsID{7.4.1.}Planning problem.}
+{232}% 
+\TOCitem{2}
+{\TOCsID{7.4.2.}Decentralization.}
+{233}% 
+\TOCitem{1}
+{\TOCsID{7.5.}Equilibrium occupational choice.}
+{234}% 
+\TOCitem{2}
+{\TOCsID{7.5.1.}A planning problem.}
+{236}% 
+\TOCitem{2}
+{\TOCsID{7.5.2.}Decentralization.}
+{237}% 
+\TOCitem{1}
+{\TOCsID{7.6.}Markov perfect equilibrium.}
+{238}% 
+\TOCitem{2}
+{\TOCsID{7.6.1.}Computation.}
+{239}% 
+\TOCitem{1}
+{\TOCsID{7.7.}Linear Markov perfect equilibria.}
+{240}% 
+\TOCitem{2}
+{\TOCsID{7.7.1.}An example.}
+{242}% 
+\TOCitem{1}
+{\TOCsID{7.8.}Concluding remarks.}
+{244}% 
+\TOCitem{1}
+{\TOCsID{7.9.}Exercises.}
+{244}% 
+\TOCitem{0}
+{\TOCcID{8.}Equilibrium with Complete Markets}
+{249}% 
+\TOCitem{1}
+{\TOCsID{8.1.}Time $0$ versus sequential trading.}
+{249}% 
+\TOCitem{1}
+{\TOCsID{8.2.}The physical setting: preferences and endowments.}
+{249}% 
+\TOCitem{1}
+{\TOCsID{8.3.}Alternative trading arrangements.}
+{251}% 
+\TOCitem{2}
+{\TOCsID{8.3.1.}History dependence.}
+{252}% 
+\TOCitem{1}
+{\TOCsID{8.4.}Pareto problem.}
+{253}% 
+\TOCitem{2}
+{\TOCsID{8.4.1.}Time invariance of Pareto weights.}
+{254}% 
+\TOCitem{1}
+{\TOCsID{8.5.}Time $0$ trading: Arrow-Debreu securities.}
+{255}% 
+\TOCitem{2}
+{\TOCsID{8.5.1.}Equilibrium pricing function.}
+{257}% 
+\TOCitem{2}
+{\TOCsID{8.5.2.}Optimality of equilibrium allocation.}
+{257}% 
+\TOCitem{2}
+{\TOCsID{8.5.3.}Interpretation of trading arrangement.}
+{258}% 
+\TOCitem{2}
+{\TOCsID{8.5.4.}Equilibrium computation.}
+{258}% 
+\TOCitem{1}
+{\TOCsID{8.6.}Simpler computational algorithm.}
+{259}% 
+\TOCitem{2}
+{\TOCsID{8.6.1.}Example 1: risk sharing.}
+{259}% 
+\TOCitem{2}
+{\TOCsID{8.6.2.}Implications for equilibrium computation.}
+{260}% 
+\TOCitem{2}
+{\TOCsID{8.6.3.}Example 2: no aggregate uncertainty.}
+{260}% 
+\TOCitem{2}
+{\TOCsID{8.6.4.}Example 3: periodic endowment processes.}
+{261}% 
+\TOCitem{2}
+{\TOCsID{8.6.5.}Example 4.}
+{262}% 
+\TOCitem{1}
+{\TOCsID{8.7.}Primer on asset pricing.}
+{263}% 
+\TOCitem{2}
+{\TOCsID{8.7.1.}Pricing redundant assets.}
+{263}% 
+\TOCitem{2}
+{\TOCsID{8.7.2.}Riskless consol.}
+{263}% 
+\TOCitem{2}
+{\TOCsID{8.7.3.}Riskless strips.}
+{264}% 
+\TOCitem{2}
+{\TOCsID{8.7.4.}Tail assets.}
+{264}% 
+\TOCitem{2}
+{\TOCsID{8.7.5.}One-period returns.}
+{265}% 
+\TOCitem{1}
+{\TOCsID{8.8.}Sequential trading.}
+{266}% 
+\TOCitem{2}
+{\TOCsID{8.8.1.}Arrow securities.}
+{266}% 
+\TOCitem{2}
+{\TOCsID{8.8.2.}Financial wealth as an endogenous state variable.}
+{267}% 
+\TOCitem{2}
+{\TOCsID{8.8.3.}Reopening markets.}
+{268}% 
+\TOCitem{2}
+{\TOCsID{8.8.4.}Debt limits.}
+{269}% 
+\TOCitem{2}
+{\TOCsID{8.8.5.}Sequential trading.}
+{270}% 
+\TOCitem{2}
+{\TOCsID{8.8.6.}Equivalence of allocations.}
+{272}% 
+\TOCitem{1}
+{\TOCsID{8.9.}Recursive competitive equilibrium.}
+{274}% 
+\TOCitem{2}
+{\TOCsID{8.9.1.}Endowments governed by a Markov process.}
+{275}% 
+\TOCitem{2}
+{\TOCsID{8.9.2.}Equilibrium outcomes inherit the Markov property.}
+{276}% 
+\TOCitem{2}
+{\TOCsID{8.9.3.}Recursive formulation of optimization and equilibrium.}
+{277}% 
+\TOCitem{2}
+{\TOCsID{8.9.4.}Computing an equilibrium with sequential trading of Arrow-securities.}
+{279}% 
+\TOCitem{1}
+{\TOCsID{8.10.}$j$-step pricing kernel.}
+{280}% 
+\TOCitem{2}
+{\TOCsID{8.10.1.}Arbitrage-free pricing.}
+{281}% 
+\TOCitem{1}
+{\TOCsID{8.11.}Term structure of yields on risk-free claims.}
+{283}% 
+\TOCitem{2}
+{\TOCsID{8.11.1.}Constructing yields.}
+{283}% 
+\TOCitem{1}
+{\TOCsID{8.12.}Recursive version of Pareto problem.}
+{285}% 
+\TOCitem{1}
+{\TOCsID{8.13.}Concluding remarks.}
+{287}% 
+\TOCitem{1}
+{Appendices: Departures from key assumptions.}
+{289}% 
+\TOCitem{1}
+{\TOCsID{A.}Heterogenous discounting.}
+{289}% 
+\TOCitem{1}
+{\TOCsID{B.}Heterogenous beliefs .}
+{290}% 
+\TOCitem{2}
+{\TOCsID{8.B.1.}Example: one type's beliefs are closer to the truth.}
+{292}% 
+\TOCitem{2}
+{\TOCsID{8.B.2.}Equilibrium prices reflect beliefs.}
+{294}% 
+\TOCitem{2}
+{\TOCsID{8.B.3.}Mispricing?}
+{294}% 
+\TOCitem{2}
+{\TOCsID{8.B.4.}Learning.}
+{294}% 
+\TOCitem{2}
+{\TOCsID{8.B.5.}Role of complete markets.}
+{295}% 
+\TOCitem{1}
+{\TOCsID{C.}Incomplete markets.}
+{295}% 
+\TOCitem{2}
+{\TOCsID{8.C.1.}An example economy.}
+{296}% 
+\TOCitem{2}
+{\TOCsID{8.C.2.}Asset payoff correlated with i.i.d.\ aggregate endowment.}
+{299}% 
+\TOCitem{2}
+{\TOCsID{8.C.3.}Beneficial market incompleteness.}
+{301}% 
+\TOCitem{1}
+{\TOCsID{8.18.}Exercises.}
+{304}% 
+\TOCitem{0}
+{\TOCcID{9.}Overlapping Generations}
+{331}% 
+\TOCitem{1}
+{\TOCsID{9.1.}Endowments and preferences.}
+{332}% 
+\TOCitem{1}
+{\TOCsID{9.2.}Time $0$ trading.}
+{332}% 
+\TOCitem{2}
+{\TOCsID{9.2.1.}Example equilibria.}
+{333}% 
+\TOCitem{2}
+{\TOCsID{9.2.2.}Relation to welfare theorems.}
+{334}% 
+\TOCitem{2}
+{\TOCsID{9.2.3.}Nonstationary equilibria.}
+{335}% 
+\TOCitem{2}
+{\TOCsID{9.2.4.}Computing equilibria.}
+{337}% 
+\TOCitem{1}
+{\TOCsID{9.3.}Sequential trading.}
+{342}% 
+\TOCitem{1}
+{\TOCsID{9.4.}Money.}
+{342}% 
+\TOCitem{2}
+{\TOCsID{9.4.1.}Computing more equilibria with valued fiat currency.}
+{343}% 
+\TOCitem{2}
+{\TOCsID{9.4.2.}Equivalence of equilibria.}
+{344}% 
+\TOCitem{1}
+{\TOCsID{9.5.}Deficit finance.}
+{345}% 
+\TOCitem{2}
+{\TOCsID{9.5.1.}Steady states and the Laffer curve.}
+{347}% 
+\TOCitem{1}
+{\TOCsID{9.6.}Equivalent setups.}
+{348}% 
+\TOCitem{2}
+{\TOCsID{9.6.1.}The economy.}
+{348}% 
+\TOCitem{2}
+{\TOCsID{9.6.2.}Growth.}
+{350}% 
+\TOCitem{1}
+{\TOCsID{9.7.}Optimality and the existence of monetary equilibria.}
+{351}% 
+\TOCitem{2}
+{\TOCsID{9.7.1.}Balasko-Shell criterion for optimality.}
+{358}% 
+\TOCitem{1}
+{\TOCsID{9.8.}Within-generation heterogeneity.}
+{359}% 
+\TOCitem{2}
+{\TOCsID{9.8.1.}Nonmonetary equilibrium.}
+{360}% 
+\TOCitem{2}
+{\TOCsID{9.8.2.}Monetary equilibrium.}
+{360}% 
+\TOCitem{2}
+{\TOCsID{9.8.3.}Nonstationary equilibria.}
+{362}% 
+\TOCitem{2}
+{\TOCsID{9.8.4.}The real bills doctrine.}
+{362}% 
+\TOCitem{1}
+{\TOCsID{9.9.}Gift-giving equilibrium.}
+{364}% 
+\TOCitem{1}
+{\TOCsID{9.10.}Concluding remarks.}
+{366}% 
+\TOCitem{1}
+{\TOCsID{9.11.}Exercises.}
+{366}% 
+\TOCitem{0}
+{\TOCcID{10.}Ricardian Equivalence}
+{379}% 
+\TOCitem{1}
+{\TOCsID{10.1.}Borrowing limits and Ricardian equivalence.}
+{379}% 
+\TOCitem{1}
+{\TOCsID{10.2.}Infinitely lived agent economy.}
+{380}% 
+\TOCitem{2}
+{\TOCsID{10.2.1.}Optimal consumption/savings decision when $b_{t+1} \geq 0$.}
+{381}% 
+\TOCitem{2}
+{\TOCsID{10.2.2.}Optimal consumption/savings decision when $b_{t+1} \geq \mathaccent "707E b_{t+1}$.}
+{382}% 
+\TOCitem{1}
+{\TOCsID{10.3.}Government finance.}
+{383}% 
+\TOCitem{2}
+{\TOCsID{10.3.1.}Effect on household.}
+{383}% 
+\TOCitem{1}
+{\TOCsID{10.4.}Linked generations interpretation.}
+{387}% 
+\TOCitem{1}
+{\TOCsID{10.5.}Concluding remarks.}
+{388}% 
+\TOCitem{0}
+{\TOCcID{11.}Fiscal Policies in a Growth Model}
+{391}% 
+\TOCitem{1}
+{\TOCsID{11.1.}Introduction.}
+{391}% 
+\TOCitem{1}
+{\TOCsID{11.2.}Economy.}
+{392}% 
+\TOCitem{2}
+{\TOCsID{11.2.1.}Preferences, technology, information.}
+{392}% 
+\TOCitem{2}
+{\TOCsID{11.2.2.}Components of a competitive equilibrium.}
+{393}% 
+\TOCitem{1}
+{\TOCsID{11.3.}The term structure of interest rates.}
+{394}% 
+\TOCitem{1}
+{\TOCsID{11.4.}Digression: sequential version of government budget constraint.}
+{395}% 
+\TOCitem{2}
+{\TOCsID{11.4.1.}Irrelevance of maturity structure of government debt.}
+{398}% 
+\TOCitem{1}
+{\TOCsID{11.5.}Competitive equilibria with distorting taxes.}
+{399}% 
+\TOCitem{2}
+{\TOCsID{11.5.1.}The household: no-arbitrage and asset-pricing formulas.}
+{399}% 
+\TOCitem{2}
+{\TOCsID{11.5.2.}User cost of capital formula.}
+{401}% 
+\TOCitem{2}
+{\TOCsID{11.5.3.}Household first-order conditions.}
+{402}% 
+\TOCitem{2}
+{\TOCsID{11.5.4.}A theory of the term structure of interest rates.}
+{402}% 
+\TOCitem{2}
+{\TOCsID{11.5.5.}Firm.}
+{403}% 
+\TOCitem{1}
+{\TOCsID{11.6.}Computing equilibria.}
+{403}% 
+\TOCitem{2}
+{\TOCsID{11.6.1.}Inelastic labor supply.}
+{404}% 
+\TOCitem{2}
+{\TOCsID{11.6.2.}The equilibrium steady state.}
+{405}% 
+\TOCitem{2}
+{\TOCsID{11.6.3.}Computing the equilibrium path with the shooting algorithm.}
+{406}% 
+\TOCitem{2}
+{\TOCsID{11.6.4.}Other equilibrium quantities.}
+{407}% 
+\TOCitem{2}
+{\TOCsID{11.6.5.}Steady-state $\mathaccent "7016 R$.}
+{408}% 
+\TOCitem{2}
+{\TOCsID{11.6.6.}Lump-sum taxes available.}
+{408}% 
+\TOCitem{2}
+{\TOCsID{11.6.7.}No lump-sum taxes available.}
+{408}% 
+\TOCitem{1}
+{\TOCsID{11.7.}A digression on back-solving.}
+{409}% 
+\TOCitem{1}
+{\TOCsID{11.8.}Effects of taxes on equilibrium allocations and prices.}
+{410}% 
+\TOCitem{1}
+{\TOCsID{11.9.}Transition experiments with inelastic labor supply.}
+{411}% 
+\TOCitem{1}
+{\TOCsID{11.10.}Linear approximation.}
+{418}% 
+\TOCitem{2}
+{\TOCsID{11.10.1.}Relationship between the $\lambda _i$'s.}
+{421}% 
+\TOCitem{2}
+{\TOCsID{11.10.2.}Conditions for existence and uniqueness.}
+{422}% 
+\TOCitem{2}
+{\TOCsID{11.10.3.}Once-and-for-all jumps.}
+{422}% 
+\TOCitem{2}
+{\TOCsID{11.10.4.}Simplification of formulas.}
+{423}% 
+\TOCitem{2}
+{\TOCsID{11.10.5.}A one-time pulse.}
+{424}% 
+\TOCitem{2}
+{\TOCsID{11.10.6.}Convergence rates and anticipation rates.}
+{424}% 
+\TOCitem{2}
+{\TOCsID{11.10.7.}A remark about accuracy: Euler equation errors.}
+{426}% 
+\TOCitem{1}
+{\TOCsID{11.11.}Growth.}
+{426}% 
+\TOCitem{1}
+{\TOCsID{11.12.}Elastic labor supply.}
+{430}% 
+\TOCitem{2}
+{\TOCsID{11.12.1.}Steady-state calculations.}
+{431}% 
+\TOCitem{2}
+{\TOCsID{11.12.2.}Some experiments.}
+{432}% 
+\TOCitem{1}
+{\TOCsID{11.13.}A two-country model.}
+{436}% 
+\TOCitem{2}
+{\TOCsID{11.13.1.}Initial conditions.}
+{439}% 
+\TOCitem{2}
+{\TOCsID{11.13.2.}Equilibrium steady state values.}
+{439}% 
+\TOCitem{2}
+{\TOCsID{11.13.3.}Initial equilibrium values.}
+{440}% 
+\TOCitem{2}
+{\TOCsID{11.13.4.}Shooting algorithm.}
+{440}% 
+\TOCitem{2}
+{\TOCsID{11.13.5.}Transition exercises.}
+{441}% 
+\TOCitem{3}
+{\TOCsID{11.13.5.1.}Opening International Flows}
+{442}% 
+\TOCitem{3}
+{\TOCsID{11.13.5.2.}Foreseen Increase in $g$}
+{443}% 
+\TOCitem{3}
+{\TOCsID{11.13.5.3.}Foreseen increase in $\tau _k$}
+{446}% 
+\TOCitem{1}
+{\TOCsID{11.14.}Concluding remarks.}
+{447}% 
+\TOCitem{1}
+{\TOCsID{A.}Log linear approximations.}
+{448}% 
+\TOCitem{1}
+{\TOCsID{11.16.}Exercises.}
+{449}% 
+\TOCitem{0}
+{\TOCcID{12.}Recursive Competitive Equilibrium: II}
+{471}% 
+\TOCitem{1}
+{\TOCsID{12.1.}Endogenous aggregate state variable.}
+{471}% 
+\TOCitem{1}
+{\TOCsID{12.2.}The stochastic growth model.}
+{472}% 
+\TOCitem{1}
+{\TOCsID{12.3.}Lagrangian formulation of the planning problem.}
+{474}% 
+\TOCitem{1}
+{\TOCsID{12.4.}Time $0$ trading: Arrow-Debreu securities.}
+{474}% 
+\TOCitem{2}
+{\TOCsID{12.4.1.}Household.}
+{475}% 
+\TOCitem{2}
+{\TOCsID{12.4.2.}Firm of type I.}
+{476}% 
+\TOCitem{2}
+{\TOCsID{12.4.3.}Firm of type II.}
+{477}% 
+\TOCitem{2}
+{\TOCsID{12.4.4.}Equilibrium prices and quantities.}
+{478}% 
+\TOCitem{2}
+{\TOCsID{12.4.5.}Implied wealth dynamics.}
+{480}% 
+\TOCitem{1}
+{\TOCsID{12.5.}Sequential trading: Arrow securities.}
+{481}% 
+\TOCitem{2}
+{\TOCsID{12.5.1.}Household.}
+{482}% 
+\TOCitem{2}
+{\TOCsID{12.5.2.}Firm of type I.}
+{483}% 
+\TOCitem{2}
+{\TOCsID{12.5.3.}Firm of type II.}
+{484}% 
+\TOCitem{2}
+{\TOCsID{12.5.4.}Equilibrium prices and quantities.}
+{485}% 
+\TOCitem{2}
+{\TOCsID{12.5.5.}Financing a type II firm.}
+{485}% 
+\TOCitem{1}
+{\TOCsID{12.6.}Recursive formulation.}
+{486}% 
+\TOCitem{2}
+{\TOCsID{12.6.1.}Technology is governed by a Markov process.}
+{487}% 
+\TOCitem{2}
+{\TOCsID{12.6.2.}Aggregate state of the economy.}
+{487}% 
+\TOCitem{1}
+{\TOCsID{12.7.}Recursive formulation of the planning problem.}
+{488}% 
+\TOCitem{1}
+{\TOCsID{12.8.}Recursive formulation of sequential trading.}
+{489}% 
+\TOCitem{2}
+{\TOCsID{12.8.1.}A ``Big $K$, little $k$'' device.}
+{489}% 
+\TOCitem{2}
+{\TOCsID{12.8.2.}Price system.}
+{490}% 
+\TOCitem{2}
+{\TOCsID{12.8.3.}Household problem.}
+{491}% 
+\TOCitem{2}
+{\TOCsID{12.8.4.}Firm of type I.}
+{492}% 
+\TOCitem{2}
+{\TOCsID{12.8.5.}Firm of type II.}
+{492}% 
+\TOCitem{1}
+{\TOCsID{12.9.}Recursive competitive equilibrium.}
+{493}% 
+\TOCitem{2}
+{\TOCsID{12.9.1.}Equilibrium restrictions across decision rules.}
+{493}% 
+\TOCitem{2}
+{\TOCsID{12.9.2.}Using the planning problem.}
+{495}% 
+\TOCitem{1}
+{\TOCsID{12.10.}Concluding remarks.}
+{496}% 
+\TOCitem{1}
+{\TOCsID{A.}The permanent income model revisited.}
+{497}% 
+\TOCitem{2}
+{\TOCsID{12.A.1.}Reinterpreting the single-agent model.}
+{497}% 
+\TOCitem{2}
+{\TOCsID{12.A.2.}Decentralization and scaled prices.}
+{498}% 
+\TOCitem{3}
+{\TOCsID{12.A.2.1.}The consumer}
+{499}% 
+\TOCitem{3}
+{\TOCsID{12.A.2.2.}The firm}
+{500}% 
+\TOCitem{2}
+{\TOCsID{12.A.3.}Matching equilibrium and planning allocations.}
+{500}% 
+\TOCitem{2}
+{\TOCsID{12.A.4.}Interpretation.}
+{501}% 
+\TOCitem{0}
+{\TOCcID{13.}Asset Pricing Theory}
+{503}% 
+\TOCitem{1}
+{\TOCsID{13.1.}Introduction.}
+{503}% 
+\TOCitem{1}
+{\TOCsID{13.2.}Euler equations.}
+{504}% 
+\TOCitem{1}
+{\TOCsID{13.3.}Martingale theories of consumption and stock prices.}
+{506}% 
+\TOCitem{1}
+{\TOCsID{13.4.}Equivalent martingale measure.}
+{508}% 
+\TOCitem{1}
+{\TOCsID{13.5.}Equilibrium asset pricing.}
+{511}% 
+\TOCitem{1}
+{\TOCsID{13.6.}Stock prices without bubbles.}
+{512}% 
+\TOCitem{1}
+{\TOCsID{13.7.}Computing asset prices.}
+{514}% 
+\TOCitem{2}
+{\TOCsID{13.7.1.}Example 1: logarithmic preferences.}
+{514}% 
+\TOCitem{2}
+{\TOCsID{13.7.2.}Example 2: finite-state version.}
+{514}% 
+\TOCitem{2}
+{\TOCsID{13.7.3.}Example 3: growth.}
+{515}% 
+\TOCitem{1}
+{\TOCsID{13.8.}Term structure of interest rates.}
+{516}% 
+\TOCitem{1}
+{\TOCsID{13.9.}State-contingent prices.}
+{519}% 
+\TOCitem{2}
+{\TOCsID{13.9.1.}Insurance premium.}
+{520}% 
+\TOCitem{2}
+{\TOCsID{13.9.2.}Man-made uncertainty.}
+{521}% 
+\TOCitem{2}
+{\TOCsID{13.9.3.}The Modigliani-Miller theorem.}
+{521}% 
+\TOCitem{1}
+{\TOCsID{13.10.}Government debt.}
+{524}% 
+\TOCitem{2}
+{\TOCsID{13.10.1.}The Ricardian proposition.}
+{524}% 
+\TOCitem{2}
+{\TOCsID{13.10.2.}No Ponzi schemes.}
+{531}% 
+\TOCitem{1}
+{\TOCsID{A.}Harrison-Kreps (1978) heterogeneous beliefs.}
+{535}% 
+\TOCitem{2}
+{\TOCsID{13.A.1.}Optimism and Pessimism.}
+{536}% 
+\TOCitem{2}
+{\TOCsID{13.A.2.}Equilibrium price function.}
+{537}% 
+\TOCitem{2}
+{\TOCsID{13.A.3.}Comparisons of equilibrium price functions.}
+{537}% 
+\TOCitem{2}
+{\TOCsID{13.A.4.}Single belief prices.}
+{537}% 
+\TOCitem{2}
+{\TOCsID{13.A.5.}Pricing under heterogeneous beliefs.}
+{538}% 
+\TOCitem{2}
+{\TOCsID{13.A.6.}Insufficient funds.}
+{540}% 
+\TOCitem{1}
+{\TOCsID{B.}Gaussian asset-pricing model.}
+{541}% 
+\TOCitem{1}
+{\TOCsID{13.13.}Exercises.}
+{544}% 
+\TOCitem{0}
+{\TOCcID{14.}Asset Pricing Empirics}
+{549}% 
+\TOCitem{1}
+{\TOCsID{14.1.}Introduction.}
+{549}% 
+\TOCitem{1}
+{\TOCsID{14.2.}Interpretation of risk-aversion parameter.}
+{550}% 
+\TOCitem{1}
+{\TOCsID{14.3.}The equity premium puzzle.}
+{552}% 
+\TOCitem{1}
+{\TOCsID{14.4.}Market price of risk.}
+{555}% 
+\TOCitem{1}
+{\TOCsID{14.5.}Hansen-Jagannathan bounds.}
+{557}% 
+\TOCitem{2}
+{\TOCsID{14.5.1.}Law of one price implies that $E m R =1$.}
+{557}% 
+\TOCitem{2}
+{\TOCsID{14.5.2.}Inner product representation of price functional.}
+{559}% 
+\TOCitem{2}
+{\TOCsID{14.5.3.}Admissible stochastic discount factors.}
+{560}% 
+\TOCitem{1}
+{\TOCsID{14.6.}Failure of CRRA to attain HJ bound.}
+{562}% 
+\TOCitem{1}
+{\TOCsID{14.7.}Non-expected utility.}
+{566}% 
+\TOCitem{2}
+{\TOCsID{14.7.1.}Another representation of the utility recursion.}
+{569}% 
+\TOCitem{2}
+{\TOCsID{14.7.2.}Stochastic discount factor.}
+{570}% 
+\TOCitem{2}
+{\TOCsID{14.7.3.}Twisted probability distributions.}
+{574}% 
+\TOCitem{1}
+{\TOCsID{14.8.}Reinterpretation of the utility recursion.}
+{575}% 
+\TOCitem{2}
+{\TOCsID{14.8.1.}Risk aversion versus model misspecification aversion.}
+{575}% 
+\TOCitem{2}
+{\TOCsID{14.8.2.}Recursive representation of probability distortions.}
+{576}% 
+\TOCitem{2}
+{\TOCsID{14.8.3.}Entropy.}
+{577}% 
+\TOCitem{2}
+{\TOCsID{14.8.4.}Expressing ambiguity aversion.}
+{578}% 
+\TOCitem{2}
+{\TOCsID{14.8.5.}Ambiguity averse preferences.}
+{579}% 
+\TOCitem{2}
+{\TOCsID{14.8.6.}Market price of model uncertainty.}
+{581}% 
+\TOCitem{2}
+{\TOCsID{14.8.7.}Measuring model uncertainty.}
+{582}% 
+\TOCitem{1}
+{\TOCsID{14.9.}Costs of aggregate fluctuations.}
+{584}% 
+\TOCitem{1}
+{\TOCsID{14.10.}Reverse engineered consumption heterogeneity.}
+{587}% 
+\TOCitem{1}
+{\TOCsID{14.11.}Affine risk prices.}
+{591}% 
+\TOCitem{2}
+{\TOCsID{14.11.1.}An application.}
+{593}% 
+\TOCitem{2}
+{\TOCsID{14.11.2.}Affine term structure of yields.}
+{594}% 
+\TOCitem{1}
+{\TOCsID{14.12.}Risk-neutral probabilities.}
+{595}% 
+\TOCitem{2}
+{\TOCsID{14.12.1.}Asset pricing in a nutshell.}
+{596}% 
+\TOCitem{1}
+{\TOCsID{14.13.}Distorted beliefs.}
+{596}% 
+\TOCitem{1}
+{\TOCsID{14.14.}Concluding remarks.}
+{599}% 
+\TOCitem{1}
+{\TOCsID{A.}Riesz representation theorem.}
+{599}% 
+\TOCitem{1}
+{\TOCsID{B.}Computing stochastic discount factors.}
+{601}% 
+\TOCitem{1}
+{\TOCsID{C.}A log normal bond pricing model.}
+{602}% 
+\TOCitem{2}
+{\TOCsID{14.C.1.}Slope of yield curve.}
+{605}% 
+\TOCitem{2}
+{\TOCsID{14.C.2.}Backus and Zin's stochastic discount factor.}
+{605}% 
+\TOCitem{2}
+{\TOCsID{14.C.3.}Reverse engineering a stochastic discount factor.}
+{606}% 
+\TOCitem{1}
+{\TOCsID{14.18.}Exercises.}
+{610}% 
+\TOCitem{0}
+{\TOCcID{15.}Economic Growth}
+{631}% 
+\TOCitem{1}
+{\TOCsID{15.1.}Introduction.}
+{631}% 
+\TOCitem{1}
+{\TOCsID{15.2.}The economy.}
+{633}% 
+\TOCitem{2}
+{\TOCsID{15.2.1.}Balanced growth path.}
+{634}% 
+\TOCitem{1}
+{\TOCsID{15.3.}Exogenous growth.}
+{635}% 
+\TOCitem{1}
+{\TOCsID{15.4.}Externality from spillovers.}
+{637}% 
+\TOCitem{1}
+{\TOCsID{15.5.}All factors reproducible.}
+{639}% 
+\TOCitem{2}
+{\TOCsID{15.5.1.}One-sector model.}
+{639}% 
+\TOCitem{2}
+{\TOCsID{15.5.2.}Two-sector model.}
+{641}% 
+\TOCitem{1}
+{\TOCsID{15.6.}Research and monopolistic competition.}
+{643}% 
+\TOCitem{2}
+{\TOCsID{15.6.1.}Monopolistic competition outcome.}
+{644}% 
+\TOCitem{2}
+{\TOCsID{15.6.2.}Planner solution.}
+{647}% 
+\TOCitem{1}
+{\TOCsID{15.7.}Growth in spite of nonreproducible factors.}
+{648}% 
+\TOCitem{2}
+{\TOCsID{15.7.1.}``Core'' of capital goods produced without nonreproducible inputs.}
+{648}% 
+\TOCitem{2}
+{\TOCsID{15.7.2.}Research labor enjoying an externality.}
+{650}% 
+\TOCitem{1}
+{\TOCsID{15.8.}Concluding remarks.}
+{652}% 
+\TOCitem{1}
+{\TOCsID{15.9.}Exercises.}
+{654}% 
+\TOCitem{0}
+{\TOCcID{16.}Optimal Taxation with Commitment}
+{661}% 
+\TOCitem{1}
+{\TOCsID{16.1.}Introduction.}
+{661}% 
+\TOCitem{1}
+{\TOCsID{16.2.}A nonstochastic economy.}
+{664}% 
+\TOCitem{2}
+{\TOCsID{16.2.1.}Government.}
+{665}% 
+\TOCitem{2}
+{\TOCsID{16.2.2.}Household.}
+{665}% 
+\TOCitem{2}
+{\TOCsID{16.2.3.}Firms.}
+{667}% 
+\TOCitem{1}
+{\TOCsID{16.3.}The Ramsey problem.}
+{668}% 
+\TOCitem{1}
+{\TOCsID{16.4.}Zero capital tax.}
+{669}% 
+\TOCitem{1}
+{\TOCsID{16.5.}Primal approach to the Ramsey problem.}
+{671}% 
+\TOCitem{2}
+{\TOCsID{16.5.1.}Constructing the Ramsey plan.}
+{672}% 
+\TOCitem{2}
+{\TOCsID{16.5.2.}Revisiting a zero capital tax.}
+{675}% 
+\TOCitem{1}
+{\TOCsID{16.6.}Taxation of initial capital.}
+{675}% 
+\TOCitem{1}
+{\TOCsID{16.7.}Nonzero capital tax due to incomplete taxation.}
+{676}% 
+\TOCitem{1}
+{\TOCsID{16.8.}A stochastic economy.}
+{678}% 
+\TOCitem{2}
+{\TOCsID{16.8.1.}Government.}
+{678}% 
+\TOCitem{2}
+{\TOCsID{16.8.2.}Household.}
+{679}% 
+\TOCitem{2}
+{\TOCsID{16.8.3.}Firms.}
+{681}% 
+\TOCitem{1}
+{\TOCsID{16.9.}Indeterminacy of debt and capital taxes.}
+{681}% 
+\TOCitem{1}
+{\TOCsID{16.10.}A Ramsey plan under uncertainty.}
+{683}% 
+\TOCitem{1}
+{\TOCsID{16.11.}Ex ante capital tax varies around zero.}
+{685}% 
+\TOCitem{2}
+{\TOCsID{16.11.1.}Sketch of the proof of Proposition 2.}
+{687}% 
+\TOCitem{1}
+{\TOCsID{16.12.}A stochastic economy without capital.}
+{689}% 
+\TOCitem{2}
+{\TOCsID{16.12.1.}Computational strategy.}
+{693}% 
+\TOCitem{2}
+{\TOCsID{16.12.2.}More specialized computations.}
+{694}% 
+\TOCitem{2}
+{\TOCsID{16.12.3.}Time consistency.}
+{696}% 
+\TOCitem{1}
+{\TOCsID{16.13.}Examples of labor tax smoothing.}
+{697}% 
+\TOCitem{2}
+{\TOCsID{16.13.1.}Example 1: $g_t=g$ for all $t\geq 0$.}
+{697}% 
+\TOCitem{2}
+{\TOCsID{16.13.2.}Example 2: $g_t=0$ for $t\not = T$ and nonstochastic $g_T>0$.}
+{697}% 
+\TOCitem{2}
+{\TOCsID{16.13.3.}Example 3: $g_t=0$ for $t\not = T$, and $g_T$ is stochastic.}
+{698}% 
+\TOCitem{2}
+{\TOCsID{16.13.4.}Time $0$ is special with $b_0\not = 0$.}
+{699}% 
+\TOCitem{1}
+{\TOCsID{16.14.}Lessons for optimal debt policy.}
+{701}% 
+\TOCitem{1}
+{\TOCsID{16.15.}Taxation without state-contingent debt.}
+{705}% 
+\TOCitem{2}
+{\TOCsID{16.15.1.}Future values of $\delimiter "4266308 g_t\delimiter "5267309 $ become deterministic.}
+{710}% 
+\TOCitem{2}
+{\TOCsID{16.15.2.}Stochastic $\delimiter "4266308 g_t\delimiter "5267309 $ but special preferences.}
+{711}% 
+\TOCitem{2}
+{\TOCsID{16.15.3.}Example 3 revisited: $g_t=0$ for $t\not = T$, and $g_T$ is stochastic.}
+{713}% 
+\TOCitem{1}
+{\TOCsID{16.16.}Nominal debt as state-contingent real debt.}
+{717}% 
+\TOCitem{2}
+{\TOCsID{16.16.1.}Setup and main ideas.}
+{718}% 
+\TOCitem{2}
+{\TOCsID{16.16.2.}Optimal taxation in a nonmonetary economy.}
+{722}% 
+\TOCitem{2}
+{\TOCsID{16.16.3.}Optimal policy in a corresponding monetary economy.}
+{724}% 
+\TOCitem{2}
+{\TOCsID{16.16.4.}Sticky prices.}
+{727}% 
+\TOCitem{1}
+{\TOCsID{16.17.}Relation to fiscal theories of the price level.}
+{727}% 
+\TOCitem{2}
+{\TOCsID{16.17.1.}Budget constraint versus asset pricing equation.}
+{728}% 
+\TOCitem{2}
+{\TOCsID{16.17.2.}Disappearance of quantity theory?}
+{729}% 
+\TOCitem{2}
+{\TOCsID{16.17.3.}Price level indeterminacy under interest rate peg.}
+{730}% 
+\TOCitem{2}
+{\TOCsID{16.17.4.}Monetary or fiscal theory of the price level?}
+{731}% 
+\TOCitem{1}
+{\TOCsID{16.18.}Zero tax on human capital.}
+{733}% 
+\TOCitem{1}
+{\TOCsID{16.19.}Should all taxes be zero?}
+{738}% 
+\TOCitem{1}
+{\TOCsID{16.20.}Concluding remarks.}
+{739}% 
+\TOCitem{1}
+{\TOCsID{16.21.}Exercises.}
+{741}% 
+\vskip 0pt\penalty -200\hbox {\vrule height10.675pt depth5.325pt width0pt}\penalty \@M 
+\TOCitem{0}
+{{\fam \bffam \twelvebf Part IV: Savings Problems and Bewley Models}}
+{}% 
+\TOCitem{0}
+{\TOCcID{17.}Self-Insurance}
+{759}% 
+\TOCitem{1}
+{\TOCsID{17.1.}Introduction.}
+{759}% 
+\TOCitem{1}
+{\TOCsID{17.2.}The consumer's environment.}
+{760}% 
+\TOCitem{1}
+{\TOCsID{17.3.}Nonstochastic endowment.}
+{761}% 
+\TOCitem{2}
+{\TOCsID{17.3.1.}An ad hoc borrowing constraint: nonnegative assets.}
+{763}% 
+\TOCitem{2}
+{\TOCsID{17.3.2.}Example: periodic endowment process.}
+{767}% 
+\TOCitem{1}
+{\TOCsID{17.4.}Quadratic preferences.}
+{767}% 
+\TOCitem{1}
+{\TOCsID{17.5.}Stochastic endowment process: i.i.d.\ case.}
+{769}% 
+\TOCitem{1}
+{\TOCsID{17.6.}Stochastic endowment process: general case.}
+{771}% 
+\TOCitem{1}
+{\TOCsID{17.7.}Intuition.}
+{772}% 
+\TOCitem{1}
+{\TOCsID{17.8.}Endogenous labor supply.}
+{774}% 
+\TOCitem{1}
+{\TOCsID{17.9.}Concluding remarks.}
+{777}% 
+\TOCitem{1}
+{\TOCsID{A.}Supermartingale convergence theorem.}
+{779}% 
+\TOCitem{1}
+{\TOCsID{17.11.}Exercises.}
+{779}% 
+\TOCitem{0}
+{\TOCcID{18.}Incomplete Markets Models}
+{785}% 
+\TOCitem{1}
+{\TOCsID{18.1.}Introduction.}
+{785}% 
+\TOCitem{1}
+{\TOCsID{18.2.}A savings problem.}
+{787}% 
+\TOCitem{2}
+{\TOCsID{18.2.1.}Wealth-employment distributions.}
+{788}% 
+\TOCitem{2}
+{\TOCsID{18.2.2.}Reinterpretation of the distribution $\lambda $.}
+{789}% 
+\TOCitem{2}
+{\TOCsID{18.2.3.}Example 1: a pure credit model.}
+{790}% 
+\TOCitem{2}
+{\TOCsID{18.2.4.}Equilibrium computation.}
+{791}% 
+\TOCitem{2}
+{\TOCsID{18.2.5.}Example 2: a model with capital.}
+{791}% 
+\TOCitem{2}
+{\TOCsID{18.2.6.}Computation of equilibrium.}
+{793}% 
+\TOCitem{1}
+{\TOCsID{18.3.}Unification and further analysis.}
+{794}% 
+\TOCitem{1}
+{\TOCsID{18.4.}The nonstochastic savings problem when $\beta (1+r) < 1$.}
+{795}% 
+\TOCitem{1}
+{\TOCsID{18.5.}Borrowing limits: natural and ad hoc.}
+{797}% 
+\TOCitem{2}
+{\TOCsID{18.5.1.}A candidate for a single state variable.}
+{798}% 
+\TOCitem{2}
+{\TOCsID{18.5.2.}Supermartingale convergence again.}
+{799}% 
+\TOCitem{1}
+{\TOCsID{18.6.}Average assets as a function of $r$.}
+{800}% 
+\TOCitem{1}
+{\TOCsID{18.7.}Computed examples.}
+{804}% 
+\TOCitem{1}
+{\TOCsID{18.8.}Several Bewley models.}
+{806}% 
+\TOCitem{2}
+{\TOCsID{18.8.1.}Optimal stationary allocation.}
+{806}% 
+\TOCitem{1}
+{\TOCsID{18.9.}A model with capital and private IOUs.}
+{807}% 
+\TOCitem{1}
+{\TOCsID{18.10.}Private IOUs only.}
+{808}% 
+\TOCitem{2}
+{\TOCsID{18.10.1.}Limitation of what credit can achieve.}
+{808}% 
+\TOCitem{2}
+{\TOCsID{18.10.2.}Proximity of $r$ to $\rho $.}
+{809}% 
+\TOCitem{2}
+{\TOCsID{18.10.3.}Inside money or free banking interpretation.}
+{809}% 
+\TOCitem{2}
+{\TOCsID{18.10.4.}Bewley's basic model of fiat money.}
+{810}% 
+\TOCitem{1}
+{\TOCsID{18.11.}A model of seigniorage.}
+{811}% 
+\TOCitem{1}
+{\TOCsID{18.12.}Exchange rate indeterminacy.}
+{813}% 
+\TOCitem{1}
+{\TOCsID{18.13.}Interest on currency.}
+{815}% 
+\TOCitem{2}
+{\TOCsID{18.13.1.}Explicit interest.}
+{816}% 
+\TOCitem{2}
+{\TOCsID{18.13.2.}The upper bound on ${M \over p}$.}
+{817}% 
+\TOCitem{2}
+{\TOCsID{18.13.3.}A very special case.}
+{818}% 
+\TOCitem{2}
+{\TOCsID{18.13.4.}Implicit interest through deflation.}
+{819}% 
+\TOCitem{1}
+{\TOCsID{18.14.}Precautionary savings.}
+{820}% 
+\TOCitem{1}
+{\TOCsID{18.15.}Models with fluctuating aggregate variables.}
+{822}% 
+\TOCitem{2}
+{\TOCsID{18.15.1.}Aiyagari's model again.}
+{823}% 
+\TOCitem{2}
+{\TOCsID{18.15.2.}Krusell and Smith's extension.}
+{824}% 
+\TOCitem{1}
+{\TOCsID{18.16.}Concluding remarks.}
+{827}% 
+\TOCitem{1}
+{\TOCsID{18.17.}Exercises.}
+{827}% 
+\vskip 0pt\penalty -200\hbox {\vrule height10.675pt depth5.325pt width0pt}\penalty \@M 
+\TOCitem{0}
+{{\fam \bffam \twelvebf Part V: Recursive Contracts}}
+{}% 
+\TOCitem{0}
+{\TOCcID{19.}Dynamic Stackelberg Problems}
+{839}% 
+\TOCitem{1}
+{\TOCsID{19.1.}History dependence.}
+{839}% 
+\TOCitem{1}
+{\TOCsID{19.2.}The Stackelberg problem.}
+{840}% 
+\TOCitem{1}
+{\TOCsID{19.3.}Timing protocol.}
+{843}% 
+\TOCitem{1}
+{\TOCsID{19.4.}Recursive formulation.}
+{843}% 
+\TOCitem{2}
+{\TOCsID{19.4.1.}Two Bellman equations.}
+{844}% 
+\TOCitem{2}
+{\TOCsID{19.4.2.}Subproblem 1.}
+{844}% 
+\TOCitem{2}
+{\TOCsID{19.4.3.}Subproblem 2.}
+{845}% 
+\TOCitem{2}
+{\TOCsID{19.4.4.}Timing protocol.}
+{846}% 
+\TOCitem{2}
+{\TOCsID{19.4.5.}Time inconsistency.}
+{846}% 
+\TOCitem{1}
+{\TOCsID{19.5.}Large firm facing a competitive fringe.}
+{847}% 
+\TOCitem{2}
+{\TOCsID{19.5.1.}The competitive fringe.}
+{848}% 
+\TOCitem{2}
+{\TOCsID{19.5.2.}The large firm's problem.}
+{849}% 
+\TOCitem{2}
+{\TOCsID{19.5.3.}Numerical example.}
+{851}% 
+\TOCitem{1}
+{\TOCsID{19.6.}Concluding remarks.}
+{851}% 
+\TOCitem{1}
+{\TOCsID{19.7.}Exercises.}
+{852}% 
+\TOCitem{0}
+{\TOCcID{20.}Two Ramsey Problems Revisited}
+{857}% 
+\TOCitem{1}
+{\TOCsID{20.1.}Introduction.}
+{857}% 
+\TOCitem{1}
+{\TOCsID{20.2.}The Lucas-Stokey economy.}
+{857}% 
+\TOCitem{2}
+{\TOCsID{20.2.1.}Finding the state is an art.}
+{859}% 
+\TOCitem{2}
+{\TOCsID{20.2.2.}Intertemporal delegation.}
+{859}% 
+\TOCitem{2}
+{\TOCsID{20.2.3.}Bellman equations.}
+{860}% 
+\TOCitem{2}
+{\TOCsID{20.2.4.}Subproblem 1: Continuation Ramsey problem.}
+{860}% 
+\TOCitem{2}
+{\TOCsID{20.2.5.}Subproblem 2: Ramsey problem.}
+{861}% 
+\TOCitem{2}
+{\TOCsID{20.2.6.}First-order conditions.}
+{862}% 
+\TOCitem{2}
+{\TOCsID{20.2.7.}State variable degeneracy.}
+{863}% 
+\TOCitem{2}
+{\TOCsID{20.2.8.}Symptom and source of time inconsistency.}
+{863}% 
+\TOCitem{1}
+{\TOCsID{20.3.}Recursive formulation of AMSS model.}
+{864}% 
+\TOCitem{2}
+{\TOCsID{20.3.1.}Recasting state variables.}
+{865}% 
+\TOCitem{2}
+{\TOCsID{20.3.2.}Measurability constraints.}
+{866}% 
+\TOCitem{2}
+{\TOCsID{20.3.3.}Bellman equations.}
+{866}% 
+\TOCitem{2}
+{\TOCsID{20.3.4.}Martingale replaces state-variable degeneracy.}
+{867}% 
+\TOCitem{1}
+{\TOCsID{20.4.}Concluding remarks.}
+{869}% 
+\TOCitem{0}
+{\TOCcID{21.}Incentives and Insurance}
+{871}% 
+\TOCitem{1}
+{\TOCsID{21.1.}Insurance with recursive contracts.}
+{871}% 
+\TOCitem{1}
+{\TOCsID{21.2.}Basic environment.}
+{872}% 
+\TOCitem{1}
+{\TOCsID{21.3.}One-sided no commitment.}
+{875}% 
+\TOCitem{2}
+{\TOCsID{21.3.1.}Self-enforcing contract.}
+{876}% 
+\TOCitem{2}
+{\TOCsID{21.3.2.}Recursive formulation and solution.}
+{877}% 
+\TOCitem{2}
+{\TOCsID{21.3.3.}Recursive computation of contract.}
+{883}% 
+\TOCitem{2}
+{\TOCsID{21.3.4.}Profits.}
+{886}% 
+\TOCitem{2}
+{\TOCsID{21.3.5.}$P(v)$ is strictly concave and continuously differentiable.}
+{889}% 
+\TOCitem{2}
+{\TOCsID{21.3.6.}Many households.}
+{890}% 
+\TOCitem{2}
+{\TOCsID{21.3.7.}An example.}
+{893}% 
+\TOCitem{1}
+{\TOCsID{21.4.}A Lagrangian method.}
+{893}% 
+\TOCitem{1}
+{\TOCsID{21.5.}Insurance with asymmetric information.}
+{897}% 
+\TOCitem{2}
+{\TOCsID{21.5.1.}Efficiency implies $b_{s-1} \geq b_s, w_{s-1} \leq w_s$.}
+{900}% 
+\TOCitem{2}
+{\TOCsID{21.5.2.}Local upward and downward constraints are enough.}
+{901}% 
+\TOCitem{2}
+{\TOCsID{21.5.3.}Concavity of $P$.}
+{901}% 
+\TOCitem{2}
+{\TOCsID{21.5.4.}Local downward constraints always bind.}
+{903}% 
+\TOCitem{2}
+{\TOCsID{21.5.5.}Coinsurance.}
+{903}% 
+\TOCitem{2}
+{\TOCsID{21.5.6.}$P'(v)$ is a martingale.}
+{904}% 
+\TOCitem{2}
+{\TOCsID{21.5.7.}Comparison to model with commitment problem.}
+{905}% 
+\TOCitem{2}
+{\TOCsID{21.5.8.}Spreading continuation values.}
+{905}% 
+\TOCitem{2}
+{\TOCsID{21.5.9.}Martingale convergence and poverty.}
+{906}% 
+\TOCitem{2}
+{\TOCsID{21.5.10.}Extension to general equilibrium.}
+{908}% 
+\TOCitem{2}
+{\TOCsID{21.5.11.}Comparison with self-insurance.}
+{908}% 
+\TOCitem{1}
+{\TOCsID{21.6.}Insurance with unobservable storage.}
+{909}% 
+\TOCitem{2}
+{\TOCsID{21.6.1.}Feasibility.}
+{910}% 
+\TOCitem{2}
+{\TOCsID{21.6.2.}Incentive compatibility.}
+{911}% 
+\TOCitem{2}
+{\TOCsID{21.6.3.}Efficient allocation.}
+{912}% 
+\TOCitem{2}
+{\TOCsID{21.6.4.}The two-period case.}
+{914}% 
+\TOCitem{2}
+{\TOCsID{21.6.5.}Role of the planner.}
+{919}% 
+\TOCitem{2}
+{\TOCsID{21.6.6.}Decentralization in a closed economy.}
+{920}% 
+\TOCitem{1}
+{\TOCsID{21.7.}Concluding remarks.}
+{922}% 
+\TOCitem{1}
+{\TOCsID{A.}Historical development.}
+{922}% 
+\TOCitem{2}
+{\TOCsID{21.A.1.}Spear and Srivastava.}
+{922}% 
+\TOCitem{2}
+{\TOCsID{21.A.2.}Timing.}
+{923}% 
+\TOCitem{2}
+{\TOCsID{21.A.3.}Use of lotteries.}
+{924}% 
+\TOCitem{1}
+{\TOCsID{21.9.}Exercises.}
+{926}% 
+\TOCitem{0}
+{\TOCcID{22.}Equilibrium without Commitment }
+{933}% 
+\TOCitem{1}
+{\TOCsID{22.1.}Two-sided lack of commitment.}
+{933}% 
+\TOCitem{1}
+{\TOCsID{22.2.}A closed system.}
+{934}% 
+\TOCitem{1}
+{\TOCsID{22.3.}Recursive formulation.}
+{936}% 
+\TOCitem{1}
+{\TOCsID{22.4.}Equilibrium consumption.}
+{938}% 
+\TOCitem{2}
+{\TOCsID{22.4.1.}Consumption dynamics.}
+{938}% 
+\TOCitem{2}
+{\TOCsID{22.4.2.}Consumption intervals cannot contain each other.}
+{940}% 
+\TOCitem{2}
+{\TOCsID{22.4.3.}Endowments are contained in the consumption intervals.}
+{942}% 
+\TOCitem{2}
+{\TOCsID{22.4.4.}All consumption intervals are nondegenerate (unless autarky is the only sustainable allocation).}
+{943}% 
+\TOCitem{1}
+{\TOCsID{22.5.}Pareto frontier and ex ante division of the gains.}
+{944}% 
+\TOCitem{1}
+{\TOCsID{22.6.}Consumption distribution.}
+{945}% 
+\TOCitem{2}
+{\TOCsID{22.6.1.}Asymptotic distribution.}
+{945}% 
+\TOCitem{2}
+{\TOCsID{22.6.2.}Temporary imperfect risk sharing.}
+{947}% 
+\TOCitem{2}
+{\TOCsID{22.6.3.}Permanent imperfect risk sharing.}
+{948}% 
+\TOCitem{1}
+{\TOCsID{22.7.}Alternative recursive formulation.}
+{948}% 
+\TOCitem{1}
+{\TOCsID{22.8.}Pareto frontier revisited.}
+{950}% 
+\TOCitem{2}
+{\TOCsID{22.8.1.}Values are continuous in implicit consumption.}
+{951}% 
+\TOCitem{2}
+{\TOCsID{22.8.2.}Differentiability of the Pareto frontier.}
+{953}% 
+\TOCitem{1}
+{\TOCsID{22.9.}Continuation values {{\accent 18 a} la} Kocherlakota.}
+{955}% 
+\TOCitem{2}
+{\TOCsID{22.9.1.}Asymptotic distribution is nondegenerate for imperfect risk sharing (except when $S=2$).}
+{955}% 
+\TOCitem{2}
+{\TOCsID{22.9.2.}Continuation values do not always respond to binding participation constraints.}
+{958}% 
+\TOCitem{1}
+{\TOCsID{22.10.}A two-state example: amnesia overwhelms memory.}
+{959}% 
+\TOCitem{2}
+{\TOCsID{22.10.1.}Pareto frontier.}
+{962}% 
+\TOCitem{2}
+{\TOCsID{22.10.2.}Interpretation.}
+{965}% 
+\TOCitem{1}
+{\TOCsID{22.11.}A three-state example.}
+{965}% 
+\TOCitem{2}
+{\TOCsID{22.11.1.}Perturbation of parameter values.}
+{969}% 
+\TOCitem{2}
+{\TOCsID{22.11.2.}Pareto frontier.}
+{972}% 
+\TOCitem{1}
+{\TOCsID{22.12.}Empirical motivation.}
+{974}% 
+\TOCitem{1}
+{\TOCsID{22.13.}Generalization.}
+{974}% 
+\TOCitem{1}
+{\TOCsID{22.14.}Decentralization.}
+{975}% 
+\TOCitem{1}
+{\TOCsID{22.15.}Endogenous borrowing constraints.}
+{976}% 
+\TOCitem{1}
+{\TOCsID{22.16.}Concluding remarks.}
+{979}% 
+\TOCitem{1}
+{\TOCsID{22.17.}Exercises.}
+{980}% 
+\TOCitem{0}
+{\TOCcID{23.}Optimal Unemployment Insurance}
+{987}% 
+\TOCitem{1}
+{\TOCsID{23.1.}History-dependent unemployment insurance.}
+{987}% 
+\TOCitem{1}
+{\TOCsID{23.2.}A one-spell model.}
+{988}% 
+\TOCitem{2}
+{\TOCsID{23.2.1.}The autarky problem.}
+{989}% 
+\TOCitem{2}
+{\TOCsID{23.2.2.}Unemployment insurance with full information.}
+{990}% 
+\TOCitem{2}
+{\TOCsID{23.2.3.}The incentive problem.}
+{991}% 
+\TOCitem{2}
+{\TOCsID{23.2.4.}Unemployment insurance with asymmetric information.}
+{992}% 
+\TOCitem{2}
+{\TOCsID{23.2.5.}Computed example.}
+{993}% 
+\TOCitem{2}
+{\TOCsID{23.2.6.}Computational details.}
+{995}% 
+\TOCitem{2}
+{\TOCsID{23.2.7.}Interpretations.}
+{996}% 
+\TOCitem{2}
+{\TOCsID{23.2.8.}Extension: an on-the-job tax.}
+{996}% 
+\TOCitem{2}
+{\TOCsID{23.2.9.}Extension: intermittent unemployment spells.}
+{997}% 
+\TOCitem{1}
+{\TOCsID{23.3.}A multiple-spell model with lifetime contracts.}
+{997}% 
+\TOCitem{2}
+{\TOCsID{23.3.1.}The setup.}
+{998}% 
+\TOCitem{2}
+{\TOCsID{23.3.2.}A recursive lifetime contract.}
+{999}% 
+\TOCitem{2}
+{\TOCsID{23.3.3.}Compensation dynamics when unemployed.}
+{1002}% 
+\TOCitem{2}
+{\TOCsID{23.3.4.}Compensation dynamics while employed.}
+{1003}% 
+\TOCitem{2}
+{\TOCsID{23.3.5.}Summary.}
+{1004}% 
+\TOCitem{1}
+{\TOCsID{23.4.}Concluding remarks.}
+{1005}% 
+\TOCitem{1}
+{\TOCsID{23.5.}Exercises.}
+{1005}% 
+\TOCitem{0}
+{\TOCcID{24.}Credible Government Policies: I}
+{1011}% 
+\TOCitem{1}
+{\TOCsID{24.1.}Introduction.}
+{1011}% 
+\TOCitem{2}
+{\TOCsID{24.1.1.}Diverse sources of history dependence.}
+{1012}% 
+\TOCitem{1}
+{\TOCsID{24.2.}One-period economy.}
+{1013}% 
+\TOCitem{2}
+{\TOCsID{24.2.1.}Competitive equilibrium.}
+{1014}% 
+\TOCitem{2}
+{\TOCsID{24.2.2.}Ramsey problem.}
+{1014}% 
+\TOCitem{2}
+{\TOCsID{24.2.3.}Nash equilibrium.}
+{1015}% 
+\TOCitem{1}
+{\TOCsID{24.3.}Nash and Ramsey outcomes.}
+{1016}% 
+\TOCitem{2}
+{\TOCsID{24.3.1.}Taxation example.}
+{1016}% 
+\TOCitem{2}
+{\TOCsID{24.3.2.}Black-box example with discrete choice sets.}
+{1019}% 
+\TOCitem{1}
+{\TOCsID{24.4.}Reputational mechanisms: general idea.}
+{1020}% 
+\TOCitem{2}
+{\TOCsID{24.4.1.}Dynamic programming squared.}
+{1022}% 
+\TOCitem{2}
+{\TOCsID{24.4.2.}Etymology of `dynamic programming squared'.}
+{1025}% 
+\TOCitem{1}
+{\TOCsID{24.5.}The infinitely repeated economy.}
+{1026}% 
+\TOCitem{2}
+{\TOCsID{24.5.1.}A strategy profile implies a history and a value.}
+{1027}% 
+\TOCitem{2}
+{\TOCsID{24.5.2.}Recursive formulation.}
+{1027}% 
+\TOCitem{1}
+{\TOCsID{24.6.}Subgame perfect equilibrium (SPE).}
+{1029}% 
+\TOCitem{1}
+{\TOCsID{24.7.}Examples of SPE.}
+{1031}% 
+\TOCitem{2}
+{\TOCsID{24.7.1.}Infinite repetition of one-period Nash equilibrium.}
+{1031}% 
+\TOCitem{2}
+{\TOCsID{24.7.2.}Supporting better outcomes with trigger strategies.}
+{1032}% 
+\TOCitem{2}
+{\TOCsID{24.7.3.}When reversion to Nash is not bad enough.}
+{1033}% 
+\TOCitem{1}
+{\TOCsID{24.8.}Values of all SPEs.}
+{1034}% 
+\TOCitem{2}
+{\TOCsID{24.8.1.}Basic idea of dynamic programming squared.}
+{1035}% 
+\TOCitem{1}
+{\TOCsID{24.9.}APS machinery.}
+{1036}% 
+\TOCitem{1}
+{\TOCsID{24.10.}Self-enforcing SPE.}
+{1039}% 
+\TOCitem{2}
+{\TOCsID{24.10.1.}The quest for something worse than repetition of Nash outcome.}
+{1040}% 
+\TOCitem{1}
+{\TOCsID{24.11.}Recursive strategies.}
+{1040}% 
+\TOCitem{1}
+{\TOCsID{24.12.}Examples of SPE with recursive strategies.}
+{1043}% 
+\TOCitem{2}
+{\TOCsID{24.12.1.}Infinite repetition of Nash outcome.}
+{1044}% 
+\TOCitem{2}
+{\TOCsID{24.12.2.}Infinite repetition of a better-than-Nash outcome.}
+{1044}% 
+\TOCitem{2}
+{\TOCsID{24.12.3.}Something worse: a stick-and-carrot strategy.}
+{1045}% 
+\TOCitem{1}
+{\TOCsID{24.13.}Best and worst SPE values.}
+{1047}% 
+\TOCitem{2}
+{\TOCsID{24.13.1.}When $v_1$ is outside the candidate set.}
+{1048}% 
+\TOCitem{1}
+{\TOCsID{24.14.}Examples: alternative ways to achieve the worst.}
+{1049}% 
+\TOCitem{2}
+{\TOCsID{24.14.1.}Attaining the worst, method 1.}
+{1049}% 
+\TOCitem{2}
+{\TOCsID{24.14.2.}Attaining the worst, method 2.}
+{1050}% 
+\TOCitem{2}
+{\TOCsID{24.14.3.}Attaining the worst, method 3.}
+{1050}% 
+\TOCitem{2}
+{\TOCsID{24.14.4.}Numerical example.}
+{1051}% 
+\TOCitem{1}
+{\TOCsID{24.15.}Interpretations.}
+{1053}% 
+\TOCitem{1}
+{\TOCsID{24.16.}Extensions.}
+{1054}% 
+\TOCitem{1}
+{\TOCsID{24.17.}Exercises.}
+{1054}% 
+\TOCitem{0}
+{\TOCcID{25.}Credible Government Policies: II}
+{1059}% 
+\TOCitem{1}
+{\TOCsID{25.1.}History-dependent government policies.}
+{1059}% 
+\TOCitem{1}
+{\TOCsID{25.2.}The setting.}
+{1060}% 
+\TOCitem{2}
+{\TOCsID{25.2.1.}Household problem.}
+{1060}% 
+\TOCitem{2}
+{\TOCsID{25.2.2.}Government.}
+{1061}% 
+\TOCitem{2}
+{\TOCsID{25.2.3.}Analysis of household's problem.}
+{1062}% 
+\TOCitem{2}
+{\TOCsID{25.2.4.}$\theta _{t+1}$ as intermediating variable.}
+{1063}% 
+\TOCitem{1}
+{\TOCsID{25.3.}Recursive approach to Ramsey problem.}
+{1063}% 
+\TOCitem{2}
+{\TOCsID{25.3.1.}Subproblem 1: Continuation Ramsey problem.}
+{1064}% 
+\TOCitem{2}
+{\TOCsID{25.3.2.}Subproblem 2: Ramsey problem.}
+{1065}% 
+\TOCitem{2}
+{\TOCsID{25.3.3.}Finding set $\Omega $.}
+{1066}% 
+\TOCitem{2}
+{\TOCsID{25.3.4.}An example.}
+{1066}% 
+\TOCitem{1}
+{\TOCsID{25.4.}Chang's formulation.}
+{1068}% 
+\TOCitem{2}
+{\TOCsID{25.4.1.}Competitive equilibrium.}
+{1069}% 
+\TOCitem{1}
+{\TOCsID{25.5.}Inventory of key objects.}
+{1069}% 
+\TOCitem{1}
+{\TOCsID{25.6.}Analysis.}
+{1072}% 
+\TOCitem{2}
+{\TOCsID{25.6.1.}Notation.}
+{1074}% 
+\TOCitem{2}
+{\TOCsID{25.6.2.}An operator.}
+{1075}% 
+\TOCitem{1}
+{\TOCsID{25.7.}Sustainable plans.}
+{1078}% 
+\TOCitem{1}
+{\TOCsID{25.8.}Concluding remarks.}
+{1081}% 
+\TOCitem{0}
+{\TOCcID{26.}Two Topics in International Trade}
+{1083}% 
+\TOCitem{1}
+{\TOCsID{26.1.}Two dynamic contracting problems.}
+{1083}% 
+\TOCitem{1}
+{\TOCsID{26.2.}Moral hazard and difficult enforcement.}
+{1084}% 
+\TOCitem{2}
+{\TOCsID{26.2.1.}Autarky.}
+{1086}% 
+\TOCitem{2}
+{\TOCsID{26.2.2.}Investment with full insurance.}
+{1086}% 
+\TOCitem{2}
+{\TOCsID{26.2.3.}Limited commitment and unobserved investment.}
+{1089}% 
+\TOCitem{2}
+{\TOCsID{26.2.4.}Optimal capital outflows under distress.}
+{1092}% 
+\TOCitem{1}
+{\TOCsID{26.3.}Gradualism in trade policy.}
+{1094}% 
+\TOCitem{2}
+{\TOCsID{26.3.1.}Closed-economy model.}
+{1095}% 
+\TOCitem{2}
+{\TOCsID{26.3.2.}A Ricardian model of two countries under free trade.}
+{1097}% 
+\TOCitem{2}
+{\TOCsID{26.3.3.}Trade with a tariff.}
+{1097}% 
+\TOCitem{2}
+{\TOCsID{26.3.4.}Welfare and Nash tariff.}
+{1099}% 
+\TOCitem{2}
+{\TOCsID{26.3.5.}Trade concessions.}
+{1100}% 
+\TOCitem{2}
+{\TOCsID{26.3.6.}A repeated tariff game.}
+{1101}% 
+\TOCitem{2}
+{\TOCsID{26.3.7.}Time-invariant transfers.}
+{1102}% 
+\TOCitem{2}
+{\TOCsID{26.3.8.}Gradualism: time-varying trade policies.}
+{1104}% 
+\TOCitem{2}
+{\TOCsID{26.3.9.}Baseline policies.}
+{1105}% 
+\TOCitem{2}
+{\TOCsID{26.3.10.}Multiplicity of payoffs and continuation values.}
+{1111}% 
+\TOCitem{1}
+{\TOCsID{26.4.}Another model.}
+{1115}% 
+\TOCitem{1}
+{\TOCsID{26.5.}Concluding remarks.}
+{1116}% 
+\TOCitem{1}
+{\TOCsID{A.}Computations for Atkeson's model.}
+{1117}% 
+\TOCitem{1}
+{\TOCsID{26.7.}Exercises.}
+{1119}% 
+\vskip 0pt\penalty -200\hbox {\vrule height10.675pt depth5.325pt width0pt}\penalty \@M 
+\TOCitem{0}
+{{\fam \bffam \twelvebf Part VI: Classical Monetary and Labor Economics}}
+{}% 
+\TOCitem{0}
+{\TOCcID{27.}Fiscal-Monetary Theories of Inflation}
+{1123}% 
+\TOCitem{1}
+{\TOCsID{27.1.}The issues.}
+{1123}% 
+\TOCitem{1}
+{\TOCsID{27.2.}A shopping time monetary economy.}
+{1124}% 
+\TOCitem{2}
+{\TOCsID{27.2.1.}Household.}
+{1125}% 
+\TOCitem{2}
+{\TOCsID{27.2.2.}Government.}
+{1127}% 
+\TOCitem{2}
+{\TOCsID{27.2.3.}Equilibrium.}
+{1128}% 
+\TOCitem{2}
+{\TOCsID{27.2.4.}``Short run'' versus ``long run''.}
+{1128}% 
+\TOCitem{2}
+{\TOCsID{27.2.5.}Stationary equilibrium.}
+{1129}% 
+\TOCitem{2}
+{\TOCsID{27.2.6.}Initial date (time 0).}
+{1130}% 
+\TOCitem{2}
+{\TOCsID{27.2.7.}Equilibrium determination.}
+{1130}% 
+\TOCitem{1}
+{\TOCsID{27.3.}Ten monetary doctrines.}
+{1132}% 
+\TOCitem{2}
+{\TOCsID{27.3.1.}Quantity theory of money.}
+{1132}% 
+\TOCitem{2}
+{\TOCsID{27.3.2.}Sustained deficits cause inflation.}
+{1132}% 
+\TOCitem{2}
+{\TOCsID{27.3.3.}Fiscal prerequisites of zero inflation policy.}
+{1133}% 
+\TOCitem{2}
+{\TOCsID{27.3.4.}Unpleasant monetarist arithmetic.}
+{1133}% 
+\TOCitem{2}
+{\TOCsID{27.3.5.}An ``open market'' operation delivering neutrality.}
+{1134}% 
+\TOCitem{2}
+{\TOCsID{27.3.6.}The ``optimum quantity'' of money.}
+{1135}% 
+\TOCitem{2}
+{\TOCsID{27.3.7.}Legal restrictions to boost demand for currency.}
+{1135}% 
+\TOCitem{2}
+{\TOCsID{27.3.8.}One big open market operation.}
+{1136}% 
+\TOCitem{2}
+{\TOCsID{27.3.9.}A fiscal theory of the price level.}
+{1138}% 
+\TOCitem{2}
+{\TOCsID{27.3.10.}Exchange rate indeterminacy.}
+{1140}% 
+\TOCitem{2}
+{\TOCsID{27.3.11.}Determinacy of the exchange rate retrieved.}
+{1142}% 
+\TOCitem{1}
+{\TOCsID{27.4.}An example of exchange rate (in)determinacy.}
+{1143}% 
+\TOCitem{2}
+{\TOCsID{27.4.1.}Trading before sunspot realization.}
+{1144}% 
+\TOCitem{2}
+{\TOCsID{27.4.2.}Fiscal theory of the price level.}
+{1145}% 
+\TOCitem{2}
+{\TOCsID{27.4.3.}A game theoretic view of the fiscal theory of the price level.}
+{1146}% 
+\TOCitem{1}
+{\TOCsID{27.5.}Optimal inflation tax: the Friedman rule.}
+{1148}% 
+\TOCitem{2}
+{\TOCsID{27.5.1.}Economic environment.}
+{1148}% 
+\TOCitem{2}
+{\TOCsID{27.5.2.}Household's optimization problem.}
+{1149}% 
+\TOCitem{2}
+{\TOCsID{27.5.3.}Ramsey plan.}
+{1150}% 
+\TOCitem{1}
+{\TOCsID{27.6.}Time consistency of monetary policy.}
+{1153}% 
+\TOCitem{2}
+{\TOCsID{27.6.1.}Model with monopolistically competitive wage setting.}
+{1154}% 
+\TOCitem{2}
+{\TOCsID{27.6.2.}Perfect foresight equilibrium.}
+{1156}% 
+\TOCitem{2}
+{\TOCsID{27.6.3.}Ramsey plan.}
+{1158}% 
+\TOCitem{2}
+{\TOCsID{27.6.4.}Credibility of the Friedman rule.}
+{1160}% 
+\TOCitem{1}
+{\TOCsID{27.7.}Concluding remarks.}
+{1163}% 
+\TOCitem{1}
+{\TOCsID{27.8.}Exercises.}
+{1164}% 
+\TOCitem{0}
+{\TOCcID{28.}Credit and Currency}
+{1171}% 
+\TOCitem{1}
+{\TOCsID{28.1.}Credit and currency with long-lived agents.}
+{1171}% 
+\TOCitem{1}
+{\TOCsID{28.2.}Preferences and endowments.}
+{1172}% 
+\TOCitem{1}
+{\TOCsID{28.3.}Complete markets.}
+{1172}% 
+\TOCitem{2}
+{\TOCsID{28.3.1.}A Pareto problem.}
+{1173}% 
+\TOCitem{2}
+{\TOCsID{28.3.2.}A complete markets equilibrium.}
+{1173}% 
+\TOCitem{2}
+{\TOCsID{28.3.3.}Ricardian proposition.}
+{1175}% 
+\TOCitem{2}
+{\TOCsID{28.3.4.}Loan market interpretation.}
+{1176}% 
+\TOCitem{1}
+{\TOCsID{28.4.}A monetary economy.}
+{1177}% 
+\TOCitem{1}
+{\TOCsID{28.5.}Townsend's ``turnpike'' interpretation.}
+{1179}% 
+\TOCitem{1}
+{\TOCsID{28.6.}The Friedman rule.}
+{1182}% 
+\TOCitem{2}
+{\TOCsID{28.6.1.}Welfare.}
+{1183}% 
+\TOCitem{1}
+{\TOCsID{28.7.}Inflationary finance.}
+{1185}% 
+\TOCitem{1}
+{\TOCsID{28.8.}Legal restrictions.}
+{1189}% 
+\TOCitem{1}
+{\TOCsID{28.9.}A two-money model.}
+{1193}% 
+\TOCitem{1}
+{\TOCsID{28.10.}A model of commodity money.}
+{1196}% 
+\TOCitem{2}
+{\TOCsID{28.10.1.}Equilibrium.}
+{1197}% 
+\TOCitem{2}
+{\TOCsID{28.10.2.}Virtue of fiat money.}
+{1199}% 
+\TOCitem{1}
+{\TOCsID{28.11.}Concluding remarks.}
+{1200}% 
+\TOCitem{1}
+{\TOCsID{28.12.}Exercises.}
+{1200}% 
+\TOCitem{0}
+{\TOCcID{29.}Equilibrium Search, Matching, and Lotteries}
+{1207}% 
+\TOCitem{1}
+{\TOCsID{29.1.}Introduction.}
+{1207}% 
+\TOCitem{1}
+{\TOCsID{29.2.}An island model.}
+{1208}% 
+\TOCitem{2}
+{\TOCsID{29.2.1.}A single market (island).}
+{1209}% 
+\TOCitem{2}
+{\TOCsID{29.2.2.}The aggregate economy.}
+{1211}% 
+\TOCitem{1}
+{\TOCsID{29.3.}A matching model.}
+{1213}% 
+\TOCitem{2}
+{\TOCsID{29.3.1.}A steady state.}
+{1214}% 
+\TOCitem{2}
+{\TOCsID{29.3.2.}Welfare analysis.}
+{1216}% 
+\TOCitem{2}
+{\TOCsID{29.3.3.}Size of the match surplus.}
+{1218}% 
+\TOCitem{1}
+{\TOCsID{29.4.}Matching model with heterogeneous jobs.}
+{1220}% 
+\TOCitem{2}
+{\TOCsID{29.4.1.}A steady state.}
+{1220}% 
+\TOCitem{2}
+{\TOCsID{29.4.2.}Welfare analysis.}
+{1222}% 
+\TOCitem{2}
+{\TOCsID{29.4.3.}The allocating role of wages I: separate markets.}
+{1224}% 
+\TOCitem{2}
+{\TOCsID{29.4.4.}The allocating role of wages II: wage announcements.}
+{1226}% 
+\TOCitem{1}
+{\TOCsID{29.5.}Employment lotteries.}
+{1227}% 
+\TOCitem{1}
+{\TOCsID{29.6.}Lotteries for households versus lotteries for firms.}
+{1230}% 
+\TOCitem{2}
+{\TOCsID{29.6.1.}An aggregate production function.}
+{1231}% 
+\TOCitem{2}
+{\TOCsID{29.6.2.}Time-varying capacity utilization.}
+{1232}% 
+\TOCitem{1}
+{\TOCsID{29.7.}Employment effects of layoff taxes.}
+{1234}% 
+\TOCitem{2}
+{\TOCsID{29.7.1.}A model of employment lotteries with layoff taxes.}
+{1235}% 
+\TOCitem{2}
+{\TOCsID{29.7.2.}An island model with layoff taxes.}
+{1242}% 
+\TOCitem{2}
+{\TOCsID{29.7.3.}A matching model with layoff taxes.}
+{1245}% 
+\TOCitem{1}
+{\TOCsID{29.8.}Kiyotaki-Wright search model of money.}
+{1248}% 
+\TOCitem{2}
+{\TOCsID{29.8.1.}Monetary equilibria.}
+{1250}% 
+\TOCitem{2}
+{\TOCsID{29.8.2.}Welfare.}
+{1253}% 
+\TOCitem{1}
+{\TOCsID{29.9.}Concluding remarks.}
+{1255}% 
+\TOCitem{1}
+{\TOCsID{29.10.}Exercises.}
+{1257}% 
+\TOCitem{0}
+{\TOCcID{30.}Matching Models Mechanics}
+{1269}% 
+\TOCitem{1}
+{\TOCsID{30.1.}Introduction.}
+{1269}% 
+\TOCitem{1}
+{\TOCsID{30.2.}Fundamental surplus.}
+{1271}% 
+\TOCitem{2}
+{\TOCsID{30.2.1.}Sensitivity of unemployment to market tightness.}
+{1272}% 
+\TOCitem{2}
+{\TOCsID{30.2.2.}Nash bargaining model.}
+{1272}% 
+\TOCitem{2}
+{\TOCsID{30.2.3.}Shimer's critique.}
+{1273}% 
+\TOCitem{2}
+{\TOCsID{30.2.4.}Relationship to worker's outside value.}
+{1274}% 
+\TOCitem{2}
+{\TOCsID{30.2.5.}Relationship to match surplus.}
+{1276}% 
+\TOCitem{2}
+{\TOCsID{30.2.6.}Fixed matching cost.}
+{1277}% 
+\TOCitem{2}
+{\TOCsID{30.2.7.}Sticky wages.}
+{1279}% 
+\TOCitem{2}
+{\TOCsID{30.2.8.}Alternating-offer wage bargaining.}
+{1280}% 
+\TOCitem{1}
+{\TOCsID{30.3.}Business cycle simulations.}
+{1283}% 
+\TOCitem{2}
+{\TOCsID{30.3.1.}Hall's sticky wage.}
+{1283}% 
+\TOCitem{2}
+{\TOCsID{30.3.2.}Hagedorn and Manovskii's high value of leisure.}
+{1285}% 
+\TOCitem{2}
+{\TOCsID{30.3.3.}Hall and Milgrom's alternating-offer bargaining.}
+{1288}% 
+\TOCitem{2}
+{\TOCsID{30.3.4.}Matching and bargaining protocols in a DSGE model.}
+{1289}% 
+\TOCitem{1}
+{\TOCsID{30.4.}Overlapping generations in one matching function.}
+{1291}% 
+\TOCitem{2}
+{\TOCsID{30.4.1.}A steady state.}
+{1292}% 
+\TOCitem{2}
+{\TOCsID{30.4.2.}Reservation productivity is increasing in age.}
+{1295}% 
+\TOCitem{2}
+{\TOCsID{30.4.3.}Wage rate is decreasing in age.}
+{1296}% 
+\TOCitem{2}
+{\TOCsID{30.4.4.}Welfare analysis.}
+{1298}% 
+\TOCitem{2}
+{\TOCsID{30.4.5.}The optimal policy.}
+{1300}% 
+\TOCitem{1}
+{\TOCsID{30.5.}Directed search: age-specific matching functions.}
+{1303}% 
+\TOCitem{2}
+{\TOCsID{30.5.1.}Value functions and market tightness.}
+{1303}% 
+\TOCitem{2}
+{\TOCsID{30.5.2.}Job finding rate is decreasing in age.}
+{1306}% 
+\TOCitem{2}
+{\TOCsID{30.5.3.}Block recursive equilibrium computation.}
+{1308}% 
+\TOCitem{2}
+{\TOCsID{30.5.4.}Welfare analysis.}
+{1310}% 
+\TOCitem{1}
+{\TOCsID{30.6.}Concluding remarks.}
+{1312}% 
+\TOCitem{0}
+{\TOCcID{31.}Foundations of Aggregate Labor Supply}
+{1315}% 
+\TOCitem{1}
+{\TOCsID{31.1.}Introduction.}
+{1315}% 
+\TOCitem{1}
+{\TOCsID{31.2.}Equivalent allocations.}
+{1317}% 
+\TOCitem{2}
+{\TOCsID{31.2.1.}Choosing career length.}
+{1318}% 
+\TOCitem{2}
+{\TOCsID{31.2.2.}Employment lotteries.}
+{1320}% 
+\TOCitem{1}
+{\TOCsID{31.3.}Taxation and social security.}
+{1322}% 
+\TOCitem{2}
+{\TOCsID{31.3.1.}Taxation.}
+{1323}% 
+\TOCitem{2}
+{\TOCsID{31.3.2.}Social security.}
+{1324}% 
+\TOCitem{1}
+{\TOCsID{31.4.}Earnings-experience profiles.}
+{1328}% 
+\TOCitem{2}
+{\TOCsID{31.4.1.}Time averaging.}
+{1329}% 
+\TOCitem{2}
+{\TOCsID{31.4.2.}Employment lotteries.}
+{1330}% 
+\TOCitem{2}
+{\TOCsID{31.4.3.}Prescott tax and transfer scheme.}
+{1331}% 
+\TOCitem{2}
+{\TOCsID{31.4.4.}No discounting now matters.}
+{1331}% 
+\TOCitem{1}
+{\TOCsID{31.5.}Intensive margin.}
+{1332}% 
+\TOCitem{2}
+{\TOCsID{31.5.1.}Employment lotteries.}
+{1333}% 
+\TOCitem{2}
+{\TOCsID{31.5.2.}Time averaging.}
+{1334}% 
+\TOCitem{2}
+{\TOCsID{31.5.3.}Prescott taxation.}
+{1335}% 
+\TOCitem{1}
+{\TOCsID{31.6.}Ben-Porath human capital.}
+{1337}% 
+\TOCitem{2}
+{\TOCsID{31.6.1.}Time averaging.}
+{1338}% 
+\TOCitem{2}
+{\TOCsID{31.6.2.}Employment lotteries.}
+{1340}% 
+\TOCitem{2}
+{\TOCsID{31.6.3.}Prescott taxation.}
+{1341}% 
+\TOCitem{1}
+{\TOCsID{31.7.}Earnings shocks.}
+{1343}% 
+\TOCitem{2}
+{\TOCsID{31.7.1.}Interpretation of wealth and substitution effects.}
+{1346}% 
+\TOCitem{1}
+{\TOCsID{31.8.}Time averaging in a Bewley model.}
+{1347}% 
+\TOCitem{2}
+{\TOCsID{31.8.1.}Incomplete markets.}
+{1348}% 
+\TOCitem{2}
+{\TOCsID{31.8.2.}Complete markets.}
+{1349}% 
+\TOCitem{2}
+{\TOCsID{31.8.3.}Simulations of Prescott taxation.}
+{1351}% 
+\TOCitem{1}
+{\TOCsID{31.9.}L and S equivalence meets C and K's agents.}
+{1357}% 
+\TOCitem{2}
+{\TOCsID{31.9.1.}Guess the value function.}
+{1357}% 
+\TOCitem{2}
+{\TOCsID{31.9.2.}Verify optimality of time averaging.}
+{1359}% 
+\TOCitem{2}
+{\TOCsID{31.9.3.}Equivalence of time averaging and lotteries.}
+{1363}% 
+\TOCitem{1}
+{\TOCsID{31.10.}Two pillars for high elasticity at extensive margin.}
+{1364}% 
+\TOCitem{1}
+{\TOCsID{31.11.}No pillars at intensive margin.}
+{1364}% 
+\TOCitem{2}
+{\TOCsID{31.11.1.}Special example of high elasticity at intensive margin.}
+{1366}% 
+\TOCitem{2}
+{\TOCsID{31.11.2.}Fragility of the special example.}
+{1367}% 
+\TOCitem{1}
+{\TOCsID{31.12.}Concluding remarks.}
+{1369}% 
+\vskip 0pt\penalty -200\hbox {\vrule height10.675pt depth5.325pt width0pt}\penalty \@M 
+\TOCitem{0}
+{{\fam \bffam \twelvebf Part VII: Technical Appendices}}
+{}% 
+\TOCitem{0}
+{\TOCcID{A.}Functional Analysis}
+{1373}% 
+\TOCitem{1}
+{\TOCsID{A.1.}Metric spaces and operators.}
+{1373}% 
+\TOCitem{1}
+{\TOCsID{A.2.}Discounted dynamic programming.}
+{1379}% 
+\TOCitem{2}
+{\TOCsID{A.2.1.}Policy improvement algorithm.}
+{1380}% 
+\TOCitem{2}
+{\TOCsID{A.2.2.}A search problem.}
+{1383}% 
+\TOCitem{0}
+{\TOCcID{B.}Linear Projections and Hidden Markov Models}
+{1385}% 
+\TOCitem{1}
+{\TOCsID{B.1.}Linear projections.}
+{1385}% 
+\TOCitem{1}
+{\TOCsID{B.2.}Hidden Markov models.}
+{1387}% 
+\TOCitem{1}
+{\TOCsID{B.3.}Nonlinear filtering.}
+{1388}% 
+\TOCitem{0}
+{\TOCcID{1.}References}
+{1391}% 
+\TOCitem{0}
+{\TOCcID{2.}Subject Index}
+{1425}% 
+\TOCitem{0}
+{\TOCcID{3.}Author Index}
+{1431}% 
+\TOCitem{0}
+{\TOCcID{4.}Matlab Index}
+{1437}% 
