@@ -1,0 +1,297 @@
+
+Archive of earlier sections 10.6-10.7.1 
+========================================
+
+\section{Deficit finance}\label{sec:deffinance}%
+For the rest of this chapter, we shall assume sequential trading.
+%With sequential trading of fiat currency,
+%this section reinterprets one of our earlier examples with time $0$ trading, the example with government spending.
+Consider the following overlapping generations model:
+The population is constant.
+At each date $t \geq 1$, $N$ identical young agents are endowed
+with $(y_t^t, y^t_{t+1}) = (w_1, w_2) $, where $w_1 > w_2 >0$.
+A government   levies lump-sum taxes of
+$\tau_1$ on each young agent and $\tau_2$ on each old agent
+  alive at each $t \geq 1$.    There are $N$   old people at
+time $1$ each of whom is endowed with $w_2$ units of the
+consumption good and $M_0>0$ units of an vertible, perfectly durable
+fiat currency. The initial old have utility function
+$c^0_1$.   The young have utility function
+$u(c^t_t) + u(c^t_{t+1})$.
+ For each date $t \geq 1$ the government
+augments the currency supply according to
+$$ M_t - M_{t-1} = p_t ( g - \tau_1 -   \tau_2), \EQN gbudg1 $$
+where $g$ is a constant stream of government expenditures per capita
+and $0 < p_t \leq + \infty$ is the price level.
+If $p_t = +\infty$, we intend  that    equation
+\Ep{gbudg1} be interpreted as
+$$ g = \tau_1 + \tau_2.  \EQN gbudg2 $$
+
+
+   For each $t \geq 1$, each young person's behavior
+is summarized by
+$$  s_t = f(R_t;\tau_1, \tau_2) = \argmax_{s\geq 0} \left[ u(w_1 - \tau_1
+     -s)+u(w_2-\tau_2 + R_t s)\right] .\EQN savingsprob $$
+
+
+\medskip
+\noindent{\sc Definition:} An equilibrium with valued fiat currency is a pair  of
+positive sequences $\{M_t, p_t\}$  such that (a) given the price level
+sequence, $M_t/p_t =  f(R_t)$ (the dependence on $\tau_1,\tau_2$ being
+understood); (b) $R_t = p_t / p_{t+1}$; and (c) the government budget
+constraint \Ep{gbudg1} is satisfied for all $t\geq 1$.
+\medskip
+
+The condition $f(R_t) = M_t/p_t$  can be written
+as $f(R_t) = M_{t-1} /p_t + (M_t - M_{t-1})/p_t$.  The left side
+is the saving of the young.  The  term $M_{t-1} /p_t$ on  the right side is the
+dissaving of the old (the real value of currency  that they
+exchange for time $t$ consumption). The  term $(M_t - M_{t-1})/p_t$  on the right
+is the dissaving of the government (its deficit), which is
+the real value of the additional currency that the government
+prints at $t$ and uses to purchase time $t$ goods from the young.
+
+   To compute an equilibrium, define $d = g- \tau_1 - \tau_2$ and
+write equation \Ep{gbudg1} as
+$$ {M_t \over  p_t} = {M_{t-1} \over p_{t-1} }  {p_{t-1} \over p_t}
+     + d  $$
+for $t \geq 2$
+and $$ {M_1 \over p_1} = {M_0 \over p_1} + d $$
+for $t=1$.
+Substitute the equilibrium condition $M_t / p_t = f(R_t)$ into these equations to
+get
+$$ f(R_t) = f(R_{t-1})R_{t-1} + d  \EQN money1;a $$
+for $t\geq 2$ and
+$$ f(R_1) =  {M_0 \over p_1} + d. \EQN money1;b $$
+
+
+ Given $p_1$, which determines an initial
+$R_1$ by means of equation
+\Ep{money1;b}, equations \Ep{money1} form an autonomous
+difference equation in $R_t$.    With appropriate transformations of variables, this system can be
+solved using Figure \Fg{graph42f}. %Figure 8.4.
+
+
+\subsection{Steady states and the Laffer curve}
+
+Let's seek a stationary solution of equations  \Ep{money1}, a quest
+ rendered reasonable by the fact that $f(R_t)$ is time
+invariant (because the endowment and the
+tax patterns as well as the government deficit
+$d$  are time-invariant).     Guess that $R_t = R$ for
+$t \geq 1$.  Then equations \Ep{money1} become
+$$\EQNalign{ f(R) (1-R) & = d, \EQN money2;a \cr
+             f(R) &  = {M_0   \over p_1}  + d. \EQN money2;b \cr} $$
+
+For example, suppose that $u(c) = \ln(c)$.  Then
+$ f(R) = {w_1 - \tau_1 \over 2} - {w_2 - \tau_2 \over 2 R}$.  We
+have graphed $f(R)(1-R)$ against $d$ in Figure \Fg{graph52f}. %Figure 8.5.
+Notice that if there is one solution of equation \Ep{money2;a},  then there
+are at least two.
+
+
+%\midfigure{graph52f}
+%\centerline{\epsfxsize=3truein\epsffile{graph52new.eps}}
+%\caption{The Laffer curve in revenues from the inflation tax.}
+%\infiglist{graph52f}
+%\endfigure
+
+  Here $(1-R)$ can be interpreted as  a tax rate on  real
+balances, and $f(R)(1-R)$ is a Laffer curve for the inflation
+tax rate.  The high-return (low-tax) $R = \overline R$
+ is associated with
+a ``good'' Laffer curve stationary equilibrium, and
+the low-return (high-tax) $R = \underline R$ comes with a ``bad''
+Laffer curve stationary
+equilibrium.  Once $R$ is determined, we can determine
+$p_1$ from equation \Ep{money2;b}.
+
+Figure \Fg{graph52f} %Figure 8.5
+is related to Figure \Fg{graph42f}. %Figure 8.4.
+  The saving rate function
+$f(R)$ can be deduced from the offer curve. Thus, a graph like David Gale's version of
+%Figure \Fg{graph42f} %Figure 8.4
+ can be used to solve the difference equation \Ep{money1;a}
+graphically. 
+For example, 
+%
+%\medskip
+%\noindent{\it Example 5:} \ \ Government expenditures:
+ take the preferences and endowments
+to be as in example 1 again, but now alter the feasibility
+condition to be
+$$ c^i_i  + c^{i-1}_i + g = y_y + y_o $$
+for all $i \geq 1$ where $g > 0$ is a positive level of government
+purchases. The ``clearinghouse'' is now looking for an equilibrium
+price vector such that this feasibility constraint is satisfied.
+We assume that government purchases do not
+give utility.
+ The offer curve and the feasibility line look
+as   in Figure \Fg{graph42f}. %Figure 8.4.
+ Notice that the endowment point $(y^i_i, y^i_{i+1})$
+lies {\it outside} the relevant feasibility line.\NFootnote{Formally,
+this graph looks like Figure \Fg{graph32f} for the subsection \use{sec:olg_lucas_tree} economy
+ with a ``Lucas tree'', but with a ``negative dividend $d$.''}
+Now there are two stationary equilibria with $\alpha > 1$, and
+a continuum of equilibria converging to the higher $\alpha$ equilibrium
+(the one with the lower slope $\alpha^{-1}$ of the associated budget line).
+Equilibria with $\alpha >1$ cannot be ruled out
+by the argument that applies in the  subsection \use{sec:endowment_infty}  below  because no one's endowment sequence
+receives infinite value when $\alpha >1$.
+\index{deficit finance}%
+As we have seen just above, within a  setting with sequential trading, we  can interpret
+ this example as one in which a government
+finances a constant deficit either by printing  money  or by
+borrowing at a negative real net interest rate. 
+
+
+%\midfigure{graph42f}
+%\centerline{\epsfxsize=3truein\epsffile{graph42.eps}}
+%\caption{Equilibria with debt- or money-financed government deficit finance.}
+%\infiglist{graph42f}
+%\endfigure
+
+In this way, we discover a continuum of nonstationary solutions
+of  equation  \Ep{money1;a}, all but one of which  have
+$R_t \rightarrow \underline R$ as $t \rightarrow \infty$.  Thus, the
+``bad'' \idx{Laffer curve} equilibrium is stable under the ``perfect foresight'' dynamics.
+
+Disliking the stability of the bad Laffer curve equilibrium arises under
+perfect foresight dynamics.
+Bruno and Fischer (1990) and Marcet and Sargent (1989) analyze
+how the system behaves under two different types of adaptive
+dynamics.  They find that either under a crude form
+of  adaptive expectations  or under a least-squares learning scheme,
+$R_t$ converges to  $\overline R$.   This finding  is comforting because
+the comparative dynamics are more plausible at $\overline  R$
+(larger deficits bring higher inflation).  Furthermore,
+Marimon and Sunder (1993) present experimental evidence
+pointing toward the selection  made by the adaptive dynamics.
+Marcet and Nicolini  (2003) build and calibrate an adaptive model of several
+Latin American hyperinflations that rests on this selection. Sargent, Williams, and Zha (2009)
+extend and estimate that model.
+\auth{Williams, Noah}%
+\auth{Zha, Tao}%
+\auth{Marcet, Albert}
+\auth{Nicolini, Juan Pablo}
+\auth{Marimon, Ramon}
+\auth{Sunder, Shyam}
+\auth{Bruno, Michael}
+\auth{Fischer, Stanley}
+\auth{Sargent, Thomas J.}
+
+
+
+
+%%%%%%
+%\midinsert{
+%$$
+%\grafone{graph42.eps,height=2.5in}{{\bf Figure 8.4} Equilibria
+%with debt- or money-financed government deficit finance.}
+%$$
+%}\endinsert
+%%%%%%%%%%
+
+
+\section{Equivalent setups}\label{sec:MMgov}%
+This section describes some alternative asset structures
+and trading arrangements that support the
+same equilibrium  allocation.   We take a model with
+a government deficit and show how it can be supported
+with sequential trading in government-indexed bonds,
+sequential trading in fiat currency, or time $0$ trading
+of Arrow-Debreu dated securities.
+
+
+\subsection{The economy}
+
+An overlapping generations economy  has one agent
+born at each $t\geq 1$ and an initial old  person at $t=1$.
+Young agents born at date $t$ have endowment
+pattern $(y_t^t, y^t_{t+1})$ and   utility function described
+earlier.   An initial old person is endowed with $M_0>0$ units
+of unbacked currency and $y^0_1$ units of the consumption good.
+A stream of per-young-person government purchases is
+$\{g_t\}$.
+
+\medskip
+\noindent{\sc Definition:}  An equilibrium  is a sequence $\{M_t, p_t\}_{t=1}^\infty$
+with $0 < p_t < +\infty$ and $M_t >0$ that (a) given $\{p_t\}$ satisfies
+
+$$ M_t = \argmax_{\tilde M \geq 0} \left[ u(y_t^t - \tilde M/p_t)
+       + u(y^t_{t+1} + \tilde M/p_{t+1})\right]; \EQN equilib1;a $$
+and (b) satisfies $$ M_t - M_{t-1} = p_t g_t. \EQN equilib1;b$$
+
+
+
+\medskip
+Now consider a version  of the same economy in which there is no
+currency but rather indexed government bonds.  The demographics
+and endowments are identical with the preceding economy, but
+now each initial old   person is endowed with
+$B_1$ units of a maturing bond, denominated in units of
+time $1$ consumption good.  In period $t$, the government sells
+new one-period  bonds   to the young to finance its purchases
+$g_t$  of time $t$ goods and to pay off the one-period debt
+falling due at time $t$.  Let $R_t >0$ be the gross real one-period
+rate of return on government debt between $t$ and $t+1$.
+\medskip
+\noindent{\sc Definition:}  An equilibrium with bond-financed government
+deficits is a sequence $\{B_{t+1}, R_t\}_{t=1}^\infty$ that
+satisfies (a) given $\{R_t\}$,
+$$ B_{t+1} = \argmax_{\tilde B} [ u(y_t^t -\tilde B/R_t)
+    + u(y^t_{t+1} + \tilde B)]; \EQN equilib2;a $$
+and (b)
+$$ B_{t+1}/R_t = B_t + g_t,  \EQN equilib2;b $$
+with $B_1 \geq 0$ given.
+
+    These two types of equilibria are isomorphic in the following
+sense:  Take an equilibrium of the economy with money-financed
+deficits and transform it into an equilibrium of the
+economy with bond-financed deficits as follows:  set
+$ B_t = M_{t-1} / p_t, R_t = p_t / p_{t+1}$. It can be verified
+directly that these settings of bonds and interest rates, together
+with the original consumption allocation,
+form an equilibrium of the economy with bond-financed deficits.
+
+  Each of these two types of equilibria is evidently also
+isomorphic to the following equilibrium
+formulated with time $0$ markets:
+\medskip
+\noindent{\sc Definition:} Let $B^g_1$ represent claims to time $1$ consumption
+owed by the government to the old at time $1$.
+An equilibrium with  time $0$ trading
+is an initial level of government
+debt $B^g_1$, a price system $\{q_t^0\}_{t=1}^\infty$, and
+a sequence $\{s_t\}_{t=1}^\infty$ such that ({\bf a})
+given the price system,
+%$$ s_t = \argmax_{\tilde s} \Bigl\{ u(y_t^t - \tilde s)
+%     + u \Bigl[y^t_{t+1}
+% + \Bigl({q_t^0 \over q^0_{t+1}}\Bigr) \tilde s \Bigr] \Bigr\};
+%                                                    $$
+$$ s_t = \argmax_{\tilde s} \left\{ u(y_t^t - \tilde s)
+     + u \left[y^t_{t+1}
+ + \left({q_t^0 \over q^0_{t+1}}\right) \tilde s \right] \right\};
+                                                    $$
+and ({\bf b})
+$$ q_1^0 B_1^g + \sum_{t=1}^\infty q_t^0 g_t = 0 . \EQN arrowd0 $$
+\medskip
+Condition ({\bf b}) is the  Arrow-Debreu version of the
+government budget constraint.  Condition a is the optimality
+condition for the intertemporal consumption decision of the young
+of generation $t$.
+
+  The government budget constraint in condition ({\bf b})
+can be represented recursively as
+$$ q^0_{t+1} B_{t+1}^g = q_t^0 B_t^g + q_t^0 g_t.\EQN arrowd1  $$
+If we solve equation \Ep{arrowd1} forward and impose
+$\lim_{T \rightarrow \infty} q^0_{t+T} B^g_{t+T} = 0$, we obtain
+the budget constraint \Ep{arrowd0}  for $t=1$.
+Condition \Ep{arrowd0} makes it evident that
+when $\sum_{t=1}^\infty q_t^0 g_t >0$, $B_1^g < 0$, so that the
+government has negative net worth.  This negative net worth
+corresponds to  the unbacked
+claims that the market nevertheless values in the sequential-trading
+version of the model.
+
+

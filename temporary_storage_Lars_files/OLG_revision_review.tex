@@ -1,0 +1,216 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+
+\newcommand{\Err}[1]{\textbf{\color{red}#1}}
+\newcommand{\Fix}[1]{\textbf{\color{green!50!black}#1}}
+\newcommand{\loc}[1]{\textsf{\small [#1]}}
+
+\title{Review of OLG Chapter Revision\\
+\large Errors and Suggested Improvements in \texttt{black8\_ver4\_Lars.tex}}
+\author{Review Notes}
+\date{March 6, 2026}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\bigskip
+
+%==============================================================
+\section{English Grammar and Typographical Errors}
+%==============================================================
+
+\begin{enumerate}[label=\textbf{G\arabic*.}, leftmargin=2em]
+
+\item \loc{p.~404, \S10.1, TeX line $\sim$144}
+\textbf{Typo: ``inital'' $\to$ ``initial.''}\\
+The text reads: ``the \Err{inital} old consumer $i=-1$\ldots''\\
+Should be: ``the \Fix{initial} old consumer $i=-1$\ldots''
+
+\item \loc{p.~406, \S10.3, TeX line $\sim$213}
+\textbf{Missing word: ``lets analyze'' $\to$ ``lets us analyze.''}\\
+The text reads: ``this equilibrium concept \Err{lets} analyze a richer set\ldots''\\
+Should be: ``this equilibrium concept \Fix{lets us} analyze a richer set\ldots''
+
+\item \loc{p.~409, \S10.3.3, TeX line $\sim$494}
+\textbf{Typo: ``equilibrum'' $\to$ ``equilibrium.''}\\
+The text reads: ``equilibrium~L is also a Walrasian \Err{equilibrum}.''\\
+Should be: ``\ldots a Walrasian \Fix{equilibrium}.''
+
+\item \loc{p.~413, \S10.3.5, TeX line $\sim$710}
+\textbf{Imprecise term: ``coordinate axis'' should be ``abscissa'' or ``horizontal axis.''}\\
+The text reads: ``$y_{t+1}^t$ and both $c_{t+1}^t$ and $c_t^{t-1}$ are on the \Err{coordinate} axis.''\\
+The vertical axis is the \emph{ordinate} and the horizontal axis is the \emph{abscissa}. 
+Suggest: ``\ldots are on the \Fix{horizontal} axis.''
+
+\item \loc{p.~421, \S10.6, TeX line $\sim$1195}
+\textbf{Mismatched parenthesis: ``real ('indexed) bonds.''}\\
+The text reads: ``\ldots by issuing real \Err{('indexed)} bonds.''\\
+Should be: ``\ldots by issuing real \Fix{(indexed)} bonds.'' (or ``real, i.e., indexed, bonds'').
+
+\item \loc{p.~429, \S10.7.2, TeX line $\sim$1632}
+\textbf{Sentence fragment and spelling.}\\
+The text reads: ``\ldots will converge to zero\Err{, Though, as we have learnt,}\ldots''\\
+\begin{itemize}
+  \item ``Though'' begins a sentence fragment; should be restructured.
+  \item ``learnt'' is British; the rest of the chapter uses American spelling.
+\end{itemize}
+Suggested fix: ``\ldots will converge to zero\Fix{. However, as we have learned,}\ldots''
+
+\item \loc{p.~430, \S10.7.2, TeX line $\sim$1645}
+\textbf{Ungrammatical infinitive.}\\
+The text reads: ``So what makes the present value budget constraint \Err{to hold}?''\\
+Should be: ``So what makes the present value budget constraint \Fix{hold}?''
+
+\item \loc{p.~432, \S10.8.1, TeX line $\sim$1775}
+\textbf{Typo: ``governement'' $\to$ ``government.''}\\
+The text reads: ``the \Err{governement} finances deficits\ldots''\\
+Should be: ``the \Fix{government} finances deficits\ldots''
+
+\item \loc{p.~434, \S10.8.2, TeX line $\sim$1860}
+\textbf{Ungrammatical sentence.}\\
+The text reads: ``\Err{Disliking the stability of the bad Laffer curve equilibrium arises under perfect foresight dynamics.}''\\
+The gerund ``Disliking'' as the subject makes the sentence incoherent.\\
+Suggested fix: ``\Fix{The undesirable stability of the bad Laffer-curve equilibrium is a feature of perfect foresight dynamics.}''
+
+\item \loc{p.~434, \S10.8.2, TeX lines $\sim$1830, 1855}
+\textbf{Editorial placeholders remain in published text.}\\
+The text contains bracketed notes:
+\begin{itemize}
+  \item ``\Err{[Elaborate]}''
+  \item ``\Err{[Elaborate on this. Then connect back to graphs\ldots]}''
+\end{itemize}
+These should be removed or expanded upon.
+
+\item \loc{\S10.9.2, TeX line $\sim$1880}
+\textbf{Missing space: ``someissues'' $\to$ ``some issues.''}\\
+The text reads: ``to think about \Err{someissues} to be discussed\ldots''\\
+Should be: ``to think about \Fix{some issues} to be discussed\ldots''
+
+\item \loc{p.~406, \S10.3, TeX lines $\sim$200--210}
+\textbf{Inconsistent possessive: ``Walras Law'' vs.\ ``Walras' Law.''}\\
+Both forms appear within a few lines of each other. Pick one consistently; the standard in economics is ``Walras' law'' or ``Walras's law.''
+
+\end{enumerate}
+
+
+%==============================================================
+\section{Mathematical and Logical Errors}
+%==============================================================
+
+\begin{enumerate}[label=\textbf{M\arabic*.}, leftmargin=2em]
+
+\item \loc{p.~415, \S10.3.5, TeX line $\sim$850}
+\textbf{Wrong equation reference for nonstationary dynamics.}\\
+The text reads: ``To initiate the computation of a nonstationary equilibrium using difference equation \Err{(10.3.13)}\ldots''\\
+But equation~(10.3.13) is the \emph{stationary} quadratic $\alpha^2 - \epsilon^{-1}\alpha + (\epsilon^{-1}-1) = 0$.
+The nonstationary dynamics are governed by the \emph{difference equation}~(10.3.12):
+\[
+  \alpha_i = \epsilon^{-1} - \frac{\epsilon^{-1}-1}{\alpha_{i-1}}.
+\]
+The reference should be to \Fix{(10.3.12)}, not (10.3.13).
+
+\item \loc{p.~419, \S10.5.1, TeX line $\sim$1125}
+\textbf{Ambiguous parsing of inline division.}\\
+Equation~(10.5.9) is typeset as:
+\[
+  p_t = 2M/w_1 + \left(\frac{w_2}{w_1}\right) p_{t+1}.
+\]
+The term $2M/w_1$ could be misread. It should be parsed as $(2M/w_1) + (w_2/w_1)\,p_{t+1}$. Adding parentheses or using a display fraction would improve clarity.
+
+\item \loc{\S10.10, TeX line $\sim$2136}
+\textbf{Wrong variable name: ``$c$'' should be ``$\kappa$.''}\\
+The text reads: ``recall the continuum of equilibria indexed by the scalar \Err{$c > 0$} in expression (10.5.10).''\\
+But in equation~(10.5.10) the scalar is called $\kappa$, not~$c$.\\
+Should read: ``\ldots indexed by the scalar \Fix{$\kappa > 0$}\ldots''
+
+\item \loc{TeX lines $\sim$668 and $\sim$1744}
+\textbf{Duplicate equation label \texttt{equilib1;a}.}\\
+The \TeX\ label \verb|equilib1;a| is used twice:
+\begin{itemize}
+  \item First, for the offer-curve equation~(10.3.9a) at line~$\sim$668.
+  \item Second, for the money-financed equilibrium definition~(10.8.2a) at line~$\sim$1744.
+\end{itemize}
+This will cause a cross-referencing error.  The second usage should be given a distinct label (e.g., \verb|Meq_def;a|).
+
+\end{enumerate}
+
+
+%==============================================================
+\section{Inconsistencies Across Sections}
+%==============================================================
+
+\begin{enumerate}[label=\textbf{I\arabic*.}, leftmargin=2em]
+
+\item \loc{\S10.9 heading, TeX line $\sim$1899}
+\textbf{Placeholder section title.}\\
+Section~10.9 is titled ``\Err{Remain to be revised}.'' This should be removed or replaced with a proper section heading.
+
+\item \loc{\S\S10.9.1--10.9.2, TeX lines $\sim$1905--1960}
+\textbf{Old time-indexing convention.}\\
+Sections~10.1--10.8 (the revised portion) consistently start time at $t=0$, with the initial old labeled $i=-1$.
+Sections~10.9.1 (``Another Gale diagram'') and 10.9.2 (``Endowment at $+\infty$'') still use the \emph{old} convention where time starts at $t=1$ and the initial old are $i=0$.
+For example:
+\begin{itemize}
+  \item ``the budget constraint of an initial old person\ldots $q_1^0 c_1^0 = \ldots$''
+  \item ``$y^0_1 = \epsilon > 0$''
+\end{itemize}
+These sections need their indexing updated to match the revised conventions ($t\geq 0$, initial old $i=-1$).
+
+\item \loc{\S10.10, TeX line $\sim$2028}
+\textbf{Switch from one-argument to two-argument utility without notice.}\\
+Sections~10.1--10.8 define $u(c)$ as a one-argument per-period utility function and write lifetime utility as $u(c_i^i) + u(c_{i+1}^i)$.
+Section~10.10 switches without comment to a two-argument utility $u(c_t^t, c_{t+1}^t)$.\\
+Suggested fix: add a transitional sentence, e.g., ``In this section, we generalize by writing the agent's utility function as $u(c_1,c_2)$, a function of both young and old consumption.''
+
+\item \loc{\S10.10, TeX line $\sim$2050}
+\textbf{Time starts at $t=1$ in \S10.10, not $t=0$.}\\
+This section says ``The welfare of the initial old agents at time~$1$'' and the economy starts at period~1. This is inconsistent with sections~10.1--10.8, where time starts at $t=0$. If this section is retained, the time convention should be harmonized.
+
+\item \loc{p.~430, \S10.7.2, TeX line $\sim$1596}
+\textbf{Potentially confusing sign convention.}\\
+The text writes: ``the consumption of the initial old is $c^{-1}_0 = w_2 - \tau^{-1}_0$.''
+Since $\tau^{-1}_0 \leq 0$ (it is a tax/transfer with $-\tau^{-1}_0 \geq 0$ being the transfer), a reader might misread $w_2 - \tau^{-1}_0$ as making consumption \emph{smaller}.
+A brief clarifying note such as ``(recall $\tau^{-1}_0\leq 0$, so $-\tau^{-1}_0\geq 0$)'' would help.
+
+\end{enumerate}
+
+
+%==============================================================
+\section{Summary of Most Critical Items}
+%==============================================================
+
+Table~\ref{tab:summary} collects the highest-priority issues.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}clll@{}}
+\toprule
+\textbf{\#} & \textbf{Type} & \textbf{Location} & \textbf{Issue} \\
+\midrule
+G2  & Grammar   & p.~406, \S10.3   & ``lets analyze'' $\to$ ``lets us analyze'' \\
+M1  & Math ref  & p.~415, \S10.3.5 & Wrong eqn ref: should cite (10.3.12) not (10.3.13) \\
+M3  & Math      & \S10.10          & Scalar called ``$c$'' but should be ``$\kappa$'' \\
+M4  & \TeX      & Two locations     & Duplicate equation label \texttt{equilib1;a} \\
+G1  & Typo      & p.~404, \S10.1   & ``inital'' $\to$ ``initial'' \\
+G8  & Typo      & \S10.8.1         & ``governement'' $\to$ ``government'' \\
+G3  & Typo      & \S10.3.3         & ``equilibrum'' $\to$ ``equilibrium'' \\
+G9  & Grammar   & \S10.8.2         & ``Disliking the stability\ldots arises'' --- ungrammatical \\
+G10 & Draft     & \S10.8.2         & {[Elaborate]} placeholder notes remain \\
+I1  & Draft     & \S10.9           & Section title ``Remain to be revised'' \\
+I2--I4 & Consistency & \S\S10.9--10.10 & Old time-indexing and notation \\
+\bottomrule
+\end{tabular}
+\caption{Summary of highest-priority issues.}
+\label{tab:summary}
+\end{table}
+
+\end{document}
