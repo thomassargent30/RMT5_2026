@@ -1,4 +1,3 @@
-
 \input grafinp3
 \input psfig
 %\showchaptIDtrue
@@ -565,13 +564,16 @@ investment decisions that reduce the likelihood that combinations of
 $(Y_t, Q_t, Q_{t-1})$ will occur that
 trigger capital outflows under distress.
 
- We remind the reader of the remarkable feature of Atkeson's
+\auth{Tsyrennikov, Viktor}%
+We remind the reader of the remarkable feature of Atkeson's
 contract that the repayment schedule and the state
 variable $Q$ ``do all the work.''  Atkeson's contract
 manages to encode all history dependence in an extremely
 economical fashion.  In the end, there is no need, as occurred
 in the problems that we studied in chapter \use{socialinsurance},
-to add a promised value as an independent state variable.
+to add a promised value as an independent state 
+variable.\NFootnote{Tsyrennikov (2013) extends Atkeson's model to a small open economy, showing that moral hazard and limited enforcement frictions together can rationalize observed repayment patterns—specifically, why net repayments occur after low output realizations. Tsyrennikov demonstrates that moral hazard alone can generate crisis-like dynamics and counter-cyclical interest rates, while limited enforcement adds little once moral hazard is present.}
+
 %
 %result in an invest decision $I_t = I(Q_t)$ and a law of motion for the state
 %$$ Q_{t+1} = Y_{t+1} - d(Y_{t+1},Q_t), $$
@@ -587,11 +589,12 @@ to add a promised value as an independent state variable.
 % INSERT BOND-PARK ANALYSIS
 %\showchaptIDtrue
 
+\auth{Bassetto, Marco} \auth{Huo, Zhen} \auth{R\'ios-Rull, Jose-Victor}
  \auth{Bond, Eric W.} \auth{Park, Jee-Hyeong}
 \section{Gradualism in trade policy}
-
 We now describe a version of Bond and Park's (2002) analysis
 of gradualism in bilateral agreements to liberalize international trade.
+\NFootnote{Bassetto, Huo, and R\'ios-Rull (2024) introduce an ``organizational equilibrium'' concept that they use to  model  desirable policies that are implemented gradually by a sequence of decision-makers, each tempted to delay costly reforms. Cooperation can emerge without full commitment, producing policy paths that improve steadily but fall short of the first-best outcome. Their  equilibrium is characterized by symmetric treatment of all agents, optimality among gradual paths, and a "no-delay" condition that prevents excessive generosity to the initial decision-maker. This captures the observed slow progress in areas like trade liberalization and climate policy.}
 Bond and Park cite examples in which a large country extracts a possibly
 rising sequence of transfers  from a small country in exchange for a gradual
 lowering of tariffs in the large country.  Bond and Park interpret
@@ -1147,7 +1150,7 @@ form a Lagrangian, and obtain the following first-order necessary
 conditions for
 a saddlepoint:
 $$ \EQNalign{t_L: \ \ &  u_S'(t_L) + (\theta+ \mu_L) u_L'(t_L) \leq
- 0 , \ \ = 0 \ {\rm if} \ t_L > 0  \hskip1cm \EQN bondpark3;a \cr
+  0 , \ \ = 0 \ {\rm if} \ t_L > 0  \hskip1cm \EQN bondpark3;a \cr
   y: \  \ & P'(y) (1+\mu_S) + (\theta +\mu_L) =0 \EQN bondpark3;b \cr
  e_S: \ \  & - 1 +\theta - \mu_S \leq 0 , \ =0 \ {\rm if } \
   e_S > 0 . \EQN bondpark3;c \cr} $$
@@ -1705,7 +1708,7 @@ interpret as ``gradualism.''
 \appendix{A}{Computations for Atkeson's model}
 
   It is instructive to compute  a numerical example of the optimal
-contract for Atkeson's (1988) model.  Following Atkseson, we work with the
+contract for Atkeson's (1988) model.  Following Atkeson, we work with the
 following numerical example.  Assume
 $u(c) = 2 c^{.5}, \lambda(I) = \bigl({I \over Y_n + 2M}\bigr)^{.5},
 g_i(Y_j)={\exp^{-\alpha_i Y_j} \over \sum_{k=1}^n \exp^{-\alpha_i Y_k}}$
