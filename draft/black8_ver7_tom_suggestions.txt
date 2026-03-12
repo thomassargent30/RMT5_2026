@@ -1,0 +1,26 @@
+Suggestions for improving the introduction and logical flow of black8_ver7_tom.tex (up to \section{Preferences and endowments}):
+
+---
+
+**Typos and Grammar Corrections:**
+- "before most of the people who are to execute trades have been born." → "before most of the people who will execute trades have been born."
+- "outcomes that don't happen in the chapter \use{recurge} general equilibrium model." → "outcomes that do not occur in the chapter \use{recurge} general equilibrium model."
+- "Since we assume that everyone can trade with anyone else at time 0, we'll discover that such outcomes don't hinge on agents alive today not being able to trade with agents not yet alive." → Split for clarity.
+- "to help us understand properties of overlapping generations models that include possible multiplicity of equilibria and Pareto inefficient equilibrium allocations, outcomes that don't happen in the chapter \use{recurge} general equilibrium model." → "to help us understand properties of overlapping generations models, such as the possible multiplicity of equilibria and Pareto inefficient equilibrium allocations—outcomes that do not occur in the chapter \use{recurge} general equilibrium model."
+
+**Suggestions for Logical Flow:**
+- Move the explanation of the abstraction's usefulness before discussing its realism.
+- Make the transition to sequential trading more concise.
+- Summarize what the reader will learn in later sections.
+
+**Revised Example for Flow and Clarity:**
+
+This chapter describes the pure exchange overlapping generations model of Paul Samuelson (1958). We begin with an abstract presentation, treating the overlapping generations model as a special case of the chapter \use{recurge} general equilibrium model, with complete markets and all trades occurring at time $0$. In this model, each agent cares about consumption only at two adjacent dates, and the set of individuals concerned with consumption at a particular date includes some who care about consumption one period earlier and others who care about consumption one period later. We study how this special preference and demographic pattern affects outcomes in the chapter \use{recurge} model.
+
+Although imagining complete markets with time $0$ trading strains credulity—since equilibrium price and quantity sequences are set before most participants are born—this abstraction is useful for understanding properties of overlapping generations models. These include the possible multiplicity of equilibria and Pareto inefficient allocations, outcomes that do not occur in the chapter \use{recurge} general equilibrium model. Since we assume everyone can trade with anyone else at time 0, we will see that such outcomes do not depend on the inability of current agents to trade with those not yet alive.\NFootnote{In section \use{sec:time0trading}, we describe an alternative equilibrium concept involving a clearinghouse.}
+
+Most applied work, however, assumes sequential trading, where only living agents agree to trades, as described in chapter \use{recurge}. Later in this chapter, we use sequential trading models to analyze government debt, valued fiat currency, intergenerational transfers, and fiscal policy.
+
+---
+
+Let me know if you want a full rewrite or specific edits applied to the original file.
