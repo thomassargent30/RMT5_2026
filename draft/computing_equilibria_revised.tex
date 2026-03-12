@@ -1,0 +1,174 @@
+% Standalone plain TeX file using TeXsis
+% Revised subsection: "Computing equilibria" (money-financed deficits)
+% For insertion into black8_ver7_tom.tex
+%
+% Cross-references (\Ep{...}, \use{...}, \Fg{...}) will resolve
+% correctly once inserted into the parent document.
+
+\input texsis
+
+\subsection{Computing equilibria}
+
+To compute an equilibrium with a constant stream of government
+expenditures $g$, write equation \Ep{Gov_bc_Mdef;b} as
+$$
+  {M_t \over p_t} = {M_{t-1} \over p_{t-1}}\,{p_{t-1} \over p_t}
+     + g, \quad \forall\, t \geq 1,
+$$
+where ${M_0 / p_0}$ is given by equation \Ep{Gov_bc_Mdef;a}.
+By substituting the equilibrium condition $M_t / p_t = f(R_t)$, where
+$R_t = p_t / p_{t+1}$, into these equations, we arrive at the same
+equilibrium characterization as that of an economy with bond-financed
+deficits in equations \Ep{DEq2g}.
+Thus, the stationary-equilibrium characterization \Ep{DEq2gSS} remains
+the same:
+$$
+  (1-R)\,f(R) = g \quad \Longrightarrow \quad
+  {(p_{t+1}/p_t) - 1 \over p_{t+1}/p_t}\,
+        f\!\left({p_t \over p_{t+1}}\right) = g,
+  \EQN DEq2mSS
+$$
+where we have used $R_t = p_t / p_{t+1}$ to illuminate the taxation
+analogy introduced in subsection \use{sec:SSLaffer}.
+Recall that $(1-R)$ was interpreted as a `tax rate'---here
+approximately equal to the net inflation rate $(p_{t+1}/p_t) - 1$
+at low inflation---and $f(R)$ as a `tax base,' namely agents'
+demand for real money balances, which equals the real money supply
+$M_t/p_t$ in equilibrium.
+Printing money causes inflation and thereby erodes the real value of
+money holdings; in a stationary equilibrium agents replenish nominal
+money holdings so that real balances remain unchanged.
+The government can thus be thought of as levying a `tax' at a rate
+approximately equal to the net inflation rate on agents' real money
+holdings, the `tax base.'
+The `tax rate' cannot exceed $100\,\%$ (a money holder cannot fare
+worse than money becoming worthless), so the exact expression in
+equation \Ep{DEq2mSS} is
+$(1-R) = [(p_{t+1}/p_t) - 1]\,/\,(p_{t+1}/p_t) < 1$.
+
+Next, we revisit the example of logarithmic preferences from
+subsection \use{sec:Meqlog}.
+Recall difference equation \Ep{samdiff1}, which we now reformulate
+using a lag operator,
+$$
+  \left(1 - {w_2 \over w_1}\,L^{-1}\right) p_t
+       = {2 \over w_1}\,M_t,
+  \EQN samdiff2
+$$
+where we now allow for a time-varying forcing term $M_t$.
+The solution to this difference equation is
+$$
+  p_t = {2 \over w_1} \sum_{i=0}^{\infty}
+             \left({w_2 \over w_1}\right)^{\!i} M_{t+i}
+       + \kappa \left({w_1 \over w_2}\right)^{\!t}.
+  \EQN samsol2
+$$
+If the nominal money supply stays constant, the solution simplifies
+to the earlier expression \Ep{samsol1}; otherwise the entire
+infinite sequence of nominal money supplies is required.
+
+To illustrate such an equilibrium calculation, we proceed under the
+assumption that the economy has converged to a stationary equilibrium.
+Given the constant inflation rate $p_{t+1}/p_t = 1/R$ that
+characterizes a stationary equilibrium, a natural conjecture is that
+the nominal money supply grows at a constant rate,
+$M_{t+1} = z M_t$ for some $z > 0$.
+According to the first proposition in section \use{sec:olg_optimality},
+a necessary and sufficient condition for the existence of a monetary
+equilibrium is then $z\,u'(y^i_i)/u'(y^i_{i+1}) < 1$, which here
+translates to $z\,w_2/w_1 < 1$.%
+\NFootnote{As detailed in section \use{sec:olg_optimality},
+Wallace (1980) shows sufficiency of the stated condition by proving
+the existence of a stationary monetary equilibrium, which is a
+counterpart to the stationary solution of our difference equation
+\Ep{samsol2z}.
+While Wallace replaces our unfunded government expenditures $g$ with
+lump-sum transfers to agents, that difference in assumptions does not
+affect Wallace's proofs of necessity and sufficiency for the existence
+of at least one monetary equilibrium.
+(The difference in assumptions does, of course, matter for any welfare
+analysis.)}
+Given the sequence
+$\{M_{t+i}\}_{i=0}^{\infty} = \{z^i M_t\}_{i=0}^{\infty}$
+with $z < w_1/w_2$, we solve equation \Ep{samsol2} to obtain price
+sequences consistent with money-market clearing,
+$$
+  p_t = {2 \over w_1}\,{M_t \over 1 - {w_2 \over w_1}\,z}
+       + \kappa \left({w_1 \over w_2}\right)^{\!t}.
+  \EQN samsol2z
+$$
+Setting $\kappa = 0$ yields the price sequence that clears the money
+market in a stationary equilibrium in which the nominal money supply
+grows at a constant rate $z > 0$.
+The associated inflation rate is
+$$
+  {p_{t+1} \over p_t}
+     = { {2 \over w_1}\,{M_{t+1} \over 1 - {w_2 \over w_1}\,z}
+         \over
+         {2 \over w_1}\,{M_t    \over 1 - {w_2 \over w_1}\,z} }
+     = {M_{t+1} \over M_t} = z,
+  \EQN DEq2mSSPz
+$$
+and the real money supply is
+$$
+  {M_t \over p_t}
+     = {M_t \over {2 \over w_1}\,{M_t \over 1 - {w_2 \over w_1}\,z}}
+     = {w_1 - w_2 z \over 2} \quad = f(1/z),
+  \EQN DEq2mSz
+$$
+where the last equality is the savings function evaluated at the rate
+of return $R = p_t/p_{t+1} = 1/z$.
+
+In a stationary equilibrium with money-financed government deficits
+equal to $g$, the growth rate of the nominal money supply $z$ must
+satisfy equilibrium condition \Ep{DEq2mSS}:
+$$
+  {(p_{t+1}/p_t) - 1 \over p_{t+1}/p_t}\,
+        f\!\left({p_t \over p_{t+1}}\right) = g
+  \quad \Longrightarrow \quad
+  {z - 1 \over z}\,f\!\left({1 \over z}\right) = g.
+  \EQN DEq2mSSz
+$$
+As depicted in Figure \Fg{graph52f}, there are two values of $z$
+satisfying equation \Ep{DEq2mSSz}: a high-inflation-rate equilibrium
+with $z = 1/\underline{R} \gg 1$ and a low-inflation-rate equilibrium
+with $z = 1/\overline{R} > 1$.
+Drawing on the isomorphism established in subsection
+\use{sec:iso_deffin}---that equilibria are identical whether the
+government finances its deficits by printing money or by borrowing at
+a negative real net interest rate---we can apply the analysis of
+bond-financed equilibria in subsection \use{sec:DefBnonstat}.
+The low-inflation-rate stationary equilibrium is attained in period $0$
+by setting the initial transfer $-\tau^{-1}_0$ equal to the critical
+value in equation \Ep{tau_highR}.
+If the initial transfer is smaller, however, all monetary equilibria
+converge to the high-inflation-rate stationary equilibrium.
+As noted earlier, the ``bad'' Laffer-curve equilibrium is stable.
+
+The undesirable stability of the bad Laffer-curve equilibrium is a
+feature of perfect foresight dynamics and raises the question of what
+alternative solution concepts predict.
+Bruno and Fischer (1990) and Marcet and Sargent (1989) analyze how the
+system behaves under two different types of adaptive dynamics.
+They find that under either a crude form of adaptive expectations or a
+least-squares learning scheme, $R_t$ converges to $\overline{R}$.
+This finding is reassuring because the comparative dynamics are more
+plausible at $\overline{R}$ (larger deficits bring higher inflation).
+Furthermore, Marimon and Sunder (1993) present experimental evidence
+supporting the equilibrium selection implied by adaptive dynamics.
+Marcet and Nicolini (2003) build and calibrate an adaptive model of
+several Latin American hyperinflations based on this equilibrium
+selection.
+Sargent, Williams, and Zha (2009) extend and estimate that model.
+
+\auth{Williams, Noah}%
+\auth{Zha, Tao}%
+\auth{Marcet, Albert}%
+\auth{Nicolini, Juan Pablo}%
+\auth{Marimon, Ramon}%
+\auth{Sunder, Shyam}%
+\auth{Bruno, Michael}%
+\auth{Fischer, Stanley}%
+\auth{Sargent, Thomas J.}%
+
+\bye
