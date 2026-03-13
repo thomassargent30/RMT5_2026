@@ -34,7 +34,6 @@
 \footnum=0
 \chapter{Asset Pricing Empirics\label{assetpricing2}}
 \section{Introduction}
-
 In chapter \use{assetpricing1}, we repeatedly encountered a random variable that in this chapter
 we shall call a  \idx{stochastic discount factor} $m_{t+1}$, namely
 $$ m_{t+1} = \beta \left( {\frac{C_{t+1}}{C_t}}\right)^{-\gamma}, \EQN ConsDuffTom1 $$
@@ -57,8 +56,120 @@ of consumers. \auth{Mehra, Rajnish}%
 We conclude this chapter in section \use{sec:expaffine} by describing a widely used way of explaining expected rate of return discrepancies by
 cutting a Gordian knot by using   a good fitting and conveniently parameterized stochastic discount factor that is divorced from consumer preferences.
 
-\section{Interpretation of risk-aversion parameter}
+% ====================================================================
+%  SUGGESTED ROAD MAP (draft for editing)
+%
+%  NOTE: Four sections currently lack \label{} tags and therefore
+%  cannot yet be referenced by \use{}.  Before using \use{} you may
+%  wish to add labels as follows (suggested names shown):
+%
+%    \section{Interpretation of risk-aversion parameter}
+%      ->  add  \label{sec:riskparam}
+%
+%    \section{Market price of risk}
+%      ->  add  \label{sec:marketpriceofrisk}
+%
+%    \section{Risk-neutral probabilities}
+%      ->  add  \label{sec:riskneutral}
+%
+%    \section{Distorted beliefs}
+%      ->  add  \label{sec:distortedbeliefs}
+%
+% ====================================================================
 
+This chapter is organized as follows.
+Section \use{sec:riskparam} uses Pratt's (1964) local analysis of the insurance premium
+for a fair gamble to explain economists' consensus that plausible values of the coefficient
+of relative risk aversion $\gamma$ are no greater than $2$ or $3$.
+
+Section \use{sec:equitypremium} documents the equity premium puzzle using the log-normal
+framework of Hansen and Singleton (1983): matching the observed 6 percent gap between
+U.S.\ equity and Treasury-bill returns requires an implausibly large $\gamma \approx 27$.
+
+Section \use{sec:marketpriceofrisk} uses the Cauchy-Schwarz inequality to bound expected
+returns on any asset by the risk-free rate plus the market price of risk times the
+conditional standard deviation of the return.  It reframes the equity premium puzzle
+as the observation that aggregate consumption data imply a market price of risk far
+below the one inferred directly from asset prices and returns.
+
+Section \use{sec:HJbounds} follows Hansen and Jagannathan (1991) in deriving a
+nonparametric lower bound on the volatility of any stochastic discount factor consistent
+with the law of one price.  The bound is traced out as a parabola in the
+mean--standard-deviation plane and is computed from observed asset prices and returns
+alone, without specifying preferences.
+
+Section \use{sec:failureHJ} shows that the time-separable CRRA stochastic discount
+factor $m_{t+1}=\beta(C_{t+1}/C_t)^{-\gamma}$ cannot attain the Hansen-Jagannathan
+bounds as $\gamma$ varies: pushing $\gamma$ high enough to achieve sufficient volatility
+of $m_{t+1}$ simultaneously drives the risk-free rate to implausibly low values,
+a second failure that Weil (1990) called the risk-free rate puzzle.  The root cause
+is that a single parameter $\gamma$ conflates atemporal risk aversion and aversion to
+variation in intertemporal consumption paths.
+
+Section \use{sec:recursivepref} studies the Kreps-Porteus (1978) / Epstein-Zin (1989)
+recursive non-expected utility model as applied by Tallarini (2000).  By setting the
+intertemporal substitution parameter $\eta=1$, Tallarini assigns $\gamma$ the sole task
+of governing risk aversion, thereby allowing high $\gamma$ to push the stochastic
+discount factor toward the Hansen-Jagannathan bounds without generating the risk-free
+rate puzzle.
+
+Section \use{sec:reinterpret} responds to Lucas's (2003) criticism of Tallarini's
+high $\gamma=50$ by showing that the risk-sensitive recursion can equivalently be
+interpreted as expressing aversion to model misspecification (robustness) rather than
+atemporal risk aversion.  It develops the connection among the penalty parameter
+$\theta$, relative entropy, and detection-error probabilities, and shows that moderate
+amounts of model-uncertainty aversion can substitute for extremely high risk aversion
+in approaching the Hansen-Jagannathan bounds.
+
+Section \use{sec:costsfluctuations} revisits Lucas's (1987, 2003) calculation of the
+welfare cost of aggregate consumption fluctuations.  Under risk-sensitive preferences,
+the cost is proportional to $\gamma$.  Under the robustness reinterpretation, most of
+what Tallarini labeled the market price of risk becomes a market price of model
+uncertainty, implying much larger welfare costs of aggregate risk than Lucas's original
+small estimate.
+
+Section \use{sec:ConsDuff} describes how Constantinides and Duffie (1996) reverse
+engineer a pattern of stochastic cross-sectional dispersion in household consumption
+growth that, under incomplete markets and individual CRRA preferences with a modest
+$\gamma$, reconciles individual Euler equations with the aggregate asset-pricing
+restrictions implied by the observed equity premium.
+
+Section \use{sec:expaffine} offers a different resolution by positing an
+exponential-quadratic stochastic discount factor with risk prices $\lambda_t$ that are
+affine in a state vector $z_t$.  This model is not derived from a consumer's preference
+ordering; instead it is calibrated directly to asset returns and delivers tractable
+closed-form formulas for expected excess returns and the term structure of yields.
+
+Section \use{sec:riskneutral} derives the risk-neutral probability measure induced by
+the affine stochastic discount factor of section \use{sec:expaffine}, and shows that
+under the risk-neutral measure every asset earns the risk-free return, expressing
+asset pricing in compact form.
+
+Section \use{sec:distortedbeliefs} follows Piazzesi, Salomao, and Schneider (2015) in
+using survey evidence to show that expert forecasts embody beliefs that are
+systematically biased relative to the physical (data-generating) measure.  When a
+representative agent with these distorted beliefs prices assets, what a
+rational-expectations econometrician labels risk prices actually reflects a mixture of
+genuine risk compensation and systematic belief distortions.
+
+Appendix \use{appRiesz} states and proves the Riesz representation theorem, which
+establishes that any linear pricing functional (implied by the law of one price) can be
+represented as an inner product with some stochastic discount factor.  When markets are
+incomplete there are many stochastic discount factors that price assets correctly.
+
+Appendix \use{sec:sdf_risk_sens} shows how to compute stochastic discount factors for
+both ordinary time-separable preferences and for risk-sensitive preferences by
+suitably differentiating value functions with respect to current and future
+state-contingent consumption.
+
+Appendix \use{sec:backus} applies the affine term structure framework of section
+\use{sec:affine_term_structure1} to the Backus-Zin (1994) log-normal bond pricing
+model.  Using state-space methods from chapter \use{timeseries}, it derives formulas
+for the mean term structure and impulse response functions of yields, and explains how
+an upward-sloping yield curve on average reveals negative serial correlation in the log
+stochastic discount factor.
+
+\section{Interpretation of risk-aversion parameter}\label{sec:riskparam}%
     To  understand why
 the large measured equity premium is a puzzle, it is important to interpret $\gamma$ in \Ep{ConsDuffTom1},
 a parameter that measures attitudes about gambles over events governed by a known probability distribution.
@@ -226,7 +337,7 @@ Singleton (1983) and
 \auth{Singleton, Kenneth J.}%
 \auth{Hansen, Lars P.}%
 to illuminate the equity premium puzzle by studying unconditional averages
-of Euler equations under the assumptions that returns are  log normal.
+of Euler equations under the assumptions that returns are  log normal.\NFootnote{See Hansen and Singleton (1982) for a study of the equity premium puzzle without the log normal assumption. It instead uses a generalized methods of moments approach to estimate the parameters of the representative consumer's preference ordering.}
 Let the real rates of return on stocks and bonds between periods $t$ and
 $t+1$ be denoted $1+r^s_{t+1}$ and $1+r^b_{t+1}$, respectively. In our
 Lucas  tree model, these numbers would be given by
@@ -362,8 +473,7 @@ with high excess returns.
 
 %%%\vfil\eject
 
-\section{Market price of risk}
-
+\section{Market price of risk}\label{sec:marketpriceofrisk}%
     Gallant, Hansen, and Tauchen (1990) and Hansen and
 Jagannathan (1991) interpret the equity premium puzzle in terms
 of the high ``\idx{market price of risk}'' implied by time series
@@ -464,6 +574,7 @@ We present one of Hansen and Jagannathan's bounds.
 \auth{LeRoy, Stephen}
 \auth{Hansen, Lars P.}
 \auth{Jagannathan, Ravi}
+\auth{Singleton, Kenneth J.}%
 
 Until now, we have worked with theories that
 price assets by using a particular ``\idx{stochastic discount factor}''
@@ -2023,7 +2134,7 @@ Ren-Raw} \auth{Scott, Louis} \auth{Remolona, Eli M.}
 \index{risk neutral probabilities}%
 \index{rational expectations}%
 
-\section{Risk-neutral probabilities}
+\section{Risk-neutral probabilities}\label{sec:riskneutral}%
 We return to the section \use{sec:expaffine}
 vector autoregression and short-rate equation \Ep{zstatesp1}-\Ep{zstatesp2}, which for convenience we repeat here
 $$ \eqalign{ z_{t+1} & = \mu +   \phi z_t + C \varepsilon_{t+1}  \cr
@@ -2061,7 +2172,7 @@ Under the risk neutral measure, expected returns on all assets equal the risk-fr
 \auth{Piazzesi, Monika}%
 \auth{Salomao, Juliana}%
 
-\section{Distorted beliefs}
+\section{Distorted beliefs}\label{sec:distortedbeliefs}%
   Piazzesi, Salomao, and Schneider (2015) assemble survey evidence that  suggests that economic experts' forecasts are systematically biased.
   Let $\{z_t\}_{t=1}^T$ be a record of observations on the state $z$ and let $\{\check z_{t+1}\}_{t=1}^T$ be a record of one-period ahead expert forecasts. %
 Let $\check \mu, \check \phi$ be regression coefficients in the least squares regression
@@ -2148,10 +2259,15 @@ spirit of Hansen and Singleton (1983),
 consumer optimization alone puts restrictions on asset
 returns and   consumption,  without requiring complete
 markets or a fully articulated general equilibrium model.
+We have described two broad lines of response to findings of Hansen and Singleton that the standard time-separable CRRA model of preferences fails to explain observed expected returns on assets.  The first line of response  alters  the representative agent's model  of preferences by tampering 
+either with its utility function or its statistical model of consumption growth dynamics. We described examples of this approach in sections \use{sec:recursivepref} and \use{sec:reinterpret}.  The second line of response  divorces  the stochastic discount factor  from consumer preferences and instead directly positing a statistical model of a stochastic discount factor. We illustated that approach when we studied the affine model of the stochastic discount factor in section \use{sec:expaffine}.
+\auth{Singleton, Kenneth J.}\auth{Hansen, Lars Peter}%
+
+
  At various points in this chapter, especially in section \use{sec:ConsDuff}, we have alluded to
-incomplete markets models.  In chapters \use{incomplete} and
+incomplete markets models.   In chapters \use{incomplete} and
 \use{socialinsurance},
-we describe the ingredients of such models.
+we describe ingredients of such models.
 
 
 
