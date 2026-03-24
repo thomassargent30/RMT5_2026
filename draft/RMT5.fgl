@@ -1,4 +1,4 @@
-% List of Figures for job RMT5 - created: 2026/3/13 15:11
+% List of Figures for job RMT5 - created: 2026/3/24 10:43
 % ====================================
 % > Figure 1.3.1:
 \FIGLitem{Figure} {1.3.1. }
@@ -90,7 +90,7 @@ tree2f\@endFIGLitem
 {315}
 % > Figure 10.3.1:
 \FIGLitem{Figure} {10.3.1. }
-graf12f\@endFIGLitem 
+graph12f\@endFIGLitem 
 {420}
 % > Figure 10.3.2:
 \FIGLitem{Figure} {10.3.2. }
@@ -119,364 +119,364 @@ savings1f\@endFIGLitem
 % > Figure 12.9.1:
 \FIGLitem{Figure} {12.9.1. }
 fig_g\@endFIGLitem 
-{513}
+{518}
 % > Figure 12.9.2:
 \FIGLitem{Figure} {12.9.2. }
 fig_g_gamma\@endFIGLitem 
-{514}
+{519}
 % > Figure 12.9.3:
 \FIGLitem{Figure} {12.9.3. }
 fig_term\@endFIGLitem 
-{515}
+{520}
 % > Figure 12.9.4:
 \FIGLitem{Figure} {12.9.4. }
 fig_tc\@endFIGLitem 
-{516}
+{521}
 % > Figure 12.9.5:
 \FIGLitem{Figure} {12.9.5. }
 fig_tk\@endFIGLitem 
-{516}
+{521}
 % > Figure 12.9.6:
 \FIGLitem{Figure} {12.9.6. }
 fig_g1\@endFIGLitem 
-{519}
+{524}
 % > Figure 12.10.1:
 \FIGLitem{Figure} {12.10.1. }
 lambdaogamma\@endFIGLitem 
-{526}
+{531}
 % > Figure 12.11.1:
 \FIGLitem{Figure} {12.11.1. }
 fig_pr_1\@endFIGLitem 
-{528}
+{533}
 % > Figure 12.11.2:
 \FIGLitem{Figure} {12.11.2. }
 fig_pr_2\@endFIGLitem 
-{529}
+{534}
 % > Figure 12.12.1:
 \FIGLitem{Figure} {12.12.1. }
 fig_gnu\@endFIGLitem 
-{533}
+{538}
 % > Figure 12.12.2:
 \FIGLitem{Figure} {12.12.2. }
 fig_tnu\@endFIGLitem 
-{535}
+{540}
 % > Figure 12.12.3:
 \FIGLitem{Figure} {12.12.3. }
 fig_tn\@endFIGLitem 
-{536}
+{541}
 % > Figure 12.13.1:
 \FIGLitem{Figure} {12.13.1. }
 fig1_kinit\@endFIGLitem 
-{542}
+{547}
 % > Figure 12.13.2:
 \FIGLitem{Figure} {12.13.2. }
 fig1_g\@endFIGLitem 
-{545}
+{550}
 % > Figure 12.13.3:
 \FIGLitem{Figure} {12.13.3. }
 fig1_tauk\@endFIGLitem 
-{546}
+{551}
 % > Figure 12.1:
 \FIGLitem{Figure} {12.1. }
 fig_7_1\@endFIGLitem 
-{564}
+{569}
 % > Figure 12.2:
 \FIGLitem{Figure} {12.2. }
 fig_7_2\@endFIGLitem 
-{565}
+{570}
 % > Figure 12.3:
 \FIGLitem{Figure} {12.3. }
 FN_1\@endFIGLitem 
-{567}
+{572}
 % > Figure 12.4:
 \FIGLitem{Figure} {12.4. }
 FN_2\@endFIGLitem 
-{568}
+{573}
 % > Figure 12.5:
 \FIGLitem{Figure} {12.5. }
 FN_3\@endFIGLitem 
-{569}
+{574}
 % > Figure 12.6:
 \FIGLitem{Figure} {12.6. }
 FN_4\@endFIGLitem 
-{570}
+{575}
 % > Figure 14.10.1:
 \FIGLitem{Figure} {14.10.1. }
 returnf\@endFIGLitem 
-{635}
+{640}
 % > Figure 14.A.1:
 \FIGLitem{Figure} {14.A.1. }
 HK_rr\@endFIGLitem 
-{642}
+{647}
 % > Figure 14.A.2:
 \FIGLitem{Figure} {14.A.2. }
 HK_share_b\@endFIGLitem 
-{644}
+{649}
 % > Figure 15.C.1:
 \FIGLitem{Figure} {15.C.1. }
 Beware of free parameters.\@endFIGLitem 
-{716}
+{721}
 % > Figure 15.C.3:
 \FIGLitem{Figure} {15.C.3. }
 Beware of free parameters.\@endFIGLitem 
-{717}
+{722}
 % > Figure 15.C.4:
 \FIGLitem{Figure} {15.C.4. }
 Beware of free parameters.\@endFIGLitem 
-{717}
+{722}
 % > Figure 15.C.5:
 \FIGLitem{Figure} {15.C.5. }
 Beware of free parameters.\@endFIGLitem 
-{718}
+{723}
 % > Figure 16.6.1:
 \FIGLitem{Figure} {16.6.1. }
 grow1f\@endFIGLitem 
-{754}
+{759}
 % > Figure 19.6.1:
 \FIGLitem{Figure} {19.6.1. }
 rao1f\@endFIGLitem 
-{911}
+{915}
 % > Figure 19.6.2:
 \FIGLitem{Figure} {19.6.2. }
 rao3f\@endFIGLitem 
-{912}
+{916}
 % > Figure 19.6.3:
 \FIGLitem{Figure} {19.6.3. }
 bewley00w1f\@endFIGLitem 
-{913}
+{917}
 % > Figure 19.7.1:
 \FIGLitem{Figure} {19.7.1. }
 newfig5f\@endFIGLitem 
-{915}
+{919}
 % > Figure 19.7.2:
 \FIGLitem{Figure} {19.7.2. }
 newfig4f\@endFIGLitem 
-{915}
+{919}
 % > Figure 19.11.1:
 \FIGLitem{Figure} {19.11.1. }
 rao4f\@endFIGLitem 
-{922}
+{926}
 % > Figure 22.2.1:
 \FIGLitem{Figure} {22.2.1. }
 triKoch\@endFIGLitem 
-{992}
+{996}
 % > Figure 22.2.2:
 \FIGLitem{Figure} {22.2.2. }
 triCKf\@endFIGLitem 
-{992}
+{996}
 % > Figure 22.3.1:
 \FIGLitem{Figure} {22.3.1. }
 rao1f\@endFIGLitem 
-{998}
+{1002}
 % > Figure 22.3.2:
 \FIGLitem{Figure} {22.3.2. }
 commit2a\@endFIGLitem 
-{1000}
+{1004}
 % > Figure 22.3.3:
 \FIGLitem{Figure} {22.3.3. }
 tworr1f\@endFIGLitem 
-{1012}
+{1016}
 % > Figure 22.3.4:
 \FIGLitem{Figure} {22.3.4. }
 tworr2f\@endFIGLitem 
-{1013}
+{1017}
 % > Figure 22.5.1:
 \FIGLitem{Figure} {22.5.1. }
 thomworrf\@endFIGLitem 
-{1019}
+{1023}
 % > Figure 23.10.1:
 \FIGLitem{Figure} {23.10.1. }
 koch2s1bf\@endFIGLitem 
-{1079}
+{1083}
 % > Figure 23.10.2:
 \FIGLitem{Figure} {23.10.2. }
 koch2s1af\@endFIGLitem 
-{1080}
+{1084}
 % > Figure 23.10.3:
 \FIGLitem{Figure} {23.10.3. }
 rm1f\@endFIGLitem 
-{1082}
+{1086}
 % > Figure 23.11.1:
 \FIGLitem{Figure} {23.11.1. }
 icpairs\@endFIGLitem 
-{1086}
+{1090}
 % > Figure 23.11.2:
 \FIGLitem{Figure} {23.11.2. }
 ic_bothf\@endFIGLitem 
-{1087}
+{1091}
 % > Figure 23.11.3:
 \FIGLitem{Figure} {23.11.3. }
 contvpi\@endFIGLitem 
-{1089}
+{1093}
 % > Figure 23.11.4:
 \FIGLitem{Figure} {23.11.4. }
 pareto3f\@endFIGLitem 
-{1091}
+{1095}
 % > Figure 24.2.1:
 \FIGLitem{Figure} {24.2.1. }
 hugoreplnewf\@endFIGLitem 
-{1112}
+{1116}
 % > Figure 25.3.1:
 \FIGLitem{Figure} {25.3.1. }
 cred1f\@endFIGLitem 
-{1136}
+{1140}
 % > Figure 25.3.2:
 \FIGLitem{Figure} {25.3.2. }
 game1f\@endFIGLitem 
-{1138}
+{1142}
 % > Figure 25.3.3:
 \FIGLitem{Figure} {25.3.3. }
 game2f\@endFIGLitem 
-{1139}
+{1143}
 % > Figure 25.4.1:
 \FIGLitem{Figure} {25.4.1. }
 cred2f\@endFIGLitem 
-{1142}
+{1146}
 % > Figure 25.14.1:
 \FIGLitem{Figure} {25.14.1. }
 cred3f\@endFIGLitem 
-{1171}
+{1175}
 % > Figure 25.14.2:
 \FIGLitem{Figure} {25.14.2. }
 cred5f\@endFIGLitem 
-{1172}
+{1176}
 % > Figure 27.3.1:
 \FIGLitem{Figure} {27.3.1. }
 bondpark1f\@endFIGLitem 
-{1230}
+{1234}
 % > Figure 28.2.1:
 \FIGLitem{Figure} {28.2.1. }
 mon1af\@endFIGLitem 
-{1250}
+{1254}
 % > Figure 28.2.2:
 \FIGLitem{Figure} {28.2.2. }
 mon1bf\@endFIGLitem 
-{1251}
+{1255}
 % > Figure 29.4.1:
 \FIGLitem{Figure} {29.4.1. }
 dmt62f\@endFIGLitem 
-{1299}
+{1303}
 % > Figure 29.5.1:
 \FIGLitem{Figure} {29.5.1. }
 turn10f\@endFIGLitem 
-{1300}
+{1304}
 % > Figure 29.6.1:
 \FIGLitem{Figure} {29.6.1. }
 townsendf\@endFIGLitem 
-{1305}
+{1309}
 % > Figure 29.7.1:
 \FIGLitem{Figure} {29.7.1. }
 town7f\@endFIGLitem 
-{1307}
+{1311}
 % > Figure 29.7.2:
 \FIGLitem{Figure} {29.7.2. }
 town5f\@endFIGLitem 
-{1308}
+{1312}
 % > Figure 29.7.3:
 \FIGLitem{Figure} {29.7.3. }
 town6f\@endFIGLitem 
-{1309}
+{1313}
 % > Figure 29.8.1:
 \FIGLitem{Figure} {29.8.1. }
 bryant4f\@endFIGLitem 
-{1310}
+{1314}
 % > Figure 29.8.2:
 \FIGLitem{Figure} {29.8.2. }
 bryant5f\@endFIGLitem 
-{1311}
+{1315}
 % > Figure 29.10.1:
 \FIGLitem{Figure} {29.10.1. }
 silverf\@endFIGLitem 
-{1317}
+{1321}
 % > Figure 30.2.1:
 \FIGLitem{Figure} {30.2.1. }
 fig191f\@endFIGLitem 
-{1333}
+{1337}
 % > Figure 30.5.1:
 \FIGLitem{Figure} {30.5.1. }
 fig192f\@endFIGLitem 
-{1349}
+{1353}
 % > Figure 30.7.1:
 \FIGLitem{Figure} {30.7.1. }
 hsm_pic1f\@endFIGLitem 
-{1360}
+{1364}
 % > Figure 30.7.2:
 \FIGLitem{Figure} {30.7.2. }
 hsm_pic3f\@endFIGLitem 
-{1360}
+{1364}
 % > Figure 30.7.3:
 \FIGLitem{Figure} {30.7.3. }
 hsm_pic4f\@endFIGLitem 
-{1361}
+{1365}
 % > Figure 30.7.4:
 \FIGLitem{Figure} {30.7.4. }
 lay_p5f\@endFIGLitem 
-{1361}
+{1365}
 % > Figure 30.7.5:
 \FIGLitem{Figure} {30.7.5. }
 hsm_pic5f\@endFIGLitem 
-{1362}
+{1366}
 % > Figure 30.8.1:
 \FIGLitem{Figure} {30.8.1. }
 fig194f\@endFIGLitem 
-{1372}
+{1376}
 % > Figure 30.1:
 \FIGLitem{Figure} {30.1. }
 pic11f\@endFIGLitem 
-{1380}
+{1384}
 % > Figure 31.3.1:
 \FIGLitem{Figure} {31.3.1. }
 figMLIHall1\@endFIGLitem 
-{1407}
+{1411}
 % > Figure 31.3.2:
 \FIGLitem{Figure} {31.3.2. }
 figMLIHall2\@endFIGLitem 
-{1408}
+{1412}
 % > Figure 31.3.3:
 \FIGLitem{Figure} {31.3.3. }
 figMLINash1\@endFIGLitem 
-{1410}
+{1414}
 % > Figure 31.3.4:
 \FIGLitem{Figure} {31.3.4. }
 figMLINash2\@endFIGLitem 
-{1410}
+{1414}
 % > Figure 31.3.5:
 \FIGLitem{Figure} {31.3.5. }
 figMLIHallMilgrom\@endFIGLitem 
-{1411}
+{1415}
 % > Figure 31.3.6:
 \FIGLitem{Figure} {31.3.6. }
 figMLI_CLT\@endFIGLitem 
-{1413}
+{1417}
 % > Figure 31.5.1:
 \FIGLitem{Figure} {31.5.1. }
 DS_job_finding_problay_p5f\@endFIGLitem 
-{1431}
+{1435}
 % > Figure 32.3.1:
 \FIGLitem{Figure} {32.3.1. }
 figLSsocsec\@endFIGLitem 
-{1450}
+{1454}
 % > Figure 32.8.1:
 \FIGLitem{Figure} {32.8.1. }
 figLLCKreswage\@endFIGLitem 
-{1474}
+{1478}
 % > Figure 32.8.2:
 \FIGLitem{Figure} {32.8.2. }
 figLSCKprod\@endFIGLitem 
-{1475}
+{1479}
 % > Figure 32.8.3:
 \FIGLitem{Figure} {32.8.3. }
 figLSCKassets\@endFIGLitem 
-{1477}
+{1481}
 % > Figure 32.8.4:
 \FIGLitem{Figure} {32.8.4. }
 figLSCKwage\@endFIGLitem 
-{1478}
+{1482}
 % > Figure 32.8.5:
 \FIGLitem{Figure} {32.8.5. }
 figLSCKfrac\@endFIGLitem 
-{1478}
+{1482}
 % > Figure 32.11.1:
 \FIGLitem{Figure} {32.11.1. }
 figRWLSdisutility\@endFIGLitem 
-{1490}
+{1494}
